@@ -1,0 +1,590 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+\usepackage{culmus}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usepackage{cancel}
+\usepackage{wrapfig}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[cm]{fullpage}
+% \usepackage[in]{fullpage}
+\usepackage{polynom}
+\usepackage{booktabs}
+\usepackage{twemojis}
+
+\setlength{\tabcolsep}{1pt}
+\renewcommand{\arraystretch}{1.25} % Default value: 1
+
+\usetikzlibrary{math}
+\usetikzlibrary{shadows,trees}
+\counterwithin*{section}{part}
+\setlist{nosep, noitemsep}
+% \setlist[enumerate,levels]{format}
+\setlist[enumerate,1]{label = \arabic*., ref = \arabic*}
+\setlist[enumerate,2]{label = \emph{\alph*}), ref = \theenumi.\emph{\alph*}}
+\setlist[enumerate,3]{label = .\roman*, ref = \theenumii.\roman*}
+
+
+% Convert the Lyx colors into more pleasent colors:
+\definecolor{blue}{RGB}{14,107,217}
+\definecolor{green}{RGB}{0,158,40}
+\definecolor{red}{RGB}{235,16,16}
+\definecolor{brown}{RGB}{164,66,0}
+\definecolor{orange}{RGB}{231,135,26}
+\definecolor{purple}{RGB}{94,53,177}
+
+
+% Program Listing colors
+\definecolor{keywordcolor}{RGB}{255,117,0}
+\definecolor{commentcolor}{RGB}{128,128,128}
+\definecolor{stringcolor}{RGB}{0,168,0}
+
+
+% Trees formating
+\tikzset{edge from parent fork down, level distance=2cm, every node/.style= {rectangle,rounded corners, minimum height=8mm, very thick, align=center}}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    }
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding default
+\fontencoding global
+\font_roman "default" "David"
+\font_sans "default" "David"
+\font_typewriter "default" "David"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf true
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle false
+\papersize letterpaper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 4cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\headheight 0cm
+\headsep 0.5cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "E:/Odyssey/macros.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אורך וקטור
+\series default
+: 
+\begin_inset Formula $\left|A\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נורמה: במערכת צירים קרטזית מתקיים 
+\begin_inset Formula $\left|A\right|=\sqrt{\sum_{i=1}^{n}A_{i}^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+וקטור יחידה: וקטור 
+\begin_inset Formula $A$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\left|A\right|=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+הגדרה: 
+\begin_inset Formula $\hat{A}=\frac{A}{\left|A\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה:
+\end_layout
+
+\begin_layout Itemize
+חילופיות: 
+\begin_inset Formula $A+B=B+A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיבוציות: 
+\begin_inset Formula $A+\left(B+C\right)=\left(A+B\right)+C$
+\end_inset
+
+, 
+\begin_inset Formula $c\left(dA\right)=\left(cd\right)A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+פילוג: 
+\begin_inset Formula $c\left(A+B\right)=cA+cB$
+\end_inset
+
+, 
+\begin_inset Formula $\left(c+d\right)A=cA+dA$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+הערה: כאשר מדברים על זווית בין וקטורים מקובל לדבר על הזווית 
+\begin_inset Formula $\pi>\theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מכפלה סקלרית: יהיו 
+\begin_inset Formula $A,B$
+\end_inset
+
+ וקטורים אזי 
+\begin_inset Formula $A\cdot B=\left|A\right|\left|B\right|\cos\left(\theta\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: במערכת צירים מתקיים 
+\begin_inset Formula $A\cdot B=\sum_{i=1}^{n}A_{i}B_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מכפלה וקטורית: יהיו 
+\begin_inset Formula $A,B$
+\end_inset
+
+ וקטורים אזי 
+\begin_inset Formula $A\times B=\hat{n}\left|A\right|\left|B\right|\sin\left(\theta\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\hat{n}$
+\end_inset
+
+ הוא וקטור היחידה המאונך למישור הנקבע על ידי 
+\begin_inset Formula $A,B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: 
+\begin_inset Formula $B\times A=-A\times B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+וקטורים מאונכים/אורתוגונלים: וקטורים 
+\begin_inset Formula $A,B$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $A\cdot B=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+סימון: הבסיס הסטנדרטי של 
+\begin_inset Formula $\bbr^{3}$
+\end_inset
+
+ במערכת צירים קרטזית הוא 
+\begin_inset Formula $\left<\hat{i},\hat{j},\hat{k}\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: 
+\begin_inset Formula $A\times B=\left|\begin{array}{ccc}
+\hat{i} & \hat{j} & \hat{k}\\
+A_{1} & A_{2} & A_{3}\\
+B_{1} & B_{2} & B_{3}
+\end{array}\right|=\left(A_{2}B_{3}-A_{3}B_{2}\right)\hat{i}-\left(A_{1}B_{3}-A_{3}B_{1}\right)\hat{j}-\left(A_{1}B_{2}-A_{2}B_{1}\right)\hat{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: הממוצע של 
+\begin_inset Formula $x$
+\end_inset
+
+ הוא 
+\begin_inset Formula $\overline{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+העתק: 
+\begin_inset Formula $r:\bbr\to\bbr^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+הערה: העתק 
+\begin_inset Formula $==$
+\end_inset
+
+ 
+\begin_inset Formula $\text{displacement}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+סימון: אם 
+\begin_inset Formula $n=1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $x$
+\end_inset
+
+ היא העתק.
+\end_layout
+
+\begin_layout Standard
+מהירות ממוצעת: 
+\begin_inset Formula $\overline{v}=\frac{x\left(t_{2}\right)-x\left(t_{1}\right)}{t_{2}-t_{1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+סימון הנקודה של ניוטון: תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ פונקציה עם קלט זמן אזי מקובל לסמן 
+\begin_inset Formula $\dot{f}=\frac{df}{dt}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מהירות נקודתית: 
+\begin_inset Formula $v=\dot{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+הערה: 
+\begin_inset Formula $v$
+\end_inset
+
+ מסמל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+velocity
+\lang hebrew
+.
+\end_layout
+
+\begin_layout Standard
+תאוצה נקודתית: 
+\begin_inset Formula $a=\dot{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מהירות: 
+\begin_inset Formula $s$
+\end_inset
+
+ מסמל 
+\begin_inset Formula $\text{speed}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+סימון: אם 
+\begin_inset Formula $n=3$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(x,y,z\right)$
+\end_inset
+
+ היא פונקציית המיקום.
+\end_layout
+
+\begin_layout Standard
+טענה: 
+\begin_inset Formula $\frac{dr}{dt}=\frac{dx}{dt}\hat{i}+\frac{dy}{dt}\hat{j}+\frac{dz}{dt}\hat{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+סימון: 
+\begin_inset Formula $v_{0}=v\left(t_{0}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מהירות זוויתית: תהא 
+\begin_inset Formula $\theta$
+\end_inset
+
+ הזווית בין 
+\begin_inset Formula $A\left(t_{1}\right),A\left(t_{2}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{d\theta}{dt}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: מתקיים 
+\begin_inset Formula $\left|\frac{dA}{dt}\right|=\left|A\right|\frac{d\theta}{dt}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+וקטור מאונך: 
+\begin_inset Formula $A_{\perp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+וקטור מקביל: 
+\begin_inset Formula $A_{\parallel}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: 
+\begin_inset Formula $\Delta A=\Delta A_{\perp}+\Delta A_{\parallel}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מסקנה: 
+\begin_inset Formula $\left|\frac{dA_{\perp}}{dt}\right|=\left|A\right|\frac{d\theta}{dt}$
+\end_inset
+
+, 
+\begin_inset Formula $\left|\frac{dA_{\parallel}}{dt}\right|=\frac{d\left|A\right|}{dt}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: 
+\begin_inset Formula $\frac{d}{dt}\left(cA\right)=\frac{dc}{dt}A+c\frac{dA}{dt}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{d}{dt}\left(A\cdot B\right)=\frac{dA}{dt}\cdot B+A\cdot\frac{dB}{dt}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{d}{dt}\left(A\times B\right)=\frac{dA}{dt}\times B+A\times\frac{dB}{dt}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: הבסיס הסטנדרטי של 
+\begin_inset Formula $\bbr^{2}$
+\end_inset
+
+ במערכת צירים פולרית הוא 
+\begin_inset Formula $\left<\hat{r},\hat{\theta}\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document
