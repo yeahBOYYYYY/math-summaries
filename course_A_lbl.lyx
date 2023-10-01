@@ -1,0 +1,2577 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+\usepackage{culmus}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usepackage{cancel}
+\usepackage{wrapfig}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[cm]{fullpage}
+% \usepackage[in]{fullpage}
+\usepackage{polynom}
+\usepackage{booktabs}
+
+\setlength{\tabcolsep}{1pt}
+\renewcommand{\arraystretch}{1.25} % Default value: 1
+
+\usetikzlibrary{math}
+\usetikzlibrary{shadows,trees}
+\counterwithin*{section}{part}
+\setlist{nosep, noitemsep}
+% \setlist[enumerate,levels]{format}
+\setlist[enumerate,1]{label = \arabic*., ref = \arabic*}
+\setlist[enumerate,2]{label = \emph{\alph*}), ref = \theenumi.\emph{\alph*}}
+\setlist[enumerate,3]{label = .\roman*, ref = \theenumii.\roman*}
+
+
+% Convert the Lyx colors into more pleasent colors:
+\definecolor{blue}{RGB}{14,107,217}
+\definecolor{green}{RGB}{0,158,40}
+\definecolor{red}{RGB}{235,16,16}
+\definecolor{brown}{RGB}{164,66,0}
+\definecolor{orange}{RGB}{231,135,26}
+\definecolor{purple}{RGB}{94,53,177}
+
+
+% Program Listing colors
+\definecolor{keywordcolor}{RGB}{255,117,0}
+\definecolor{commentcolor}{RGB}{128,128,128}
+\definecolor{stringcolor}{RGB}{0,168,0}
+
+
+% Trees formating
+\tikzset{edge from parent fork down, level distance=2cm, every node/.style= {rectangle,rounded corners, minimum height=8mm, very thick, align=center}}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    }
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding default
+\fontencoding global
+\font_roman "default" "David"
+\font_sans "default" "David"
+\font_typewriter "default" "David"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf true
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle false
+\papersize letterpaper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 4cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\headheight 0cm
+\headsep 0.5cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "E:/Odyssey/macros.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הקדמה
+\series default
+: כל משפטי הגאומטריה לבגרות
+\end_layout
+
+\begin_layout Enumerate
+זוויות צמודות משלימות זו את זו ל־
+\begin_inset Formula $\text{180}^{\circ}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+זוויות קדקודיות שוות זו לזו.
+\end_layout
+
+\begin_layout Enumerate
+במשולש, מול זוויות שוות מונחות צלעות שוות.
+\end_layout
+
+\begin_layout Enumerate
+במשולש שווה שוקיים, זוויות הבסיס שוות זו לזו.
+\end_layout
+
+\begin_layout Enumerate
+סכום כל שתי צלעות במשולש גדול מהצלע השלישית.
+\end_layout
+
+\begin_layout Enumerate
+במשולש שווה שוקיים, חוצה זווית הראש, התיכון לבסיס והגובה לבסיס מתלכדים.
+\end_layout
+
+\begin_layout Enumerate
+אם במשולש חוצה זווית הוא גובה, אז המשולש הוא שווה שוקיים.
+\end_layout
+
+\begin_layout Enumerate
+אם במשולש חוצה זווית הוא תיכון, אז המשולש הוא שווה שוקיים.
+\end_layout
+
+\begin_layout Enumerate
+אם במשולש גובה הוא תיכון, אז המשולש הוא שווה שוקיים.
+\end_layout
+
+\begin_layout Enumerate
+במשולש )שאינו שווה צלעות(, מול הצלע הגדולה יותר מונחת זוית גדולה יותר.
+\end_layout
+
+\begin_layout Enumerate
+במשולש )שאינו שווה זוויות(, מול הזווית הגדולה יותר מונחת צלע גדולה יותר.
+\end_layout
+
+\begin_layout Enumerate
+סכום הזוויות של משולש הוא 
+\begin_inset Formula $\text{180}^{\circ}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+זווית חיצונית למשולש שווה לסכום שתי הזוויות הפנימיות שאינן צמודות לה.
+\end_layout
+
+\begin_layout Enumerate
+קטע אמצעים במשולש מקביל לצלע השלישית ושווה למחציתה.
+\end_layout
+
+\begin_layout Enumerate
+ישר החוצה צלע אחת במשולש ומקביל לצלע שניה, חוצה את הצלע השלישית.
+\end_layout
+
+\begin_layout Enumerate
+קטע שקצותיו על שתי צלעות משולש, מקביל לצלע השלישית ושווה למחציתה הוא קטע
+ אמצעים.
+\end_layout
+
+\begin_layout Enumerate
+משפט חפיפה צ.ז.צ.
+\end_layout
+
+\begin_layout Enumerate
+משפט חפיפה ז.צ.ז.
+\end_layout
+
+\begin_layout Enumerate
+משפט חפיפה צ.צ.צ.
+\end_layout
+
+\begin_layout Enumerate
+משפט חפיפה שתי צלעות והזווית שמול הצלע הגדולה מבין השתיים.
+\end_layout
+
+\begin_layout Enumerate
+האלכסון הראשי בדלתון חוצה את זוויות הראש, חוצה את האלכסון השני ומאונך לו.
+\end_layout
+
+\begin_layout Enumerate
+שני ישרים נחתכים על ידי ישר שלישי.
+ אם יש זוג זוויות מתאימות שוות, אז שני הישרים מקבילים.
+\end_layout
+
+\begin_layout Enumerate
+שני ישרים נחתכים על ידי ישר שלישי.
+ אם יש זוג זוויות מתחלפות שוות אז שני הישרים מקבילים.
+\end_layout
+
+\begin_layout Enumerate
+שני ישרים נחתכים על ידי ישר שלישי.
+ אם סכום זוג זוויות חד-צדדיות הוא 
+\begin_inset Formula $\text{180}^{\circ}$
+\end_inset
+
+ אז שני הישרים מקבילים.
+\end_layout
+
+\begin_layout Enumerate
+אם שני ישרים מקבילים נחתכים על ידי ישר שלישי אז:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+כל שתי זוויות מתאימות שוות זו לזו.
+\end_layout
+
+\begin_layout Enumerate
+כל שתי זוויות מתחלפות שוות זו לזו.
+\end_layout
+
+\begin_layout Enumerate
+סכום כל זוג זוויות חד-צדדיות הוא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\text{180}^{\circ}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+במקבילית כל שתי זוויות נגדיות שוות זו לזו.
+\end_layout
+
+\begin_layout Enumerate
+במקבילית כל שתי צלעות נגדיות שוות זו לזו.
+\end_layout
+
+\begin_layout Enumerate
+במקבילית האלכסונים חוצים זה את זה.
+\end_layout
+
+\begin_layout Enumerate
+מרובע שבו כל זוג זוויות נגדיות שוות הוא מקבילית.
+\end_layout
+
+\begin_layout Enumerate
+מרובע שבו כל שתי צלעות נגדיות שוות זו לזו הוא מקבילית.
+\end_layout
+
+\begin_layout Enumerate
+מרובע שבו זוג צלעות מקבילות ושוות הוא מקבילית.
+\end_layout
+
+\begin_layout Enumerate
+מרובע שאלכסוניו חוצים זה את זה הוא מקבילית.
+\end_layout
+
+\begin_layout Enumerate
+במעוין האלכסונים חוצים את הזוויות.
+\end_layout
+
+\begin_layout Enumerate
+מקבילית שבה אלכסון הוא חוצה זווית היא מעוין.
+\end_layout
+
+\begin_layout Enumerate
+במעוין האלכסונים מאונכים זה לזה.
+\end_layout
+
+\begin_layout Enumerate
+מקבילית שבה האלכסונים מאונכים זה לזה היא מעוין.
+\end_layout
+
+\begin_layout Enumerate
+אלכסוני המלבן שווים זה לזה.
+\end_layout
+
+\begin_layout Enumerate
+מקבילית שבה האלכסונים שווים זה לזה היא מלבן.
+\end_layout
+
+\begin_layout Enumerate
+בטרפז שווה שוקיים הזוויות שליד אותו בסיס שוות זו לזו.
+\end_layout
+
+\begin_layout Enumerate
+טרפז בו הזוויות שליד אותו בסיס שוות זו לזו הוא טרפז שווה שוקיים.
+\end_layout
+
+\begin_layout Enumerate
+בטרפז שווה שוקיים האלכסונים שווים זה לזה.
+\end_layout
+
+\begin_layout Enumerate
+טרפז בו האלכסונים שווים זה לזה הוא טרפז שווה שוקיים.
+\end_layout
+
+\begin_layout Enumerate
+קטע האמצעים בטרפז מקביל לבסיסים ושווה למחצית סכומם.
+\end_layout
+
+\begin_layout Enumerate
+בטרפז, ישר החוצה שוק אחת ומקביל לבסיסים, חוצה את השוק השנייה.
+\end_layout
+
+\begin_layout Enumerate
+שלושת התיכונים במשולש נחתכים בנקודה אחת.
+\end_layout
+
+\begin_layout Enumerate
+נקודת חיתוך התיכונים מחלקת כל תיכון ביחס 1:2.
+ )החלק הקרוב לקדקוד הוא פי 2 מהחלק האחר(.
+\end_layout
+
+\begin_layout Enumerate
+כל נקודה על חוצה זווית נמצאת במרחקים שווים משוקי זווית זו.
+\end_layout
+
+\begin_layout Enumerate
+אם נקודה נמצאת במרחקים שווים משני שוקי זווית, אז היא נמצאת על חוצה הזווית.
+\end_layout
+
+\begin_layout Enumerate
+שלושת חוצי הזוויות של משולש נחתכים בנקודה אחת, שהיא מרכז המעגל החסום במשולש.
+\end_layout
+
+\begin_layout Enumerate
+בכל משולש אפשר לחסום מעגל.
+\end_layout
+
+\begin_layout Enumerate
+כל נקודה הנמצאת על האנך האמצעי של קטע, נמצאת במרחקים שווים מקצות הקטע.
+\end_layout
+
+\begin_layout Enumerate
+כל נקודה הנמצאת במרחקים שווים מקצות קטע, נמצאת על האנך האמצעי לקטע.
+\end_layout
+
+\begin_layout Enumerate
+כל משולש ניתן לחסום במעגל.
+\end_layout
+
+\begin_layout Enumerate
+במשולש, שלושת האנכים האמצעיים נחתכים בנקודה אחת, שהיא מרכז המעגל החוסם את
+ המשולש.
+\end_layout
+
+\begin_layout Enumerate
+שלושת הגבהים במשולש נחתכים בנקודה אחת.
+\end_layout
+
+\begin_layout Enumerate
+ניתן לחסום מרובע במעגל אם ורק אם סכום זוג זוויות נגדיות שווה ל־
+\begin_inset Formula $\text{180}^{\circ}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+מרובע קמור חוסם מעגל אם ורק אם סכום שתי צלעות נגדיות שווה לסכום שתי הצלעות
+ הנגדיות האחרות.
+\end_layout
+
+\begin_layout Enumerate
+כל מצולע משוכלל אפשר לחסום במעגל.
+\end_layout
+
+\begin_layout Enumerate
+בכל מצולע משוכלל אפשר לחסום מעגל.
+\end_layout
+
+\begin_layout Enumerate
+דרך כל שלוש נקודות שאינן על ישר אחד עובר מעגל אחד ויחיד.
+\end_layout
+
+\begin_layout Enumerate
+במעגל, שתי זוויות מרכזיות שוות זו לזו אם ורק אם שתי הקשתות המתאימות להן
+ שוות זו לזו.
+\end_layout
+
+\begin_layout Enumerate
+במעגל, שתי זוויות מרכזיות שוות זו לזו אם ורק אם שני המיתרים המתאימים להן
+ שווים זה לזה.
+\end_layout
+
+\begin_layout Enumerate
+במעגל, מיתרים שווים זה לזה אם ורק אם שתי הקשתות המתאימות להם שוות זו לזו.
+\end_layout
+
+\begin_layout Enumerate
+מיתרים השווים זה לזה נמצאים במרחקים שווים ממרכז המעגל.
+\end_layout
+
+\begin_layout Enumerate
+מיתרים במעגל אחד הנמצאים במרחקים שווים ממרכזו שווים זה לזה.
+\end_layout
+
+\begin_layout Enumerate
+במעגל, אם מרחקו של מיתר ממרכז המעגל קטן יותר ממרחקו של מיתר אחר, אז מיתר
+ זה ארוך יותר מהמיתר האחר.
+\end_layout
+
+\begin_layout Enumerate
+האנך ממרכז המעגל למיתר חוצה את המיתר, חוצה את הזווית המרכזית המתאימה למיתר
+ וחוצה את הקשת המתאימה למיתר.
+\end_layout
+
+\begin_layout Enumerate
+קטע ממרכז המעגל החוצה את המיתר מאונך למיתר.
+\end_layout
+
+\begin_layout Enumerate
+במעגל, זווית היקפית שווה למחצית הזווית המרכזית הנשענת על אותה הקשת.
+\end_layout
+
+\begin_layout Enumerate
+במעגל, לזוויות היקפיות שוות קשתות שוות ומיתרים שווים.
+\end_layout
+
+\begin_layout Enumerate
+במעגל, לקשתות שוות מתאימות זוויות היקפיות שוות.
+\end_layout
+
+\begin_layout Enumerate
+במעגל, כל הזוויות ההיקפיות הנשענות על מיתר מאותו צד של המיתר שוות זו לזו.
+\end_layout
+
+\begin_layout Enumerate
+זווית היקפית הנשענת על קוטר היא זווית ישרה )
+\begin_inset Formula $\text{90}^{\circ}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Enumerate
+זווית היקפית בת 
+\begin_inset Formula $\text{90}^{\circ}$
+\end_inset
+
+ נשענת על קוטר.
+\end_layout
+
+\begin_layout Enumerate
+במעגל, זווית פנימית שווה למחצית סכום שתי הקשתות הכלואות בין שוקי הזווית
+ ובין המשכיהן.
+\end_layout
+
+\begin_layout Enumerate
+במעגל, זווית חיצונית שווה למחצית הפרש שתי הקשתות הכלואות בין שוקי הזווית
+ ובין המשכיהן.
+\end_layout
+
+\begin_layout Enumerate
+המשיק למעגל מאונך לרדיוס בנקודת ההשקה.
+\end_layout
+
+\begin_layout Enumerate
+ישר המאונך לרדיוס בקצהו הוא משיק למעגל.
+\end_layout
+
+\begin_layout Enumerate
+זווית בין משיק ומיתר שווה לזווית ההיקפית הנשענת על מיתר זה מצידו השני.
+\end_layout
+
+\begin_layout Enumerate
+שני משיקים למעגל היוצאים מאותה נקודה שווים זה לזה.
+\end_layout
+
+\begin_layout Enumerate
+קטע המחבר את מרכז המעגל לנקודה ממנה יוצאים שני משיקים למעגל, חוצה את הזווית
+ שבין המשיקים.
+\end_layout
+
+\begin_layout Enumerate
+קטע המרכזים של שני מעגלים נחתכים, חוצה את המיתר המשותף ומאונך לו.
+\end_layout
+
+\begin_layout Enumerate
+נקודת ההשקה של שני מעגלים המשיקים זה לזה, נמצאת על קטע המרכזים או על המשכו.
+\end_layout
+
+\begin_layout Enumerate
+משפט פיתגורס: במשולש ישר זווית, סכום ריבועי הניצבים שווה לריבוע היתר.
+\end_layout
+
+\begin_layout Enumerate
+משפט פיתגורס ההפוך: משולש בו סכום ריבועי שתי צלעות שווה לריבוע הצלע השלישית
+ הוא ישר זווית.
+\end_layout
+
+\begin_layout Enumerate
+במשולש ישר זווית התיכון ליתר שווה למחצית היתר.
+\end_layout
+
+\begin_layout Enumerate
+משולש בו התיכון שווה למחצית הצלע אותה הוא חוצה הוא משולש ישר זווית.
+\end_layout
+
+\begin_layout Enumerate
+אם במשולש ישר זוית, זוית חדה של 
+\begin_inset Formula $\text{30}^{\circ}$
+\end_inset
+
+, אז הניצב מול זוית זו שווה למחצית היתר.
+\end_layout
+
+\begin_layout Enumerate
+אם במשולש ישר זוית ניצב שווה למחצית היתר, אז מול ניצב זה זוית שגודלה 
+\begin_inset Formula $\text{30}^{\circ}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+משפט תאלס: שני ישרים מקבילים החותכים שוקי זווית, מקצים עליהם קטעים פרופורציוניים.
+\end_layout
+
+\begin_layout Enumerate
+משפט תאלס המורחב: ישר המקביל לאחת מצלעות המשולש חותך את שתי הצלעות האחרות
+ או את המשכיהן בקטעים פרופורציוניים.
+\end_layout
+
+\begin_layout Enumerate
+משפט הפוך למשפט תאלס: שני ישרים המקצים על שוקי זווית ארבעה קטעים פרופורציוניים
+ הם ישרים מקבילים.
+\end_layout
+
+\begin_layout Enumerate
+חוצה זווית פנימית במשולש מחלק את הצלע שמול הזווית לשני קטעים אשר היחס ביניהם
+ שווה ליחס הצלעות הכולאות את הזווית בהתאמה.
+\end_layout
+
+\begin_layout Enumerate
+ישר העובר דרך קדקוד משולש ומחלק את הצלע שמול קדקוד זה חלוקה פנימית, ביחס
+ של שתי הצלעות האחרות )בהתאמה( הוא חוצה את זווית המשולש שדרך קודקודה הוא
+ עובר.
+\end_layout
+
+\begin_layout Enumerate
+משפט דמיון צ.ז.צ.
+\end_layout
+
+\begin_layout Enumerate
+משפט דמיון ז.ז.
+\end_layout
+
+\begin_layout Enumerate
+משפט דמיון צ.צ.צ.
+\end_layout
+
+\begin_layout Enumerate
+במשולשים דומים:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+יחס גבהים מתאימים שווה ליחס הדמיון.
+\end_layout
+
+\begin_layout Enumerate
+יחס חוצי זוויות מתאימות שווה ליחס הדמיון.
+\end_layout
+
+\begin_layout Enumerate
+יחס תיכונים מתאימים שווה ליחס הדמיון.
+\end_layout
+
+\begin_layout Enumerate
+יחס ההיקפים שווה ליחס הדמיון.
+\end_layout
+
+\begin_layout Enumerate
+יחס הרדיוסים של המעגלים החוסמים שווה ליחס הדמיון.
+\end_layout
+
+\begin_layout Enumerate
+יחס הרדיוסים של המעגלים החסומים שווה ליחס הדמיון.
+\end_layout
+
+\begin_layout Enumerate
+יחס השטחים שווה לריבוע יחס הדמיון.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+אם במעגל שני מיתרים נחתכים, אז מכפלת קטעי מיתר אחד שווה למכפלת קטעי המיתר
+ השני.
+\end_layout
+
+\begin_layout Enumerate
+אם מנקודה מחוץ למעגל יוצאים שני חותכים, אז מכפלת חותך אחד בחלקו החיצוני
+ שווה למכפלת החותך השני בחלקו החיצוני.
+\end_layout
+
+\begin_layout Enumerate
+אם מנקודה שמחוץ למעגל יוצאים חותך ומשיק, אז מכפלת החותך בחלקו החיצוני שווה
+ לריבוע המשיק.
+\end_layout
+
+\begin_layout Enumerate
+במשולש ישר זווית, הניצב הוא ממוצע הנדסי של היתר והיטל ניצב זה על היתר.
+\end_layout
+
+\begin_layout Enumerate
+הגובה ליתר במשולש ישר זווית הוא ממוצע הנדסי של היטלי הניצבים על היתר.
+\end_layout
+
+\begin_layout Enumerate
+סכום הזוויות הפנימיות של מצולע קמור הוא 
+\begin_inset Formula $\text{180}^{\circ}\left(n-2\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: 
+\begin_inset Formula $\pi=\frac{\text{"היקף מעגל"}}{\text{"קוטר מעגל"}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: יהי מעגל עם רדיוס 
+\begin_inset Formula $r$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{"היקף מעגל"}=2r\pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: יהי מעגל עם רדיוס 
+\begin_inset Formula $r$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{”שטח מעגל“}=2\pi r^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רדיאנים
+\series default
+: 
+\begin_inset Formula $\pi=180^{\circ}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציות טריגנומטריות
+\series default
+: יהי 
+\begin_inset Formula $\triangle ABC$
+\end_inset
+
+ שמקיים 
+\begin_inset Formula $\ang B=90^{\circ}$
+\end_inset
+
+ וגם 
+\begin_inset Formula $\ang A=\a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+סינוס: 
+\begin_inset Formula $\sin\left(\a\right)=\frac{BC}{AB}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קוסינוס: 
+\begin_inset Formula $\cos\left(\a\right)=\frac{AC}{AB}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+טאנגנס: 
+\begin_inset Formula $\tan\left(\a\right)=\frac{BC}{AC}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\sin_{\upharpoonright_{\left[-\frac{\pi}{2},\frac{\pi}{2}\right]}}$
+\end_inset
+
+ הפיכה, 
+\begin_inset Formula $\cos_{\upharpoonright_{\left[0,\pi\right]}}$
+\end_inset
+
+ הפיכה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\csc=\frac{1}{\sin}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\arcsin=\sin^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sec=\frac{1}{\cos}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\arccos=\cos^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\cot=\frac{1}{\tan}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\arctan=\tan^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+: כאשר משתמשים בפונקציות טריגונומטריות מקובל להשתמש ברדיאנים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: 
+\begin_inset Formula $\tan=\frac{\sin}{\cos}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט הקוסינוסים
+\series default
+: 
+\begin_inset Formula $c^{2}=a^{2}+b^{2}-2ab\cos\left(\g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט הסינוסים
+\series default
+: 
+\begin_inset Formula $\frac{a}{\sin\left(\a\right)}=\frac{b}{\sin\left(\b\right)}=\frac{c}{\sin\left(\g\right)}=2r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט פיתגורס
+\series default
+: 
+\begin_inset Formula $\sin^{2}\left(\theta\right)+\cos^{2}\left(\theta\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+רביע
+\series default
+\color inherit
+: המרחב האוקלידי מתחלק לארבעה חלקים
+\end_layout
+
+\begin_layout Itemize
+רביע 
+\begin_inset Formula $\text{I}$
+\end_inset
+
+: 
+\begin_inset Formula $\left\{ \left<x,y\right>\in\bbr^{2}\mid x,y\ge0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+רביע 
+\begin_inset Formula $\text{II}$
+\end_inset
+
+: 
+\begin_inset Formula $\left\{ \left<x,y\right>\in\bbr^{2}\mid x\le0\land y\ge0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+רביע 
+\begin_inset Formula $\text{III}$
+\end_inset
+
+: 
+\begin_inset Formula $\left\{ \left<x,y\right>\in\bbr^{2}\mid x,y\le0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+רביע 
+\begin_inset Formula $\text{IV}$
+\end_inset
+
+: 
+\begin_inset Formula $\left\{ \left<x,y\right>\in\bbr^{2}\mid x\ge0\land y\le0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מרחק
+\series default
+ 
+\series bold
+בין
+\series default
+ 
+\series bold
+שתי
+\series default
+ 
+\series bold
+נקודות
+\series default
+\color inherit
+: 
+\begin_inset Formula $d\left(\left<a,b\right>,\left<c,d\right>\right)=\sqrt{\left(a-c\right)^{2}+\left(b-d\right)^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+ערך
+\series default
+ 
+\series bold
+מוחלט
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left|x\right|=\begin{cases}
+x & x\ge0\\
+-x & x\le0
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הצגה
+\series default
+ 
+\series bold
+פולרית
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left<a,b\right>\equiv\left<\sqrt{a^{2}+b^{2}},\arg\left(a,b\right)\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הגדרה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\arg\left(x,y\right)=\begin{cases}
+\arctan\left(\frac{y}{x}\right) & \left(x>0\right)\land\left(y>0\right)\\
+\pi-\arctan\left(\frac{y}{x}\right) & \left(x<0\right)\land\left(y>0\right)\\
+2\pi-\arctan\left(\frac{y}{x}\right) & \left(x>0\right)\land\left(y<0\right)\\
+\pi+\arctan\left(\frac{y}{x}\right) & \left(x<0\right)\land\left(y<0\right)
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+ישר
+\series default
+\color inherit
+: הפונקציה 
+\begin_inset Formula $f\left(x\right)=mx+b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: דרך כל שתי נקודות עובר ישר אחד ויחיד.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הערה
+\series default
+\color inherit
+: הישר העובר דרך 
+\begin_inset Formula $\left<a,b\right>,\left<c,d\right>$
+\end_inset
+
+ היא 
+\begin_inset Formula $f\left(x\right)=\frac{b-d}{a-c}x+\frac{da-bc}{a-c}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: כל שני ישרים שונים ולא מקבילים נחתכים בנקודה אחת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+ישרים
+\series default
+ 
+\series bold
+מקבילים
+\series default
+\color inherit
+: שני ישרים 
+\begin_inset Formula $y=m_{1}x+b_{1},y=m_{2}x+b_{2}$
+\end_inset
+
+ הינם מקבילים 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $m_{1}=m_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+ישרים
+\series default
+ 
+\series bold
+מאונכים/ניצבים
+\series default
+\color inherit
+: שני ישרים 
+\begin_inset Formula $y=m_{1}x+b_{1},y=m_{2}x+b_{2}$
+\end_inset
+
+ הינם מקבילים 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $m_{1}\cdot m_{2}=-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סימון
+\series default
+\color inherit
+: אם 
+\begin_inset Formula $f,g$
+\end_inset
+
+ ישרים מאונכים אזי 
+\begin_inset Formula $f\perp g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מרחק
+\series default
+ 
+\series bold
+נקודה
+\series default
+ 
+\series bold
+מישר
+\series default
+\color inherit
+: 
+\begin_inset Formula $d\left(\left<x,y\right>,mx+b\right)=\left|\frac{mx-y+b}{\sqrt{m^{2}+1}}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+חלוקת
+\series default
+ 
+\series bold
+קטע
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left<a,b\right>$
+\end_inset
+
+, 
+\begin_inset Formula $\left<c,d\right>$
+\end_inset
+
+ נקודות ויהיו 
+\begin_inset Formula $\a,\b\in\bbr$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $P=\left<\frac{\a c+\b a}{\a+\b},\frac{\a d+\b b}{\a+\b}\right>$
+\end_inset
+
+ ומתקיים 
+\begin_inset Formula $\frac{d\left(\left<a,b\right>,P\right)}{d\left(\left<c,d\right>,P\right)}=\frac{\a}{\b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+חתך חרוט/חתך קוני/שניונית
+\series default
+\color inherit
+: הצורה המתקבלת מחיתוך של חרוט ומישור.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מעגל
+\series default
+\color inherit
+: 
+\begin_inset Formula $C_{r}\left(P\right)=\left\{ \left<x,y\right>\in\bbr^{2}\mid d\left(\left<x,y\right>,P\right)=r\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+אליפסה
+\series default
+\color inherit
+: 
+\begin_inset Formula $E_{r}\left(P_{1},P_{2}\right)=\left\{ \left<x,y\right>\in\bbr^{2}\mid d\left(\left<x,y\right>,P_{1}\right)+d\left(\left<x,y\right>,P_{2}\right)=r\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+היפרבולה
+\series default
+\color inherit
+: 
+\begin_inset Formula $H_{r}\left(P_{1},P_{2}\right)=\left\{ \left<x,y\right>\in\bbr^{2}\mid\left|d\left(\left<x,y\right>,P_{1}\right)-d\left(\left<x,y\right>,P_{2}\right)\right|=r\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+פרבולה
+\series default
+\color inherit
+: 
+\begin_inset Formula $P\left(P_{1},mx+b\right)=\left\{ \left<x,y\right>\in\bbr^{2}\mid d\left(\left<x,y\right>,P_{1}\right)=d\left(\left<x,y\right>,mx+b\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הערה
+\series default
+\color inherit
+: החתכים הקונים היחידיים הם מעגל, אליפסה, היפרבולה, פרבולה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+קודקוד
+\series default
+ 
+\series bold
+הפרבולה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\left(x\right)=ax^{2}+bx+c$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<-\frac{b}{2a},c-\frac{b^{2}}{4a}\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+דיסקרימיננטה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\left(x\right)=ax^{2}+bx+c$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Delta=b^{2}-4ac$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\left(x\right)=ax^{2}+bx+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Delta>0$
+\end_inset
+
+ 
+\begin_inset Formula $\impliedby$
+\end_inset
+
+ יש שתי נקודות חיתוך עם ציר 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Delta=0$
+\end_inset
+
+ 
+\begin_inset Formula $\impliedby$
+\end_inset
+
+ יש נקודת חיתוך אחת עם ציר 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Delta<0$
+\end_inset
+
+ 
+\begin_inset Formula $\impliedby$
+\end_inset
+
+ אין נקודות חיתוך עם ציר 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+נוסחת
+\series default
+ 
+\series bold
+השורשים
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(ax^{2}+bx+c=0\right)\iff\left(x=\frac{-b\pm\sqrt{\Delta}}{2a}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+נוסחאות
+\series default
+ 
+\series bold
+וייטה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $ax^{2}+bx+c=0$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $x_{1},x_{2}$
+\end_inset
+
+ השורשים של המשוואה אזי )
+\begin_inset Formula $x_{1}\cdot x_{2}=\frac{c}{a}$
+\end_inset
+
+(
+\begin_inset Formula $\land$
+\end_inset
+
+)
+\begin_inset Formula $x_{1}+x_{2}=-\frac{b}{a}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+אי
+\series default
+ 
+\series bold
+שיוויון
+\series default
+ 
+\series bold
+המשולש
+\series default
+ 
+\series bold
+)אש
+\begin_inset Quotes erd
+\end_inset
+
+מ(
+\series default
+\color inherit
+: 
+\begin_inset Formula $\forall a,b\in\bbr.\left|\left|a\right|-\left|b\right|\right|\le\left|a+b\right|\le\left|a\right|+\left|b\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: 
+\begin_inset Formula $\forall\left<a,b\right>\in C_{1}.\exists\theta.\left<a,b\right>=\left<\cos\left(\theta\right),\sin\left(\theta\right)\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הגדרה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\sin,\cos:\bbr\to\left[-1,1\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sin\left(x\right)=\cos\left(\frac{\pi}{2}-x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+מחזוריות: 
+\begin_inset Formula $\sin\left(x\right)=\sin\left(x+2\pi\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\cos\left(x\right)=\cos\left(x+2\pi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סימטריה: 
+\begin_inset Formula $\sin\left(x\right)=\sin\left(\pi-x\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\cos\left(x\right)=-\cos\left(\pi-x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+זוגיות: 
+\begin_inset Formula $\sin\left(x\right)=-\sin\left(-x\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\cos\left(x\right)=\cos\left(-x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סכום זוויות: 
+\begin_inset Formula $\sin\left(x+y\right)=\sin\left(x\right)\cos\left(y\right)+\sin\left(y\right)\cos\left(x\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\cos\left(x+y\right)=\cos\left(x\right)\cos\left(y\right)-\sin\left(x\right)\sin\left(y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סכום פונקציות: 
+\begin_inset Formula $\sin\left(x\right)+\sin\left(y\right)=2\sin\left(\frac{x+y}{2}\right)\cos\left(\frac{x-y}{2}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\cos\left(x\right)+\cos\left(y\right)=2\cos\left(\frac{x+y}{2}\right)\cos\left(\frac{x-y}{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+פתרון
+\series default
+ 
+\series bold
+משוואה
+\series default
+ 
+\series bold
+טריגונומטריות
+\series default
+\color inherit
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sin\left(x\right)=\sin\left(\a\right)\implies x\in\left\{ \a+2\pi k\mid k\in\bbz\right\} \cup\left\{ \pi-\a+2\pi k\mid k\in\bbz\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\cos\left(x\right)=\cos\left(\a\right)\implies x\in\left\{ \a+2\pi k\mid k\in\bbz\right\} \cup\left\{ -\a+2\pi k\mid k\in\bbz\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\tan\left(x\right)=\tan\left(\a\right)\implies x\in\left\{ \a+\pi k\mid k\in\bbz\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+פולינום
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a_{0},\ldots a_{n}\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum_{i=0}^{n}a_{i}x^{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מעלה
+\series default
+ 
+\series bold
+של
+\series default
+ 
+\series bold
+פולינום
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $P\left(x\right)=\sum_{i=0}^{n}a_{i}x^{i}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\max\left(i\in\left[n\right]\mid a_{i}\ne0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+סימון
+\series default
+\color inherit
+: המעלה של 
+\begin_inset Formula $P$
+\end_inset
+
+ היא 
+\begin_inset Formula $\deg\left(P\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+הערה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\deg\left(0\right)=-\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+המקדם
+\series default
+ 
+\series bold
+המוביל
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $P\left(x\right)=\sum_{i=0}^{n}a_{i}x^{i}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a_{\deg\left(P\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+חוג
+\series default
+ 
+\series bold
+הפולינומים
+\series default
+\color inherit
+: 
+\begin_inset Formula $R_{n}\left[x\right]=\left\{ \sum_{i=0}^{n}a_{i}x^{i}\mid a_{1},\ldots,a_{n}\in R\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $R\left[x\right]=\bigcup_{n=0}^{\infty}R_{n}\left[x\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+שורש
+\series default
+ 
+\series bold
+של
+\series default
+ 
+\series bold
+פולינום
+\series default
+\color inherit
+: מספר 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $P\left(\a\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מספר
+\series default
+ 
+\series bold
+אלגברי
+\series default
+\color inherit
+: 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\exists P\in\bbz\left[x\right].P\left(\a\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\forall f,g\in\bbr\left[x\right].\left(f+g\in\bbr\left[x\right]\right)\land\left(f\cdot g\in\bbr\left[x\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+נוסחת
+\series default
+ 
+\series bold
+המעלות
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $p,q\in\bbr\left[x\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\deg\left(p+q\right)\le\max\left(\deg\left(p\right),\deg\left(q\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\deg\left(p\cdot q\right)=\deg\left(p\right)+\deg\left(q\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+חלוקה
+\series default
+ 
+\series bold
+עם
+\series default
+ 
+\series bold
+שארית
+\series default
+\color inherit
+: 
+\begin_inset Formula $\forall p,q\in\bbr\left[x\right].\left(q\ne0\right)\implies\left(\exists!q',r\in\bbr\left[x\right].\deg\left(r\right)<\deg\left(q\right)\land p=q\cdot q'+r\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: לכל 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ )
+\begin_inset Formula $\a$
+\end_inset
+
+ שורש של 
+\begin_inset Formula $p$
+\end_inset
+
+( 
+\begin_inset Formula $\iff$
+\end_inset
+
+ )
+\begin_inset Formula $x-\a$
+\end_inset
+
+ מחלק את 
+\begin_inset Formula $p$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+פולינום
+\series default
+ 
+\series bold
+אי
+\series default
+ 
+\series bold
+פריק
+\series default
+\color inherit
+: פולינום 
+\begin_inset Formula $p$
+\end_inset
+
+ שמקיים 
+\begin_inset Formula $\forall p_{1},p_{2}\in\bbr\left[x\right]\backslash\bbr_{1}\left[x\right].p\ne p_{1}\cdot p_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: 
+\begin_inset Formula $\forall a_{0}\ldots a_{n}\in\bbz.\forall q\in\bbq.\sum_{i=0}^{n}a_{i}q^{i}=0\implies q\in\left\{ \frac{c}{a}\mid c|a_{0}\land a|a_{n}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+חזקה
+\series default
+ 
+\series bold
+שלילית
+\series default
+\color inherit
+: 
+\begin_inset Formula $\forall r\in\bbr\backslash\left\{ 0\right\} .\forall m\in\bbn_{+}.r^{-m}=\frac{1}{r^{m}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\forall m\in\bbn_{+}.\im\left(\lambda x\in\bbr.x^{m}\right)=\begin{cases}
+\left[0,\infty\right) & m\in\bbn_{even}\\
+\bbr & m\in\bbn_{odd}
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+שורש
+\series default
+\color inherit
+: 
+\begin_inset Formula $\forall m\in\bbn.\forall r\in\left[0,\infty\right).\exists!r'\in\left[0,\infty\right).r'=\sqrt[m]{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $r^{\frac{1}{m}}=\sqrt[m]{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הערה
+\series default
+\color inherit
+: 
+\begin_inset Formula $m\in\bbn_{odd}\implies-\sqrt[m]{r}=\sqrt[m]{-r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+חזקה
+\series default
+ 
+\series bold
+רציונלית
+\series default
+\color inherit
+: 
+\begin_inset Formula $r^{\frac{n}{m}}=\sqrt[m]{r^{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+חזקה
+\series default
+ 
+\series bold
+ממשית
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $q:\bbn\to\bbq$
+\end_inset
+
+ סדרה המקיימת 
+\begin_inset Formula $\lim_{n\to\infty}q_{n}=s$
+\end_inset
+
+ אזי 
+\begin_inset Formula $r^{s}=\lim_{n\to\infty}r^{q_{n}}=s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+פונקציה
+\series default
+ 
+\series bold
+מעריכית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $a\in\left(0,\infty\right)\backslash\left\{ 1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(x\right)=a^{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט
+\series default
+\color inherit
+: 
+\begin_inset Formula $a^{x}:\bbr\xrightarrow[\text{onto}]{1-1}\left(0,\infty\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(a^{b}\right)^{c}=a^{b\cdot c}$
+\end_inset
+
+, 
+\begin_inset Formula $a^{b+c}=a^{b}\cdot a^{c}$
+\end_inset
+
+, 
+\begin_inset Formula $\left(a\cdot b\right)^{c}=a^{c}\cdot b^{c}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+לוגריתם
+\series default
+\color inherit
+: 
+\begin_inset Formula $\log_{a}:\left(0,\infty\right)\xrightarrow[\text{onto}]{1-1}\bbr$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\log_{a}\left(a^{x}\right)=x=a^{\log_{a}\left(x\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\log_{a}\left(b\cdot c\right)=\log_{a}\left(b\right)+\log_{a}\left(c\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\log_{a}\left(b^{c}\right)=c\cdot\log_{a}\left(b\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\log_{a}\left(b\right)=\frac{\log_{c}\left(b\right)}{\log_{c}\left(a\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $c^{\log_{a}\left(b\right)}=b^{\log_{a}\left(c\right)}$
+\end_inset
+
+, 
+\begin_inset Formula $a^{\log_{a}\left(b\right)}=b$
+\end_inset
+
+, 
+\begin_inset Formula $\log_{a}\left(a^{x}\right)=x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+שלמות
+\series default
+ 
+\series bold
+הממשיים
+\series default
+\color inherit
+: לכל 
+\begin_inset Formula $\emptyset\ne X\subseteq\bbr$
+\end_inset
+
+ )קיים ל־
+\begin_inset Formula $X$
+\end_inset
+
+ חסם עליון ותחתון( 
+\begin_inset Formula $\impliedby$
+\end_inset
+
+ )קיימים 
+\begin_inset Formula $\sup\left(X\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\inf\left(X\right)$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+חתך
+\series default
+ 
+\series bold
+דדקינד
+\series default
+\color inherit
+: קבוצה 
+\begin_inset Formula $\emptyset\ne A\subset\bbq$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall a\in A.\forall q\in\bbq.q\le a\implies q\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall a\in A.\exists b\in A.a<b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+הגדרה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr=\left\{ A\in\P{\bbq}{}\mid\text{ חתך דדקינד}A\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+הערה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\forall r_{1},r_{2}\in\bbr.r_{1}\le r_{2}\iff r_{1}\subseteq r_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+חיבור
+\series default
+\color inherit
+: 
+\begin_inset Formula $\forall r_{1},r_{2}\in\bbr.r_{1}+r_{2}=\left\{ a+b\mid a\in r_{1}\land b\in r_{2}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+חיסור
+\series default
+\color inherit
+: 
+\begin_inset Formula $\forall r\in\bbr.-r=\left\{ a-b\mid\left(b\in\bbq\backslash r\right)\land\left(a<0\right)\land\left(a\in\bbq\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+כפל
+\series default
+\color inherit
+: 
+\begin_inset Formula $\forall r_{1},r_{2}\in\bbr.r_{1}\cdot r_{2}=\left\{ a\cdot b\mid a\in r_{1}\land b\in r_{2}\land a,b\ge0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הגדרה
+\series default
+\color inherit
+: 
+\begin_inset Formula $i^{2}=-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מספר
+\series default
+ 
+\series bold
+מרוכב
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left<a,b\right>\in\bbr^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left<a,b\right>=a+ib$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הגדרה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbc=\left\{ a+ib\mid a,b\in\bbr\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הגדרה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $a+ib\in\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\im\left(a+ib\right)=b$
+\end_inset
+
+, 
+\begin_inset Formula $\re\left(a+ib\right)=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+צמוד
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $a+ib\in\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\overline{a+ib}=a-ib$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\forall z\in\bbc.z=\overline{z}\iff z\in\bbr$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\forall z\in\bbc.z\cdot\overline{z}\in\bbr$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+נורמה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $a+ib\in\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\Vert a+ib\right\Vert =\sqrt{a^{2}+b^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+זהות
+\series default
+ 
+\series bold
+אוילר
+\series default
+\color inherit
+: 
+\begin_inset Formula $e^{i\theta}=\cis\left(\theta\right)=\cos\left(\theta\right)+i\sin\left(\theta\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+נוסחת
+\series default
+ 
+\series bold
+דה־מואבר
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $z=re^{i\theta}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $z^{n}=r^{n}\left(\cos\left(n\theta\right)+i\sin\left(n\theta\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+המשפט
+\series default
+ 
+\series bold
+היסודי
+\series default
+ 
+\series bold
+של
+\series default
+ 
+\series bold
+האלגברה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\forall p\in\bbc\left[x\right]\backslash\bbc_{0}\left[x\right].\#\left\{ \a\in\bbc\mid p\left(\a\right)=0\right\} =\deg\left(p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\forall p\in\bbc\left[x\right].\exists!a_{1},\ldots,a_{\deg\left(p\right)},b\in\bbc.p\left(x\right)=b\left(x-a_{1}\right)\cdot\ldots\cdot\left(x-a_{\deg\left(p\right)}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

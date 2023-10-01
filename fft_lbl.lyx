@@ -1,0 +1,998 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+\usepackage{culmus}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usepackage{cancel}
+\usepackage{wrapfig}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[cm]{fullpage}
+% \usepackage[in]{fullpage}
+\usepackage{polynom}
+\usepackage{booktabs}
+
+\setlength{\tabcolsep}{1pt}
+\renewcommand{\arraystretch}{1.25} % Default value: 1
+
+\usetikzlibrary{math}
+\usetikzlibrary{shadows,trees}
+\counterwithin*{section}{part}
+\setlist{nosep, noitemsep}
+% \setlist[enumerate,levels]{format}
+\setlist[enumerate,1]{label = \arabic*., ref = \arabic*}
+\setlist[enumerate,2]{label = \emph{\alph*}), ref = \theenumi.\emph{\alph*}}
+\setlist[enumerate,3]{label = .\roman*, ref = \theenumii.\roman*}
+
+
+% Convert the Lyx colors into more pleasent colors:
+\definecolor{blue}{RGB}{14,107,217}
+\definecolor{green}{RGB}{0,158,40}
+\definecolor{red}{RGB}{235,16,16}
+\definecolor{brown}{RGB}{164,66,0}
+\definecolor{orange}{RGB}{231,135,26}
+\definecolor{purple}{RGB}{94,53,177}
+
+
+% Program Listing colors
+\definecolor{keywordcolor}{RGB}{255,117,0}
+\definecolor{commentcolor}{RGB}{128,128,128}
+\definecolor{stringcolor}{RGB}{0,168,0}
+
+
+% Trees formating
+\tikzset{edge from parent fork down, level distance=2cm, every node/.style= {rectangle,rounded corners, minimum height=8mm, very thick, align=center}}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=cyan,
+    }
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding default
+\fontencoding global
+\font_roman "default" "David"
+\font_sans "default" "David"
+\font_typewriter "default" "David"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf true
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle false
+\papersize letterpaper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 4cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\headheight 0cm
+\headsep 0.5cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\lang hebrew
+\begin_inset CommandInset include
+LatexCommand include
+filename "E:/Odyssey/macros.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang british
+Vector space
+\series default
+: 
+\begin_inset Formula $V$
+\end_inset
+
+ is v.s.
+ over 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ if 
+\begin_inset Formula $\left(\forall u,v\in V.u+v\in V\right)\land\left(\forall v\in V.\forall a\in\bbf.a\cdot v\in V\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang british
+Inner product
+\series default
+: 
+\begin_inset Formula $\left<\cdot,\cdot\right>:V^{2}\to\bbf$
+\end_inset
+
+ s.t.
+ (multilinear by first argument)
+\begin_inset Formula $\land$
+\end_inset
+
+(
+\begin_inset Formula $\forall u\in V\backslash\left\{ 0\right\} .\left<u,u\right>>0$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Norm
+\series default
+: 
+\begin_inset Formula $\left\Vert \cdot\right\Vert :V\to\bbf$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\left\Vert v\right\Vert =\sqrt{\left<v,v\right>}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Orthogonal
+\series default
+: 
+\begin_inset Formula $\left<v,u\right>=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Orthogonal set
+\series default
+: (
+\begin_inset Formula $\forall v\ne u\in V.\left<v,u\right>=0$
+\end_inset
+
+)
+\begin_inset Formula $\land$
+\end_inset
+
+(
+\begin_inset Formula $\forall v\in V.\left\Vert v\right\Vert \ne0$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Orthonormal set
+\series default
+: (orthogonal set)
+\begin_inset Formula $\land$
+\end_inset
+
+(
+\begin_inset Formula $\forall v\in V.\left\Vert v\right\Vert =1$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang british
+Homomorphismic function
+\series default
+: 
+\begin_inset Formula $f$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $f\left(xy\right)=f\left(x\right)f\left(y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang british
+Expected value
+\series default
+: 
+\begin_inset Formula $\bbe_{x\sim A}\left[f\left(x\right)\right]=\frac{1}{\left|A\right|}\sum_{x\in A}f\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang british
+Boolean function
+\series default
+: function 
+\begin_inset Formula $f$
+\end_inset
+
+ such that 
+\begin_inset Formula $\left|\text{Im}\left(f\right)\right|\le2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang british
+definition
+\series default
+: 
+\begin_inset Formula ${\cal F}_{n}=\left\{ \pm1\right\} ^{n}\to\left\{ \pm1\right\} \equiv\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang british
+definition
+\series default
+: for 
+\begin_inset Formula $f,g\in{\cal F}_{n}$
+\end_inset
+
+ define 
+\begin_inset Formula ${\displaystyle \left<f,g\right>=\bbe_{x\sim\left\{ 0,1\right\} ^{n}}\left[f\left(x\right)\cdot g\left(x\right)\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang british
+claim
+\series default
+: 
+\begin_inset Formula $F_{n}$
+\end_inset
+
+ is a vector space over 
+\begin_inset Formula $\left\{ 0,1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang british
+Characteristic vector
+\series default
+: let 
+\begin_inset Formula $S\subseteq\left[n\right]$
+\end_inset
+
+, define 
+\begin_inset Formula $\chi_{S}:\left\{ \pm1\right\} ^{n}\to\left\{ \pm1\right\} $
+\end_inset
+
+ as 
+\begin_inset Formula ${\displaystyle \chi_{S}\left(x\right)=\prod_{i\in S}x_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang british
+claim
+\series default
+: 
+\begin_inset Formula $\left\{ \chi_{S}\right\} _{S\subseteq\left[n\right]}$
+\end_inset
+
+ is orthonormal basis for 
+\begin_inset Formula $F_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang british
+claim
+\series default
+: every bool func 
+\begin_inset Formula $f\left(x\right)\in F_{n}$
+\end_inset
+
+ can be represented as 
+\begin_inset Formula $f\left(x\right)=\sum_{S\subseteq\left[n\right]}\chi_{S}\left(x\right)\cdot\hat{f}\left(S\right)$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\hat{f}\left(S\right)\in\left[-1,1\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang british
+Norm 2
+\series default
+: let 
+\begin_inset Formula $f\in F_{n}$
+\end_inset
+
+ then 
+\begin_inset Formula ${\displaystyle \left\Vert f\right\Vert _{2}=\sqrt{\bbe_{x\in\left\{ 0,1\right\} ^{n}}\left[f\left(x\right)^{2}\right]}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang british
+claim
+\series default
+: 
+\begin_inset Formula ${\displaystyle \forall S,T\subseteq\left[n\right].\left<\chi_{S}\left(x\right),\chi_{T}\left(x\right)\right>=\begin{cases}
+1 & S=T\\
+0 & else
+\end{cases}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang british
+statement
+\series default
+: 
+\begin_inset Formula $f\cdot\chi_{S}=\hat{f}\left(S\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+\lang british
+definition
+\series default
+\color inherit
+: 
+\begin_inset Formula $\overline{J}=\left[n\right]\backslash J$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+\lang british
+Restricted function
+\series default
+\color inherit
+: let 
+\begin_inset Formula $f\in F_{n}$
+\end_inset
+
+, 
+\begin_inset Formula $J\subseteq\left[n\right]$
+\end_inset
+
+, 
+\begin_inset Formula $z\in\left\{ \pm1\right\} ^{\left|\overline{J}\right|}$
+\end_inset
+
+ define 
+\begin_inset Formula $f_{\overline{J}\to z}:\left\{ \pm1\right\} ^{\left|J\right|}\to\left\{ \pm1\right\} $
+\end_inset
+
+ as
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+\begin_inset Formula $f_{\overline{J}\to z}\left(y\right)=f\left(\lambda m\in\left[n\right].\begin{cases}
+y_{\left|\left\{ x\in J\mid x\le m\right\} \right|} & m\in J\\
+z_{\left|\left\{ x\in\overline{J}\mid x\le m\right\} \right|} & m\in\overline{J}
+\end{cases}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+\lang british
+claim
+\series default
+\color inherit
+: let 
+\begin_inset Formula $T\subseteq J\subseteq\left[n\right]$
+\end_inset
+
+ then 
+\begin_inset Formula ${\displaystyle \bbe_{z\in\left\{ \pm1\right\} ^{\left|\overline{J}\right|}}\left[\widehat{f_{\overline{J}\to z}}\left(T\right)^{2}\right]=\sum_{S\in\left\{ S\subseteq\left[n\right]\mid S\cap J=T\right\} }\hat{f}\left(S\right)^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+\lang british
+Heavy coefficients
+\series default
+\color inherit
+: let 
+\begin_inset Formula $\g\in\bbr$
+\end_inset
+
+, 
+\begin_inset Formula $f\in F_{n}$
+\end_inset
+
+ then 
+\begin_inset Formula $\left|\left\{ S\subseteq\left[n\right]\mid\left|\hat{f}\left(S\right)\right|\ge\g\right\} \right|\le\frac{1}{\g^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+\lang british
+t-sparse function
+\series default
+\color inherit
+: 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula ${\displaystyle \exists A\subseteq\left[n\right].\left(f\left(x\right)=\sum_{S\in A}\hat{f}\left(S\right)\chi_{S}\left(x\right)\right)\land\left(\left|A\right|=t\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+\lang british
+\begin_inset Formula $\left(t,\e\right)$
+\end_inset
+
+-sparse function
+\series default
+\color inherit
+:
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula ${\displaystyle \exists g\in F_{n}.\left(\exists A\subseteq\left[n\right].\left(g\left(x\right)=\sum_{S\in A}\hat{g}\left(S\right)\chi_{S}\left(x\right)\right)\land\left(\left|A\right|=t\right)\right)\land\left(\left\Vert f-g\right\Vert _{2}^{2}\le\e\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+\lang british
+statement
+\series default
+\color inherit
+: let 
+\begin_inset Formula $L$
+\end_inset
+
+ be the output of the GL algorithm, we can conclude that 
+\begin_inset Formula ${\displaystyle f\left(x\right)\approx\text{sign}\left(\sum_{T\in L}\chi_{T}\left(x\right)\cdot\hat{f}\left(T\right)\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+\lang british
+definition
+\series default
+\color inherit
+: let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a finite group then 
+\begin_inset Formula $V_{G}=G\to\bbc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+\lang british
+definition
+\series default
+\color inherit
+: for 
+\begin_inset Formula $f,g\in V_{G}$
+\end_inset
+
+ define 
+\begin_inset Formula ${\displaystyle \left<f,g\right>=\bbe_{x\sim G}\left[f\left(x\right)\cdot\overline{g\left(x\right)}\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+\lang british
+Cyclic group
+\series default
+\color inherit
+: a group 
+\begin_inset Formula $G$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\exists g\in G.\left<g\right>=G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+\lang british
+claim
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left<\bbz_{n},+\right>$
+\end_inset
+
+ is a cyclic group.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+\lang british
+Homomorphism
+\series default
+\color inherit
+: func 
+\begin_inset Formula $f:G\to H$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $f\left(xy\right)=f\left(x\right)f\left(y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+\lang british
+Isomorphism
+\series default
+\color inherit
+: homomorphismic bijection.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+\lang british
+symbol
+\series default
+\color inherit
+: 
+\begin_inset Formula $G\cong H$
+\end_inset
+
+ is there exists an homomorphismic bijection between them.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+\lang british
+Theorem
+\series default
+\color inherit
+: let 
+\begin_inset Formula $G$
+\end_inset
+
+ be a finite group then there exists 
+\begin_inset Formula $\bbz_{q_{1}}\ldots\bbz_{q_{n}}$
+\end_inset
+
+ cyclic groups s.t.
+ 
+\begin_inset Formula $G\cong\bbz_{q_{1}}\oplus\ldots\oplus\bbz_{q_{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+\lang british
+claim
+\series default
+\color inherit
+: let 
+\begin_inset Formula $G$
+\end_inset
+
+ be cyclic abelian group then 
+\begin_inset Formula $G\cong\bbz_{\left|G\right|}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+\lang british
+General basis
+\series default
+\color inherit
+: for every 
+\begin_inset Formula $\bbz_{n}$
+\end_inset
+
+ define 
+\begin_inset Formula $\chi_{y}:\bbz_{n}\to\bbc$
+\end_inset
+
+ as 
+\begin_inset Formula $\chi_{y}\left(x\right)=e^{\frac{2\pi ixy}{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+\lang british
+claim
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left\{ \chi_{g}\right\} _{g\in G}$
+\end_inset
+
+ is the only orthonormal homomorphismic basis of 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+\lang british
+definition
+\series default
+\color inherit
+: 
+\begin_inset Formula $x^{\otimes i}=\begin{cases}
+x_{j} & i\ne j\\
+-x_{i} & i=j
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+Derivative
+\series default
+\color inherit
+: let 
+\begin_inset Formula $f$
+\end_inset
+
+ be a bool func and 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\partial_{i}f:\left\{ \pm1\right\} ^{n}\to\left\{ \pm1\right\} $
+\end_inset
+
+ as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\partial_{i}f\left(y\right)=\frac{1}{2}\left(f\left(y_{1},\dots,y_{i-1},1,y_{i+1},\dots,y_{n-1}\right)-f\left(y_{1},\dots,y_{i-1},-1,y_{i+1},\dots,y_{n-1}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+Event probability
+\series default
+\color inherit
+: 
+\begin_inset Formula $\text{Pr}_{x\sim A}\left[Q\left(x\right)\right]=\frac{1}{\left|A\right|}\sum_{x\in A}Q\left(x\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $Q$
+\end_inset
+
+ is 
+\begin_inset Formula $1$
+\end_inset
+
+ at the event and 
+\begin_inset Formula $0$
+\end_inset
+
+ else.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+Influence
+\series default
+\color inherit
+: 
+\begin_inset Formula $I_{i}\left[f\right]=\text{Pr}_{x\in\left\{ \pm1\right\} ^{n}}\left[f\left(x\right)\ne f\left(x^{\otimes i}\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+Total influence
+\series default
+\color inherit
+: 
+\begin_inset Formula $I\left[f\right]=\sum_{i\in\left[n\right]}I_{i}\left[f\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+claim
+\series default
+\color inherit
+: 
+\begin_inset Formula $I_{i}\left[f\right]=\left<\partial_{i}f,\partial_{i}f\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+Variance
+\series default
+\color inherit
+: 
+\begin_inset Formula $\text{var}\left(f\right)=\bbe_{x\in\left\{ \pm1\right\} ^{n}}\left[\left(f\left(x\right)-\bbe_{y\in\left\{ \pm1\right\} ^{n}}\left[f\left(y\right)\right]\right)^{2}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+Balanced boolean function
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbe_{x\in\left\{ \pm1\right\} ^{n}}\left[f\left(x\right)\right]=0$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

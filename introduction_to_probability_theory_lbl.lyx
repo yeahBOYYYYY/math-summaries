@@ -1,0 +1,7030 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+\usepackage{culmus}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usepackage{cancel}
+\usepackage{wrapfig}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[cm]{fullpage}
+\usepackage{polynom}
+\usepackage{booktabs}
+\usepackage{amsmath}
+
+
+\setlength{\tabcolsep}{1pt}
+\renewcommand{\arraystretch}{1.25} % Default value: 1
+
+\usetikzlibrary{math}
+\usetikzlibrary{shadows,trees}
+\counterwithin*{section}{part}
+\setlist{nosep, noitemsep}
+% \setlist[enumerate,levels]{format}
+\setlist[enumerate,1]{label = \arabic*., ref = \arabic*}
+\setlist[enumerate,2]{label = \emph{\alph*}), ref = \theenumi.\emph{\alph*}}
+\setlist[enumerate,3]{label = .\roman*, ref = \theenumii.\roman*}
+
+
+% Convert the Lyx colors into more pleasent colors:
+\definecolor{blue}{RGB}{14,107,217}
+\definecolor{green}{RGB}{0,158,40}
+\definecolor{red}{RGB}{235,16,16}
+\definecolor{brown}{RGB}{164,66,0}
+\definecolor{orange}{RGB}{231,135,26}
+\definecolor{purple}{RGB}{94,53,177}
+
+
+% Program Listing colors
+\definecolor{keywordcolor}{RGB}{255,117,0}
+\definecolor{commentcolor}{RGB}{128,128,128}
+\definecolor{stringcolor}{RGB}{0,168,0}
+
+
+% Trees formating
+\tikzset{edge from parent fork down, level distance=2cm, every node/.style= {rectangle,rounded corners, minimum height=8mm, very thick, align=center}}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    }
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding default
+\fontencoding global
+\font_roman "default" "David"
+\font_sans "default" "David"
+\font_typewriter "default" "David"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf true
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle false
+\papersize letterpaper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 4cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\headheight 0cm
+\headsep 0.5cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "E:/Odyssey/macros.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית
+\series default
+ 
+\series bold
+הסתברות
+\series default
+ 
+\series bold
+נקודתית
+\series default
+: 
+\begin_inset Formula $\bbp\in\left[0,1\right]^{\Omega}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\sum_{\omega\in\Omega}\bbp\left(\omega\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מרחב
+\series default
+ 
+\series bold
+הסתברות
+\series default
+ )מ
+\begin_inset Quotes erd
+\end_inset
+
+ה(: תהא 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $\bbp$
+\end_inset
+
+ פונקציית הסתברות אזי 
+\begin_inset Formula $\left(\Omega,\bbp\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מרחב
+\series default
+ 
+\series bold
+מדגם
+\series default
+: יהי 
+\begin_inset Formula $\left(\Omega,\bbp\right)$
+\end_inset
+
+ מרחב הסתברות אזי 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מרחב
+\series default
+ 
+\series bold
+הסתברות
+\series default
+ 
+\series bold
+בדיד
+\series default
+: מרחב הסתברות 
+\begin_inset Formula $\left(\Omega,\bbp\right)$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left|\Omega\right|\le\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מרחב
+\series default
+ 
+\series bold
+הסתברות
+\series default
+ 
+\series bold
+סופי
+\series default
+: מרחב הסתברות 
+\begin_inset Formula $\left(\Omega,\bbp\right)$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left|\Omega\right|\in\bbn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+: בקורס זה כל מרחבי ההסתברות הינם בדידים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: 
+\begin_inset Formula $2^{A}=\P A{}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מאורע
+\series default
+: תהא 
+\begin_inset Formula $A\subseteq\Omega$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(A\right)=\sum_{\omega\in A}\bbp\left(\omega\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: 
+\begin_inset Formula $\left[n\right]=\left\{ 1,\ldots,n\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: יהי מרחב הסתברות 
+\begin_inset Formula $\left(\Omega,\bbp\right)$
+\end_inset
+
+ ומאורעות 
+\begin_inset Formula $A,B$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+משלים
+\series default
+: 
+\begin_inset Formula $\bbp\left(A^{{\cal C}}\right)=1-\bbp\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+אדטיביות
+\series default
+: 
+\begin_inset Formula $\bbp\left(A\uplus B\right)=\bbp\left(A\right)+\bbp\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\bbp\left(A\backslash B\right)=\bbp\left(A\right)-\bbp\left(B\cap A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+מונוטוניות
+\series default
+: 
+\begin_inset Formula $\left(A\subseteq B\right)\implies\left(\bbp\left(A\right)\le\bbp\left(B\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+הכלה
+\series default
+ 
+\series bold
+והדחה
+\series default
+: 
+\begin_inset Formula $\bbp\left(A\cup B\right)=\bbp\left(A\right)+\bbp\left(B\right)-\bbp\left(A\cap B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: תהא פונקציית הסתברות 
+\begin_inset Formula $\bbp$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(\emptyset\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט סיגמא־אדטיביות
+\series default
+: יהיו 
+\begin_inset Formula $E=\biguplus_{i=1}^{\infty}E_{i}$
+\end_inset
+
+ מאורעות אזי 
+\begin_inset Formula $\bbp\left(E\right)=\sum_{i=1}^{\infty}\bbp\left(E_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הכלה
+\series default
+ 
+\series bold
+והדחה
+\series default
+ 
+\series bold
+כללית
+\series default
+: יהיו 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ מאורעות אזי 
+\begin_inset Formula $\bbp\left(\bigcup_{i=1}^{n}A_{i}\right)=\sum_{\emptyset\ne I\subseteq\left[n\right]}\left(\left(-1\right)^{\left|I\right|+1}\bbp\left(\bigcap_{i\in I}A_{i}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הכלה
+\series default
+ 
+\series bold
+והדחה
+\series default
+ 
+\series bold
+סימטרית
+\series default
+: נניח כי 
+\begin_inset Formula $\forall I\subseteq\left[n\right].\left(\left|I\right|=k\right)\Rightarrow\left(\bbp\left(A_{I}\right)=a_{k}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(\bigcup_{i=1}^{n}A_{i}\right)=\sum_{k=1}^{n}\left(\left(-1\right)^{k+1}{n \choose k}a_{k}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מרחב
+\series default
+ 
+\series bold
+הסתברות
+\series default
+ 
+\series bold
+אחיד
+\series default
+: מרחב הסתברות סופי 
+\begin_inset Formula $\left(\Omega,\bbp\right)$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\forall A\in2^{\Omega}.\bbp\left(A\right)=\frac{\left|A\right|}{\left|\Omega\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תמורה מקרית/סידור אקראי
+\series default
+: המרחב האחיד על 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+ 
+\series bold
+חסם
+\series default
+ 
+\series bold
+האיחוד
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $A,B$
+\end_inset
+
+ מאורעות אזי 
+\begin_inset Formula $\bbp\left(A\cup B\right)\le\bbp\left(A\right)+\bbp\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ מאורעות אזי 
+\begin_inset Formula $\bbp\left(\bigcup_{i=1}^{n}A_{i}\right)\le\sum_{i=1}^{n}\bbp\left(A_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ A_{n}\right\} _{n=1}^{\infty}$
+\end_inset
+
+ מאורעות אזי 
+\begin_inset Formula $\bbp\left(\bigcup_{i=1}^{\infty}A_{i}\right)\le\sum_{i=1}^{\infty}\bbp\left(A_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+אי שוויונות בונפרוני
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ מאורעות ויהי 
+\begin_inset Formula $1\le k\le n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $k\in\bbn_{odd}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(\bigcup_{i=1}^{n}A_{i}\right)\le\sum_{i=1}^{k}\left(-1\right)^{i+1}\sum_{\substack{I\subseteq\left[n\right]\\
+\left|I\right|=k
+}
+}\bbp\left(\bigcap_{i\in I}A_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $k\in\bbn_{even}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(\bigcup_{i=1}^{n}A_{i}\right)\ge\sum_{i=1}^{k}\left(-1\right)^{i+1}\sum_{\substack{I\subseteq\left[n\right]\\
+\left|I\right|=k
+}
+}\bbp\left(\bigcap_{i\in I}A_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+ 
+\series bold
+רציפות
+\series default
+ 
+\series bold
+פונקציית
+\series default
+ 
+\series bold
+ההסתברות
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ A_{n}\right\} _{n=1}^{\infty}$
+\end_inset
+
+ מאורעות
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim_{n\to\infty}\bbp\left(\bigcup_{i=1}^{n}A_{i}\right)=\bbp\left(\bigcup_{i=1}^{\infty}A_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim_{n\to\infty}\bbp\left(\bigcap_{i=1}^{n}A_{i}\right)=\bbp\left(\bigcap_{i=1}^{\infty}A_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+פונקציית גיבוב/
+\begin_inset Formula $\text{hash}$
+\end_inset
+
+
+\series default
+\color inherit
+: 
+\begin_inset Formula $h\in\left[m\right]^{\left[n\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+התנגשות
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $h$
+\end_inset
+
+ פונקציית גיבוב אזי 
+\begin_inset Formula $i\ne j$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $h\left(i\right)=h\left(j\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+פרדוקס
+\series default
+ 
+\series bold
+יום
+\series default
+ 
+\series bold
+ההולדת
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $h\in\left[m\right]^{\left[n\right]}$
+\end_inset
+
+ פונקציית גיבוב אזי 
+\begin_inset Formula $\frac{n\left(n-1\right)}{2m}\ge\bbp\left(\text{התנגשות}\right)\ge1-e^{-\frac{n\left(n-1\right)}{2m}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מספר ראמזי
+\series default
+\color inherit
+: נגדיר 
+\begin_inset Formula $R:\bbn^{\bbn}$
+\end_inset
+
+ כך 
+\begin_inset Formula $R\left(t\right)=\min\left\{ n\mid\text{ מונוכרומטית}K_{t}\text{ בשני צבעים יש }K_{n}\text{בכל צביעה של }\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: 
+\begin_inset Formula $2^{\frac{t-3}{2}}<R\left(t\right)\le c\cdot\frac{4^{t}}{\sqrt{t}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+פונקציית הסתברות מותנית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $F$
+\end_inset
+
+ מאורע המקיים 
+\begin_inset Formula $\bbp\left(F\right)>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(\omega\mid F\right)=\begin{cases}
+\frac{\bbp\left(\omega\right)}{\bbp\left(F\right)} & \omega\in F\\
+0 & else
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: פונקציית הסתברות מותנית הינה פונקציית הסתברות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מרחב הסתברות מותנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\left(\Omega,\bbp\right)$
+\end_inset
+
+ מרחב הסתברות ויהי 
+\begin_inset Formula $F\in2^{\Omega}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\Omega,\bbp\left(\cdot\mid F\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: מרחב הסתברות מותנית הוא מרחב הסתברות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $E,F$
+\end_inset
+
+ מאורעות אזי 
+\begin_inset Formula $\bbp\left(E\mid F\right)=\frac{\bbp\left(E\cap F\right)}{\bbp\left(F\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+כלל השרשרת
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $A,B$
+\end_inset
+
+ מאורעות אזי 
+\begin_inset Formula $\bbp\left(A\cap B\right)=\bbp\left(A\mid B\right)\bbp\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+כלל השרשרת
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ מאורעות אזי 
+\begin_inset Formula $\bbp\left(\bigcap_{i=1}^{n}A_{i}\right)=\bbp\left(A_{1}\right)\prod_{i=2}^{n}\bbp\left(A_{i}\mid\bigcap_{j=1}^{i-1}A_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+נוסחת ההסתברות השלמה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $A,B$
+\end_inset
+
+ מאורעות אזי 
+\begin_inset Formula $\bbp\left(A\right)=\bbp\left(A\mid B\right)\bbp\left(B\right)+\bbp\left(A\mid B^{{\cal C}}\right)\bbp\left(B^{{\cal C}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הכללה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ A_{i}\right\} _{i=1}^{\infty}$
+\end_inset
+
+ המקיימות 
+\begin_inset Formula $\biguplus_{i=1}^{\infty}A_{i}=\Omega$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(B\right)=\sum_{i=1}^{\infty}\bbp\left(B\mid A_{i}\right)\bbp\left(A_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+כלל בייס
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $E,F$
+\end_inset
+
+ מאורעות אזי 
+\begin_inset Formula $\bbp\left(E\mid F\right)=\frac{\bbp\left(E\right)\bbp\left(F\mid E\right)}{\bbp\left(F\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $A,B$
+\end_inset
+
+ מאורעות עבורם 
+\begin_inset Formula $\bbp\left(A\right),\bbp\left(B\right)>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(\left(\cdot\mid B\right)\mid C\right)=\bbp\left(\cdot\mid B\cap C\right)\bbp\left(C\mid B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מאורע מחזק
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $B$
+\end_inset
+
+ מאורע אזי מאורע 
+\begin_inset Formula $A$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\bbp\left(A\right)>0$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\bbp\left(B\mid A\right)>\bbp\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מאורעות בלתי תלויים )ב
+\begin_inset Quotes erd
+\end_inset
+
+ת(
+\series default
+\color inherit
+: מאורעות 
+\begin_inset Formula $A,B$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\bbp\left(A\cap B\right)=\bbp\left(A\right)\bbp\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $AB=A\cap B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ מאורע אזי )
+\begin_inset Formula $A$
+\end_inset
+
+ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת עם עצמו(
+\begin_inset Formula $\left(\bbp\left(A\right)\in\left\{ 0,1\right\} \right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $A,B$
+\end_inset
+
+ מאורעות זרים וב
+\begin_inset Quotes erd
+\end_inset
+
+ת אזי 
+\begin_inset Formula $\left(\bbp\left(A\right)=0\right)\lor\left(\bbp\left(B\right)=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $A,B$
+\end_inset
+
+ מאורעות התב
+\begin_inset Quotes erd
+\end_inset
+
+ש
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A,B$
+\end_inset
+
+ בלתי תלויים.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A^{{\cal C}},B$
+\end_inset
+
+ בלתי תלויים.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A^{{\cal C}},B^{{\cal C}}$
+\end_inset
+
+ בלתי תלויים.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A,B^{{\cal C}}$
+\end_inset
+
+ בלתי תלויים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+אי תלות בזוגות
+\series default
+\color inherit
+: מאורעות 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\forall i\ne j.\bbp\left(A_{i}A_{j}\right)=\bbp\left(A_{i}\right)\bbp\left(A_{j}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+אי תלות בזוגות
+\series default
+\color inherit
+: מאורעות 
+\begin_inset Formula $\left\{ A_{i}\right\} _{i\in I}$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\forall i\ne j.\bbp\left(A_{i}A_{j}\right)=\bbp\left(A_{i}\right)\bbp\left(A_{j}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מאורעות בלתי תלויים )ב
+\begin_inset Quotes erd
+\end_inset
+
+ת(
+\series default
+\color inherit
+: מאורעות 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\forall I\subseteq\left[n\right].\bbp\left(\bigcap_{i\in I}A_{i}\right)=\prod_{i\in I}\bbp\left(A_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+הכללה
+\series default
+\color inherit
+: מאורעות 
+\begin_inset Formula $\left\{ A_{i}\right\} _{i\in I}$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\forall J\subseteq I.\left(\left|J\right|\in\bbn_{+}\right)\implies\left(\bbp\left(\bigcap_{i\in I}A_{i}\right)=\prod_{i\in I}\bbp\left(A_{i}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+הערה
+\series default
+\color inherit
+: נסמן זמנית 
+\begin_inset Formula $\left(A^{1}=A\right)\land\left(A^{-1}=A^{{\cal C}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: )
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ בלתי תלויים(
+\begin_inset Formula $\left(\forall\e\in\left\{ \pm1\right\} ^{n}.\bbp\left(\bigcap_{i=1}^{n}A_{i}^{\e_{i}}\right)=\prod_{i=1}^{n}\bbp\left(A_{i}^{\e_{i}}\right)\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $A_{1}\ldots A_{n},B_{1}$
+\end_inset
+
+ מאורעות ב
+\begin_inset Quotes erd
+\end_inset
+
+ת אזי כל איחוד/חיתוך/משלים של 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת עם 
+\begin_inset Formula $B_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+פונקציית
+\series default
+ 
+\series bold
+הסתברות
+\series default
+ 
+\series bold
+מכפלה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left(\Omega_{1},\bbp_{1}\right),\left(\Omega_{2},\bbp_{2}\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ה אזי 
+\begin_inset Formula $\bbp_{\Omega_{1}\times\Omega_{2}}\left(\left(\omega_{1},\omega_{2}\right)\right)=\bbp_{1}\left(\omega_{1}\right)\bbp_{2}\left(\omega_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: פונקציית הסתברות מכפלה היא פונקציית הסתברות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מרחב
+\series default
+ 
+\series bold
+מכפלה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left(\Omega_{1},\bbp_{1}\right),\left(\Omega_{2},\bbp_{2}\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ה אזי 
+\begin_inset Formula $\left(\Omega_{1},\bbp_{1}\right)\otimes\left(\Omega_{2},\bbp_{2}\right)=\left(\Omega_{1}\times\Omega_{2},\bbp_{\Omega_{1}\times\Omega_{2}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: מרחב מכפלה הוא מרחב הסתברות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left(\Omega_{1},\bbp_{1}\right)\ldots\left(\Omega_{n},\bbp_{n}\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ה אזי 
+\begin_inset Formula $\bigotimes_{i=1}^{n}\left(\Omega_{i},\bbp_{i}\right)$
+\end_inset
+
+ מרחב הסתברות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מלבן
+\series default
+\color inherit
+: מאורע 
+\begin_inset Formula $C\subseteq\Omega_{1}\times\Omega_{2}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\exists A\subseteq\Omega_{1}.\exists B\subseteq\Omega_{2}.C=A\times B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $A\times B\subseteq\Omega_{1}\times\Omega_{2}$
+\end_inset
+
+ מלבן אזי 
+\begin_inset Formula $\bbp\left(A\times B\right)=\bbp_{1}\left(A\right)\bbp_{2}\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\bigotimes_{i=1}^{n}\left(\Omega_{i},\bbp_{i}\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ה ויהי 
+\begin_inset Formula $A\subseteq\Omega_{i}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\overline{A}=\Omega_{1}\times\ldots\times\Omega_{i-1}\times A\times\Omega_{i+1}\times\ldots\times\Omega_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $A\subseteq\Omega_{i}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $B\subseteq\Omega_{j}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\overline{A},\overline{B}$
+\end_inset
+
+ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת מעל 
+\begin_inset Formula $\bigotimes_{i=1}^{n}\left(\Omega_{i},\bbp_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $A\subseteq\Omega_{i}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(\overline{A}\right)=\bbp_{i}\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbp\left(\left(\omega_{1}\ldots\omega_{n}\right)\right)=\prod_{i=1}^{n}\bbp_{i}\left(\omega_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ מאורעות עבורם 
+\begin_inset Formula $\forall i\in\left[n\right].A_{i}\subseteq\Omega_{i}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\overline{A_{1}}\ldots\overline{A_{n}}$
+\end_inset
+
+ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מאורעות
+\series default
+ 
+\series bold
+בלתי
+\series default
+ 
+\series bold
+תלויים
+\series default
+ 
+\series bold
+בהתנייה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\bbp\left(C\right)>0$
+\end_inset
+
+ אזי מאורעות 
+\begin_inset Formula $A,B$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\bbp\left(A\cap B\mid C\right)=\bbp\left(A\mid C\right)\bbp\left(B\mid C\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+\begin_inset Formula $n$
+\end_inset
+
+ ניסויי ברנולי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $0\le p\le1$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $f\in\left[0,1\right]^{\left\{ 0,1\right\} }$
+\end_inset
+
+ כך 
+\begin_inset Formula $f\left(k\right)=\begin{cases}
+p & k=1\\
+1-p & k=0
+\end{cases}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bigotimes_{i=1}^{n}\left(\left\{ 0,1\right\} ,f\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: נסמן 
+\begin_inset Formula $M_{n}="\text{ ניסויי ברנולי}n\text{ ב־}1\text{הרצף הארוך ביותר של }"$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(M_{n}-\log_{\frac{1}{p}}\left(n\right)\right)\to0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מטריצת שכנויות
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ גרף לא מכוון אזי 
+\begin_inset Formula $A\in M_{\left|V\right|}\left(\left\{ 0,1\right\} \right)$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $A_{i,j}=\begin{cases}
+1 & \left\{ i,j\right\} \in E\\
+0 & else
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+גרפים על 
+\begin_inset Formula $n$
+\end_inset
+
+ קודקודים
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ \left(A_{i,j}\right)_{1\le i<j\le n}\mid A_{i,j}\in\left\{ 0,1\right\} \right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+הימצאות קשת בהתסברות 
+\begin_inset Formula $p$
+\end_inset
+
+
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\left[0,1\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(\left\{ \omega\in\text{ קודקודים}n\text{גרפים על }\mid\omega_{i,j}=1\right\} \right)=p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+גרף מקרי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p\in\left[0,1\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $G\left(n,p\right)=\left(\text{ קודקודים}n\text{גרפים על },p\text{הימצאות קשת בהתסברות }\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\omega\in G\left(n,p\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(\omega\right)=p^{\left|E_{\omega}\right|}\cdot\left(1-p\right)^{{n \choose 2}-\left|E_{\omega}\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: גרף מקרי הינו מרחב הסתברות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משתנה מקרי )מ
+\begin_inset Quotes erd
+\end_inset
+
+מ(
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\left(\Omega,\bbp\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ה בדיד אזי 
+\begin_inset Formula $f\in\Omega\to S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\bbp\left(X=s\right)=\bbp\left(X^{-1}\left(\left\{ s\right\} \right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+אינדיקטור
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $A\subseteq\Omega$
+\end_inset
+
+ מאורע אזי 
+\begin_inset Formula $\mathds{1}_{A}\in\left\{ 0,1\right\} ^{\Omega}$
+\end_inset
+
+ המוגדר 
+\begin_inset Formula $\mathds{1}_{A}\left(\omega\right)=\begin{cases}
+1 & \omega\in A\\
+0 & else
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(\mathds{1}_{A}\cdot\mathds{1}_{B}=\mathds{1}_{A\cap B}\right)\land\left(\mathds{1}_{A}+\mathds{1}_{B}=\mathds{1}_{A\uplus B}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+תומך
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f:S\to\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\supp\left(f\right)=\left\{ s\in S\mid f\left(s\right)\ne0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+התפלגות בדידה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\mu:S\to\left[0,1\right]$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left(\left|\supp\left(\mu\right)\right|\le\aleph_{0}\right)\land\left(\sum_{s\in\supp\left(\mu\right)}\mu\left(s\right)=1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+התפלגות של משתנה מקרי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\mu:\im\left(X\right)\to\left[0,1\right]$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\mu_{X}\left(s\right)=\bbp\left(X=s\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: ההתפלגות של משתנה מקרית היא התפלגות בדידה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\supp\left(X\right)=\supp\left(\mu_{X}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משתנים מקריים שווים
+\series default
+\color inherit
+: 
+\begin_inset Formula $X,Y\in S^{\Omega}$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\forall\omega\in\Omega.X\left(\omega\right)=Y\left(\omega\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משתנים מקריים שווי התפלגות
+\series default
+\color inherit
+: 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ עם אותה תמונה המקיימים 
+\begin_inset Formula $\forall s\in S.\mu_{X}\left(s\right)=\mu_{Y}\left(s\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ שווי התפלגות אזי 
+\begin_inset Formula $X\sim Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+התפלגות אחידה בדידה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu\in\left[0,1\right]^{\bbr}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\mu\left(k\right)=\begin{cases}
+\frac{1}{b-a+1} & {\scriptscriptstyle k\in\left[a,b\right]\cap\bbz}\\
+0 & else
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ עבורו 
+\begin_inset Formula $\mu_{X}$
+\end_inset
+
+ מתפלג אחיד בדיד אזי 
+\begin_inset Formula $X\sim\text{Uni}\left(a,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\mu$
+\end_inset
+
+ התפלגות אזי 
+\begin_inset Formula $\left(\mu=\begin{cases}
+x_{1} & p_{1}\\
+\vdots & \vdots\\
+x_{n} & p_{n}
+\end{cases}\right)\equiv\left(\mu\left(k\right)=\begin{cases}
+p_{i} & k=x_{i}\\
+0 & else
+\end{cases}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+התפלגות ברנולי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\left[0,1\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu\in\left[0,1\right]^{\left\{ 0,1\right\} }$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\mu=\begin{cases}
+1 & p\\
+0 & 1-p
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ עבורו 
+\begin_inset Formula $\mu_{X}$
+\end_inset
+
+ מתפלג ברנולי אזי 
+\begin_inset Formula $X\sim\text{Ber}\left(p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+התפלגות
+\series default
+ 
+\series bold
+גאומטרית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\left[0,1\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu\in\left[0,1\right]^{\bbn_{+}}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\mu\left(k\right)=\left(1-p\right)^{k-1}p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ עבורו 
+\begin_inset Formula $\mu_{X}$
+\end_inset
+
+ מתפלג גאומטרית אזי 
+\begin_inset Formula $X\sim\text{Geo}\left(p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+התפלגות
+\series default
+ 
+\series bold
+בינומית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\left[0,1\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu\in\left[0,1\right]^{\bbn}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\mu\left(k\right)={n \choose k}p^{k}\left(1-p\right)^{n-k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ עבורו 
+\begin_inset Formula $\mu_{X}$
+\end_inset
+
+ מתפלג בינומית אזי 
+\begin_inset Formula $X\sim\text{Bin}\left(n,p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+התפלגות
+\series default
+ 
+\series bold
+פואסון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu\in\left[0,1\right]^{\bbn}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\mu\left(k\right)=\frac{\lambda^{k}}{k!}e^{-\lambda}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ עבורו 
+\begin_inset Formula $\mu_{X}$
+\end_inset
+
+ מתפלג פואסונית אזי 
+\begin_inset Formula $X\sim\text{Pois}\left(\lambda\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט
+\series default
+ 
+\series bold
+קירוב
+\series default
+ 
+\series bold
+בינום־פואסון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lim_{n\to\infty}\mu_{\text{Bin}\left(n,\frac{\lambda}{n}\right)}\left(k\right)=\mu_{\text{Pois}\left(\lambda\right)}\left(k\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+התפלגות
+\series default
+ 
+\series bold
+היפרגאומטרית
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $r,n,m\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu\in\left[0,1\right]^{\bbn}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\mu\left(k\right)=\frac{{r \choose k}{m-r \choose n-k}}{{m \choose n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ עבורו 
+\begin_inset Formula $\mu_{X}$
+\end_inset
+
+ מתפלג היפרגאומטרית אזי 
+\begin_inset Formula $X\sim\text{HG}\left(n,m,r\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+התפלגות
+\series default
+ 
+\series bold
+בינומית
+\series default
+ 
+\series bold
+שלילית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $r\in\bbn$
+\end_inset
+
+ וכן 
+\begin_inset Formula $p\in\left[0,1\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu\in\left[0,1\right]^{\bbn}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\mu\left(k\right)={k-1 \choose r-1}p^{r}\left(1-p\right)^{k-r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ עבורו 
+\begin_inset Formula $\mu_{X}$
+\end_inset
+
+ מתפלג בינומית שלילית אזי 
+\begin_inset Formula $X\sim\text{NB}\left(r,p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+התפלגות
+\series default
+ 
+\series bold
+היפרגאומטרית שלילית
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $r,k,m\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu\in\left[0,1\right]^{\bbn}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\mu\left(x\right)=\frac{{x-1 \choose k-1}{m-x \choose r-k}}{{m \choose r}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ עבורו 
+\begin_inset Formula $\mu_{X}$
+\end_inset
+
+ מתפלג היפרגאומטרית שלילית אזי 
+\begin_inset Formula $X\sim\text{NHG}\left(r,k,m\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טרנספורמציה
+\series default
+ 
+\series bold
+של
+\series default
+ 
+\series bold
+משתנה
+\series default
+ 
+\series bold
+מקרי
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $X\in A^{\Omega}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f\in B^{A}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(X\right)=f\circ X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ויהי 
+\begin_inset Formula $f\in B^{A}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu_{f\left(X\right)}\left(k\right)=\sum_{r\in f^{-1}\left(\left\{ k\right\} \right)}\mu_{X}\left(r\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ויהי 
+\begin_inset Formula $f\in B^{A}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\supp\left(f\left(X\right)\right)=f\left(\supp\left(X\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+זוג
+\series default
+ 
+\series bold
+משתנים
+\series default
+ 
+\series bold
+מקריים
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X:\Omega\to A$
+\end_inset
+
+ וכן 
+\begin_inset Formula $Y:\Omega\to B$
+\end_inset
+
+ משתנים מקריים אזי 
+\begin_inset Formula $\left(X,Y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+התפלגות
+\series default
+ 
+\series bold
+משותפת
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\left(X,Y\right)$
+\end_inset
+
+ זוג מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\mu_{X,Y}\left(x,y\right)=\bbp\left(X=x,Y=y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הכללה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X_{1}\ldots X_{n}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\mu_{X_{1}\ldots X_{n}}\left(x_{1}\ldots x_{n}\right)=\bbp\left(X_{1}=x_{1},\ldots,X_{n}=x_{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+התפלגויות
+\series default
+ 
+\series bold
+שוליות
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\left(X,Y\right)$
+\end_inset
+
+ זוג מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\mu_{X},\mu_{Y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\mu_{X}\left(x\right)=\sum_{y\in S}\mu_{X,Y}\left(x,y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משתנים
+\series default
+ 
+\series bold
+מקריים
+\series default
+ 
+\series bold
+בלתי
+\series default
+ 
+\series bold
+תלויים
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(X,Y\right)$
+\end_inset
+
+ זוג מ
+\begin_inset Quotes erd
+\end_inset
+
+מ עבורו 
+\begin_inset Formula $\mu_{X,Y}=\mu_{X}\mu_{Y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+הכללה
+\series default
+\color inherit
+: 
+\begin_inset Formula $X_{1}\ldots X_{n}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ המקיימים 
+\begin_inset Formula $\mu_{X_{1}\ldots X_{n}}=\mu_{X_{1}}\cdot\ldots\cdot\mu_{X_{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משתנים
+\series default
+ 
+\series bold
+מקריים
+\series default
+ 
+\series bold
+בלתי
+\series default
+ 
+\series bold
+תלויים
+\series default
+ 
+\series bold
+בזוגות
+\series default
+\color inherit
+: 
+\begin_inset Formula $X_{1}\ldots X_{n}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ המקיימים 
+\begin_inset Formula $X_{i},X_{j}$
+\end_inset
+
+ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת לכל 
+\begin_inset Formula $i\ne j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X_{1}\ldots X_{n}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת ויהיו 
+\begin_inset Formula $E_{1}\ldots E_{n}$
+\end_inset
+
+ קבוצות אזי 
+\begin_inset Formula $\left\{ X_{i}\in E_{i}\right\} $
+\end_inset
+
+ מאורעות ב
+\begin_inset Quotes erd
+\end_inset
+
+ת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת ויהיו 
+\begin_inset Formula $f,g$
+\end_inset
+
+ טרנספורמציות של מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $f\left(X\right),g\left(Y\right)$
+\end_inset
+
+ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט
+\series default
+\color inherit
+: )
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ מאורעות ב
+\begin_inset Quotes erd
+\end_inset
+
+ת(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\mathds{1}_{A_{1}}\ldots\mathds{1}_{A_{n}}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\mu_{1},\mu_{2}$
+\end_inset
+
+ התפלגויות אזי קיים מ
+\begin_inset Quotes erd
+\end_inset
+
+ה 
+\begin_inset Formula $\left(\Omega,\bbp\right)$
+\end_inset
+
+ עבורו קיימים 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת המקיימים 
+\begin_inset Formula $\left(\mu_{X}=\mu_{1}\right)\land\left(\mu_{Y}=\mu_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+קונבולוציה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\mu_{1},\mu_{2}$
+\end_inset
+
+ התפלגויות אזי 
+\begin_inset Formula $\left(\mu_{1}*\mu_{2}\right)\left(z\right)=\sum_{x}\mu_{1}\left(x\right)\mu_{2}\left(z-x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\mu_{1},\mu_{2}$
+\end_inset
+
+ התפלגויות אזי 
+\begin_inset Formula $\mu_{1}*\mu_{2}=\mu_{2}*\mu_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת אזי 
+\begin_inset Formula $\mu_{X+Y}=\mu_{X}*\mu_{Y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\text{Bin}\left(n,p\right)+\text{Bin}\left(m,p\right)\sim\text{Bin}\left(n+m,p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\text{Bin}\left(n,p\right)\sim\sum_{i=1}^{n}\text{Ber}\left(p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\text{Pois}\left(\lambda_{1}\right)+\text{Pois}\left(\lambda_{2}\right)\sim\text{Pois}\left(\lambda_{1}+\lambda_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\text{NB}\left(n,p\right)\sim\sum_{i=1}^{n}\text{Geo}\left(p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משתנה
+\series default
+ 
+\series bold
+מקרי
+\series default
+ 
+\series bold
+מותנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ מאורע ויהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $X_{\upharpoonright_{A}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+התפלגות
+\series default
+ 
+\series bold
+מותנית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ מאורע ויהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\mu_{X_{\upharpoonright_{A}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\mu_{X_{\upharpoonright_{Y=y}}}\left(x\right)=\frac{\mu_{X,Y}\left(x,y\right)}{\mu_{Y}\left(y\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+סימון
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\mu_{X_{\upharpoonright_{Y}}}\left(x\mid y\right)=\mu_{X_{\upharpoonright_{Y=y}}}\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+התפלגות
+\series default
+ 
+\series bold
+מולטינומית
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $p_{1}\ldots p_{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu\in\left[0,1\right]^{\bbn^{n}}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\mu\left(k_{1}\ldots k_{n}\right)={n \choose k_{1}\ldots k_{n}}\prod_{i=1}^{n}p_{i}^{k_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+התפלגות
+\series default
+ 
+\series bold
+מצטברת
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $F_{X}:\left[0,1\right]^{\bbr}$
+\end_inset
+
+ כך 
+\begin_inset Formula $F_{X}\left(x\right)=\bbp\left(X\le x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F_{X}$
+\end_inset
+
+ מונוטונית עולה.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim_{t\to\infty}F_{X}\left(t\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim_{t\to-\infty}F_{X}\left(t\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $s\in\supp\left(X\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu_{X}\left(s\right)=F_{X}\left(s\right)-\lim_{\e\to0^{+}}F_{X}\left(s-\e\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+פונקציית
+\series default
+ 
+\series bold
+ההישרדות
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\lambda_{X}\left(t\right)=1-F_{X}\left(t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\text{Geo}\left(1-\prod_{i=1}^{n}\left(1-p_{i}\right)\right)\sim\min_{i=1}^{n}\left\{ \text{Geo}\left(p_{i}\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+פיצול
+\series default
+ 
+\series bold
+פואסון
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ עבורם 
+\begin_inset Formula $X+Y\sim\text{Poiss}\left(\lambda\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $X_{\upharpoonright_{X+Y=n}}\sim\text{Bin}\left(n,p\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Y_{\upharpoonright_{X+Y=n}}\sim\text{Bin}\left(n,1-p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\sim\text{Poiss}\left(p\lambda\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Y\sim\text{Poiss}\left(\left(1-p\right)\lambda\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X,Y$
+\end_inset
+
+ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+צימוד בין התפלגויות
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\mu_{1},\mu_{2}:\left[0,1\right]^{S}$
+\end_inset
+
+ התפלגויות אזי התפלגות 
+\begin_inset Formula $\mu:\left[0,1\right]^{S^{2}}$
+\end_inset
+
+ המקיימת
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left(\mu_{1}\left(\omega\right)=\sum_{s\in S}\mu\left(\omega,s\right)\right)\land\left(\mu_{2}\left(\omega\right)=\sum_{s\in S}\mu\left(s,\omega\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+צימוד בין משתנים
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי זוג מ
+\begin_inset Quotes erd
+\end_inset
+
+מ 
+\begin_inset Formula $\left(X',Y'\right)$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\left(X'\sim X\right)\land\left(Y'\sim Y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ על 
+\begin_inset Formula $\Omega_{1}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ על 
+\begin_inset Formula $\Omega_{2}$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $X',Y'$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת על 
+\begin_inset Formula $\Omega_{1}\otimes\Omega_{2}$
+\end_inset
+
+ כך
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left(X'\left(\omega_{1},\omega_{2}\right)=X\left(\omega_{1}\right)\right)\land\left(Y'\left(\omega_{1},\omega_{2}\right)=Y\left(\omega_{2}\right)\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(X',Y'\right)$
+\end_inset
+
+ צימוד של 
+\begin_inset Formula $X,Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+התפלגות שולטת סטוכסטית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי מ
+\begin_inset Quotes erd
+\end_inset
+
+מ 
+\begin_inset Formula $Y$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\bbp\left(X>t\right)\ge\bbp\left(Y>t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+צימוד מונוטוני
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי צימוד 
+\begin_inset Formula $\left(X',Y'\right)$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ המקיים 
+\begin_inset Formula $\bbp\left(Y'>X'\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ בעל התפלגות שולטת סטוכסטית בהתפלגות 
+\begin_inset Formula $Y$
+\end_inset
+
+ אזי קיים צימוד מונוטוני.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מטריקת ההשתנות הכוללת
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left|S\right|\le\aleph_{0}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\mu,\upsilon:\left[0,1\right]^{S}$
+\end_inset
+
+ התפלגויות אזי 
+\begin_inset Formula $\delta\left(\mu,\upsilon\right)=\sum_{x\in S}\left|\mu\left(x\right)-\upsilon\left(x\right)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+למה
+\series default
+\color inherit
+: מטריקת ההשתנות הכוללת הינה מטריקה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+סימון
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\delta\left(X,Y\right)=\delta\left(\mu_{X},\mu_{Y}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\delta\left(X,Y\right)=2\sup_{E\subseteq S}\left|\bbp\left(X\in E\right)-\bbp\left(Y\in E\right)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ויהי 
+\begin_inset Formula $\left(X',Y'\right)$
+\end_inset
+
+ צימוד אזי 
+\begin_inset Formula $\delta\left(X,Y\right)=\delta\left(X',Y'\right)\le2\bbp\left(X'\ne Y'\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X_{1}\ldots X_{2n}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\delta\left(\sum_{i=1}^{n}X_{i},\sum_{i=n+1}^{2n}X_{i}\right)\le2\sum_{i=1}^{n}\bbp\left(X_{i}\ne Y_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+חוק המספרים הקטנים
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ X_{i}\sim\text{Ber}\left(p_{i}\right)\right\} _{i=1}^{n}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ויהי 
+\begin_inset Formula $T\sim\text{Pois}\left(\sum_{i=1}^{n}p_{i}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\delta\left(\sum_{i=1}^{n}X_{i},T\right)\le2\sum_{i=1}^{n}p_{i}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+חציון של משתנה מקרי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $m\in\supp\left(X\right)$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\left(\bbp\left(X\ge m\right)\ge\frac{1}{2}\right)\land\left(\bbp\left(X\le m\right)\ge\frac{1}{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משתנה בעל תוחלת
+\series default
+\color inherit
+: 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ עבורו 
+\begin_inset Formula $\sum_{\omega\in\Omega}X\left(\omega\right)\bbp\left(\omega\right)$
+\end_inset
+
+ מתכנס בהחלט.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ משתנה על מ
+\begin_inset Quotes erd
+\end_inset
+
+ה סופי אזי 
+\begin_inset Formula $X$
+\end_inset
+
+ בעל תוחלת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+תוחלת
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ בעל תוחלת אזי 
+\begin_inset Formula $\bbe\left[X\right]=\sum_{\omega\in\Omega}X\left(\omega\right)\bbp\left(\omega\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+למה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ויהי 
+\begin_inset Formula $c\in\bbr$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+הומוגניות: 
+\begin_inset Formula $\bbe\left[cX\right]=c\bbe\left[X\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+חיבוריות: 
+\begin_inset Formula $\bbe\left[X+Y\right]=\bbe\left[X\right]+\bbe\left[Y\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+מונוטוניות: 
+\begin_inset Formula $\left(X\le Y\right)\implies\left(\bbe\left[X\right]\le\bbe\left[Y\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X_{1}\ldots X_{n}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\bbe\left[\sum_{i=1}^{n}X_{i}\right]=\sum_{i=1}^{n}\bbe\left[X_{i}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\bbe\left[X\right]=\sum_{s\in\supp\left(X\right)}s\cdot\mu_{X}\left(s\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(X\sim\text{Uni}\left(0,\ldots,n\right)\right)\implies\left(\bbe\left[X\right]=\frac{n}{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(X\sim\text{Ber}\left(p\right)\right)\implies\left(\bbe\left[X\right]=p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(X\sim\text{Bin}\left(n,p\right)\right)\implies\left(\bbe\left[X\right]=np\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(X\sim\text{Geo}\left(p\right)\right)\implies\left(\bbe\left[X\right]=\frac{1}{p}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(X\sim\text{HG}\left(n,m,r\right)\right)\implies\left(\bbe\left[X\right]=\frac{nr}{m}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(X\sim\text{Pois}\left(\lambda\right)\right)\implies\left(\bbe\left[X\right]=\lambda\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ותהא 
+\begin_inset Formula $f$
+\end_inset
+
+ טרנספורמציה אזי 
+\begin_inset Formula $\bbe\left[f\left(X\right)\right]=\sum_{s\in\supp\left(X\right)}f\left(s\right)\mu_{X}\left(s\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+נוסחאת
+\series default
+ 
+\series bold
+הזנב
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ עבורו 
+\begin_inset Formula $\supp\left(X\right)=\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbe\left[X\right]=\sum_{n=0}^{\infty}\bbp\left(X\ge n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת אזי 
+\begin_inset Formula $\bbe\left[XY\right]=\bbe\left[X\right]\bbe\left[Y\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+תוחלת
+\series default
+ 
+\series bold
+מותנית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ויהי 
+\begin_inset Formula $A$
+\end_inset
+
+ מאורע אזי 
+\begin_inset Formula $\bbe\left[X\mid A\right]=\sum_{\omega\in\Omega}X\left(\omega\right)\bbp\left(\omega\mid A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ויהי 
+\begin_inset Formula $A$
+\end_inset
+
+ מאורע אזי 
+\begin_inset Formula $\bbe\left[X\mid A\right]=\frac{\bbe\left[X\cdot\mathds{1}_{A}\right]}{\bbp\left(A\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,\mathds{1}_{A}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת אזי 
+\begin_inset Formula $\bbe\left[X\mid A\right]=\bbe\left[X\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+נוסחאת
+\series default
+ 
+\series bold
+התוחלת
+\series default
+ 
+\series bold
+השלמה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ויהי 
+\begin_inset Formula $A$
+\end_inset
+
+ מאורע אזי 
+\begin_inset Formula $\bbe\left[X\right]=\bbe\left[X\mid A\right]\bbp\left(A\right)+\bbe\left[X\mid A^{{\cal C}}\right]\bbp\left(A^{{\cal C}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+הכללה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ A_{i}\right\} _{i=1}^{\infty}$
+\end_inset
+
+ המקיימות 
+\begin_inset Formula $\biguplus_{i=1}^{\infty}A_{i}=\Omega$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\bbe\left[X\right]=\sum_{i=1}^{\infty}\bbe\left[X\mid A_{i}\right]\bbp\left(A_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+תוחלת של משתנה מותנה במשתנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\bbe\left[X\mid Y\right]\left(\omega\right)=\bbe\left[X\mid Y=Y\left(\omega\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט/נוסחאת ההחלקה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\bbe\left[\bbe\left[X\mid Y\right]\right]=\bbe\left[X\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ותהא 
+\begin_inset Formula $g$
+\end_inset
+
+ טרנספורמציה אזי 
+\begin_inset Formula $\bbe\left[X\cdot g\left(Y\right)\mid Y\right]=g\left(Y\right)\cdot\bbe\left[X\mid Y\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משתנה בעל מומנט 
+\begin_inset Formula $k$
+\end_inset
+
+
+\series default
+\color inherit
+: מ
+\begin_inset Quotes erd
+\end_inset
+
+מ 
+\begin_inset Formula $X$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\bbe\left[\left|X\right|^{k}\right]<\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ משתנה בעל מומנט 
+\begin_inset Formula $k$
+\end_inset
+
+ אזי 
+\begin_inset Formula $X\in\ell^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מומנט 
+\begin_inset Formula $k$
+\end_inset
+
+
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X\in\ell^{k}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbe\left[X^{k}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $m<k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ell^{k}\subseteq\ell^{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+אי שיוויון קושי שוורץ
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y\in\ell^{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\bbe\left[XY\right]\right|\le\sqrt{\bbe\left[X^{2}\right]}\sqrt{\bbe\left[Y^{2}\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X\in\ell^{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbe\left[X\right]^{2}\le\bbe\left[X^{2}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+שונות
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X\in\ell^{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\var\left[X\right]=\bbe\left[\left(X-\bbe\left[X\right]\right)^{2}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X\in\ell^{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\var\left[X\right]=\bbe\left[X^{2}\right]-\bbe\left[X\right]^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סטיית תקן
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X\in\ell^{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sigma_{X}=\sqrt{\var\left[X\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משתנה דטרמיניסטי
+\series default
+\color inherit
+: מ
+\begin_inset Quotes erd
+\end_inset
+
+מ 
+\begin_inset Formula $X$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\exists c.\bbp\left(X=c\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+למה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X\in\ell^{2}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a$
+\end_inset
+
+ סקלר
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\var\left[X\right]\ge0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+)
+\begin_inset Formula $X$
+\end_inset
+
+ דטרמיניסטי(
+\begin_inset Formula $\left(\var\left[X\right]=0\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\var\left[aX\right]=a^{2}\var\left[X\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\var\left[X+a\right]=\var\left[X\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+פונקציית הפסד
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X\in\ell^{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbe\left[\left(X-a\right)^{2}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X\in\ell^{2}$
+\end_inset
+
+ אזי המינימום של פונקציית ההפסד מתקבלת בערך 
+\begin_inset Formula $\bbe\left[X\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+חציון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי הערך עבורו מתקבל המינימום בפונקציה 
+\begin_inset Formula $\bbe\left[\left|X-a\right|\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי החציון הוא 
+\begin_inset Formula $\text{Median}\left(X\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+ערך אמצעי/
+\begin_inset Formula $\text{Mid Range}$
+\end_inset
+
+
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי הערך עבורו מתקבל המינימום בפונקציה 
+\begin_inset Formula $\max\left|X-a\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי הערך האמצעי הוא 
+\begin_inset Formula $\text{MR}\left(X\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+שכיח
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי הערך עבורו מתקבל המינימום בפונקציה 
+\begin_inset Formula $\bbp\left(X\ne a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי השכיח הוא 
+\begin_inset Formula $\text{Mode}\left(X\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+שונות משותפת
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\cov\left[X,Y\right]=\bbe\left[XY\right]-\bbe\left[X\right]\bbe\left[Y\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משפט
+\series default
+\color inherit
+: 
+\begin_inset Formula $\var\left[X+Y\right]=\var\left[X\right]+2\cov\left[X,Y\right]+\var\left[Y\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\cov\left[X,Y\right]=\bbe\left[\left(X-\bbe\left[X\right]\right)\left(Y-\bbe\left[Y\right]\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משתנים בלתי מתואמים
+\series default
+\color inherit
+: 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\cov\left[X,Y\right]=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משפט
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת אזי 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ בלתי מתואמים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ בלתי מתואמים אזי 
+\begin_inset Formula $\var\left[X+Y\right]=\var\left[X\right]+\var\left[Y\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+למה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y,Z$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ויהיו 
+\begin_inset Formula $\a,\b$
+\end_inset
+
+ סקלרים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\cov\left[X,X\right]=\var\left[X\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סימטריות: 
+\begin_inset Formula $\cov\left[X,Y\right]=\cov\left[Y,X\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+בי־לינאריות: 
+\begin_inset Formula $\cov\left[\a X+\b Y,Z\right]=\a\cov\left[X,Z\right]+\b\cov\left[Y,Z\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אינווריאנטיות להוספת סקלר: 
+\begin_inset Formula $\cov\left[X+\a,Y\right]=\cov\left[X,Y\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|\cov\left[X,Y\right]\right|\le\sqrt{\var\left[X\right]}\sqrt{\var\left[Y\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מקדם המתאם
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\rho_{X,Y}=\frac{\cov\left[X,Y\right]}{\sqrt{\var\left[X\right]}\sqrt{\var\left[Y\right]}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+למה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ויהיו 
+\begin_inset Formula $a,b$
+\end_inset
+
+ סקלרים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|\rho_{X,Y}\right|\le1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+)
+\begin_inset Formula $X,Y$
+\end_inset
+
+ בלתי מתואמים(
+\begin_inset Formula $\left(\rho_{X,Y}=0\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\rho_{X,Y}=\pm1\right)\iff\left(Y=aX+b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+למה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\sim\text{Uni}\left(\left[n\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\var\left[X\right]=\frac{n^{2}-1}{12}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\sim\text{Bin}\left(n,p\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\var\left(X\right)=np\left(1-p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\sim\text{Pois}\left(\lambda\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\var\left(X\right)=\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\sim\text{Geo}\left(p\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\var\left(X\right)=\frac{1-p}{p^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציה יוצרת
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ עבורו 
+\begin_inset Formula $\supp\left(X\right)=\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g_{X}\left(t\right)=\sum_{n=0}^{\infty}\mu_{X}\left(n\right)t^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ בעל פונקציה יוצרת
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g_{X}\left(t\right)$
+\end_inset
+
+ מתכנס עבור 
+\begin_inset Formula $\left|t\right|\le1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g_{X}\in C^{\infty}\left(\left(-1,1\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $t\in\left[-1,1\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $t^{X}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ בעל תוחלת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ בעל פונקציה יוצרת אזי 
+\begin_inset Formula $g_{X}\left(t\right)=\bbe\left[t^{X}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת בעלי פונקציה יוצרת
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mu_{X}\left(n\right)=\frac{g_{X}^{\left(n\right)}\left(0\right)}{n!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g_{X+Y}=g_{X}\cdot g_{Y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim_{t\to1^{-}}g_{X}\left(t\right)=g_{X}\left(1\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+נניח כי 
+\begin_inset Formula $X$
+\end_inset
+
+ בעל מומנט 
+\begin_inset Formula $k$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbe\left[\prod_{i=0}^{k-1}\left(X-i\right)\right]=\lim_{t\to1^{-}}g_{X}^{\left(k\right)}\left(t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: יהי 
+\begin_inset Formula $X\in\ell^{2}$
+\end_inset
+
+ בעל פונקציה יוצרת
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\bbe\left[X\right]=\lim_{t\to1^{-}}g_{X}^{\prime}\left(t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\var\left[X\right]=\lim_{t\to1^{-}}\left(g_{X}^{\prime\prime}\left(t\right)+g_{X}^{\prime}\left(t\right)-\left(g_{X}^{\prime}\left(t\right)\right)^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציה יוצרת מומנטים
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $M_{X}\left(t\right)=\bbe\left[e^{tX}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $X\sim\text{Bin}\left(n,p\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $M_{X}\left(t\right)=\left(1-p+pe^{t}\right)^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $M_{X+Y}=M_{X}\cdot M_{Y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע עבורו 
+\begin_inset Formula $0\in I$
+\end_inset
+
+ וכן 
+\begin_inset Formula $M_{X}\in C^{n}\left(I\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $M_{X}^{\left(n\right)}\left(0\right)=\bbe\left[X^{n}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע עבורו 
+\begin_inset Formula $0\in I$
+\end_inset
+
+ וכן 
+\begin_inset Formula $M_{X}\in C^{\infty}\left(I\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $M_{X}\left(t\right)=\sum_{n=0}^{\infty}\frac{\bbe\left[X^{n}\right]}{n!}t^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אי־שוויון מרקוב
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אי שלילי ויהי 
+\begin_inset Formula $a>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(X\ge a\right)\le\frac{\bbe\left[X\right]}{a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: תהא 
+\begin_inset Formula $f\in\left[0,\infty\right)^{\bbr}$
+\end_inset
+
+ עולה ויהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ עבורו 
+\begin_inset Formula $f\left(X\right)$
+\end_inset
+
+ בעל תוחלת אזי 
+\begin_inset Formula $\bbp\left(X\ge t\right)\le\frac{\bbe\left[f\left(X\right)\right]}{f\left(t\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אי־שוויון צ'בישב
+\series default
+: יהי 
+\begin_inset Formula $X\in\ell^{2}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $b>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(\left|X-\bbe\left[X\right]\right|\ge b\right)\le\frac{\var\left[X\right]}{b^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהיו 
+\begin_inset Formula $X_{1}\ldots X_{n}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\mu=\bbe\left[\sum_{i=1}^{n}X_{i}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהיו 
+\begin_inset Formula $X_{1}\sim\ldots\sim X_{n}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ בלתי מתואמים בזוגות עם תוחלת משותפת 
+\begin_inset Formula $\mu$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(\left|\sum_{i=1}^{n}X_{i}-n\mu\right|\ge b\right)\le\frac{n\sigma_{1}^{2}}{b^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אי־שוויון צ'רנוף
+\series default
+: יהיו 
+\begin_inset Formula $\left\{ X_{i}\sim\text{Ber}\left(p_{i}\right)\right\} _{i=1}^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(\sum_{i=1}^{n}X_{i}\ge\left(1+t\right)\mu\right)\le\exp\left(-\frac{t^{2}}{2+t}\mu\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הכללה
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ויהי 
+\begin_inset Formula $s\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(X\ge a\right)\le\frac{M_{X}\left(s\right)}{e^{sa}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציה קמורה
+\series default
+: יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע אזי 
+\begin_inset Formula $\varphi\in\bbr^{I}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\forall x,y\in I.\forall\lambda\in\left[0,1\right].\varphi\left(\lambda x+\left(1-\lambda\right)y\right)\le\lambda\varphi\left(x\right)+\left(1-\lambda\right)\varphi\left(y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $\varphi\in\bbr^{\left(a,b\right)}$
+\end_inset
+
+ קמורה ויהיו 
+\begin_inset Formula $x<y<z$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\varphi\left(y\right)-\varphi\left(x\right)}{y-x}\le\frac{\varphi\left(x\right)-\varphi\left(y\right)}{x-y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: תהא 
+\begin_inset Formula $\varphi\in\bbr^{\left(a,b\right)}$
+\end_inset
+
+ קמורה אזי 
+\begin_inset Formula $\varphi\in C\left(\left(a,b\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: תהא 
+\begin_inset Formula $\varphi\in\bbr^{I}$
+\end_inset
+
+ קמורה ותהא 
+\begin_inset Formula $x_{0}\in\bbr$
+\end_inset
+
+ אזי קיימים 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\left(\varphi\left(x_{0}\right)=ax_{0}+b\right)\land\left(\forall x\in I.\varphi\left(x\right)\ge ax+b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אי־שוויון ינסן
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ בעל תוחלת ותהא 
+\begin_inset Formula $\varphi\in\bbr^{I}$
+\end_inset
+
+ קמורה עבורה 
+\begin_inset Formula $\varphi\left(X\right)$
+\end_inset
+
+ בעל תוחלת אזי 
+\begin_inset Formula $\varphi\left(\bbe\left[X\right]\right)\le\bbe\left[\varphi\left(X\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אי־שוויון
+\series default
+ 
+\series bold
+הממוצעים
+\series default
+: יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\sum_{i=1}^{n}a_{i}}{n}\ge\sqrt[n]{\prod_{i=1}^{n}a_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אי־שיוויון המשולש
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\left|\bbe\left[X\right]\right|\le\bbe\left[\left|X\right|\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+החוק החלש של המספרים הגדולים
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת שקולי התפלגות עם תוחלת 
+\begin_inset Formula $\mu$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\forall\d>0.\bbp\left(\left|\frac{\sum_{i=1}^{n}X_{i}}{n}-\mu\right|\ge\d\right)\xrightarrow[n\to\infty]{}0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+החוק החלש של המספרים הגדולים
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X\in\ell^{1}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ עם תוחלת 
+\begin_inset Formula $\mu$
+\end_inset
+
+ אזי לכל 
+\begin_inset Formula $\e,\d>0$
+\end_inset
+
+ קיים 
+\begin_inset Formula $N_{0}\in\bbn$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $n>N_{0}$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\left\{ X_{i}\sim X\right\} _{i=1}^{n}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ בלתי מתואמים מתקיים 
+\begin_inset Formula $\bbp\left(\left|\frac{\sum_{i=1}^{n}X_{i}}{n}-\mu\right|\ge\d\right)<\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X\sim\text{Bin}\left(n,p\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\d>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(\left|\frac{X}{n}-p\right|<\d\right)\xrightarrow[n\to\infty]{}1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+למה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $x\in\left[0,1\right]$
+\end_inset
+
+ יהי 
+\begin_inset Formula $X\sim\text{Bin}\left(n,p\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\d>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sup_{x\in\left[0,1\right]}\bbp\left(\left|\frac{X}{n}-p\right|\ge\d\right)\xrightarrow[n\to\infty]{}0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+פולינום ברנשטיין
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $k<n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $B_{k,n}\left(x\right)={n \choose k}x^{k}\left(1-x\right)^{n-k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הגדרה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C\left(\left[0,1\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $Q_{n}\left(t\right)=\sum_{k=0}^{n}f\left(\frac{k}{n}\right){n \choose k}t^{k}\left(1-t\right)^{n-k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $Q_{n}\left(t\right)\in\bbr_{n}\left[x\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C\left(\left[0,1\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\forall\e>0.\exists n\in\bbn.\sup_{t\in\left[0,1\right]}\left|f\left(t\right)-Q_{n}\left(t\right)\right|\le\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+החוק החזק של המספרים הגדולים
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X\in\ell^{4}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ עם תוחלת 
+\begin_inset Formula $\mu$
+\end_inset
+
+ אזי לכל 
+\begin_inset Formula $\e,\d>0$
+\end_inset
+
+ קיים 
+\begin_inset Formula $N_{0}\in\bbn$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $N>N_{0}$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\left\{ X_{i}\sim X\right\} _{i=1}^{N}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת מתקיים 
+\begin_inset Formula $\bbp\left(\max_{n\in\left\{ N_{0}\ldots N\right\} }\left|\frac{\sum_{i=1}^{n}X_{i}}{n}-\mu\right|\ge\d\right)<\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+פונקציית צפיפות רציפה
+\series default
+\color inherit
+: 
+\begin_inset Formula $f:I\to\left[0,1\right]$
+\end_inset
+
+ רציפה המקיימת 
+\begin_inset Formula $\int_{I}f\left(x\right)dx=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הסתברות רציפה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f:I\to\left[0,1\right]$
+\end_inset
+
+ פונקציית צפיפות ותהא 
+\begin_inset Formula $\left[a,b\right]\subseteq I$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(\left[a,b\right]\right)=\int_{a}^{b}f\left(x\right)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משנה מקרי רציף
+\series default
+\color inherit
+: מ
+\begin_inset Quotes erd
+\end_inset
+
+מ 
+\begin_inset Formula $X$
+\end_inset
+
+ עבורו קיימת פונקצית צפיפות 
+\begin_inset Formula $f:\bbr\to\left[0,1\right]$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\forall E\subseteq\bbr.\bbp\left(X\in E\right)=\int_{E}f\left(x\right)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+פונקציית ההתפלגות המצטברת
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ רציף אזי 
+\begin_inset Formula $F\left(t\right)=\bbp\left(X\le t\right)=\int_{-\infty}^{t}f\left(x\right)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ רציף אזי 
+\begin_inset Formula $\bbp\left(a\le X\le b\right)=F\left(b\right)-F\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משתנה מקרי אחיד רציף
+\series default
+\color inherit
+: מ
+\begin_inset Quotes erd
+\end_inset
+
+מ רציף 
+\begin_inset Formula $X:I\to\bbr$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $f\left(x\right)=\begin{cases}
+\frac{1}{\left|I\right|} & x\in I\\
+0 & \text{else}
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+תוחלת רציפה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ רציף אזי 
+\begin_inset Formula $\bbe\left[X\right]=\int_{\bbr}xf\left(x\right)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מומנט רציף
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ רציף אזי 
+\begin_inset Formula $\bbe\left[X^{p}\right]=\int_{\bbr}x^{p}f\left(x\right)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+התפלגות נורמלית
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\sigma^{2},\mu\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\in\left[0,1\right]^{\bbr}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $f\left(x\right)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $Z$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ רציף עבורו 
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+ מתפלג נורמלית אזי 
+\begin_inset Formula $Z\sim N\left(\mu,\sigma^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+גאוסיאן
+\series default
+\color inherit
+: 
+\begin_inset Formula $\phi\left(x\right)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^{2}}{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $Z$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ רציף עם פונקציית צפיפות 
+\begin_inset Formula $\phi\left(x\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $Z\sim N\left(0,1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הגדרה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $Z\sim N\left(0,1\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ רציף אזי 
+\begin_inset Formula $\Phi\left(x\right)=\bbp\left(Z\le x\right)=\int_{-\infty}^{x}\phi\left(t\right)dt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $t\in\bbr$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\lim_{x\to\infty}\Phi\left(x\right)=1\right)\land\left(\lim_{x\to-\infty}\Phi\left(x\right)=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+)
+\begin_inset Formula $\Phi$
+\end_inset
+
+ עולה ממש(
+\begin_inset Formula $\left(\Phi\in C\left(\bbr\right)\right)\land\left(\Phi>0\right)\land$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Phi\left(t\right)=1-\Phi\left(-t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הגדרה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(\Phi\left(\infty\right)=1\right)\land\left(\Phi\left(-\infty\right)=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $Z\sim N\left(0,1\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ רציף אזי 
+\begin_inset Formula $\bbp\left(a\le Z\le b\right)=\Phi\left(b\right)-\Phi\left(a\right)=\int_{a}^{b}\phi\left(t\right)dt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משתנה מתוקנן
+\series default
+\color inherit
+: 
+\begin_inset Formula $X\in\ell^{2}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\left(\bbe\left[X\right]=0\right)\land\left(\var\left[X\right]=1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+תקנון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X\in\ell^{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\widehat{X}=\frac{X-\bbe\left[X\right]}{\sigma}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X\in\ell^{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\widehat{X}$
+\end_inset
+
+ מתוקנן.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+למה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\cos^{2n}\left(x\right)dx=\frac{\pi}{4^{n}}{2n \choose n}\right)\land\left(\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\cos^{2n+1}\left(x\right)dx=\frac{2}{2n+1}\frac{4^{n}}{{2n \choose n}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\lim_{n\to\infty}\frac{\frac{\pi}{4^{n}}{2n \choose n}}{\frac{2}{2n+1}\frac{4^{n}}{{2n \choose n}}}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט דה־מואבר לפלס
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a\le b$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\left\{ S_{N}\sim\text{Bin}\left(N,p\right)\right\} _{N=1}^{\infty}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(a\le\widehat{S_{N}}\le b\right)\xrightarrow[N\to\infty]{}\Phi\left(b\right)-\Phi\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C\left(\bbr\right)$
+\end_inset
+
+ חסומה יהיו 
+\begin_inset Formula $a\le b$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\left\{ S_{N}\sim\text{Bin}\left(N,p\right)\right\} _{N=1}^{\infty}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(f\left(\frac{S_{N}-Np}{p\sqrt{N}}\right)\right)\xrightarrow[N\to\infty]{}\int_{a}^{b}f\left(t\right)\phi\left(t\right)dt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הגדרה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C\left(\bbr\right)$
+\end_inset
+
+ חסומה אזי 
+\begin_inset Formula $\norm f=\max_{x\in\bbr}\left|f\left(x\right)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C^{3}\left(\bbr\right)$
+\end_inset
+
+ יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ויהי 
+\begin_inset Formula $Z\sim2\text{Ber}\left(\frac{1}{2}\right)-1$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left|\bbe\left[f\left(\frac{X}{\sqrt{N}}\right)\right]-\bbe\left[f\left(\frac{Z}{\sqrt{N}}\right)\right]\right|\le\frac{1}{6N^{\frac{3}{2}}}\norm{f^{\left(3\right)}}\left(1+\bbe\left[\left|X-\bbe\left[X\right]\right|^{3}\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הגדרה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\psi\left(x\right)=\begin{cases}
+1 & x\ge0\\
+1+x-\frac{2\sin\left(2\pi x\right)}{3\pi}+\frac{\sin\left(4\pi x\right)}{12\pi} & -1\le x\le0\\
+0 & x\le-1
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\land\left(\psi\in C^{3}\left(\bbr\right)\right)$
+\end_inset
+
+)
+\begin_inset Formula $\psi$
+\end_inset
+
+ חסומה(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הגדרה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $a\le b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $I_{a,b,\e}\left(x\right)=\psi\left(\frac{b-x}{\e}\right)\psi\left(\frac{x-a}{\e}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $a\le b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\land\left(I_{a,b,\e}\in C^{3}\left(\bbr\right)\right)$
+\end_inset
+
+)
+\begin_inset Formula $I_{a,b,\e}$
+\end_inset
+
+ חסומה(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+למה
+\series default
+\color inherit
+: קייים 
+\begin_inset Formula $B>0$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $a\le b$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\norm{I_{a,b,\e}^{\left(3\right)}}\le\frac{B}{\e^{3}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a\le b$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $0<\e<\frac{b-a}{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathds{1}_{\left[a+\e,b-\e\right]}\le I_{a+\e,b-\e,\e}\le\mathds{1}_{\left[a,b\right]}\le I_{a,b,\e}\le\mathds{1}_{\left[a-\e,b+\e\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט הגבול המרכזי
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a\le b$
+\end_inset
+
+ נניח כי לכל 
+\begin_inset Formula $N\in\bbn$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $X_{1}\sim\ldots\sim X_{N}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת עם תוחלת משותפת אזי 
+\begin_inset Formula $\bbp\left(a\le\widehat{\sum_{i=1}^{N}X_{i}}\le b\right)\xrightarrow[N\to\infty]{}\Phi\left(b\right)-\Phi\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מרחב מצבים
+\series default
+\color inherit
+: קבוצה 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מטריצת מצבים
+\series default
+\color inherit
+: 
+\begin_inset Formula ${\cal P}:S^{2}\to\left[0,1\right]$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\forall x\in S.\sum_{y\in S}{\cal P}\left(x,y\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+שרשרת מרקוב הומוגנית בזמן ובעלת מרחב מצבים סופי
+\series default
+\color inherit
+: מ
+\begin_inset Quotes erd
+\end_inset
+
+מ 
+\begin_inset Formula $\left\{ X_{i}\right\} _{i=0}^{\infty}$
+\end_inset
+
+ ומטריצת מצבים 
+\begin_inset Formula ${\cal P}$
+\end_inset
+
+ עבורם
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bbp\left(X_{0}=s_{0}\ldots X_{n}=s_{n}\right)=\mu_{X_{0}}\left(s_{0}\right)\prod_{i=0}^{n-1}{\cal P}\left(s_{i},s_{i+1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
+\end_inset
+
+ שרשרת מרקוב אזי 
+\begin_inset Formula $\bbp\left(X_{n+1}=s_{n+1}\mid X_{n}=s_{n}\ldots X_{0}=s_{0}\right)={\cal P}\left(s_{n},s_{n+1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הערה
+\series default
+\color inherit
+: נתייחס אל התפלגות 
+\begin_inset Formula $\mu_{X}$
+\end_inset
+
+ כאל וקטור שורה כך 
+\begin_inset Formula $\left(\mu_{X}\right)_{i}=\bbp\left(X=i-1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
+\end_inset
+
+ שרשרת מרקוב אזי 
+\begin_inset Formula $\mu_{X_{k}}=\mu_{X_{0}}\cdot{\cal P}^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
+\end_inset
+
+ שרשרת מרקוב אזי 
+\begin_inset Formula $\bbp\left(X_{n}=y\mid X_{k}=x\right)={\cal P}^{n-k}\left(x,y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+התפלגות סטציונרית/עמידה
+\series default
+\color inherit
+: התפלגות 
+\begin_inset Formula $\pi$
+\end_inset
+
+ על 
+\begin_inset Formula $S$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\pi\cdot{\cal P}=\pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+וקטור עצמי שמאלי
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbf\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $v\in M_{1,n}\left(\bbf\right)$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $v\cdot A=\a v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
+\end_inset
+
+ שרשרת מרקוב אזי 
+\begin_inset Formula $\impliedby\left(\mu_{X_{0}}{\cal P}^{n}\to\pi\right)$
+\end_inset
+
+)
+\begin_inset Formula $\pi$
+\end_inset
+
+ התפלגות סטציונרית(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
+\end_inset
+
+ שרשרת מרקוב אזי קיימת התפלגות סטציונרית 
+\begin_inset Formula $\pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $x,y\in S$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\exists n\in\bbn_{+}.{\cal P}^{n}\left(x,y\right)>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $x\shortrightarrow y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מטריצת מעברים אי פריקה
+\series default
+\color inherit
+: שרשרת עבורה 
+\begin_inset Formula $\forall x,y\in S.x\shortrightarrow y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula ${\cal P}$
+\end_inset
+
+ מטריצת מעברים אי פריקה ותהא 
+\begin_inset Formula $\pi$
+\end_inset
+
+ התפלגות סטציונרית אזי 
+\begin_inset Formula $\forall x\in S.\pi\left(x\right)>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula ${\cal P}$
+\end_inset
+
+ מטריצת מעברים אי פריקה אזי קיימת התפלגות סטציונרית יחידה 
+\begin_inset Formula $\pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט התכנסות ממוצעים
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula ${\cal P}$
+\end_inset
+
+ מטריצת מעברים בעלת התפלגות סטציונרית יחידה 
+\begin_inset Formula $\pi$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{1}{n}\sum_{k=0}^{n-1}\mu_{X_{0}}\cdot{\cal P}^{k}\xrightarrow[n\to\infty]{}\pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הערה
+\series default
+\color inherit
+: נתייחס אל טרנספורמציה 
+\begin_inset Formula $f$
+\end_inset
+
+ כאל וקטור עמודה כך 
+\begin_inset Formula $\left(f\right)_{i}=f\left(i\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
+\end_inset
+
+ שרשרת מרקוב בעלת התפלגות סטציונרית יחידה 
+\begin_inset Formula $\pi$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f$
+\end_inset
+
+ טרנספורמציה אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bbe\left[\frac{1}{n}\sum_{k=0}^{n-1}f\left(X_{k}\right)\right]\xrightarrow[n\to\infty]{}\pi\cdot f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מחזור
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $x\in S$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gcd\left(\left\{ n\in\bbn_{+}\mid{\cal P}^{n}\left(x,x\right)>0\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מצב חסר מחזור
+\series default
+\color inherit
+: 
+\begin_inset Formula $x\in S$
+\end_inset
+
+ אשר מחזורו 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+שרשרת חסרת מחזור
+\series default
+\color inherit
+: שרשרת 
+\begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
+\end_inset
+
+ עבורה כל מצב חסר מחזור.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+המשפט הארגודי לשרשראות מרקוב
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
+\end_inset
+
+ שרשרת אי פריקה וחסרת מחזור אזי 
+\begin_inset Formula $\mu_{X_{0}}\cdot{\cal P}^{n}\xrightarrow[n\to\infty]{}\pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+זמן החזרה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $x\in S$
+\end_inset
+
+ אזי 
+\begin_inset Formula $T_{x}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ הזמן הראשון בו חזרנו ל־
+\begin_inset Formula $x$
+\end_inset
+
+ בהילוך שמתחיל ב־
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: תהא שרשרת אי פריקה בעלת התפלגות סטציונרית יחידה 
+\begin_inset Formula $\pi$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbe\left[T_{x}\right]=\frac{1}{\pi\left(x\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+זמן הפגיעה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $x,y\in S$
+\end_inset
+
+ אזי 
+\begin_inset Formula $T_{x,y}$
+\end_inset
+
+ מספר הפעמים שנגיע למצב 
+\begin_inset Formula $y$
+\end_inset
+
+ בהילוך שמתחיל ב־
+\begin_inset Formula $x$
+\end_inset
+
+ עד לחזרה הראשונה אל 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: תהא שרשרת אי פריקה בעלת התפלגות סטציונרית יחידה 
+\begin_inset Formula $\pi$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbe\left[T_{x,y}\right]=\frac{\pi\left(y\right)}{\pi\left(x\right)}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,3061 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+\usepackage{culmus}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usepackage{cancel}
+\usepackage{wrapfig}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[cm]{fullpage}
+\usepackage{polynom}
+\usepackage{booktabs}
+
+\setlength{\tabcolsep}{1pt}
+\renewcommand{\arraystretch}{1.25} % Default value: 1
+
+\usetikzlibrary{math}
+\usetikzlibrary{shadows,trees}
+\counterwithin*{section}{part}
+\setlist{nosep, noitemsep}
+% \setlist[enumerate,levels]{format}
+\setlist[enumerate,1]{label = \arabic*., ref = \arabic*}
+\setlist[enumerate,2]{label = \emph{\alph*}), ref = \theenumi.\emph{\alph*}}
+\setlist[enumerate,3]{label = .\roman*, ref = \theenumii.\roman*}
+
+
+% Convert the Lyx colors into more pleasent colors:
+\definecolor{blue}{RGB}{14,107,217}
+\definecolor{green}{RGB}{0,158,40}
+\definecolor{red}{RGB}{235,16,16}
+\definecolor{brown}{RGB}{164,66,0}
+\definecolor{orange}{RGB}{231,135,26}
+\definecolor{purple}{RGB}{94,53,177}
+
+
+% Program Listing colors
+\definecolor{keywordcolor}{RGB}{255,117,0}
+\definecolor{commentcolor}{RGB}{128,128,128}
+\definecolor{stringcolor}{RGB}{0,168,0}
+
+
+% Trees formating
+\tikzset{edge from parent fork down, level distance=2cm, every node/.style= {rectangle,rounded corners, minimum height=8mm, very thick, align=center}}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    }
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding default
+\fontencoding global
+\font_roman "default" "David"
+\font_sans "default" "David"
+\font_typewriter "default" "David"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf true
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle false
+\papersize letterpaper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 4cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\headheight 0cm
+\headsep 0.5cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\lvec}[1]{\overrightarrow{#1}}
+{\overrightarrow{#1}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+גודל פיזיקלי
+\series default
+: תיאור כמותי של תופעה פיזיקלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה אופרטיבית
+\series default
+: תיאור האופרציה למדידת גודל פיזיקלי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שנייה
+\series default
+: משך הזמן הדרוש עבור 
+\begin_inset Formula $9192631770$
+\end_inset
+
+ מחזורי קרינה הנובע ממעבר בין שתי רמות של אטוס צזיום-
+\numeric on
+133
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+במצב מנוחה בטמפרטורה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+קלווין.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: שנייה מסומנת 
+\begin_inset Formula $s$
+\end_inset
+
+ או 
+\begin_inset Formula $\text{sec}$
+\end_inset
+
+ והיא יחידת המידה של זמן.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מטר
+\series default
+: המרחק שאור עובר בריק במשך 
+\begin_inset Formula $\frac{1}{299792458}s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: מטר מסומן 
+\begin_inset Formula $m$
+\end_inset
+
+ והוא יחידת המידה של מטר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: קילוגרם מסומן 
+\begin_inset Formula $kg$
+\end_inset
+
+ והוא יחידת המידה של מסה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תרשים עקבות
+\series default
+: תרשים של נקודות המייצגות את המקומות שבהם הגוף חלף במרווחי זמן שווים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+דרך
+\series default
+: אורך מסלול הגוף.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תנועה קצובה
+\series default
+: גוף העובר דרכים שוות בפרקי זמן שווים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מיקום
+\series default
+: בהינתן גוף נגדיר את 
+\begin_inset Formula $x\left(t\right)$
+\end_inset
+
+ להיות פונקציית המיקום ביחס לזמן.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: 
+\begin_inset Formula $\Delta f=f\left(x+h\right)-f\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: 
+\begin_inset Formula $y\left(t\right)=y_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+העתק
+\series default
+: 
+\begin_inset Formula $\Delta x=x_{f}-x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תנועה שוות מהירות
+\series default
+: גוף העובר העתקים שווים בפרקי זמן שווים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מהירות ממוצעת
+\series default
+: 
+\begin_inset Formula $\overline{v}=\frac{\Delta x}{\Delta t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: בתנועה שוות מהירות מתקיים 
+\begin_inset Formula $x=x_{0}+v\Delta t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מהירות
+\series default
+: 
+\begin_inset Formula $v=\frac{dx}{dt}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תנועה שוות תאוצה
+\series default
+: גוף אשר בפרקי זמן שווים מהירותו משתנה באותה מידה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תאוצה ממוצעת
+\series default
+: 
+\begin_inset Formula $\overline{a}=\frac{\Delta v}{\Delta t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תאוצה
+\series default
+: 
+\begin_inset Formula $a=\frac{dv}{dt}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: בתנועה שוות תאוצה
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v=v_{0}+a\Delta t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x=x_{0}+v_{0}t+\frac{1}{2}at^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v^{2}=v_{0}^{2}+2a\Delta x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x=x_{0}+\frac{v_{0}+v}{2}t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נפילה חופשית
+\series default
+: תנועת גוף בהשפעת כוח הכובד בלבד.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קבוע הכובד של כדור הארץ
+\series default
+: 
+\begin_inset Formula $g\approx9.8\frac{m}{s^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: נפילה חופשית בכדור הארץ היא שוות תאוצה המקיימת 
+\begin_inset Formula $a=g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מערכת ייחוס/צופה
+\series default
+: מערכת של צירי מיקום שביחס אליה מתארים את תנועתו של גוף.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כלל הטרנספורמציה של גלילאו גליליי עבור מהירויות
+\series default
+: 
+\begin_inset Formula $S$
+\end_inset
+
+ מערכת ייחוס מהירות 
+\begin_inset Formula $A$
+\end_inset
+
+ ביחס אל 
+\begin_inset Formula $B$
+\end_inset
+
+ היא 
+\begin_inset Formula $v_{A,B}=v_{A,S}-v_{B,S}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כלל הטרנספורמציה של גלילאו גליליי עבור תאוצות
+\series default
+: 
+\begin_inset Formula $S$
+\end_inset
+
+ מערכת ייחוס מהירות 
+\begin_inset Formula $A$
+\end_inset
+
+ ביחס אל 
+\begin_inset Formula $B$
+\end_inset
+
+ היא 
+\begin_inset Formula $a_{A,B}=a_{A,S}-a_{B,S}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+גודל סקלרי
+\series default
+\color inherit
+: גודל פיזיקלי המאופיין על ידי ערך מספרי שאינו משתנה בסיבוב מערכת הצירים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+גודל וקטורי
+\series default
+\color inherit
+: גודל פיזיקלי המאופיין על ידי אורך וכיוון.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סימון
+\series default
+\color inherit
+: וקטור מסומן על ידי 
+\begin_inset Formula $\vec{A}$
+\end_inset
+
+ וגודלו על ידי 
+\begin_inset Formula $\left|\vec{A}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+שיווין
+\series default
+\color inherit
+: 
+\begin_inset Formula $\vec{A},\vec{B}$
+\end_inset
+
+ אשר כיוונם וגודלם שווה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $A_{x},A_{y}$
+\end_inset
+
+ הם רכיבי 
+\begin_inset Formula $x,y$
+\end_inset
+
+ של הוקטור 
+\begin_inset Formula $\vec{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\vec{A}$
+\end_inset
+
+ בהצגה פולרית אזי 
+\begin_inset Formula $\left(A_{x}=\left|A\right|\cos\left(\theta\right)\right)\land\left(A_{y}=\left|A\right|\sin\left(\theta\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\vec{A}$
+\end_inset
+
+ בהצגה קרטזית אזי 
+\begin_inset Formula $\left(\left|A\right|=\sqrt{A_{x}^{2}+A_{y}^{2}}\right)\land\left(\theta=\arctan\left(\left|\frac{A_{y}}{A_{x}}\right|\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+וקטור מקום
+\series default
+\color inherit
+: חץ שיוצא מנקודת הראשית ומסתיים בנקודה שבה הגוף נמצא.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+וקטור העתק
+\series default
+\color inherit
+: 
+\begin_inset Formula $\Delta\vec{r}=\vec{r_{2}}-\vec{r_{1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+וקטור מהירות ממוצעת
+\series default
+\color inherit
+: 
+\begin_inset Formula $\overline{\vec{v}}=\frac{\Delta\vec{r}}{\Delta t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+וקטור מהירות
+\series default
+\color inherit
+: 
+\begin_inset Formula $\vec{v}=\frac{d\vec{r}}{dt}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+תנועה קצובה לאורך מסלול עקום
+\series default
+\color inherit
+: תנועה המקיימת 
+\begin_inset Formula $s=\left|\vec{v}\right|t$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $s$
+\end_inset
+
+ אורך הדרך.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+וקטור תאוצה ממוצעת
+\series default
+\color inherit
+: 
+\begin_inset Formula $\lvec{\overline{a}}=\frac{\Delta\vec{v}}{\Delta t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+וקטור תאוצה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\vec{a}=\frac{d\vec{v}}{dt}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+התארכות קפיץ
+\series default
+\color inherit
+: 
+\begin_inset Formula $\Delta\vec{\ell}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יש יחס ישר בין שיעור התארכותו של הקפיץ לבין גודל הכוח שמושך אותו.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+קבוע הקפיץ
+\series default
+\color inherit
+: היחס בין הכוח להתארכות הוא 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+כוח
+\series default
+\color inherit
+: וקטור המוגדר אופרטיבית כהוראת דינמומטר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: כוח מסומן בתור 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משקל
+\series default
+\color inherit
+: סקלר המוגדר אופרטיבית כהוראת מאזני קפיץ.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+ניוטון
+\series default
+\color inherit
+: 
+\begin_inset Formula $N$
+\end_inset
+
+ יחידות המידה של כוח.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+חוק
+\series default
+ 
+\series bold
+הוק
+\series default
+\color inherit
+: 
+\begin_inset Formula $\vec{F}=k\Delta\vec{\ell}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+חוק
+\series default
+ 
+\series bold
+ההתמדה/החוק הראשון של ניוטון
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(\sum\vec{F}=\vec{0}\right)\iff\left(\vec{a}=\vec{0}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+חוק
+\series default
+ 
+\series bold
+הפעולה
+\series default
+ 
+\series bold
+התגובה/החוק השלישי של ניוטון
+\series default
+\color inherit
+: 
+\begin_inset Formula $\overrightarrow{F_{1\to2}}=-\overrightarrow{F_{2\to1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+כוח
+\series default
+ 
+\series bold
+המתיחות
+\series default
+\color inherit
+: הכוח שחוט מפעילה על העצם הקשור לקצה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הערה
+\series default
+\color inherit
+: אם משקל הגומיה ניתן להזנחה אזי גודלי הכוחות שהגומיה מפעילה בשני הקצוות
+ שלה שווים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מתיחות
+\series default
+\color inherit
+: אם כוח המתיחות של שני הקצוות שווים אזי כוח המתיחות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: מתיחות מסומן באות 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+תנאי
+\series default
+ 
+\series bold
+להתמדה
+\series default
+ 
+\series bold
+של
+\series default
+ 
+\series bold
+מערכת
+\series default
+ 
+\series bold
+גופים
+\series default
+\color inherit
+: 
+\begin_inset Formula $\sum\overrightarrow{F_{\text{חיצוניים}}}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+כוח
+\series default
+ 
+\series bold
+הנורמל
+\series default
+\color inherit
+: כוח הניצב למשטח המגע.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: נורמל מסומן באות 
+\begin_inset Formula $N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+כוח
+\series default
+ 
+\series bold
+חיכוך
+\series default
+ 
+\series bold
+קינטי
+\series default
+\color inherit
+: כוח המקביל למשטח המגע ומנוגד לכיוון התנועה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: חיכוך קינטי מסומן באות 
+\begin_inset Formula $f_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left|\overrightarrow{f_{k}}\right|=\mu_{k}\left|\vec{N}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מקדם
+\series default
+ 
+\series bold
+החיכוך
+\series default
+ 
+\series bold
+הקינטי
+\series default
+\color inherit
+: 
+\begin_inset Formula $\mu_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+כוח
+\series default
+ 
+\series bold
+חיכוך
+\series default
+ 
+\series bold
+סטטי
+\series default
+\color inherit
+: כוח המקביל למשטח המגע והופכי לכיוון התנועה אם הייתה קיימת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: חיכוך קינטי מסומן באות 
+\begin_inset Formula $f_{s}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סף
+\series default
+ 
+\series bold
+התנועה
+\series default
+\color inherit
+: קיים 
+\begin_inset Formula $\max\left(f_{s}\right)$
+\end_inset
+
+ לכל גוף ונסמנו 
+\begin_inset Formula $f_{s,\max}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left|\overrightarrow{f_{s,\max}}\right|=\mu_{s}\left|\vec{N}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מקדם
+\series default
+ 
+\series bold
+החיכוך
+\series default
+ 
+\series bold
+הסטטי
+\series default
+\color inherit
+: 
+\begin_inset Formula $\mu_{s}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left|\overrightarrow{f_{s}}\right|<\mu_{s}\left|\vec{N}\right|$
+\end_inset
+
+ בכל מצב שאינו סף התנועה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: גלגלת נטולת חיכוך אינה משנה את מתיחות החוט.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסה התמדית
+\series default
+\color inherit
+: 
+\begin_inset Formula $m=\frac{\left|\sum\vec{F}\right|}{\left|\vec{a}\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+החוק השני של ניוטון
+\series default
+\color inherit
+: 
+\begin_inset Formula $\sum\vec{F}=m\vec{a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: ניוטון מקיים 
+\begin_inset Formula $N=\frac{kg\cdot m}{s^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: משקל של גוף הוא 
+\begin_inset Formula $w=mg$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+צפיפות/מסה סגולית
+\series default
+\color inherit
+: בהינתן נפח 
+\begin_inset Formula $V$
+\end_inset
+
+ של חומר מתקיים 
+\begin_inset Formula $\rho=\frac{m}{V}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משקל סגולי
+\series default
+\color inherit
+: בהינתן נפח 
+\begin_inset Formula $V$
+\end_inset
+
+ של חומר מתקיים 
+\begin_inset Formula $d=\frac{w}{V}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: בהליכה/נסיעה החיכוך הוא סטטי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+הקירוב הסטנדרטי של אוילר
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(v_{n+1}\approx v_{n}+a_{n}\Delta t\right)\land\left(x_{n+1}\approx x_{n}+v_{n}\Delta t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+גוף חופשי
+\series default
+\color inherit
+: גוף עבורו 
+\begin_inset Formula $\sum\vec{F}=\vec{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מערכת ייחוס אינרציאלית
+\series default
+\color inherit
+: מערכת ייחוס שבה חוק ראשון מתקיים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: כדור הארץ הוא בקירוב מערכת ייחוס אינרציאלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: כל מערכות הייחוס הנעות במהירות קבועה יחסית למערכת ייחוס אינרציאלית הן
+ אינרציאליות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: בהינתן שתי מערכות ייחוס אינרציאליות 
+\begin_inset Formula $S,S'$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|\lvec{a_{A,S}}\right|=\left|\lvec{a_{A,S'}}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: החוק השני של ניוטון מתקיים בכל מערכות הייחוס האינרציאליות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+עקרון היחסות של גלילאו
+\series default
+\color inherit
+: חוקי המכניקה זהים בכל מערכות הייחוס האינרציאליות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסלול תנועה
+\series default
+\color inherit
+: הקו המורכב מאוסף כל הנקודות שבהן הגוף הנע עובר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משוואת מסלול תנועה
+\series default
+\color inherit
+: משוואה המתארת את מסלול תנועתו של גוף.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: משוואת מסלול התנועה של גוף שנזרק אופקית הוא 
+\begin_inset Formula $y=\frac{g}{2\left|\lvec{v_{0}}\right|^{2}}x^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: משוואת מסלול התנועה של גוף שנזרק משופע הוא 
+\begin_inset Formula $y=-\frac{g}{2\left|\lvec{v_{0}}\right|^{2}\cos^{2}\left(\theta_{0}\right)}x^{2}+\tan\left(\theta_{0}\right)x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טווח הזריקה
+\series default
+\color inherit
+: המרחק האופקי שהגוף עבר מסומן באות 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+תנועה מעגלית קצובה
+\series default
+\color inherit
+: תנועה מעגלית עבורה 
+\begin_inset Formula $\left|\vec{v}\right|$
+\end_inset
+
+ קבוע.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: בתנועה מעגלית קצובה 
+\begin_inset Formula $\vec{v}$
+\end_inset
+
+ ניצב לרדיוס המעגל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: בתנועה מעגלית קצובה 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ ניצב לוקטור המהירות וכיוונו לצד הקעור של המסלול.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+ציר צנטריפיטלי/רדיאלי
+\series default
+\color inherit
+: ציר אשר כיוונו לכיוון מרכז מסלול התנועה בתנועה מעגלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+תאוצה צנטריפטלית/תאוצה רדיאלית
+\series default
+\color inherit
+: 
+\begin_inset Formula $\lvec{a_{R}}$
+\end_inset
+
+ התאוצה של גוף בציר הרדיאלי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: בהינתן רדיוס 
+\begin_inset Formula $R$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|\lvec{a_{R}}\right|=\frac{\left|\vec{v}\right|^{2}}{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left|\sum\lvec{F_{R}}\right|=m\frac{\left|\vec{v}\right|^{2}}{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+תנועה מחזורית בזמן
+\series default
+\color inherit
+: קיים 
+\begin_inset Formula $T$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\vec{x}\left(t\right)=\vec{x}\left(t+T\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+זמן מחזור
+\series default
+\color inherit
+: 
+\begin_inset Formula $T$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\vec{x}\left(t\right)=\vec{x}\left(t+T\right)$
+\end_inset
+
+ בתנועה מחזורית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: תנועה מעגלית קצובה היא תנועה מחזורית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+תדירות
+\series default
+\color inherit
+: בתנועה מחזורית 
+\begin_inset Formula $f=\frac{1}{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הרץ
+\series default
+\color inherit
+: יחידת המידה של תדירות 
+\begin_inset Formula $hz=\frac{1}{s}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: בתנועה מעגלית קצובה מתקיים 
+\begin_inset Formula $T=\frac{2\pi R}{\left|\vec{v}\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מהירות זוויתית ממוצעת
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bar{\omega}=\frac{\Delta\theta}{\Delta t}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\theta$
+\end_inset
+
+ פונקציית הזווית מהראשית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מהירות זוויתית
+\series default
+\color inherit
+: 
+\begin_inset Formula $\omega=\frac{d\theta}{dt}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left|\vec{v}\right|=\omega R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+תאוצה משיקית
+\series default
+\color inherit
+: 
+\begin_inset Formula $\lvec{a_{T}}$
+\end_inset
+
+ התאוצה של גוף בציר המשיק למעגל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט
+\series default
+\color inherit
+: )
+\begin_inset Formula $\lvec{a_{R}}$
+\end_inset
+
+ שינוי כיוון המהירות(
+\begin_inset Formula $\land$
+\end_inset
+
+)
+\begin_inset Formula $\lvec{a_{T}}$
+\end_inset
+
+ שינוי גודל המהירות(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: בתנועה מעגלית מתקיים 
+\begin_inset Formula $\left|\vec{a}\right|=\sqrt{\left|\lvec{a_{R}}\right|^{2}+\left|\lvec{a_{T}}\right|^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\sum\lvec{F_{T}}=m\lvec{a_{T}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מתקף
+\series default
+\color inherit
+: בהינתן כוח 
+\begin_inset Formula $\vec{F}$
+\end_inset
+
+ קבוע בכיוונו ובגודלו מתקיים 
+\begin_inset Formula $\vec{J}=\vec{F}\Delta t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מתקף
+\series default
+\color inherit
+: בהינתן כוח 
+\begin_inset Formula $\vec{F}$
+\end_inset
+
+ קבוע בכיוונו מתקיים 
+\begin_inset Formula $\vec{J}=\int_{t_{1}}^{t_{2}}\vec{F}dt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+כוח ממוצע
+\series default
+\color inherit
+: בהינתן כוח 
+\begin_inset Formula $\vec{F}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\lvec{\bar{F}}=\frac{1}{t_{2}-t_{1}}\vec{J}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מתקף כולל
+\series default
+\color inherit
+: 
+\begin_inset Formula $\lvec{J_{\text{כולל}}}=\sum\left(\vec{F}\Delta t\right)=\left(\sum\vec{F}\right)\Delta t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+תנע
+\series default
+\color inherit
+: 
+\begin_inset Formula $\vec{p}=m\vec{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט מתקף תנע
+\series default
+\color inherit
+: כאשר שקול הכוחות קבוע בכיוונו מתקיים 
+\begin_inset Formula $\lvec{J_{\text{כולל}}}=\Delta p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\sum\vec{F}=\frac{d\vec{p}}{dt}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מערכת מבודדת/סגורה
+\series default
+\color inherit
+: לאינטראקציות עם הסביבה שמחוץ לקבוצת הגופים אין השפעה על תנועת הגופים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+תנע כולל
+\series default
+\color inherit
+: 
+\begin_inset Formula $\lvec{p_{\text{כולל}}}=\sum\vec{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+עקרון שימור תנע
+\series default
+\color inherit
+: במערכת סגורה 
+\begin_inset Formula $\lvec{p_{\text{כולל}}}$
+\end_inset
+
+ קבוע בכיוונו ובגודלו.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: במערכת סגורה 
+\begin_inset Formula $\sum m\vec{v}$
+\end_inset
+
+ קבוע בכיוונו ובגודלו.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+התנגשות מצח/חזיתית
+\series default
+\color inherit
+: התנגשות בה שני הגופים היו וממשיכים בתנועתם על אותו קו ישר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+התנגשות פלסטית
+\series default
+\color inherit
+: התנגשות המסתיימת כשהגופים נעים באותה מהירות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: בהתנגשות פלסטית במערכת סגורה מתקיים 
+\begin_inset Formula $\left(\sum m\vec{v}\right)=\left(\sum m\right)\vec{u}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\vec{u}$
+\end_inset
+
+ מהירות לאחר ההתנגשות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+רתע
+\series default
+\color inherit
+: במערכת מבודדת המקיימת 
+\begin_inset Formula $\sum\vec{p}=\vec{0}$
+\end_inset
+
+ אזי התנע של מבצע הכוח.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: הרתע הנוצר על גוף 
+\begin_inset Formula $A$
+\end_inset
+
+ מזריקת גוף 
+\begin_inset Formula $B$
+\end_inset
+
+ הינו 
+\begin_inset Formula $\lvec{v_{A}}=-\frac{m_{B}}{m_{A}}\lvec{v_{B}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+אנרגיה קינטית
+\series default
+\color inherit
+: 
+\begin_inset Formula $E_{k}=\frac{1}{2}m\left|\vec{v}\right|^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+ג'אול
+\series default
+\color inherit
+: יחידת המידה של אנרגיה 
+\begin_inset Formula $J=kg\cdot\left(\frac{m}{s}\right)^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+עבודה
+\series default
+\color inherit
+: בהינתן כוח 
+\begin_inset Formula $\vec{F}$
+\end_inset
+
+ קבוע בכיוונו ובגודלו מתקיים 
+\begin_inset Formula $W=\left|\lvec{F_{x}}\right|\left|\Delta\vec{x}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מכפלה
+\series default
+ 
+\series bold
+סקלרית
+\series default
+\color inherit
+: בהינתן וקטורים 
+\begin_inset Formula $\vec{A},\vec{B}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\vec{A}\cdot\vec{B}=\left|\vec{A}\right|\left|\vec{B}\right|\cos\left(\theta\right)$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\theta$
+\end_inset
+
+ הזווית ביניהם.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $W=\vec{F}\cdot\Delta\vec{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+עבודה
+\series default
+ 
+\series bold
+כוללת
+\series default
+\color inherit
+: 
+\begin_inset Formula $W_{\text{כוללת}}=\sum W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+משפט
+\series default
+ 
+\series bold
+עבודה
+\series default
+ 
+\series bold
+אנרגיה
+\series default
+\color inherit
+: 
+\begin_inset Formula $W_{\text{כוללת}}=\Delta E_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+עבודה
+\series default
+\color inherit
+: בהינתן כוח 
+\begin_inset Formula $\vec{F}$
+\end_inset
+
+ קבוע בכיוונו מתקיים 
+\begin_inset Formula $W=\int_{x_{1}}^{x_{2}}\left|\lvec{F_{x}}\right|dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+אנרגיה
+\series default
+ 
+\series bold
+פוטנציאלית
+\series default
+ 
+\series bold
+כובדית/אנרגיית כובד
+\series default
+\color inherit
+: בהינתן גובה 
+\begin_inset Formula $h$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $U_{G}=mgh$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+רמת
+\series default
+ 
+\series bold
+האפס
+\series default
+\color inherit
+: המשטח עבורו גודלה של אנרגיית הכובד הוא אפס.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+אנרגיה
+\series default
+ 
+\series bold
+מכנית
+\series default
+ 
+\series bold
+כוללת
+\series default
+\color inherit
+: נניח כי 
+\begin_inset Formula $U$
+\end_inset
+
+ סכום האנרגיות הפונטציליות אזי 
+\begin_inset Formula $E=E_{k}+U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+כוח
+\series default
+ 
+\series bold
+משמר
+\series default
+\color inherit
+: כוח שעבודתו על גוף אינו תלוי במסלול תנועתו של הגוף.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הערה
+\series default
+\color inherit
+: כוח 
+\begin_inset Formula $F$
+\end_inset
+
+ יקרא משמר אם לכל מסילה 
+\begin_inset Formula $C$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\oint_{C}\vec{F}d\vec{r}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: כוח הכובד הינו משמר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: כוח משמר לאורך מסלול סגור מקיים 
+\begin_inset Formula $W=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+: כל כוח קבוע בכיוונו ובגודלו משמר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+אנרגיה
+\series default
+ 
+\series bold
+פוטנציאלית
+\series default
+\color inherit
+: בהינתן כוח משמר אזי 
+\begin_inset Formula $U$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\Delta U=W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הפחת
+\series default
+ 
+\series bold
+באנרגיה
+\series default
+ 
+\series bold
+פוטנציאלית
+\series default
+\color inherit
+: 
+\begin_inset Formula $\Delta U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: כוח אלסטי הינו משמר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+אנרגיה
+\series default
+ 
+\series bold
+פוטנציאלית
+\series default
+ 
+\series bold
+אלסטית
+\series default
+\color inherit
+: 
+\begin_inset Formula $U_{\text{sp}}=\frac{1}{2}k\left|\Delta\vec{\ell}\right|^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+עבודת
+\series default
+ 
+\series bold
+הכוחות
+\series default
+ 
+\series bold
+המשמרים
+\series default
+\color inherit
+: 
+\begin_inset Formula $W_{\text{משמרים}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+עבודת
+\series default
+ 
+\series bold
+הכוחות
+\series default
+ 
+\series bold
+הלא
+\series default
+ 
+\series bold
+משמרים
+\series default
+\color inherit
+: 
+\begin_inset Formula $W_{\text{לא משמרים}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $W_{\text{לא משמרים}}+W_{\text{משמרים}}=W_{\text{כוללת}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $W_{\text{לא משמרים}}=\Delta E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+עקרון
+\series default
+ 
+\series bold
+שימור
+\series default
+ 
+\series bold
+אנרגיה
+\series default
+ 
+\series bold
+מכנית
+\series default
+\color inherit
+: בהינתן גוף עליו פועלים רק כוחות משמרים מתקיים 
+\begin_inset Formula $E$
+\end_inset
+
+ קבוע.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+התנגשות
+\series default
+ 
+\series bold
+אלסטית
+\series default
+\color inherit
+: התנגשות בה האנרגיה הקינטית של כל גוף נשמרת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מהירות
+\series default
+ 
+\series bold
+יחסית
+\series default
+ 
+\series bold
+בהתנגשות
+\series default
+ 
+\series bold
+אלסטית
+\series default
+ 
+\series bold
+חד
+\series default
+ 
+\series bold
+מימדית
+\series default
+\color inherit
+: 
+\begin_inset Formula $u$
+\end_inset
+
+ המהירויות לאחר ההתנגשות 
+\begin_inset Formula $v_{1}-v_{2}=-\left(u_{1}-u_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+התנגשות
+\series default
+ 
+\series bold
+אי
+\series default
+ 
+\series bold
+אלסטית
+\series default
+\color inherit
+: התנגשות בה האנרגיה הקינטית של גוף קטנה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+חום
+\series default
+\color inherit
+: האנרגיה העוברת מגוף לגוף כתוצאה מהפרש טמפרטורות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: בהתנגשות פלסטית האנרגיה הקינטית הכוללת פוחתת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הספק
+\series default
+ 
+\series bold
+ממוצע
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bar{P}=\frac{\Delta W}{\Delta t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הספק
+\series default
+\color inherit
+: 
+\begin_inset Formula $P=\frac{dW}{dt}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+ואט
+\series default
+\color inherit
+: יחידת המידה של הספק 
+\begin_inset Formula $W=kg\cdot\frac{m^{2}}{s^{3}}=\frac{J}{s}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: מתקיים 
+\begin_inset Formula $P=\left|\lvec{F_{x}}\right|\left|\vec{v}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הספק
+\series default
+ 
+\series bold
+מושקע
+\series default
+\color inherit
+: 
+\begin_inset Formula $P_{\text{in}}$
+\end_inset
+
+ ההספק הניתן למערכת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הספק
+\series default
+ 
+\series bold
+מועיל
+\series default
+\color inherit
+: 
+\begin_inset Formula $P_{\text{eff}}$
+\end_inset
+
+ ההספק שתרם במציאות למערכת לתפקד.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+נצילות
+\series default
+\color inherit
+: 
+\begin_inset Formula $\eta=\frac{100\cdot P_{\text{eff}}}{P_{\text{in}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+תנודה
+\series default
+\color inherit
+: תנועה מחזורית בה הגוף נע בין שתי נקודות קצה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משרעת/אמפליטודה
+\series default
+\color inherit
+: המרחק המרבי בין גוף המתנודד לנקודת שיווי משקלו.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+כוח
+\series default
+ 
+\series bold
+מחזיר
+\series default
+\color inherit
+: כוח המכוון לנקודת שיווי המשקל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מתנד/אוסצילטור הרמוני פשוט
+\series default
+\color inherit
+: תנועה עבורה הכוח השקול מחזיר וכן 
+\begin_inset Formula $\left|\sum\vec{F}\right|=-c\left|\Delta\vec{x}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: מתנד הרמוני פשוט היא תנועה מחזורית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(\dot{x}\left(t\right)=\frac{dx}{dt}\right)\land\left(\ddot{x}\left(t\right)=\frac{d^{2}x}{dt^{2}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: במתנד הרמוני פשוט מתקיים 
+\begin_inset Formula $\ddot{x}\left(t\right)=-\frac{c}{m}x\left(t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+: במתנד הרמוני פשוט הפתרון הכללי הינו 
+\begin_inset Formula $x\left(t\right)=A\cos\left(\sqrt{\frac{c}{m}}t+\varphi\right)+b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מופע/פאזה
+\series default
+\color inherit
+: בהינתן מתנד הרמוני פשוט אזי 
+\begin_inset Formula $\sqrt{\frac{c}{m}}t+\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מופע
+\series default
+ 
+\series bold
+התחלתי/קבוע המופע
+\series default
+\color inherit
+: בהינתן מתנד הרמוני פשוט אזי 
+\begin_inset Formula $\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $T=2\pi\sqrt{\frac{m}{c}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+תדירות
+\series default
+ 
+\series bold
+זוויתית
+\series default
+\color inherit
+: בהינתן מתנד הרמוני פשוט אזי 
+\begin_inset Formula $\omega=2\pi f=\frac{2\pi}{T}=\sqrt{\frac{c}{m}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט
+\series default
+\color inherit
+: במתנד הרמוני פשוט המקיים 
+\begin_inset Formula $\left(x_{0}=A\right)\land\left(v_{0}=0\right)$
+\end_inset
+
+ מתקיים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\left(t\right)=A\cos\left(\omega t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\left(t\right)=-\omega A\sin\left(\omega t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\left(t\right)=-\omega^{2}A\cos\left(\omega t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+הערה
+\series default
+\color inherit
+: מכאן נניח כי 
+\begin_inset Formula $\left(x_{0}=A\right)\land\left(v_{0}=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(v=\pm\omega\sqrt{A^{2}-x^{2}}\right)\land\left(a=-\omega^{2}x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מטוטלת
+\series default
+ 
+\series bold
+פשוטה
+\series default
+\color inherit
+: גוף בעל מימדים קטנים התלוי על חוט מוסט.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: עבור 
+\begin_inset Formula $\theta$
+\end_inset
+
+ קטנה מספיק 
+\begin_inset Formula $\sin\left(\theta\right)\approx\theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+: במטוטלת פשוטה שאורכה 
+\begin_inset Formula $\ell$
+\end_inset
+
+ נקבל 
+\begin_inset Formula $T=2\pi\sqrt{\frac{\ell}{g}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אליפסה: המקום הגאומטרי של נקודות במישור שסכום מרחקיהן משתי נקודות קבועות
+ במישור הוא גודל קבוע.
+\end_layout
+
+\begin_layout Standard
+חוק המסלולים/החוק הראשון של קפלר: כל כוכב לכת נע במסלול אליפטי יתר על כן
+ השמש נמצאת באחד ממוקדי האליפסה.
+\end_layout
+
+\begin_layout Standard
+פריהליון: המרחק הקצר ביותר בין כוכב לכת לשמש.
+\end_layout
+
+\begin_layout Standard
+אפיהליון: המרחק הארוך ביותר בין כוכב לכת לשמש.
+\end_layout
+
+\begin_layout Standard
+הציר הראשי של האליפסה: הקו הישר העובר דרך נקודת הפריהליון והאפיהליון.
+\end_layout
+
+\begin_layout Standard
+חוק השטחים/החוק השני של קפלר: הקו הישר המקשר את השמש עם כוכב לכת חולף על
+ פני שטחים שווים בפרקי זמן שווים.
+\end_layout
+
+\begin_layout Standard
+הרדיוס הממוצע של המסלול: 
+\begin_inset Formula $\overline{r}$
+\end_inset
+
+ מחצית הציר הראשי של האליפסה.
+\end_layout
+
+\begin_layout Standard
+חוק זמני המחזור/החוק השלישי של קפלר: עבור כוכבי לכת 
+\begin_inset Formula $T^{2}=k\overline{r}^{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: עבור כוכבי לכת 
+\begin_inset Formula $k$
+\end_inset
+
+ קבוע.
+\end_layout
+
+\begin_layout Standard
+מסקנה: עבור שני כוכבי לכת מתקיים 
+\begin_inset Formula $\left(\frac{T_{1}}{T_{2}}\right)^{2}=\left(\frac{\overline{r}_{1}}{\overline{r}_{2}}\right)^{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+יחידה אסטרונומית: המרחק בין כדור הארץ לשמש 
+\begin_inset Formula $A.U.=1.5\cdot10^{11}m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: לוויין הנע במסלול אליפטי בשדה רדיאלי של גרם השמיים מקיים 
+\begin_inset Formula $T^{2}=k\overline{r}^{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+קבוע הגרביטציה: 
+\begin_inset Formula $G=6.67\cdot10^{-11}\,_{N\cdot m^{2}\cdot kg^{-2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+חוק הכבידה העולמי: בהינתן שני עצמים בעלי מרחק 
+\begin_inset Formula $r$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $F=\frac{Gm_{1}m_{2}}{r^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
