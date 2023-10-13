@@ -1,0 +1,5174 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+\usepackage{culmus}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usepackage{cancel}
+\usepackage{wrapfig}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[cm]{fullpage}
+\usepackage{polynom}
+\usepackage{booktabs}
+
+\setlength{\tabcolsep}{1pt}
+\renewcommand{\arraystretch}{1.25} % Default value: 1
+
+\usetikzlibrary{math}
+\usetikzlibrary{shadows,trees}
+\counterwithin*{section}{part}
+\setlist{nosep, noitemsep}
+% \setlist[enumerate,levels]{format}
+\setlist[enumerate,1]{label = \arabic*., ref = \arabic*}
+\setlist[enumerate,2]{label = \emph{\alph*}), ref = \theenumi.\emph{\alph*}}
+\setlist[enumerate,3]{label = .\roman*, ref = \theenumii.\roman*}
+
+
+% Convert the Lyx colors into more pleasent colors:
+\definecolor{blue}{RGB}{14,107,217}
+\definecolor{green}{RGB}{0,158,40}
+\definecolor{red}{RGB}{235,16,16}
+\definecolor{brown}{RGB}{164,66,0}
+\definecolor{orange}{RGB}{231,135,26}
+\definecolor{purple}{RGB}{94,53,177}
+
+
+% Program Listing colors
+\definecolor{keywordcolor}{RGB}{255,117,0}
+\definecolor{commentcolor}{RGB}{128,128,128}
+\definecolor{stringcolor}{RGB}{0,168,0}
+
+
+% Trees formating
+\tikzset{edge from parent fork down, level distance=2cm, every node/.style= {rectangle,rounded corners, minimum height=8mm, very thick, align=center}}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    }
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding default
+\fontencoding global
+\font_roman "default" "David"
+\font_sans "default" "David"
+\font_typewriter "default" "David"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf true
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle false
+\papersize letterpaper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 4cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\headheight 0cm
+\headsep 0.5cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "E:/Odyssey/macros.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+פעולה בינארית
+\series default
+\color inherit
+: פונקציה 
+\begin_inset Formula $*:A\times A\to A$
+\end_inset
+
+ ונסמן 
+\begin_inset Formula $a*b:=*\left(\left<a,b\right>\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אגודה
+\series default
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $*$
+\end_inset
+
+ פעולה בינארית אזי 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+אסוציטיביות/קיבוציות: 
+\begin_inset Formula $\forall a,b,c\in A.a*\left(b*c\right)=\left(a*b\right)*c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מונואיד
+\series default
+: אגודה 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+איבר יחידה: 
+\begin_inset Formula $\exists e\in A.\forall g\in G.e*g=g*e=g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: איבר יחידה של 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ הוא 
+\begin_inset Formula $e_{G}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורה
+\series default
+: מונואיד 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+איבר הופכי/נגדי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+: 
+\begin_inset Formula $\forall g\in G.\exists h\in A.g*h=h*g=e_{G}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: איבר הופכי של 
+\begin_inset Formula $a$
+\end_inset
+
+ הוא 
+\begin_inset Formula $a^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: איבר יחידה הוא יחיד, איבר הופכי הוא יחיד.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חזקה
+\series default
+: 
+\begin_inset Formula $a^{n}=\begin{cases}
+a*a^{n-1} & n>0\\
+e_{G} & n=0\\
+a^{-1}*a^{n+1} & n<0
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\left(a^{n}\right)^{k}=a^{nk}$
+\end_inset
+
+, 
+\begin_inset Formula $a^{n+k}=a^{n}\cdot a^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קומוטטיביות/חילופיות/אבליות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+: 
+\begin_inset Formula $\forall a,b\in A.a*b=b*a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: 
+\begin_inset Formula $GL_{n}\left(\bbf\right)$
+\end_inset
+
+ היא קבוצת המטריצות ההפיכות ב־
+\begin_inset Formula $\M[n]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\left<GL_{n}\left(\bbf\right),\cdot\right>$
+\end_inset
+
+ חבורה לא אבלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: נגדיר 
+\begin_inset Formula $S_{A}=A\stackrel[onto]{1-1}{\to}A$
+\end_inset
+
+, נסמן 
+\begin_inset Formula $S_{n}=S_{\left[n\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\left<S_{n},\circ\right>$
+\end_inset
+
+ חבורה לא אבלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סדר
+\series default
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית אזי 
+\begin_inset Formula $o\left(G\right)=\ord\left(G\right)=\left|G\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: יהיו 
+\begin_inset Formula $\left<G,\cdot\right>,\left<H,\cdot\right>$
+\end_inset
+
+ חבורות אזי 
+\begin_inset Formula $\left<G\times H,\cdot\right>$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left<g_{1},h_{1}\right>\cdot\left<g_{2},h_{2}\right>=\left<g_{1}g_{2},h_{1}h_{2}\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: 
+\begin_inset Formula $\bbz_{n}=\left\{ 0,\ldots,n-1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\left<\bbz_{n},+\right>$
+\end_inset
+
+ חבורה באשר 
+\begin_inset Formula $a+b=a+b\mod n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורת
+\series default
+ 
+\series bold
+קליין
+\series default
+: 
+\begin_inset Formula $\left<\bbz_{2}\times\bbz_{2},+\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\forall a,b,c\in G.a*b=a*c\implies b=c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+חבורה ציקלית/מעגלית
+\series default
+\color inherit
+: חבורה 
+\begin_inset Formula $G$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\exists g\in G.G=\left\{ g^{n}\mid n\in\bbz\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbz_{n}$
+\end_inset
+
+ ציקלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סימון
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<g\right>=\left\{ g^{n}\mid n\in\bbz\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left<\left<g\right>,\cdot_{\upharpoonright_{\left<g\right>}}\right>$
+\end_inset
+
+ חבורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סדר
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $o\left(g\right)=\ord\left(g\right)=\min\left(n\in\bbn_{+}\mid g^{n}=e\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\ord\left(g\right)=\left|\left<g\right>\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הגדרה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $G,H$
+\end_inset
+
+ חבורות
+\end_layout
+
+\begin_layout Itemize
+הומומורפיזם: 
+\begin_inset Formula $\varphi:G\to H$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\varphi\left(xy\right)=\varphi\left(x\right)\varphi\left(y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+מונומורפיזם/שיכון: 
+\begin_inset Formula $\varphi:G\to H$
+\end_inset
+
+ הומומורפיזם חח
+\begin_inset Quotes erd
+\end_inset
+
+ע.
+\end_layout
+
+\begin_layout Itemize
+אפימורפיזם: 
+\begin_inset Formula $\varphi:G\to H$
+\end_inset
+
+ הומומורפיזם על.
+\end_layout
+
+\begin_layout Itemize
+איזומורפיזם: 
+\begin_inset Formula $\varphi:G\to H$
+\end_inset
+
+ הומומורפיזם הפיך.
+\end_layout
+
+\begin_layout Itemize
+אוטומורפיזם: איזומורפיזם עבורו 
+\begin_inset Formula $G=H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $G\hookrightarrow H$
+\end_inset
+
+ קבוצת השיכונים בקבוצה 
+\begin_inset Formula $G\to H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הגדרה
+\series default
+\color inherit
+: 
+\begin_inset Formula $Aut\left(G\right)$
+\end_inset
+
+ קבוצת האוטומורפיזם בקבוצה 
+\begin_inset Formula $G\to G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left<Aut\left(G\right),\circ\right>$
+\end_inset
+
+ חבורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סימון
+\series default
+\color inherit
+: נניח כי 
+\begin_inset Formula $G,H$
+\end_inset
+
+ חבורות איזומורפיות אזי 
+\begin_inset Formula $G\cong H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\cong$
+\end_inset
+
+ הוא יחס שקילות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: אם 
+\begin_inset Formula $G\cong H$
+\end_inset
+
+ אזי )
+\begin_inset Formula $G$
+\end_inset
+
+ ציקלית( 
+\begin_inset Formula $\iff$
+\end_inset
+
+ )
+\begin_inset Formula $H$
+\end_inset
+
+ ציקלית(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הגדרה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $\left<G^{op},\cdot\right>$
+\end_inset
+
+ חבורה באשר 
+\begin_inset Formula $g\cdot h=h*g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $G\cong G^{op}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ הומומורפיזם אזי )
+\begin_inset Formula $\varphi\left(e\right)=e$
+\end_inset
+
+(
+\begin_inset Formula $\land$
+\end_inset
+
+)
+\begin_inset Formula $\varphi\left(g^{-1}\right)=\varphi\left(g\right)^{-1}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+תת חבורה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\subseteq G$
+\end_inset
+
+ אזי החבורה 
+\begin_inset Formula $\left<H,*_{\upharpoonright_{H}}\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: אם 
+\begin_inset Formula $H$
+\end_inset
+
+ תת חבורה של 
+\begin_inset Formula $G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H\le G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+בוחן
+\series default
+ 
+\series bold
+תת
+\series default
+ 
+\series bold
+חבורה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\subseteq G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אמ
+\begin_inset Quotes erd
+\end_inset
+
+מ
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $e\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall a,b\in H.ab\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall a\in H.a^{-1}\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+למה
+\series default
+\color inherit
+: 
+\begin_inset Formula $H\le G\implies e_{G}=e_{H}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $G\le G$
+\end_inset
+
+, 
+\begin_inset Formula $\left\{ e_{G}\right\} \le G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $G,H$
+\end_inset
+
+ חבורות ויהי 
+\begin_inset Formula $\varphi:G\to H$
+\end_inset
+
+ הומומורפיזם אזי 
+\begin_inset Formula $\im\left(\varphi\right)\le H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הגדרה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה יהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $A,B\subseteq G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+מחלקה שמאלית: 
+\begin_inset Formula $gA=\left\{ ga\mid a\in A\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+מחלקה ימנית: 
+\begin_inset Formula $Ag=\left\{ ag\mid a\in A\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $AB=\left\{ ab\mid a\in A\land b\in B\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A^{-1}=\left\{ a^{-1}\mid a\in A\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ חבורות אזי 
+\begin_inset Formula $HH=H$
+\end_inset
+
+, 
+\begin_inset Formula $H^{-1}=H$
+\end_inset
+
+, 
+\begin_inset Formula $\forall h\in H.hH=Hh=H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הצמדה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ חבורות ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $gHg^{-1}\le G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $H^{g}=gHg^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+למה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $g_{1},g_{2}\in G$
+\end_inset
+
+ התב
+\begin_inset Quotes erd
+\end_inset
+
+ש
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g_{1}H=g_{2}H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g_{1}H\subseteq g_{2}H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g_{1}H\cap g_{2}H\ne\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g_{1}\in g_{2}H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g_{2}^{-1}g_{1}\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $G/H=\left\{ gH\mid g\in G\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+אינדקס
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left[G:H\right]=\left|G/H\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+ 
+\series bold
+לגראנז'
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ חבורות סופיות אזי 
+\begin_inset Formula $\left|G\right|=\left|H\right|\cdot\left[G:H\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left|H\right||\left|G\right|$
+\end_inset
+
+, 
+\begin_inset Formula $\left[G:H\right]|\left|G\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ord\left(g\right)|\ord\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי )
+\begin_inset Formula $\ord\left(G\right)$
+\end_inset
+
+ ראשוני( 
+\begin_inset Formula $\impliedby$
+\end_inset
+
+ )
+\begin_inset Formula $G$
+\end_inset
+
+ ציקלית(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה מסדר 
+\begin_inset Formula $p$
+\end_inset
+
+ ראשוני אזי 
+\begin_inset Formula $G\cong\bbz_{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: אם 
+\begin_inset Formula $G$
+\end_inset
+
+ ציקלית אינסופית אזי 
+\begin_inset Formula $G\cong\bbz$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+תת
+\series default
+ 
+\series bold
+חבורה
+\series default
+ 
+\series bold
+נורמלית
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי חבורה 
+\begin_inset Formula $H$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\forall g\in G.gH=Hg$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+סימון
+\series default
+\color inherit
+: אם 
+\begin_inset Formula $H$
+\end_inset
+
+ תת חבורה נורמלית של 
+\begin_inset Formula $G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H\lhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+למה
+\series default
+\color inherit
+: התב
+\begin_inset Quotes erd
+\end_inset
+
+ש
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $N\lhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall g\in G.gNg^{-1}=N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall g\in G.gNg^{-1}\subseteq N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: אם 
+\begin_inset Formula $N\lhd G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(g_{1}N\right)\cdot\left(g_{2}N\right)=g_{1}g_{2}N$
+\end_inset
+
+ מוגדרת היטב.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+חבורת
+\series default
+ 
+\series bold
+המנה
+\series default
+\color inherit
+: אם 
+\begin_inset Formula $N\lhd G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<G/H,\cdot\right>$
+\end_inset
+
+ חבורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אבלית אזי )
+\begin_inset Formula $H\le G$
+\end_inset
+
+( 
+\begin_inset Formula $\iff$
+\end_inset
+
+ )
+\begin_inset Formula $H\lhd G$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+גרעין
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $G,H$
+\end_inset
+
+ חבורות ויהי 
+\begin_inset Formula $\varphi:G\to H$
+\end_inset
+
+ הומומורפיזם אזי 
+\begin_inset Formula $\ker\left(\varphi\right)=\left\{ g\in G\mid\varphi\left(g\right)=e_{H}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\ker\left(\varphi\right)\lhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ הומומורפיזם אזי )
+\begin_inset Formula $\varphi$
+\end_inset
+
+ מונומורפיזם( 
+\begin_inset Formula $\iff$
+\end_inset
+
+ )
+\begin_inset Formula $\ker\left(\varphi\right)=\left\{ e\right\} $
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ חבורות אזי 
+\begin_inset Formula $\left(\left[G:H\right]=2\right)\implies\left(H\lhd G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $\left(\forall i\in\left[n\right].N_{i}\lhd G\right)\implies\left(\bigcap_{i=1}^{n}N_{i}\lhd G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $H\le G$
+\end_inset
+
+, 
+\begin_inset Formula $N\lhd G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(HN\le G\right)\land\left(NH\le G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $N,H\lhd G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $HN\lhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $H_{1},H_{2}\le H$
+\end_inset
+
+ סופיות אזי 
+\begin_inset Formula $\left|H_{1}H_{2}\right|=\frac{\left|H_{1}\right|\cdot\left|H_{2}\right|}{\left|H_{1}\cap H_{2}\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט האיזומורפיזם הראשון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\varphi:G\to K$
+\end_inset
+
+ הומומורפיזם אזי 
+\begin_inset Formula $G/\ker\left(\varphi\right)\cong\im\left(\varphi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הגדרה
+\series default
+\color inherit
+: 
+\begin_inset Formula $C=\left\{ e^{2\pi ix}\mid x\in\bbr\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left<C,\cdot\right>$
+\end_inset
+
+ חבורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הגדרה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\left<A,*\right>$
+\end_inset
+
+ מונואיד אזי 
+\begin_inset Formula $A^{\times}=\left\{ a\in A\mid\exists h\in A.a*h=h*a=e_{A}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbz/4\bbz\cong\bbz_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $\bbr/\bbz\cong C$
+\end_inset
+
+, 
+\begin_inset Formula $\bbc^{\times}/C=\bbr^{\times}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הגדרה
+\series default
+\color inherit
+: 
+\begin_inset Formula $SL_{n}\left(\bbf\right)=\left\{ A\in GL_{n}\left(\bbf\right)\mid\det\left(A\right)=1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $SL_{n}\left(\bbr\right)\lhd GL_{n}\left(\bbr\right)$
+\end_inset
+
+, 
+\begin_inset Formula $SL_{n}\left(\bbr\right)/SL_{n}\left(\bbr\right)\cong\bbr^{\times}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+ההעתקה
+\series default
+ 
+\series bold
+הקנונית
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $N\lhd G$
+\end_inset
+
+ חבורות אזי 
+\begin_inset Formula $\pi:G\to G/N$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\pi\left(g\right)=gN$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\pi$
+\end_inset
+
+ אפימורפיזם.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט
+\series default
+ 
+\series bold
+ההומומורפיזם
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\varphi:H\to H$
+\end_inset
+
+ הומומורפיזם ותהא 
+\begin_inset Formula $N\le\ker\left(\varphi\right)$
+\end_inset
+
+ אזי קיים ויחיד הומומורפיזם 
+\begin_inset Formula $\varphi^{*}:G/N\to H$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\varphi^{*}\circ\pi=\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: )
+\begin_inset Formula $\im\left(\varphi\right)=\im\left(\varphi^{*}\right)$
+\end_inset
+
+(
+\begin_inset Formula $\land$
+\end_inset
+
+))
+\begin_inset Formula $\varphi^{*}$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע( 
+\begin_inset Formula $\iff$
+\end_inset
+
+ )
+\begin_inset Formula $\ker\left(\varphi\right)=N$
+\end_inset
+
+((.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט האיזומורפיזם השני
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $G,H,N$
+\end_inset
+
+ חבורות המקיימות 
+\begin_inset Formula $H\le G$
+\end_inset
+
+, 
+\begin_inset Formula $N\lhd G$
+\end_inset
+
+, 
+\begin_inset Formula $HN\lhd G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $HN/N\cong H/\left(H\cap N\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $G,H,N$
+\end_inset
+
+ חבורות המקיימות 
+\begin_inset Formula $H\le G$
+\end_inset
+
+, 
+\begin_inset Formula $N\lhd G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H\cap N\lhd H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+תת
+\series default
+ 
+\series bold
+חבורה
+\series default
+ 
+\series bold
+יוצרת
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $A\subseteq G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<A\right>=\left\{ e\right\} \cup\bigcup_{n=0}^{\infty}\left\{ \prod_{i=1}^{n}a_{i}\mid a\in\left(A\cup A^{-1}\right)^{n}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left<A\right>$
+\end_inset
+
+ היא תת חבורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+חבורה נוצרת סופית )נ
+\begin_inset Quotes erd
+\end_inset
+
+ס(
+\series default
+\color inherit
+: חבורה 
+\begin_inset Formula $G$
+\end_inset
+
+ עבורה קיימת 
+\begin_inset Formula $A\subseteq G$
+\end_inset
+
+ סופית המקיימת 
+\begin_inset Formula $\left<A\right>=G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מחזור/חישוקון/ציקלוס באורך 
+\begin_inset Formula $k$
+\end_inset
+
+
+\series default
+\color inherit
+: תמורה 
+\begin_inset Formula $\pi$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\pi\left(b\right)=\begin{cases}
+b & b\notin\left<a_{1},\ldots,a_{k}\right>\\
+a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $\pi=\left(a_{1}\ldots a_{k}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+חילוף/היפוך//חישוקון
+\series default
+\color inherit
+: מחזור מאורך 
+\begin_inset Formula $2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\sigma\in S_{n}$
+\end_inset
+
+ אזי קיימים ויחידים 
+\begin_inset Formula $\left\{ \pi_{1}\ldots\pi_{r}\right\} $
+\end_inset
+
+ מחזורים זרים מאורך גדול מ־
+\begin_inset Formula $1$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\sigma=\prod_{i=1}^{r}\pi_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\sigma\in S_{n}$
+\end_inset
+
+ אזי קיימים 
+\begin_inset Formula $\left\{ \pi_{1}\ldots\pi_{r}\right\} $
+\end_inset
+
+ חילופים המקיימים 
+\begin_inset Formula $\sigma=\prod_{i=1}^{r}\pi_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט
+\series default
+\color inherit
+: נניח כי 
+\begin_inset Formula $\prod_{i=1}^{m}p_{i}=\prod_{i=1}^{\ell}\pi_{i}$
+\end_inset
+
+ בעבור 
+\begin_inset Formula $p_{i},\pi_{i}$
+\end_inset
+
+ חילופים אזי 
+\begin_inset Formula $\ell=m\mod2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+סימן
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\sigma\in S_{n}$
+\end_inset
+
+ מכפלה של 
+\begin_inset Formula $k$
+\end_inset
+
+ חילופים אזי 
+\begin_inset Formula $\text{sgn}\left(\sigma\right)=\sign\left(\sigma\right)=\left(-1\right)^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\sign:S_{n}\to\left\{ \pm1\right\} $
+\end_inset
+
+ הומומורפיזם.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+תמורה
+\series default
+ 
+\series bold
+זוגית/איזוגית
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\sigma\in S_{n}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $\sign\left(\sigma\right)=1$
+\end_inset
+
+ 
+\begin_inset Formula $\impliedby$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ זוגית(
+\begin_inset Formula $\land$
+\end_inset
+
+)
+\begin_inset Formula $\sign\left(\sigma\right)=-1$
+\end_inset
+
+ 
+\begin_inset Formula $\impliedby$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ איזוגית(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $A_{n}=\left\{ \sigma\in S_{n}\mid\sign\left(\sigma\right)=1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $A_{n}\lhd S_{n}$
+\end_inset
+
+, 
+\begin_inset Formula $\left|A_{n}\right|=\frac{\left|S_{n}\right|}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left[S_{n}:A_{n}\right]=2$
+\end_inset
+
+, 
+\begin_inset Formula $S_{n}/A_{n}\cong\left\{ \pm1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $N\lhd G$
+\end_inset
+
+ חבורות ותהא 
+\begin_inset Formula $N\le H\le G$
+\end_inset
+
+ חבורה אזי )
+\begin_inset Formula $N\lhd H$
+\end_inset
+
+(
+\begin_inset Formula $\land$
+\end_inset
+
+)
+\begin_inset Formula $H/N\le G/N$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+משפט האיזומורפיזם השלישי
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $N\lhd G$
+\end_inset
+
+ חבורות חבורות אזי 
+\begin_inset Formula $\varphi:\left\{ H\mid N\le H\le G\right\} \to\left\{ H\mid H\le G/N\right\} $
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\varphi\left(H\right)=H/N$
+\end_inset
+
+ איזומורפיזם.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $N\lhd G$
+\end_inset
+
+ חבורות ויהיו 
+\begin_inset Formula $N\le A_{1}\ldots A_{n}\le G$
+\end_inset
+
+ חבורות
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{1}\le A_{2}\iff A_{1}/N\le A_{2}/N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\bigcap_{i=1}^{n}\left(A_{i}/N\right)=\left(\bigcap_{i=1}^{n}A_{i}\right)/N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{1}\lhd A_{2}\iff A_{1}/N\lhd A_{2}/N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{1}\lhd A_{2}\implies\nicefrac{\left(A_{2}/N\right)}{\left(A_{1}/N\right)}\cong A_{2}/A_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הלמה של צצנהאוס/למת הפרפר
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $A_{1}\lhd A\le G$
+\end_inset
+
+, 
+\begin_inset Formula $B_{1}\lhd B\le G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{1}\left(A\cap B_{1}\right)\lhd A_{1}\left(A\cap B\right)\le G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B_{1}\left(A\cap B\right)/B_{1}\left(A_{1}\cap B\right)\cong A_{1}\left(A\cap B\right)/A_{1}\left(A\cap B_{1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+תת חבורת האלכסון
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $\Delta=\left\{ \left<g,g\right>\mid g\in G\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\Delta\cong G$
+\end_inset
+
+, )
+\begin_inset Formula $\Delta\lhd G^{2}$
+\end_inset
+
+( 
+\begin_inset Formula $\iff$
+\end_inset
+
+ )
+\begin_inset Formula $G$
+\end_inset
+
+ אבלית(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+קומוטטור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ויהיו 
+\begin_inset Formula $g,h\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[g,h\right]=ghg^{-1}h^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $g,h$
+\end_inset
+
+ מתחלפים 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\left[g,h\right]=e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+תת חבורת הקומוטטור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $G'=\left\{ \left[g,h\right]\mid g,h\in G\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $G'\lhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $N\lhd G$
+\end_inset
+
+ חבורות אזי )
+\begin_inset Formula $G/N$
+\end_inset
+
+ אבלית( 
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $G'\le N$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ חבורות סופיות באשר 
+\begin_inset Formula $H$
+\end_inset
+
+ היחידה בעלת סדר 
+\begin_inset Formula $\left|H\right|$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H\lhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+המרכז
+\series default
+ 
+\series bold
+של
+\series default
+ 
+\series bold
+חבורה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $Z\left(G\right)=\left\{ g\in G\mid\forall h\in G.hg=gh\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $Z\left(G\right)\lhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+המרכז של איבר
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ויהי 
+\begin_inset Formula $a\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $C_{G}\left(a\right)=\left\{ g\in G\mid aga=g\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $C_{G}\left(a\right)\le G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $Z\left(G\right)=G$
+\end_inset
+
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $G$
+\end_inset
+
+ אבלית 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $G'=\left\{ e\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הנורמליזטור/המשמר
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $N_{G}\left(g\right)=\left\{ h\in G\mid hgh^{-1}=g\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $N_{G}\left(g\right)\le G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הנורמליזטור/המשמר של חבורה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ חבורות אזי 
+\begin_inset Formula $N_{G}\left(H\right)=\left\{ g\in G\mid gHg^{-1}=H\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $a\in Z\left(G\right)\iff N_{G}\left(a\right)=G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+פעולה משמאל
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\pi:G\times X\to X$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi\left(g_{1}g_{2},x\right)=\pi\left(g_{1},\pi\left(g_{2},x\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi\left(e,x\right)=x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $\pi\left(g,x\right)=g*x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+הגדרה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ פועלת על 
+\begin_inset Formula $X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $x_{1}\sim x_{2}\iff\exists g\in G.g*x_{1}=x_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\sim$
+\end_inset
+
+ יחס שקילות על 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+הגדרה
+\series default
+\color inherit
+: מחלקת השקילות של 
+\begin_inset Formula $\sim$
+\end_inset
+
+ נקראת מסלול-
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+תת חבורת המיצב של 
+\begin_inset Formula $x$
+\end_inset
+
+
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה הפועלת על 
+\begin_inset Formula $X$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $G_{x}=\left\{ g\in G\mid g*x=x\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+למה
+\series default
+\color inherit
+: נניח כי 
+\begin_inset Formula $G$
+\end_inset
+
+ פועלת על 
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G_{x}\le G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g_{2}^{-1}g_{1}\in G_{x}\iff g_{1}*x=g_{2}*x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+אורך המסלול של 
+\begin_inset Formula $x$
+\end_inset
+
+
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה הפועלת על 
+\begin_inset Formula $X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[G:G_{x}\right]=\left|\left[x\right]_{\sim}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+למת האיפיון לתת חבורות של חבורות ציקליות
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G=\left<a\right>$
+\end_inset
+
+ חבורה ציקלית מסדר 
+\begin_inset Formula $n$
+\end_inset
+
+ יהי 
+\begin_inset Formula $d|n$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<a^{\frac{n}{d}}\right>$
+\end_inset
+
+ תת החבורה היחידה של 
+\begin_inset Formula $G$
+\end_inset
+
+ מסדר 
+\begin_inset Formula $d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה הפועלת על 
+\begin_inset Formula $X$
+\end_inset
+
+ סופית ותהא 
+\begin_inset Formula $\left\{ x_{1},\ldots,x_{n}\right\} $
+\end_inset
+
+ מערכת נציגים מסלולי 
+\begin_inset Formula $G$
+\end_inset
+
+ אז 
+\begin_inset Formula $\left|X\right|=\sum_{i=1}^{n}\left[G:G_{x_{i}}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מחלקות צמידות
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית אזי מחלקת השקילות של פעולת ההצמדה של 
+\begin_inset Formula $G$
+\end_inset
+
+ על עצמה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משוואת המחלקים
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left\{ x_{1}\ldots x_{n}\right\} $
+\end_inset
+
+ מערכת נציגים למחלקות הצמידות אזי 
+\begin_inset Formula $\left|G\right|=\left|Z\left(G\right)\right|+\sum_{i=1}^{n}\left[G:C_{G}\left(x_{i}\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה הפועלת על 
+\begin_inset Formula $X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\varphi:G\to S_{X}$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\varphi\left(g\right)\left(x\right)=\pi\left(g,x\right)$
+\end_inset
+
+ הומומורפיזם.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ חבורות נניח כי 
+\begin_inset Formula $\left[G:H\right]=n<\infty$
+\end_inset
+
+ וגם 
+\begin_inset Formula $K=\bigcap_{g\in G}gHg^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $K\lhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $K\le H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G/K$
+\end_inset
+
+ איזומורפית לתת חבורה של 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+)
+\begin_inset Formula $G$
+\end_inset
+
+ סופית(
+\begin_inset Formula $\land$
+\end_inset
+
+)
+\begin_inset Formula $\left|G\right|\nmid n!$
+\end_inset
+
+( 
+\begin_inset Formula $\impliedby$
+\end_inset
+
+ )
+\begin_inset Formula $K\ne\left\{ e\right\} $
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+חבורה פשוטה
+\series default
+\color inherit
+: חבורה 
+\begin_inset Formula $G$
+\end_inset
+
+ כך שכל התת חבורות הנורמליות שלה הן 
+\begin_inset Formula $G,\left\{ e\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ חבורות ההיח כי 
+\begin_inset Formula $\left|G\right|\nmid\left[G:H\right]!$
+\end_inset
+
+ אזי 
+\begin_inset Formula $G$
+\end_inset
+
+ אינה פשוטה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+למה
+\series default
+\color inherit
+: 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+ נוצרת על ידי המחזורים מאורך 
+\begin_inset Formula $3$
+\end_inset
+
+ ב־
+\begin_inset Formula $S_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\ge5$
+\end_inset
+
+ אם 
+\begin_inset Formula $N\lhd A_{n}$
+\end_inset
+
+ מכילה מחזור מאורך 
+\begin_inset Formula $3$
+\end_inset
+
+ אזי 
+\begin_inset Formula $N=A_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\ge5$
+\end_inset
+
+ אם 
+\begin_inset Formula $\left\{ e\right\} \ne N\lhd A_{n}$
+\end_inset
+
+ אזי יש מחזור מאורך 
+\begin_inset Formula $3$
+\end_inset
+
+ ב־
+\begin_inset Formula $N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\ge5$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+ פשוטה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משפט
+\series default
+ 
+\series bold
+קיילי
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית מסדר 
+\begin_inset Formula $n$
+\end_inset
+
+ אזי 
+\begin_inset Formula $G$
+\end_inset
+
+ איזומורפית לתת חבורה של 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מכפלה
+\series default
+ 
+\series bold
+ישרה
+\series default
+ 
+\series bold
+פנימית
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $G_{1}\ldots G_{n}$
+\end_inset
+
+ חבורות המקיימות
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G_{i}\lhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G_{i}\cap G_{j}=\left\{ e\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\prod_{i=1}^{n}G_{i}=G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סימון
+\series default
+\color inherit
+: אם 
+\begin_inset Formula $G_{1}\ldots G_{n}$
+\end_inset
+
+ מכפלה ישרה פנימית של 
+\begin_inset Formula $G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $G=G_{1}\oplus\ldots\oplus G_{n}=G_{1}\cdot\ldots\cdot G_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מכפלה
+\series default
+ 
+\series bold
+ישרה
+\series default
+ 
+\series bold
+חיצונית
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $G_{1}\ldots G_{n}$
+\end_inset
+
+ חבורות אזי 
+\begin_inset Formula $G_{1}\times\ldots\times G_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: מכפלה ישרה עם פעולה איבר איבר היא חבורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ויהיו 
+\begin_inset Formula $G_{1}\ldots G_{n}\le G$
+\end_inset
+
+ חבורות התב
+\begin_inset Quotes erd
+\end_inset
+
+ש
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $G=\left<G_{1},\ldots,G_{n}\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall i\in\left[n\right].G_{i}\lhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall i\in\left[n\right].G_{i}\cap\left<G_{j}\mid j\ne i\right>=\left\{ e\right\} $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $G=\left<G_{1},\ldots,G_{n}\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall i\ne j.\forall x\in G_{j}.\forall y\in G_{i}.xy=yx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\prod_{i=1}^{n}x_{i}=\prod_{i=1}^{n}y_{i}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $x_{i},y_{i}\in G_{i}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $x_{i}=y_{i}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+ׂׂ
+\begin_inset Formula $G\cong G_{1}\times\ldots\times G_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: )מכפלה ישרה פנימית( 
+\begin_inset Formula $\cong$
+\end_inset
+
+ )מכפלה ישרה חיצונית(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית ויהיו 
+\begin_inset Formula $G_{1}\ldots G_{n}\lhd G$
+\end_inset
+
+ חבורות בעלי סדרים זרים המקיימים 
+\begin_inset Formula $\left|G\right|=\prod_{i=1}^{n}\left|G_{i}\right|$
+\end_inset
+
+ אזי 
+\begin_inset Formula $G=\left<G_{1},\ldots,G_{n}\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $m\in\bbn_{+}$
+\end_inset
+
+ ונניח כי 
+\begin_inset Formula $m=\prod_{i=1}^{k}p_{i}^{n_{i}}$
+\end_inset
+
+ פירוק לראשוניים אזי 
+\begin_inset Formula $\bbz_{m}=\bbz_{p_{1}^{n_{1}}}\cdot\ldots\cdot\bbz_{p_{k}^{n_{k}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סדרה נורמלית מאורך 
+\begin_inset Formula $m$
+\end_inset
+
+
+\series default
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית אזי 
+\begin_inset Formula $\left\{ G_{i}\right\} _{i=0}^{m}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left\{ e\right\} =G_{0}\lhd\ldots\lhd G_{m}=G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סדרות שקולות
+\series default
+: 
+\begin_inset Formula $\left\{ G_{i}\right\} _{i=0}^{m}$
+\end_inset
+
+, 
+\begin_inset Formula $\left\{ H_{i}\right\} _{i=0}^{m}$
+\end_inset
+
+ סדרות נורמליות של 
+\begin_inset Formula $G$
+\end_inset
+
+ המקיימות 
+\begin_inset Formula $\exists\sigma\in S_{n}.\forall i\in\left[n\right].G_{i}/G_{i-1}=H_{\sigma\left(i\right)}/H_{\sigma\left(i\right)-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+עידון
+\series default
+: תהא 
+\begin_inset Formula $\left\{ G_{i}\right\} _{i=0}^{m}$
+\end_inset
+
+ סדרה אזי סדרה 
+\begin_inset Formula $\left\{ H_{i}\right\} _{i=0}^{n}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\forall i\in\left\{ 0,\ldots,m\right\} .\exists j\in\left\{ i,\ldots,n\right\} .G_{i}=H_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט שרייר
+\series default
+: לכל שתי סדרות נורמליות של אותה חבורה קיימים עידונים שקולים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: לכל שתי סדרות נורמליות של אותה חבורה קיימים עידונים שקולים ללא חזרות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סדרת הרכב
+\series default
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי סדרה נורמלית ללא חזרות שכל עידון שלה מכיל חזרות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט ז'ורדן הלדר
+\series default
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית אזי כל שתי סדרות הרכב של 
+\begin_inset Formula $G$
+\end_inset
+
+ שקולות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נורמלית מקסימלית
+\series default
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $G\ne H\lhd G$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $R\lhd G\implies R\lhd H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: תהא 
+\begin_inset Formula $\left\{ G_{i}\right\} _{i=0}^{m}$
+\end_inset
+
+ סדרה נורמלית ללא חזרות של 
+\begin_inset Formula $G$
+\end_inset
+
+ התב
+\begin_inset Quotes erd
+\end_inset
+
+ש
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\{ G_{i}\right\} _{i=0}^{m}$
+\end_inset
+
+ סדרת הרכב.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G_{i-1}$
+\end_inset
+
+ נורמלית מקסימלית ב־
+\begin_inset Formula $G_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G_{i}/G_{i-1}$
+\end_inset
+
+ פשוטה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורה פתירה
+\series default
+: חבורה סופית 
+\begin_inset Formula $G$
+\end_inset
+
+ בעלת סדרת הרכב 
+\begin_inset Formula $\left\{ G_{i}\right\} _{i=0}^{m}$
+\end_inset
+
+ כך שהחבורה 
+\begin_inset Formula $G_{i}/G_{i-1}$
+\end_inset
+
+ אבלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית ותהא 
+\begin_inset Formula $K\lhd G$
+\end_inset
+
+ אזי )
+\begin_inset Formula $G$
+\end_inset
+
+ פתירה( 
+\begin_inset Formula $\iff$
+\end_inset
+
+ )
+\begin_inset Formula $G/K$
+\end_inset
+
+, 
+\begin_inset Formula $K$
+\end_inset
+
+ פתירות(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+חבורת 
+\begin_inset Formula $p$
+\end_inset
+
+
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p$
+\end_inset
+
+ מספר ראשוני אזי 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה המקיימת 
+\begin_inset Formula $\exists n\in\bbn_{+}.\ord\left(G\right)=p^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+למה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $G,H$
+\end_inset
+
+ חבורות 
+\begin_inset Formula $p$
+\end_inset
+
+ אזי )
+\begin_inset Formula $R\le G$
+\end_inset
+
+ חבורת 
+\begin_inset Formula $p$
+\end_inset
+
+(
+\begin_inset Formula $\land$
+\end_inset
+
+)
+\begin_inset Formula $H\times G$
+\end_inset
+
+ חבורת 
+\begin_inset Formula $p$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G\ne\left\{ e\right\} $
+\end_inset
+
+ חבורת 
+\begin_inset Formula $p$
+\end_inset
+
+ אזי 
+\begin_inset Formula $Z\left(G\right)\ne\left\{ e\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p$
+\end_inset
+
+ ראשוני ותהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי )
+\begin_inset Formula $\ord\left(G\right)=p^{2}$
+\end_inset
+
+( 
+\begin_inset Formula $\impliedby$
+\end_inset
+
+ )
+\begin_inset Formula $G$
+\end_inset
+
+ אבלית(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורת 
+\begin_inset Formula $p$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $H\le N_{G}\left(H\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+תת חבורה מירבית
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $G\ne H\le G$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $R\le G\implies R\le H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורת 
+\begin_inset Formula $p$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ תת חבורה מירבית אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H\lhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left[G:H\right]=p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיימת ל־
+\begin_inset Formula $G$
+\end_inset
+
+ סדרת הרכב 
+\begin_inset Formula $\left\{ G_{i}\right\} _{i=0}^{m}$
+\end_inset
+
+ כך שהחבורה 
+\begin_inset Formula $G_{i}/G_{i-1}$
+\end_inset
+
+ ציקלית מסדר 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+תת חבורת 
+\begin_inset Formula $p$
+\end_inset
+
+ סילו
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p$
+\end_inset
+
+ ראשוני ותהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית המקיימת 
+\begin_inset Formula $p|\left|G\right|$
+\end_inset
+
+ אזי 
+\begin_inset Formula $P\le G$
+\end_inset
+
+ תת חבורת 
+\begin_inset Formula $p$
+\end_inset
+
+ מקסימלית עבורה 
+\begin_inset Formula $\left|P\right||\left|G\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט קושי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p$
+\end_inset
+
+ ראשוני ותהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית אזי 
+\begin_inset Formula $p|\left|G\right|\implies\exists g\in G.\ord\left(g\right)=p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+המשפט הראשון של סילו
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית ויהי 
+\begin_inset Formula $p|\left|G\right|$
+\end_inset
+
+ ראשוני אזי קיימת ל־
+\begin_inset Formula $G$
+\end_inset
+
+ תת חבורה 
+\begin_inset Formula $p$
+\end_inset
+
+ סילוב.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p|\left|G\right|$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ חבורת 
+\begin_inset Formula $p$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H$
+\end_inset
+
+ תת חבורה של חבורת 
+\begin_inset Formula $p$
+\end_inset
+
+ סילוב.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+המשפט השני של סילו
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $H,N\le G$
+\end_inset
+
+ תת חבורות 
+\begin_inset Formula $p$
+\end_inset
+
+ סילוב אזי 
+\begin_inset Formula $\exists g\in G.H=gNg^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: נניח כי 
+\begin_inset Formula $n_{p}=1$
+\end_inset
+
+ אזי תת חבורת 
+\begin_inset Formula $p$
+\end_inset
+
+ סילו היא נורמלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סימון
+\series default
+\color inherit
+: כמות תת חבורות 
+\begin_inset Formula $p$
+\end_inset
+
+ סילוב הוא 
+\begin_inset Formula $n_{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+המשפט השלישי של סילו
+\series default
+\color inherit
+: 
+\begin_inset Formula $n_{p}\equiv1\mod p$
+\end_inset
+
+, 
+\begin_inset Formula $n_{p}|\left[G:P\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+למה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $N\lhd G$
+\end_inset
+
+ חבורות סופיות ונניח כי 
+\begin_inset Formula $P$
+\end_inset
+
+ חבורת 
+\begin_inset Formula $p$
+\end_inset
+
+ סילו אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\cap N$
+\end_inset
+
+ חבורת 
+\begin_inset Formula $p$
+\end_inset
+
+ סילו ב־
+\begin_inset Formula $N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $PN/N$
+\end_inset
+
+ חבורת 
+\begin_inset Formula $p$
+\end_inset
+
+ סילו ב־
+\begin_inset Formula $G/N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה מסדר 
+\begin_inset Formula $pq$
+\end_inset
+
+ בעבור 
+\begin_inset Formula $q<p$
+\end_inset
+
+ ראשוניים אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G$
+\end_inset
+
+ פתירה.
+\end_layout
+
+\begin_layout Itemize
+)
+\begin_inset Formula $q\nmid p-1$
+\end_inset
+
+( 
+\begin_inset Formula $\impliedby$
+\end_inset
+
+ )
+\begin_inset Formula $G$
+\end_inset
+
+ ציקלית(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הערה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left<G,\cdot\right>$
+\end_inset
+
+ היא חבורה עם כפל מוכלל 
+\begin_inset Formula $\prod$
+\end_inset
+
+, 
+\begin_inset Formula $\left<A,+\right>$
+\end_inset
+
+ היא חבורה עם חיבור מוכלל 
+\begin_inset Formula $\sum$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+תת חבורת הפיתול
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ חבורה אבלית אזי 
+\begin_inset Formula $A^{t}=\left\{ a\in A\mid\ord\left(a\right)<\infty\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+חבורת פיתול
+\series default
+\color inherit
+: חבורה אבלית 
+\begin_inset Formula $A$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $A^{t}=A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+חבורה חסרת פיתול
+\series default
+\color inherit
+: חבורה אבלית 
+\begin_inset Formula $A$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $A^{t}=\left\{ e\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ חבורה אבלית
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A^{t}\le A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A/A^{t}$
+\end_inset
+
+ חסרת פיתול.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $A$
+\end_inset
+
+ חבורת פיתול חילופית נוצרת סופית אז 
+\begin_inset Formula $A$
+\end_inset
+
+ סופית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+סדרה תלויה לינארית )ת
+\begin_inset Quotes erd
+\end_inset
+
+ל(
+\series default
+\color inherit
+: סדרה 
+\begin_inset Formula $a\in A^{n}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\exists k\in\bbz^{n}\backslash\left\{ 0\right\} .\sum_{i=1}^{n}k_{i}a_{i}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+בלתי תלויה לינארית )בת
+\begin_inset Quotes erd
+\end_inset
+
+ל(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+בסיס
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ חבורה אבלית אזי 
+\begin_inset Formula $v\in A^{n}$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+ל המקיימת 
+\begin_inset Formula $\forall a\in A.\exists\a\in\bbz^{n}.\sum\a_{i}v_{i}=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+חבורה חופשית
+\series default
+\color inherit
+: חבורה אבלית בעלת בסיס.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $F$
+\end_inset
+
+ חבורה חופשית עם בסיס 
+\begin_inset Formula $v\in F^{n}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $A$
+\end_inset
+
+ חבורה אבלית עם 
+\begin_inset Formula $a\in A^{n}$
+\end_inset
+
+ אזי קיים ויחיד הומומורפיזם 
+\begin_inset Formula $\varphi:F\to A$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\forall i\in\left[n\right].\varphi\left(v_{i}\right)=a_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ חבורה אבלית אינסופית ויהי 
+\begin_inset Formula $v\in A^{n}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $v$
+\end_inset
+
+ בסיס( 
+\begin_inset Formula $\iff$
+\end_inset
+
+ )
+\begin_inset Formula $\left(\bigoplus_{i=1}^{n}\left<v_{i}\right>=A\right)\land\left(\forall i\in\left[n\right].\left<v_{i}\right>\cong\bbz\right)$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ חבורה אבלית אינסופית אזי )
+\begin_inset Formula $A$
+\end_inset
+
+ חופשית( 
+\begin_inset Formula $\iff$
+\end_inset
+
+ )
+\begin_inset Formula $A\cong\bbz^{n}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ חבורת חסרת פיתול אבלית אזי )
+\begin_inset Formula $A$
+\end_inset
+
+ נ
+\begin_inset Quotes erd
+\end_inset
+
+ס( 
+\begin_inset Formula $\iff$
+\end_inset
+
+ )
+\begin_inset Formula $A$
+\end_inset
+
+ חופשית(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ חבורה אבלית ויהיו 
+\begin_inset Formula $v_{1}\ldots v_{n}$
+\end_inset
+
+ בסיס, 
+\begin_inset Formula $u_{1}\ldots u_{k}$
+\end_inset
+
+ סדרת יוצרים אזי 
+\begin_inset Formula $n\le k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $B_{1},B_{2}$
+\end_inset
+
+ בסיסים של חבורה חופשית 
+\begin_inset Formula $A$
+\end_inset
+
+ אזי גודל הבסיסים שווה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+דרגה של חבורה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ חבורה חופשית אזי 
+\begin_inset Formula $\rank\left(A\right)$
+\end_inset
+
+ הוא גודל הבסיס של 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט החבורות החלקיות של תת חבורה חופשית
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $H\le A$
+\end_inset
+
+ חבורות באשר 
+\begin_inset Formula $A$
+\end_inset
+
+ חבורה חופשית מדרגה 
+\begin_inset Formula $n$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H$
+\end_inset
+
+ חופשית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $v\in A^{n}$
+\end_inset
+
+ בסיס אזי קיים 
+\begin_inset Formula $k\le n$
+\end_inset
+
+ עבורו קיימים 
+\begin_inset Formula $\e\in\bbn^{k}$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\e_{i}|\e_{i+1}$
+\end_inset
+
+ וגם 
+\begin_inset Formula $\e_{1}v_{1}\ldots\e_{k}v_{k}$
+\end_inset
+
+ בסיס של 
+\begin_inset Formula $H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $H\le A$
+\end_inset
+
+ חבורות חופשית אזי 
+\begin_inset Formula $\rank\left(H\right)\le\rank\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G=G_{1}\times\ldots\times G_{n}$
+\end_inset
+
+ ונניח כי 
+\begin_inset Formula $N_{i}\lhd G_{i}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $G/\left(N_{1}\cdot\ldots\cdot N_{n}\right)\cong G_{1}/N_{1}\times\ldots\times G_{n}/N_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט השאריות הסיני
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $j,k,m\in\bbn$
+\end_inset
+
+ ונניח כי 
+\begin_inset Formula $\gcd\left(j,k\right)=1$
+\end_inset
+
+, 
+\begin_inset Formula $j\cdot k=m$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbz_{m}\cong\bbz_{j}\oplus\bbz_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+המשפט היסודי של חבורות אבליות נוצרות סופית
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ חבורה אבלית נ
+\begin_inset Quotes erd
+\end_inset
+
+ס אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\cong\bbz_{\e_{1}}\times\ldots\times\bbz_{\e_{k}}\times\bbz^{r}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\e_{i}|\e_{i+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיים פירוק יחיד 
+\begin_inset Formula $A\cong\bbz_{p_{1}^{\e_{1}}}\times\ldots\times\bbz_{p_{n}^{\e_{n}}}\times\bbz^{r}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $p_{1}\ldots p_{n}$
+\end_inset
+
+ ראשוניים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+חבורה סבבה
+\series default
+\color inherit
+: חבורה 
+\begin_inset Formula $G$
+\end_inset
+
+ אשר 
+\begin_inset Formula $\left|G\right|=\prod_{i=1}^{n}p_{i}^{e_{i}}$
+\end_inset
+
+ פירוק לראשוניים המקיימת 
+\begin_inset Formula $n_{p_{i}}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סבבה ותהא 
+\begin_inset Formula $P_{i}$
+\end_inset
+
+ תת חבורה 
+\begin_inset Formula $p$
+\end_inset
+
+ סילו אזי 
+\begin_inset Formula $G=P_{1}\cdot\ldots\cdot P_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הגדרה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $H,K\le G$
+\end_inset
+
+ חבורות אזי 
+\begin_inset Formula $\left[H,K\right]=\left\{ \left[h,k\right]\mid h\in H\land k\in K\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left[H,K\right]\le G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $H,K\le G$
+\end_inset
+
+ חבורות אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $K\le H\implies\left[K,G\right]\le\left[H,G\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left[H,G\right]\le H\iff H\lhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\left(K\lhd G\right)\land\left(K\le H\le G\right)\right)\implies\left(H/K\le Z\left(G/K\right)\iff\left[H,G\right]\le K\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הסדרה המרכזית היורדת
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $\Phi_{1}\left(G\right)=G$
+\end_inset
+
+, 
+\begin_inset Formula $\Phi_{i+1}\left(G\right)=\left[\Phi_{i}\left(G\right),G\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\Phi_{i+1}\lhd\Phi_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\Phi_{i}/\Phi_{i+1}\le Z\left(G/\Phi_{i+1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הסדרה המרכזית העולה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $Z_{0}\left(G\right)=\left\{ e\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $Z_{i}\left(G\right)/Z_{i-1}\left(G\right)=Z\left(G/Z_{i-1}\left(G\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $Z_{1}\left(G\right)=Z\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(Z_{m}=G\right)\iff\left(\Phi_{m+1}=\left\{ e\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(Z_{m}=G\right)\implies\left(\forall i\in\left[m\right].\Phi_{i+1}\le Z_{m-i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+חבורה נילפוטנטית
+\series default
+\color inherit
+: חבורה 
+\begin_inset Formula $G$
+\end_inset
+
+ עבורה
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\exists i\in\bbn.\Phi_{i}\left(G\right)=\left\{ e\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\exists i\in\bbn.Z_{i}\left(G\right)=G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: מכפלה ישרה של חבורות נילפוטנטיות היא נילפוטנטית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ נילפוטנטית ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $H\le N_{G}\left(H\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למת הארגומנט של פראטיני
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $K\lhd G$
+\end_inset
+
+ חבורות סופיות ותהא 
+\begin_inset Formula $P$
+\end_inset
+
+ תת חבורה 
+\begin_inset Formula $p$
+\end_inset
+
+ סילו אזי 
+\begin_inset Formula $G=K\cdot N_{G}\left(P\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית ותהא 
+\begin_inset Formula $P$
+\end_inset
+
+ תת חבורת 
+\begin_inset Formula $p$
+\end_inset
+
+ סילו אזי 
+\begin_inset Formula $\left(N_{G}\left(P\right)\le H\le G\right)\implies\left(N_{G}\left(H\right)=H\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי )
+\begin_inset Formula $G$
+\end_inset
+
+ סבבה( 
+\begin_inset Formula $\iff$
+\end_inset
+
+ )
+\begin_inset Formula $G$
+\end_inset
+
+ נילפוטנטית(.
+\end_layout
+
+\end_body
+\end_document

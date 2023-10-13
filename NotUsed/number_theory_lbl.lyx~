@@ -1,0 +1,2366 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+\usepackage{culmus}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usepackage{cancel}
+\usepackage{wrapfig}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[cm]{fullpage}
+\usepackage{polynom}
+\usepackage{booktabs}
+
+\setlength{\tabcolsep}{1pt}
+\renewcommand{\arraystretch}{1.25} % Default value: 1
+
+\usetikzlibrary{math}
+\usetikzlibrary{shadows,trees}
+\counterwithin*{section}{part}
+\setlist{nosep, noitemsep}
+% \setlist[enumerate,levels]{format}
+\setlist[enumerate,1]{label = \arabic*., ref = \arabic*}
+\setlist[enumerate,2]{label = \emph{\alph*}), ref = \theenumi.\emph{\alph*}}
+\setlist[enumerate,3]{label = .\roman*, ref = \theenumii.\roman*}
+
+
+% Convert the Lyx colors into more pleasent colors:
+\definecolor{blue}{RGB}{14,107,217}
+\definecolor{green}{RGB}{0,158,40}
+\definecolor{red}{RGB}{235,16,16}
+\definecolor{brown}{RGB}{164,66,0}
+\definecolor{orange}{RGB}{231,135,26}
+\definecolor{purple}{RGB}{94,53,177}
+
+
+% Program Listing colors
+\definecolor{keywordcolor}{RGB}{0,0,0}
+\definecolor{commentcolor}{RGB}{128,128,128}
+\definecolor{stringcolor}{RGB}{0,168,0}
+
+
+% Trees formating
+\tikzset{edge from parent fork down, level distance=2cm, every node/.style= {rectangle,rounded corners, minimum height=8mm, very thick, align=center}}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    }
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding default
+\fontencoding global
+\font_roman "default" "David"
+\font_sans "default" "David"
+\font_typewriter "default" "David"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf true
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle false
+\papersize letterpaper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 4cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\headheight 0cm
+\headsep 0.5cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "E:/University/macros.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חזקה מושלמת
+\series default
+: 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ עבורו קיימים 
+\begin_inset Formula $a\in\bbn_{+}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b\in\bbn_{>1}$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $n=a^{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מקדם בינומי
+\series default
+: יהיו 
+\begin_inset Formula $k,n\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $k\le n$
+\end_inset
+
+ אזי 
+\begin_inset Formula ${n \choose k}=\frac{n!}{k!\left(n-k\right)!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהיו 
+\begin_inset Formula $k,n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S_{n}^{\left(k\right)}=\sum_{i=1}^{n}i^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $S_{n}^{\left(0\right)}=n$
+\end_inset
+
+, 
+\begin_inset Formula $S_{n}^{\left(1\right)}=\frac{n\left(n+1\right)}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $S_{n}^{\left(2\right)}=\frac{n\left(n+1\right)\left(2n+1\right)}{6}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הבינום של ניוטון
+\series default
+: יהיו 
+\begin_inset Formula $x,y\in\bbr$
+\end_inset
+
+ וכן 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(x+y\right)^{n}=\sum_{k=0}^{n}{n \choose k}x^{k}y^{n-k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $S_{n}^{\left(k\right)}=\frac{1}{k+1}\left(n^{k+1}-\sum_{t=0}^{k-1}\left(-1\right)^{k-t}{k+1 \choose t}S_{n}^{\left(t\right)}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: 
+\begin_inset Formula $S_{n}^{\left(3\right)}=\frac{n^{4}+2n^{3}+n^{2}}{4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+פעולה בינארית
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $*:A\times A\to A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: תהא 
+\begin_inset Formula $*$
+\end_inset
+
+ פעולה בינארית אזי 
+\begin_inset Formula $a*b=*\left(\left<a,b\right>\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורה
+\series default
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $*$
+\end_inset
+
+ פעולה בינארית אזי 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+אסוציטיביות/קיבוציות: 
+\begin_inset Formula $\forall a,b,c\in A.a*\left(b*c\right)=\left(a*b\right)*c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+איבר יחידה: 
+\begin_inset Formula $\exists e\in A.\forall g\in G.e*g=g*e=g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+איבר הופכי/נגדי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+: 
+\begin_inset Formula $\forall g\in G.\exists h\in A.g*h=h*g=e_{G}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי איבר היחידה של 
+\begin_inset Formula $G$
+\end_inset
+
+ הינו 
+\begin_inset Formula $e_{G}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ויהי 
+\begin_inset Formula $a\in G$
+\end_inset
+
+ אזי האיבר ההופכי של 
+\begin_inset Formula $a$
+\end_inset
+
+ הינו 
+\begin_inset Formula $a^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חוג חלקי ל־
+\begin_inset Formula $\bbc$
+\end_inset
+
+
+\series default
+: קבוצה 
+\begin_inset Formula $A\subseteq\bbc$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left<A,+\right>$
+\end_inset
+
+ חבורה.
+\end_layout
+
+\begin_layout Itemize
+סגירות לכפל: 
+\begin_inset Formula $\forall a,b\in A.ab\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $1\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\bbz$
+\end_inset
+
+ חוג חלקי ל־
+\begin_inset Formula $\bbc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: 
+\begin_inset Formula $\bbz\left[\a\right]=\bigcup_{n=0}^{\infty}\left\{ \sum_{i=0}^{n}k_{i}\a^{i}\bmid k\in\bbz^{n}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $m\in\bbz$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\sqrt{m}\notin\bbq$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ 1,\sqrt{m}\right\} $
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+ל מעל 
+\begin_inset Formula $\bbq$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $m\in\bbz$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\sqrt{m}\notin\bbq$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbz\left[\sqrt{m}\right]$
+\end_inset
+
+ חוג חלקי ל־
+\begin_inset Formula $\bbc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חוג השלמים של גאוס
+\series default
+: 
+\begin_inset Formula $\bbz\left[i\right]=\left\{ a+bi\mid a,b\in\bbz\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: 
+\begin_inset Formula $\bbz\left[i\right]$
+\end_inset
+
+ חוג חלקי ל־
+\begin_inset Formula $\bbc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורת ההפיכים
+\series default
+: יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ חוג חלקי ל־
+\begin_inset Formula $\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A^{*}=\left\{ a\in A\mid a^{-1}\in A\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ חוג חלקי ל־
+\begin_inset Formula $\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<A^{*},*\right>$
+\end_inset
+
+ חבורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מחלק
+\series default
+: יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ חוג חלקי ל־
+\begin_inset Formula $\bbc$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $b\in A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a\in A\backslash\left\{ 0\right\} $
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\frac{b}{a}\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $b\in A$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in A\backslash\left\{ 0\right\} $
+\end_inset
+
+ מחלק אזי 
+\begin_inset Formula $a\mid b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהיו 
+\begin_inset Formula $a,b,c\in A$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $a\mid b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b\mid c$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a\mid c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהיו 
+\begin_inset Formula $a,b,c\in A$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $a\mid b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a\mid c$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\forall v,u\in A.a\mid ub+vc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+יחס חברות
+\series default
+\color inherit
+: 
+\begin_inset Formula $\sim$
+\end_inset
+
+ יחס על 
+\begin_inset Formula $A$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\left(a\sim b\right)\iff\left(\exists\e\in A^{*}.b=\e a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יחס החברות הינו יחס שקילות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in A$
+\end_inset
+
+ אזי )
+\begin_inset Formula $a,b$
+\end_inset
+
+ חברים(
+\begin_inset Formula $\left(\left(a\mid b\right)\land\left(b\mid a\right)\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $m\in\bbz$
+\end_inset
+
+ אזי חבריו של 
+\begin_inset Formula $m$
+\end_inset
+
+ הם 
+\begin_inset Formula $\pm m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $z\in\bbz\left[i\right]$
+\end_inset
+
+ אזי חבריו של 
+\begin_inset Formula $z$
+\end_inset
+
+ הם 
+\begin_inset Formula $\left\{ \pm z,\pm iz\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+אי
+\series default
+ 
+\series bold
+פריק
+\series default
+ 
+\series bold
+)א
+\begin_inset Quotes erd
+\end_inset
+
+פ(
+\series default
+\color inherit
+: 
+\begin_inset Formula $a\in A\backslash A^{*}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\forall b,c\in A.\left(a=bc\right)\implies\left(b\in A^{*}\right)\lor\left(c\in A^{*}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+ראשוני
+\series default
+\color inherit
+: 
+\begin_inset Formula $a\in A\backslash\left(A^{*}\cup\left\{ 0\right\} \right)$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\forall b,c\in A.\left(a\mid bc\right)\implies\left(a\mid b\right)\lor\left(a\mid c\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ ראשוני אזי 
+\begin_inset Formula $a$
+\end_inset
+
+ א
+\begin_inset Quotes erd
+\end_inset
+
+פ.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: בחוג 
+\begin_inset Formula $\bbz\left[\sqrt{-5}\right]$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $2$
+\end_inset
+
+ א
+\begin_inset Quotes erd
+\end_inset
+
+פ אך אינו ראשוני.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+תחום פריקות
+\series default
+\color inherit
+: 
+\begin_inset Formula $A$
+\end_inset
+
+ חוג חלקי של 
+\begin_inset Formula $\bbc$
+\end_inset
+
+ המקיים לכל 
+\begin_inset Formula $a\in A\backslash\left(A^{*}\cup\left\{ 0\right\} \right)$
+\end_inset
+
+ קיימים 
+\begin_inset Formula $q_{1}\ldots q_{n}\in A$
+\end_inset
+
+ א
+\begin_inset Quotes erd
+\end_inset
+
+פ המקיימים 
+\begin_inset Formula $a=\prod_{i=1}^{n}q_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט פירוק לאי פריקים מעל 
+\begin_inset Formula $\bbz$
+\end_inset
+
+
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbz$
+\end_inset
+
+ תחום פריקות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+פונקציית הצמוד
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\a\in\bbz$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\sqrt{\a}\notin\bbq$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $\sigma:\bbz\left[\sqrt{\a}\right]\to\bbz\left[\sqrt{\a}\right]$
+\end_inset
+
+ כך 
+\begin_inset Formula $\sigma\left(a+b\sqrt{\a}\right)=a-b\sqrt{\a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $z,w\in\bbz\left[\sqrt{\a}\right]$
+\end_inset
+
+ מתקיים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma\left(z+w\right)=\sigma\left(z\right)+\sigma\left(w\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma\left(zw\right)=\sigma\left(z\right)\sigma\left(w\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma\left(\sigma\left(z\right)\right)=z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+נורמה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\a\in\bbz$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\sqrt{\a}\notin\bbq$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $N:\bbz\left[\sqrt{\a}\right]\to\bbz$
+\end_inset
+
+ כך 
+\begin_inset Formula $N\left(z\right)=z\sigma\left(z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+למה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $z,w\in\bbz\left[\sqrt{\a}\right]$
+\end_inset
+
+ מתקיים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $N\left(zw\right)=N\left(z\right)N\left(w\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(N\left(z\right)=0\right)\iff\left(z=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\a\in\bbz$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\sqrt{\a}\notin\bbq$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbz\left[\sqrt{\a}\right]^{*}=\left\{ z\in\bbz\left[\sqrt{\a}\right]\mid N\left(z\right)\in\left\{ \pm1\right\} \right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט פירוק לאי פריקים מעל 
+\begin_inset Formula $\bbz\left[\sqrt{\a}\right]$
+\end_inset
+
+
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\a\in\bbz$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\sqrt{\a}\notin\bbq$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbz\left[\sqrt{\a}\right]$
+\end_inset
+
+ תחום פריקות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+תחום פריקות יחידה
+\series default
+\color inherit
+: 
+\begin_inset Formula $A$
+\end_inset
+
+ תחום פריקות המקיים לכל 
+\begin_inset Formula $a\in A\backslash\left(A^{*}\cup\left\{ 0\right\} \right)$
+\end_inset
+
+ קיימים 
+\begin_inset Formula $q_{1}\ldots q_{n}$
+\end_inset
+
+ א
+\begin_inset Quotes erd
+\end_inset
+
+פ יחידים המקיימים
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $a=\prod_{i=1}^{n}q_{i}$
+\end_inset
+
+ עד כדי שינוי סדר הגורמים וחברות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ תחום פריקות אזי )
+\begin_inset Formula $A$
+\end_inset
+
+ תחום פריקות יחידה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)כל 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ א
+\begin_inset Quotes erd
+\end_inset
+
+פ הינו ראשוני(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbz\left[\sqrt{-5}\right]$
+\end_inset
+
+ אינו תחום פריקות יחידה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט חלוקה עם שארית ב־
+\begin_inset Formula $\bbz$
+\end_inset
+
+
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a>0$
+\end_inset
+
+ אזי קיימים ויחידים 
+\begin_inset Formula $q,r\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $0\le r<a$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $b=qa+r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+שארית חלוקה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a>0$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $q,r\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $0\le r<a$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $b=qa+r$
+\end_inset
+
+ אזי 
+\begin_inset Formula $r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $r\in\bbz$
+\end_inset
+
+ שארית החלוקה של 
+\begin_inset Formula $b$
+\end_inset
+
+ ב־
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a\;\text{mod}\;b=r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a>0$
+\end_inset
+
+ אזי )שארית החלוקה של 
+\begin_inset Formula $b$
+\end_inset
+
+ ב־
+\begin_inset Formula $a$
+\end_inset
+
+ היא 
+\begin_inset Formula $0$
+\end_inset
+
+(
+\begin_inset Formula $\left(a\mid b\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מחלק משותף
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left(a,b\right)\ne0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $d\in\bbz$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\left(d\mid a\right)\land\left(d\mid b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מחלק משותף מקסימלי )ממ
+\begin_inset Quotes erd
+\end_inset
+
+מ(
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left(a,b\right)\ne0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\max\left\{ d\in\bbz\mid\left(d\mid a\right)\land\left(d\mid b\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+סימון
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ אזי המחלק המשותף המקסימלי שלהם הינו 
+\begin_inset Formula $\gcd\left(a,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\exists m,n\in\bbz.\gcd\left(a,b\right)=ma+nb$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $d\in\bbz$
+\end_inset
+
+ מחלק משותף אזי 
+\begin_inset Formula $d\mid\gcd\left(a,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $d\in\bbz$
+\end_inset
+
+ מחלק משותף אזי )לכל מחלק משותף 
+\begin_inset Formula $r\in\bbz$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $r\mid d$
+\end_inset
+
+(
+\begin_inset Formula $\left(d=\gcd\left(a,b\right)\right)\impliedby$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מחלק משותף מקסימלי )ממ
+\begin_inset Quotes erd
+\end_inset
+
+מ(
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left(a_{1}\ldots a_{n}\right)\ne0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\max\left\{ d\in\bbz\mid\forall i\in\left[n\right].\left(d\mid a_{i}\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+סימון
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbz$
+\end_inset
+
+ אזי המחלק המשותף המקסימלי שלהם הינו 
+\begin_inset Formula $\gcd\left(a_{1}\ldots a_{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\exists u_{1}\ldots u_{n}\in\bbz.\gcd\left(a_{1}\ldots a_{n}\right)=\sum_{i=1}^{n}u_{i}a_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+אלגוריתם אוקלידס
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $a\in\bbz\backslash\left\{ 0\right\} $
+\end_inset
+
+ ויהי 
+\begin_inset Formula $b\in\bbn$
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\begin{align*}
+ & \text{\textbf{function}}\;\text{EuclideanAlgorithm}\left(a,b\right)\\
+ & \qquad\text{\textbf{if}}\;b=0\\
+ & \qquad\qquad\text{\textbf{return}}\;a\\
+ & \qquad\text{\textbf{else}}\\
+ & \qquad\qquad\text{\textbf{return}}\;\text{EuclideanAlgorithm}\left(b,a\;\text{mod}\;b\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $a\in\bbz\backslash\left\{ 0\right\} $
+\end_inset
+
+ ויהי 
+\begin_inset Formula $b\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{EuclideanAlgorithm}\left(a,b\right)=\gcd\left(a,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מספרים זרים
+\series default
+\color inherit
+: 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\gcd\left(a,b\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ זרים אזי 
+\begin_inset Formula $\exists m,n\in\bbz.ma+nb=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $a\in\bbz$
+\end_inset
+
+ א
+\begin_inset Quotes erd
+\end_inset
+
+פ אזי 
+\begin_inset Formula $a$
+\end_inset
+
+ ראשוני.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbz$
+\end_inset
+
+ תחום פריקות יחידה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט אוקלידס
+\series default
+\color inherit
+: קיימים אינסוף ראשוניים ב־
+\begin_inset Formula $\bbz$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: בסדרה 
+\begin_inset Formula $\left\{ 4n+3\right\} _{n=0}^{\infty}$
+\end_inset
+
+ ישנם אינסוף ראשוניים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט דיריכלה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in\bbn_{+}$
+\end_inset
+
+ זרים אזי בסדרה 
+\begin_inset Formula $\left\{ bn+a\right\} _{n=0}^{\infty}$
+\end_inset
+
+ ישנם אינסוף ראשוניים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left\{ p_{n}\right\} _{n=1}^{\infty}$
+\end_inset
+
+ סדרת הראשוניים אזי 
+\begin_inset Formula $p_{n}\le2^{2^{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+פונקציית ספירת ראשוניים
+\series default
+\color inherit
+: 
+\begin_inset Formula $\pi\left(x\right)=\left|\left\{ p\le x\mid\text{ ראשוני}p\right\} \right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $f,g\in\bbr\to\bbn$
+\end_inset
+
+ המקיימות 
+\begin_inset Formula $\lim_{x\to\infty}\frac{f\left(x\right)}{g\left(x\right)}=1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\sim g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט
+\series default
+\color inherit
+: 
+\begin_inset Formula $\pi\left(x\right)\sim\frac{x}{\log\left(x\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\pi\left(x\right)>\log\log\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+אלגוריתם הנפה של ארטוסטנס
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn\backslash\left\{ 0,1\right\} $
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\begin{align*}
+ & \text{\textbf{function}}\;\text{SieveOfEratosthenesAlgorithm}\left(n\right)\\
+ & \qquad A\leftarrow\left[\underset{2}{\text{true}},\underset{3}{\text{true}},\ldots,\underset{n}{\text{true}}\right]\\
+ & \qquad\text{\textbf{for}}\;i\leftarrow2\ldots n\\
+ & \qquad\qquad\text{\textbf{if}}\;A\left[i\right]=\text{true}\\
+ & \qquad\qquad\qquad j\leftarrow1\\
+ & \qquad\qquad\qquad\text{\textbf{while}}\;ij\le n\\
+ & \qquad\qquad\qquad\qquad A\left[ij\right]=\text{false}\\
+ & \qquad\qquad\qquad\qquad j\leftarrow j+1\\
+ & \qquad\text{\textbf{return}}\;A
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn\backslash\left\{ 0,1\right\} $
+\end_inset
+
+ אזי כל אינדקס שמסומן כ־
+\begin_inset Formula $\text{true}$
+\end_inset
+
+ בתשובת 
+\begin_inset Formula $\text{SieveOfEratosthenesAlgorithm}\left(n\right)$
+\end_inset
+
+ הינו ראשוני.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מספרי פרמה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $F_{n}=2^{2^{n}}+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $x,y\in\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $t\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $x^{t}-y^{t}=\left(x-y\right)\sum_{i=0}^{t-1}x^{i}y^{t-i-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $m,n\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $m\ne n$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gcd\left(F_{n},F_{m}\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מספרי מרסן
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p$
+\end_inset
+
+ ראשוני אזי 
+\begin_inset Formula $M_{p}=2^{p}-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מספר מושלם
+\series default
+\color inherit
+: 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula ${\displaystyle n=\sum_{\substack{d\mid n\\
+1\le d<n
+}
+}d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+פונקציית סכום המחלקים
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula ${\displaystyle \sigma\left(n\right)=\sum_{\substack{d\mid n\\
+1\le d
+}
+}d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $n$
+\end_inset
+
+ מושלם(
+\begin_inset Formula $\left(\sigma\left(n\right)=2n\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+פונקציה כפלית
+\series default
+\color inherit
+: 
+\begin_inset Formula $f:\bbn\to\bbc$
+\end_inset
+
+ המקיימת לכל 
+\begin_inset Formula $n,m\in\bbn$
+\end_inset
+
+ זרים מתקיים 
+\begin_inset Formula $f\left(nm\right)=f\left(n\right)f\left(m\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ פונקציה כופלית ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ עם פירוק לראשוניים 
+\begin_inset Formula $n=\prod_{m=1}^{k}p_{m}^{r_{m}}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(n\right)=\prod_{i=1}^{k}f\left(p_{i}^{r_{i}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ פונקציה כפלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\bbn$
+\end_inset
+
+ ראשוני ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sigma\left(p^{n}\right)=\frac{p^{n+1}-1}{p-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ עם פירוק לראשוניים 
+\begin_inset Formula $n=\prod_{m=1}^{k}p_{m}^{r_{m}}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sigma\left(n\right)=\prod_{m=1}^{k}\frac{p_{m}^{r_{m}+1}-1}{p_{m}-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ פונקציה כפלית אזי 
+\begin_inset Formula $F\left(n\right)=\sum_{d\mid n}f\left(d\right)$
+\end_inset
+
+ כפלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+פונקציית מביוס
+\series default
+\color inherit
+: נגדיר 
+\begin_inset Formula $\mu:\bbn\to\left\{ 0,\pm1\right\} $
+\end_inset
+
+ כפלית יהי 
+\begin_inset Formula $p$
+\end_inset
+
+ ראשוני אזי 
+\begin_inset Formula $\mu\left(p^{r}\right)=\begin{cases}
+1 & r=0\\
+-1 & r=1\\
+0 & r\ge2
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט נוסחת ההיפוך של מביוס
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f:\bbn\to\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(F\left(n\right)=\sum_{d\mid n}f\left(d\right)\right)\iff\left(f\left(n\right)=\sum_{d\mid n}\mu\left(d\right)F\left(\frac{n}{d}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט אוקלידס
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $M_{p}$
+\end_inset
+
+ ראשוני אזי 
+\begin_inset Formula $\frac{1}{2}M_{p}\left(M_{p}+1\right)$
+\end_inset
+
+ מושלם.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט אוילר
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn_{\text{even}}$
+\end_inset
+
+ מושלם אזי קיים 
+\begin_inset Formula $M_{p}$
+\end_inset
+
+ ראשוני עבורו 
+\begin_inset Formula $n=\frac{1}{2}M_{p}\left(M_{p}+1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+שלשה פיתגורית
+\series default
+\color inherit
+: 
+\begin_inset Formula $x,y,z\in\bbn_{+}$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $x^{2}+y^{2}=z^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+אלגוריתם מציאת כל הנקודות הרציונליות על חתך חרוט
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $r,s\in\bbq$
+\end_inset
+
+ ותהא עקומה 
+\begin_inset Formula $rx^{2}+sy^{2}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+מצא פתרון רציונלי 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+מצאו את נקודות החיתוך בין הישר העובר דרך 
+\begin_inset Formula $\left(a,b\right),\left(0,t\right)$
+\end_inset
+
+ ובין העקומה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $t\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\left(\frac{t^{2}-1}{t^{2}+1}\in\bbq\right)\land\left(\frac{2t}{t^{2}+1}\in\bbq\right)\right)\iff\left(t\in\bbq\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט
+\series default
+\color inherit
+: 
+\begin_inset Formula $f:\bbq\to\left\{ \left(x,y\right)\in\bbq^{2}\mid x^{2}+y^{2}=1\right\} \backslash\left\{ \left(1,0\right)\right\} $
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $f\left(t\right)=\left(\frac{t^{2}-1}{t^{2}+1},\frac{2t}{t^{2}+1}\right)$
+\end_inset
+
+ הינה חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט
+\series default
+\color inherit
+: 
+\begin_inset Formula $\sols_{\bbq}\left(x^{2}+y^{2}=1\right)=\left\{ \left(1,0\right)\right\} \cup\left\{ \left(\frac{t^{2}-1}{t^{2}+1},\frac{2t}{t^{2}+1}\right)\bmid t\in\bbq\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left(\begin{smallmatrix}x\\
+y\\
+z
+\end{smallmatrix}\right)$
+\end_inset
+
+ שלשה פתגורית אזי מתקיים אחד מהבאים
+\end_layout
+
+\begin_layout Itemize
+קיימים 
+\begin_inset Formula $u,v\in\bbn_{\text{odd}}$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\gcd\left(u,v\right)=1$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\left(\begin{smallmatrix}\frac{u^{2}-v^{2}}{2}\\
+\frac{u^{2}+v^{2}}{2}\\
+uv
+\end{smallmatrix}\right)=\left(\begin{smallmatrix}x\\
+y\\
+z
+\end{smallmatrix}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיימים 
+\begin_inset Formula $u,v\in\bbn_{+}$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $u+v\in\bbn_{\text{odd}}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\gcd\left(u,v\right)=1$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\left(\begin{smallmatrix}u^{2}-v^{2}\\
+2uv\\
+u^{2}+v^{2}
+\end{smallmatrix}\right)=\left(\begin{smallmatrix}x\\
+y\\
+z
+\end{smallmatrix}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
