@@ -4738,23 +4738,19 @@ j\in\bbn_{+}
 
 \series bold
 \color green
-טענה תנאי הכרחי לראשוניות
+טענה
 \series default
 \color inherit
 : יהי 
-\begin_inset Formula $n\in\bbn_{+}$
+\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
 \end_inset
 
  ויהי 
-\begin_inset Formula $a\in\bbz_{n}^{*}$
-\end_inset
-
- המקיים 
-\begin_inset Formula $a^{n-1}\not\equiv1\mod n$
+\begin_inset Formula $a\in\bbz_{p}^{*}$
 \end_inset
 
  אזי 
-\begin_inset Formula $n\notin\bbp$
+\begin_inset Formula $\left(a^{\frac{p-1}{2}}\equiv1\mod p\right)\lor\left(a^{\frac{p-1}{2}}\equiv-1\mod p\right)$
 \end_inset
 
 .
@@ -4764,6 +4760,861 @@ j\in\bbn_{+}
 
 \series bold
 \color green
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbz_{p}^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\sols_{\bbz_{p}}\left(x^{2}=a\right)\ne\emptyset\right)\iff\left(a^{\frac{p-1}{2}}\equiv1\mod p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+שארית ריבועית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $a\in\bbz_{p}^{*}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\sols_{\bbz_{p}}\left(x^{2}=a\right)\ne\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbz_{p}^{*}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+)
+\begin_inset Formula $a$
+\end_inset
+
+ שארית ריבועית מודולו 
+\begin_inset Formula $p$
+\end_inset
+
+(
+\begin_inset Formula $\left(a^{\frac{p-1}{2}}\equiv1\mod p\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+)
+\begin_inset Formula $a$
+\end_inset
+
+ לא שארית ריבועית מודולו 
+\begin_inset Formula $p$
+\end_inset
+
+(
+\begin_inset Formula $\left(a^{\frac{p-1}{2}}\equiv-1\mod p\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+סימן לז'נדר
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbz_{p}^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\frac{a}{p}\right)=\begin{cases}
+1 & p\text{ שארית ריבועית }a\\
+-1 & \text{else}
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(\frac{a}{p}\right)\equiv a^{\frac{p-1}{2}}\mod p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left|\left\{ a\in\bbz_{p}^{*}\bmid\left(\frac{a}{p}\right)=1\right\} \right|=\frac{p-1}{2}=\left|\left\{ a\in\bbz_{p}^{*}\bmid\left(\frac{a}{p}\right)=-1\right\} \right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\a\in\bbz_{p}^{*}$
+\end_inset
+
+ שארית לא ריבועית ויהי 
+\begin_inset Formula $\b\in\a\left(\bbz_{p}^{*}\right)^{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\b$
+\end_inset
+
+ לא שארית ריבועית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\a\in\bbz_{p}^{*}$
+\end_inset
+
+ שארית לא ריבועית אזי 
+\begin_inset Formula $\bbz_{p}^{*}=\left(\bbz_{p}^{*}\right)^{2}\biguplus\left(\a\left(\bbz_{p}^{*}\right)^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in\bbz_{p}^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\frac{a\cdot b}{p}\right)=\left(\frac{a}{p}\right)\cdot\left(\frac{b}{p}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט אוילר
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\bbp\backslash\left\{ 2,3\right\} $
+\end_inset
+
+ המקיים 
+\begin_inset Formula $p\equiv3\mod4$
+\end_inset
+
+ וכן 
+\begin_inset Formula $2p+1\in\bbp$
+\end_inset
+
+ אזי 
+\begin_inset Formula $2^{p}-1$
+\end_inset
+
+ פריק.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $a\in\bbz_{\text{odd}}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sols_{\bbz_{2}}\left(x^{2}=a\right)=\left\{ 1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $a\in\bbz_{\text{odd}}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $a\equiv1\mod4$
+\end_inset
+
+ אזי
+\begin_inset Formula $\sols_{\bbz_{4}}\left(x^{2}=a\right)=\left\{ 1,3\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $a\not\equiv1\mod4$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sols_{\bbz_{4}}\left(x^{2}=a\right)=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $a\in\bbz_{\text{odd}}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $a\equiv1\mod8$
+\end_inset
+
+ אזי
+\begin_inset Formula $\sols_{\bbz_{4}}\left(x^{2}=a\right)=\left\{ 1,3,5,7\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $a\not\equiv1\mod8$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sols_{\bbz_{4}}\left(x^{2}=a\right)=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $a\in\bbz_{\text{odd}}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $k\in\bbn\backslash\left\{ 0,1,2\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\sols_{\bbz_{2^{k}}}\left(x^{2}=a\right)\ne\emptyset\right)\iff\left(a\equiv1\mod8\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $a\in\bbz_{\text{odd}}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\sols_{\bbz_{2^{k}}}\left(x^{2}=a\right)\ne\emptyset\right)\iff\left(a\equiv1\mod\gcd\left(8,2^{k}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $a\in\bbz_{\text{odd}}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $a\equiv1\mod\gcd\left(8,2^{k}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\sols_{\bbz_{2^{k}}}\left(x^{2}=a\right)\right|=\begin{cases}
+1 & k=1\\
+2 & k=2\\
+3 & k\ge3
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
+\end_inset
+
+ יהי 
+\begin_inset Formula $j\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbz_{p}^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\sols_{\bbz_{p^{j}}}\left(x^{2}=a\right)\ne\emptyset\right)\iff\left(a^{\frac{1}{2}\phi\left(p^{j}\right)}\equiv1\mod p^{j}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
+\end_inset
+
+ יהי 
+\begin_inset Formula $j\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbz_{p}^{*}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $a^{\frac{1}{2}\phi\left(p^{j}\right)}\equiv1\mod p^{j}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\sols_{\bbz_{p^{j}}}\left(x^{2}=a\right)\right|=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ עם פירוק 
+\begin_inset Formula $n=2^{r_{0}}\prod_{i=1}^{k}p_{i}^{r_{i}}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbz_{n}^{*}$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left(\sols_{\bbz_{n}}\left(x^{2}=a\right)\ne\emptyset\right)\iff\left(\left(a\equiv1\mod\gcd\left(8,2^{r_{0}}\right)\right)\land\left(\forall i\in\left[k\right].a^{\frac{1}{2}\phi\left(p_{i}^{r_{i}}\right)}\equiv1\mod p_{i}^{r_{i}}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ עם פירוק 
+\begin_inset Formula $n=2^{r_{0}}\prod_{i=1}^{k}p_{i}^{r_{i}}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbz_{n}^{*}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\sols_{\bbz_{n}}\left(x^{2}=a\right)\ne\emptyset$
+\end_inset
+
+ נסמן 
+\begin_inset Formula $m=\left\{ \begin{smallmatrix}0, & r_{0}\in\left\{ 0,1\right\} \\
+1, & r_{0}=2\\
+2, & \text{else}
+\end{smallmatrix}\right.$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\sols_{\bbz_{n}}\left(x^{2}=a\right)\right|=2^{k}\cdot2^{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הלמה של גאוס
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
+\end_inset
+
+ יהי 
+\begin_inset Formula $a\in\bbz_{p}^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\frac{a}{p}\right)=\left(-1\right)^{\left|\left\{ j\in\left\{ 1\ldots\frac{p-1}{2}\right\} \bmid\substack{aj\in\left[-\frac{p-1}{2},\frac{p-1}{2}\right]\\
+aj<0
+}
+\right\} \right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\frac{2}{p}\right)=\left(-1\right)^{\frac{p^{2}-1}{8}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\frac{2}{p}\right)=\begin{cases}
+1 & p\equiv\pm1\mod8\\
+-1 & p\equiv\pm3\mod8
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט ההדדיות הריבועית של גאוס
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $p,q\in\bbp\backslash\left\{ 2\right\} $
+\end_inset
+
+ באשר 
+\begin_inset Formula $p\ne q$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\frac{p}{q}\right)\cdot\left(\frac{q}{p}\right)=\left(-1\right)^{\frac{1}{4}\left(p-1\right)\left(q-1\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: בסדרה 
+\begin_inset Formula $\left\{ 5n-1\right\} _{n=1}^{\infty}$
+\end_inset
+
+ ישנם אינסוף ראשוניים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+סמל יעקובי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn_{\text{odd}}$
+\end_inset
+
+ עם פירוק 
+\begin_inset Formula $n=\prod_{i=1}^{k}p_{i}^{r_{i}}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbz_{n}^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\frac{a}{n}\right)=\prod_{i=1}^{k}\left(\frac{a}{p_{i}}\right)^{r_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn_{\text{odd}}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $a,b\in\bbz_{n}^{*}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(a\equiv b\mod n\right)\implies\left(\left(\frac{a}{n}\right)=\left(\frac{b}{n}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\impliedby\left(\left(\frac{a}{n}\right)=-1\right)$
+\end_inset
+
+)
+\begin_inset Formula $a$
+\end_inset
+
+ לא שארית ריבועית מודולו 
+\begin_inset Formula $n$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+למה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $n_{1}\ldots n_{k}\in\bbn_{\text{odd}}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{1}{2}\left(\left(\prod_{i=1}^{k}n_{i}\right)-1\right)\equiv\frac{1}{2}\sum_{i=1}^{k}\left(n_{i}-1\right)\mod2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{1}{2}\left(\left(\prod_{i=1}^{k}n_{i}\right)^{2}-1\right)\equiv\frac{1}{2}\sum_{i=1}^{k}\left(n_{i}^{2}-1\right)\mod2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $n,m\in\bbn_{\text{odd}}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $a,b\in\bbn_{+}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+נניח כי 
+\begin_inset Formula $a,b\in\bbz_{n}^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\frac{a\cdot b}{n}\right)=\left(\frac{a}{n}\right)\cdot\left(\frac{b}{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+נניח כי 
+\begin_inset Formula $a\in\bbz_{n}^{*}\cap\bbz_{m}^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\frac{a}{n\cdot m}\right)=\left(\frac{a}{n}\right)\cdot\left(\frac{a}{m}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+נניח כי 
+\begin_inset Formula $n\ne1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\frac{-1}{n}\right)=\left(-1\right)^{\frac{n-1}{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\frac{2}{n}\right)=\left(-1\right)^{\frac{n^{2}-1}{8}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+חוק ההדיות של גאוס
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $n,m\in\bbn_{\text{odd}}\backslash\left\{ 1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\frac{m}{n}\right)\cdot\left(\frac{n}{m}\right)=\left(-1\right)^{\frac{1}{4}\left(n-1\right)\left(m-1\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+אלגוריתם חישוב סמל יעקובי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn_{\text{odd}}$
+\end_inset
+
+ עם פירוק 
+\begin_inset Formula $n=\prod_{i=1}^{k}p_{i}^{r_{i}}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbz_{n}^{*}$
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\begin{align*}
+ & \text{\textbf{function}}\;\text{JacobiSymbolCalculator}\left(a,n\right)\\
+ & \qquad\mid k\leftarrow0\\
+ & \qquad\mid s\leftarrow a\\
+ & \qquad\mid\text{\textbf{while}}\;s\in\bbz_{\text{even}}\\
+ & \qquad\mid\qquad\mid r\leftarrow\max\left\{ \ell\in\bbn\mid\left(2^{\ell}\mid s\right)\right\} \\
+ & \qquad\mid\qquad\mid k\leftarrow k+r\\
+ & \qquad\mid\qquad\mid s^{\prime}\leftarrow\left(0\le s^{\prime}\le n-1\right)\land\left(s^{\prime}\equiv\frac{s}{r}\mod n\right)\\
+ & \qquad\mid\qquad\mid s\leftarrow s^{\prime}\\
+ & \qquad\mid\text{\textbf{return}}\;\left(-1\right)^{\frac{1}{8}k\left(n^{2}-1\right)+\frac{1}{4}\left(n-1\right)\left(s-1\right)}\cdot\text{JacobiSymbolCalculator}\left(n,s\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+עד פרמה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a\in\bbz_{n}^{*}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $a^{n-1}\not\equiv1\mod n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
 מספרי קרמייקל
 \series default
 \color inherit
@@ -4781,7 +5632,7 @@ j\in\bbn_{+}
 \begin_layout Standard
 
 \series bold
-\color green
+\color brown
 טענה
 \series default
 \color inherit
@@ -4811,7 +5662,7 @@ j\in\bbn_{+}
 \begin_layout Standard
 
 \series bold
-\color green
+\color brown
 כפולה משותפת מינימלית
 \series default
 \color inherit
@@ -4833,7 +5684,7 @@ j\in\bbn_{+}
 \begin_layout Standard
 
 \series bold
-\color green
+\color brown
 הגדרה
 \series default
 \color inherit
@@ -4912,7 +5763,7 @@ j\in\bbn_{+}
 \begin_layout Standard
 
 \series bold
-\color green
+\color brown
 למה
 \series default
 \color inherit
@@ -4930,7 +5781,7 @@ j\in\bbn_{+}
 \begin_layout Standard
 
 \series bold
-\color green
+\color brown
 משפט
 \series default
 \color inherit
@@ -4958,7 +5809,7 @@ j\in\bbn_{+}
 \begin_layout Standard
 
 \series bold
-\color green
+\color brown
 למה
 \series default
 \color inherit
@@ -4976,7 +5827,7 @@ j\in\bbn_{+}
 \begin_layout Standard
 
 \series bold
-\color green
+\color brown
 משפט
 \series default
 \color inherit
@@ -5006,7 +5857,43 @@ j\in\bbn_{+}
 \begin_layout Standard
 
 \series bold
-\color green
+\color brown
+עד אוילר־יעקובי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn_{\text{odd}}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a\in\bbz_{n}^{*}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $a^{\frac{n-1}{2}}\not\equiv\left(\frac{a}{n}\right)\mod n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn_{\text{odd}}$
+\end_inset
+
+ פריק אזי קיים עד אוילר־יעקובי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
 אלגוריתם מבחן רבין־מילר לבדיקת ראשוניות
 \series default
 \color inherit
@@ -5044,7 +5931,7 @@ j\in\bbn_{+}
 \begin_layout Standard
 
 \series bold
-\color green
+\color brown
 משפט
 \series default
 \color inherit
@@ -5061,649 +5948,6 @@ j\in\bbn_{+}
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-טענה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
-\end_inset
-
- ויהי 
-\begin_inset Formula $a\in\bbz_{p}^{*}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left(a^{\frac{p-1}{2}}\equiv1\mod p\right)\lor\left(a^{\frac{p-1}{2}}\equiv-1\mod p\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-מסקנה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
-\end_inset
-
- ויהי 
-\begin_inset Formula $a\in\bbz_{p}^{*}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left(\sols_{\bbz_{p}}\left(x^{2}=a\right)\ne\emptyset\right)\iff\left(a^{\frac{p-1}{2}}\equiv1\mod p\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-שארית ריבועית
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
-\end_inset
-
- אזי 
-\begin_inset Formula $a\in\bbz_{p}^{*}$
-\end_inset
-
- המקיים 
-\begin_inset Formula $\sols_{\bbz_{p}}\left(x^{2}=a\right)\ne\emptyset$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-מסקנה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
-\end_inset
-
- ויהי 
-\begin_inset Formula $a\in\bbz_{p}^{*}$
-\end_inset
-
- אזי
-\end_layout
-
-\begin_layout Itemize
-)
-\begin_inset Formula $a$
-\end_inset
-
- שארית ריבועית מודולו 
-\begin_inset Formula $p$
-\end_inset
-
-(
-\begin_inset Formula $\left(a^{\frac{p-1}{2}}\equiv1\mod p\right)\iff$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-)
-\begin_inset Formula $a$
-\end_inset
-
- לא שארית ריבועית מודולו 
-\begin_inset Formula $p$
-\end_inset
-
-(
-\begin_inset Formula $\left(a^{\frac{p-1}{2}}\equiv-1\mod p\right)\iff$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-סימן לז'נדר
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
-\end_inset
-
- ויהי 
-\begin_inset Formula $a\in\bbz_{p}^{*}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left(\frac{a}{p}\right)=\begin{cases}
-1 & p\text{ שארית ריבועית }a\\
--1 & \text{else}
-\end{cases}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-מסקנה
-\series default
-\color inherit
-: 
-\begin_inset Formula $\left(\frac{a}{p}\right)\equiv a^{\frac{p-1}{2}}\mod p$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-טענה
-\series default
-\color inherit
-: 
-\begin_inset Formula $\left|\left\{ a\in\bbz_{p}^{*}\bmid\left(\frac{a}{p}\right)=1\right\} \right|=\frac{p-1}{2}=\left|\left\{ a\in\bbz_{p}^{*}\bmid\left(\frac{a}{p}\right)=-1\right\} \right|$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-טענה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $\a\in\bbz_{p}^{*}$
-\end_inset
-
- שארית לא ריבועית ויהי 
-\begin_inset Formula $\b\in\a\left(\bbz_{p}^{*}\right)^{2}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\b$
-\end_inset
-
- לא שארית ריבועית.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-משפט
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $\a\in\bbz_{p}^{*}$
-\end_inset
-
- שארית לא ריבועית אזי 
-\begin_inset Formula $\bbz_{p}^{*}=\left(\bbz_{p}^{*}\right)^{2}\biguplus\left(\a\left(\bbz_{p}^{*}\right)^{2}\right)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-טענה
-\series default
-\color inherit
-: יהיו 
-\begin_inset Formula $a,b\in\bbz_{p}^{*}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left(\frac{a\cdot b}{p}\right)=\left(\frac{a}{p}\right)\cdot\left(\frac{b}{p}\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-משפט אוילר
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $p\in\bbp\backslash\left\{ 2,3\right\} $
-\end_inset
-
- המקיים 
-\begin_inset Formula $p\equiv3\mod4$
-\end_inset
-
- וכן 
-\begin_inset Formula $2p+1\in\bbp$
-\end_inset
-
- אזי 
-\begin_inset Formula $2^{p}-1$
-\end_inset
-
- פריק.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-טענה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $a\in\bbz_{\text{odd}}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\sols_{\bbz_{2}}\left(x^{2}=a\right)=\left\{ 1\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-טענה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $a\in\bbz_{\text{odd}}$
-\end_inset
-
- אזי
-\end_layout
-
-\begin_layout Itemize
-אם 
-\begin_inset Formula $a\equiv1\mod4$
-\end_inset
-
- אזי
-\begin_inset Formula $\sols_{\bbz_{4}}\left(x^{2}=a\right)=\left\{ 1,3\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-אם 
-\begin_inset Formula $a\not\equiv1\mod4$
-\end_inset
-
- אזי 
-\begin_inset Formula $\sols_{\bbz_{4}}\left(x^{2}=a\right)=\emptyset$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-טענה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $a\in\bbz_{\text{odd}}$
-\end_inset
-
- אזי
-\end_layout
-
-\begin_layout Itemize
-אם 
-\begin_inset Formula $a\equiv1\mod8$
-\end_inset
-
- אזי
-\begin_inset Formula $\sols_{\bbz_{4}}\left(x^{2}=a\right)=\left\{ 1,3,5,7\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-אם 
-\begin_inset Formula $a\not\equiv1\mod8$
-\end_inset
-
- אזי 
-\begin_inset Formula $\sols_{\bbz_{4}}\left(x^{2}=a\right)=\emptyset$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color purple
-טענה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $a\in\bbz_{\text{odd}}$
-\end_inset
-
- ויהי 
-\begin_inset Formula $k\in\bbn\backslash\left\{ 0,1,2\right\} $
-\end_inset
-
- אזי 
-\begin_inset Formula $\left(\sols_{\bbz_{2^{k}}}\left(x^{2}=a\right)\ne\emptyset\right)\iff\left(a\equiv1\mod8\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color purple
-מסקנה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $a\in\bbz_{\text{odd}}$
-\end_inset
-
- ויהי 
-\begin_inset Formula $k\in\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left(\sols_{\bbz_{2^{k}}}\left(x^{2}=a\right)\ne\emptyset\right)\iff\left(a\equiv1\mod\gcd\left(8,2^{k}\right)\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color purple
-טענה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $a\in\bbz_{\text{odd}}$
-\end_inset
-
- ויהי 
-\begin_inset Formula $k\in\bbn_{+}$
-\end_inset
-
- עבורם 
-\begin_inset Formula $a\equiv1\mod\gcd\left(8,2^{k}\right)$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left|\sols_{\bbz_{2^{k}}}\left(x^{2}=a\right)\right|=\begin{cases}
-1 & k=1\\
-2 & k=2\\
-3 & k\ge3
-\end{cases}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color purple
-טענה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
-\end_inset
-
- יהי 
-\begin_inset Formula $j\in\bbn_{+}$
-\end_inset
-
- ויהי 
-\begin_inset Formula $a\in\bbz_{p}^{*}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left(\sols_{\bbz_{p^{j}}}\left(x^{2}=a\right)\ne\emptyset\right)\iff\left(a^{\frac{1}{2}\phi\left(p^{j}\right)}\equiv1\mod p^{j}\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color purple
-טענה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
-\end_inset
-
- יהי 
-\begin_inset Formula $j\in\bbn_{+}$
-\end_inset
-
- ויהי 
-\begin_inset Formula $a\in\bbz_{p}^{*}$
-\end_inset
-
- המקיים 
-\begin_inset Formula $a^{\frac{1}{2}\phi\left(p^{j}\right)}\equiv1\mod p^{j}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left|\sols_{\bbz_{p^{j}}}\left(x^{2}=a\right)\right|=2$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color purple
-טענה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- עם פירוק 
-\begin_inset Formula $n=2^{r_{0}}\prod_{i=1}^{k}p_{i}^{r_{i}}$
-\end_inset
-
- ויהי 
-\begin_inset Formula $a\in\bbz_{n}^{*}$
-\end_inset
-
- אזי
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula $\left(\sols_{\bbz_{n}}\left(x^{2}=a\right)\ne\emptyset\right)\iff\left(\left(a\equiv1\mod\gcd\left(8,2^{r_{0}}\right)\right)\land\left(\forall i\in\left[k\right].a^{\frac{1}{2}\phi\left(p_{i}^{r_{i}}\right)}\equiv1\mod p_{i}^{r_{i}}\right)\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color purple
-מסקנה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- עם פירוק 
-\begin_inset Formula $n=2^{r_{0}}\prod_{i=1}^{k}p_{i}^{r_{i}}$
-\end_inset
-
- ויהי 
-\begin_inset Formula $a\in\bbz_{n}^{*}$
-\end_inset
-
- המקיים 
-\begin_inset Formula $\sols_{\bbz_{n}}\left(x^{2}=a\right)\ne\emptyset$
-\end_inset
-
- נסמן 
-\begin_inset Formula $m=\left\{ \begin{smallmatrix}0, & r_{0}\in\left\{ 0,1\right\} \\
-1, & r_{0}=2\\
-2, & \text{else}
-\end{smallmatrix}\right.$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left|\sols_{\bbz_{n}}\left(x^{2}=a\right)\right|=2^{k}\cdot2^{m}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color purple
-הלמה של גאוס
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
-\end_inset
-
- יהי 
-\begin_inset Formula $a\in\bbz_{p}^{*}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left(\frac{a}{p}\right)=\left(-1\right)^{\left|\left\{ j\in\left\{ 1\ldots\frac{p-1}{2}\right\} \bmid\substack{aj\in\left[-\frac{p-1}{2},\frac{p-1}{2}\right]\\
-aj<0
-}
-\right\} \right|}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color purple
-טענה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
-\end_inset
-
- אזי 
-\begin_inset Formula $\left(\frac{2}{p}\right)=\left(-1\right)^{\frac{p^{2}-1}{8}}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color purple
-מסקנה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
-\end_inset
-
- אזי 
-\begin_inset Formula $\left(\frac{2}{p}\right)=\begin{cases}
-1 & p\equiv\pm1\mod8\\
--1 & p\equiv\pm3\mod8
-\end{cases}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-משפט ההדדיות הריבעית של גאוס: יהיו 
-\begin_inset Formula $p,q\in\bbp\backslash\left\{ 2\right\} $
-\end_inset
-
- באשר 
-\begin_inset Formula $p\ne q$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left(\frac{p}{q}\right)\cdot\left(\frac{q}{p}\right)=\left(-1\right)^{\frac{1}{4}\left(p-1\right)\left(q-1\right)}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-מסקנה: בסדרה 
-\begin_inset Formula $\left\{ 5n-1\right\} _{n=1}^{\infty}$
-\end_inset
-
- ישנם אינסוף ראשוניים.
-\end_layout
-
-\begin_layout Standard
-סמל יעקובי: 
 \end_layout
 
 \end_body
