@@ -160,6 +160,15 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\sym}{\text{sym}}
+{\text{sym}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color gray
@@ -4535,19 +4544,14 @@ j\in\bbn_{+}
 \end_inset
 
  נגדיר 
-\begin_inset Formula $f:\bbz_{n}^{*}\to\bbz_{n}^{*}$
+\begin_inset Formula $\substack{f:\bbz_{n}^{*}\to\bbz_{n}^{*}\\
+f\left(x\right)\equiv x^{m}\mod n
+}
+$
 \end_inset
 
- כך 
-\begin_inset Formula $f\left(x\right)\equiv x^{m}\mod n$
-\end_inset
-
- אזי
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula $\im\left(f\right)=\left\{ a\in\bbz_{n}^{*}\bmid a^{\frac{\phi\left(n\right)}{\gcd\left(m,\phi\left(n\right)\right)}}\equiv1\mod n\right\} $
+ אזי 
+\begin_inset Formula ${\scriptstyle \im\left(f\right)=\left\{ a\in\bbz_{n}^{*}\bmid a^{\frac{\phi\left(n\right)}{\gcd\left(m,\phi\left(n\right)\right)}}\equiv1\mod n\right\} }$
 \end_inset
 
 .
@@ -4569,11 +4573,10 @@ j\in\bbn_{+}
 \end_inset
 
  אזי 
-\begin_inset Formula $f:\bbz_{n}^{*}\to\bbz_{n}^{*}$
-\end_inset
-
- המוגדרת 
-\begin_inset Formula $f\left(x\right)\equiv x^{m}\mod n$
+\begin_inset Formula $\substack{f:\bbz_{n}^{*}\to\bbz_{n}^{*}\\
+f\left(x\right)\equiv x^{m}\mod n
+}
+$
 \end_inset
 
  חח
@@ -4937,10 +4940,10 @@ j\in\bbn_{+}
 \end_inset
 
  שארית לא ריבועית אזי 
-\begin_inset Formula $\bbz_{p}^{*}=\left(\bbz_{p}^{*}\right)^{2}\biguplus\left(\a\left(\bbz_{p}^{*}\right)^{2}\right)$
+\begin_inset Formula $\bbz_{p}^{*}=\left\{ a^{2}\mid a\in\bbz_{p}^{*}\right\} \biguplus\left\{ \a\cdot a^{2}\mid a\in\bbz_{p}^{*}\right\} $
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -5945,6 +5948,827 @@ aj<0
 
  אזי 
 \begin_inset Formula $\left(\text{RabinMillerPrimalityTest}\left(n,b\right)=\text{false}\right)\iff\left(n\notin\bbp\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+תבנית ריבועית
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b,c\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\in\bbz\left[x,y\right]$
+\end_inset
+
+ המוגדר 
+\begin_inset Formula $f\left(x,y\right)=ax^{2}+bxy+cy^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מטריצה מייצגת של תבנית ריבועית
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\left(x,y\right)=ax^{2}+bxy+cy^{2}$
+\end_inset
+
+ תבנית ריבועית אזי 
+\begin_inset Formula $A_{f}=\left(\begin{smallmatrix}a & \frac{b}{2}\\
+\frac{b}{2} & c
+\end{smallmatrix}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+קבוצת התבניות הריבועיות
+\series default
+\color inherit
+: 
+\begin_inset Formula $\sym_{2}\left(\bbz\right)=\left\{ A\in M_{2}\left(\bbz\right)\mid A=A^{t}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(v\right)=vA_{f}v^{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+דיסקרימננטה של תבנית ריבועית
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f=\left(\begin{smallmatrix}a & \frac{b}{2}\\
+\frac{b}{2} & c
+\end{smallmatrix}\right)\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ תבנית ריבועית אזי 
+\begin_inset Formula $\Delta_{f}=b^{2}-4ac$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\Delta_{f}\equiv0\mod4\right)\lor\left(\Delta_{f}\equiv1\mod4\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\d\in\bbz$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\left(\d\equiv0\mod4\right)\lor\left(\d\equiv1\mod4\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\exists f\in\sym_{2}\left(\bbz\right).\Delta_{f}=\d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+פירוק תבנית ריבועית לגורמים לינאריים
+\series default
+\color inherit
+: 
+\begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\exists m,\ell,r,s\in\bbq.\left(f\left(x,y\right)=\left(mx+\ell y\right)\left(rx+sy\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט גאוס
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ אזי )
+\begin_inset Formula $f$
+\end_inset
+
+ פריקה לגורמים לינאריים מעל 
+\begin_inset Formula $\bbq$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $f$
+\end_inset
+
+ פריקה לגורמים לינאריים מעל 
+\begin_inset Formula $\bbz$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ אזי )
+\begin_inset Formula $f$
+\end_inset
+
+ פריקה לגורמים לינאריים מעל 
+\begin_inset Formula $\bbz$
+\end_inset
+
+(
+\begin_inset Formula $\left(\exists k\in\bbz.\Delta=k^{2}\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+ייצוג על ידי תבנית
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\exists u\in\bbz.\exists v\in\bbz_{u}^{*}.f\left(v,u\right)=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\d\in\bbz\backslash\left\{ k^{2}\mid k\in\bbz\right\} $
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\left(\d\equiv0\mod4\right)\lor\left(\d\equiv1\mod4\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbz$
+\end_inset
+
+ אזי )קיימת 
+\begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\Delta=\delta$
+\end_inset
+
+ וכן 
+\begin_inset Formula $n$
+\end_inset
+
+ מיוצג על ידי 
+\begin_inset Formula $f$
+\end_inset
+
+(
+\begin_inset Formula $\left(\sols_{\bbz_{4n}}\left(x^{2}=\d\right)\ne\emptyset\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $\text{SL}_{2}\left(\bbz\right)=\left\{ U\in M_{2}\left(\bbz\right)\mid\det\left(U\right)=1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\text{SL}_{2}\left(\bbz\right)$
+\end_inset
+
+ חבורה ביחס לכפל מטריצות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+תבניות ריבועיות שקולות
+\series default
+\color inherit
+: 
+\begin_inset Formula $f,g\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ המקיימות 
+\begin_inset Formula $\exists U\in\text{SL}_{2}\left(\bbz\right).f\left(\left(x,y\right)\right)=g\left(\left(x,y\right)U\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: שקילות תבניות ריבועיות הינו יחס שקילות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+סימון
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $f,g\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ שקולות אזי 
+\begin_inset Formula $f\sim g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $f,g\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(f\sim g\right)\iff\left(\exists U\in\text{SL}_{2}\left(\bbz\right).A_{g}=UA_{f}U^{t}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $U\in\text{SL}_{2}\left(\bbz\right)$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula $\substack{T_{U}:\bbz^{2}\to\bbz^{2}\\
+T_{U}\left(m,n\right)=\left(m,n\right)\cdot U
+}
+$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T_{u}$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל.
+\end_layout
+
+\begin_layout Itemize
+יהיו 
+\begin_inset Formula $m,n\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\gcd\left(m,n\right)=1\right)\iff\left(\gcd\left(T_{U}\left(m,n\right)\right)=1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $f,g\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ שקולות אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Delta_{f}=\Delta_{g}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f\left(\bbz\times\bbz\right)=g\left(\bbz\times\bbz\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $n\in\bbz$
+\end_inset
+
+ אזי )
+\begin_inset Formula $n$
+\end_inset
+
+ מיוצג על ידי 
+\begin_inset Formula $f$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $n$
+\end_inset
+
+ מיוצג על ידי 
+\begin_inset Formula $g$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $\left(\begin{smallmatrix}a & \frac{b}{2}\\
+\frac{b}{2} & c
+\end{smallmatrix}\right)\sim f$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left|b\right|\le\left|a\right|\le\left|c\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+אלגוריתם חפיפת תבנית לצורה קנונית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\left(\begin{smallmatrix}a & \frac{b}{2}\\
+\frac{b}{2} & c
+\end{smallmatrix}\right)\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\begin{align*}
+ & \text{\textbf{function}}\;\text{CanonicalFormMatrixCongruence}\left(\left(\begin{smallmatrix}a & \frac{b}{2}\\
+\frac{b}{2} & c
+\end{smallmatrix}\right)\right)\\
+ & \qquad\mid M\leftarrow\left(\begin{smallmatrix}a & \frac{b}{2}\\
+\frac{b}{2} & c
+\end{smallmatrix}\right)\\
+ & \qquad\mid\text{\textbf{while}}\;\neg\left(\left|b\right|\le\left|a\right|\le\left|c\right|\right)\\
+ & \qquad\mid\qquad\mid\text{\textbf{if}}\;\left|c\right|<\left|a\right|\\
+ & \qquad\mid\qquad\mid\qquad M\leftarrow\left(\begin{smallmatrix}0 & -1\\
+1 & 0
+\end{smallmatrix}\right)M\left(\begin{smallmatrix}0 & -1\\
+1 & 0
+\end{smallmatrix}\right)^{t}\\
+ & \qquad\mid\qquad\mid\text{\textbf{if}}\;\left|a\right|<\left|b\right|\\
+ & \qquad\mid\qquad\mid\qquad\mid k\leftarrow\left\{ k\in\bbz\mid\left|-b+2ck\right|\le\left|c\right|\right\} \\
+ & \qquad\mid\qquad\mid\qquad\mid M\leftarrow\left(\begin{smallmatrix}1 & 0\\
+k & 1
+\end{smallmatrix}\right)M\left(\begin{smallmatrix}1 & 0\\
+k & 1
+\end{smallmatrix}\right)^{t}\\
+ & \qquad\mid\text{\textbf{return}}\;M
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סימון
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\in\nicefrac{\sym_{2}\left(\bbz\right)}{\sim}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f\in A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Delta_{A}=\Delta_{f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\d\in\bbz\backslash\left\{ k^{2}\mid k\in\bbz\right\} $
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\left(\d\equiv0\mod4\right)\lor\left(\d\equiv1\mod4\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\left\{ A\in\nicefrac{\sym_{2}\left(\bbz\right)}{\sim}\mid\Delta_{A}=\d\right\} \right|\in\bbn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+תבנית חיובית לחלוטין
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(\begin{smallmatrix}a & \frac{b}{2}\\
+\frac{b}{2} & c
+\end{smallmatrix}\right)\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left(\Delta<0\right)\land\left(a>0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מחלקה חיובית לחלוטין
+\series default
+\color inherit
+: 
+\begin_inset Formula $A\in\nicefrac{\sym_{2}\left(\bbz\right)}{\sim}$
+\end_inset
+
+ עבורה כל 
+\begin_inset Formula $f\in A$
+\end_inset
+
+ הינה חיובית לחלוטין.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+תבנית שלילית לחלוטין
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(\begin{smallmatrix}a & \frac{b}{2}\\
+\frac{b}{2} & c
+\end{smallmatrix}\right)\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left(\Delta<0\right)\land\left(a<0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מחלקה שלילית לחלוטין
+\series default
+\color inherit
+: 
+\begin_inset Formula $A\in\nicefrac{\sym_{2}\left(\bbz\right)}{\sim}$
+\end_inset
+
+ עבורה כל 
+\begin_inset Formula $f\in A$
+\end_inset
+
+ הינה שלילית לחלוטין.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+תבנית בצורה מצומצמת
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(\begin{smallmatrix}a & \frac{b}{2}\\
+\frac{b}{2} & c
+\end{smallmatrix}\right)\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left(0\le b\le a=c\right)\lor\left(-a<b\le a<c\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\in\nicefrac{\sym_{2}\left(\bbz\right)}{\sim}$
+\end_inset
+
+ חיובית לחלוטין אזי קיימת 
+\begin_inset Formula $f\in A$
+\end_inset
+
+ מצומצמת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ מצומצמת אזי 
+\begin_inset Formula $\min_{x,y\in\bbz\backslash\left\{ 0\right\} }f\left(x,y\right)=a-\left|b\right|+c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ מצומצמת אזי 
+\begin_inset Formula $\min_{\left(x,y\right)\in\bbz^{2}\backslash\left\{ \left(0,0\right)\right\} }f\left(x,y\right)=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ מצומצמת אזי 
+\begin_inset Formula $\min_{\gcd\left(x,y\right)=1}f\left(x,y\right)=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משפט
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $f,g\in\sym_{2}\left(\bbz\right)$
+\end_inset
+
+ מצומצמות אזי 
+\begin_inset Formula $\left(f\sim g\right)\iff\left(f=g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\d\in\bbz\backslash\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $h\left(\delta\right)=\left|\left\{ A\in\nicefrac{\sym_{2}\left(\bbz\right)}{\sim}\mid\left(\Delta_{A}=\d\right)\land\left(\text{ חיובית לחלוטין}A\right)\right\} \right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size footnotesize
+\color teal
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\exists k,m\in\bbn.k^{2}+m^{2}=n\right)\iff\left(\forall p\in\bbp.\left(p\mid n\right)\land\left(p\equiv3\mod4\right)\implies\max\left\{ r\in\bbn\mid\left(p^{r}\mid n\right)\right\} \in\bbn_{\text{even}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה משפט פרמה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\exists k,m\in\bbn.k^{2}+m^{2}=p\right)\iff\left(p\equiv1\mod4\right)$
 \end_inset
 
 .
