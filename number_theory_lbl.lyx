@@ -6452,7 +6452,7 @@ $
 אלגוריתם חפיפת תבנית לצורה קנונית
 \series default
 \color inherit
-: יהי 
+: תהא 
 \begin_inset Formula $\left(\begin{smallmatrix}a & \frac{b}{2}\\
 \frac{b}{2} & c
 \end{smallmatrix}\right)\in\sym_{2}\left(\bbz\right)$
@@ -6487,6 +6487,36 @@ k & 1
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט
+\series default
+\color inherit
+: נסמן 
+\begin_inset Formula $\text{CanonicalFormMatrixCongruence}\left(\left(\begin{smallmatrix}a & \frac{b}{2}\\
+\frac{b}{2} & c
+\end{smallmatrix}\right)\right)=\left(\begin{smallmatrix}d & \frac{e}{2}\\
+\frac{e}{2} & f
+\end{smallmatrix}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\begin{smallmatrix}d & \frac{e}{2}\\
+\frac{e}{2} & f
+\end{smallmatrix}\right)\sim\left(\begin{smallmatrix}a & \frac{b}{2}\\
+\frac{b}{2} & c
+\end{smallmatrix}\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left|e\right|\le\left|d\right|\le\left|f\right|$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -6769,6 +6799,1139 @@ k & 1
 
  אזי 
 \begin_inset Formula $\left(\exists k,m\in\bbn.k^{2}+m^{2}=p\right)\iff\left(p\equiv1\mod4\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $\theta\in\bbr$
+\end_inset
+
+ אזי )קיים ל־
+\begin_inset Formula $\theta$
+\end_inset
+
+ יצוג עשרוני סופי(
+\begin_inset Formula $\left(\exists z\in\bbz.\exists n,k\in\bbn.\theta=\frac{z}{2^{n}5^{k}}\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $\theta\in\bbr$
+\end_inset
+
+ אזי )קיים ל־
+\begin_inset Formula $\theta$
+\end_inset
+
+ יצוג עשרוני סופי(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיימים ל־
+\begin_inset Formula $\theta$
+\end_inset
+
+ יצוגים עשרוניים שונים(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $\theta\in\bbr$
+\end_inset
+
+ אזי )קיים ל־
+\begin_inset Formula $\theta$
+\end_inset
+
+ יצוג מחזורי החל ממקום מסויים(
+\begin_inset Formula $\left(\theta\in\bbq\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהיו 
+\begin_inset Formula $x_{0}\ldots x_{n}\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[x_{0},\ldots,x_{n}\right]=x_{0}+\frac{1}{x_{1}+\frac{1}{x_{2}+\frac{1}{x_{3}+\frac{1}{\ddots+\frac{1}{x_{n}}}}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שבר משולב
+\series default
+: יהיו 
+\begin_inset Formula $a_{0}\ldots a_{n}\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a_{0},\ldots,a_{n}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $\theta\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\theta\in\bbq\right)\iff\left(\exists a_{0}\ldots a_{n}\in\bbz.\theta=\left[a_{0},\ldots,a_{n}\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: תהא 
+\begin_inset Formula $x\in\bbr^{\bbn}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[x_{0},x_{1},\ldots\right]=x_{0}+\frac{1}{x_{1}+\frac{1}{x_{2}+\frac{1}{x_{3}+\frac{1}{\ddots}}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שבר משולב
+\series default
+: תהא 
+\begin_inset Formula $a\in\bbz^{\bbn}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a_{0},a_{1},\ldots\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $\theta\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\theta\notin\bbq\right)\iff\left(\exists a\in\bbz^{\bbn}.\theta=\left[a_{0},a_{1},\ldots\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם פיתוח מספר ממשי לשבר משולב
+\series default
+: יהי 
+\begin_inset Formula $\theta\in\bbr$
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\begin{align*}
+ & \text{\textbf{function}}\;\text{ContinuedFractionConverter}\left(\theta\right)\\
+ & \qquad\mid\text{\textbf{if}}\;\theta\in\bbz\\
+ & \qquad\mid\qquad\text{\textbf{return}}\;\theta\\
+ & \qquad\mid a\leftarrow\floor{\theta}\\
+ & \qquad\mid\theta^{\prime}\leftarrow\frac{1}{\theta-a}\\
+ & \qquad\mid\text{\textbf{return}}\;a+\frac{1}{\text{ContinuedFractionConverter}\left(\theta^{\prime}\right)}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: יהי 
+\begin_inset Formula $\theta\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{ContinuedFractionConverter}\left(\theta\right)$
+\end_inset
+
+ הינו שבר משולב של 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ 
+\color lightgray
+אם רץ לנצח השבר אינסופי
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מנות חלקיות
+\series default
+: יהי 
+\begin_inset Formula $\theta\in\bbr\backslash\bbq$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a\in\bbz^{\bbn}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\theta=\left[a_{0},a_{1},\ldots\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגורמים המתכנסים
+\series default
+: יהי 
+\begin_inset Formula $\theta\in\bbr\backslash\bbq$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\theta=\left[a_{0},a_{1},\ldots\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ \left[a_{0},\ldots,a_{k}\right]\right\} _{k=0}^{\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: תהא 
+\begin_inset Formula $a\in\bbz^{\bbn}$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $p,q\in\bbz^{\bbn\uplus\left\{ -1,-2\right\} }$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\forall k\in\bbn.p_{k}=a_{k}p_{k-1}+p_{k-2}\right)\land\left(\substack{p_{-2}=0\\
+p_{-1}=1
+}
+\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\forall k\in\bbn.q_{k}=a_{k}q_{k-1}+q_{k-2}\right)\land\left(\substack{q_{-2}=1\\
+q_{-1}=0
+}
+\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $a\in\bbr^{\bbn}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\forall n\in\bbn.\left[a_{0}\ldots a_{n}\right]=\frac{p_{n}}{q_{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $\theta\in\bbr\backslash\bbq$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\theta=\left[a_{0},a_{1},\ldots\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ q_{n}\right\} _{n=1}^{\infty}$
+\end_inset
+
+ עולה ממש.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\forall n\in\bbn\uplus\left\{ -1\right\} .p_{n}q_{n-1}-p_{n-1}q_{n}=\left(-1\right)^{n-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: 
+\begin_inset Formula $\forall n\in\bbn\uplus\left\{ -1\right\} .\gcd\left(p_{n},q_{n}\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $\theta\in\bbr\backslash\bbq$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lim_{n\to\infty}\frac{p_{n}}{q_{n}}=\theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: תהא 
+\begin_inset Formula $a\in\bbz^{\bbn}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lim_{n\to\infty}\left[a_{0}\ldots a_{n}\right]=\left[a_{0},a_{1}\ldots\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: יהי 
+\begin_inset Formula $a\in\bbz$
+\end_inset
+
+ יהי 
+\begin_inset Formula $b\in\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\floor{\frac{a+x}{b}}=\floor{\frac{a+\floor x}{b}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהיו 
+\begin_inset Formula $a_{0}\ldots a_{n},b_{0}\ldots b_{m}\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a_{1}\ldots a_{n},\overline{b_{1}\ldots b_{m}}\right]=\left[a_{1}\ldots a_{n},b_{1}\ldots b_{m},b_{1}\ldots b_{m}\ldots\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טרינום
+\series default
+: יהיו 
+\begin_inset Formula $a,b,c\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\in\bbr\left[x\right]$
+\end_inset
+
+ המוגדר 
+\begin_inset Formula $f\left(x\right)=ax^{2}+bx+c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+דסקרימיננטה
+\series default
+: יהי 
+\begin_inset Formula $ax^{2}+bx+c\in\bbr\left[x\right]$
+\end_inset
+
+ טרינום אזי 
+\begin_inset Formula $\Delta=b^{2}-4ac$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט לגראנז'
+\series default
+: יהי 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\iff\left(\exists a_{0}\ldots a_{k},b_{1}\ldots b_{m}\in\bbz.\a=\left[a_{0}\ldots a_{k},\overline{b_{1}\ldots b_{m}}\right]\right)$
+\end_inset
+
+)קיים טרינום 
+\begin_inset Formula $f\in\bbz\left[x\right]$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\Delta\in\bbn\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
+\end_inset
+
+ עבורו 
+\begin_inset Formula $f\left(\a\right)=0$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מספר ניתן לקירוב דיופנטי מסדר 
+\begin_inset Formula $r$
+\end_inset
+
+
+\series default
+\color inherit
+: 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\exists c\in\bbr_{+}.\left|\left\{ \frac{n}{m}\bmid\left(\substack{n\in\bbz\\
+m\in\bbz
+}
+\right)\land\left(\left|\a-\frac{n}{m}\right|<\frac{1}{cm^{r}}\right)\right\} \right|\ge\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\theta\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\exists p,q\in\bbz.\left|\theta-\frac{p}{q}\right|\le\frac{1}{2q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\theta\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\theta$
+\end_inset
+
+ ניתן לקירוב דיופנטי מסדר ראשון.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\theta\in\bbr\backslash\bbq$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\forall n\in\bbn.\left|\theta-\frac{p_{n}}{q_{n}}\right|<\frac{1}{q_{n}^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\theta\in\bbr\backslash\bbq$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\theta$
+\end_inset
+
+ ניתן לקירוב דיופנטי מסדר שני.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\theta\in\bbr\backslash\bbq$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{p_{n}}{q_{n}}$
+\end_inset
+
+ הינו הקירוב הדיופנטי הטוב ביותר כלומר
+\end_layout
+
+\begin_layout Itemize
+במובן החלש: יהיו 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $1\le b<q_{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\theta-\frac{p_{n}}{q_{n}}\right|<\left|\theta-\frac{a}{b}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+במובן החזק: יהיו 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $1\le b<q_{n+1}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|q_{n}\theta-p_{n}\right|<\left|b\theta-a\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מספר אלגברי
+\series default
+\color inherit
+: 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\exists f\in\bbz\left[x\right].f\left(\a\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מספר טרנסצנדנטי
+\series default
+\color inherit
+: 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ שאינו אלגברי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מעלה של מספר אלגברי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ אלגברי אזי 
+\begin_inset Formula $\min\left\{ \deg\left(f\right)\mid\left(f\in\bbz\left[x\right]\right)\land\left(f\left(\a\right)=0\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט ליוביל
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ אלגברי ממעלה 
+\begin_inset Formula $d$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\exists c\in\bbr_{+}.\forall\frac{p}{q}\in\bbq\backslash\left\{ \a\right\} .\left|\a-\frac{p}{q}\right|\ge\frac{c}{q^{d}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מספר ליוביל
+\series default
+\color inherit
+: 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\forall d\in\bbn.\exists\frac{p}{q}\in\bbq\backslash\left\{ \a\right\} .\left|\a-\frac{p}{q}\right|<\frac{1}{q^{d}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ מספר ליוביל אזי 
+\begin_inset Formula $\a$
+\end_inset
+
+ הינו טרנסצנדנטי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+קבוע ליוביל
+\series default
+\color inherit
+: 
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{10^{n!}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: קבוע ליוביל הינו מספר ליוביל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+שדה ריבועי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $d\in\bbz\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbq\left[\sqrt{d}\right]=\left\{ a+b\sqrt{d}\mid a,b\in\bbq\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $d\in\bbz\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\bbq\left[\sqrt{d}\right]$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו מעל 
+\begin_inset Formula $\bbq$
+\end_inset
+
+ ממימד 
+\begin_inset Formula $2$
+\end_inset
+
+ עם בסיס 
+\begin_inset Formula $\left\{ 1,\sqrt{d}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\bbq\left[\sqrt{d}\right]$
+\end_inset
+
+ שדה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מספר אי־רציונלי ממעלה שנייה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\theta\in\bbr\backslash\bbq$
+\end_inset
+
+ עבורו קיים 
+\begin_inset Formula $f\in\bbz\left[x\right]$
+\end_inset
+
+ טרינום המקיים 
+\begin_inset Formula $\left(f\left(\theta\right)=0\right)\land\left(\Delta=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $f\in\bbz\left[x\right]$
+\end_inset
+
+ טרינום באשר 
+\begin_inset Formula $\Delta\notin\left\{ k^{2}\mid k\in\bbn\right\} $
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\theta\in\bbr\backslash\bbq$
+\end_inset
+
+ פתרון אזי 
+\begin_inset Formula $\sigma\left(\theta\right)$
+\end_inset
+
+ פתרון מעל 
+\begin_inset Formula $\bbq\left[\sqrt{\Delta}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $f,g\in\bbq\left[x\right]$
+\end_inset
+
+ טרינומים מתוקנים ויהי 
+\begin_inset Formula $\theta\in\bbr\backslash\bbq$
+\end_inset
+
+ פתרון של שניהם אזי 
+\begin_inset Formula $f=g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size small
+\color red
+מספר אי־רציונלי ממעלה שנייה בעל מחזוריות טהורה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\theta\in\bbr$
+\end_inset
+
+ אי־רציונלי ממעלה שנייה המקיים 
+\begin_inset Formula $\exists a_{0}\ldots a_{n}\in\bbz.\theta=\left[\overline{a_{0}\ldots a_{n}}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size small
+\color red
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\theta\in\bbr$
+\end_inset
+
+ אי־רציונלי ממעלה שנייה אזי )
+\begin_inset Formula $\theta$
+\end_inset
+
+ בעל מחזוריות טהורה(
+\begin_inset Formula $\iff$
+\end_inset
+
+
+\begin_inset Formula $\left(\left(\bbq\left[\sqrt{\Delta}\right]\text{ מעל }-1<\sigma\left(\theta\right)<0\right)\land\left(\theta>1\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $d\in\bbn\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sqrt{d}+\floor{\sqrt{d}},\frac{1}{\sqrt{d}-\floor{\sqrt{d}}}$
+\end_inset
+
+ בעלי מחזוריות טהורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משוואת פל
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $d\in\bbn\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $x^{2}-dy^{2}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+פתרון משוואת פל
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\substack{d\in\bbn\backslash\left\{ k^{2}\mid k\in\bbn\right\} \\
+\sqrt{d}=\left[a_{0},\overline{a_{1}\ldots a_{m}}\right]
+}
+$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sols_{\bbz^{2}}\left(x^{2}-dy^{2}=1\right)=\left\{ \pm\left(p_{n},q_{n}\right)\mid\substack{n\in\bbn_{\text{odd}}\\
+\exists k\in\bbz.n=mk-1
+}
+\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $d\in\bbn\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\O_{d}^{*}=\left\{ x+y\sqrt{d}\bmid\substack{x,y\in\bbz\\
+x^{2}-dy^{2}=1
+}
+\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $d\in\bbn\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\O_{d}^{*}=\left\{ x+y\sqrt{d}\bmid\substack{x,y\in\bbz\\
+N\left(x+y\sqrt{d}\right)=1
+}
+\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\O_{d}^{*}$
+\end_inset
+
+ תת חבורה של 
+\begin_inset Formula $\bbq\left[\sqrt{d}\right]$
+\end_inset
+
+ ביחס לכפל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $z\in\bbq\left[\sqrt{d}\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(z\in\O_{d}^{*}\right)\iff\left(\frac{1}{z}\in\O_{d}^{*}\right)\iff\left(-z\in\O_{d}^{*}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $d\in\bbn\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\O_{d}^{*}\right|\ge\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $d\in\bbn\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\e=\min\left\{ x\in\O_{d}^{*}\mid x>1\right\} $
+\end_inset
+
+ קיים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $d\in\bbn\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\O_{d}^{*}=\left\{ \pm\e^{n}\mid n\in\bbz\right\} $
 \end_inset
 
 .
