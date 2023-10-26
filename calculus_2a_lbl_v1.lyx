@@ -1,0 +1,1941 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+\usepackage{culmus}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usepackage{cancel}
+\usepackage{wrapfig}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[cm]{fullpage}
+\usepackage{polynom}
+\usepackage{booktabs}
+
+\setlength{\tabcolsep}{1pt}
+\renewcommand{\arraystretch}{1.25} % Default value: 1
+
+\usetikzlibrary{math}
+\usetikzlibrary{shadows,trees}
+\counterwithin*{section}{part}
+\setlist{nosep, noitemsep}
+% \setlist[enumerate,levels]{format}
+\setlist[enumerate,1]{label = \arabic*., ref = \arabic*}
+\setlist[enumerate,2]{label = \emph{\alph*}), ref = \theenumi.\emph{\alph*}}
+\setlist[enumerate,3]{label = .\roman*, ref = \theenumii.\roman*}
+
+
+% Convert the Lyx colors into more pleasent colors:
+\definecolor{blue}{RGB}{14,107,217}
+\definecolor{green}{RGB}{0,158,40}
+\definecolor{red}{RGB}{235,16,16}
+\definecolor{brown}{RGB}{164,66,0}
+\definecolor{orange}{RGB}{231,135,26}
+\definecolor{purple}{RGB}{94,53,177}
+
+
+% Program Listing colors
+\definecolor{keywordcolor}{RGB}{255,117,0}
+\definecolor{commentcolor}{RGB}{128,128,128}
+\definecolor{stringcolor}{RGB}{0,168,0}
+
+
+% Trees formating
+\tikzset{edge from parent fork down, level distance=2cm, every node/.style= {rectangle,rounded corners, minimum height=8mm, very thick, align=center}}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    }
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding default
+\fontencoding global
+\font_roman "default" "David"
+\font_sans "default" "David"
+\font_typewriter "default" "David"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf true
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle false
+\papersize letterpaper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 4cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\headheight 0cm
+\headsep 0.5cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "E:/University/macros.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציה קדומה
+\series default
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left(a,b\right)}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $F\in\bbr^{\left(a,b\right)}$
+\end_inset
+
+ גזירה המקיימת 
+\begin_inset Formula $F'=f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left(a,b\right)}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $F\in\bbr^{\left(a,b\right)}$
+\end_inset
+
+ קדומה ותהא 
+\begin_inset Formula $G\in\bbr^{\left(a,b\right)}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\exists c\in\bbr.G=F+c\right)\iff\left(G'=f\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חלוקה
+\series default
+: יהי 
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Pi=\left\{ x_{0},\ldots,x_{n}\right\} $
+\end_inset
+
+ המקיימות 
+\begin_inset Formula $a=x_{0}<x_{1}\ldots<x_{n-1}<x_{n}=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: תהא 
+\begin_inset Formula $\left\{ x_{0},\ldots,x_{n}\right\} $
+\end_inset
+
+ חלוקה אזי 
+\begin_inset Formula $\Delta x_{i}=x_{i}-x_{i-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מדד העדינות
+\series default
+: תהא 
+\begin_inset Formula $\Pi=\left\{ x_{0},\ldots,x_{n}\right\} $
+\end_inset
+
+ חלוקה אזי 
+\begin_inset Formula $\lambda\left(\Pi\right)=\max_{i=1}^{n}\left|\Delta x_{i}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+עידון
+\series default
+: תהא 
+\begin_inset Formula $\Pi_{1}$
+\end_inset
+
+ חלוקה אזי חלוקה 
+\begin_inset Formula $\Pi_{2}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\Pi_{1}\subseteq\Pi_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $\Pi_{1}$
+\end_inset
+
+ חלוקה וכן 
+\begin_inset Formula $\Pi_{2}$
+\end_inset
+
+ עידון אזי 
+\begin_inset Formula $\lambda\left(\Pi_{2}\right)\le\lambda\left(\Pi_{1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נקודות מתאימות
+\series default
+: תהא 
+\begin_inset Formula $\left\{ x_{0},\ldots,x_{n}\right\} $
+\end_inset
+
+ חלוקה אזי 
+\begin_inset Formula $\left\{ t_{1}\ldots t_{n}\right\} $
+\end_inset
+
+ המקיימות 
+\begin_inset Formula $\forall i\in\left\{ 1\ldots n\right\} .t_{i}\in\left[x_{i-1},x_{i}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סכום רימן
+\series default
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ חלוקה ויהיו 
+\begin_inset Formula $\left\{ t_{i}\right\} $
+\end_inset
+
+ נקודות מתאימות אזי 
+\begin_inset Formula $S\left(f,\Pi,\left\{ t_{i}\right\} \right)=\sum f\left(t_{i}\right)\Delta x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אינטגרביליות רימן
+\series default
+: 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ עבורה קיים 
+\begin_inset Formula $L\in\bbr$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ קיימת 
+\begin_inset Formula $\d>0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ חלוקה המקיימת 
+\begin_inset Formula $\lambda\left(\Pi\right)<\d$
+\end_inset
+
+ לכל נקודות מתאימות 
+\begin_inset Formula $\left\{ t_{i}\right\} $
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|S\left(f,\Pi,\left\{ t_{i}\right\} \right)-L\right|<\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אינטגרל מסויים
+\series default
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ אינטגרביליות רימן אזי 
+\begin_inset Formula $L=\int_{a}^{b}f\left(t\right)dt=\int_{a}^{b}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: 
+\begin_inset Formula $R\left(\left[a,b\right]\right)=\left\{ f\in\bbr^{\left[a,b\right]}\mid\text{ אינטגרבילית רימן}f\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+: ניתן להגדיר אינטגרביליות רימן בסימון 
+\begin_inset Formula $\int_{a}^{b}f\left(t\right)dt=\lim_{\lambda\left(\Pi\right)\to0}S\left(f,\Pi,\left\{ t_{i}\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $c\in\bbr$
+\end_inset
+
+ תהא 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ חלוקה ויהיו 
+\begin_inset Formula $\left\{ t_{i}\right\} $
+\end_inset
+
+ נקודות מתאימות אזי 
+\begin_inset Formula $\int_{a}^{b}c\cdot dt=c\left(b-a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $D\left(x\right)\notin R\left(\bbr\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ חסומה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סכום
+\series default
+ 
+\series bold
+דרבו
+\series default
+ 
+\series bold
+עליון
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ חסומה ותהא 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ חלוקה אזי 
+\begin_inset Formula $\overline{\Sigma}\left(f,\Pi\right)=\sum_{i=1}^{n}\sup_{\left[x_{i},x_{i-1}\right]}\left(f\right)\cdot\Delta x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סכום
+\series default
+ 
+\series bold
+דרבו
+\series default
+ 
+\series bold
+תחתון
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ חסומה ותהא 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ חלוקה אזי 
+\begin_inset Formula $\underline{\Sigma}\left(f,\Pi\right)=\sum_{i=1}^{n}\inf_{\left[x_{i},x_{i-1}\right]}\left(f\right)\cdot\Delta x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ חסומה ותהא 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ חלוקה
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \overline{\Sigma}\left(f,\Pi\right)=\sup_{\text{נקודות מתאימות }\left\{ t_{i}\right\} }S\left(f,\Pi,\left\{ t_{i}\right\} \right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \underline{\Sigma}\left(f,\Pi\right)=\inf_{\text{נקודות מתאימות }\left\{ t_{i}\right\} }S\left(f,\Pi,\left\{ t_{i}\right\} \right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ חסומה ותהיינה 
+\begin_inset Formula $\Pi_{1}\subseteq\Pi_{2}$
+\end_inset
+
+ חלוקות
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\overline{\Sigma}\left(f,\Pi_{1}\right)\ge\overline{\Sigma}\left(f,\Pi_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\underline{\Sigma}\left(f,\Pi_{1}\right)\le\underline{\Sigma}\left(f,\Pi_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ חסומה ותהיינה 
+\begin_inset Formula $\Pi_{1},\Pi_{2}$
+\end_inset
+
+ חלוקות אזי 
+\begin_inset Formula $\underline{\Sigma}\left(f,\Pi_{1}\right)\le\overline{\Sigma}\left(f,\Pi_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+האינטגרל
+\series default
+ 
+\series bold
+העליון
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ חסומה אזי 
+\begin_inset Formula $\overline{I}\left(f\right)=\inf_{\text{ חלוקה}\Pi}\overline{\Sigma}\left(f,\Pi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+האינטגרל התחתון
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ חסומה אזי 
+\begin_inset Formula $\underline{I}\left(f\right)=\sup_{\text{ חלוקה}\Pi}\underline{\Sigma}\left(f,\Pi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ חסומה ותהא 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ חלוקה אזי 
+\begin_inset Formula $\underline{\Sigma}\left(f,\Pi\right)\le\underline{I}\left(f\right)\le\overline{I}\left(f\right)\le\overline{\Sigma}\left(f,\Pi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+קריטריון דרבו
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ חסומה אזי 
+\begin_inset Formula $\iff\left(f\in R\left(\left[a,b\right]\right)\right)$
+\end_inset
+
+)לכל 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ קיימת 
+\begin_inset Formula $\d>0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ חלוקה המקיימת 
+\begin_inset Formula $\lambda\left(\Pi\right)<\d$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\overline{\Sigma}\left(f,\Pi\right)-\underline{\Sigma}\left(f,\Pi\right)<\e$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+תנודה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{J}$
+\end_inset
+
+ חסומה אזי 
+\begin_inset Formula $\omega\left(f,J\right)=\sup_{x,y\in J}\left(f\left(x\right)-f\left(y\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{J}$
+\end_inset
+
+ חסומה ויהי 
+\begin_inset Formula $x_{0}\in J$
+\end_inset
+
+ אזי )
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה על 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+(
+\begin_inset Formula $\left(\lim_{\d\to0}\omega\left(f,\left[x_{0}-\d,x_{0}+\d\right]\right)=0\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{J}$
+\end_inset
+
+ חסומה אזי )
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה במ
+\begin_inset Quotes erd
+\end_inset
+
+ש(
+\begin_inset Formula $\left(\forall I\subseteq J.\forall\e>0.\exists\d>\text{len}\left(I\right).\omega\left(f,I\right)<\e\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+תנודה כוללת של פונקציה חסומה ביחס לחלוקה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ חסומה ותהא 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ חלוקה אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\omega\left(f,\Pi\right)=\sum_{i=1}^{n}\omega\left(f,\left[x_{i-1},x_{i}\right]\right)\Delta x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ חסומה ותהא 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ חלוקה אזי 
+\begin_inset Formula $\omega\left(f,\Pi\right)=\overline{\Sigma}\left(f,\Pi\right)-\underline{\Sigma}\left(f,\Pi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ חסומה ותהיינה 
+\begin_inset Formula $\Pi_{1}\cup\left\{ p\right\} =\Pi_{2}$
+\end_inset
+
+ חלוקות
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\overline{\Sigma}\left(f,\Pi_{1}\right)\le\overline{\Sigma}\left(f,\Pi_{2}\right)+\lambda\left(\Pi_{1}\right)\omega\left(f,\left[a,b\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\underline{\Sigma}\left(f,\Pi_{1}\right)\ge\underline{\Sigma}\left(f,\Pi_{2}\right)-\lambda\left(\Pi_{1}\right)\omega\left(f,\left[a,b\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ חסומה ותהיינה 
+\begin_inset Formula $\Pi_{1}\cup\left\{ p_{1}\ldots p_{m}\right\} =\Pi_{2}$
+\end_inset
+
+ חלוקות
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\overline{\Sigma}\left(f,\Pi_{1}\right)\le\overline{\Sigma}\left(f,\Pi_{2}\right)+m\lambda\left(\Pi_{1}\right)\omega\left(f,\left[a,b\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\underline{\Sigma}\left(f,\Pi_{1}\right)\ge\underline{\Sigma}\left(f,\Pi_{2}\right)-m\lambda\left(\Pi_{1}\right)\omega\left(f,\left[a,b\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ חסומה אזי לכל 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ קיים 
+\begin_inset Formula $\d>0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ חלוקה 
+\begin_inset Formula $\lambda\left(\Pi\right)<\d$
+\end_inset
+
+ מתקיים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\underline{\Sigma}\left(f,\Pi\right)\le\underline{I}\left(f\right)\le\underline{\Sigma}\left(f,\Pi\right)+\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\overline{\Sigma}\left(f,\Pi\right)\ge\overline{I}\left(f\right)\ge\overline{\Sigma}\left(f,\Pi\right)-\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ חסומה המקיימת 
+\begin_inset Formula $\underline{I}\left(f\right)=\overline{I}\left(f\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size small
+\color red
+קריטריון דרבו משופר
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ חסומה כך שלכל 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ קיימת חלוקה 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\overline{\Sigma}\left(f,\Pi\right)-\underline{\Sigma}\left(f,\Pi\right)<\e$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: 
+\begin_inset Formula $C\left(\left[a,b\right]\right)\subseteq R\left(\left[a,b\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ מונוטונית אזי 
+\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,c\right]}$
+\end_inset
+
+ חסומה ויהי 
+\begin_inset Formula $b\in\left[a,c\right]$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $f_{\upharpoonright_{\left[a,b\right]}}\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,c\right]}$
+\end_inset
+
+ חסומה ויהי 
+\begin_inset Formula $b\in\left[a,c\right]$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\left(f\in R\left(\left[a,b\right]\right)\right)\land\left(f\in R\left(\left[b,c\right]\right)\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\in R\left(\left[a,c\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,d\right]}$
+\end_inset
+
+ חסומה ויהיו 
+\begin_inset Formula $b<c\in\left[a,d\right]$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $f\in R\left(\left[a,d\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\in R\left(\left[b,c\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,c\right]}$
+\end_inset
+
+ חסומה המקיימת 
+\begin_inset Formula $\forall b\in\left(a,c\right).f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\in R\left(\left[a,c\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,c\right]}$
+\end_inset
+
+ חסומה המקיימת 
+\begin_inset Formula $\forall b\in\left(a,c\right).f\in R\left(\left[b,c\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\in R\left(\left[a,c\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\left[a,c\right]\right)$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $g\left(x\right)=\begin{cases}
+y & x=b\\
+f\left(x\right) & \text{else}
+\end{cases}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g\in R\left(\left[a,c\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: נגדיר 
+\begin_inset Formula $f\left(x\right)=\begin{cases}
+\sin\left(\frac{1}{x}\right) & x\ne0\\
+0 & x=0
+\end{cases}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\in R\left(\left[-1,1\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ חסומה המקיימת מונוטוניות או רציפות למקוטעין אזי 
+\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $f,g\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ תהא 
+\begin_inset Formula $H\in C\left(\bbr\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $c\in\bbr$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(f+g\right),\left(cf\right)\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(f\cdot g\right),\left(H\circ f\right),\left|f\right|\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+קבוצה ממידה אפס
+\series default
+\color inherit
+: 
+\begin_inset Formula $A\subseteq\bbr$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ קיימים 
+\begin_inset Formula $\left\{ \left(a_{i},b_{i}\right)\right\} _{i=0}^{\infty}$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $A\subseteq\bigcup\left(a_{i},b_{i}\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\sum\left(b_{i}-a_{i}\right)<\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\subseteq\bbr$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left|A\right|\le\aleph_{0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A$
+\end_inset
+
+ ממידה אפס.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+קבוצה צפופה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $B\subseteq\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\forall b\in B.\forall\e>0.\exists a\in A.\left|b-a\right|<\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $f,g\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ עבורן קיימת 
+\begin_inset Formula $A$
+\end_inset
+
+ צפופה עבורה 
+\begin_inset Formula $f_{\upharpoonright_{A}}=g_{\upharpoonright_{A}}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{b}f\left(x\right)dx=\int_{a}^{b}g\left(x\right)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\left[a,c\right]\right)$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $g\left(x\right)=\begin{cases}
+y_{i} & x\in\left\{ b_{1}\ldots b_{m}\right\} \\
+f\left(x\right) & \text{else}
+\end{cases}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{c}f\left(x\right)dx=\int_{a}^{c}g\left(x\right)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט לינאריות האינטגרנד
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $f,g\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\a,\b\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{b}\a f+\b g=\a\int_{a}^{b}f+\b\int_{a}^{b}g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט ליניאריות בתחום האינטגרציה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\left[a,c\right]\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $b\in\left(a,c\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{b}f+\int_{b}^{c}f=\int_{a}^{c}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+הגדרה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{b}f=-\int_{b}^{a}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט חיוביות
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $f\ge0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{b}f\left(x\right)dx\ge0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מונוטוניות האינטגרל
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $f,g\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ המקיימות 
+\begin_inset Formula $f\ge g$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{b}f\left(x\right)dx\ge\int_{a}^{b}g\left(x\right)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $m\le f\le M$
+\end_inset
+
+ אזי 
+\begin_inset Formula $m\left(b-a\right)\le\int_{a}^{b}f\left(x\right)dx\le M\left(b-a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\int_{a}^{b}f\right|\le\int_{a}^{b}\left|f\right|\le\sup_{\left[a,b\right]}\left(\left|f\right|\right)\left(b-a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט רציפות האינטגרל המסויים
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $F\left(x\right)=\int_{a}^{x}f\left(t\right)dt$
+\end_inset
+
+ אזי 
+\begin_inset Formula $F\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט ערך ביניים ראשון
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $0\le g\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $x_{0}\in\left[a,b\right]$
+\end_inset
+
+ עבורו
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\int_{a}^{b}f\left(x\right)g\left(x\right)dx=f\left(x_{0}\right)\int_{a}^{b}g\left(x\right)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+הלמה של בונה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ מונוטונית ותהא 
+\begin_inset Formula $0\le g\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $x_{0}\in\left[a,b\right]$
+\end_inset
+
+ עבורו
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\int_{a}^{b}f\left(x\right)g\left(x\right)dx=f\left(a\right)\int_{a}^{x_{0}}g\left(x\right)dx+f\left(b\right)\int_{x_{0}}^{b}g\left(x\right)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+המשפט היסודי של החשבון הדיפרנציאלי והאינטגרלי
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $x_{0}\in\left[a,b\right]$
+\end_inset
+
+ נקודת רציפות של 
+\begin_inset Formula $f$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $F\left(x\right)=\int_{a}^{x}f\left(t\right)dt$
+\end_inset
+
+ אזי 
+\begin_inset Formula $F^{\prime}\left(x_{0}\right)=f\left(x_{0}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט ניוטון לייבניץ
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F$
+\end_inset
+
+ קדומה של 
+\begin_inset Formula $f$
+\end_inset
+
+ על 
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{b}f\left(x\right)dx=F\left(b\right)-F\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size footnotesize
+\color magenta
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $x_{1}\ldots x_{n}\in\left[a,b\right]$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F$
+\end_inset
+
+ קדומה של 
+\begin_inset Formula $f$
+\end_inset
+
+ על 
+\begin_inset Formula $\left[a,b\right]\backslash\left\{ x_{1}\ldots x_{n}\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{b}f\left(x\right)dx=F\left(b\right)-F\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[f\right]|_{a}^{b}=f\left(b\right)-f\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט אינטגרציה בחלקים
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $f,g\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ גזירות עבורן 
+\begin_inset Formula $f^{\prime},g^{\prime}\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{b}f^{\prime}g=\left[f\cdot g\right]|_{a}^{b}-\int_{a}^{b}fg^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הלמה של בונה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\substack{f\in C\left(\left[a,b\right]\right)\\
+f\in C^{1}\left(\left(a,b\right)\right)
+}
+$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\left(f'\ge0\right)\lor\left(f'\le0\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $g\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $x_{0}\in\left[a,b\right]$
+\end_inset
+
+ עבורו
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\int_{a}^{b}f\left(x\right)g\left(x\right)dx=f\left(a\right)\int_{a}^{x_{0}}g\left(x\right)dx+f\left(b\right)\int_{x_{0}}^{b}g\left(x\right)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C^{n+1}\left(\left[a,b\right]\right)$
+\end_inset
+
+ עם פיתוח טיילור 
+\begin_inset Formula $P_{n}$
+\end_inset
+
+ סביב 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R_{n}\left(x\right)=\frac{1}{n!}\int_{a}^{x}f^{\left(n+1\right)}\left(t\right)\left(x-t\right)^{n}dt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט שינוי משתנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\substack{\varphi\in\left[a,b\right]^{\left[\a,\b\right]}\\
+\varphi\in C^{1}\left(\left[\a,\b\right]\right)
+}
+$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\substack{\varphi\left(\a\right)=a\\
+\varphi\left(\b\right)=b
+}
+$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{b}f\left(x\right)dx=\int_{\a}^{\b}f\left(\varphi\left(t\right)\right)\varphi^{\prime}\left(t\right)dt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C^{1}\left(\left[0,2\pi\right]\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{0}^{2\pi}f\left(x\right)\cos\left(nx\right)dx=-\int_{0}^{2\pi}f^{\prime}\left(x\right)\frac{\sin\left(nx\right)}{n}dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size small
+\color magenta
+טענה דעיכת מקמדי פורייה בהינתן גזירות
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C^{1}\left(\left[0,2\pi\right]\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\int_{0}^{2\pi}f\left(x\right)\cos\left(nx\right)dx\right|\le\frac{2\pi\sup\left(\left|f^{\prime}\right|\right)}{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $k!!=\prod_{n=0}^{\floor{\frac{k}{2}}-1}\left(k-2n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $m\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{0}^{\frac{\pi}{2}}\sin\left(x\right)^{m}dx=\int_{0}^{\frac{\pi}{2}}\cos\left(x\right)^{m}dx=\begin{cases}
+\frac{\pi}{2}\cdot\frac{\left(m-1\right)!!}{m!!} & m\in\bbn_{\text{even}}\\
+\frac{\left(m-1\right)!!}{m!!} & m\in\bbn_{\text{odd}}
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט מכפלת ואליס
+\series default
+\color inherit
+: 
+\begin_inset Formula $\lim_{n\to\infty}\frac{2\cdot2\cdot4\cdot4\cdot6\cdot6\dots\left(2n-2\right)\cdot\left(2n-2\right)\cdot2n}{1\cdot3\cdot3\cdot5\cdot5\dots\left(2n-1\right)\cdot\left(2n-1\right)}=\prod_{n=1}^{\infty}\left(\frac{2n}{2n-1}\cdot\frac{2n}{2n+1}\right)=\frac{\pi}{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
