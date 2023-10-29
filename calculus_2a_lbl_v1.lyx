@@ -8,6 +8,7 @@
 \begin_preamble
 \usepackage{culmus}
 \usepackage{amssymb}
+\usepackage{centernot}
 \usepackage{enumitem}
 \usepackage{chngcntr}
 \usepackage{tikz}
@@ -58,6 +59,15 @@
     linkcolor=blue,
     urlcolor=blue,
     }
+
+
+\setmathfont{NewCMMath-Regular.otf}
+\let\RonMikhelmanLol\implies
+\renewcommand{\implies}{\negthickspace\RonMikhelmanLol\negthickspace}
+\let\RonMikhelmanLoll\iff
+\renewcommand{\iff}{\negthickspace\RonMikhelmanLoll\negthickspace}
+\let\RonMikhelmanLolll\impliedby
+\renewcommand{\impliedby}{\negthickspace\RonMikhelmanLolll\negthickspace}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -68,7 +78,7 @@
 \font_roman "default" "David"
 \font_sans "default" "David"
 \font_typewriter "default" "David"
-\font_math "auto" "auto"
+\font_math "auto" "default"
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
@@ -117,6 +127,11 @@
 \justification true
 \use_refstyle 1
 \use_minted 0
+\branch lesson9
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -154,6 +169,15 @@
 LatexCommand include
 filename "E:/University/macros.lyx"
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\notimplies}{\rlap{\hskip.5em/}\implies}
+{\not\implies}
 \end_inset
 
 
@@ -382,17 +406,61 @@ filename "E:/University/macros.lyx"
 \begin_layout Standard
 
 \series bold
-אינטגרל מסויים
+אינטגרל רימן מסויים
 \series default
 : תהא 
 \begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
 \end_inset
 
  אינטגרביליות רימן אזי 
-\begin_inset Formula $L=\int_{a}^{b}f\left(t\right)dt=\int_{a}^{b}f$
+\begin_inset Formula $L=\int_{a}^{b}f\left(t\right)dt$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+: יהיו 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{b}f\left(\varphi\right)d\varphi$
+\end_inset
+
+ אינטגרל על פי המשתנה 
+\begin_inset Formula $\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ אינטגרביליות רימן אזי 
+\begin_inset Formula $\int_{a}^{b}f=\int_{\left[a,b\right]}f=\int_{\left[a,b\right]}f\left(t\right)dt=\int_{a}^{b}f\left(t\right)dt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+: כל עוד ברור מהו תחום האינטגרל וכן מהי הפונקציה כל הסימונים תקפים.
 \end_layout
 
 \begin_layout Standard
@@ -1931,10 +1999,989 @@ $
 \series default
 \color inherit
 : 
-\begin_inset Formula $\lim_{n\to\infty}\frac{2\cdot2\cdot4\cdot4\cdot6\cdot6\dots\left(2n-2\right)\cdot\left(2n-2\right)\cdot2n}{1\cdot3\cdot3\cdot5\cdot5\dots\left(2n-1\right)\cdot\left(2n-1\right)}=\prod_{n=1}^{\infty}\left(\frac{2n}{2n-1}\cdot\frac{2n}{2n+1}\right)=\frac{\pi}{2}$
+\begin_inset Formula $\underset{n\to\infty}{\lim}\frac{2\cdot2\cdot4\cdot4\cdot6\cdot6\dots\left(2n-2\right)\cdot\left(2n-2\right)\cdot2n}{1\cdot3\cdot3\cdot5\cdot5\dots\left(2n-1\right)\cdot\left(2n-1\right)}=\prod_{n=1}^{\infty}\left(\frac{2n}{2n-1}\cdot\frac{2n}{2n+1}\right)=\frac{\pi}{2}$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+אינטגרל רימן לא אמיתי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $I\subseteq\bbr$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+חד צדדי חיובי: נניח 
+\begin_inset Formula $I=\left[a,\infty\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\forall b\in\left[a,\infty\right).f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{\infty}f=\underset{b\to\infty}{\lim}\int_{a}^{b}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+חד צדדי שלילי: נניח 
+\begin_inset Formula $I=\left(-\infty,b\right]$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\forall a\in\left(-\infty,b\right].f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{-\infty}^{b}f=\underset{a\to-\infty}{\lim}\int_{a}^{b}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+דו צדדי: נניח 
+\begin_inset Formula $I=\bbr$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\forall a,b\in\bbr.\left(a<b\right)\implies\left(f\in R\left(\left[a,b\right]\right)\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{-\infty}^{\infty}f=\int_{-\infty}^{0}f+\int_{0}^{\infty}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לא חסום משמאל: נניח 
+\begin_inset Formula $I=\left(a,b\right]$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\forall c\in I.f\in R\left(\left[c,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{b}f=\underset{r\to a^{+}}{\lim}\int_{r}^{b}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לא חסום מימין: נניח 
+\begin_inset Formula $I=\left[a,b\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\forall c\in I.f\in R\left(\left[a,c\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{b}f=\underset{r\to b^{-}}{\lim}\int_{a}^{r}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $I\subseteq\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R\left(I\right)=\left\{ f\in\bbr^{I}\bmid\text{ קיים וסופי}\int_{I}f\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+הערה
+\series default
+\color inherit
+: מכאן כל המשפטים יהיו חד צדדים ימינה אך תקפים לכל סוגי הקטעים עם שינויים
+ קלים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\omega,\eta\in\bbr\cup\left\{ \infty\right\} $
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+לינאריות האינטגרד: תהיינה 
+\begin_inset Formula $f,g\in R\left(\left[a,\omega\right)\right)$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\a,\b\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{\omega}\left(\a f+\b g\right)=\a\int_{a}^{\omega}f+\b\int_{a}^{\omega}g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לינאריות בתחום האינטגרציה: תהא 
+\begin_inset Formula $f\in R\left(\left[a,\omega\right)\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $c\in\left(a,\omega\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{\omega}f=\int_{a}^{c}f+\int_{c}^{\omega}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+מונוטוניות: תהיינה 
+\begin_inset Formula $f,g\in R\left(\left[a,\omega\right)\right)$
+\end_inset
+
+ המקיימות 
+\begin_inset Formula $f\ge g$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{\omega}f\ge\int_{a}^{\omega}g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+ניוטון לייבניץ: תהא 
+\begin_inset Formula $f\in R\left(\left[a,\omega\right)\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F\in\bbr^{\left[a,\omega\right)}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\forall x\in\left[a,\omega\right).F^{\prime}\left(x\right)=f\left(x\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{\omega}f=\lim_{b\to\omega}F\left(b\right)-F\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+אינטגרציה בחלקים: תהיינה 
+\begin_inset Formula $f,g\in\bbr^{\left[a,\omega\right)}$
+\end_inset
+
+ גזירות עבורן 
+\begin_inset Formula $f^{\prime},g^{\prime}\in R\left(\left[a,\omega\right)\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{\omega}f^{\prime}g=\lim_{b\to\omega}\left[f\cdot g\right]|_{a}^{b}-\int_{a}^{\omega}fg^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+שינוי משתנה: תהא 
+\begin_inset Formula $f\in R\left(\left[a,\omega\right)\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\substack{\varphi\in\left[a,\omega\right)^{\left[c,\eta\right)}\\
+\varphi\in C^{1}\left(\left[c,\eta\right)\right)
+}
+$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\substack{\varphi\left(c\right)=a\\
+\lim_{b\to\eta}\varphi\left(b\right)=\omega
+}
+$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{\omega}f=\int_{c}^{\eta}f\left(\varphi\left(t\right)\right)\varphi^{\prime}\left(t\right)dt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+משפט קריטריון קושי להתכנסות אינטגרל לא אמיתי
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,\omega\right)}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\forall b\in\left(a,\omega\right).f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי )
+\begin_inset Formula $\int_{a}^{\omega}f$
+\end_inset
+
+ מתכנס(
+\begin_inset Formula $\left(\forall\e>0.\exists B\in\left(a,\omega\right).\forall b_{1},b_{2}\in\left[B,\omega\right).\left|\int_{b_{1}}^{b_{2}}f\right|<\e\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+התכנסות בהחלט
+\series default
+\color inherit
+: 
+\begin_inset Formula $f\in\bbr^{\left[a,\omega\right)}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\forall b\in\left(a,\omega\right).f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\int_{a}^{\omega}\left|f\right|$
+\end_inset
+
+ מתכנס.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+התכנסות בתנאי
+\series default
+\color inherit
+: 
+\begin_inset Formula $f\in\bbr^{\left[a,\omega\right)}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\forall b\in\left(a,\omega\right).f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\int_{a}^{\omega}\left|f\right|$
+\end_inset
+
+ אינו מתכנס אך 
+\begin_inset Formula $\int_{a}^{\omega}f$
+\end_inset
+
+ מתכנס.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,\omega\right)}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\int_{a}^{\omega}f$
+\end_inset
+
+ מתכנס בהחלט אזי 
+\begin_inset Formula $\int_{a}^{\omega}f$
+\end_inset
+
+ מתכנס.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[a,\omega\right)}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\int_{a}^{\omega}f$
+\end_inset
+
+ מתכנס בהחלט אזי 
+\begin_inset Formula $\left|\int_{a}^{\omega}f\right|\le\int_{a}^{\omega}\left|f\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $0\le f\in\bbr^{\left[a,\omega\right)}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\forall b\in\left(a,\omega\right).f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\iff\left(\int_{a}^{\omega}f<\infty\right)$
+\end_inset
+
+)
+\begin_inset Formula $F\left(x\right)=\int_{a}^{x}f\left(t\right)dt$
+\end_inset
+
+ חסומה על 
+\begin_inset Formula $\left[a,\omega\right)$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $0\le f\le g\in\bbr^{\left[a,\omega\right)}$
+\end_inset
+
+ המקיימות 
+\begin_inset Formula $\forall b\in\left(a,\omega\right).f,g\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\int_{a}^{\omega}g<\infty\right)\implies\left(\int_{a}^{\omega}f<\infty\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $0\le f\le g\in\bbr^{\left[a,\omega\right)}$
+\end_inset
+
+ המקיימות 
+\begin_inset Formula $\forall b\in\left(a,\omega\right).f,g\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\int_{a}^{\omega}f=\infty\right)\implies\left(\int_{a}^{\omega}g=\infty\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $0\le f\in\bbr^{\left[1,\infty\right)}$
+\end_inset
+
+ יורדת אזי 
+\begin_inset Formula $\left(\int_{1}^{\infty}f<\infty\right)\iff\left(\sum_{n=1}^{\infty}f\left(n\right)<\infty\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $0\le f\in\bbr^{\left[1,\infty\right)}$
+\end_inset
+
+ יורדת אזי 
+\begin_inset Formula $\sum_{n=2}^{\infty}f\left(n\right)\le\int_{1}^{\infty}f\le\sum_{n=1}^{\infty}f\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+פונקציית זטא של רימן
+\series default
+\color inherit
+: נגדיר 
+\begin_inset Formula $\zeta:\left(1,\infty\right)\to\bbr$
+\end_inset
+
+ כך 
+\begin_inset Formula $\zeta\left(s\right)=\sum_{n=1}^{\infty}\frac{1}{n^{s}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\lim_{s\to1^{+}}\zeta\left(s\right)\left(s-1\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+משפט
+\series default
+ 
+\series bold
+אבל
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $g\in C\left(\left[a,\omega\right)\right)\cap R\left(\left[a,\omega\right)\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f\in C^{1}\left(\left[a,\omega\right)\right)$
+\end_inset
+
+ מונוטונית וחסומה אזי 
+\begin_inset Formula $\int_{a}^{\omega}fg<\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+משפט דיריכלה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $g\in C\left(\left[a,\omega\right)\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $G\left(x\right)=\int_{a}^{x}g$
+\end_inset
+
+ חסומה ותהא 
+\begin_inset Formula $f\in C^{1}\left(\left[a,\omega\right)\right)$
+\end_inset
+
+ מונוטונית עבורה
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\lim_{x\to\omega}f\left(x\right)=0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{\omega}fg<\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה נוסחאת סטירלינג
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sqrt{2\pi}n^{n+\frac{1}{2}}e^{-n}\le n!\le\sqrt{2\pi}n^{n+\frac{1}{2}}e^{-n}e^{\frac{1}{12n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\underset{n\to\infty}{\lim}\frac{n!e^{n}}{n^{n+\frac{1}{2}}}=\sqrt{2\pi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size small
+\color orange
+שאיפה נקודתית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע מוכלל תהא 
+\begin_inset Formula $g\in\bbr^{I}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $f\in\left(\bbr^{I}\right)^{\bbn}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(f_{n}\xrightarrow{{\scriptscriptstyle \text{pointwise}}}g\right)\iff\left(\forall x\in I.\underset{n\to\infty}{\lim}f_{n}\left(x\right)=g\left(x\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\limpw}{\xrightarrow{\text{p.w.}}}
+{\xrightarrow{\text{p.w.}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(f_{n}\limpw f\right)\iff\left(f_{n}\xrightarrow{\text{pointwise}}f\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f_{n}\in\bbr^{I}$
+\end_inset
+
+ מתכנסת נקודתית אל 
+\begin_inset Formula $f$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+רציפות: 
+\begin_inset Formula $\left(\forall n\in\bbn.f_{n}\in C\left(I\right)\right)\notimplies\left(f\in C\left(I\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אינטגרביליות רימן: 
+\begin_inset Formula $\left(\forall n\in\bbn.f_{n}\in R\left(I\right)\right)\notimplies\left(f\in R\left(I\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+גבול האינטגרל: נניח 
+\begin_inset Formula $\substack{f\in R\left(I\right)\\
+\forall n\in\bbn.f_{n}\in R\left(I\right)
+}
+$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\underset{n\to\infty}{\lim}\int_{I}f_{n}=L\right)\notimplies\left(\int_{I}f=L\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+נגזרת: יהי 
+\begin_inset Formula $x\in I$
+\end_inset
+
+ נניח 
+\begin_inset Formula $f$
+\end_inset
+
+ גזירה ולכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $f_{n}$
+\end_inset
+
+ גזירה אזי 
+\begin_inset Formula $\left(\underset{n\to\infty}{\lim}f_{n}^{\prime}\left(x\right)=L\right)\notimplies\left(f^{\prime}\left(x\right)=L\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size footnotesize
+\color orange
+שאיפה במידה שווה )במ
+\begin_inset Quotes erd
+\end_inset
+
+ש(
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע מוכלל תהא 
+\begin_inset Formula $g\in\bbr^{I}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $f\in\left(\bbr^{I}\right)^{\bbn}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(f_{n}\xrightarrow{{\scriptscriptstyle \text{uniform}}}g\right)\iff\left(\underset{n\to\infty}{\lim}\underset{x\in I}{\sup}\left|f_{n}\left(x\right)-f\left(x\right)\right|=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\limu}{\xrightarrow{\text{u}}}
+{\xrightarrow{\text{u}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(f_{n}\limu f\right)\iff\left(f_{n}\xrightarrow{\text{unifom}}f\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\subseteq\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\forall\e>0.\exists N\in\bbn.\forall x\in A.\forall n>N.\left|f_{n}\left(x\right)-f\left(x\right)\right|<\e\right)\iff\left(f_{n}\limu f\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+חסומה במידה אחידה
+\series default
+\color inherit
+: 
+\begin_inset Formula $f_{n}\in\bbr^{I}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\exists M\in\bbr.\forall n\in\bbn.\forall x\in I.\left|f_{n}\left(x\right)\right|\le M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+למה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $f_{n},g_{n}\in\bbr^{I}$
+\end_inset
+
+ חסומות במידה אחידה על ידי 
+\begin_inset Formula $M\in\bbr$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $\left(f_{n}\limu f\right)\land\left(g_{n}\limu g\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f_{n}g_{n}\limu fg$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט קריטריון קושי להתכנסות במידה שווה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $f_{n}\in\bbr^{I}$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left(\forall\e>0.\exists N\in\bbn.\forall n,m>N.\forall x\in I.\left|f_{n}\left(x\right)-f_{m}\left(x\right)\right|<\e\right)\iff\left(\exists f\in\bbr^{I}.f_{n}\limu f\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $f_{n}\in C\left(I\right)$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $f_{n}\limu f$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\in C\left(I\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch lesson9
+inverted 0
+status collapsed
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קבוצה קומפקטית
+\series default
+: 
+\begin_inset Formula $A\subseteq\bbr$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $\left\{ I_{n}\right\} _{n\in\Lambda}$
+\end_inset
+
+ קטעים פתוחים עבורם 
+\begin_inset Formula $A\subseteq\bigcup_{n\in\Lambda}I_{n}$
+\end_inset
+
+ מתקיים
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\exists{\cal B}\in\P{}{}_{<\aleph_{0}}\left(\Lambda\right).A\subseteq\bigcup_{n\in{\cal B}}I_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הלמה של היינה־בורל
+\series default
+: יהיו 
+\begin_inset Formula $a<b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ קומפקטית.
+\end_layout
+
+\begin_layout Standard
+משפט דיני: תהיינה 
+\begin_inset Formula $f_{n}\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $\substack{f_{n}\limpw f\\
+\forall n<m.f_{m}<f_{n}
+}
+$
+\end_inset
+
+ באשר 
+\begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f_{n}\limu f$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
