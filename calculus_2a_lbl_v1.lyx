@@ -2460,6 +2460,7 @@ $
 \begin_layout Standard
 
 \series bold
+\size small
 \color brown
 טענה
 \series default
@@ -2469,7 +2470,7 @@ $
 \end_inset
 
  המקיימת 
-\begin_inset Formula $\forall b\in\left(a,\omega\right).f\in R\left(\left[a,b\right]\right)$
+\begin_inset Formula ${\scriptstyle \forall b\in\left(a,\omega\right).f\in R\left(\left[a,b\right]\right)}$
 \end_inset
 
  אזי 
@@ -3187,6 +3188,7 @@ $
 \begin_layout Standard
 
 \series bold
+\size small
 משפט
 \series default
 : תהיינה 
@@ -3206,10 +3208,11 @@ $
 \end_inset
 
  מתכנסת אזי 
-\begin_inset Formula $\exists f\in\bbr^{\left[a,b\right]}.\substack{f^{\prime}=g\\
-f_{n}\limu f
-}
-$
+\begin_inset Formula $f_{n}\limu f$
+\end_inset
+
+ וכן 
+\begin_inset Formula $f^{\prime}=g$
 \end_inset
 
 .
@@ -3249,7 +3252,7 @@ $
 \end_inset
 
  עבורה 
-\begin_inset Formula $\sum_{i=0}^{\infty}u_{n}=f$
+\begin_inset Formula $\sum_{i=0}^{\infty}u_{n}$
 \end_inset
 
  במ
@@ -3257,7 +3260,7 @@ $
 \end_inset
 
 ש אזי 
-\begin_inset Formula $\int_{a}^{b}f\left(t\right)dt=\sum_{n=0}^{\infty}\int_{a}^{b}u_{n}\left(t\right)dt$
+\begin_inset Formula $\int_{a}^{b}\sum_{i=0}^{\infty}u_{n}=\sum_{i=0}^{\infty}\int_{a}^{b}u_{i}$
 \end_inset
 
 .
@@ -3269,19 +3272,35 @@ $
 משפט גזירה איבר איבר
 \series default
 : תהיינה 
-\begin_inset Formula $u_{n}\in C\left(\left[a,b\right]\right)$
+\begin_inset Formula $u_{n}\in C^{1}\left(\left[a,b\right]\right)$
 \end_inset
 
  עבורה 
-\begin_inset Formula $\sum_{i=0}^{\infty}u_{n}=f$
+\begin_inset Formula $\sum u_{i}^{\prime}$
 \end_inset
 
  במ
 \begin_inset Quotes erd
 \end_inset
 
-ש אזי 
-\begin_inset Formula $\int_{a}^{b}f\left(t\right)dt=\sum_{n=0}^{\infty}\int_{a}^{b}u_{n}\left(t\right)dt$
+ש ותהא 
+\begin_inset Formula $x_{0}\in\left[a,b\right]$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\sum u_{i}\left(x_{0}\right)$
+\end_inset
+
+ מתכנס אזי 
+\begin_inset Formula $\sum u_{i}$
+\end_inset
+
+ במ
+\begin_inset Quotes erd
+\end_inset
+
+ש וכן 
+\begin_inset Formula $\frac{d}{dx}\left(\sum_{i=0}^{\infty}u_{i}\right)=\sum_{i=0}^{\infty}\frac{d}{dx}u_{i}$
 \end_inset
 
 .
