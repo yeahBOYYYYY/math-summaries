@@ -128,6 +128,11 @@
 \use_refstyle 1
 \use_minted 0
 \branch lesson9
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Lesson
 \selected 0
 \filename_suffix 0
 \color #faf0e6
@@ -181,6 +186,86 @@ filename "E:/University/macros.lyx"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color gray
+פולינום טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ גזירה 
+\begin_inset Formula $n$
+\end_inset
+
+ פעמים על 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $P_{n}\left(f,a\right)\left(x\right)=\sum_{k=0}^{n}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color gray
+שארית
+\series default
+\color inherit
+ 
+\series bold
+\color gray
+טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ גזירה 
+\begin_inset Formula $n$
+\end_inset
+
+ פעמים על 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R_{n}\left(f,a\right)\left(x\right)=f\left(x\right)-P_{n}\left(f,a\right)\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color gray
+טור טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ חלקה על 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $P\left(f,a\right)\left(x\right)=\sum_{k=0}^{\infty}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1860,16 +1945,8 @@ $
 \begin_inset Formula $f\in C^{n+1}\left(\left[a,b\right]\right)$
 \end_inset
 
- עם פיתוח טיילור 
-\begin_inset Formula $P_{n}$
-\end_inset
-
- סביב 
-\begin_inset Formula $a$
-\end_inset
-
  אזי 
-\begin_inset Formula $R_{n}\left(x\right)=\frac{1}{n!}\int_{a}^{x}f^{\left(n+1\right)}\left(t\right)\left(x-t\right)^{n}dt$
+\begin_inset Formula $R_{n}\left(f,a\right)\left(x\right)=\frac{1}{n!}\int_{a}^{x}f^{\left(n+1\right)}\left(t\right)\left(x-t\right)^{n}dt$
 \end_inset
 
 .
@@ -2205,8 +2282,12 @@ $
 \begin_inset Formula $F\in\bbr^{\left[a,\omega\right)}$
 \end_inset
 
- עבורו 
-\begin_inset Formula $\forall x\in\left[a,\omega\right).F^{\prime}\left(x\right)=f\left(x\right)$
+ עבורה 
+\begin_inset Formula $F^{\prime}\left(x\right)=f\left(x\right)$
+\end_inset
+
+ על 
+\begin_inset Formula $\left[a,\omega\right)$
 \end_inset
 
  אזי 
@@ -2277,12 +2358,8 @@ $
 \begin_inset Formula $\forall b\in\left(a,\omega\right).f\in R\left(\left[a,b\right]\right)$
 \end_inset
 
- אזי )
-\begin_inset Formula $\int_{a}^{\omega}f$
-\end_inset
-
- מתכנס(
-\begin_inset Formula $\left(\forall\e>0.\exists B\in\left(a,\omega\right).\forall b_{1},b_{2}\in\left[B,\omega\right).\left|\int_{b_{1}}^{b_{2}}f\right|<\e\right)\iff$
+ אזי 
+\begin_inset Formula $\left(\forall\e>0.\exists B\in\left(a,\omega\right).\forall b_{1},b_{2}\in\left[B,\omega\right).\left|\int_{b_{1}}^{b_{2}}f\right|<\e\right)\iff\left(f\in R\left(\left[a,\omega\right)\right)\right)$
 \end_inset
 
 .
@@ -2902,22 +2979,12 @@ $
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch lesson9
-inverted 0
-status collapsed
-
-\begin_layout Standard
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
+\color teal
 קבוצה קומפקטית
 \series default
+\color inherit
 : 
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
@@ -2934,7 +3001,7 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\exists{\cal B}\in\P{}{}_{<\aleph_{0}}\left(\Lambda\right).A\subseteq\bigcup_{n\in{\cal B}}I_{n}$
+\begin_inset Formula $\exists{\cal B}\in\mathcal{P}_{<\aleph_{0}}\left(\Lambda\right).A\subseteq\bigcup_{n\in{\cal B}}I_{n}$
 \end_inset
 
 .
@@ -2943,8 +3010,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color teal
 הלמה של היינה־בורל
 \series default
+\color inherit
 : יהיו 
 \begin_inset Formula $a<b$
 \end_inset
@@ -2957,7 +3026,13 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-משפט דיני: תהיינה 
+
+\series bold
+\color teal
+משפט דיני
+\series default
+\color inherit
+: תהיינה 
 \begin_inset Formula $f_{n}\in C\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -2979,9 +3054,881 @@ $
 .
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $f_{n}\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $f_{n}\limpw f$
+\end_inset
+
+ באשר 
+\begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ וכן לכל 
+\begin_inset Formula $x\in\left[a,b\right]$
+\end_inset
+
+ הסדרה 
+\begin_inset Formula $\left\{ f_{n}\right\} _{n=0}^{\infty}$
+\end_inset
+
+ מונוטונית אזי 
+\begin_inset Formula $f_{n}\limu f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $f_{n}\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $f_{n}\limu f$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משפט
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $f_{n}\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $f_{n}\limu f$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{b}f=\underset{n\to\infty}{\lim}\int_{a}^{b}f_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משפט מז'ורנטה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $f_{n}\in R\left(\left[a,\omega\right)\right)$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $f_{n}\limu f$
+\end_inset
+
+ על 
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\Psi\in R\left(\left[a,\omega\right)\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\forall n\in\bbn.\left|f_{n}\right|\le\Psi$
 \end_inset
 
 
+\begin_inset Newline newline
+\end_inset
+
+אזי 
+\begin_inset Formula $\left(\int_{a}^{\omega}f=\underset{n\to\infty}{\lim}\int_{a}^{\omega}f_{n}\right)\land\left(\text{ מתכנסת בהחלט}\int_{a}^{\omega}f\right)\land\left(\forall b\in\left[a,\omega\right).f\in R\left(\left[a,b\right]\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\int_{0}^{\infty}e^{-x^{2}}=\frac{\sqrt{\pi}}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: תהיינה 
+\begin_inset Formula $f_{n}\in C^{1}\left(\left[a,b\right]\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $f_{n}^{\prime}\limu g$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $x_{0}\in\left[a,b\right]$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\left\{ f_{n}\left(x_{0}\right)\right\} _{n=1}^{\infty}$
+\end_inset
+
+ מתכנסת אזי 
+\begin_inset Formula $\exists f\in\bbr^{\left[a,b\right]}.\substack{f^{\prime}=g\\
+f_{n}\limu f
+}
+$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: תהיינה 
+\begin_inset Formula $f_{n}\in\bbr^{I}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\sum_{i=0}^{n}f_{n}\limu f$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum_{i=0}^{\infty}f_{n}=f$
+\end_inset
+
+ במ
+\begin_inset Quotes erd
+\end_inset
+
+ש.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט אינטגרציה איבר איבר
+\series default
+: תהיינה 
+\begin_inset Formula $u_{n}\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\sum_{i=0}^{\infty}u_{n}=f$
+\end_inset
+
+ במ
+\begin_inset Quotes erd
+\end_inset
+
+ש אזי 
+\begin_inset Formula $\int_{a}^{b}f\left(t\right)dt=\sum_{n=0}^{\infty}\int_{a}^{b}u_{n}\left(t\right)dt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט גזירה איבר איבר
+\series default
+: תהיינה 
+\begin_inset Formula $u_{n}\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\sum_{i=0}^{\infty}u_{n}=f$
+\end_inset
+
+ במ
+\begin_inset Quotes erd
+\end_inset
+
+ש אזי 
+\begin_inset Formula $\int_{a}^{b}f\left(t\right)dt=\sum_{n=0}^{\infty}\int_{a}^{b}u_{n}\left(t\right)dt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט 
+\begin_inset Formula $M$
+\end_inset
+
+ בוחן של וירשטראס
+\series default
+: תהיינה 
+\begin_inset Formula $u_{n}\in\bbr^{I}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $M\in\bbr_{+}^{\bbn}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\sum_{n=1}^{\infty}M_{n}<\infty$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\forall x\in\bbr.\forall n\in\bbn.\left|u_{n}\left(x\right)\right|\le M_{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum u_{n}$
+\end_inset
+
+ מתכנס בהחלט ובמ
+\begin_inset Quotes erd
+\end_inset
+
+ש.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה התמרת אבל
+\series default
+: תהיינה 
+\begin_inset Formula $a,b\in\bbr^{\bbn}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum_{k=1}^{n}a_{k}b_{k}=\sum_{k=1}^{n}a_{k}b_{n+1}+\sum_{k=1}^{n}\sum_{m=1}^{k}a_{m}\left(b_{k}-b_{k+1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט קריטריון אבל
+\series default
+: תהיינה 
+\begin_inset Formula $f_{n},g_{n}\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $\sum_{i=0}^{n}f_{i}$
+\end_inset
+
+ מתכנסת במ
+\begin_inset Quotes erd
+\end_inset
+
+ש וכן לכל 
+\begin_inset Formula $x\in\left[a,b\right]$
+\end_inset
+
+ הסדרה 
+\begin_inset Formula $\left\{ g_{n}\right\} _{n=0}^{\infty}$
+\end_inset
+
+ מונוטונית וחסומה במידה אחידה אזי 
+\begin_inset Formula $\sum_{i=0}^{n}f_{i}g_{i}$
+\end_inset
+
+ מתכנסת במ
+\begin_inset Quotes erd
+\end_inset
+
+ש.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט קריטריון דיריכלה
+\series default
+: תהיינה 
+\begin_inset Formula $f_{n},g_{n}\in\bbr^{\left[a,b\right]}$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $\sum_{i=0}^{n}f_{i}$
+\end_inset
+
+ חסומה במידה אחידה וכן 
+\begin_inset Formula $g_{n}\limu0$
+\end_inset
+
+ וכן לכל 
+\begin_inset Formula $x\in\left[a,b\right]$
+\end_inset
+
+ הסדרה 
+\begin_inset Formula $\left\{ g_{n}\right\} _{n=0}^{\infty}$
+\end_inset
+
+ מונוטונית אזי 
+\begin_inset Formula $\sum_{i=0}^{n}f_{i}g_{i}$
+\end_inset
+
+ מתכנסת במ
+\begin_inset Quotes erd
+\end_inset
+
+ש.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית וירשטראס
+\series default
+: יהי 
+\begin_inset Formula $a\in\left(0,1\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $b\in\bbn\backslash\left\{ 0,1\right\} $
+\end_inset
+
+ עבורם 
+\begin_inset Formula $ab>1+\frac{3\pi}{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $W\left(x\right)=\sum_{k=0}^{\infty}a^{k}\cos\left(b^{k}\pi x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: נגדיר 
+\begin_inset Formula $\triangle_{n}\in\bbr^{\bbr}$
+\end_inset
+
+ כך 
+\begin_inset Formula $\left(\triangle_{0}\left(x\right)=\left\{ \begin{smallmatrix}x & 0\le x\le\frac{1}{2}\\
+1-x & \frac{1}{2}\le x\le1
+\end{smallmatrix}\right.\right)\land\left(\forall x\in\bbr.\triangle_{0}\left(x+1\right)=\triangle_{0}\left(x\right)\right)\land\left(\triangle_{k}=\frac{\triangle_{0}\left(4^{k}x\right)}{4^{k}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\triangle_{n}\limu\triangle$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: 
+\begin_inset Formula $\triangle$
+\end_inset
+
+ רציפה בכל נקודה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: 
+\begin_inset Formula $\triangle$
+\end_inset
+
+ אינה גזירה באף נקודה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט וירשטראס
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\exists p\in\bbr\left[x\right].\max_{\left[a,b\right]}\left|f\left(x\right)-p\left(x\right)\right|<\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט וירשטראס
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $p_{n}\in\bbr\left[x\right]$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $p_{n}\limu f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הגדרה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C\left(\left[0,1\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $B_{n}\left(x\right)=\sum_{k=0}^{n}f\left(\frac{k}{n}\right){n \choose k}x^{k}\left(1-x\right)^{n-k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C\left(\left[0,1\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $B_{n}\limu f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sum a_{k}x^{k}$
+\end_inset
+
+ טור חזקות המתכנס עבור 
+\begin_inset Formula $q\in\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $r<\left|q\right|$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum a_{k}x^{k}$
+\end_inset
+
+ מתכנס בהחלט ובמ
+\begin_inset Quotes erd
+\end_inset
+
+ש על 
+\begin_inset Formula $\left[-\left|r\right|,\left|r\right|\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט אבל
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sum a_{k}x^{k}$
+\end_inset
+
+ טור חזקות אזי קיים 
+\begin_inset Formula $R\in\left[0,\infty\right]$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $x\in\bbr$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\begin{cases}
+\text{מתכנס} & x\in\left(-R,R\right)\\
+\text{מתבדר} & x\notin\left[-R,R\right]
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+רדיוס ההתכנסות
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sum a_{k}x^{k}$
+\end_inset
+
+ טור חזקות אזי 
+\begin_inset Formula $R\in\left[0,\infty\right]$
+\end_inset
+
+ המקיים את משפט אבל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט קושי הדמרד
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sum a_{n}x^{n}$
+\end_inset
+
+ טור חזקות אזי רדיוס ההתכנסות הוא 
+\begin_inset Formula $\frac{1}{\limsup\left(\left|a_{n}\right|^{\frac{1}{n}}\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הערה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sum a_{n}x^{n}$
+\end_inset
+
+ טור חזקות אזי 
+\begin_inset Formula ${\scriptstyle \left(\left(\limsup\left(\left|a_{n}\right|^{\frac{1}{n}}\right)=0\right)\implies\left(R=\infty\right)\right)\land\left(\left(\limsup\left(\left|a_{n}\right|^{\frac{1}{n}}\right)=\infty\right)\implies\left(R=0\right)\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size small
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sum a_{k}x^{k}$
+\end_inset
+
+ טור חזקות אזי )רדיוס ההתכנסות של 
+\begin_inset Formula $\sum_{k=1}^{\infty}a_{k}x^{k}$
+\end_inset
+
+ הינו 
+\begin_inset Formula $R$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)רדיוס ההתכנסות של 
+\begin_inset Formula $\sum_{k=1}^{\infty}ka_{k}x^{k-1}$
+\end_inset
+
+ הינו 
+\begin_inset Formula $R$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sum_{k=0}^{\infty}a_{k}x^{k}=f$
+\end_inset
+
+ עם רדיוס 
+\begin_inset Formula $R$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum_{k=1}^{\infty}ka_{k}x^{k-1}=f^{\prime}\left(x\right)$
+\end_inset
+
+ על 
+\begin_inset Formula $\left(-R,R\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sum_{k=0}^{\infty}a_{k}x^{k}=f$
+\end_inset
+
+ עם רדיוס 
+\begin_inset Formula $R$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $m\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum_{k=0}^{\infty}\frac{\left(k+m\right)!}{k!}a_{k+m}x^{k}=f^{\left(m\right)}\left(x\right)$
+\end_inset
+
+ על 
+\begin_inset Formula $\left(-R,R\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה טור טיילור של טור חזקות
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sum_{k=0}^{\infty}a_{k}x^{k}=f$
+\end_inset
+
+ עם רדיוס 
+\begin_inset Formula $R$
+\end_inset
+
+ אזי 
+\begin_inset Formula $P\left(f,0\right)\left(x\right)=\sum_{k=0}^{\infty}a_{k}x^{k}$
+\end_inset
+
+ על 
+\begin_inset Formula $\left(-R,R\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sum a_{k}x^{k}$
+\end_inset
+
+ טור חזקות עם רדיוס 
+\begin_inset Formula $R$
+\end_inset
+
+ אשר לא מתכנס ב־
+\begin_inset Formula $R$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum a_{k}x^{k}$
+\end_inset
+
+ אינו מתכנס במ
+\begin_inset Quotes erd
+\end_inset
+
+ש על 
+\begin_inset Formula $\left[0,R\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sum a_{k}x^{k}$
+\end_inset
+
+ טור חזקות עם רדיוס 
+\begin_inset Formula $R$
+\end_inset
+
+ אשר לא מתכנס ב־
+\begin_inset Formula $-R$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum a_{k}x^{k}$
+\end_inset
+
+ אינו מתכנס במ
+\begin_inset Quotes erd
+\end_inset
+
+ש על 
+\begin_inset Formula $\left(-R,0\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט אבל על קצה תחום ההתכנסות
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sum a_{k}x^{k}$
+\end_inset
+
+ טור חזקות מתכנס ב־
+\begin_inset Formula $R$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum a_{k}x^{k}$
+\end_inset
+
+ מתכנס במ
+\begin_inset Quotes erd
+\end_inset
+
+ש על 
+\begin_inset Formula $\left[0,R\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט אבל על קצה תחום ההתכנסות
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sum a_{k}x^{k}$
+\end_inset
+
+ טור חזקות מתכנס ב־
+\begin_inset Formula $-R$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum a_{k}x^{k}$
+\end_inset
+
+ מתכנס במ
+\begin_inset Quotes erd
+\end_inset
+
+ש על 
+\begin_inset Formula $\left[-R,0\right]$
+\end_inset
+
+.
 \end_layout
 
 \end_body
