@@ -172,7 +172,7 @@
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "E:/University/macros.lyx"
+filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 
 \end_inset
 
@@ -181,7 +181,7 @@ filename "E:/University/macros.lyx"
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\notimplies}{\rlap{\hskip.5em/}\implies}
+\newcommand{\notimplies}{\rlap{\hskip.5em/}\implies}
 {\not\implies}
 \end_inset
 
@@ -4199,6 +4199,156 @@ $
 
  אזי 
 \begin_inset Formula $\sum_{k=0}^{\infty}a_{k}=\rho$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbc^{\left[a,b\right]}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\exists!u,v\in\bbr^{\left[a,b\right]}.f=u+iv$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+סימון
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $u,v\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $u+iv\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+אינטגרל
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $u,v\in R_{\bbr}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{b}\left(u+iv\right)=\int_{a}^{b}u+i\int_{a}^{b}v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $f,g\in R_{\bbc}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\int_{a}^{b}\left(f+g\right)=\int_{a}^{b}f+\int_{a}^{b}g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\int_{a}^{b}f=\int_{a}^{c}f+\int_{c}^{b}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\int_{a}^{b}cf=c\int_{a}^{b}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\int_{a}^{b}\overline{f}=\overline{\int_{a}^{b}f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+נגזרת
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $u,v\in R_{\bbr}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{d}{dx}\left(u+iv\right)=\frac{du}{dx}+i\cdot\frac{dv}{dx}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R_{\bbc}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\norm f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R_{\bbc}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\norm{\int_{a}^{b}f}\le\int_{a}^{b}\norm f$
 \end_inset
 
 .
