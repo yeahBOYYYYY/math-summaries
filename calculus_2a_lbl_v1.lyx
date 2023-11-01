@@ -137,6 +137,11 @@
 \filename_suffix 0
 \color #faf0e6
 \end_branch
+\branch LinearAlgebra2Recap
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -4427,6 +4432,661 @@ $
 
  אזי 
 \begin_inset Formula $\norm{\int_{a}^{b}f}\le\int_{a}^{b}\norm f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+פונקציה מחזורית
+\series default
+\color inherit
+: 
+\begin_inset Formula $f\in\bbc^{\bbr}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\exists T\in\bbr.\forall x\in\bbr.f\left(x+T\right)=f\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טורוס חד מימדי/מעגל
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbt=\nicefrac{\bbr}{2\pi\bbz}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $R\left(\bbt\right)=\left\{ f\in R\left(\left[0,2\pi\right]\right)\mid\forall x\in\bbr.f\left(x+2\pi\right)=f\left(x\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $e_{n}\left(t\right)=e^{int}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $e_{n}\left(t\right)\in R\left(\bbt\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+פולינום טריגונומטרי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $m\in\bbn$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\left\{ c_{n}\right\} _{n=-m}^{m}\in\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum_{n=-m}^{m}c_{n}e_{n}\left(t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+דרגה של פולינום טריגונומטרי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sum_{n=-m}^{m}c_{n}e_{n}\left(t\right)$
+\end_inset
+
+ פולינום טריגומוטרי עבורו 
+\begin_inset Formula $\left(c_{m}\ne0\right)\lor\left(c_{-m}\ne0\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $R\left(\bbt\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו מעל 
+\begin_inset Formula $\bbc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הגדרה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $f,g\in R\left(\bbt\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<f,g\right>=\frac{1}{2\pi}\int_{0}^{2\pi}f\left(x\right)\overline{g\left(x\right)}dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left<\cdot,\cdot\right>$
+\end_inset
+
+ מכפלה פנימית על 
+\begin_inset Formula $R\left(\bbt\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch LinearAlgebra2Recap
+inverted 0
+status collapsed
+
+\begin_layout Standard
+
+\series bold
+נורמה/אורך
+\series default
+: תהא 
+\begin_inset Formula $f\in R\left(\bbt\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\norm f=\left<f,f\right>^{\frac{1}{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אורתוגונליות
+\series default
+: 
+\begin_inset Formula $f,g\in R\left(\bbt\right)$
+\end_inset
+
+ המקיימות 
+\begin_inset Formula $\left<f,g\right>=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהיו 
+\begin_inset Formula $f,g\in R\left(\bbt\right)$
+\end_inset
+
+ אורתוגונליות אזי 
+\begin_inset Formula $f\perp g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה משפט פיתגורס
+\series default
+: יהיו 
+\begin_inset Formula $f,g\in R\left(\bbt\right)$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $f\perp g$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\norm{f+g}^{2}=\norm f^{2}+\norm g^{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left<e_{n},e_{m}\right>=\begin{cases}
+0 & n\ne m\\
+1 & n=m
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch LinearAlgebra2Recap
+inverted 0
+status collapsed
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: יהיו 
+\begin_inset Formula $f,g\in R\left(\bbt\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\left<f,g\right>\right|\le\norm f\cdot\norm g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+זווית
+\series default
+: יהיו 
+\begin_inset Formula $f,g\in R\left(\bbt\right)\backslash\left\{ 0\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\a\in\left[0,\pi\right]$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\cos\left(\a\right)=\frac{\left(a,b\right)}{\norm a\norm b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהיו 
+\begin_inset Formula $f,g\in R\left(\bbt\right)\backslash\left\{ 0\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ang fg$
+\end_inset
+
+ הזווית בין 
+\begin_inset Formula $f,g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: יהיו 
+\begin_inset Formula $f,g\in R\left(\bbt\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\norm{f+g}\le\norm f+\norm g$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מקדם פורייה ה־
+\begin_inset Formula $m$
+\end_inset
+
+
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $f$
+\end_inset
+
+ פולינום טריגונומטרי אזי 
+\begin_inset Formula $\left<f,e_{m}\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $f$
+\end_inset
+
+ פולינום טריגונומטרי אזי 
+\begin_inset Formula $\hat{f}\left(m\right)=\left<f,e_{m}\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $f\left(t\right)=\sum_{n=-m}^{m}c_{n}e_{n}\left(t\right)$
+\end_inset
+
+ פולינום טריגונומטרי אזי 
+\begin_inset Formula $\hat{f}\left(k\right)=c_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $f$
+\end_inset
+
+ פולינום טריגונומטרי אזי 
+\begin_inset Formula $f\left(t\right)=\sum_{n=-m}^{m}\hat{f}\left(n\right)e_{n}\left(t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $f,g$
+\end_inset
+
+ פולינומים טריגונומטריים אזי 
+\begin_inset Formula $\left<f,g\right>=\sum_{n=-m}^{m}\hat{f}\left(n\right)\overline{\hat{g}\left(n\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $f$
+\end_inset
+
+ פולינום טריגונומטרי אזי 
+\begin_inset Formula $\norm f^{2}=\sum_{n=-m}^{m}\left|\hat{f}\left(n\right)\right|^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מקדם פורייה ה־
+\begin_inset Formula $m$
+\end_inset
+
+
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\bbt\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\hat{f}\left(m\right)=\left<f,e_{m}\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הגדרה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\bbt\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $m\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(S_{m}f\right)\left(t\right)=\sum_{n=-m}^{m}\hat{f}\left(n\right)e_{n}\left(t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\bbt\right)$
+\end_inset
+
+ ממשית אזי 
+\begin_inset Formula $\hat{f}\left(-n\right)=\overline{\hat{f}\left(n\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\bbt\right)$
+\end_inset
+
+ אזי )
+\begin_inset Formula $f$
+\end_inset
+
+ ממשית(
+\begin_inset Formula $\impliedby$
+\end_inset
+
+)
+\begin_inset Formula $S_{m}f$
+\end_inset
+
+ ממשית(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\bbt\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\left|k\right|\le m$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(f-S_{m}f\right)\perp e_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\bbt\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(f-S_{m}f\right)\perp S_{m}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\bbt\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\norm f^{2}=\norm{S_{m}f}^{2}+\norm{f-S_{m}f}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\bbt\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum_{n=-\infty}^{\infty}\left|\hat{f}\left(n\right)\right|^{2}\le\norm f^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\bbt\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\underset{n\to\pm\infty}{\lim}\left|\hat{f}\left(n\right)\right|=0$
 \end_inset
 
 .
