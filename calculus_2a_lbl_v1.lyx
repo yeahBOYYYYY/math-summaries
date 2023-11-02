@@ -2702,7 +2702,7 @@ $
 \series bold
 \size small
 \color orange
-שאיפה נקודתית
+התכנסות נקודתית
 \series default
 \color inherit
 : יהי 
@@ -2722,15 +2722,6 @@ $
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\limpw}{\xrightarrow{\text{p.w.}}}
-{\xrightarrow{\text{p.w.}}}
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2829,7 +2820,7 @@ $
 \series bold
 \size footnotesize
 \color orange
-שאיפה במידה שווה )במ
+התכנסות במידה שווה )במ
 \begin_inset Quotes erd
 \end_inset
 
@@ -2853,15 +2844,6 @@ $
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\limu}{\xrightarrow{\text{u}}}
-{\xrightarrow{\text{u}}}
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -4936,7 +4918,7 @@ status collapsed
 
 \series bold
 \color magenta
-הגדרה
+פולינום פורייה
 \series default
 \color inherit
 : תהא 
@@ -4962,10 +4944,10 @@ status collapsed
 \series default
 \color inherit
 : תהא 
-\begin_inset Formula $f\in R\left(\bbt\right)$
+\begin_inset Formula $f\in R_{\bbr}\left(\bbt\right)$
 \end_inset
 
- ממשית אזי 
+ אזי 
 \begin_inset Formula $\hat{f}\left(-n\right)=\overline{\hat{f}\left(n\right)}$
 \end_inset
 
@@ -5006,7 +4988,7 @@ status collapsed
 \series default
 \color inherit
 : תהא 
-\begin_inset Formula $f\in R\left(\bbt\right)$
+\begin_inset Formula $f\in R\left(\left[0,2\pi\right]\right)$
 \end_inset
 
  ויהי 
@@ -5028,7 +5010,7 @@ status collapsed
 \series default
 \color inherit
 : תהא 
-\begin_inset Formula $f\in R\left(\bbt\right)$
+\begin_inset Formula $f\in R\left(\left[0,2\pi\right]\right)$
 \end_inset
 
  אזי 
@@ -5046,7 +5028,7 @@ status collapsed
 \series default
 \color inherit
 : תהא 
-\begin_inset Formula $f\in R\left(\bbt\right)$
+\begin_inset Formula $f\in R\left(\left[0,2\pi\right]\right)$
 \end_inset
 
  אזי 
@@ -5060,11 +5042,11 @@ status collapsed
 
 \series bold
 \color magenta
-טענה
+טענה אי־שיוויון בסל
 \series default
 \color inherit
 : תהא 
-\begin_inset Formula $f\in R\left(\bbt\right)$
+\begin_inset Formula $f\in R\left(\left[0,2\pi\right]\right)$
 \end_inset
 
  אזי 
@@ -5078,15 +5060,425 @@ status collapsed
 
 \series bold
 \color magenta
-טענה
+מסקנה הלמה של רימן ולבג
 \series default
 \color inherit
 : תהא 
-\begin_inset Formula $f\in R\left(\bbt\right)$
+\begin_inset Formula $f\in R\left(\left[0,2\pi\right]\right)$
 \end_inset
 
  אזי 
 \begin_inset Formula $\underset{n\to\pm\infty}{\lim}\left|\hat{f}\left(n\right)\right|=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+התכנסות בנורמת 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $f_{n},g\in R\left(\left[0,2\pi\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(f_{n}\liml g\right)\iff\left(\underset{n\to\infty}{\lim}\norm{f_{n}-g}=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+הערה
+\series default
+\color inherit
+: התכנסות בנורמת 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ איננה יחידה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $g\in R\left(\bbt\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\norm g\le\sup\left|g\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $f_{n}\in R\left(\left[0,2\pi\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(f_{n}\limu f\right)\implies\left(f_{n}\liml f\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C_{\bbc}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $p_{n}\in\bbc\left[x\right]$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $p_{n}\liml f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C_{\bbc}\left(\bbt\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ אזי קיים פולינום טריגונומטרי 
+\begin_inset Formula $p$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\underset{t\in\left[0,2\pi\right]}{\sup}\left|p\left(t\right)-f\left(t\right)\right|<\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\left[0,2\pi\right]\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ אזי קיים פולינום טריגונומטרי 
+\begin_inset Formula $p$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\norm{p-f}<\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\left[0,2\pi\right]\right)$
+\end_inset
+
+ אזי קיימיים 
+\begin_inset Formula $p_{n}$
+\end_inset
+
+ פולינומים טריגונומטריים עבורם 
+\begin_inset Formula $p_{n}\liml f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\left[0,2\pi\right]\right)$
+\end_inset
+
+ יהי 
+\begin_inset Formula $m\in\bbn$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\left\{ c_{n}\right\} _{n=-m}^{m}\in\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\norm{f-\sum_{n=-m}^{m}c_{n}e_{n}}^{2}\ge\norm{f-S_{m}f}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\left[0,2\pi\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\underset{m\to\infty}{\lim}\norm{S_{m}f-f}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+שיוויון פרסבל
+\series default
+\color inherit
+: 
+\begin_inset Formula $f\in R\left(\left[0,2\pi\right]\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\sum_{n=-\infty}^{\infty}\left|\hat{f}\left(n\right)\right|^{2}=\norm f^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\left[0,2\pi\right]\right)$
+\end_inset
+
+ אזי מתקיים שיוויון פרסבל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[-\pi,\pi\right)}$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $f\left(t\right)=t$
+\end_inset
+
+ נמשיכה מחזורית על 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\forall n\in\bbn_{+}.\hat{f}\left(n\right)=\frac{\left(-1\right)^{n}i}{n}\right)\land\left(\hat{f}\left(0\right)=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S_{m}f\left(t\right)=\sum_{n=1}^{m}\frac{2\left(-1\right)^{n+1}\sin\left(nt\right)}{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $r\in\left[0,\pi\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S_{m}f\limu f$
+\end_inset
+
+ על 
+\begin_inset Formula $\left[-r,r\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S_{m}f\limpw f$
+\end_inset
+
+ על 
+\begin_inset Formula $\left(-\pi,\pi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\frac{\pi^{2}}{6}=\sum_{n=1}^{\infty}\frac{1}{n^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{\left(-1\right)^{n-1}}{2n-1}=\frac{\pi}{4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{\left[0,2\pi\right]}$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $f\left(t\right)=\frac{\left(\pi-t\right)^{2}}{4}$
+\end_inset
+
+ נמשיכה מחזורית על 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\forall n\in\bbn_{+}.\hat{f}\left(n\right)=\frac{1}{2n^{2}}\right)\land\left(\hat{f}\left(0\right)=\frac{\pi^{2}}{12}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S_{m}f\left(t\right)=\frac{\pi^{2}}{12}+\sum_{n=1}^{m}\frac{\cos\left(nt\right)}{n^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S_{m}f\limu f$
+\end_inset
+
+ על 
+\begin_inset Formula $\left[0,2\pi\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\frac{\pi^{4}}{90}=\sum_{n=1}^{\infty}\frac{1}{n^{4}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\frac{\pi^{2}}{12}=\sum_{k=1}^{\infty}\frac{\left(-1\right)^{k}}{k^{2}}$
 \end_inset
 
 .
