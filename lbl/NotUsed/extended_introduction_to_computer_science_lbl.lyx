@@ -4,21 +4,18 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass extarticle
+\textclass article
 \begin_preamble
-\usepackage{culmus}
-\usepackage{amssymb}
+\usepackage{centernot}
 \usepackage{enumitem}
 \usepackage{chngcntr}
 \usepackage{tikz}
 \usepackage{tikz-qtree}
-\usepackage{cancel}
 \usepackage{wrapfig}
 \usepackage{pgfplots}
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage[cm]{fullpage}
-% \usepackage[in]{fullpage}
 \usepackage{polynom}
 \usepackage{booktabs}
 
@@ -57,28 +54,36 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    urlcolor=cyan,
+    urlcolor=blue,
     }
 
 
-\usepackage{algorithm2e} % [noline]
-% \RestyleAlgo{ruled}
-\DontPrintSemicolon
+\setmathfont{NewCMMath-Regular.otf}
+\let\RonMikhelmanLol\implies
+\renewcommand{\implies}{\negthickspace\RonMikhelmanLol\negthickspace}
+\let\RonMikhelmanLoll\iff
+\renewcommand{\iff}{\negthickspace\RonMikhelmanLoll\negthickspace}
+\let\RonMikhelmanLolll\impliedby
+\renewcommand{\impliedby}{\negthickspace\RonMikhelmanLolll\negthickspace}
 \end_preamble
 \use_default_options true
+\begin_modules
+theorems-ams-chap-bytype
+theorems-ams-extended-chap-bytype
+\end_modules
 \maintain_unincluded_children false
-\language american
+\language hebrew
 \language_package default
-\inputencoding default
+\inputencoding auto
 \fontencoding global
 \font_roman "default" "David"
 \font_sans "default" "David"
 \font_typewriter "default" "David"
-\font_math "auto" "auto"
+\font_math "auto" "default"
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
-\font_osf true
+\font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype true
@@ -88,52 +93,40 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement H
 \paperfontsize 12
 \spacing onehalf
 \use_hyperref false
-\pdf_bookmarks false
-\pdf_bookmarksnumbered false
-\pdf_bookmarksopen false
-\pdf_bookmarksopenlevel 1
-\pdf_breaklinks false
-\pdf_pdfborder false
-\pdf_colorlinks true
-\pdf_backref false
-\pdf_pdfusetitle false
 \papersize letterpaper
 \use_geometry false
-\use_package amsmath 1
-\use_package amssymb 1
-\use_package cancel 1
-\use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 2
+\use_package esint 2
+\use_package mathdots 2
+\use_package mathtools 2
+\use_package mhchem 2
+\use_package stackrel 2
+\use_package stmaryrd 2
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
-\suppress_date true
+\suppress_date false
 \justification true
 \use_refstyle 1
 \use_minted 0
+\branch LinearAlgebra2Recap
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 4cm
-\topmargin 2.5cm
-\rightmargin 2.5cm
-\bottommargin 2.5cm
-\headheight 0cm
-\headsep 0.5cm
-\footskip 1cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -145,7 +138,6 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\listings_params "commentstyle={\color{commentcolor}},keywordstyle={\color{keywordcolor}},stringstyle={\color{stringcolor}},aboveskip=0em,belowskip=0em"
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -156,11 +148,9 @@
 \begin_body
 
 \begin_layout Standard
-
-\lang hebrew
 \begin_inset CommandInset include
 LatexCommand include
-filename "E:/Odyssey/macros.lyx"
+filename "E:/University/macros.lyx"
 
 \end_inset
 
@@ -168,6 +158,8 @@ filename "E:/Odyssey/macros.lyx"
 \end_layout
 
 \begin_layout Standard
+
+\lang american
 \begin_inset FormulaMacro
 \newcommand{\len}{\text{len}}
 {\text{len}}
@@ -227,6 +219,7 @@ Floating point (float)
 \begin_layout Standard
 
 \series bold
+\lang american
 Integer
 \series default
  
@@ -247,6 +240,7 @@ division
 \begin_layout Standard
 
 \series bold
+\lang american
 Modulo
 \series default
 : let 
@@ -263,6 +257,7 @@ Modulo
 \begin_layout Standard
 
 \series bold
+\lang american
 Exponent
 \series default
 : let 
@@ -279,6 +274,7 @@ Exponent
 \begin_layout Standard
 
 \series bold
+\lang american
 Assignment
 \series default
 : giving a variable a value.
@@ -288,6 +284,7 @@ Assignment
 
 \series bold
 \color blue
+\lang american
 Boolean (bool)
 \series default
 \color inherit
@@ -298,6 +295,7 @@ Boolean (bool)
 
 \series bold
 \color blue
+\lang american
 Length of string
 \series default
 \color inherit
@@ -316,6 +314,7 @@ Length of string
 
 \series bold
 \color blue
+\lang american
 Lexicogrphical
 \series default
  
@@ -338,6 +337,7 @@ order
 
 \series bold
 \color blue
+\lang american
 Conditional
 \series default
  
@@ -352,6 +352,7 @@ statement
 
 \series bold
 \color blue
+\lang american
 Iteration
 \series default
 \color inherit
@@ -362,6 +363,7 @@ Iteration
 
 \series bold
 \color blue
+\lang american
 Break
 \series default
 \color inherit
@@ -372,6 +374,7 @@ Break
 
 \series bold
 \color blue
+\lang american
 Continue
 \series default
 \color inherit
@@ -382,6 +385,7 @@ Continue
 
 \series bold
 \color red
+\lang american
 List
 \series default
 \color inherit
@@ -392,6 +396,7 @@ List
 
 \series bold
 \color red
+\lang american
 List
 \series default
  
@@ -422,6 +427,7 @@ comprehension
 
 \series bold
 \color red
+\lang american
 Slicing
 \series default
 \color inherit
@@ -432,6 +438,7 @@ Slicing
 
 \series bold
 \color red
+\lang american
 Function (func)
 \series default
 \color inherit
@@ -442,6 +449,7 @@ Function (func)
 
 \series bold
 \color red
+\lang american
 Palindrom
 \series default
 \color inherit
@@ -460,6 +468,7 @@ Palindrom
 
 \series bold
 \color red
+\lang american
 theorem
 \series default
 \color inherit
@@ -470,6 +479,7 @@ theorem
 
 \series bold
 \color red
+\lang american
 Equality
 \series default
 \color inherit
@@ -496,6 +506,7 @@ Equality
 
 \series bold
 \color red
+\lang american
 symbol
 \series default
 \color inherit
@@ -514,6 +525,7 @@ symbol
 
 \series bold
 \color red
+\lang american
 symbol
 \series default
 \color inherit
@@ -532,6 +544,7 @@ symbol
 
 \series bold
 \color red
+\lang american
 Identity
 \series default
 \color inherit
@@ -558,6 +571,7 @@ Identity
 
 \series bold
 \color red
+\lang american
 Mutate
 \series default
 \color inherit
@@ -576,6 +590,7 @@ Mutate
 
 \series bold
 \color red
+\lang american
 claim
 \series default
 \color inherit
@@ -606,6 +621,7 @@ claim
 
 \series bold
 \color green
+\lang american
 Pass
 \series default
  
@@ -624,6 +640,7 @@ value
 
 \series bold
 \color green
+\lang american
 Pass
 \series default
  
@@ -642,6 +659,7 @@ refrence
 
 \series bold
 \color green
+\lang american
 Global
 \series default
  
@@ -656,6 +674,7 @@ variable
 
 \series bold
 \color green
+\lang american
 Tuple
 \series default
 \color inherit
@@ -666,6 +685,7 @@ Tuple
 
 \series bold
 \color green
+\lang american
 Set
 \series default
 \color inherit
@@ -676,6 +696,7 @@ Set
 
 \series bold
 \color green
+\lang american
 Dictionary/Map (dict)
 \series default
 \color inherit
@@ -686,6 +707,7 @@ Dictionary/Map (dict)
 
 \series bold
 \color green
+\lang american
 Syntax
 \series default
 \color inherit
@@ -696,6 +718,7 @@ Syntax
 
 \series bold
 \color green
+\lang american
 Semantics
 \series default
 \color inherit
@@ -706,6 +729,7 @@ Semantics
 
 \series bold
 \color magenta
+\lang american
 True random number generators (TRNG)
 \series default
 \color inherit
@@ -716,6 +740,7 @@ True random number generators (TRNG)
 
 \series bold
 \color magenta
+\lang american
 Pseudo-random Number Generators (PRNG)
 \series default
 \color inherit
@@ -726,6 +751,7 @@ Pseudo-random Number Generators (PRNG)
 
 \series bold
 \color magenta
+\lang american
 Seed
 \series default
 \color inherit
@@ -736,6 +762,7 @@ Seed
 
 \series bold
 \color magenta
+\lang american
 Linear congruential generator
 \series default
 \color inherit
@@ -754,6 +781,7 @@ Linear congruential generator
 
 \series bold
 \color magenta
+\lang american
 Period
 \series default
 \color inherit
@@ -772,6 +800,7 @@ Period
 
 \series bold
 \color magenta
+\lang american
 theorem
 \series default
 \color inherit
@@ -782,6 +811,7 @@ theorem
 
 \series bold
 \color magenta
+\lang american
 Mersenne prime
 \series default
 \color inherit
@@ -800,6 +830,7 @@ Mersenne prime
 
 \series bold
 \color magenta
+\lang american
 1D random walk
 \series default
 \color inherit
@@ -822,6 +853,7 @@ Mersenne prime
 
 \series bold
 \color magenta
+\lang american
 claim
 \series default
 \color inherit
@@ -848,6 +880,7 @@ claim
 
 \series bold
 \color magenta
+\lang american
 theorem
 \series default
 \color inherit
@@ -866,6 +899,7 @@ theorem
 
 \series bold
 \color magenta
+\lang american
 Compilation error
 \series default
 \color inherit
@@ -876,6 +910,7 @@ Compilation error
 
 \series bold
 \color magenta
+\lang american
 Runtime
 \series default
  
@@ -890,6 +925,7 @@ error
 
 \series bold
 \color magenta
+\lang american
 Transistor
 \series default
 \color inherit
@@ -900,6 +936,7 @@ Transistor
 
 \series bold
 \color purple
+\lang american
 Base
 \series default
  
@@ -930,6 +967,7 @@ representation
 
 \series bold
 \color purple
+\lang american
 claim
 \series default
 \color inherit
@@ -948,6 +986,7 @@ claim
 
 \series bold
 \color purple
+\lang american
 concllusion
 \series default
 \color inherit
@@ -974,6 +1013,7 @@ concllusion
 
 \series bold
 \color purple
+\lang american
 symbol
 \series default
 \color inherit
@@ -1004,6 +1044,7 @@ symbol
 
 \series bold
 \color purple
+\lang american
 name
 \series default
 \color inherit
@@ -1015,6 +1056,7 @@ name
 
 \series bold
 \color purple
+\lang american
 claim
 \series default
 \color inherit
@@ -1025,6 +1067,7 @@ claim
 
 \series bold
 \color purple
+\lang american
 One's
 \series default
  
@@ -1051,6 +1094,7 @@ complement
 
 \series bold
 \color purple
+\lang american
 Two's
 \series default
  
@@ -1077,6 +1121,7 @@ complement
 
 \series bold
 \color purple
+\lang american
 Fixed
 \series default
  
@@ -1103,6 +1148,7 @@ point
 
 \series bold
 \color purple
+\lang american
 Floating point
 \series default
 \color inherit
@@ -1129,6 +1175,7 @@ Floating point
 
 \series bold
 \color purple
+\lang american
 note
 \series default
 \color inherit
@@ -1147,6 +1194,7 @@ note
 
 \series bold
 \color purple
+\lang american
 note
 \series default
 \color inherit
@@ -1169,6 +1217,7 @@ note
 
 \series bold
 \color purple
+\lang american
 theorem
 \series default
 \color inherit
@@ -1183,6 +1232,7 @@ theorem
 
 \series bold
 \color purple
+\lang american
 claim
 \series default
 \color inherit
@@ -1197,6 +1247,7 @@ claim
 
 \series bold
 \color purple
+\lang american
 American Standard Code for Information Interchange (ASCII)
 \series default
 \color inherit
@@ -1207,6 +1258,7 @@ American Standard Code for Information Interchange (ASCII)
 
 \series bold
 \color purple
+\lang american
 Unicode
 \series default
 \color inherit
@@ -1217,6 +1269,7 @@ Unicode
 
 \series bold
 \color brown
+\lang american
 Sequential search
 \series default
 \color inherit
@@ -1327,6 +1380,7 @@ end{algorithm}
 
 \series bold
 \color brown
+\lang american
 Binary search
 \series default
 \color inherit
@@ -1501,6 +1555,8 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+
+\lang american
 \begin_inset Newpage newpage
 \end_inset
 
@@ -1671,6 +1727,7 @@ end{algorithm}
 
 \series bold
 \color brown
+\lang american
 Concatenate merge
 \series default
 \color inherit
@@ -1837,6 +1894,7 @@ end{algorithm}
 
 \series bold
 \color brown
+\lang american
 Merge algorithm
 \series default
 \color inherit
@@ -2200,6 +2258,7 @@ end{algorithm}
 
 \series bold
 \color orange
+\lang american
 Upper bound (Big O)
 \series default
 \color inherit
@@ -2218,6 +2277,7 @@ Upper bound (Big O)
 
 \series bold
 \color orange
+\lang american
 theorem
 \series default
 \color inherit
@@ -2231,6 +2291,7 @@ theorem
 \begin_layout Itemize
 
 \size tiny
+\lang american
 \begin_inset Formula $\left(\substack{\text{for }\left(0\le i<n\right)\\
 \O\left(1\right)
 }
@@ -2249,6 +2310,7 @@ theorem
 \begin_layout Itemize
 
 \size tiny
+\lang american
 \begin_inset Formula $\left(\substack{\text{for }\left(0\le i<n\right)\\
 \O\left(1\right)\\
 \text{for }\left(0\le i<m\right)\\
@@ -2269,6 +2331,7 @@ theorem
 \begin_layout Itemize
 
 \size tiny
+\lang american
 \begin_inset Formula $\left(\substack{\text{for }\left(0\le i<n\right)\qquad\\
 \qquad\text{for }\left(0\le j<m\right)\\
 \quad\O\left(1\right)
@@ -2288,6 +2351,7 @@ theorem
 \begin_layout Itemize
 
 \size tiny
+\lang american
 \begin_inset Formula $\left(\substack{\text{for }\left(0\le i<n\right)\qquad\\
 \qquad\text{for }\left(0\le j<f\left(i\right)\right)\\
 \quad\O\left(1\right)
@@ -2308,6 +2372,7 @@ theorem
 
 \series bold
 \color orange
+\lang american
 conclusion
 \series default
 \color inherit
@@ -2327,6 +2392,8 @@ conclusion
 \end_layout
 
 \begin_layout Itemize
+
+\lang american
 Sequential search 
 \begin_inset Formula $\in\O\left(n\right)$
 \end_inset
@@ -2335,6 +2402,8 @@ Sequential search
 \end_layout
 
 \begin_layout Itemize
+
+\lang american
 Binary search 
 \begin_inset Formula $\in\O\left(\log\left(n\right)\right)$
 \end_inset
@@ -2355,6 +2424,8 @@ Selection sort
 \end_layout
 
 \begin_layout Itemize
+
+\lang american
 Concatenate merge 
 \begin_inset Formula $\in\O\left(n^{2}+m^{2}\right)$
 \end_inset
@@ -2363,6 +2434,8 @@ Concatenate merge
 \end_layout
 
 \begin_layout Itemize
+
+\lang american
 Merge algorithm 
 \begin_inset Formula $\in\O\left(n+m\right)$
 \end_inset
@@ -2374,6 +2447,7 @@ Merge algorithm
 
 \series bold
 \color orange
+\lang american
 Best case (bc)
 \series default
 \color inherit
@@ -2388,6 +2462,7 @@ Best case (bc)
 
 \series bold
 \color orange
+\lang american
 Worst
 \series default
  
@@ -2406,6 +2481,7 @@ case (wc)
 
 \series bold
 \color orange
+\lang american
 claim
 \series default
 \color inherit
@@ -2420,6 +2496,7 @@ claim
 
 \series bold
 \color orange
+\lang american
 Good
 \series default
  
@@ -2442,6 +2519,7 @@ algorithm
 
 \series bold
 \color orange
+\lang american
 Tight bound (Big 
 \begin_inset Formula $\boldsymbol{\Theta}$
 \end_inset
@@ -2464,6 +2542,7 @@ Tight bound (Big
 
 \series bold
 \color orange
+\lang american
 theorem
 \series default
 \color inherit
@@ -2482,6 +2561,7 @@ theorem
 
 \series bold
 \color teal
+\lang american
 Recursive
 \series default
  
@@ -2496,6 +2576,7 @@ function
 
 \series bold
 \color teal
+\lang american
 Base
 \series default
  
@@ -2522,6 +2603,7 @@ case
 
 \series bold
 \color teal
+\lang american
 Recursion
 \series default
  
@@ -2536,6 +2618,7 @@ tree
 
 \series bold
 \color teal
+\lang american
 Fathers
 \series default
 \color inherit
@@ -2558,6 +2641,7 @@ Fathers
 
 \series bold
 \color teal
+\lang american
 Sons
 \series default
 \color inherit
@@ -2580,6 +2664,7 @@ Sons
 
 \series bold
 \color teal
+\lang american
 Root
 \series default
 \color inherit
@@ -2598,6 +2683,7 @@ Root
 
 \series bold
 \color teal
+\lang american
 Envelope
 \series default
  
@@ -2624,6 +2710,7 @@ functions
 
 \series bold
 \color teal
+\lang american
 Quicksort
 \series default
 \color inherit
@@ -2933,6 +3020,7 @@ end{algorithm}
 
 \series bold
 \color teal
+\lang american
 claim
 \series default
 \color inherit
@@ -2947,6 +3035,7 @@ claim
 
 \series bold
 \color teal
+\lang american
 conclusion
 \series default
 \color inherit
@@ -2969,6 +3058,7 @@ conclusion
 
 \series bold
 \color teal
+\lang american
 Average
 \series default
  
@@ -2987,6 +3077,7 @@ case
 
 \series bold
 \color teal
+\lang american
 theorem
 \series default
 \color inherit
@@ -3000,6 +3091,7 @@ theorem
 \begin_layout Standard
 
 \series bold
+\lang american
 Merge sort
 \series default
 : let 
@@ -3010,6 +3102,8 @@ Merge sort
 \end_layout
 
 \begin_layout Standard
+
+\lang american
 \begin_inset ERT
 status open
 
@@ -3166,6 +3260,7 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\lang american
 claim
 \series default
 : merge sort holds 
@@ -3178,6 +3273,7 @@ claim
 \begin_layout Standard
 
 \series bold
+\lang american
 conclusion
 \series default
 : merge sort is 
@@ -3190,6 +3286,7 @@ conclusion
 \begin_layout Standard
 
 \series bold
+\lang american
 Hanoi
 \series default
  
@@ -3204,6 +3301,8 @@ towers
 \end_layout
 
 \begin_layout Standard
+
+\lang american
 \begin_inset ERT
 status open
 
@@ -3356,6 +3455,7 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\lang american
 claim
 \series default
 : hanoi towers holds 
@@ -3368,6 +3468,7 @@ claim
 \begin_layout Standard
 
 \series bold
+\lang american
 conclusion
 \series default
 : hanoi towers is 
@@ -3380,6 +3481,7 @@ conclusion
 \begin_layout Standard
 
 \series bold
+\lang american
 Hanoi
 \series default
  
@@ -3553,6 +3655,7 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\lang american
 claim
 \series default
 : hanoi monster is wc 
@@ -3563,13 +3666,11 @@ claim
 \end_layout
 
 \begin_layout Standard
+
+\lang american
 \begin_inset Formula $ $
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 
 \end_layout
 
