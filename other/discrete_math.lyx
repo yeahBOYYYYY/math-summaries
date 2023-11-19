@@ -174,7 +174,7 @@ End
 \color #faf0e6
 \end_branch
 \branch Logic
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -197,6 +197,9 @@ End
 \papercolumns 1
 \papersides 1
 \paperpagestyle fancy
+\bullet 1 0 7 -1
+\bullet 2 0 0 -1
+\bullet 3 0 6 -1
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -292,6 +295,76 @@ status collapsed
 לוגיקה
 \end_layout
 
+\begin_layout Standard
+הלוגיקה המתמטית היא ענף במתמטיקה שעוסק בביטוי טענות מתמטיות פשוטות ומורכבות.
+ היא מאפשרת הסרת רב משמעות שקיימת בשפות בני אדם ע"י קביעת כללים מדויקים
+ להצגת טענות שונות באופן שניתן להבנה בצורה אחת בלבד.
+ הלוגיקה גם עוסקת במערכות כללים להסקת מסקנות תקפות מתוך נתונים או הנחות
+ שברשותנו.
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+אי־ודאות בשפה
+\end_layout
+
+\end_inset
+
+כשאתם במסעדה ומבקשים קולה המלצרית שואלת 
+\begin_inset Quotes eld
+\end_inset
+
+האם תרצה רגיל 
+\series bold
+או
+\series default
+ זירו?
+\begin_inset Quotes erd
+\end_inset
+
+ כמובן שהמילה או במקרה זה מתייחסת לבחירה בין אחד מהשניים ולא לשניהם, לעומת
+ זאת כששואלים 
+\begin_inset Quotes eld
+\end_inset
+
+האם אתה רעב 
+\series bold
+או
+\series default
+ צמא?
+\begin_inset Quotes erd
+\end_inset
+
+ מתכוונים האם אתה אחד מהשניים )ואולי גם שניהם במקביל(, כלומר למילה 
+\series bold
+או
+\series default
+ יש דו משמעות על פי הקונטקסט.
+\end_layout
+
+\begin_layout Standard
+הלוגיקה התחילה את דרכה ביוון העתיקה כענף בפילוסופיה, אולם בעקבות התפתחויות
+ רבות ומשמעותיות בכיוונים הפורמאליים שלה היא נחשבת כיום כאמור גם לענף במתמטיקה.
+ הלוגיקה משמשת כבסיס התיאורטי המרכזי למדעי המחשב.
+ היא הכרחית, למשל, כאשר אנו מעוניינים 
+\begin_inset Quotes eld
+\end_inset
+
+לדבר
+\begin_inset Quotes erd
+\end_inset
+
+ עם מכונה )כמו מחשב(, זאת משום שתקשורת עם מחשב חייבת להיות מאוד מדויקת וחד
+ משמעית, ועליה לעמוד בכללים לוגיים שנקבעו מראש.
+ פיתוח חשיבה לוגית נחוץ גם להתמודדות עם בעיות שונות ומגוונות, בעיקר בתחומי
+ המדע והטכנולוגיה, שדורשות ניתוח מדויק ומסודר של תהליכים ורעיונות.
+ בנוסף, היכולת לנמק טענות באופן מדויק תוך הימנעות מכשלים לוגיים שיפגעו בתקפות
+ המסקנות היא כלי מרכזי במתמטיקה ובמדעי המחשב.
+\end_layout
+
 \begin_layout Remark
 \begin_inset Argument 1
 status open
@@ -333,7 +406,7 @@ status open
 
 \begin_layout Definition
 \begin_inset Argument 1
-status collapsed
+status open
 
 \begin_layout Plain Layout
 הצרנה
@@ -695,7 +768,7 @@ status open
 \end_inset
 
 
-\begin_inset Formula $\left(\left(V\left(A\right)=T\right)\lor\left(V\left(A\right)=F\right)\right)\land\left(\left(V\left(A\right)\ne T\right)\lor\left(V\left(A\right)\ne F\right)\right)$
+\begin_inset Formula $\left(\left(V\left(A\right)=\text{true}\right)\lor\left(V\left(A\right)=\text{false}\right)\right)\land\left(\left(V\left(A\right)\ne\text{true}\right)\lor\left(V\left(A\right)\ne\text{false}\right)\right)$
 \end_inset
 
 .
@@ -776,7 +849,7 @@ status open
 \end_inset
 
  פסוקים יסודיים אזי 
-\begin_inset Formula $\left(V\left(A\right)=F\right)\implies\left(V\left(A\implies B\right)=T\right)$
+\begin_inset Formula $\left(V\left(A\right)=\text{false}\right)\implies\left(V\left(A\implies B\right)=\text{true}\right)$
 \end_inset
 
 , כלומר 
@@ -1685,28 +1758,28 @@ status open
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $A\land B\equiv B\land A$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $A\lor B\equiv B\lor A$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $A\land\left(B\land C\right)\equiv\left(A\land B\right)\land C$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $A\lor\left(B\lor C\right)\equiv\left(A\lor B\right)\lor C$
 \end_inset
 
@@ -2223,7 +2296,7 @@ separation "3pt"
 shadowsize "4pt"
 framecolor "black"
 backgroundcolor "none"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3674,42 +3747,42 @@ status open
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $A\implies B\equiv\left(\neg A\right)\lor B$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $A\implies B\equiv\left(\neg B\right)\implies\left(\neg A\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $\neg\left(\neg A\right)\equiv A$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $A\land\left(B\lor C\right)\equiv\left(A\land B\right)\lor\left(A\land C\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $A\lor\left(B\land C\right)\equiv\left(A\lor B\right)\land\left(A\lor C\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $\neg\left(A\implies B\right)\equiv A\land\left(\neg B\right)$
 \end_inset
 
@@ -3718,11 +3791,15 @@ status open
 
 \end_deeper
 \begin_layout Proof
-יהיו 
+נוכיח את 
+\begin_inset Formula $2$
+\end_inset
+
+ וכל שאר הטענות ישארו כתרגיל לקורא, יהיו 
 \begin_inset Formula $A,B,C$
 \end_inset
 
- פסוקים
+ פסוקים אזי
 \begin_inset Float table
 wide false
 sideways false
@@ -4120,7 +4197,7 @@ status collapsed
 
 \end_inset
 
-וכל שאר הטענות ישארו כתרגיל לקורא.
+.
 \end_layout
 
 \begin_layout Standard
@@ -4947,7 +5024,11 @@ status open
 \begin_inset Formula $\a_{1}\ldots\a_{n}$
 \end_inset
 
- אם השמה המקיימת 
+ אם השמה המקיימת
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $V\left(\a_{i}\right)=\text{true}$
 \end_inset
 
@@ -4964,7 +5045,7 @@ status open
 \end_inset
 
  גוררת כי מתקיים 
-\begin_inset Formula $V\left(\a\right)=T$
+\begin_inset Formula $V\left(\a\right)=\text{true}$
 \end_inset
 
 .
@@ -5560,6 +5641,10 @@ status open
  טענות נרצה להוכיח או להפריך אותן.
 \end_layout
 
+\begin_layout Subsubsection
+הוכחת קיים
+\end_layout
+
 \begin_layout Remark
 \begin_inset Argument 1
 status open
@@ -5618,11 +5703,8 @@ status open
  ונמשיך משם.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+\begin_layout Subsubsection
+הוכחת לכל
 \end_layout
 
 \begin_layout Remark
@@ -5675,57 +5757,62 @@ status open
  בתחום הכימות ולהמשיך משם.
 \end_layout
 
+\begin_layout Subsection
+הוכחת שקילות
+\end_layout
+
 \begin_layout Claim
-\begin_inset Formula $ $
+לכל פרידיקטים 
+\begin_inset Formula $\phi,\psi$
 \end_inset
 
-
+ מתקיים
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
-\begin_inset Formula $\neg\left(\exists x.P\left(x\right)\right)\equiv\forall x.\neg P\left(x\right)$
+\begin_layout Enumerate
+\begin_inset Formula $\neg\left(\exists x.\phi\left(x\right)\right)\equiv\forall x.\neg\phi\left(x\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $\neg\left(\forall x.P\left(x\right)\right)\equiv\exists x.\neg P\left(x\right)$
+\begin_layout Enumerate
+\begin_inset Formula $\neg\left(\forall x.\phi\left(x\right)\right)\equiv\exists x.\neg\phi\left(x\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $\forall x.\forall y.\phi\left(x,y\right)\equiv\forall y.\forall x.\phi\left(x,y\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $\exists x.\exists y.\phi\left(x,y\right)\equiv\exists y.\exists x.\phi\left(x,y\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $\forall x.\left(\phi\left(x\right)\land\psi\left(x\right)\right)\equiv\left(\forall x.\phi\left(x\right)\right)\land\left(\forall y.\psi\left(y\right)\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $\exists x.\left(\phi\left(x\right)\lor\psi\left(x\right)\right)\equiv\left(\exists x.\phi\left(x\right)\right)\lor\left(\exists y.\psi\left(y\right)\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $\exists x.\forall y.\phi\left(x,y\right)\not\equiv\forall y.\exists x.\phi\left(x,y\right)$
 \end_inset
 
@@ -5734,11 +5821,28 @@ status open
 
 \end_deeper
 \begin_layout Proof
-נוכיח את שתי הטענות האחרונות וכל השאר ישארו כתרגיל לקורא,
+נוכיח את טענות 
+\begin_inset Formula $6,7$
+\end_inset
+
+ וכל השאר ישארו כתרגיל לקורא,
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\numeric on
+6
+\numeric off
+.
+\end_layout
+
+\end_inset
+
 הטענה 
 \begin_inset Formula $\exists x.\left(\phi\left(x\right)\lor\psi\left(x\right)\right)\equiv\left(\exists x.\phi\left(x\right)\right)\lor\left(\exists y.\psi\left(y\right)\right)$
 \end_inset
@@ -5953,7 +6057,20 @@ status open
 \end_layout
 
 \end_deeper
-\begin_layout Itemize
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\numeric on
+7
+\numeric off
+.
+\end_layout
+
+\end_inset
+
 הטענה 
 \begin_inset Formula $\exists x.\forall y.\phi\left(x,y\right)\not\equiv\forall y.\exists x.\phi\left(x,y\right)$
 \end_inset
@@ -6057,6 +6174,11 @@ status open
 \end_layout
 
 \begin_layout Standard
+\begin_inset Branch Logic
+inverted 0
+status collapsed
+
+\begin_layout Standard
 בתורת הקבוצות האובייקט המרכזי הוא )באופן מפתיע( קבוצות, למרות היותם האובייקט
  המרכזי בתחום בקורס זה לא ינתנו הגדרות פורמליות לאובייקט זה, זאת מכיוון
  שהמתמטיקה כמו כל ענף מבוסס על פני הגדרות ואקסיומות אשר אנו מסכימים שהן
@@ -6065,7 +6187,7 @@ status open
 \end_layout
 
 \begin_layout Section
-קבוצה
+קבוצות
 \end_layout
 
 \begin_layout Definition
@@ -6567,7 +6689,11 @@ status open
 \begin_inset Formula $P\left(x\right)$
 \end_inset
 
- פרידיקט אזי 
+ פרידיקט אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\left(P\left(0\right)\land\left(\forall n\in\bbn.P\left(n\right)\implies P\left(n+1\right)\right)\right)\implies\left(\forall n\in\bbn.P\left(n\right)\right)$
 \end_inset
 
@@ -6802,7 +6928,7 @@ status open
 \begin_inset Formula $1+x\ge0$
 \end_inset
 
- ולכן אי בעיה עם החלפת הסימן באי־השיוויון.
+ ולכן אי בעיה עם החלפות הסימן באי־השיוויון.
 \end_layout
 
 \end_deeper
@@ -6959,10 +7085,7 @@ status open
 \begin_inset Formula $\bbr=$
 \end_inset
 
-, להגדרה של המספרים הממשיים על פי חתכי דדקינד ראו קורס
-\begin_inset Formula $\text{A}$
-\end_inset
-
+, להגדרה של המספרים הממשיים על פי חתכי דדקינד ראו ...
  ועל פי סדרות קושי ראו חדו
 \begin_inset Quotes erd
 \end_inset
@@ -7218,7 +7341,10 @@ status open
 \begin_inset Formula $A\subseteq B$
 \end_inset
 
- אם מתקיים 
+ אם מתקיים
+\end_layout
+
+\begin_layout Definition
 \begin_inset Formula $\forall x\left(x\in A\implies x\in B\right)$
 \end_inset
 
@@ -7310,19 +7436,6 @@ status open
 \begin_inset CommandInset label
 LatexCommand label
 name "thm:1.2"
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-hypertarget{thm12}{}
-\end_layout
 
 \end_inset
 
@@ -7748,6 +7861,15 @@ status open
 \end_inset
 
 תהא 
+\begin_inset Formula $F$
+\end_inset
+
+ קבוצה של קבוצות אזי 
+\begin_inset Formula $\bigcap F=\left\{ x\mid\forall A\in F.x\in A\right\} $
+\end_inset
+
+.
+ תהא 
 \begin_inset Formula $I$
 \end_inset
 
@@ -8230,7 +8352,7 @@ status open
 
 \begin_layout Claim
 \begin_inset Argument 1
-status collapsed
+status open
 
 \begin_layout Plain Layout
 חוק הפילוג
@@ -8246,7 +8368,11 @@ status collapsed
 \begin_inset Formula $A\cap\left(B\cup C\right)=\left(A\cap B\right)\cup\left(A\cap C\right)$
 \end_inset
 
- וכן 
+ וכן
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $A\cup\left(B\cap C\right)=\left(A\cup B\right)\cap\left(A\cup C\right)$
 \end_inset
 
@@ -8272,6 +8398,15 @@ status open
 \end_inset
 
 תהא 
+\begin_inset Formula $F$
+\end_inset
+
+ קבוצה של קבוצות אזי 
+\begin_inset Formula $\bigcup F=\left\{ x\mid\exists A\in F.x\in A\right\} $
+\end_inset
+
+.
+ תהא 
 \begin_inset Formula $I$
 \end_inset
 
@@ -8304,7 +8439,11 @@ status open
 \begin_inset Formula $\e\in\bbr_{+}$
 \end_inset
 
- אזי 
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\bigcup_{q\in\bbq}\left(q-\e,q+\e\right)=\bbr$
 \end_inset
 
@@ -8409,7 +8548,11 @@ status open
 \begin_inset Formula $\left\{ A_{i}\mid i\in I\right\} $
 \end_inset
 
- קבוצה של קבוצות זרות בזוגות אזי נסמן 
+ קבוצה של קבוצות זרות בזוגות אזי נסמן
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\biguplus_{i\in I}A_{i}=\bigcup_{i\in I}A_{i}$
 \end_inset
 
@@ -8522,28 +8665,28 @@ status open
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $A\subseteq B$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $A\cap B=A$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $A\backslash B=\emptyset$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $A\cup B=B$
 \end_inset
 
@@ -8854,7 +8997,7 @@ status open
 \end_layout
 
 \begin_layout Section
-יחס
+יחסים
 \end_layout
 
 \begin_layout Subsection
@@ -8883,6 +9026,12 @@ status open
 \end_layout
 
 \begin_layout Claim
+\begin_inset CommandInset label
+LatexCommand label
+name "clm:3.1"
+
+\end_inset
+
 יהיו 
 \begin_inset Formula $a,b,c,d$
 \end_inset
@@ -8895,12 +9044,6 @@ status open
 \end_layout
 
 \begin_layout Proof
-\begin_inset CommandInset label
-LatexCommand label
-name "clm:3.1"
-
-\end_inset
-
 ...
 \end_layout
 
@@ -9002,12 +9145,20 @@ status open
 \begin_inset Formula $\left\{ 1\right\} ^{3}=\left\{ \left<1,1,1\right>\right\} $
 \end_inset
 
+,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left\{ 1,2\right\} \times\left\{ 3,4\right\} \times\left\{ 5,6\right\} =\left\{ \left<1,3,5\right>,\left<1,4,5\right>,\left<2,3,5\right>,\left<2,4,5\right>,\left<1,3,6\right>,\left<1,4,6\right>,\left<2,3,6\right>,\left<2,4,6\right>\right\} $
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Definition
 \begin_inset Argument 1
-status collapsed
+status open
 
 \begin_layout Plain Layout
 המישור הממשי
@@ -9084,17 +9235,25 @@ status collapsed
 \begin_inset Formula $A,B,C$
 \end_inset
 
- קבוצות אזי 
+ קבוצות אזי
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
 \begin_inset Formula $A\times\left(B\cap C\right)=\left(A\times B\right)\cap\left(A\times C\right)$
 \end_inset
 
- וכן 
+.
+\end_layout
+
+\begin_layout Enumerate
 \begin_inset Formula $A\times\left(B\cup C\right)=\left(A\times B\right)\cup\left(A\times C\right)$
 \end_inset
 
 .
 \end_layout
 
+\end_deeper
 \begin_layout Proof
 ...
 \end_layout
@@ -9186,6 +9345,122 @@ status open
 .
 \end_layout
 
+\begin_layout Remark
+אם 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A,A$
+\end_inset
+
+ נאמר כי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\left<a,b\right>\in A\times B$
+\end_inset
+
+ אם מתקיים 
+\begin_inset Formula $\left<a,b\right>\in R$
+\end_inset
+
+ נסמן 
+\begin_inset Formula $aRb$
+\end_inset
+
+, ונאמר כי 
+\begin_inset Formula $a$
+\end_inset
+
+ מתייחס 
+\begin_inset Formula $R$
+\end_inset
+
+ אל 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\left\{ \left<1,3\right>,\left<2,4\right>\right\} $
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $\left\{ 1,2\right\} ,\left\{ 3,4\right\} $
+\end_inset
+
+ אך גם יחס מעל 
+\begin_inset Formula $\bbr,\bbr$
+\end_inset
+
+ וכן מעל 
+\begin_inset Formula $\bbq,\bbc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+אי שיוויונות טבעיים
+\end_layout
+
+\end_inset
+
+נגדיר את היחס 
+\begin_inset Formula $<_{\bbn}$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbn$
+\end_inset
+
+ כך
+\begin_inset Formula $<_{\bbn}=\left\{ \left<n,m\right>\in\bbn^{2}\mid\exists k\in\bbn_{+}.n+k=m\right\} $
+\end_inset
+
+ ונגדיר את היחס 
+\begin_inset Formula $\le_{\bbn}$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $\le_{\bbn}=\left\{ \left<n,m\right>\in\bbn^{2}\mid\exists k\in\bbn.n+k=m\right\} $
+\end_inset
+
+, באותה מידה נגדיר עבור 
+\begin_inset Formula $\bbz,\bbq,\bbr$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -9193,389 +9468,1475 @@ status open
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Branch lbl
-inverted 0
+\begin_layout Definition
+\begin_inset Argument 1
 status open
 
-\begin_layout Standard
-\begin_inset FormulaMacro
-\renewcommand{\P}[2]{\mathcal{P}_{#2}\left(#1\right)}
-{\mathcal{P}_{#2}\left(#1\right)}
+\begin_layout Plain Layout
+יחס הזהות
+\end_layout
+
 \end_inset
 
+תהא 
+\begin_inset Formula $A$
+\end_inset
 
-\end_layout
-
-\begin_layout Standard
-הגדרה:
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $<_{\bbn}=\left\{ \left<n,m\right>\in\bbn^{2}\mid\exists k\in\bbn_{+}.n+k=m\right\} $
+ קבוצה אזי 
+\begin_inset Formula $\text{Id}_{A}=\left\{ \left<a,a\right>\mid a\in A\right\} $
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $\le_{\bbn}=\left\{ \left<n,m\right>\in\bbn^{2}\mid\exists k\in\bbn.n+k=m\right\} $
+\begin_layout Claim
+מתקיים 
+\begin_inset Formula $\le_{\bbn}=<_{\bbn}\cup\text{Id}_{\bbn}$
 \end_inset
 
 .
+ )שימו לב כי זהו שיוויון בין קבוצות(
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $Id_{A}=\left\{ \left<n,n\right>\mid\in A\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-סימון: 
-\begin_inset Formula $aRb\iff\left<a,b\right>\in R$
-\end_inset
-
-.
+\begin_layout Proof
+...
 \end_layout
 
 \begin_layout Standard
-מקור/תחום: יהי 
-\begin_inset Formula $R\subseteq A\times B$
+\begin_inset Separator plain
 \end_inset
 
- אז 
+
+\end_layout
+
+\begin_layout Subsubsection
+תחום ותמונה
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מקור/תחום של יחס
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\dom\left(R\right)=\left\{ a\in A\mid\exists b\in B.aRb\right\} $
 \end_inset
 
+, כלומר 
+\begin_inset Formula $\dom\left(R\right)$
+\end_inset
+
+ קבוצת כל האיברים ב־
+\begin_inset Formula $A$
+\end_inset
+
+ אשר מתייחסים לאיבר כלשהו דרך 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $\dom\left(\left\{ \left<1,3\right>,\left<2,4\right>\right\} \right)=\left\{ 1,2\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $\dom\left(\left\{ \left<X,x\right>\in\P\left(\bbn\right)\times\bbn\mid x\in X\right\} \right)=\P\left(\bbn\right)\backslash\left\{ \emptyset\right\} $
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Standard
-תמונה: יהי 
-\begin_inset Formula $\subseteq A\times B$
+\begin_inset Separator plain
 \end_inset
 
- אז 
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+תמונה של יחס
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\im\left(R\right)=\left\{ b\in B\mid\exists a\in A.aRb\right\} $
 \end_inset
 
+, כלומר 
+\begin_inset Formula $\im\left(R\right)$
+\end_inset
+
+ קבוצת כל האיברים ב־
+\begin_inset Formula $B$
+\end_inset
+
+ אשר מתייחסים אליהם דרך 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+מתקיים 
+\begin_inset Formula $\im\left(\left\{ \left<1,3\right>,\left<2,4\right>\right\} \right)=\left\{ 3,4\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $\im\left(\left\{ \left<x,\ceil x\right>\mid x\in\bbr\right\} \right)=\bbz$
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Standard
-יחס הופכי: 
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+יחס הופכי
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+יחס הופכי
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+ נגדיר יחס 
+\begin_inset Formula $R^{-1}$
+\end_inset
+
+ על 
+\begin_inset Formula $B,A$
+\end_inset
+
+ כך 
 \begin_inset Formula $R^{-1}=\left\{ \left<b,a\right>\mid aRb\right\} $
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-טענה: 
-\begin_inset Formula $\left(R^{-1}\right)^{-1}=R$
+\begin_layout Example
+נגדיר 
+\begin_inset Formula $R=\left\{ \left<1,3\right>,\left<2,4\right>\right\} $
 \end_inset
 
-, 
-\begin_inset Formula $\dom\left(R^{-1}\right)=\im\left(R\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-הרכבה: יהי 
-\begin_inset Formula $R\subseteq A\times B$
-\end_inset
-
- ויהי 
-\begin_inset Formula $S\subseteq B\times C$
+ מעל 
+\begin_inset Formula $\bbn$
 \end_inset
 
  אזי 
-\begin_inset Formula $S\circ R=\left\{ \left<a,c\right>\in A\times C\mid\exists b\in B.aRb\land bSc\right\} $
+\begin_inset Formula $R^{-1}=\left\{ \left<3,1\right>,\left<4,2\right>\right\} $
+\end_inset
+
+ מוגדר על 
+\begin_inset Formula $\bbn$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-טענה: 
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\left<a,b\right>\in A\times B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(aRb\right)\iff\left(bR^{-1}a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נשאר כתרגיל לקורא.
+\end_layout
+
+\begin_layout Corollary
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\dom\left(R\right)=\im\left(R^{-1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R=\left(R^{-1}\right)^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsubsection
+הרכבה
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+הרכבת יחסים
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $S$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $B,C$
+\end_inset
+
+ נגדיר יחס 
+\begin_inset Formula $S\circ R$
+\end_inset
+
+ מעל 
+\begin_inset Formula $A,C$
+\end_inset
+
+ כך 
+\begin_inset Formula $S\circ R=\left\{ \left<a,c\right>\in A\times C\mid\exists b\in B.\left(aRb\right)\land\left(bSc\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+מתקיים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\{ \left<1,3\right>,\left<2,4\right>\right\} \circ\left\{ \left<4,1\right>,\left<3,2\right>\right\} =\left\{ \left<4,3\right>,\left<3,4\right>\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\{ \left<\left\{ n\right\} ,n+1\right>\mid n\in\bbn\right\} \circ\left\{ \left<n,\left\{ n\right\} \right>\mid n\in\bbn\right\} =\left\{ \left<n,n+1\right>\mid n\in\bbn\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\scriptscriptstyle \left\{ \left<a,x\right>,\left<b,y\right>,\left<c,y\right>,\left<d,z\right>\right\} \circ\left\{ \left<1,a\right>,\left<1,b\right>,\left<2,a\right>,\left<3,a\right>,\left<3,c\right>\right\} =\left\{ \left<1,x\right>,\left<1,y\right>,\left<2,x\right>,\left<3,x\right>,\left<3,y\right>\right\} }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+אסוציאטיביות הרכבה
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+ יהי 
+\begin_inset Formula $S$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $B,C$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $T$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $C,D$
+\end_inset
+
+ אזי 
+\begin_inset Formula $T\circ\left(S\circ R\right)=\left(T\circ S\right)\circ R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Remark
+מכאן ואילך אם קיימת פעולת הרכבה בין שני יחסים ניתן להניח כי התחום והתמונה
+ שלהם מזדהים לפי ההגדרה.
+\end_layout
+
+\begin_layout Claim
+יהיו 
+\begin_inset Formula $R,S$
+\end_inset
+
+ יחסים אזי 
 \begin_inset Formula $\left(R\circ S\right)^{-1}=S^{-1}\circ R^{-1}$
 \end_inset
 
-, 
-\begin_inset Formula $R\circ Id_{A}=R=Id_{A}\circ R$
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+ אזי מתקיים 
+\begin_inset Formula $R=R\circ\text{Id}_{A}=\text{Id}_{B}\circ R$
 \end_inset
 
 .
 \end_layout
 
+\begin_layout Proof
+...
+\end_layout
+
 \begin_layout Standard
-יחס רפלקסיבי: 
-\begin_inset Formula $R\subseteq A^{2}$
+\begin_inset Separator plain
 \end_inset
 
- שמקיים 
+
+\end_layout
+
+\begin_layout Section
+יחסי שקילות
+\end_layout
+
+\begin_layout Subsubsection
+יחס רפלקסיבי
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+יחס רפלקסיבי
+\end_layout
+
+\end_inset
+
+יחס 
+\begin_inset Formula $R$
+\end_inset
+
+ מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ המקיים 
 \begin_inset Formula $\forall a\in A.aRa$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-יחס סימטרי: 
-\begin_inset Formula $R\subseteq A^{2}$
+\begin_layout Example
+היחס 
+\begin_inset Formula $\left\{ \left<1,2\right>,\left<1,1\right>,\left<2,2\right>\right\} $
 \end_inset
 
- שמקיים 
+ מעל 
+\begin_inset Formula $\left\{ 1,2\right\} $
+\end_inset
+
+ הינו יחס רפלקסיבי, לעומת זאת אותו היחס מעל 
+\begin_inset Formula $\bbn$
+\end_inset
+
+ אינו יחס רפלקסיבי.
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R$
+\end_inset
+
+ רפלקסיבי אם
+\begin_inset Quotes erd
+\end_inset
+
+ם 
+\begin_inset Formula $\text{Id}_{A}\subseteq R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+יחס סימטרי
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+יחס סימטרי
+\end_layout
+
+\end_inset
+
+יחס 
+\begin_inset Formula $R$
+\end_inset
+
+ מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ המקיים 
 \begin_inset Formula $\forall a,b\in A.aRb\implies bRa$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-יחס טרנזיטיבי: 
-\begin_inset Formula $R\subseteq A^{2}$
+\begin_layout Example
+היחס 
+\begin_inset Formula $\left\{ \left<1,2\right>,\left<2,1\right>,\left<3,3\right>\right\} $
 \end_inset
 
- שמקיים 
-\begin_inset Formula $\forall a,b,c\in A.aRb\land bRc\implies aRc$
+ מעל 
+\begin_inset Formula $\left\{ 1,2,3\right\} $
 \end_inset
 
-.
+ הינו יחס סימטרי, לעומת זאת 
+\begin_inset Formula $\left\{ \left<1,2\right>,\left<1,1\right>\right\} $
+\end_inset
+
+ יחס לא סימטרי מעל 
+\begin_inset Formula $\left\{ 1,2\right\} $
+\end_inset
+
+ כי 
+\begin_inset Formula $\left<2,1\right>$
+\end_inset
+
+ לא ביחס.
 \end_layout
 
-\begin_layout Standard
-יחס שקילות: )רפלקסיבי(
-\begin_inset Formula $\land$
-\end_inset
-
-)סימטרי(
-\begin_inset Formula $\land$
-\end_inset
-
-)טרנזיטיבי(.
-\end_layout
-
-\begin_layout Standard
-מחלק: 
-\begin_inset Formula $\forall n,m\in\bbz.n|m\iff\exists k\in\bbz.kn=m$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-משפט: 
-\begin_inset Formula $\forall n\in\bbz.\forall k\in\bbz\backslash\left\{ 0\right\} .\exists!r\in\left\{ 0,\ldots,k\right\} .\exists!q\in\bbz.n=k\cdot q+r$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-טענה: יהי 
-\begin_inset Formula $R\subseteq A^{2}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
+\begin_layout Claim
+יהי 
 \begin_inset Formula $R$
 \end_inset
 
- רפלקסיבי 
-\begin_inset Formula $\iff$
+ יחס מעל 
+\begin_inset Formula $A$
 \end_inset
 
- 
-\begin_inset Formula $Id_{A}\subseteq R$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
+ אזי 
 \begin_inset Formula $R$
 \end_inset
 
- סימטרי 
-\begin_inset Formula $\iff$
+ סימטרי אם
+\begin_inset Quotes erd
 \end_inset
 
- 
+ם 
 \begin_inset Formula $R^{-1}=R$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Subsubsection
+יחס טרנזיטיבי
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+יחס טרנזיטיבי
+\end_layout
+
+\end_inset
+
+יחס 
 \begin_inset Formula $R$
 \end_inset
 
- טרנזיטיבי 
-\begin_inset Formula $\iff$
+ מעל 
+\begin_inset Formula $A$
 \end_inset
 
- 
+ המקיים 
+\begin_inset Formula $\forall a,b,c\in A.\left(aRb\land bRc\right)\implies aRc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+היחס 
+\begin_inset Formula $\left\{ \left<1,2\right>,\left<2,1\right>,\left<1,1\right>\right\} $
+\end_inset
+
+ מעל 
+\begin_inset Formula $\left\{ 1,2\right\} $
+\end_inset
+
+ הינו יחס טרנזיטיבי, לעומת זאת 
+\begin_inset Formula $\left\{ \left<1,2\right>,\left<2,3\right>\right\} $
+\end_inset
+
+ יחס לא טרנזיטיבי מעל 
+\begin_inset Formula $\left\{ 1,2,3\right\} $
+\end_inset
+
+ כי 
+\begin_inset Formula $\left<1,3\right>$
+\end_inset
+
+ אינו ביחס.
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R$
+\end_inset
+
+ סימטרי אם
+\begin_inset Quotes erd
+\end_inset
+
+ם 
 \begin_inset Formula $R\circ R\subseteq R$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-מחלקת שקילות: יהי 
-\begin_inset Formula $R\subseteq A^{2}$
-\end_inset
+\begin_layout Definition
+\begin_inset Argument 1
+status open
 
- יחס שקילות ויהי 
-\begin_inset Formula $x\in A$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left[x\right]_{R}=\left\{ y\in A\mid xRy\right\} $
-\end_inset
-
-.
+\begin_layout Plain Layout
+יחס שקילות
 \end_layout
 
-\begin_layout Standard
-קבוצת מנה/מודולו: יהי 
-\begin_inset Formula $R\subseteq A^{2}$
 \end_inset
 
- יחס שקילות אזי 
-\begin_inset Formula $\nicefrac{A}{R}=\left\{ \left[x\right]_{R}\mid x\in A\right\} $
+יחס 
+\begin_inset Formula $R$
 \end_inset
 
-.
+ מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ רפלקסיבי, סימטרי וטרנזיטיבי.
 \end_layout
 
-\begin_layout Standard
-טענה: יהי 
-\begin_inset Formula $R\subseteq A^{2}$
-\end_inset
-
- יחס שקילות ויהיו 
-\begin_inset Formula $a,b\in A$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\left(\left[a\right]_{R}\cap\left[b\right]_{R}\ne\emptyset\right)\implies\left[a\right]_{R}=\left[b\right]_{R}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $aRb\iff b\in\left[a\right]_{R}\iff\left[a\right]_{R}=\left[b\right]_{R}\iff a\in\left[b\right]_{R}\iff bRa$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\neg\left(aRb\right)\iff\left[a\right]_{R}\cap\left[b\right]_{R}=\emptyset$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-מערכת נציגים: יהי 
-\begin_inset Formula $R\subseteq A^{2}$
-\end_inset
-
- יחס שקילות אזי 
-\begin_inset Formula $A'$
-\end_inset
-
- המקיימת 
-\begin_inset Formula $\left(\forall a,b\in A'.\left[a\right]\cap\left[a'\right]=\emptyset\right)\land\left(\forall a\in A.\exists b\in A.aRb\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-חלוקה: תהא 
+\begin_layout Example
+תהא 
 \begin_inset Formula $A$
 \end_inset
 
  קבוצה אזי 
-\begin_inset Formula $\Pi\subseteq\P A{}\backslash\left\{ \emptyset\right\} $
+\begin_inset Formula $A\times A$
 \end_inset
 
- המקיים 
-\begin_inset Formula $\left(\biguplus\Pi=A\right)\land\left(\forall X,Y\in\Pi.X\ne Y\implies X\cap T=\emptyset\right)$
+ יחס שקילות, 
+\begin_inset Formula $\text{Id}_{A}$
+\end_inset
+
+ יחס שקילות, 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ יחס שקילות, כמו כן
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left\{ \left<1,1\right>,\left<2,3\right>,\left<3,2\right>\right\} $
+\end_inset
+
+ יחס שקילות מעל 
+\begin_inset Formula $\left\{ 1,2,3\right\} $
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-המשפט היסודי של האריתמטיקה: 
-\begin_inset Formula $\forall t\in\bbn_{+}.\exists!k\in\bbn.\exists!\left<a_{1},\ldots,a_{k}\right>\in\bbp^{k}.a_{1}\cdot\ldots\cdot a_{k}=t$
+\begin_layout Subsection
+מחלקת שקילות
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מחלקת שקילות
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס שקילות מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a\right]_{R}=\left\{ b\in A\mid aRb\right\} $
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-משפט: יש אינסוף ראשוניים.
-\end_layout
-
-\begin_layout Standard
-החלוקה המושרית מהיחס: יהי 
-\begin_inset Formula $R\subseteq A^{2}$
+\begin_layout Example
+מתקיים 
+\begin_inset Formula $\left[n\right]_{\text{Id}_{\bbn}}=\left\{ n\right\} $
 \end_inset
 
- יחס שקילות אזי 
+, 
+\begin_inset Formula $\left[n\right]_{\bbn^{2}}=\bbn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מדולו/קבוצת המנה
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס שקילות מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nicefrac{A}{R}=\left\{ \left[a\right]_{R}\mid a\in A\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+מתקיים 
+\begin_inset Formula $\nicefrac{\bbn}{\text{Id}_{\bbn}}=\left\{ \left\{ n\right\} \mid n\in\bbn\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $\nicefrac{\bbn}{\bbn^{2}}=\left\{ \bbn\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס שקילות מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $a,b\in A$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(aRb\right)\iff\left(\left[a\right]_{R}=\left[b\right]_{R}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\neg aRb\right)\iff\left(\left[a\right]_{R}\cap\left[b\right]_{R}=\emptyset\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מערכת נציגים
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס שקילות מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+ נקראת מערכת נציגים של 
+\begin_inset Formula $R$
+\end_inset
+
+ אם היא מקיימת
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+יחידות איבר מכל מחלקת שקילות: 
+\begin_inset Formula $\forall a,b\in B.\left(a\ne b\implies\neg aRb\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיום איבר מכל מחלקת שקילות: 
+\begin_inset Formula $\forall a\in A.\exists b\in B.aRb$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+נגדיר את היחס 
+\begin_inset Formula $S=\left\{ \left<1,4\right>,\left<2,3\right>,\left<3,5\right>,\left<2,5\right>\right\} $
+\end_inset
+
+ מעל 
+\begin_inset Formula $A=\left\{ 1,2,3,4,5,6\right\} $
+\end_inset
+
+ ונגדיר את יחס השקילות 
+\begin_inset Formula $R=\text{Id}_{A}\cup S\cup S^{-1}$
+\end_inset
+
+ נשים לב כי מתקיים
+\begin_inset Formula 
+\begin{align*}
+\left[1\right]_{R} & =\left\{ 1,4\right\}  & \left[2\right]_{R} & =\left\{ 2,3,5\right\}  & \left[3\right]_{R} & =\left\{ 2,3,5\right\} \\
+\left[4\right]_{R} & =\left\{ 1,4\right\}  & \left[5\right]_{R} & =\left\{ 2,3,5\right\}  & \left[6\right]_{R} & =\left\{ 6\right\} 
+\end{align*}
+
+\end_inset
+
+ולכן נקבל כי 
+\begin_inset Formula $\nicefrac{A}{R}=\left\{ \left\{ 1,4\right\} ,\left\{ 2,3,5\right\} ,\left\{ 6\right\} \right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ 1,2,6\right\} $
+\end_inset
+
+ מערכת נציגים, באותה מידה גם 
+\begin_inset Formula $\left\{ 4,5,6\right\} $
+\end_inset
+
+ מערכת נציגים.
+\end_layout
+
+\begin_layout Subsection
+חלוקה
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+חלוקה
+\end_layout
+
+\end_inset
+
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\Pi\subseteq\P\left(A\right)\backslash\left\{ \emptyset\right\} $
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\forall X,Y\in\Pi.\left(X\ne Y\right)\implies\left(X\cap Y=\emptyset\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\biguplus_{X\in\Pi}X=A$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+מתקיים כי 
+\begin_inset Formula $\left\{ \bbn_{\text{even}},\bbn_{\text{odd}}\right\} $
+\end_inset
+
+ חלוקה של 
+\begin_inset Formula $\bbn$
+\end_inset
+
+, באותה מידה גם 
+\begin_inset Formula $\left\{ \left\{ 0\right\} ,\bbn_{+}\right\} $
+\end_inset
+
+ חלוקה של 
+\begin_inset Formula $\bbn$
+\end_inset
+
+, כמו כן 
+\begin_inset Formula $\left\{ \left(n,n+1\right)\mid n\in\bbz\right\} \uplus\left\{ \bbz\right\} $
+\end_inset
+
+ חלוקה של 
+\begin_inset Formula $\bbr$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+יהיו 
+\begin_inset Formula $\Pi_{1},\Pi_{2}$
+\end_inset
+
+ חלוקות של 
+\begin_inset Formula $A$
+\end_inset
+
+ המקיימות 
+\begin_inset Formula $\Pi_{1}\subseteq\Pi_{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Pi_{1}=\Pi_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsubsection
+יחס מושרה וחלוקה מושרית
+\end_layout
+
+\begin_layout Claim
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+יחס וחלוקה מושרים
+\end_layout
+
+\end_inset
+
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+תהא 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ חלוקה של 
+\begin_inset Formula $A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R_{\Pi}=\biguplus_{X\in\Pi}X^{2}$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ נקרא ל־
+\begin_inset Formula $R_{\Pi}$
+\end_inset
+
+ היחס המושרה מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ מהחלוקה 
+\begin_inset Formula $\Pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\nicefrac{A}{R}$
 \end_inset
 
  חלוקה.
+ נקרא ל־
+\begin_inset Formula $\nicefrac{A}{R}$
+\end_inset
+
+ החלוקה המושרת של 
+\begin_inset Formula $A$
+\end_inset
+
+ מהיחס 
+\begin_inset Formula $R$
+\end_inset
+
+.
 \end_layout
 
-\begin_layout Standard
-היחס המושרה מהחלוקה: תהא 
+\end_deeper
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Theorem
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה יהי 
+\begin_inset Formula $S$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ותהא 
 \begin_inset Formula $\Pi$
 \end_inset
 
- חלוקה אזי 
-\begin_inset Formula $R_{\Pi}=\biguplus_{X\in\Pi}X^{2}$
+ חלוקה של 
+\begin_inset Formula $A$
 \end_inset
 
- יחס שקילות.
-\end_layout
-
-\begin_layout Standard
-משפט: 
-\begin_inset Formula $R_{\left(\nicefrac{A}{S}\right)}=S$
+ אזי 
+\begin_inset Formula $R_{\nicefrac{A}{S}}=S$
 \end_inset
 
-, 
+ וכן 
 \begin_inset Formula $\nicefrac{A}{R_{\Pi}}=\Pi$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-יחס מלא: 
-\begin_inset Formula $R\subseteq A\times B$
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Example
+תהא 
+\begin_inset Formula $A$
 \end_inset
 
- שמקיים 
+ קבוצה אזי 
+\begin_inset Formula $\nicefrac{R}{A^{2}}=\left\{ A\right\} $
+\end_inset
+
+ חלוקה, 
+\begin_inset Formula $\nicefrac{R}{\text{Id}_{R}}=\left\{ \left\{ a\right\} \mid a\in A\right\} $
+\end_inset
+
+ חלוקה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+נגדיר חלוקה 
+\begin_inset Formula $\Pi=\left\{ \left[n,n+1\right)\mid n\in\bbz\right\} $
+\end_inset
+
+ של 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R_{\Pi}=\left\{ \left<x,y\right>\in\bbr^{2}\mid\floor x=\floor y\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+טבעת מוביוס
+\end_layout
+
+\end_inset
+
+נסתכל על המרחב 
+\begin_inset Formula $A=\left[0,1\right]^{2}$
+\end_inset
+
+ ונגדיר יחס עליו
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R=\text{Id}_{A}\cup\left\{ \left<\left<0,x\right>,\left<1,1-x\right>\right>\mid x\in\left[0,1\right]\right\} $
+\end_inset
+
+ )ודאו כי זהו יחס שקילות!( כעת נסתכל על 
+\begin_inset Formula $\nicefrac{A}{R}$
+\end_inset
+
+ נשים לב כי בקבוצה זו הנקודות מהצורה 
+\begin_inset Formula $\left<0,x\right>,\left<1,1-x\right>$
+\end_inset
+
+ עבור 
+\begin_inset Formula $x\in\left[0,1\right]$
+\end_inset
+
+ מודבקות, ולכן נקבל את הצורה הבאה
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[
+\end_layout
+
+\begin_layout Plain Layout
+
+	hide axis,
+\end_layout
+
+\begin_layout Plain Layout
+
+	view={40}{40}
+\end_layout
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addplot3 [
+\end_layout
+
+\begin_layout Plain Layout
+
+	surf, shader=faceted interp,
+\end_layout
+
+\begin_layout Plain Layout
+
+	point meta=x,
+\end_layout
+
+\begin_layout Plain Layout
+
+	colormap/greenyellow,
+\end_layout
+
+\begin_layout Plain Layout
+
+	samples=40,
+\end_layout
+
+\begin_layout Plain Layout
+
+	samples y=5,
+\end_layout
+
+\begin_layout Plain Layout
+
+	z buffer=sort,
+\end_layout
+
+\begin_layout Plain Layout
+
+	domain=0:360,
+\end_layout
+
+\begin_layout Plain Layout
+
+	y domain=-0.5:0.5
+\end_layout
+
+\begin_layout Plain Layout
+
+] (
+\end_layout
+
+\begin_layout Plain Layout
+
+	{(1+0.5*y*cos(x/2)))*cos(x)},
+\end_layout
+
+\begin_layout Plain Layout
+
+	{(1+0.5*y*cos(x/2)))*sin(x)},
+\end_layout
+
+\begin_layout Plain Layout
+
+	{0.5*y*sin(x/2)});
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addplot3 [
+\end_layout
+
+\begin_layout Plain Layout
+
+	samples=50,
+\end_layout
+
+\begin_layout Plain Layout
+
+	domain=-145:180, % The domain needs to be adjusted manually, depending
+ on the camera angle, unfortunately
+\end_layout
+
+\begin_layout Plain Layout
+
+	samples y=0,
+\end_layout
+
+\begin_layout Plain Layout
+
+	thick
+\end_layout
+
+\begin_layout Plain Layout
+
+] (
+\end_layout
+
+\begin_layout Plain Layout
+
+	{cos(x)},
+\end_layout
+
+\begin_layout Plain Layout
+
+	{sin(x)},
+\end_layout
+
+\begin_layout Plain Layout
+
+	{0});
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+פונקציות
+\end_layout
+
+\begin_layout Subsubsection
+יחס חד־ערכי
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+יחס חד־ערכי/פונקציה חלקית
+\end_layout
+
+\end_inset
+
+יחס 
+\begin_inset Formula $R$
+\end_inset
+
+ מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+ המקיים
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\forall a\in A.\forall b_{1},b_{2}\in B.\left(aRb_{1}\land aRb_{2}\right)\implies\left(b_{1}=b_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+יחס מלא
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+יחס מלא
+\end_layout
+
+\end_inset
+
+יחס 
+\begin_inset Formula $R$
+\end_inset
+
+ מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+ המקיים 
 \begin_inset Formula $\forall a\in A.\exists b\in B.aRb$
 \end_inset
 
@@ -9583,132 +10944,472 @@ status open
 \end_layout
 
 \begin_layout Standard
-פונקציה חלקית/יחס חד ערכי )ח
-\begin_inset Quotes erd
+\begin_inset Separator plain
 \end_inset
 
-ע(: 
-\begin_inset Formula $R\subseteq A\times B$
-\end_inset
 
- שמקיים 
-\begin_inset Formula $\forall a\in A.\forall b_{1},b_{2}\in B.aRb_{1}\land aRb_{2}\implies b_{1}=b_{2}$
-\end_inset
-
-.
 \end_layout
 
-\begin_layout Standard
-סימון: תהא 
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+פונקציה
+\end_layout
+
+\end_inset
+
+יחס 
 \begin_inset Formula $f$
 \end_inset
 
- ח
-\begin_inset Quotes erd
+ מעל 
+\begin_inset Formula $A,B$
 \end_inset
 
-ע אזי 
-\begin_inset Formula $f\left(a\right)=b\iff afb$
+ יקרא פונקציה אם הינו חד־ערכי ומלא.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+נסמן 
+\begin_inset Formula $A\to B=A^{B}={}^{B}A=\left\{ f\subseteq A\times B\mid\text{ פונקציה}f\right\} $
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-פונקציה: 
-\begin_inset Formula $R\subseteq A\times B$
+\begin_layout Itemize
+תהא 
+\begin_inset Formula $f\in A\to B$
 \end_inset
 
- המקיים )מלא(
-\begin_inset Formula $\land$
-\end_inset
-
-)ח
-\begin_inset Quotes erd
-\end_inset
-
-ע(.
-\end_layout
-
-\begin_layout Standard
-הגדרה: 
-\begin_inset Formula $A\to B=\left\{ f\in\P{A\times B}{}\mid\text{ יחס מלא וח"ע}f\right\} $
+ נסמן 
+\begin_inset Formula $f:A\to B$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-סימון: 
-\begin_inset Formula $^{B}A=A^{B}=A\to B$
+\begin_layout Itemize
+תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $a,b\in A\times B$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $afb$
+\end_inset
+
+ נסמן 
+\begin_inset Formula $f\left(a\right)=b$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-הערה: 
+\end_deeper
+\begin_layout Remark
+שימו לב כי הסימון 
+\begin_inset Formula $f\left(a\right)=b$
+\end_inset
+
+ אפשרי עבור פונקציות לעומת יחסים מהיות פונקציה חד־ערכית.
+\end_layout
+
+\begin_layout Example
+נגדיר פונקציה 
+\begin_inset Formula $f\in\left\{ a,b,c\right\} ^{\left\{ 1,2,3\right\} }$
+\end_inset
+
+ כך 
+\begin_inset Formula $f=\left\{ \left<1,a\right>,\left<2,a\right>,\left<3,b\right>\right\} $
+\end_inset
+
+, נגדיר פונקציה 
+\begin_inset Formula $F:\left(\bbr\to\bbr\right)\to\bbr$
+\end_inset
+
+ כך 
+\begin_inset Formula $F=\left\{ \left<g,x\right>\in{}^{\bbr}\bbr\times\bbr\mid g\left(2\right)=x\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+יהיו 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קבוצות סופיות אזי 
 \begin_inset Formula $\left|A^{B}\right|=\left|A\right|^{\left|B\right|}$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-סימון: 
-\begin_inset Formula $f:A\to B\equiv f\in A\to B$
+\begin_layout Subsection
+כתיב למבדא
+\end_layout
+
+\begin_layout Subsubsection
+טווח
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+טווח
+\end_layout
+
+\end_inset
+
+תהא 
+\begin_inset Formula $f\in B^{A}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\range\left(R\right)=B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+שימו לב כי 
+\begin_inset Formula $\im\left(f\right)\subseteq\range\left(f\right)$
+\end_inset
+
+ אך לא תמיד מתקיים 
+\begin_inset Formula $\im\left(f\right)=\range\left(f\right)$
+\end_inset
+
+, נגדיר 
+\begin_inset Formula $f\in\left\{ a,b,c\right\} ^{\left\{ 1,2,3\right\} }$
+\end_inset
+
+ כך 
+\begin_inset Formula $f=\left\{ \left<1,a\right>,\left<2,a\right>,\left<3,b\right>\right\} $
+\end_inset
+
+ נשים לב כי 
+\begin_inset Formula $\range\left(f\right)=\left\{ a,b,c\right\} $
+\end_inset
+
+ אך 
+\begin_inset Formula $\im\left(f\right)=\left\{ a,b\right\} $
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-כתיב למבדא: 
-\begin_inset Formula $\left(\lambda x\in A.f\left(x\right)\right)=\left\{ \left<x,f\left(x\right)\right>\mid x\in A\right\} $
+מטרת כתיב 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ היא לתת לנו יכולת ודרך לכתיבת פונקציות עם פירוט לגבי תחומה, במקום לכתוב
+ 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $f\left(x\right)=\ldots$
+\end_inset
+
+ נוכל להצהיר כי 
+\begin_inset Formula $f$
+\end_inset
+
+ מקבלת קלט 
+\begin_inset Formula $x$
+\end_inset
+
+ מהקבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+ ומחזירה פלט 
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+.
+ כתיב זה שימושי בעיקר כעקרון פורמלי וכן כאשר יש אי ודאות ברורה בתחום הפונקציה
+ )נגיד תחום 
+\begin_inset Formula $f\left(n\right)=n^{2}$
+\end_inset
+
+ עלול להיות 
+\begin_inset Formula $\bbn$
+\end_inset
+
+ או 
+\begin_inset Formula $\bbn_{+}$
+\end_inset
+
+ או 
+\begin_inset Formula $\bbz$
+\end_inset
+
+ ועוד(.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+כתיב 
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $f=\lambda x\in A.f\left(x\right)$
+\end_inset
+
+.
+ נראה דוגמה על מנת להבין את מבנה הכתיב, נסתכל על 
+\begin_inset Formula $f=\lambda x\in\bbr.x^{2}$
+\end_inset
+
+ נרחיב על כל חלק בביטוי
+\begin_inset Formula 
+\[
+\underbrace{f}_{\text{שם הפונקציה}}=\lambda\underbrace{x\in\bbr}_{\text{ ממשי}x\text{הצהרה כי קלט הפונקציה הוא }}.\underbrace{x^{2}}_{\text{פלט הפונקציה}}
+\]
+
+\end_inset
+
+וכעת ניתן לכתוב 
+\begin_inset Formula $f\left(3\right)=3^{2}=9$
 \end_inset
 
 .
 \end_layout
 
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+כתיב 
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+מתקיים
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\text{Id}_{A}=\lambda a\in A.a$
+\end_inset
+
+.
+ )בפרט 
+\begin_inset Formula $\text{Id}_{A}$
+\end_inset
+
+ פונקציה(
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f=\lambda\left<x,y\right>\in\bbr^{2}.x+y$
+\end_inset
+
+, פונקציית החיבור הממשית.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f=\lambda n\in\bbn.\left\{ x\in\bbn\mid x\le n\right\} $
+\end_inset
+
+, פונקציה 
+\begin_inset Formula $f:\bbn\to\P\left(\bbn\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F=\lambda f\in\bbn^{\bbn}.\lambda n\in\bbn.f\left(n\right)+1$
+\end_inset
+
+, פונקציה 
+\begin_inset Formula $F:\bbn^{\bbn}\to\bbn^{\bbn}$
+\end_inset
+
+, שימו לב כי לדוגמה
+\begin_inset Formula 
+\begin{align*}
+F\left(\lambda x\in\bbn.x^{2}\right)\left(3\right)= & \left(\lambda n\in\bbn.\left(\lambda x\in\bbn.x^{2}\right)\left(n\right)+1\right)\left(3\right)\\
+= & \left(\lambda n\in\bbn.n^{2}+1\right)\left(3\right)=3^{2}+1=10
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Remark
+נסמן 
+\begin_inset Formula $f\left(a_{1}\ldots a_{n}\right)=f\left(\left<a_{1}\ldots a_{n}\right>\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+פונקציית 
+\begin_inset Formula $\text{curry}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+תהיינה 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ קבוצות נגדיר 
+\begin_inset Formula $\text{curry}_{A,B,C}:C^{A\times B}\to\left(C^{B}\right)^{A}$
+\end_inset
+
+ כך
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\text{curry}_{A,B,C}=\lambda f\in C^{A\times B}.\lambda a\in A.\lambda b\in B.f\left(a,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+פונקציית 
+\begin_inset Formula $\text{curry}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+נסתכל על
+\begin_inset Formula 
+\begin{align*}
+\text{curry}_{\bbr,\bbn,\bbr}\left(\lambda\left<x,n\right>\in\bbr\times\bbn.x^{n}\right)\left(\pi\right)\left(3\right)= & \left(\lambda a\in A.\lambda b\in B.\left(\lambda\left<x,n\right>\in\bbr\times\bbn.x^{n}\right)\left(a,b\right)\right)\left(\pi\right)\left(3\right)\\
+= & \left(\lambda b\in B.\left(\lambda\left<x,n\right>\in\bbr\times\bbn.x^{n}\right)\left(\pi,b\right)\right)\left(3\right)\\
+= & \left(\lambda\left<x,n\right>\in\bbr\times\bbn.x^{n}\right)\left(\pi,3\right)\\
+= & \pi^{3}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-שיוויון פונקציות: יהיו 
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+שיוויון
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+שיוויון פונקציות
+\end_layout
+
+\end_inset
+
+יהיו 
 \begin_inset Formula $f,g$
 \end_inset
 
- פונקציות אזי 
-\begin_inset Formula $f=g\iff\left(\dom\left(f\right)=\dom\left(g\right)\right)\land\left(\forall x\in\dom\left(f\right).f\left(x\right)=g\left(x\right)\right)$
+ פונקציות נאמר כי 
+\begin_inset Formula $f=g$
+\end_inset
+
+ אם
+\begin_inset Quotes erd
+\end_inset
+
+ם מתקיים
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left(\dom\left(f\right)=\dom\left(g\right)\right)\land\left(\forall x\in\dom\left(f\right).f\left(x\right)=g\left(x\right)\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-תמונה: אם 
-\begin_inset Formula $f\left(a\right)=b$
-\end_inset
-
- אזי 
-\begin_inset Formula $b$
-\end_inset
-
-.
+\begin_layout Subsection
+מקור תמונה וצמצום
 \end_layout
 
-\begin_layout Standard
-מקור: אם 
-\begin_inset Formula $f\left(a\right)=b$
-\end_inset
-
- אזי 
-\begin_inset Formula $a$
-\end_inset
-
-.
+\begin_layout Subsubsection
+תמונה איבר איבר
 \end_layout
 
-\begin_layout Standard
-קבוצת התמונות: תהא 
-\begin_inset Formula $f\in A\to B$
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+תמונה איבר איבר
+\end_layout
+
+\end_inset
+
+תהא 
+\begin_inset Formula $f:A\to B$
 \end_inset
 
  ותהא 
@@ -9722,9 +11423,22 @@ status open
 .
 \end_layout
 
-\begin_layout Standard
-קבוצת המקורות: תהא 
-\begin_inset Formula $f\in A\to B$
+\begin_layout Subsubsection
+מקור איבר איבר
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+קבוצת המקורות
+\end_layout
+
+\end_inset
+
+תהא 
+\begin_inset Formula $f:A\to B$
 \end_inset
 
  ותהא 
@@ -9738,68 +11452,41 @@ status open
 .
 \end_layout
 
-\begin_layout Standard
-טווח: תהא 
-\begin_inset Formula $f$
+\begin_layout Claim
+תהא 
+\begin_inset Formula $f:A\to B$
 \end_inset
 
- פונקציה אזי 
-\begin_inset Formula $X$
-\end_inset
-
- שמקיימת 
-\begin_inset Formula $X\supseteq\im\left(f\right)$
+ אזי 
+\begin_inset Formula $A=\biguplus_{b\in B}f^{-1}\left[\left\{ b\right\} \right]$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-סימון: אם 
-\begin_inset Formula $X$
-\end_inset
-
- טווח של 
-\begin_inset Formula $f$
-\end_inset
-
- אז 
-\begin_inset Formula $\left(f\right)=X$
-\end_inset
-
-
-\begin_inset Formula $\range$
-\end_inset
-
-.
+\begin_layout Proof
+...
 \end_layout
 
-\begin_layout Standard
-סימון: 
-\begin_inset Formula $f\left(a,b\right)=f\left(\left<a,b\right>\right)$
-\end_inset
-
-.
+\begin_layout Example
+...
 \end_layout
 
-\begin_layout Standard
-פונקציית 
-\begin_inset Formula $\text{curry}$
-\end_inset
-
-: 
-\begin_inset Formula $\text{curry}:C^{A\times B}\to\left(C^{B}\right)^{A}$
-\end_inset
-
- שמוגדרת 
-\begin_inset Formula $\text{curry}=\lambda f\in C^{A\times B}.\lambda a\in A.\lambda b\in A.f\left(\left<a,b\right>\right)$
-\end_inset
-
-.
+\begin_layout Subsubsection
+צמצום
 \end_layout
 
-\begin_layout Standard
-צמצום: תהא 
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+צמצום
+\end_layout
+
+\end_inset
+
+תהא 
 \begin_inset Formula $f:A\to B$
 \end_inset
 
@@ -9807,39 +11494,52 @@ status open
 \begin_inset Formula $X\subseteq A$
 \end_inset
 
- נגדיר 
-\begin_inset Formula $f_{\upharpoonright_{X}}:X\to B$
-\end_inset
-
- כך 
+ אזי 
 \begin_inset Formula $f_{\upharpoonright_{X}}=\lambda x\in X.f\left(x\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-משפט: תהנא 
-\begin_inset Formula $f\in A\to B$
+\begin_layout Claim
+תהא 
+\begin_inset Formula $f:A\to B$
 \end_inset
 
-, 
-\begin_inset Formula $g\in B\to C$
+ ותהא 
+\begin_inset Formula $X\subseteq A$
 \end_inset
 
  אזי 
-\begin_inset Formula $\forall a\in A.\left(g\circ f\right)\left(a\right)=g\left(f\left(a\right)\right)$
+\begin_inset Formula $f_{\upharpoonright_{X}}=f\cap\left(X\times B\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-משפט: תהנא 
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsection
+הרכבה
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+הרכבת פונקציות היא פונקציה
+\end_layout
+
+\end_inset
+
+תהא 
 \begin_inset Formula $f:A\to B$
 \end_inset
 
-, 
+ ותהא 
 \begin_inset Formula $g:B\to C$
 \end_inset
 
@@ -9850,52 +11550,161 @@ status open
 .
 \end_layout
 
-\begin_layout Standard
-טענה: תהנא 
-\begin_inset Formula $h:A\to B$
-\end_inset
-
-, 
-\begin_inset Formula $g:B\to C$
-\end_inset
-
-, 
-\begin_inset Formula $f:C\to D$
-\end_inset
-
- אזי 
-\begin_inset Formula $f\circ\left(g\circ h\right)=\left(f\circ g\right)\circ h$
-\end_inset
-
-.
+\begin_layout Proof
+...
 \end_layout
 
-\begin_layout Standard
-פונקציה חד חד ערכית )חח
-\begin_inset Quotes erd
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+משמעות ההרכבה
+\end_layout
+
 \end_inset
 
-ע(: 
+תהא 
 \begin_inset Formula $f:A\to B$
 \end_inset
 
- שמקיימת 
-\begin_inset Formula $\forall a_{1},a_{2}.f\left(a_{1}\right)=f\left(a_{2}\right)\implies a_{1}=a_{2}$
+ תהא 
+\begin_inset Formula $g:B\to C$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(g\circ f\right)\left(x\right)=g\left(f\left(x\right)\right)$
+\end_inset
+
+.
+ כלומר פעולת ההרכבה מדמה הפעלת סדרת פונקציות אחת אחרי השנייה מהפנימית אל
+ החיצונית.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Example
+נגדיר 
+\begin_inset Formula $f=\lambda x\in\bbr.x^{2}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $g=\lambda x\in\bbr.2^{x}$
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\[
+\left(g\circ f\right)\left(x\right)=g\left(f\left(x\right)\right)=g\left(x^{2}\right)=2^{x^{2}}
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula $g\circ f=\lambda x\in\bbr.2^{x^{2}}$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Claim
+תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ פונקציה אזי 
+\begin_inset Formula $f\circ f^{-1}=\text{Id}_{\im\left(f\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsection
+זיווג
+\end_layout
+
+\begin_layout Subsubsection
+יחס חד־חד־ערכי
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+יחס חד־חד־ערכי )חח
+\begin_inset Quotes erd
+\end_inset
+
+ע(
+\end_layout
+
+\end_inset
+
+יחס 
+\begin_inset Formula $R$
+\end_inset
+
+ מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+ המקיים
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\forall a_{1},a_{2}\in A.\forall b\in B.\left(a_{1}Rb\land a_{2}Rb\right)\implies\left(a_{1}=a_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע אזי 
+\begin_inset Formula $f^{-1}\circ f=\text{Id}_{\dom\left(f\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 פונקציה 
 \begin_inset Formula $n$
 \end_inset
 
-־ערכית: 
+־ערכית
+\end_layout
+
+\end_inset
+
+פונקציה 
 \begin_inset Formula $f:A\to B$
 \end_inset
 
- שמקיימת 
+ המקיימת 
 \begin_inset Formula $\forall b\in B.\left|f^{-1}\left[\left\{ b\right\} \right]\right|=n$
 \end_inset
 
@@ -9903,64 +11712,177 @@ status open
 \end_layout
 
 \begin_layout Standard
-פונקציה על: 
-\begin_inset Formula $f:A\to B$
+\begin_inset Separator plain
 \end_inset
 
- שמקיימת 
-\begin_inset Formula $\forall b\in B.\exists a\in A.f\left(a\right)=b$
-\end_inset
 
-.
 \end_layout
 
 \begin_layout Standard
-משפט: תהא 
-\begin_inset Formula $f:A\to B$
+\begin_inset Separator plain
 \end_inset
 
 
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $f$
+\begin_layout Claim
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+הרכבת פונקציות חח
+\begin_inset Quotes erd
+\end_inset
+
+ע
+\end_layout
+
+\end_inset
+
+יהיו 
+\begin_inset Formula $f,g$
 \end_inset
 
  חח
 \begin_inset Quotes erd
 \end_inset
 
-ע 
-\begin_inset Formula $\iff$
+ע אזי 
+\begin_inset Formula $g\circ f$
 \end_inset
 
- 
-\begin_inset Formula $f^{-1}$
-\end_inset
-
- ח
+ חח
 \begin_inset Quotes erd
 \end_inset
 
 ע.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+יחס על
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+יחס על
+\end_layout
+
+\end_inset
+
+יחס 
+\begin_inset Formula $R$
+\end_inset
+
+ מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\forall b\in B.\exists a\in A.aRb$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+הרכבת פונקציות על
+\end_layout
+
+\end_inset
+
+יהיו 
+\begin_inset Formula $f,g$
+\end_inset
+
+ על אזי 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ על.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsubsection
+פונקציה הפיכה
+\end_layout
+
+\begin_layout Theorem
+תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+)
 \begin_inset Formula $f$
 \end_inset
 
- על 
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע(
 \begin_inset Formula $\iff$
 \end_inset
 
- 
+)
 \begin_inset Formula $f^{-1}$
 \end_inset
 
- מלאה.
+ חד־ערכית(.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
+)
+\begin_inset Formula $f$
+\end_inset
+
+ על(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ מלאה(.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Corollary
+תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ אזי )
 \begin_inset Formula $f$
 \end_inset
 
@@ -9968,116 +11890,401 @@ status open
 \begin_inset Quotes erd
 \end_inset
 
-ע ועל 
+ע ועל(
+\begin_inset Formula $\left(f^{-1}:B\to A\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+פונקציה הפיכה/זיווג
+\end_layout
+
+\end_inset
+
+פונקציה 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ עבורה קיימת 
+\begin_inset Formula $g:B\to A$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left(g\circ f=\text{Id}_{A}\right)\land\left(f\circ g=\text{Id}_{B}\right)$
+\end_inset
+
+.
+ במקרה זה נקרא לפונקציה 
+\begin_inset Formula $g$
+\end_inset
+
+ ההופכית של 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+)
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע(
 \begin_inset Formula $\iff$
 \end_inset
 
- 
+)קיימת 
+\begin_inset Formula $g:B\to A$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $g\circ f=\text{Id}_{A}$
+\end_inset
+
+(.
+ )ונאמר כי 
+\begin_inset Formula $f$
+\end_inset
+
+ הפיכה משמאל(
+\end_layout
+
+\begin_layout Enumerate
+)
+\begin_inset Formula $f$
+\end_inset
+
+ על(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיימת 
+\begin_inset Formula $g:B\to A$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $f\circ g=\text{Id}_{B}$
+\end_inset
+
+(.
+ )ונאמר כי 
+\begin_inset Formula $f$
+\end_inset
+
+ הפיכה מימין(
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Corollary
+תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ אזי )
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $f$
+\end_inset
+
+ הפיכה(.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+יחידות ההופכית
+\end_layout
+
+\end_inset
+
+תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ הפיכה אזי 
 \begin_inset Formula $f^{-1}:B\to A$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Standard
-הפיכות: תהא 
-\begin_inset Formula $f:A\to B$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-הפיכה משמאל: 
-\begin_inset Formula $\exists g\in B\to A.g\circ f=Id_{A}$
+ ההופכית של 
+\begin_inset Formula $f$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
-הפיכה מימין: 
-\begin_inset Formula $\exists g\in B\to A.f\circ g=Id_{B}$
-\end_inset
-
-.
+\begin_layout Proof
+...
 \end_layout
 
-\begin_layout Itemize
-זיווג/הפיכה: )הפיכה משמאל(
-\begin_inset Formula $\land$
-\end_inset
+\begin_layout Proof
+\begin_inset Branch lbl
+inverted 0
+status collapsed
 
-)הפיכה מימין(.
+\begin_layout Section
+עוצמות
 \end_layout
 
 \begin_layout Standard
-משפט: יהיו 
-\begin_inset Formula $A,B\ne\emptyset$
-\end_inset
-
- ותהא 
-\begin_inset Formula $f:A\to B$
+\begin_inset Separator plain
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $f$
-\end_inset
-
- חח
-\begin_inset Quotes erd
-\end_inset
-
-ע 
-\begin_inset Formula $\iff$
-\end_inset
-
- 
-\begin_inset Formula $f$
-\end_inset
-
- הפיכה משמאל.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $f$
-\end_inset
-
- על 
-\begin_inset Formula $\iff$
-\end_inset
-
- 
-\begin_inset Formula $f$
-\end_inset
-
- הפיכה מימין.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $f$
-\end_inset
-
- חח
-\begin_inset Quotes erd
-\end_inset
-
-ע ועל 
-\begin_inset Formula $\iff$
-\end_inset
-
- 
-\begin_inset Formula $f$
-\end_inset
-
- הפיכה.
 \end_layout
 
 \begin_layout Standard
-משפט: אם קיימת פונקציה הופכית אז היא יחידה.
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch lbl
+inverted 0
+status collapsed
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\P}[2]{\mathcal{P}_{#2}\left(#1\right)}
+{\mathcal{P}_{#2}\left(#1\right)}
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -14069,6 +16276,425 @@ a_{n-m} & else
 \end_inset
 
 
+\end_layout
+
+\begin_layout Part
+שונות
+\end_layout
+
+\begin_layout Itemize
+הגדרת 
+\begin_inset Formula $\bbn$
+\end_inset
+
+ )מערכת פאנו(, 
+\begin_inset Formula $\bbz$
+\end_inset
+
+, 
+\begin_inset Formula $\bbq$
+\end_inset
+
+, 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ )חתכי דדקינד(.
+\end_layout
+
+\begin_layout Subsection
+מספרים קונגואנטים
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מחלק
+\end_layout
+
+\end_inset
+
+יהיו 
+\begin_inset Formula $m,n\in\bbz$
+\end_inset
+
+ נאמר כי 
+\begin_inset Formula $m$
+\end_inset
+
+ מחלק את 
+\begin_inset Formula $n$
+\end_inset
+
+ ונסמן 
+\begin_inset Formula $m|n$
+\end_inset
+
+ אם מתקיים 
+\begin_inset Formula $\exists k\in\bbz.m\cdot k=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מספרים קונגואנטים
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $n\in\bbz$
+\end_inset
+
+ נאמר כי 
+\begin_inset Formula $m,k\in\bbz$
+\end_inset
+
+ קואונגרואנטים מודולו 
+\begin_inset Formula $n$
+\end_inset
+
+ ונסמן 
+\begin_inset Formula $m\equiv k\mod n$
+\end_inset
+
+ אם מתקיים 
+\begin_inset Formula $n|m-k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+יהי 
+\begin_inset Formula $n\in\bbz$
+\end_inset
+
+ נסמן 
+\begin_inset Formula $n\bbz=\left\{ \left<m,k\right>\in\bbz^{2}\mid m\equiv k\mod n\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $n\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $n\bbz$
+\end_inset
+
+ יחס שקילות מעל 
+\begin_inset Formula $\bbz$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsubsection
+חלוקה עם שארית
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+חלוקה עם שארית
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $n\in\bbz$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $k\in\bbz\backslash\left\{ 0\right\} $
+\end_inset
+
+ אזי קיימים ויחידים 
+\begin_inset Formula $r,q\in\bbz$
+\end_inset
+
+ כך שמתקיים 
+\begin_inset Formula $0\le r\le k$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $n=qk+r$
+\end_inset
+
+.
+ נקרא במצב כזה ל־
+\begin_inset Formula $r$
+\end_inset
+
+ שארית החלוקה של 
+\begin_inset Formula $n$
+\end_inset
+
+ ב־
+\begin_inset Formula $k$
+\end_inset
+
+ ונסמן 
+\begin_inset Formula $r=n\%k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Claim
+יהיו 
+\begin_inset Formula $z,w\in\bbz$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbz\backslash\left\{ 0\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(z\%n=w\%n\right)\iff z\left(n\bbz\right)w$
+\end_inset
+
+.
+ )כאשר 
+\begin_inset Formula $z\left(n\bbz\right)w$
+\end_inset
+
+ אומר כי 
+\begin_inset Formula $z,w$
+\end_inset
+
+ עומדים ביחס 
+\begin_inset Formula $n\bbz$
+\end_inset
+
+(
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+פירוק לראשוניים
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+המשפט היסודי של האריתמטיקה
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $n\in\bbn_{+}\backslash\left\{ 1\right\} $
+\end_inset
+
+ אזי קיימים ויחידים 
+\begin_inset Formula $p_{1}\ldots p_{m}\in\bbp$
+\end_inset
+
+ וכן 
+\begin_inset Formula $k_{1}\ldots k_{m}\in\bbn_{+}$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $n=\prod_{i=1}^{m}p_{i}^{k_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Corollary
+יהי 
+\begin_inset Formula $n\in\bbn_{+}\backslash\left\{ 1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\exists p\in\bbp.p|n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+יהי 
+\begin_inset Formula $n\in\bbn_{+}\backslash\left\{ 1\right\} $
+\end_inset
+
+ מהמשפט היסודי של האריתמטיקה מתקיים 
+\begin_inset Formula $n=\prod_{i=1}^{m}p_{i}^{k_{i}}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $p_{1}\ldots p_{m}\in\bbp$
+\end_inset
+
+ וכן 
+\begin_inset Formula $k_{1}\ldots k_{m}\in\bbn_{+}$
+\end_inset
+
+, נשים לב כי 
+\begin_inset Formula $m\ge1$
+\end_inset
+
+ וכן 
+\begin_inset Formula $k_{1}\ge1$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $p_{1}\cdot\left(p_{1}^{k_{1}-1}\cdot\prod_{i=2}^{m}p_{i}^{k_{i}}\right)=n$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $p_{1}|n$
+\end_inset
+
+ כמו כן כנאמר 
+\begin_inset Formula $p_{1}\in\bbp$
+\end_inset
+
+ ובפרט קיבלנו את הנדרש.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+קיום אינסוף ראשוניים
+\end_layout
+
+\end_inset
+
+קיימים אינסוף ראשוניים.
+\end_layout
+
+\begin_layout Proof
+נניח בשלילה כי קיים מספר סופי של ראשוניים, נקרא למספר זה 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $\bbp=\left\{ p_{1}\ldots p_{n}\right\} $
+\end_inset
+
+, נגדיר 
+\begin_inset Formula $q=1+\prod_{i=1}^{n}p_{i}$
+\end_inset
+
+ נשים לב כי 
+\begin_inset Formula $q>p_{i}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $q\ne p_{i}$
+\end_inset
+
+ עבור כל 
+\begin_inset Formula $i\in\left\{ 1\ldots n\right\} $
+\end_inset
+
+ בפרט 
+\begin_inset Formula $q\notin\bbp$
+\end_inset
+
+, מהמסקנה הקודמת נובע כי קיים 
+\begin_inset Formula $p_{j}\in\bbp$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $p_{j}|q$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $p_{j}|\left(1+\prod_{i=1}^{n}p_{i}\right)$
+\end_inset
+
+, מתכונות המחלק נקבל כי מתקיים 
+\begin_inset Formula $\left(p_{j}|1\right)\land\left(p_{j}\mid\prod_{i=1}^{n}p_{i}\right)$
+\end_inset
+
+ אך אם 
+\begin_inset Formula $p_{j}|1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $p_{j}\cdot n=1$
+\end_inset
+
+ עבור 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ וזה אפשרי אם
+\begin_inset Quotes erd
+\end_inset
+
+ם 
+\begin_inset Formula $p_{j}=1$
+\end_inset
+
+ סתירה לעובדה כי 
+\begin_inset Formula $p_{j}\in\bbp$
+\end_inset
+
+, בפרט קיימים אינסוף ראשוניים.
 \end_layout
 
 \end_body
