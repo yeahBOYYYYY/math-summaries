@@ -213,7 +213,7 @@ End
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "E:/University/macros.lyx"
+filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 
 \end_inset
 
@@ -14893,7 +14893,15 @@ f=\lambda n\in\bbn.\lambda m\in\bbn.\begin{cases}
 
 \end_deeper
 \begin_layout Claim
-עוצמה מקיימת את כל התכונות אשר היינו מצפים משיוויון גדלים,
+עוצמה מקיימת את כל התכונות אשר היינו מצפים מ
+\begin_inset Quotes erd
+\end_inset
+
+שיוויון גדלים
+\begin_inset Quotes erd
+\end_inset
+
+,
 \end_layout
 
 \begin_deeper
@@ -15180,7 +15188,7 @@ status open
 
 \end_inset
 
-נשים לב כי 
+נראה כי 
 \begin_inset Formula $\left|\bbn\right|=\left|\bbn\times\bbn\right|$
 \end_inset
 
@@ -15448,11 +15456,386 @@ f=\lambda n\in\bbz.\begin{cases}
 
 \end_layout
 
+\begin_layout Definition
+נסמן 
+\begin_inset Formula $\left[0\right]=\emptyset$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left[n\right]=\left\{ m\in\bbn\mid m<n\right\} $
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+קבוצה סופית
+\end_layout
+
+\end_inset
+
+קבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+ הינה קבוצה סופית אם 
+\begin_inset Formula $\exists n\in\bbn.\left|A\right|=\left|\left[n\right]\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+באותה מידה קבוצה אינסופית הינה קבוצה אשר אינה סופית.
+\end_layout
+
+\begin_layout Claim
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה סופית המקיימת 
+\begin_inset Formula $\left|A\right|=\left|\left[n\right]\right|$
+\end_inset
+
+ עבור 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+יהי 
+\begin_inset Formula $b\notin A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|A\uplus\left\{ b\right\} \right|=\left|\left[n+1\right]\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+יהי 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|A\backslash\left\{ a\right\} \right|=\left|\left[n-1\right]\right|$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Claim
+מתקיים
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+יהיו 
+\begin_inset Formula $n,m\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(m<n\right)\implies\left(\left|\left[m\right]\right|<\left|\left[n\right]\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה סופית ותהא 
+\begin_inset Formula $Y\subseteq X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $Y$
+\end_inset
+
+ קבוצה סופית.
+\end_layout
+
+\begin_layout Enumerate
+תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה סופית ותהא 
+\begin_inset Formula $Y\subsetneq X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|Y\right|<\left|X\right|$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Corollary
+מתקיים
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה סופית אזי 
+\begin_inset Formula $\exists!n\in\bbn.\left|A\right|=\left|\left[n\right]\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+תהא 
+\begin_inset Formula $X\subsetneq\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|X\right|<\left|\left[n\right]\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+תהיינה 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ קבוצות סופיות באשר 
+\begin_inset Formula $\left|X\right|=\left|Y\right|$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ אזי )
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $f$
+\end_inset
+
+ על(.
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ נסמן 
+\begin_inset Formula $\left|\left[n\right]\right|=n$
+\end_inset
+
+, תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה סופית המקיימת 
+\begin_inset Formula $\left|A\right|=\left|\left[n\right]\right|$
+\end_inset
+
+ נסמן 
+\begin_inset Formula $\left|A\right|=n$
+\end_inset
+
+.
+ כמו כן נוכל לסמן 
+\begin_inset Formula $\left|A\right|<m$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left|A\right|\le m$
+\end_inset
+
+ כמו האי־שיוונים הרגילים עבור 
+\begin_inset Formula $\bbn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קבוצות סופיות באשר 
+\begin_inset Formula $\left|A\right|=n$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left|B\right|=m$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left|A\right|\le\left|B\right|\iff n\le_{\bbn}m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left|A\right|=\left|B\right|\iff n=_{\bbn}m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left|A\right|<\left|B\right|\iff n<_{\bbn}m$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsection
+קבוצות בנות מנייה
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+קבוצה בת מנייה
+\end_layout
+
+\end_inset
+
+קבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left|A\right|=\left|\bbn\right|$
+\end_inset
+
+, נסמן 
+\begin_inset Formula $\left|A\right|=\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+מתקיים
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ סופית אזי 
+\begin_inset Formula $\left|A\right|<\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ אינסופית אזי 
+\begin_inset Formula $\aleph_{0}\le\left|A\right|$
+\end_inset
+
+.
+ 
+\color lightgray
+)אקסיומת בחירה(
+\end_layout
+
+\begin_layout Enumerate
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה אזי )
+\begin_inset Formula $A$
+\end_inset
+
+ אינסופית(
+\begin_inset Formula $\left(\exists B\subsetneq A.\left|A\right|=\left|B\right|\right)\iff$
+\end_inset
+
+.
+ 
+\color lightgray
+)אקסיומת בחירה(
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Corollary
+קיימת עוצמה אינסופית מינימלית והיא 
+\begin_inset Formula $\aleph_{0}$
+\end_inset
+
+.
+ 
+\color lightgray
+)אקסיומת בחירה(
 \end_layout
 
 \begin_layout Standard
