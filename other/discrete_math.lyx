@@ -213,7 +213,7 @@ End
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "C:/Users/user/OneDrive/Documents/macros.lyx"
+filename "E:/University/macros.lyx"
 
 \end_inset
 
@@ -10812,7 +10812,6 @@ status open
 \end_inset
 
 .
- )עבור הוכחה פורמלית ומלאה ראו ...(
 \end_layout
 
 \begin_layout Standard
@@ -14722,27 +14721,6 @@ status open
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
 \begin_layout Definition
 \begin_inset Argument 1
 status open
@@ -15513,7 +15491,7 @@ status open
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
-
+ אזי
 \end_layout
 
 \begin_deeper
@@ -15684,19 +15662,6 @@ status open
 \end_inset
 
 .
- כמו כן נוכל לסמן 
-\begin_inset Formula $\left|A\right|<m$
-\end_inset
-
- וכן 
-\begin_inset Formula $\left|A\right|\le m$
-\end_inset
-
- כמו האי־שיוונים הרגילים עבור 
-\begin_inset Formula $\bbn$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Corollary
@@ -15742,6 +15707,22 @@ status open
 ...
 \end_layout
 
+\begin_layout Remark
+בעקבות שתי המסקנות וההגדרה הקודמת נוכל לסמן 
+\begin_inset Formula $\left|A\right|<m$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left|A\right|\le m$
+\end_inset
+
+ וכדומה בדיוק כמו האי־שיוונים הרגילים עבור 
+\begin_inset Formula $\bbn$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 קבוצות בנות מנייה
 \end_layout
@@ -15766,6 +15747,18 @@ status open
 
 , נסמן 
 \begin_inset Formula $\left|A\right|=\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+הקבוצות 
+\begin_inset Formula $\bbn,\bbz,\bbq,\bbn^{2}$
+\end_inset
+
+ וכדומה הן בנות מנייה, נסמן לדוגמה 
+\begin_inset Formula $\left|\bbq\right|=\aleph_{0}$
 \end_inset
 
 .
@@ -15828,14 +15821,421 @@ status open
 \end_layout
 
 \begin_layout Corollary
-קיימת עוצמה אינסופית מינימלית והיא 
 \begin_inset Formula $\aleph_{0}$
 \end_inset
 
-.
+ הינה העוצמה האינסופית המינימלית.
  
 \color lightgray
 )אקסיומת בחירה(
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+איחוד לכל היותר בן־מנייה של קבוצות לכל היותר בנות מנייה הוא לכל היותר בן
+ מנייה
+\end_layout
+
+\end_inset
+
+תהא 
+\begin_inset Formula ${\cal A}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left|{\cal A}\right|\le\aleph_{0}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\forall X\in{\cal A}.\left|X\right|\le\aleph_{0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\bigcup{\cal A}\right|\le\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Example
+יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ נראה כי 
+\begin_inset Formula $\left|\bbn^{n}\right|=\aleph_{0}$
+\end_inset
+
+, נוכיח באינדוקציה על 
+\begin_inset Formula $n$
+\end_inset
+
+, עבור 
+\begin_inset Formula $n=1$
+\end_inset
+
+ ברור, נניח נכונות עבור 
+\begin_inset Formula $n-1$
+\end_inset
+
+ נשים לב כי
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+נגדיר פונקציה 
+\begin_inset Formula $f:\bbn\to\bbn^{n}$
+\end_inset
+
+ כך 
+\begin_inset Formula $f=\lambda m\in\bbn.\left<m,0,\ldots,0\right>$
+\end_inset
+
+ נשים לב כי זוהי פונקציה חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ולכן 
+\begin_inset Formula $\left|\bbn\right|\le\left|\bbn^{n}\right|$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $\aleph_{0}\le\left|\bbn^{n}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+נגדיר 
+\begin_inset Formula $I=\bbn$
+\end_inset
+
+ וכן 
+\begin_inset Formula $A_{i}=\left\{ i\right\} \times\bbn^{n-1}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in I$
+\end_inset
+
+ נשים לב כי 
+\begin_inset Formula $\left|I\right|\le\aleph_{0}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left|A_{i}\right|=\left|\bbn^{n-1}\right|=\aleph_{0}$
+\end_inset
+
+ בפרט 
+\begin_inset Formula $\left|A_{i}\right|\le\aleph_{0}$
+\end_inset
+
+ אזי ממשפט איחוד בן מנייה של קבוצות בנות מנייה מתקיים
+\begin_inset Formula 
+\[
+\left|\bbn^{n}\right|=\left|\bigcup_{i\in\bbn}\left(\left\{ i\right\} \times\bbn^{n-1}\right)\right|=\left|\bigcup_{i\in I}A_{i}\right|\le\aleph_{0}
+\]
+
+\end_inset
+
+ודאו כי אתם מבינים את המעברים והוכיחו במידת הצורך את המעבר השמאלי.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+אזי קיבלנו כי 
+\begin_inset Formula $\left(\aleph_{0}\le\left|\bbn^{n}\right|\right)\land\left(\left|\bbn^{n}\right|\le\aleph_{0}\right)$
+\end_inset
+
+ וממשפט קש
+\begin_inset Quotes erd
+\end_inset
+
+ב נקבל כי 
+\begin_inset Formula $\left|\bbn^{n}\right|=\aleph_{0}$
+\end_inset
+
+ כנדרש.
+\end_layout
+
+\begin_layout Subsection
+אינסופיים בגדלים שונים
+\end_layout
+
+\begin_layout Subsubsection
+שיטת הלכסון
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+האלכסון של קנטור
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\left|\bbn\right|<\left|\left\{ 0,1\right\} ^{\bbn}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsubsection
+עוצמת קבוצת החזקה
+\end_layout
+
+\begin_layout Definition
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\left|\left\{ 0,1\right\} ^{A}\right|=2^{\left|A\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+פונקציית האינדיקטור
+\end_layout
+
+\end_inset
+
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+ נגדיר
+\begin_inset Formula 
+\[
+\mathds{1}_{B}^{A}=\lambda a\in A.\begin{cases}
+1 & a\in B\\
+0 & \text{else}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+הסימון 
+\begin_inset Formula $\chi_{B}^{A}$
+\end_inset
+
+ גם מוכר עבור פונקציית האינדיקטור, כלומר 
+\begin_inset Formula $\chi_{B}^{A}=\mathds{1}_{B}^{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\left|\P\left(A\right)\right|=2^{\left|A\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+קנטור
+\end_layout
+
+\end_inset
+
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\left|A\right|<\left|\P\left(A\right)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Corollary
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה אזי
+\begin_inset Formula $\left|A\right|<2^{\left|A\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Corollary
+לא קיימת עוצמה גדולה ביותר.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsection
+עוצמת הרצף
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+עוצמת הרצף
+\end_layout
+
+\end_inset
+
+נגדיר 
+\begin_inset Formula $\left|\bbr\right|=\aleph$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+הסימון 
+\begin_inset Formula $\left|\bbr\right|=\mathfrak{c}$
+\end_inset
+
+ הינו הסימון המקובל יותר, אך אנו נשתמש בסימון 
+\begin_inset Formula $\aleph$
+\end_inset
+
+ מכיוון ואנחנו דוברי עברית ולא באמת בגלל סיבה מוצדקת אחרת.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\aleph=2^{\aleph_{0}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Corollary
+יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\bbr^{n}\right|=2^{\aleph_{0}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Theorem
+יהיו 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a<b$
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\[
+\left|\left(a,b\right)\right|=\left|\left[a,b\right)\right|=\left|\left(a,b\right]\right|=\left|\left[a,b\right]\right|=\aleph
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsubsection
+השערת הרצף
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Subsection
+חשבון עוצמות
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -19649,328 +20049,13 @@ a_{n-m} & else
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Branch Logic
+inverted 0
+status open
+
 \begin_layout Part
 שונות
-\end_layout
-
-\begin_layout Section
-אקסיומות ZFC
-\end_layout
-
-\begin_layout Standard
-במערכת האקסיומתית הסטנדרטית בקורס )וכלל במתמטיקה( יש 
-\begin_inset Formula $7$
-\end_inset
-
- אקסיומות, שש מהן אקסיומות 
-\begin_inset Formula $\text{ZF}$
-\end_inset
-
- והנוספת היא 
-\begin_inset Formula $\text{C}$
-\end_inset
-
- )אקסיומת הבחירה(.
-\end_layout
-
-\begin_layout Subsection
-אקסיומות ZF
-\end_layout
-
-\begin_layout Definition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-אקסיומת ההיקפיות
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\forall x\forall y\left(\left(\forall z\left(z\in x\iff z\in y\right)\right)\implies x=y\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-אקסיומת היסוד
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\forall x\left(\left(\exists a.a\in x\right)\implies\exists y\left(y\in x\land\neg\exists z\left(z\in x\land z\in y\right)\right)\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-אקסיומת האיחוד
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\forall x\exists y\left(\forall z\left(\left(z\in y\right)\iff\exists a\left(z\in a\land a\in x\right)\right)\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-אקסיומת האינסוף
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\exists x\left(\left(\exists a\left(a\in x\land\neg\exists b\left(b\in a\right)\right)\right)\land\left(\forall y\in x\left(\left(y\cup\left\{ y\right\} \right)\in x\right)\right)\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-אקסימות קבוצת החזקה
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\forall x\exists y\forall z\left(\left(z\in y\right)\iff\forall w\left(\left(w\in z\right)\implies\left(w\in x\right)\right)\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-אקסיומת ההחלפה
-\end_layout
-
-\end_inset
-
-יהי 
-\begin_inset Formula $\varphi$
-\end_inset
-
- פרידיקט אזי
-\begin_inset Formula 
-\[
-\forall x\left(\left(\forall y\left(y\in x\right)\implies\left(\exists!z\left(\varphi\left(y,z\right)\right)\right)\right)\implies\left(\exists w\forall v\left(v\in w\iff\left(\exists u\left(u\in x\right)\implies\varphi\left(u,v\right)\right)\right)\right)\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-אקסיומות C
-\end_layout
-
-\begin_layout Definition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-אקסיומת הבחירה
-\end_layout
-
-\end_inset
-
-...
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-אקסיומות שקולות
-\end_layout
-
-\begin_layout Definition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-אקסיומת ההפרדה
-\end_layout
-
-\end_inset
-
-...
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-אקסיומת הזוג הלא סדור
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\forall x\forall y\left(\exists a\forall z\left(\left(z\in a\right)\implies\left(z=x\lor z=y\right)\right)\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Definition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-אקסיומת הקבוצה הריקה
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\exists x\left(\neg\exists a\left(a\in x\right)\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Claim
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -20452,6 +20537,366 @@ status open
 \end_layout
 
 \begin_layout Section
+מספרים אלגבריים
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+פולינום בעל מקדמים שלמים
+\end_layout
+
+\end_inset
+
+יהיו 
+\begin_inset Formula $a_{0}\ldots a_{n}\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(x\right)=\sum_{i=0}^{n}a_{i}x^{i}$
+\end_inset
+
+, כמו כן נסמן את מעלתו של 
+\begin_inset Formula $f$
+\end_inset
+
+ להיות 
+\begin_inset Formula $\deg\left(f\right)=n$
+\end_inset
+
+.
+ כמו כן נסמן את קבוצת כל הפולינומים בעלי מקדמים שלמים בעזרת 
+\begin_inset Formula $\bbz\left[x\right]$
+\end_inset
+
+, ונסמן את כל הפולינומים בעלי דרגה מסויימת 
+\begin_inset Formula $\bbz_{\le n}\left[x\right]=\left\{ f\in\bbz\left[x\right]\mid\deg\left(f\right)=n\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מעלה של פולינום
+\end_layout
+
+\end_inset
+
+נשים לב כי מעלה של פולינום קבוע )כלומר 
+\begin_inset Formula $f\left(x\right)=a$
+\end_inset
+
+( הינה 
+\begin_inset Formula $0$
+\end_inset
+
+, לעומת זאת נגדיר 
+\begin_inset Formula $\deg\left(0\right)=-\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Lemma
+\begin_inset Formula $\forall n\in\bbn.\left|\bbz_{\le n}\left[x\right]\right|=\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+עבור 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ נגדיר פונקציה 
+\begin_inset Formula $F:\bbz^{n}\to\bbz_{\le n}\left[x\right]$
+\end_inset
+
+ כך
+\begin_inset Formula 
+\[
+F=\lambda\left<a_{0}\ldots a_{n-1}\right>\in\bbz^{n}.\sum_{i=0}^{n-1}a_{i}x^{i}
+\]
+
+\end_inset
+
+נראה תחילה כי הפונקציה הינה הפיכה באינדוקציה, המקרה 
+\begin_inset Formula $n=1$
+\end_inset
+
+ נשאר לקורא, נניח עבור 
+\begin_inset Formula $n-1$
+\end_inset
+
+ כעת יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+על, יהי 
+\begin_inset Formula $f\in\bbz_{\le n}\left[x\right]$
+\end_inset
+
+ אזי קיימים 
+\begin_inset Formula $a_{0}\ldots a_{n}\in\bbz$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $f\left(x\right)=\sum_{i=0}^{n}a_{i}x^{i}$
+\end_inset
+
+, נשים לב כי
+\begin_inset Formula 
+\[
+F\left(\left<a_{0}\ldots a_{n}\right>\right)=\sum_{i=0}^{n-1}a_{i}x^{i}=f
+\]
+
+\end_inset
+
+בפרט 
+\begin_inset Formula $F$
+\end_inset
+
+ על.
+\end_layout
+
+\begin_layout Itemize
+חח
+\begin_inset Quotes erd
+\end_inset
+
+ע, יהיו 
+\begin_inset Formula $\left<a_{0}\ldots a_{n-1}\right>,\left<b_{0}\ldots b_{n-1}\right>\in\bbz^{n}$
+\end_inset
+
+ נניח כי
+\begin_inset Formula 
+\[
+\sum_{i=0}^{n-1}a_{i}x^{i}=F\left(\left<a_{0}\ldots a_{n-1}\right>\right)=F\left(\left<b_{0}\ldots b_{n-1}\right>\right)=\sum_{i=0}^{n-1}b_{i}x^{i}
+\]
+
+\end_inset
+
+נשים לב כי מהגדרת שיוויון פונקציות מתקיים
+\begin_inset Formula 
+\[
+a_{0}=\left(\sum_{i=0}^{n-1}a_{i}x^{i}\right)\left(0\right)=\left(\sum_{i=0}^{n-1}b_{i}x^{i}\right)\left(0\right)=b_{0}
+\]
+
+\end_inset
+
+ולכן יתקיים
+\begin_inset Formula 
+\begin{align*}
+\sum_{i=0}^{n-2}b_{i+1}x^{i}= & \sum_{i=1}^{n-1}b_{i}x^{i-1}=\frac{\sum_{i=1}^{n-1}b_{i}x^{i}}{x}=\frac{\left(\sum_{i=0}^{n-1}b_{i}x^{i}\right)-b_{0}}{x}\\
+= & \frac{\left(\sum_{i=0}^{n-1}a_{i}x^{i}\right)-a_{0}}{x}=\sum_{i=0}^{n-2}a_{i+1}x^{i}
+\end{align*}
+
+\end_inset
+
+כעת מהנחת האינדוקציה נקבל כי 
+\begin_inset Formula $\left<a_{1}\ldots a_{n-1}\right>=\left<b_{1}\ldots b_{n-1}\right>$
+\end_inset
+
+ מתכונת חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ולכן 
+\begin_inset Formula $\left<a_{0}\ldots a_{n-1}\right>=\left<b_{0}\ldots b_{n-1}\right>$
+\end_inset
+
+ כנדרש.
+\end_layout
+
+\end_deeper
+\begin_layout Claim
+\begin_inset Formula $\left|\bbz\left[x\right]\right|=\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נשים לב כי 
+\begin_inset Formula $\forall n\in\bbn.\left|\bbz_{\le n}\left[x\right]\right|=\aleph_{0}$
+\end_inset
+
+ ולכן ממשפט איחוד בן מנייה של קבוצות בנות מנייה נקבל כי
+\begin_inset Formula 
+\[
+\left|\bbz\left[x\right]\right|=\left|\bigcup_{n\in\bbn}\bbz_{\le n}\left[x\right]\right|\le\aleph_{0}
+\]
+
+\end_inset
+
+כמו כן 
+\begin_inset Formula $\bbz\subseteq\bbz\left[x\right]$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\aleph_{0}=\left|\bbz\right|\le\left|\bbz\left[x\right]\right|$
+\end_inset
+
+ אזי מקש
+\begin_inset Quotes erd
+\end_inset
+
+ב מתקיים 
+\begin_inset Formula $\left|\bbz\left[x\right]\right|=\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\bba}{\mathbb{A}}
+{\mathbb{A}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מספר אלגברי
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a\in\bbr$
+\end_inset
+
+ יקרא אלגברי אם 
+\begin_inset Formula $\exists f\in\bbz\left[x\right].f\left(a\right)=0$
+\end_inset
+
+.
+ נסמן את קבוצת האלגבריים בתור 
+\begin_inset Formula $\bba$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+נשים לב כי 
+\begin_inset Formula $\bbq\subseteq\bba\subseteq\bbr$
+\end_inset
+
+ )ודאו מדוע(.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+המשפט היסודי של האלגברה
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $f\in\bbz\left[x\right]$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\deg\left(f\right)=n$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\left\{ x\in\bbr\mid f\left(x\right)=0\right\} \right|\le n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $\left|\bba\right|=\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נשים לב כי 
+\begin_inset Formula $\left|\bbz\left[x\right]\right|=\aleph_{0}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\forall f\in\bbz\left[x\right].\left|\left\{ x\in\bbr\mid f\left(x\right)=0\right\} \right|\le\aleph_{0}$
+\end_inset
+
+ אזי נקבל כי
+\begin_inset Formula 
+\[
+\left|\bba\right|=\left|\bigcup_{f\in\bbz\left[x\right]}\left\{ x\in\bbr\mid f\left(x\right)=0\right\} \right|\le\aleph_{0}
+\]
+
+\end_inset
+
+כמו כן 
+\begin_inset Formula $\bbq\subseteq\bba$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\aleph_{0}=\left|\bbq\right|\le\left|\bba\right|$
+\end_inset
+
+ אזי מקש
+\begin_inset Quotes erd
+\end_inset
+
+ב מתקיים 
+\begin_inset Formula $\left|\bba\right|=\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 מספרים קונגואנטים
 \end_layout
 
@@ -20876,6 +21321,11 @@ status open
 \end_inset
 
 , בפרט קיימים אינסוף ראשוניים.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
