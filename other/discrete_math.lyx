@@ -175,7 +175,7 @@ End
 \color #faf0e6
 \end_branch
 \branch Logic
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -6884,6 +6884,19 @@ status open
 
 \end_inset
 
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{inductionTherom}{}
+\end_layout
+
+\end_inset
+
 יהי 
 \begin_inset Formula $P\left(x\right)$
 \end_inset
@@ -6932,7 +6945,20 @@ status open
 \begin_inset Formula $s\in S$
 \end_inset
 
- מינימלי )עבור הוכחת קיימות המינימלי ראה עיקרון הסדר הטוב(, מהנתון כי 
+ אשר הינו מינימום )עבור הוכחת קיימות המינימום ראה 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{NisGood}{הטבעיים כיחס סדר טוב}
+\end_layout
+
+\end_inset
+
+(, מהנתון כי 
 \begin_inset Formula $P\left(0\right)$
 \end_inset
 
@@ -6952,7 +6978,7 @@ status open
 \begin_inset Formula $s$
 \end_inset
 
- המינימלי אשר ב־
+ המינימום ב־
 \begin_inset Formula $S$
 \end_inset
 
@@ -9919,7 +9945,7 @@ end{tikzpicture}
 .
 \end_layout
 
-\begin_layout Claim
+\begin_layout Exercise
 תהא 
 \begin_inset Formula $A$
 \end_inset
@@ -9933,10 +9959,6 @@ end{tikzpicture}
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Proof
-נשאר כתרגיל לקורא.
 \end_layout
 
 \begin_layout Claim
@@ -10794,7 +10816,7 @@ end{tikzpicture}
 .
 \end_layout
 
-\begin_layout Claim
+\begin_layout Exercise
 \begin_inset Argument 1
 status open
 
@@ -10813,10 +10835,6 @@ status open
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Proof
-נשאר כתרגיל לקורא.
 \end_layout
 
 \begin_layout Standard
@@ -10848,9 +10866,79 @@ status open
 \end_layout
 
 \begin_layout Proof
-נשאר כתרגיל לקורא.
+תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קבוצות,
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\subseteq$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $x\in A\triangle B$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $x\in\left(A\backslash B\right)\cup\left(B\backslash A\right)$
+\end_inset
+
+ נשים לב כי מתכונות איחוד 
+\begin_inset Formula $x\in\left(B\backslash A\right)\cup\left(A\backslash B\right)$
+\end_inset
+
+ בפרט 
+\begin_inset Formula $x\in B\triangle A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\supseteq$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $x\in B\triangle A$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $x\in\left(B\backslash A\right)\cup\left(A\backslash B\right)$
+\end_inset
+
+ נשים לב כי מתכונות איחוד 
+\begin_inset Formula $x\in\left(A\backslash B\right)\cup\left(B\backslash A\right)$
+\end_inset
+
+ בפרט 
+\begin_inset Formula $x\in A\triangle B$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -10858,7 +10946,7 @@ status open
 
 \end_layout
 
-\begin_layout Claim
+\begin_layout Exercise
 תהא 
 \begin_inset Formula $A$
 \end_inset
@@ -10872,10 +10960,6 @@ status open
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Proof
-נשאר כתרגיל לקורא.
 \end_layout
 
 \begin_layout Subsection
@@ -10915,7 +10999,7 @@ status open
 .
 \end_layout
 
-\begin_layout Claim
+\begin_layout Exercise
 תהיינה 
 \begin_inset Formula $A,B$
 \end_inset
@@ -10925,10 +11009,6 @@ status open
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Proof
-נשאר כתרגיל לקורא.
 \end_layout
 
 \begin_layout Standard
@@ -12516,7 +12596,7 @@ status open
 
 \end_layout
 
-\begin_layout Claim
+\begin_layout Exercise
 יהי 
 \begin_inset Formula $R$
 \end_inset
@@ -12534,10 +12614,6 @@ status open
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Proof
-נשאר כתרגיל לקורא.
 \end_layout
 
 \begin_layout Corollary
@@ -13009,17 +13085,24 @@ status open
 \end_layout
 
 \end_deeper
-\begin_layout Remark
-מכאן ואילך אם קיימת פעולת הרכבה בין שני יחסים ניתן להניח כי התחום והתמונה
- שלהם מזדהים לפי ההגדרה.
-\end_layout
-
 \begin_layout Claim
-יהיו 
-\begin_inset Formula $R,S$
+יהי 
+\begin_inset Formula $S$
 \end_inset
 
- יחסים אזי 
+ יחס מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $B,C$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\left(R\circ S\right)^{-1}=S^{-1}\circ R^{-1}$
 \end_inset
 
@@ -14065,6 +14148,10 @@ status collapsed
 
 \end_layout
 
+\begin_layout Subsubsection
+מערכת נציגים
+\end_layout
+
 \begin_layout Definition
 \begin_inset Argument 1
 status open
@@ -14190,6 +14277,34 @@ status open
 \end_layout
 
 \end_deeper
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+דיאגרמת וון של חלוקה
+\end_layout
+
+\end_inset
+
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ חלוקה, ...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Example
 מתקיים כי 
 \begin_inset Formula $\left\{ \bbn_{\text{even}},\bbn_{\text{odd}}\right\} $
@@ -14408,6 +14523,38 @@ status open
 
 \begin_layout Section
 פונקציות
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+שימוש באקסיומת הבחירה
+\end_layout
+
+\end_inset
+
+מכאן ועד סוף החלק נשתמש באקסיומת הבחירה, כל משפט/טענה/מסקנה וכדומה אשר משתמשת
+ באקסיומת הבחירה יכתב על ידה כך 
+\color lightgray
+)אקסיומת בחירה(
+\color inherit
+.
+ על מנת לקרוא עוד ראה 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{ACremark}{פרק אקסיומת הבחירה}
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -14768,6 +14915,11 @@ status open
 \end_layout
 
 \begin_layout Itemize
+נגדיר 
+\begin_inset Formula $f:\bbr^{2}\to\bbr$
+\end_inset
+
+ כך 
 \begin_inset Formula $f=\lambda\left<x,y\right>\in\bbr^{2}.x+y$
 \end_inset
 
@@ -14775,25 +14927,27 @@ status open
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $f=\lambda n\in\bbn.\left\{ x\in\bbn\mid x\le n\right\} $
+נגדיר 
+\begin_inset Formula $f:\bbn\to\P\left(\bbn\right)$
 \end_inset
 
-, פונקציה 
-\begin_inset Formula $f:\bbn\to\P\left(\bbn\right)$
+ כך 
+\begin_inset Formula $f=\lambda n\in\bbn.\left\{ x\in\bbn\mid x\le n\right\} $
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $F=\lambda f\in\bbn^{\bbn}.\lambda n\in\bbn.f\left(n\right)+1$
-\end_inset
-
-, פונקציה 
+נגדיר 
 \begin_inset Formula $F:\bbn^{\bbn}\to\bbn^{\bbn}$
 \end_inset
 
-, שימו לב כי לדוגמה
+ כך 
+\begin_inset Formula $F=\lambda f\in\bbn^{\bbn}.\lambda n\in\bbn.f\left(n\right)+1$
+\end_inset
+
+, שימו לב לדוגמה לשימוש
 \begin_inset Formula 
 \begin{align*}
 F\left(\lambda x\in\bbn.x^{2}\right)\left(3\right)= & \left(\lambda n\in\bbn.\left(\lambda x\in\bbn.x^{2}\right)\left(n\right)+1\right)\left(3\right)\\
@@ -14940,8 +15094,10 @@ g_{2}\left(a\right) & a\in A_{2}
 
  נרשה לעצמינו לכתוב פרידיקט, 
 \series bold
+\color red
 בתנאי שכל החלוקות למקרים מכסות את תחום הפונקציה!
 \series default
+\color inherit
 , לדוגמה הפונקציה 
 \begin_inset Formula $f:\left\{ 0,1\right\} \to\left\{ 0,1\right\} $
 \end_inset
@@ -15006,6 +15162,10 @@ status open
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Example
+...
 \end_layout
 
 \begin_layout Subsection
@@ -15288,6 +15448,10 @@ status open
 .
 \end_layout
 
+\begin_layout Example
+...
+\end_layout
+
 \begin_layout Claim
 תהא 
 \begin_inset Formula $f$
@@ -15302,6 +15466,10 @@ status open
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Proof
+...
 \end_layout
 
 \begin_layout Definition
@@ -15407,6 +15575,10 @@ status open
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Example
+...
 \end_layout
 
 \begin_layout Claim
@@ -15581,7 +15753,9 @@ status open
 \begin_inset Formula $f$
 \end_inset
 
- הפיכה משמאל(
+ הפיכה משמאל( 
+\color lightgray
+)אקסיומת בחירה(
 \end_layout
 
 \begin_layout Enumerate
@@ -15606,7 +15780,9 @@ status open
 \begin_inset Formula $f$
 \end_inset
 
- הפיכה מימין(
+ הפיכה מימין( 
+\color lightgray
+)אקסיומת בחירה(
 \end_layout
 
 \end_deeper
@@ -15636,6 +15812,13 @@ status open
 \end_inset
 
  הפיכה(.
+ 
+\color lightgray
+)אקסיומת בחירה(
+\end_layout
+
+\begin_layout Proof
+...
 \end_layout
 
 \begin_layout Theorem
@@ -15693,24 +15876,6 @@ status open
  )כלומר פונקציה הופכית!(, נראה זאת בהגדרות הבאות ונשתכנע כי הדבר מסתכרן
  עם האינטואיציה שלנו על עוצמות סופיות.
  שימו לב, לא תינתן בחלק זה הגדרה פורמלית עבור עוצמה.
-\end_layout
-
-\begin_layout Remark
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-שימוש באקסיומת הבחירה
-\end_layout
-
-\end_inset
-
-מכאן ועד סוף החלק נשתמש באקסיומת הבחירה, כל משפט/טענה/מסקנה וכדומה אשר משתמשת
- באקסיומת הבחירה יכתב על ידה כך 
-\color lightgray
-)אקסיומת בחירה(
-\color inherit
-.
 \end_layout
 
 \begin_layout Definition
@@ -16828,7 +16993,7 @@ status open
 
 \begin_layout Theorem
 \begin_inset Argument 1
-status open
+status collapsed
 
 \begin_layout Plain Layout
 איחוד לכל היותר בן־מנייה של קבוצות לכל היותר בנות מנייה הוא לכל היותר בן
@@ -16854,6 +17019,9 @@ status open
 \end_inset
 
 .
+ 
+\color lightgray
+)אקסיומת בחירה(
 \end_layout
 
 \begin_layout Proof
@@ -17096,6 +17264,10 @@ status open
 \end_layout
 
 \begin_layout Proof
+...
+\end_layout
+
+\begin_layout Example
 ...
 \end_layout
 
@@ -17427,6 +17599,10 @@ status open
 ...
 \end_layout
 
+\begin_layout Example
+...
+\end_layout
+
 \begin_layout Claim
 יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -17511,6 +17687,10 @@ status open
 
 \end_deeper
 \begin_layout Proof
+...
+\end_layout
+
+\begin_layout Example
 ...
 \end_layout
 
@@ -17614,6 +17794,10 @@ status open
 ...
 \end_layout
 
+\begin_layout Example
+...
+\end_layout
+
 \begin_layout Theorem
 תהא 
 \begin_inset Formula $\kappa$
@@ -17624,6 +17808,9 @@ status open
 \end_inset
 
 .
+ 
+\color lightgray
+)אקסיומת בחירה(
 \end_layout
 
 \begin_layout Proof
@@ -17750,6 +17937,43 @@ status open
 \end_inset
 
  על קבוצה קונקרטית הינם יחסים אנטי סימטריים חלשים.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+יחס השליטה בכל מקום
+\end_layout
+
+\end_inset
+
+נגדיר יחס 
+\begin_inset Formula $\le$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbn^{\bbn}$
+\end_inset
+
+ כך 
+\begin_inset Formula $f\le g\iff\forall n\in\bbn.f\left(n\right)\le g\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+היחס 
+\begin_inset Formula $\le$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbn^{\bbn}$
+\end_inset
+
+ הינו יחס סדר חלש.
 \end_layout
 
 \begin_layout Subsubsection
@@ -17883,7 +18107,11 @@ status open
 \begin_inset Formula $R$
 \end_inset
 
- יחס סדר חזק אזי 
+ יחס סדר חזק מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ אזי 
 \begin_inset Formula $R\cup\id_{A}$
 \end_inset
 
@@ -17892,6 +18120,1983 @@ status open
 
 \begin_layout Proof
 ...
+\end_layout
+
+\begin_layout Corollary
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר חלש מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R\backslash\id_{A}$
+\end_inset
+
+ יחס סדר חזק.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Remark
+בעקבות המסקנות והטענות הקודמות, מקובל לסמן יחס סדר חלש בעזרת 
+\begin_inset Formula $\le,\leqslant,\preceq$
+\end_inset
+
+ וכדומה בעוד יחס סדר חזק בעזרת 
+\begin_inset Formula $<,\subset,\prec$
+\end_inset
+
+, כלומר יחס סדר חזק יהיה ללא סימן שיוויון מתחתיו מהיותו אנטי רפלקסיבי.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+יחס השליטה כמעט בכל מקום
+\end_layout
+
+\end_inset
+
+נגדיר יחס 
+\begin_inset Formula $<^{*}$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbn^{\bbn}$
+\end_inset
+
+ כך 
+\begin_inset Formula $f<^{*}g\iff\exists N\in\bbn.\forall n\ge N.f\left(n\right)<g\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+היחס 
+\begin_inset Formula $<^{*}$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbn^{\bbn}$
+\end_inset
+
+ הינו יחס סדר חזק.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+יחס לקסיקוגרפי
+\end_layout
+
+\end_inset
+
+נגדיר יחס 
+\begin_inset Formula $<_{\text{lex}}$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbn^{2}$
+\end_inset
+
+ כך
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left<n,m\right><_{\text{lex}}\left<k,\ell\right>\iff\left(\left(n<k\right)\lor\left(n=k\land m<\ell\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+היחס 
+\begin_inset Formula $<_{\text{lex}}$
+\end_inset
+
+ הינו יחס סדר חזק.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsubsection
+יחס קווי
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+איברים ברי השוואה
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ שני איברים 
+\begin_inset Formula $x,y\in A$
+\end_inset
+
+ יקראו ברי השוואה אם 
+\begin_inset Formula $\left(xRy\right)\lor\left(yRx\right)\lor\left(x=y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+יחס קווי/טוטאלי/לינארי
+\end_layout
+
+\end_inset
+
+יחס 
+\begin_inset Formula $R$
+\end_inset
+
+ מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ נקרא קווי אם 
+\begin_inset Formula $\forall a,b\in A.\left(aRb\right)\lor\left(bRa\right)\lor\left(a=b\right)$
+\end_inset
+
+.
+ כלומר אם כל שני איברים ברי השוואה על ידי 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Exercise
+היחס 
+\begin_inset Formula $<_{\text{lex}}$
+\end_inset
+
+ הינו יחס קווי.
+\end_layout
+
+\begin_layout Subsection
+נקודות קיצון
+\end_layout
+
+\begin_layout Subsubsection
+איבר מקסימום, מינימום, מקסימלי ומינימלי
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+איבר מקסימלי
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $X\subseteq A$
+\end_inset
+
+, איבר 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ יקרא איבר מקסימלי של 
+\begin_inset Formula $X$
+\end_inset
+
+ אם 
+\begin_inset Formula $\forall y\in X.\left(y=x\right)\lor\neg\left(xRy\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+איבר מינימלי
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $X\subseteq A$
+\end_inset
+
+, איבר 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ יקרא איבר מינימלי של 
+\begin_inset Formula $X$
+\end_inset
+
+ אם 
+\begin_inset Formula $\forall y\in X.\left(y=x\right)\lor\neg\left(yRx\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+ אי יחידות האיבר
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מקסימום
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $X\subseteq A$
+\end_inset
+
+, איבר 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ יקרא מקסימום של 
+\begin_inset Formula $X$
+\end_inset
+
+ אם 
+\begin_inset Formula $\forall y\in X.\left(yRx\right)\lor\left(x=y\right)$
+\end_inset
+
+, במקרה כזה נסמן 
+\begin_inset Formula $\max_{R}\left(X\right)=x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+בסימון 
+\begin_inset Formula $\max_{R}\left(X\right)=x$
+\end_inset
+
+ אנו מניחים את יחידות המקסימום, אותה נראה עוד מעט.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מינימום
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $X\subseteq A$
+\end_inset
+
+, איבר 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ יקרא מינימום של 
+\begin_inset Formula $X$
+\end_inset
+
+ אם 
+\begin_inset Formula $\forall y\in X.\left(xRy\right)\lor\left(x=y\right)$
+\end_inset
+
+, במקרה כזה נסמן 
+\begin_inset Formula $\min_{R}\left(X\right)=x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $X\subseteq A$
+\end_inset
+
+, יהי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ איבר מקסימום אזי 
+\begin_inset Formula $x$
+\end_inset
+
+ האיבר המקסימלי היחיד בהתאמה.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Exercise
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $X\subseteq A$
+\end_inset
+
+, יהי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ איבר מינימום אזי 
+\begin_inset Formula $x$
+\end_inset
+
+ האיבר המינימלי היחיד בהתאמה.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר קווי מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $X\subseteq A$
+\end_inset
+
+, יהי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ אזי )
+\begin_inset Formula $x$
+\end_inset
+
+ מקסימום(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $x$
+\end_inset
+
+ מקסימלי(.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Exercise
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר קווי מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $X\subseteq A$
+\end_inset
+
+, יהי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ אזי )
+\begin_inset Formula $x$
+\end_inset
+
+ מינימום(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $x$
+\end_inset
+
+ מינימלי(.
+\end_layout
+
+\begin_layout Subsubsection
+חסם מלעיל ומלרע, סופרמום ואינפימום
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+חסם עליון/מלעיל
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $X\subseteq A$
+\end_inset
+
+, איבר 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ יקרא חסם מלעיל של 
+\begin_inset Formula $X$
+\end_inset
+
+ אם 
+\begin_inset Formula $\forall y\in X.\left(y=x\right)\lor\left(yRx\right)$
+\end_inset
+
+, נסמן את קבוצת החסמים מלעיל בעזרת 
+\begin_inset Formula $\overline{B}_{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+חסם תחתון/מלרע
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $X\subseteq A$
+\end_inset
+
+, איבר 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ יקרא חסם מלרע של 
+\begin_inset Formula $X$
+\end_inset
+
+ אם 
+\begin_inset Formula $\forall y\in X.\left(xRy\right)\lor\left(y=x\right)$
+\end_inset
+
+, נסמן את קבוצת החסמים מלרע בעזרת 
+\begin_inset Formula $\underline{B}_{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+סופרמום
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $X\subseteq A$
+\end_inset
+
+, אזי המינימום של קבוצת החסמים מלעיל של 
+\begin_inset Formula $X$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $\sup_{R}\left(X\right)=\min_{R}\left(\overline{B}_{X}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+אינפימום
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $X\subseteq A$
+\end_inset
+
+, אזי המקסימום של קבוצת החסמים מלרע של 
+\begin_inset Formula $X$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $\inf_{R}\left(X\right)=\max_{R}\left(\underline{B}_{X}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Exercise
+תהא 
+\begin_inset Formula $X\subseteq\P\left(\bbn\right)\backslash\left\{ \emptyset\right\} $
+\end_inset
+
+ אזי קיימים 
+\begin_inset Formula $\sup_{\subseteq}\left(X\right),\inf_{\subseteq}\left(X\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+איזומורפיזם
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+פונקציה שומרת סדר
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $S$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $B$
+\end_inset
+
+, פונקציה שומרת סדר הינה פונקציה 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\forall a,b\in A.\left(aRb\right)\iff\left(f\left(a\right)Sf\left(b\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+איזומורפיזם של יחסי סדר
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $S$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $B$
+\end_inset
+
+, איזומורפיזם הינו פונקציה 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ אשר שומרת סדר חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל.
+ במקרה של קיום איזומורפיזם בין 
+\begin_inset Formula $\left<A,R\right>$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left<B,S\right>$
+\end_inset
+
+ נסמן 
+\begin_inset Formula $\left<A,R\right>\cong\left<B,S\right>$
+\end_inset
+
+ ונגיד כי היחסים הם איזומורפיים.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Claim
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+הרכבת איזומורפיזמים הוא איזומורפיזם
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ יהי 
+\begin_inset Formula $S$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $B$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $T$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $C$
+\end_inset
+
+, יהי 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ איזומורפיזם ויהי 
+\begin_inset Formula $g:B\to C$
+\end_inset
+
+ איזומורפיזם אזי 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ איזומורפיזם.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Claim
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+ההופכי של איזומורפיזם הוא איזומורפיזם
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $S$
+\end_inset
+
+ יחס סדר מעל 
+\begin_inset Formula $B$
+\end_inset
+
+, יהי 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ איזומורפיזם אזי 
+\begin_inset Formula $f^{-1}:B\to A$
+\end_inset
+
+ איזומורפיזם.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsection
+יחס סדר טוב
+\end_layout
+
+\begin_layout Standard
+נרצה להכליל את מונח האינדוקציה והרקורסיה מעבר לקבוצת הטבעיים, לכן נדרוש
+ יחס על קבוצות הדומה ליחס 
+\begin_inset Formula $\le_{\bbn}$
+\end_inset
+
+, בהוכחה של 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{inductionTherom}{משפט האינדוקציה}
+\end_layout
+
+\end_inset
+
+ הנקודה המרכזית הייתה המינימליות של איבר בקבוצה 
+\begin_inset Formula $S$
+\end_inset
+
+ לכן ההגדרה הבאה,
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+יחס סדר טוב
+\end_layout
+
+\end_inset
+
+יחס סדר חזק וקווי 
+\begin_inset Formula $R$
+\end_inset
+
+ מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ יקרא יחס סדר טוב אם לכל 
+\begin_inset Formula $X\in\P\left(A\right)\backslash\left\{ \emptyset\right\} $
+\end_inset
+
+ קיים מינימום ביחס ליחס 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+ראה 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{NisGood}{הטבעיים כיחס סדר טוב}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+הגדרת יחס סדר טוב על קבוצות בנות מנייה
+\end_layout
+
+\end_inset
+
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה בת מנייה, מהיותה בת מנייה קיימת 
+\begin_inset Formula $f:\bbn\to A$
+\end_inset
+
+ הפיכה לכן נגדיר 
+\begin_inset Formula $\prec$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ כך
+\begin_inset Formula 
+\[
+a\prec b\iff f^{-1}\left(a\right)<_{\bbn}f^{-1}\left(b\right)
+\]
+
+\end_inset
+
+ודאו כי זהו סדר טוב ובטאו את המינימום של 
+\begin_inset Formula $X\in\P\left(A\right)\backslash\left\{ \emptyset\right\} $
+\end_inset
+
+ בעזרת 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+אינדוקציה טרנספיניטית
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+אינדוקציה טרנספיניטית
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר טוב מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $P\left(x\right)$
+\end_inset
+
+ פרידיקט אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left(P\left(\min_{R}\left(A\right)\right)\land\left(\forall a,b\in A.\left(P\left(a\right)\land aRb\right)\implies P\left(b\right)\right)\right)\implies\left(\forall a\in A.P\left(a\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Section
+אקסיומת הבחירה
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{ACremark}{}
+\end_layout
+
+\end_inset
+
+למערכת האקסיומת בה אנו משתמשים קוראים 
+\begin_inset Formula $\text{ZFC}$
+\end_inset
+
+, צרמלו־פרנקל־בחירה, שני השמות הראשונים הינם שני אנשים בעוד המילה השלישית
+ היא בחירה אשר מתייחסת להכללת אקסיומת הבחירה במערכת האקסיומות )לעומת 
+\begin_inset Formula $\text{ZFC}$
+\end_inset
+
+ קיימת מערכת 
+\begin_inset Formula $\text{ZF}$
+\end_inset
+
+ אשר אינה משתמשת באקסיומת הבחירה(.
+ בחירה בכלליות היא היכולת לבחור איבר ללא חוקיות ואו שיטתיות מסויימת בבחירתו,
+ לדוגמה יהי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ הינה בחירה )למרות זאת היא אינה משתמשת באקסיומת הבחירה, נראה עוד מעט(.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+אקסיומת הבחירה
+\end_layout
+
+\end_inset
+
+תהא 
+\begin_inset Formula ${\cal A}$
+\end_inset
+
+ קבוצה של קבוצות כך שמתקיים 
+\begin_inset Formula $\forall B\in{\cal A}.B\ne\emptyset$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $F:{\cal A}\to\bigcup{\cal A}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\forall B\in A.F\left(B\right)\in B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+אקסיומת הבחירה נכנסת לפעולה 
+\series bold
+רק
+\series default
+ כאשר הבחירה נעשית אינסוף פעמים, לדוגמה 
+\begin_inset Quotes eld
+\end_inset
+
+יהי 
+\begin_inset Formula $x\in A$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ איננה משתמשת באקסיומת הבחירה, לעומת זאת 
+\begin_inset Quotes eld
+\end_inset
+
+יהיו 
+\begin_inset Formula $a_{0},a_{1},\ldots\in\bbn$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ משתמשת באקסיומת הבחירה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+חזרו לכל הטענות אשר מסומנות בעזרת 
+\color lightgray
+)אקסיומת בחירה(
+\color inherit
+ ונסו למצוא מתי השתמשנו באקסיומת הבחירה.
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+שימוש באקסיומת הבחירה בהוכחת משפט
+\end_layout
+
+\end_inset
+
+במשפט 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{UcOcIc}{איחוד לכל היותר בן־מנייה של קבוצות לכל היותר בנות מנייה
+ הוא לכל היותר בן מנייה}
+\end_layout
+
+\end_inset
+
+ השתמשנו באקסיומת הבחירה באופן מוסתר, ...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+קיימים טיעונים רבים בעד ונגד השימוש באקסיומת הבחירה, חלקם הם
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+בעד:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+לא יהיה ניתן להוכיח כי אם 
+\begin_inset Formula $A$
+\end_inset
+
+ אינסופית אזי 
+\begin_inset Formula $\aleph_{0}\le\left|A\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+לא יהיה ניתן להוכיח כי איחוד בן־מנייה של קבוצות בנות מנייה הוא בן־מנייה.
+\end_layout
+
+\begin_layout Enumerate
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+לא יהיה ניתן להוכיח כי כל שדה סדור מוכל בשדה סגור אלגברית.
+
+\end_layout
+
+\begin_layout Enumerate
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+לא לכל מרחב וקטורי אינסופי יהיה בסיס.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+נגד:
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+אקסיומת הבחירה איננה עקרון טבעי, מאי יכולתינו הממשית לבחור אינסוף פעמים.
+
+\end_layout
+
+\begin_layout Enumerate
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+נובע כי קיים סדר טוב על 
+\begin_inset Formula $\bbr$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+נובע 
+פרדוקס טרסקי־בנך.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsubsection
+עיקרון הסדר הטוב
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+עיקרון הסדר הטוב
+\end_layout
+
+\end_inset
+
+עיקרון הסדר הטוב קובע כי לכל קבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+ קיים יחס סדר טוב 
+\begin_inset Formula $R$
+\end_inset
+
+ מעל 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ שימו לב כי איננו אומרים כי הינו נכון או לא רק מה העיקרון אומר.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+)עיקרון הסדר הטוב(
+\begin_inset Formula $\iff$
+\end_inset
+
+)אקסיומת הבחירה(.
+ כלומר אם אנו מניחים אחד מהם השני נובע כנכון.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsubsection
+הלמה של צורן
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+שרשרת
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס סדר חזק מעל 
+\begin_inset Formula $A$
+\end_inset
+
+, קבוצה 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+ תיקרא שרשרת אם כל 
+\begin_inset Formula $x,y\in B$
+\end_inset
+
+ ברי השוואה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+הלמה של צורן
+\end_layout
+
+\end_inset
+
+תהא 
+\begin_inset Formula $\Sigma\ne\emptyset$
+\end_inset
+
+ קבוצה ויהי 
+\begin_inset Formula $S$
+\end_inset
+
+ יחס סדר על 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+, נניח כי לכל שרשרת 
+\begin_inset Formula $X\subseteq\Sigma$
+\end_inset
+
+ קיים חסם עליון אזי קיים איבר מקסימלי ב־
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+)הלמה של צורן(
+\begin_inset Formula $\iff$
+\end_inset
+
+)אקסיומת הבחירה(.
+ כלומר אם אנו מניחים אחד מהם השני נובע כנכון.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsubsection
+עוצמה כיחס קווי
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\pto}{\xrightarrow{\text{p}}}
+{\xrightarrow{\text{p}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+נזכיר כי פונקציה חלקית זהו יחס חד ערכי וחח
+\begin_inset Quotes erd
+\end_inset
+
+ע, ונסמן
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $A\pto B=\left\{ f\subseteq A\times B\mid\text{ פונקציה חלקית }R\right\} $
+\end_inset
+
+.
+ )האות 
+\begin_inset Formula $\text{p}$
+\end_inset
+
+ עבור המילה 
+\begin_inset Formula $\text{partial}$
+\end_inset
+
+(
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+תהא 
+\begin_inset Formula $X\subseteq A\pto B$
+\end_inset
+
+ שרשרת ביחס ההכלה אזי 
+\begin_inset Formula $\bigcup X\in A\pto B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קבוצות ותהא 
+\begin_inset Formula $X$
+\end_inset
+
+ שרשרת ביחס ההכלה, נסמן 
+\begin_inset Formula $\sigma=\bigcup X$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+צ
+\begin_inset Quotes erd
+\end_inset
+
+ל: 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ חד ערכית, יהי 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $b_{1},b_{2}\in B$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\left<a,b_{1}\right>,\left<a,b_{2}\right>\in\sigma$
+\end_inset
+
+ מהגדרת 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ קיימים 
+\begin_inset Formula $\a,\b\in X$
+\end_inset
+
+ עבורם
+\begin_inset Formula 
+\begin{align*}
+\left<a,b_{1}\right> & \in\a & \left<a,b_{2}\right> & \in\b
+\end{align*}
+
+\end_inset
+
+כעת מהיות 
+\begin_inset Formula $X$
+\end_inset
+
+ שרשרת מתקיים 
+\begin_inset Formula $\left(\a\subseteq\b\right)\lor\left(\b\subseteq\a\right)$
+\end_inset
+
+ בה
+\begin_inset Quotes erd
+\end_inset
+
+כ 
+\begin_inset Formula $\a\subseteq\b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<a,b_{1}\right>,\left<a,b_{2}\right>\in\b$
+\end_inset
+
+ כמו כן 
+\begin_inset Formula $\b\in A\pto B$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\b$
+\end_inset
+
+ חד ערכית אזי 
+\begin_inset Formula $b_{1}=b_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+צ
+\begin_inset Quotes erd
+\end_inset
+
+ל: 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע, ...
+\end_layout
+
+\end_deeper
+\begin_layout Corollary
+תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קבוצות אזי 
+\begin_inset Formula $\left(\left|A\right|\le\left|B\right|\right)\lor\left(\left|A\right|\ge\left|B\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קבוצות, נשים לב כי 
+\begin_inset Formula $\emptyset\in A\pto B$
+\end_inset
+
+ מהיותו יחס חד ערכי וחח
+\begin_inset Quotes erd
+\end_inset
+
+ע באופן ריק.
+ כעת תהא 
+\begin_inset Formula $X\subseteq A\pto B$
+\end_inset
+
+ שרשרת ביחס ההכלה, נגדיר 
+\begin_inset Formula $\sigma=\bigcup X$
+\end_inset
+
+ נשים לב כי 
+\begin_inset Formula $\sigma\in A\pto B$
+\end_inset
+
+ מהלמה מלעיל, יהי 
+\begin_inset Formula $f\in X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\subseteq\sigma$
+\end_inset
+
+ מהגדרת 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ בפרט 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ חסם עליון של 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ מהלמה של צורן נובע כי קיים איבר מקסימלי ביחס ההכלה ב־
+\begin_inset Formula $A\pto B$
+\end_inset
+
+, נסמן 
+\begin_inset Formula $F=\max_{\subseteq}\left(A\pto B\right)$
+\end_inset
+
+ נשים לב כי מהגדרת 
+\begin_inset Formula $A\pto B$
+\end_inset
+
+ נקבל כי 
+\begin_inset Formula $F$
+\end_inset
+
+ חד ערכית וכן חח
+\begin_inset Quotes erd
+\end_inset
+
+ע, כעת נניח כי
+\begin_inset Formula 
+\[
+\left(\im\left(F\right)\ne B\right)\land\left(\dom\left(F\right)\ne A\right)
+\]
+
+\end_inset
+
+ אזי מכיוון ומתקיים
+\begin_inset Formula 
+\[
+\left(\im\left(F\right)\subseteq B\right)\land\left(\dom\left(F\right)\subseteq A\right)
+\]
+
+\end_inset
+
+נקבל כי קיים 
+\begin_inset Formula $a\in A\backslash\dom\left(F\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b\in B\backslash\im\left(F\right)$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $F\uplus\left\{ \left<a,b\right>\right\} $
+\end_inset
+
+ יחס חד ערכי וחח
+\begin_inset Quotes erd
+\end_inset
+
+ע המקיים 
+\begin_inset Formula $F\subseteq F\uplus\left\{ \left<a,b\right>\right\} $
+\end_inset
+
+ בסתירה למקסימליות 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+נניח כי 
+\begin_inset Formula $\dom\left(F\right)=A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $F:A\to B$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע בפרט 
+\begin_inset Formula $\left|A\right|\le\left|B\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+נניח כי 
+\begin_inset Formula $\im\left(F\right)=B$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $F:\dom\left(F\right)\to B$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל ובפרט הפיכה אזי 
+\begin_inset Formula $F^{-1}:B\to A$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ולכן 
+\begin_inset Formula $\left|B\right|\le\left|A\right|$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Lemma
+תהא 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ עוצמה אינסופית אזי 
+\begin_inset Formula $\kappa\cdot\kappa=\kappa$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Theorem
+יהיו 
+\begin_inset Formula $\kappa,\lambda$
+\end_inset
+
+ עוצמות אינסופיות אזי 
+\begin_inset Formula $\lambda+\kappa=\max\left(\lambda,\kappa\right)=\lambda\cdot\kappa$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+נשתמש בחשבון עוצמות ונשאיר את ההסבר של כל מעבר לקורא, בה
+\begin_inset Quotes erd
+\end_inset
+
+כ 
+\begin_inset Formula $\kappa=\max\left(\lambda,\kappa\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\kappa\le\kappa+\lambda\le\kappa+\kappa=2\cdot\kappa\le\kappa\cdot\lambda\le\kappa\cdot\kappa=\kappa
+\]
+
+\end_inset
+
+ולכן נקבל מקש
+\begin_inset Quotes erd
+\end_inset
+
+ב כי 
+\begin_inset Formula $\lambda+\kappa=\kappa=\lambda\cdot\kappa$
+\end_inset
+
+ ועל פי ההנחה 
+\begin_inset Formula $\lambda+\kappa=\max\left(\lambda,\kappa\right)=\lambda\cdot\kappa$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -17981,850 +20186,12 @@ status open
 \begin_layout Standard
 \begin_inset Branch lbl
 inverted 0
-status open
+status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
 \renewcommand{\P}[2]{\mathcal{P}_{#2}\left(#1\right)}
 {\mathcal{P}_{#2}\left(#1\right)}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-יחס אנטי סימטרי חלש: 
-\begin_inset Formula $R\subseteq A^{2}$
-\end_inset
-
- שמקיים 
-\begin_inset Formula $\forall a,b\in A.aRb\land bRa\implies a=b$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-יחס אנטי סימטרי חזק: 
-\begin_inset Formula $R\subseteq A^{2}$
-\end_inset
-
- שמקיים 
-\begin_inset Formula $\forall a,b\in A.aRb\implies\neg bRa$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-יחס אנטי רפלקסיבי: 
-\begin_inset Formula $\forall a\in A.\neg aRa$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-יחס סדר חלש: )רפלקסיבי(
-\begin_inset Formula $\land$
-\end_inset
-
-)אנטי סימטרי חלש(
-\begin_inset Formula $\land$
-\end_inset
-
-)טרנזיטיבי(.
-\end_layout
-
-\begin_layout Standard
-יחס סדר חזק: )אנטי רפלקסיבי(
-\begin_inset Formula $\land$
-\end_inset
-
-)אנטי סימטרי חזק(
-\begin_inset Formula $\land$
-\end_inset
-
-)טרנזיטיבי(.
-\end_layout
-
-\begin_layout Standard
-טענה: )אנטי סימטרי חזק( 
-\begin_inset Formula $\iff$
-\end_inset
-
- )אנטי סימטרי חלש(
-\begin_inset Formula $\land$
-\end_inset
-
-)אנטי רפלקסיבי(.
-\end_layout
-
-\begin_layout Standard
-מסקנה: )
-\begin_inset Formula $R$
-\end_inset
-
- יחס סדר חזק 
-\begin_inset Formula $\impliedby$
-\end_inset
-
- 
-\begin_inset Formula $R\cup Id_{A}$
-\end_inset
-
- יחס סדר חלש(
-\begin_inset Formula $\land$
-\end_inset
-
-)
-\begin_inset Formula $R$
-\end_inset
-
- יחס סדר חלש 
-\begin_inset Formula $\impliedby$
-\end_inset
-
- 
-\begin_inset Formula $R\backslash Id_{A}$
-\end_inset
-
- יחס סדר חזק(.
-\end_layout
-
-\begin_layout Standard
-היחס המילוני: 
-\begin_inset Formula $\left<x,y\right><_{\text{Lex}}\left<z,w\right>\iff x<z\lor\left(x=z\land y<w\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-הערה: היחס המילוני הוא יחס סדר חזק.
-\end_layout
-
-\begin_layout Standard
-יחס השליטה בכל מקום: 
-\begin_inset Formula $\forall f,g\in\bbn^{\bbn}.f\le g\iff\forall n\in\bbn.f\left(n\right)\le g\left(n\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-הערה: יחס השליטה בכל מקום הוא יחס סדר חלש.
-\end_layout
-
-\begin_layout Standard
-יחס השליטה כמעט בכל מקום: 
-\begin_inset Formula $\forall f,g\in\bbn^{\bbn}.f\le^{*}g\iff\exists N\in\bbn.\forall n\ge N.f\left(n\right)\le g\left(n\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-הערה: יחס השליטה כמעט בכל מקום הוא יחס סדר חזק.
-\end_layout
-
-\begin_layout Standard
-יחס קווי/טוטלי/לינארי: 
-\begin_inset Formula $\forall a,b\in A.aRb\lor bRa\lor a=b$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-איבר מקסימלי/מירבי: 
-\begin_inset Formula $x\in X\subseteq A$
-\end_inset
-
- שמקיים 
-\begin_inset Formula $\forall y\in X.\neg\left(xRy\right)\lor y=x$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-מקסימום: 
-\begin_inset Formula $x\in X\subseteq A$
-\end_inset
-
- שמקיים 
-\begin_inset Formula $\forall y\in X.yRx\lor y=x$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-סימון: המקסימום של 
-\begin_inset Formula $X$
-\end_inset
-
- עם היחס 
-\begin_inset Formula $R$
-\end_inset
-
- הוא 
-\begin_inset Formula $\max_{R}\left(X\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-איבר מינימלי: 
-\begin_inset Formula $x\in X\subseteq A$
-\end_inset
-
- שמקיים 
-\begin_inset Formula $\forall y\in X.\neg\left(yRx\right)\lor y=x$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-מינימום: 
-\begin_inset Formula $x\in X\subseteq A$
-\end_inset
-
- שמקיים 
-\begin_inset Formula $\forall y\in X.xRy\lor y=x$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-סימון: המינימום של 
-\begin_inset Formula $X$
-\end_inset
-
- עם היחס 
-\begin_inset Formula $R$
-\end_inset
-
- הוא 
-\begin_inset Formula $\min_{R}\left(X\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-טענה: )
-\begin_inset Formula $x,y$
-\end_inset
-
- מקסימום של 
-\begin_inset Formula $X$
-\end_inset
-
- 
-\begin_inset Formula $\impliedby$
-\end_inset
-
- 
-\begin_inset Formula $x=y$
-\end_inset
-
-(
-\begin_inset Formula $\land$
-\end_inset
-
-)
-\begin_inset Formula $x,y$
-\end_inset
-
- מינימום של 
-\begin_inset Formula $X$
-\end_inset
-
- 
-\begin_inset Formula $\impliedby$
-\end_inset
-
- 
-\begin_inset Formula $x=y$
-\end_inset
-
-(.
-\end_layout
-
-\begin_layout Standard
-חסם עליון/מלעיל: 
-\begin_inset Formula $x\in A$
-\end_inset
-
- שמקיים 
-\begin_inset Formula $\forall y\in X.y=x\lor yRx$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-סופרמום: 
-\begin_inset Formula $x\in A$
-\end_inset
-
- שמקיים )חסם עליון(
-\begin_inset Formula $\land$
-\end_inset
-
-)לכל חסם עליון 
-\begin_inset Formula $y$
-\end_inset
-
- מתקיים 
-\begin_inset Formula $xRy\lor x=y$
-\end_inset
-
-(.
-\end_layout
-
-\begin_layout Standard
-סימון: הסופרמום של 
-\begin_inset Formula $X$
-\end_inset
-
- עם היחס 
-\begin_inset Formula $R$
-\end_inset
-
- הוא 
-\begin_inset Formula $\sup_{R}\left(X\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-חסם תחתון/מלרע: 
-\begin_inset Formula $x\in A$
-\end_inset
-
- שמקיים 
-\begin_inset Formula $\forall y\in X.y=x\lor xRy$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-אינפימום: 
-\begin_inset Formula $x\in A$
-\end_inset
-
- שמקיים )חסם תחתון(
-\begin_inset Formula $\land$
-\end_inset
-
-)לכל חסם תחתון 
-\begin_inset Formula $y$
-\end_inset
-
- מתקיים 
-\begin_inset Formula $yRx\lor x=y$
-\end_inset
-
-(.
-\end_layout
-
-\begin_layout Standard
-סימון: האינפימום של 
-\begin_inset Formula $X$
-\end_inset
-
- עם היחס 
-\begin_inset Formula $R$
-\end_inset
-
- הוא 
-\begin_inset Formula $\inf_{R}\left(X\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-שלמות הממשיים: לכל 
-\begin_inset Formula $\emptyset\ne X\subseteq\bbr$
-\end_inset
-
- )קיימים ל־
-\begin_inset Formula $X$
-\end_inset
-
- חסם עליון ותחתון( 
-\begin_inset Formula $\impliedby$
-\end_inset
-
- )קיימים ל־
-\begin_inset Formula $X$
-\end_inset
-
- סופרמום ואינפימום(.
-\end_layout
-
-\begin_layout Standard
-סימון: 
-\begin_inset Formula $\left<A,R\right>$
-\end_inset
-
- זה היחס 
-\begin_inset Formula $R$
-\end_inset
-
- מעל 
-\begin_inset Formula $A$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-הומומורפיזם/פונקציה שומרת סדר: פונקציה 
-\begin_inset Formula $f:A\to B$
-\end_inset
-
- שמקיימת 
-\begin_inset Formula $\forall a_{1},a_{2}\in A.a_{1}Ra_{2}\iff f\left(a_{1}\right)Sf\left(a_{2}\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-טענה: אם 
-\begin_inset Formula $f:A\to B$
-\end_inset
-
-, 
-\begin_inset Formula $g:B\to C$
-\end_inset
-
- שומרות סדר אזי 
-\begin_inset Formula $g\circ f$
-\end_inset
-
- שומרת סדר.
-\end_layout
-
-\begin_layout Standard
-איזומורפיזם: )הומומורפיזם(
-\begin_inset Formula $\land$
-\end_inset
-
-)זיווג(.
-\end_layout
-
-\begin_layout Standard
-סימון: אם קיים איזומורפיזם 
-\begin_inset Formula $f:A\to B$
-\end_inset
-
- אזי 
-\begin_inset Formula $A\cong B$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-יחס סדר טוב: 
-\begin_inset Formula $\left<A,R\right>$
-\end_inset
-
- שמקיים )יחס סדר חזק(
-\begin_inset Formula $\land$
-\end_inset
-
-)יחס קווי(
-\begin_inset Formula $\land$
-\end_inset
-
-)לכל 
-\begin_inset Formula $\emptyset\ne X\subseteq A$
-\end_inset
-
- קיים מינימום(.
-\end_layout
-
-\begin_layout Standard
-אינדוקציה טרנספיניטית: יהי 
-\begin_inset Formula $\left<A,R\right>$
-\end_inset
-
- יחס סדר טוב ויהי 
-\begin_inset Formula $P\left(x\right)$
-\end_inset
-
- פרידיקט אזי
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula $\left(P\left(\min\left(A\right)\right)\land\left(\forall a,b\in A.\left(P\left(a\right)\land aRb\right)\implies P\left(b\right)\right)\right)\implies\left(\forall a\in A.P\left(a\right)\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-קבוצה טרנזיטיבית: 
-\begin_inset Formula $A$
-\end_inset
-
- המקיימת 
-\begin_inset Formula $\forall B\in A.\forall x\in B.x\in A$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-סודר: קבוצה 
-\begin_inset Formula $\a$
-\end_inset
-
- המקיימת )טרנזיטיביות(
-\begin_inset Formula $\land$
-\end_inset
-
-)
-\begin_inset Formula $\left<\a,\in\right>$
-\end_inset
-
- יחס סדר טוב(.
-\end_layout
-
-\begin_layout Standard
-סודר עוקב: יהי 
-\begin_inset Formula $\a$
-\end_inset
-
- סודר אזי 
-\begin_inset Formula $S\left(\a\right)=\a\cup\left\{ \a\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-טענה: יהי 
-\begin_inset Formula $\a$
-\end_inset
-
- סודר אזי 
-\begin_inset Formula $S\left(\a\right)$
-\end_inset
-
- סודר.
-\end_layout
-
-\begin_layout Standard
-הערה: לכל 
-\begin_inset Formula $\a$
-\end_inset
-
- סודר מתקיים 
-\begin_inset Formula $\a\in S\left(\a\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-סודר גבולי: סודר שאינו עוקב.
-\end_layout
-
-\begin_layout Standard
-סודר סופי: 
-\begin_inset Formula $0=\emptyset$
-\end_inset
-
-, 
-\begin_inset Formula $n+1=S\left(n\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-הגדרה: 
-\begin_inset Formula $\omega=\bbn$
-\end_inset
-
- הוא סודר גבול של כל המספרים הטבעיים.
-\end_layout
-
-\begin_layout Standard
-טיפוס סדר: יהי 
-\begin_inset Formula $\left<A,R\right>$
-\end_inset
-
- יחס סדר טוב אזי הסודר 
-\begin_inset Formula $\a$
-\end_inset
-
- היחידי המקיים 
-\begin_inset Formula $\left<\a,\in\right>\cong\left<A,R\right>$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-סימון: טיפוס הסדר של 
-\begin_inset Formula $\left<A,R\right>$
-\end_inset
-
- הוא 
-\begin_inset Formula $\ord\left(A,R\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-טענה: תהא 
-\begin_inset Formula $A$
-\end_inset
-
- קבוצה של סודרים אזי 
-\begin_inset Formula $\bigcap A$
-\end_inset
-
- סודר.
-\end_layout
-
-\begin_layout Standard
-טענה: תהא 
-\begin_inset Formula $A$
-\end_inset
-
- קבוצה של סודרים אזי 
-\begin_inset Formula $\min A=\bigcap A$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-עוצמה: תהא 
-\begin_inset Formula $A$
-\end_inset
-
- קבוצה אזי 
-\begin_inset Formula $\left|A\right|=\min\left\{ \ord\left(A,R\right)\mid A\text{ יחס סדר טוב על }R\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-אקסיומת הבחירה: 
-\begin_inset Formula $\forall A.\left(\forall X\in A.X\ne\emptyset\right)\implies\left(\exists F:A\to\bigcup A.\forall X\in A.F\left(X\right)\in X\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-עיקרון הסדר הטוב: לכל קבוצה 
-\begin_inset Formula $A$
-\end_inset
-
- קיים סדר טוב 
-\begin_inset Formula $R$
-\end_inset
-
- על 
-\begin_inset Formula $A$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-חופפות בחלקים: 
-\begin_inset Formula $X,Y\subseteq\bbr^{n}$
-\end_inset
-
- כך שקיימות 
-\begin_inset Formula $X_{1},\ldots X_{k},Y_{1},\ldots,Y_{k}\subseteq\bbr^{n}$
-\end_inset
-
- שמקיימות 
-\begin_inset Formula $X=X_{1}\uplus\ldots\uplus X_{k}$
-\end_inset
-
-,
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula $Y=Y_{1}\uplus\ldots\uplus Y_{k}$
-\end_inset
-
- וקיימות איזומטריות 
-\begin_inset Formula $\varphi_{1},\ldots,\varphi_{k}$
-\end_inset
-
- כך שמתקיים 
-\begin_inset Formula $\forall1\le j\le k.Y_{j}=\varphi_{j}X_{j}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-פנים: תהא קבוצה 
-\begin_inset Formula $A\subseteq\bbr^{n}$
-\end_inset
-
- אז פני הצורה שנוצרת על ידי 
-\begin_inset Formula $A$
-\end_inset
-
- היא 
-\begin_inset Formula $A^{\circ}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-סימון: 
-\begin_inset Formula $X,Y\subseteq\bbr^{n}$
-\end_inset
-
- חופפות בחלקים 
-\begin_inset Formula $\iff$
-\end_inset
-
- 
-\begin_inset Formula $X\equiv Y$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-פרדוקס בנך טרסקי: לכל 
-\begin_inset Formula $X,Y\subseteq\bbr^{n}$
-\end_inset
-
- חסומות, )
-\begin_inset Formula $X^{\circ},Y^{\circ}\ne\emptyset$
-\end_inset
-
-( 
-\begin_inset Formula $\impliedby$
-\end_inset
-
- )
-\begin_inset Formula $X\equiv Y$
-\end_inset
-
-(.
-\end_layout
-
-\begin_layout Standard
-מסקנה: 
-\begin_inset Formula $\left\{ \left<x,y,z\right>\in\bbr^{3}\mid x^{2}+y^{2}+z^{2}<1\right\} \equiv\left\{ \left<x,y,z\right>\in\bbr^{3}\mid x^{2}+y^{2}+z^{2}<2\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-טענה: )אקסיומת הבחירה( 
-\begin_inset Formula $\equiv$
-\end_inset
-
- )עיקרון הסדר הטוב( 
-\begin_inset Formula $\equiv$
-\end_inset
-
- )פרדוקס בנך טרסקי(.
-\end_layout
-
-\begin_layout Standard
-שרשרת: יהי 
-\begin_inset Formula $\left<\Sigma,R\right>$
-\end_inset
-
- יחס אזי 
-\begin_inset Formula $C\subseteq\Sigma$
-\end_inset
-
- שמקיימת 
-\begin_inset Formula $\left<C,R\right>$
-\end_inset
-
- יחס לינארי.
-\end_layout
-
-\begin_layout Standard
-הלמה של צורן: יהי 
-\begin_inset Formula $\left<\Sigma,R\right>$
-\end_inset
-
- יחס סדר, )
-\begin_inset Formula $\Sigma\ne\emptyset$
-\end_inset
-
- 
-\begin_inset Formula $\land$
-\end_inset
-
- לכל שרשרת 
-\begin_inset Formula $X\subseteq\Sigma$
-\end_inset
-
- יש חסם עליון( 
-\begin_inset Formula $\impliedby$
-\end_inset
-
- )קיים איבר מקסימלי ב־
-\begin_inset Formula $\Sigma$
-\end_inset
-
-(.
-\end_layout
-
-\begin_layout Standard
-מסקנה: 
-\begin_inset Formula $\forall A,B.\left|A\right|\le\left|B\right|\lor\left|B\right|\le\left|A\right|$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-טענה: )אקסיומת הבחירה( 
-\begin_inset Formula $\equiv$
-\end_inset
-
- )הלמה של צורן(.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $ $
 \end_inset
 
 
@@ -21708,43 +23075,30 @@ status open
 
 \end_deeper
 \begin_layout Subsubsection
-הגדרת השלמים
+אינדוקציה
 \end_layout
 
-\begin_layout Definition
-\begin_inset Argument 1
+\begin_layout Claim
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-מספרים שלמים
+
+
+\backslash
+hypertarget{NisGood}{}
 \end_layout
 
 \end_inset
 
-...
-\end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
+\begin_inset Formula $\left<\bbn,<\right>$
 \end_inset
 
-
+ הינו יחס סדר טוב.
 \end_layout
 
-\begin_layout Subsubsection
-הגדרת הרציונליים
-\end_layout
-
-\begin_layout Definition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-מספרים רציונליים
-\end_layout
-
-\end_inset
-
+\begin_layout Proof
 ...
 \end_layout
 
@@ -21769,11 +23123,37 @@ status open
 ...
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
+\begin_layout Subsubsection
+תכונות הממשיים
+\end_layout
+
+\begin_layout Claim
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+שלמות הממשיים
+\end_layout
+
 \end_inset
 
+תהא 
+\begin_inset Formula $\emptyset\ne X\subseteq\bbr$
+\end_inset
 
+ ונניח כי קיימים ל־
+\begin_inset Formula $X$
+\end_inset
+
+ חסם עליון ותחתון אזי קיימים ל־
+\begin_inset Formula $X$
+\end_inset
+
+ סופרמום ואינפימום.
+\end_layout
+
+\begin_layout Proof
+...
 \end_layout
 
 \begin_layout Section
