@@ -175,7 +175,7 @@ End
 \color #faf0e6
 \end_branch
 \branch Logic
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -213,7 +213,7 @@ End
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "E:/University/macros.lyx"
+filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 
 \end_inset
 
@@ -6374,7 +6374,7 @@ status collapsed
 \begin_layout Standard
 \begin_inset Branch Logic
 inverted 0
-status collapsed
+status open
 
 \begin_layout Standard
 בתורת הקבוצות האובייקט המרכזי הוא )באופן מפתיע( קבוצות, למרות היותם האובייקט
@@ -6391,7 +6391,7 @@ status collapsed
 
 \begin_layout Definition
 \begin_inset Argument 1
-status collapsed
+status open
 
 \begin_layout Plain Layout
 קבוצה
@@ -8395,7 +8395,7 @@ status open
 \begin_inset Quotes eld
 \end_inset
 
-מטעמי סימטריה...
+מטעמי סימטריה
 \begin_inset Quotes erd
 \end_inset
 
@@ -13682,9 +13682,111 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A$
+\end_inset
+
+,
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\impliedby$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי 
+\begin_inset Formula $R$
+\end_inset
+
+ סימטרי, יהי 
+\begin_inset Formula $\left<a,b\right>\in R$
+\end_inset
+
+ מסימטריות 
+\begin_inset Formula $R$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left<b,a\right>\in R$
+\end_inset
+
+ ומהגדרת היחס ההופכי 
+\begin_inset Formula $\left<a,b\right>\in R^{-1}$
+\end_inset
+
+, לכן 
+\begin_inset Formula $R\subseteq R^{-1}$
+\end_inset
+
+, משיקולי סימטריה )כי 
+\begin_inset Formula $\left(R^{-1}\right)^{-1}=R$
+\end_inset
+
+( נקבל כי 
+\begin_inset Formula $R=R^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי 
+\begin_inset Formula $R=R^{-1}$
+\end_inset
+
+, יהיו 
+\begin_inset Formula $a,b\in A$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $aRb$
+\end_inset
+
+ מתקיים מההנחה 
+\begin_inset Formula $aR^{-1}b$
+\end_inset
+
+, כמו כן מהגדרת היחס ההופכי 
+\begin_inset Formula $bR^{-1}a$
+\end_inset
+
+ ושוב מההנחה 
+\begin_inset Formula $bRa$
+\end_inset
+
+ אזי 
+\begin_inset Formula $aRb\implies bRa$
+\end_inset
+
+ כנדרש.
+\end_layout
+
+\end_deeper
 \begin_layout Proof
 \begin_inset FormulaMacro
 \newcommand{\sym}{\text{Sym}}
@@ -13837,7 +13939,7 @@ status open
 \begin_inset Formula $R$
 \end_inset
 
- סימטרי אם
+ טרנזיטיבי אם
 \begin_inset Quotes erd
 \end_inset
 
@@ -13849,9 +13951,87 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A$
+\end_inset
+
+,
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\impliedby$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי 
+\begin_inset Formula $R$
+\end_inset
+
+ טרנזיטיבי, יהי 
+\begin_inset Formula $\left<a,c\right>\in R\circ R$
+\end_inset
+
+ מהגדרת הרכבה קיים 
+\begin_inset Formula $b\in A$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left<a,b\right>,\left<b,c\right>\in R$
+\end_inset
+
+ ומטרנזיטיביות יתקיים 
+\begin_inset Formula $\left<a,c\right>\in R$
+\end_inset
+
+ כנדרש.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי 
+\begin_inset Formula $R\circ R\subseteq R$
+\end_inset
+
+, יהיו 
+\begin_inset Formula $\left<a,b\right>,\left<b,c\right>\in R$
+\end_inset
+
+ מהגדרת הרכבה 
+\begin_inset Formula $\left<a,c\right>\in R\circ R$
+\end_inset
+
+ ומההנחה יתקיים 
+\begin_inset Formula $\left<a,c\right>\in R$
+\end_inset
+
+ כנדרש.
+\end_layout
+
+\end_deeper
 \begin_layout Definition
 \begin_inset Argument 1
 status open
@@ -14074,14 +14254,14 @@ status open
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $\left(aRb\right)\iff\left(\left[a\right]_{R}=\left[b\right]_{R}\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $\left(\neg aRb\right)\iff\left(\left[a\right]_{R}\cap\left[b\right]_{R}=\emptyset\right)$
 \end_inset
 
@@ -14090,9 +14270,238 @@ status open
 
 \end_deeper
 \begin_layout Proof
-...
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס שקילות מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $a,b\in A$
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\numeric on
+1
+\numeric off
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\impliedby$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי 
+\begin_inset Formula $\left[a\right]_{R}=\left[b\right]_{R}$
+\end_inset
+
+, נשים לב כי מרפלקסיביות 
+\begin_inset Formula $a\in\left[a\right]_{R}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $a\in\left[b\right]_{R}$
+\end_inset
+
+ אזי מהגדרת מחלקת שקילות 
+\begin_inset Formula $bRa$
+\end_inset
+
+ ומסימטריות 
+\begin_inset Formula $aRb$
+\end_inset
+
+ כנדרש.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי 
+\begin_inset Formula $aRb$
+\end_inset
+
+, יהי 
+\begin_inset Formula $x\in\left[a\right]_{R}$
+\end_inset
+
+ מהגדרת מחלקת שקילות 
+\begin_inset Formula $aRx$
+\end_inset
+
+ מסימטריות יחס שקילות 
+\begin_inset Formula $xRa$
+\end_inset
+
+ ומטרנזיטיביות יחס שקילות 
+\begin_inset Formula $xRb$
+\end_inset
+
+ ושוב מסימטריות 
+\begin_inset Formula $bRx$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $x\in\left[b\right]_{R}$
+\end_inset
+
+.
+ משיקולי סימטריה בין 
+\begin_inset Formula $a,b$
+\end_inset
+
+ ההכלה הנגדית מתקיימת כלומר 
+\begin_inset Formula $\left[a\right]_{R}=\left[b\right]_{R}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status collapsed
+
+\begin_layout Plain Layout
+
+\numeric on
+2
+\numeric off
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\impliedby$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי 
+\begin_inset Formula $\left[a\right]_{R}\cap\left[b\right]_{R}=\emptyset$
+\end_inset
+
+, נניח בשלילה כי 
+\begin_inset Formula $aRb$
+\end_inset
+
+ אזי מטענה 
+\begin_inset Formula $\text{1}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left[a\right]_{R}=\left[b\right]_{R}$
+\end_inset
+
+ וכן מרפלקסיביות 
+\begin_inset Formula $a\in\left[a\right]_{R}$
+\end_inset
+
+ בפרט 
+\begin_inset Formula $\left\{ a\right\} \subseteq\left[a\right]_{R}\cap\left[b\right]_{R}$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $\left[a\right]_{R}\cap\left[b\right]_{R}\ne\emptyset$
+\end_inset
+
+ סתירה.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי 
+\begin_inset Formula $\neg aRb$
+\end_inset
+
+, נניח בשלילה כי 
+\begin_inset Formula $\left[a\right]_{R}\cap\left[b\right]_{R}\ne\emptyset$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $x\in\left[a\right]_{R}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $x\in\left[b\right]_{R}$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $\left(bRx\right)\land\left(aRx\right)$
+\end_inset
+
+ ומסימטריות וטרנזיטיביות יתקיים 
+\begin_inset Formula $aRb$
+\end_inset
+
+ סתירה.
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Example
 \begin_inset Argument 1
 status open
@@ -14354,7 +14763,79 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+יהיו 
+\begin_inset Formula $\Pi_{1},\Pi_{2}$
+\end_inset
+
+ חלוקות של 
+\begin_inset Formula $A$
+\end_inset
+
+ ונניח כי 
+\begin_inset Formula $\Pi_{1}\subseteq\Pi_{2}$
+\end_inset
+
+, תהא 
+\begin_inset Formula $X\in\Pi_{2}$
+\end_inset
+
+ ונניח בשלילה כי 
+\begin_inset Formula $X\notin\Pi_{1}$
+\end_inset
+
+ מהגדרת חלוקה קיים 
+\begin_inset Formula $a\in X$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\biguplus\Pi_{1}=A$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $Y\in\Pi_{1}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $a\in Y$
+\end_inset
+
+, מההנחה יתקיים 
+\begin_inset Formula $Y\in\Pi_{2}$
+\end_inset
+
+ ומהגדרת חלוקה וההנחה כי 
+\begin_inset Formula $X\notin\Pi_{2}$
+\end_inset
+
+ נקבל כי מתקיים 
+\begin_inset Formula $X\ne Y$
+\end_inset
+
+ ובפרט 
+\begin_inset Formula $X\cap Y=\emptyset$
+\end_inset
+
+ סתירה לעובדה כי 
+\begin_inset Formula $a\in X$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a\in Y$
+\end_inset
+
+, אזי 
+\begin_inset Formula $X\in\Pi_{1}$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $\Pi_{2}\subseteq\Pi_{1}$
+\end_inset
+
+ אזי מההנחה 
+\begin_inset Formula $\Pi_{1}=\Pi_{2}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -14379,7 +14860,7 @@ status open
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
+\begin_layout Enumerate
 תהא 
 \begin_inset Formula $\Pi$
 \end_inset
@@ -14392,7 +14873,7 @@ status open
 \begin_inset Formula $R_{\Pi}=\biguplus_{X\in\Pi}X^{2}$
 \end_inset
 
- יחס מעל 
+ יחס שקילות מעל 
 \begin_inset Formula $A$
 \end_inset
 
@@ -14412,12 +14893,12 @@ status open
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 יהי 
 \begin_inset Formula $R$
 \end_inset
 
- יחס מעל 
+ יחס שקילות מעל 
 \begin_inset Formula $A$
 \end_inset
 
@@ -14443,9 +14924,359 @@ status open
 
 \end_deeper
 \begin_layout Proof
-...
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+תהא 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ חלוקה של 
+\begin_inset Formula $A$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula $R_{\Pi}=\bigcup_{X\in\Pi}X^{2}$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+צ
+\begin_inset Quotes erd
+\end_inset
+
+ל: איחוד זר מוצדק, יהיו 
+\begin_inset Formula $X,Y\in\Pi$
+\end_inset
+
+ שונות אזי מהגדרת חלוקה 
+\begin_inset Formula $X\cap Y=\emptyset$
+\end_inset
+
+ בפרט 
+\begin_inset Formula $X^{2}\cap Y^{2}=\emptyset$
+\end_inset
+
+ אזי איחוד זר ניתן לשימוש.
+\end_layout
+
+\begin_layout Itemize
+צ
+\begin_inset Quotes erd
+\end_inset
+
+ל: 
+\begin_inset Formula $R_{\Pi}$
+\end_inset
+
+ רפלקסיבי, יהי 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ מהגדרת חלוקה קיים 
+\begin_inset Formula $X\in\Pi$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $a\in X$
+\end_inset
+
+ בפרט 
+\begin_inset Formula $\left<a,a\right>\in X^{2}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\left<a,a\right>\in R_{\Pi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+צ
+\begin_inset Quotes erd
+\end_inset
+
+ל: 
+\begin_inset Formula $R_{\Pi}$
+\end_inset
+
+ סימטרי, יהיו 
+\begin_inset Formula $a,b\in A$
+\end_inset
+
+ ונניח כי 
+\begin_inset Formula $aRb$
+\end_inset
+
+ מהגדרת 
+\begin_inset Formula $R_{\Pi}$
+\end_inset
+
+ קיים 
+\begin_inset Formula $X\in\Pi$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $a,b\in X$
+\end_inset
+
+ כמו כן 
+\begin_inset Formula $\left<b,a\right>\in X^{2}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $bR_{\Pi}a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+צ
+\begin_inset Quotes erd
+\end_inset
+
+ל: 
+\begin_inset Formula $R_{\Pi}$
+\end_inset
+
+ טרנזיטיבי, יהיו 
+\begin_inset Formula $a,b,c\in A$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\left(aR_{\Pi}b\right)\land\left(bR_{\Pi}c\right)$
+\end_inset
+
+ מהגדרת 
+\begin_inset Formula $R_{\Pi}$
+\end_inset
+
+ קיימים 
+\begin_inset Formula $X,Y\in\Pi$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $a,b\in X$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b,c\in Y$
+\end_inset
+
+ נניח בשלילה כי 
+\begin_inset Formula $X\ne Y$
+\end_inset
+
+ אזי מהגדרת חלוקה 
+\begin_inset Formula $X\cap Y=\emptyset$
+\end_inset
+
+ סתירה לעובדה כי 
+\begin_inset Formula $b\in X\cap Y$
+\end_inset
+
+ בפרט 
+\begin_inset Formula $X=Y$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a,b,c\in X$
+\end_inset
+
+, כעת יתקיים 
+\begin_inset Formula $\left<a,c\right>\in X^{2}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $aR_{\Pi}c$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס שקילות מעל 
+\begin_inset Formula $A$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+צ
+\begin_inset Quotes erd
+\end_inset
+
+ל: 
+\begin_inset Formula $\emptyset\notin\nicefrac{A}{R}$
+\end_inset
+
+, נניח בשלילה כי 
+\begin_inset Formula $\emptyset\in\nicefrac{A}{R}$
+\end_inset
+
+ אזי מהגדרת קבוצת המנה קיים 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left[a\right]_{R}=\emptyset$
+\end_inset
+
+ סתירה להיות 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס שקילות ובפרט רפלקסיבי 
+\begin_inset Formula $aRa$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $a\in\left[a\right]_{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+צ
+\begin_inset Quotes erd
+\end_inset
+
+ל: זרות הקבוצות, יהיו 
+\begin_inset Formula $X,Y\in\nicefrac{A}{R}$
+\end_inset
+
+ ונניח כי 
+\begin_inset Formula $X\ne Y$
+\end_inset
+
+ מהגדרת קבוצת מנה קיימים 
+\begin_inset Formula $a,b\in A$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\left[a\right]_{R}=X$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left[b\right]_{R}=Y$
+\end_inset
+
+ נניח בשלילה כי 
+\begin_inset Formula $c\in X\cap Y$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(aRc\right)\land\left(bRc\right)$
+\end_inset
+
+ בפרט מהיות 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס שקילות נקבל כי 
+\begin_inset Formula $aRb$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\left[a\right]_{R}=\left[b\right]_{R}$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $X=Y$
+\end_inset
+
+ סתירה, אזי 
+\begin_inset Formula $X\cap Y=\emptyset$
+\end_inset
+
+ כנדרש.
+\end_layout
+
+\begin_layout Itemize
+צ
+\begin_inset Quotes erd
+\end_inset
+
+ל: איחוד הקבוצות הוא כל המרחב, יהי 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ נשים לב כי 
+\begin_inset Formula $\left[a\right]_{R}\in\nicefrac{A}{R}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\left[a\right]_{R}\subseteq\bigcup\nicefrac{A}{R}$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $a\in\bigcup\nicefrac{A}{R}$
+\end_inset
+
+, כעת יהי 
+\begin_inset Formula $b\in\bigcup\nicefrac{A}{R}$
+\end_inset
+
+ אזי מהגדרת איחוד מוכלל קיימת 
+\begin_inset Formula $X\in\nicefrac{A}{R}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $b\in X$
+\end_inset
+
+ מהגדרת קבוצת מנה קיימת 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\left[x\right]_{R}=X$
+\end_inset
+
+ בפרט 
+\begin_inset Formula $b\in\left[x\right]_{R}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $xRb$
+\end_inset
+
+ אך 
+\begin_inset Formula $R\subseteq A^{2}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $b\in A$
+\end_inset
+
+ כנדרש, בסך הכל קיבלנו כי 
+\begin_inset Formula $\bigcup\nicefrac{A}{R}=A$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Theorem
 תהא 
 \begin_inset Formula $A$
@@ -14698,6 +15529,11 @@ status open
 \end_layout
 
 \begin_layout Example
+נגדיר פונקציות,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
 נגדיר פונקציה 
 \begin_inset Formula $f\in\left\{ a,b,c\right\} ^{\left\{ 1,2,3\right\} }$
 \end_inset
@@ -14706,7 +15542,11 @@ status open
 \begin_inset Formula $f=\left\{ \left<1,a\right>,\left<2,a\right>,\left<3,b\right>\right\} $
 \end_inset
 
-, נגדיר פונקציה 
+.
+\end_layout
+
+\begin_layout Itemize
+נגדיר פונקציה 
 \begin_inset Formula $F:\left(\bbr\to\bbr\right)\to\bbr$
 \end_inset
 
@@ -14717,6 +15557,19 @@ status open
 .
 \end_layout
 
+\begin_layout Itemize
+נגדיר פונקציה 
+\begin_inset Formula $g:\bbr\to\bbr$
+\end_inset
+
+ כך 
+\begin_inset Formula $g=\left\{ \left<x,x^{2}\right>\mid x\in\bbr^{2}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Remark
 יהיו 
 \begin_inset Formula $A,B$
@@ -15094,10 +15947,8 @@ g_{2}\left(a\right) & a\in A_{2}
 
  נרשה לעצמינו לכתוב פרידיקט, 
 \series bold
-\color red
 בתנאי שכל החלוקות למקרים מכסות את תחום הפונקציה!
 \series default
-\color inherit
 , לדוגמה הפונקציה 
 \begin_inset Formula $f:\left\{ 0,1\right\} \to\left\{ 0,1\right\} $
 \end_inset
@@ -19388,9 +20239,7 @@ status open
 \uwave off
 \noun off
 \color none
-
 לא יהיה ניתן להוכיח כי כל שדה סדור מוכל בשדה סגור אלגברית.
-
 \end_layout
 
 \begin_layout Enumerate
@@ -19440,7 +20289,6 @@ status open
 \noun off
 \color none
 אקסיומת הבחירה איננה עקרון טבעי, מאי יכולתינו הממשית לבחור אינסוף פעמים.
-
 \end_layout
 
 \begin_layout Enumerate
@@ -19478,8 +20326,7 @@ status open
 \uwave off
 \noun off
 \color none
-נובע 
-פרדוקס טרסקי־בנך.
+נובע פרדוקס טרסקי־בנך.
 \end_layout
 
 \end_deeper
