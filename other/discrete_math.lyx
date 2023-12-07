@@ -12775,6 +12775,7 @@ status open
 מתקיים
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 \begin_inset Formula $\left\{ \left<1,3\right>,\left<2,4\right>\right\} \circ\left\{ \left<4,1\right>,\left<3,2\right>\right\} =\left\{ \left<4,3\right>,\left<3,4\right>\right\} $
 \end_inset
@@ -12789,6 +12790,7 @@ status open
 .
 \end_layout
 
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -15286,7 +15288,7 @@ status open
 \begin_inset Formula $S$
 \end_inset
 
- יחס מעל 
+ יחס שקילות מעל 
 \begin_inset Formula $A$
 \end_inset
 
@@ -15310,9 +15312,183 @@ status open
 \end_layout
 
 \begin_layout Proof
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה יהי 
+\begin_inset Formula $S$
+\end_inset
+
+ יחס שקילות מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ חלוקה של 
+\begin_inset Formula $A$
+\end_inset
+
+, נחלק את ההוכחה לשתי הטענות
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+צ
+\begin_inset Quotes erd
+\end_inset
+
+ל: 
+\begin_inset Formula $R_{\nicefrac{A}{S}}=S$
+\end_inset
+
+, נוכיח בעזרת הכלה דו כיוונית
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\subseteq$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $\left<a,b\right>\in R_{\nicefrac{A}{S}}$
+\end_inset
+
+ מהגדרת יחס מושרה מתקיים 
+\begin_inset Formula $\left<a,b\right>\in\biguplus_{X\in\nicefrac{A}{S}}X^{2}$
+\end_inset
+
+ בפרט קיים 
+\begin_inset Formula $X\in\nicefrac{A}{S}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $a,b\in X$
+\end_inset
+
+ כמו כן מהגדרת קבוצת המנה נקבל כי קיים 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left[x\right]_{S}=X$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $a,b\in\left[x\right]_{S}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a\right]_{S}=\left[b\right]_{S}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $aSb$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\supseteq$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $\left<a,b\right>\in S$
+\end_inset
+
+ נשים לב כי 
+\begin_inset Formula $\left[a\right]_{S}=\left[b\right]_{S}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\left<a,b\right>\in\left[a\right]_{S}^{2}$
+\end_inset
+
+ כמו כן מהגדרת קבוצת מנה 
+\begin_inset Formula $\left[a\right]_{S}\in\nicefrac{A}{S}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\left<a,b\right>\in\bigcup_{X\in\nicefrac{A}{S}}X^{2}$
+\end_inset
+
+ ומהגדרת יחס מושרה מהחלוקה נקבל 
+\begin_inset Formula $\left<a,b\right>\in R_{\nicefrac{A}{S}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+צ
+\begin_inset Quotes erd
+\end_inset
+
+ל: 
+\begin_inset Formula $\nicefrac{A}{R_{\Pi}}=\Pi$
+\end_inset
+
+, נוכיח בעזרת הכלה דו כיוונית
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\subseteq$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
 ...
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\supseteq$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+...
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Example
 תהא 
 \begin_inset Formula $A$
@@ -16094,9 +16270,155 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ נוכיח תחילה את ההצדקה בשימוש באיחוד זר ולאחר מכן בעזרת הכלה דו כיוונית
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+צ
+\begin_inset Quotes erd
+\end_inset
+
+ל: איחוד זר, יהיו 
+\begin_inset Formula $b_{1},b_{2}\in B$
+\end_inset
+
+ באשר 
+\begin_inset Formula $b_{1}\ne b_{2}$
+\end_inset
+
+ נניח בשלילה כי 
+\begin_inset Formula $f^{-1}\left[\left\{ b_{1}\right\} \right]\cap f^{-1}\left[\left\{ b_{2}\right\} \right]\ne\emptyset$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $a\in f^{-1}\left[\left\{ b_{1}\right\} \right]$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a\in f^{-1}\left[\left\{ b_{2}\right\} \right]$
+\end_inset
+
+ מהגדרת מקור איבר איבר נובע כי 
+\begin_inset Formula $f\left(a\right)\in\left\{ b_{1}\right\} $
+\end_inset
+
+ וכן 
+\begin_inset Formula $f\left(a\right)\in\left\{ b_{2}\right\} $
+\end_inset
+
+ אך מהגדרת כתיבת קבוצה כרשימת איברים נובע כי 
+\begin_inset Formula $f\left(a\right)=b_{1}$
+\end_inset
+
+ וגם 
+\begin_inset Formula $f\left(a\right)=b_{2}$
+\end_inset
+
+ אזי מטרנזיטיביות השיוויון יתקיים 
+\begin_inset Formula $b_{1}=b_{2}$
+\end_inset
+
+ סתירה בפרט 
+\begin_inset Formula $f^{-1}\left[\left\{ b_{1}\right\} \right]\cap f^{-1}\left[\left\{ b_{2}\right\} \right]=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\subseteq$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $a\in\bigcup_{b\in B}f^{-1}\left[\left\{ b\right\} \right]$
+\end_inset
+
+ מהגדרת איחוד מוכלל קיים 
+\begin_inset Formula $b^{\prime}\in B$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $a\in f^{-1}\left[\left\{ b^{\prime}\right\} \right]$
+\end_inset
+
+ ומהגדרת מקור איבר איבר נקבל כי מתקיים 
+\begin_inset Formula $f\left(a\right)=b^{\prime}$
+\end_inset
+
+ כעת מהגדרת פונקציה כיחס נקבל כי 
+\begin_inset Formula $f\subseteq A\times B$
+\end_inset
+
+ וכן 
+\begin_inset Formula $afb^{\prime}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $a\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\supseteq$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ נשים לב כי 
+\begin_inset Formula $f$
+\end_inset
+
+ פונקציה ולכן מלאה כלומר קיים 
+\begin_inset Formula $b^{\prime}\in B$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $f\left(a\right)=b^{\prime}$
+\end_inset
+
+ בפרט מהגדרת מקור איבר איבר יתקיים 
+\begin_inset Formula $a\in f^{-1}\left[\left\{ b^{\prime}\right\} \right]$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $a\in\bigcup_{b\in B}f^{-1}\left[\left\{ b\right\} \right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Example
 ...
 \end_layout
