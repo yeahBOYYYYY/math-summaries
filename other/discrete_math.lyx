@@ -179,6 +179,11 @@ End
 \filename_suffix 0
 \color #faf0e6
 \end_branch
+\branch Exeption
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -287,14 +292,14 @@ LatexCommand tableofcontents
 
 \end_layout
 
+\begin_layout Part
+לוגיקה
+\end_layout
+
 \begin_layout Standard
 \begin_inset Branch Logic
 inverted 0
 status collapsed
-
-\begin_layout Part
-לוגיקה
-\end_layout
 
 \begin_layout Standard
 הלוגיקה המתמטית היא ענף במתמטיקה שעוסק בביטוי טענות מתמטיות פשוטות ומורכבות.
@@ -491,7 +496,7 @@ status open
 \end_layout
 
 \begin_layout Subsection
-קשרים בין פסוקים
+קשרים לוגיים
 \end_layout
 
 \begin_layout Definition
@@ -675,11 +680,8 @@ status open
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+\begin_layout Subsubsection
+פסוק
 \end_layout
 
 \begin_layout Definition
@@ -687,12 +689,52 @@ status open
 status open
 
 \begin_layout Plain Layout
-תחשיב הפסוקים
+פסוק
 \end_layout
 
 \end_inset
 
- טענה המורכבת מצירופים של פסוקים יסודיים וקשרים יסודיים.
+טענה המורכבת מצירופים של פסוקים יסודיים וקשרים ביניהם.
+\end_layout
+
+\begin_layout Example
+הביטוי 
+\begin_inset Quotes eld
+\end_inset
+
+היום יום שלישי
+\begin_inset Quotes erd
+\end_inset
+
+ זהו פסוק, לעומת זאת 
+\begin_inset Quotes eld
+\end_inset
+
+מה השעה?
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+סגור את הדלת!
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $1+1$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ אינם פסוקים.
 \end_layout
 
 \begin_layout Standard
@@ -707,7 +749,7 @@ status open
 \begin_inset Formula $A,B,C$
 \end_inset
 
- פסוקים יסודיים אזי פסוקים כגון
+ פסוקים יסודיים אזי הבאים פסוקים
 \end_layout
 
 \begin_layout Itemize
@@ -4423,7 +4465,7 @@ status collapsed
 \begin_inset Formula $\neg\left(A\land B\right)\equiv\left(\neg A\right)\lor\left(\neg B\right)$
 \end_inset
 
-, 
+ וכן
 \begin_inset Formula $\neg\left(A\lor B\right)\equiv\left(\neg A\right)\land\left(\neg B\right)$
 \end_inset
 
@@ -5263,11 +5305,11 @@ status open
 \end_inset
 
 .
- נשים לב כי אם 
+ נניח בשלילה כי 
 \begin_inset Formula $V\left(\a_{1}\right)=V\left(\a_{2}\right)=\text{true}$
 \end_inset
 
- אזי 
+ בפרט 
 \begin_inset Formula $V\left(\neg\left(A\implies B\right)\right)=\text{true}$
 \end_inset
 
@@ -5275,7 +5317,7 @@ status open
 \begin_inset Formula $V\left(A\implies B\right)=\text{false}$
 \end_inset
 
- כמו כן 
+ אך כאמור גם 
 \begin_inset Formula $V\left(B\right)=\text{true}$
 \end_inset
 
@@ -6372,11 +6414,6 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch Logic
-inverted 0
-status open
-
-\begin_layout Standard
 בתורת הקבוצות האובייקט המרכזי הוא )באופן מפתיע( קבוצות, למרות היותם האובייקט
  המרכזי בתחום בקורס זה לא ינתנו הגדרות פורמליות לאובייקט זה, זאת מכיוון
  שהמתמטיקה כמו כל ענף מבוסס על פני הגדרות ואקסיומות אשר אנו מסכימים שהן
@@ -6384,6 +6421,11 @@ status open
  התעמקות באקסיומות על פיהן הן מתנהגות בגלוי.
  )אך זה לא תירוץ לנפנופי ידיים! הכל עדיין יהיה פורמלי ומדוייק(
 \end_layout
+
+\begin_layout Standard
+\begin_inset Branch Logic
+inverted 0
+status collapsed
 
 \begin_layout Section
 קבוצות
@@ -7918,6 +7960,16 @@ status open
 
  בפרט הרישא תמיד טענה שקרית לכן הגרירה טענת אמת כנדרש.
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Logic
+inverted 0
+status collapsed
 
 \begin_layout Section
 פעולות על קבוצות
@@ -11092,12 +11144,15 @@ status open
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
 \end_inset
 
 
 \end_layout
+
+\begin_layout Standard
+\begin_inset Branch Logic
+inverted 0
+status collapsed
 
 \begin_layout Section
 יחסים
@@ -13431,6 +13486,16 @@ status open
 
 \end_deeper
 \end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Logic
+inverted 0
+status collapsed
+
 \begin_layout Section
 יחסי שקילות
 \end_layout
@@ -15528,6 +15593,16 @@ status open
 .
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Logic
+inverted 0
+status collapsed
+
 \begin_layout Section
 פונקציות
 \end_layout
@@ -16192,7 +16267,55 @@ status open
 \end_layout
 
 \begin_layout Example
-...
+נגדיר שלוש פונקציות
+\begin_inset Formula 
+\begin{align*}
+f= & \lambda x\in\bbr.x^{2} & g= & \lambda x\in\bbc.x^{2} & h= & \lambda x\in\bbr.\frac{x^{4}+x^{2}}{x^{2}+1}
+\end{align*}
+
+\end_inset
+
+נשים לב כי 
+\begin_inset Formula $f\ne g$
+\end_inset
+
+ למרות שהן בעלות אותה הגדרה מכיוון ומתקיים 
+\begin_inset Formula $\dom\left(f\right)\ne\dom\left(g\right)$
+\end_inset
+
+, מאותה סיבה גם כמובן 
+\begin_inset Formula $h\ne g$
+\end_inset
+
+, לעומת זאת 
+\begin_inset Formula $f=h$
+\end_inset
+
+ כי 
+\begin_inset Formula $\dom\left(f\right)=\dom\left(h\right)$
+\end_inset
+
+ וכן יהי 
+\begin_inset Formula $a\in\bbr$
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\[
+f\left(a\right)=a^{2}=a^{2}\left(\frac{a^{2}+1}{a^{2}+1}\right)=\frac{a^{4}+a^{2}}{a^{2}+1}=h\left(a\right)
+\]
+
+\end_inset
+
+שימו לב כי ניתן לחלק והכפיל בגורם 
+\begin_inset Formula $a^{2}+1$
+\end_inset
+
+ מכיוון שמתקיים 
+\begin_inset Formula $\forall x\in\bbr.x^{2}+1\ne0$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -16420,7 +16543,50 @@ status open
 
 \end_deeper
 \begin_layout Example
-...
+נגדיר 
+\begin_inset Formula $f=\lambda x\in\bbz.\left|x\right|$
+\end_inset
+
+, עבור מי שלא מכיר הסימון 
+\begin_inset Formula $\left|x\right|$
+\end_inset
+
+ מסמל את הערך המוחלט של 
+\begin_inset Formula $x$
+\end_inset
+
+ המוגדר כך
+\begin_inset Formula 
+\[
+\lambda x\in\bbr.\begin{cases}
+x & x\ge0\\
+-x & \text{else}
+\end{cases}
+\]
+
+\end_inset
+
+נשים לב 
+\begin_inset Formula $\im\left(f\right)=\bbn$
+\end_inset
+
+ כי מתקיים
+\begin_inset Formula 
+\[
+\forall n\in\bbn_{+}.f^{-1}\left[\left\{ n\right\} \right]=\left\{ \pm n\right\} 
+\]
+
+\end_inset
+
+אזי
+\begin_inset Formula 
+\[
+\biguplus_{n\in\bbn}f^{-1}\left[\left\{ n\right\} \right]=\biguplus_{n\in\bbn}\left\{ \pm n\right\} =\bbz
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -17022,6 +17188,16 @@ status open
 \begin_layout Proof
 ...
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Exeption
+inverted 0
+status collapsed
 
 \begin_layout Section
 עוצמות
@@ -17634,6 +17810,15 @@ hyperlink{arithmeticThe}{המשפט היסודי של האריתמטיקה בפ�
 \end_layout
 
 \begin_layout Enumerate
+נניח כי 
+\begin_inset Formula $A_{1},B_{1}$
+\end_inset
+
+ זרות וכן 
+\begin_inset Formula $A_{2},B_{2}$
+\end_inset
+
+ זרות אזי 
 \begin_inset Formula $\left|A_{1}\uplus B_{1}\right|=\left|A_{2}\uplus B_{2}\right|$
 \end_inset
 
@@ -17642,9 +17827,662 @@ hyperlink{arithmeticThe}{המשפט היסודי של האריתמטיקה בפ�
 
 \end_deeper
 \begin_layout Proof
-...
+תהיינה 
+\begin_inset Formula $A_{1},A_{2},B_{1},B_{2}$
+\end_inset
+
+ קבוצות המקיימות 
+\begin_inset Formula $\left|B_{1}\right|=\left|B_{2}\right|\land\left|A_{1}\right|=\left|A_{2}\right|$
+\end_inset
+
+ נשים לב כי מהגדרת שיוויון עוצמות קיימת 
+\begin_inset Formula $f:A_{1}\to A_{2}$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל וכן 
+\begin_inset Formula $g:B_{1}\to B_{2}$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל,
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+נגדיר פונקציה 
+\begin_inset Formula $h:A_{1}\times B_{1}\to A_{2}\times B_{2}$
+\end_inset
+
+ כך
+\begin_inset Formula 
+\[
+h=\lambda\left<a,b\right>\in A_{1}\times B_{1}.\left<f\left(a\right),g\left(b\right)\right>
+\]
+
+\end_inset
+
+נראה כי 
+\begin_inset Formula $h$
+\end_inset
+
+ הפיכה ולכן 
+\begin_inset Formula $\left|A_{1}\times B_{1}\right|=\left|A_{2}\times B_{2}\right|$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $h$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע, יהיו 
+\begin_inset Formula $\left<a,b\right>,\left<c,d\right>\in A_{1}\times B_{1}$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $h\left(a,b\right)=h\left(c,d\right)$
+\end_inset
+
+ כלומר מהגדרת פונקציית למדא יתקיים
+\begin_inset Formula 
+\[
+\left<f\left(a\right),g\left(b\right)\right>=h\left(a,b\right)=h\left(c,d\right)=\left<f\left(c\right),g\left(d\right)\right>
+\]
+
+\end_inset
+
+אזי מתכונת זוג סדור יתקיים 
+\begin_inset Formula $\left(f\left(a\right)=f\left(c\right)\right)\land\left(g\left(b\right)=g\left(d\right)\right)$
+\end_inset
+
+, כעת מהגדרת 
+\begin_inset Formula $f,g$
+\end_inset
+
+ כחח
+\begin_inset Quotes erd
+\end_inset
+
+ע נקבל כי 
+\begin_inset Formula $\left(a=c\right)\land\left(b=d\right)$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\left<a,b\right>=\left<c,d\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h$
+\end_inset
+
+ על, יהי 
+\begin_inset Formula $\left<a,b\right>\in A_{2}\times B_{2}$
+\end_inset
+
+ מהיות 
+\begin_inset Formula $f,g$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל נקבל כי 
+\begin_inset Formula $f^{-1},g^{-1}$
+\end_inset
+
+ פונקציות ולכן 
+\begin_inset Formula $f^{-1}\left(a\right),g^{-1}\left(b\right)$
+\end_inset
+
+ מוגדרים היטב בפרט נשים לב כי
+\begin_inset Formula 
+\[
+h\left(f^{-1}\left(a\right),g^{-1}\left(b\right)\right)=\left<f\left(f^{-1}\left(a\right)\right),g\left(g^{-1}\left(b\right)\right)\right>=\left<a,b\right>
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+נגדיר פונקציה 
+\begin_inset Formula $h:\P\left(A_{1}\right)\to\P\left(A_{2}\right)$
+\end_inset
+
+ כך
+\begin_inset Formula 
+\[
+h=\lambda S\in\P\left(A_{1}\right).\left\{ f\left(a\right)\mid a\in S\right\} 
+\]
+
+\end_inset
+
+נראה כי 
+\begin_inset Formula $h$
+\end_inset
+
+ הפיכה ולכן 
+\begin_inset Formula $\left|\P\left(A_{1}\right)\right|=\left|\P\left(A_{2}\right)\right|$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $h$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע, תהיינה 
+\begin_inset Formula $S,R\in\P\left(A_{1}\right)$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $h\left(S\right)=h\left(R\right)$
+\end_inset
+
+ אזי מהגדרת 
+\begin_inset Formula $h$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\{ f\left(x\right)\mid x\in S\right\} =h\left(S\right)=h\left(R\right)=\left\{ f\left(x\right)\mid x\in R\right\} 
+\]
+
+\end_inset
+
+נניח בשלילה כי 
+\begin_inset Formula $S\ne R$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $a\in S\triangle R$
+\end_inset
+
+ בה
+\begin_inset Quotes erd
+\end_inset
+
+כ 
+\begin_inset Formula $a\in S$
+\end_inset
+
+ אזי יתקיים 
+\begin_inset Formula $f\left(a\right)\in\left\{ f\left(x\right)\mid x\in S\right\} $
+\end_inset
+
+ מעיקרון ההחלפה ולכן 
+\begin_inset Formula $f\left(a\right)\in\left\{ f\left(x\right)\mid x\in R\right\} $
+\end_inset
+
+ בפרט קיים 
+\begin_inset Formula $b\in R$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $f\left(a\right)=f\left(b\right)$
+\end_inset
+
+ אך 
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ולכן 
+\begin_inset Formula $a=b$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $a\in R$
+\end_inset
+
+ סתירה להיות 
+\begin_inset Formula $\left(a\in S\right)\land\left(a\in S\triangle R\right)$
+\end_inset
+
+, אזי 
+\begin_inset Formula $S=R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h$
+\end_inset
+
+ על, תהא 
+\begin_inset Formula $A\in\P\left(A_{2}\right)$
+\end_inset
+
+ מהיות 
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל נקבל כי 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ פונקציה בפרט
+\begin_inset Formula 
+\begin{align*}
+h\left(\left\{ f^{-1}\left(a\right)\mid a\in A\right\} \right)= & \left\{ f\left(a\right)\mid a\in\left\{ f^{-1}\left(a\right)\mid a\in A\right\} \right\} 
+\end{align*}
+
+\end_inset
+
+מוגדרת היטב, כעת יהי
+\begin_inset Formula 
+\[
+x\in\left\{ f\left(a\right)\mid a\in\left\{ f^{-1}\left(a\right)\mid a\in A\right\} \right\} 
+\]
+
+\end_inset
+
+מעיקרון ההחלפה נקבל כי
+\begin_inset Formula 
+\[
+\exists b\in\left\{ f^{-1}\left(a\right)\mid a\in A\right\} .f\left(b\right)=x
+\]
+
+\end_inset
+
+נסמנו 
+\begin_inset Formula $b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(b\in\left\{ f^{-1}\left(a\right)\mid a\in A\right\} \right)\land\left(f\left(b\right)=x\right)$
+\end_inset
+
+ ושוב מעיקרון ההחלפה
+\begin_inset Formula 
+\[
+\exists c\in A.f^{-1}\left(c\right)=b
+\]
+
+\end_inset
+
+נסמנו 
+\begin_inset Formula $c$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(c\in A\right)\land\left(f^{-1}\left(c\right)=b\right)$
+\end_inset
+
+ לכן נציב ונקבל
+\begin_inset Formula 
+\[
+x=f\left(b\right)=f\left(f^{-1}\left(c\right)\right)=c
+\]
+
+\end_inset
+
+כלומר 
+\begin_inset Formula $x\in A$
+\end_inset
+
+.
+ יהי 
+\begin_inset Formula $y\in A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f^{-1}\left(y\right)\in\left\{ f^{-1}\left(a\right)\mid a\in A\right\} $
+\end_inset
+
+ ולכן
+\begin_inset Formula 
+\[
+y=f\left(f^{-1}\left(y\right)\right)\in\left\{ f\left(a\right)\mid a\in\left\{ f^{-1}\left(a\right)\mid a\in A\right\} \right\} =h\left(\left\{ f^{-1}\left(a\right)\mid a\in A\right\} \right)
+\]
+
+\end_inset
+
+אזי קיבלנו כי
+\begin_inset Formula 
+\[
+\left(h\left(\left\{ f^{-1}\left(a\right)\mid a\in A\right\} \right)\subseteq A\right)\land\left(A\subseteq h\left(\left\{ f^{-1}\left(a\right)\mid a\in A\right\} \right)\right)
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula $A=h\left(\left\{ f^{-1}\left(a\right)\mid a\in A\right\} \right)$
+\end_inset
+
+ כנדרש.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+נגדיר פונקציה 
+\begin_inset Formula $h:A_{1}^{B_{1}}\to A_{2}^{B_{2}}$
+\end_inset
+
+ כך
+\begin_inset Formula 
+\[
+h=\lambda G\in A_{1}^{B_{1}}.f\circ G\circ g^{-1}
+\]
+
+\end_inset
+
+נראה דיאגרמה המתארת את הפונקציה 
+\begin_inset Formula $h$
+\end_inset
+
+ גרפית
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svgs/proofNotCoqDiagramHarkava.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+כעת נראה כי 
+\begin_inset Formula $h$
+\end_inset
+
+ הפיכה ולכן 
+\begin_inset Formula $\left|A_{1}^{B_{1}}\right|=\left|A_{2}^{B_{2}}\right|$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $h$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע, יהיו 
+\begin_inset Formula $G,F\in A_{1}^{B_{1}}$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $h\left(G\right)=h\left(F\right)$
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\[
+f\circ G\circ g^{-1}=h\left(G\right)=h\left(F\right)=f\circ F\circ g^{-1}
+\]
+
+\end_inset
+
+יהי 
+\begin_inset Formula $a\in B_{1}$
+\end_inset
+
+, משיוויון פונקציות וכן כי
+\begin_inset Formula 
+\[
+\dom\left(f\circ G\circ g^{-1}\right)=B_{2}=\dom\left(f\circ F\circ g^{-1}\right)
+\]
+
+\end_inset
+
+נקבל כי
+\begin_inset Formula 
+\[
+\forall b\in B_{2}.\left(f\circ G\circ g^{-1}\right)\left(b\right)=\left(f\circ F\circ g^{-1}\right)\left(b\right)
+\]
+
+\end_inset
+
+בפרט ממשפט שראינו נקבל כי
+\begin_inset Formula 
+\[
+f\left(G\left(a\right)\right)=\left(f\circ G\circ g^{-1}\right)\left(g\left(a\right)\right)=\left(f\circ F\circ g^{-1}\right)\left(g\left(a\right)\right)=f\left(F\left(a\right)\right)
+\]
+
+\end_inset
+
+אזי מחח
+\begin_inset Quotes erd
+\end_inset
+
+ע של 
+\begin_inset Formula $f$
+\end_inset
+
+ נקבל כי 
+\begin_inset Formula $F\left(a\right)=G\left(a\right)$
+\end_inset
+
+, כמו כן מתקיים 
+\begin_inset Formula $\dom\left(F\right)=\dom\left(G\right)$
+\end_inset
+
+ ולכן משיוויון פונקציות 
+\begin_inset Formula $F=G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h$
+\end_inset
+
+ על, יהי 
+\begin_inset Formula $F\in A_{2}^{B_{2}}$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $G=f^{-1}\circ F\circ g$
+\end_inset
+
+ נשים לב כי 
+\begin_inset Formula $G:B_{1}\to A_{1}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $h\left(G\right)$
+\end_inset
+
+ מוגדרת היטב ובפרט מאסוציאטיביות הרכבה נקבל
+\begin_inset Formula 
+\[
+h\left(G\right)=f\circ G\circ g^{-1}=f\circ\left(f^{-1}\circ F\circ g\right)\circ g^{-1}=F
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+נניח כי 
+\begin_inset Formula $A_{1},B_{1}$
+\end_inset
+
+ זרות וכן 
+\begin_inset Formula $A_{2},B_{2}$
+\end_inset
+
+ זרות, נגדיר פונקציה 
+\begin_inset Formula $h:A_{1}\uplus B_{1}\to A_{2}\uplus B_{2}$
+\end_inset
+
+ כך
+\begin_inset Formula 
+\[
+h=\lambda x\in A_{1}\uplus B_{1}.\begin{cases}
+f\left(x\right) & x\in A_{1}\\
+g\left(x\right) & x\in B_{1}
+\end{cases}
+\]
+
+\end_inset
+
+נראה כי 
+\begin_inset Formula $h$
+\end_inset
+
+ הפיכה ולכן 
+\begin_inset Formula $\left|A_{1}\uplus B_{1}\right|=\left|A_{2}\uplus B_{2}\right|$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $h$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע, יהיו 
+\begin_inset Formula $x,y\in A_{1}\uplus B_{1}$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $h\left(x\right)=h\left(y\right)$
+\end_inset
+
+, נניח בשלילה כי 
+\begin_inset Formula $x,y$
+\end_inset
+
+ מקבוצות שונות בה
+\begin_inset Quotes erd
+\end_inset
+
+כ 
+\begin_inset Formula $\left(x\in A_{1}\right)\land\left(y\in B_{1}\right)$
+\end_inset
+
+ אזי יתקיים
+\begin_inset Formula 
+\[
+B_{2}\ni g\left(y\right)=h\left(y\right)=h\left(x\right)=f\left(x\right)\in B_{1}
+\]
+
+\end_inset
+
+סתירה לזרות 
+\begin_inset Formula $B_{1},B_{2}$
+\end_inset
+
+, בפרט 
+\begin_inset Formula $x,y$
+\end_inset
+
+ מאותה קבוצה בה
+\begin_inset Quotes erd
+\end_inset
+
+כ 
+\begin_inset Formula $x,y\in A_{1}$
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\[
+f\left(x\right)=h\left(x\right)=h\left(y\right)=f\left(y\right)
+\]
+
+\end_inset
+
+ומהיות 
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע נקבל כי 
+\begin_inset Formula $x=y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h$
+\end_inset
+
+ על, תהא 
+\begin_inset Formula $x\in A_{2}\uplus B_{2}$
+\end_inset
+
+ בה
+\begin_inset Quotes erd
+\end_inset
+
+כ 
+\begin_inset Formula $x\in A_{2}$
+\end_inset
+
+, נשים לב כי
+\begin_inset Formula 
+\[
+h\left(f^{-1}\left(x\right)\right)=f\left(f^{-1}\left(x\right)\right)=x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Example
 נשים לב כי מתקיים
 \end_layout
@@ -17758,10 +18596,6 @@ f=\lambda n\in\bbz.\begin{cases}
 
 \begin_layout Subsection
 עוצמות סופיות
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \begin_layout Definition
@@ -17970,6 +18804,10 @@ status open
 \end_layout
 
 \end_deeper
+\begin_layout Proof
+...
+\end_layout
+
 \begin_layout Definition
 יהי 
 \begin_inset Formula $n\in\bbn$
@@ -18198,9 +19036,142 @@ status collapsed
 \end_layout
 
 \begin_layout Proof
-...
+תהא 
+\begin_inset Formula ${\cal A}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left|{\cal A}\right|\le\aleph_{0}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\forall X\in{\cal A}.\left|X\right|\le\aleph_{0}$
+\end_inset
+
+, מהיות 
+\begin_inset Formula $\left|{\cal A}\right|\le\aleph_{0}$
+\end_inset
+
+ קיימת 
+\begin_inset Formula $f:{\cal A}\to\bbn$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע אזי נגדיר פונקציה 
+\begin_inset Formula $C:\bigcup{\cal A}\to\bbn$
+\end_inset
+
+ כך
+\begin_inset Formula 
+\[
+C=\lambda a\in\bigcup{\cal A}.\min\left\{ f\left(X\right)\mid\left(X\in{\cal A}\right)\land\left(a\in X\right)\right\} 
+\]
+
+\end_inset
+
+כמו כן לכל 
+\begin_inset Formula $X\in A$
+\end_inset
+
+ קיימת 
+\begin_inset Formula $g_{X}:X\to\bbn$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע, אזי נגדיר פונקציה 
+\begin_inset Formula $h:\bigcup{\cal A}\to\bbn^{2}$
+\end_inset
+
+ כך
+\begin_inset Formula 
+\[
+h=\lambda a\in\bigcup{\cal A}.\left<C\left(a\right),g_{\left(f^{-1}\circ C\right)\left(a\right)}\left(a\right)\right>
+\]
+
+\end_inset
+
+נשים לב כי אם 
+\begin_inset Formula $h$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע אזי 
+\begin_inset Formula $\left|\bigcup{\cal A}\right|\le\left|\bbn^{2}\right|=\aleph_{0}$
+\end_inset
+
+,
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $h$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע, יהיו 
+\begin_inset Formula $a,b\in\bigcup{\cal A}$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $h\left(a\right)=h\left(b\right)$
+\end_inset
+
+ מהגדרת 
+\begin_inset Formula $h$
+\end_inset
+
+ מתקיים
+\begin_inset Formula 
+\[
+\left<C\left(a\right),g_{\left(f^{-1}\circ C\right)\left(a\right)}\left(a\right)\right>=\left<C\left(b\right),g_{\left(f^{-1}\circ C\right)\left(b\right)}\left(b\right)\right>
+\]
+
+\end_inset
+
+אזי מתכונת זוג סדור יתקיים
+\begin_inset Formula 
+\[
+\left(C\left(a\right)=C\left(b\right)\right)\land\left(g_{\left(f^{-1}\circ C\right)\left(a\right)}\left(a\right)=g_{\left(f^{-1}\circ C\right)\left(b\right)}\left(b\right)\right)
+\]
+
+\end_inset
+
+בפרט נקבל כי
+\begin_inset Formula 
+\[
+g_{f^{-1}\left(C\left(b\right)\right)}\left(a\right)=g_{f^{-1}\left(C\left(a\right)\right)}\left(a\right)=g_{f^{-1}\left(C\left(b\right)\right)}\left(b\right)
+\]
+
+\end_inset
+
+ולכן מחח
+\begin_inset Quotes erd
+\end_inset
+
+ע של 
+\begin_inset Formula $g_{X}$
+\end_inset
+
+ נקבל כי 
+\begin_inset Formula $a=b$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Example
 יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -18311,6 +19282,752 @@ status collapsed
 שיטת הלכסון
 \end_layout
 
+\begin_layout Standard
+שיטת הלכסון הינה השיטה בה קנטור השתמש על מנת להוכיח כי קיים יותר מאינסוף
+ יחיד, עד כה כל הקבוצות שנתקלנו בהן היו מעוצמה 
+\begin_inset Formula $\aleph_{0}$
+\end_inset
+
+.
+ קנטור הוכיח כי 
+\begin_inset Formula $\left|\bbn\right|<\left|\left(0,1\right)\right|$
+\end_inset
+
+ בעזרת שינוי האלכסון של טבלת מספרים, בצורה הבאה
+\end_layout
+
+\begin_layout Remark
+שימו לב כי זוהי אינה הוכחה פורמלית של הטענה, וכזאת תינתן בהמשך.
+ נניח כי קיימת פונקציה חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל 
+\begin_inset Formula $F:\bbn\to\left(0,1\right)$
+\end_inset
+
+ אזי ניתן למספר את כל המספרים בין 
+\begin_inset Formula $0$
+\end_inset
+
+ ל־
+\begin_inset Formula $1$
+\end_inset
+
+, נניח כי זוהי רשימת המספרים
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "99text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="35pt">
+<column alignment="center" valignment="top" width="100pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.1234561498\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.7165159819\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.1879741981\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.9491000000\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.4198419818\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.7777777777\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.1235896857\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.8888888888\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.3141592653\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.2718281828\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+אזי נגדיר מספר חדש על ידי הוספת 
+\begin_inset Formula $1$
+\end_inset
+
+ לכל מספר על האלכסון כך
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "99text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="35pt">
+<column alignment="center" valignment="top" width="100pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.{\color{red}1}234561498\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.7{\color{red}1}65159819\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.18{\color{red}7}9741981\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.949{\color{red}1}000000\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.4198{\color{red}4}19818\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.77777{\color{red}7}7777\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.123589{\color{red}6}857\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.9288878{\color{red}8}69\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.31415926{\color{red}5}3\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.271828182{\color{red}8}\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.2282587969\ldots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+מספר זה בהכרח אינו בתמונה של 
+\begin_inset Formula $F$
+\end_inset
+
+ מכיוון והוא שונה מכל מספר בטבלה בלכל הפחות מקום אחד )הוא שונה מהמספר ה־
+\begin_inset Formula $n$
+\end_inset
+
+ בטבלה במקום ה־
+\begin_inset Formula $n$
+\end_inset
+
+( בפרט 
+\begin_inset Formula $F$
+\end_inset
+
+ לא על סתירה, ולכן 
+\begin_inset Formula $\left|\bbn\right|<\left|\left(0,1\right)\right|$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Theorem
 \begin_inset Argument 1
 status open
@@ -18329,7 +20046,90 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+נגדיר 
+\begin_inset Formula $p:\bbn\to\left\{ 0,1\right\} ^{\bbn}$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע )ודאו זאת( כך
+\begin_inset Formula 
+\[
+p=\lambda n\in\bbn.\lambda m\in\bbn.\begin{cases}
+1 & n=m\\
+0 & \text{else}
+\end{cases}
+\]
+
+\end_inset
+
+לכן 
+\begin_inset Formula $\left|\bbn\right|\le\left|\left\{ 0,1\right\} ^{\bbn}\right|$
+\end_inset
+
+, נניח בשלילה כי 
+\begin_inset Formula $\left|\bbn\right|=\left|\left\{ 0,1\right\} ^{\bbn}\right|$
+\end_inset
+
+ אזי קיימת פונקציה חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל 
+\begin_inset Formula $F:\bbn\to\left\{ 0,1\right\} ^{\bbn}$
+\end_inset
+
+, נגדיר פונקציה 
+\begin_inset Formula $f:\bbn\to\left\{ 0,1\right\} $
+\end_inset
+
+ כך
+\begin_inset Formula 
+\[
+f=\lambda n\in\bbn.1-F\left(n\right)\left(n\right)
+\]
+
+\end_inset
+
+מכיוון שהפונקציה 
+\begin_inset Formula $F$
+\end_inset
+
+ על קיים 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $F\left(n\right)=f$
+\end_inset
+
+ אך אז משיוויון פונקציות
+\begin_inset Formula 
+\[
+F\left(n\right)\left(n\right)=f\left(n\right)=1-F\left(n\right)\left(n\right)
+\]
+
+\end_inset
+
+בפרט 
+\begin_inset Formula $F\left(n\right)\left(n\right)=\frac{1}{2}$
+\end_inset
+
+ סתירה להנחה כי 
+\begin_inset Formula $F:\bbn\to\left\{ 0,1\right\} ^{\bbn}$
+\end_inset
+
+, בפרט מתקיים 
+\begin_inset Formula $\left|\bbn\right|\ne\left|\left\{ 0,1\right\} ^{\bbn}\right|$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\left|\bbn\right|<\left|\left\{ 0,1\right\} ^{\bbn}\right|$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -18777,27 +20577,39 @@ status open
 \end_layout
 
 \begin_layout Claim
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypertarget{claimNormalBeha}{}
+\end_layout
+
+\end_inset
+
 יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
  ותהא 
-\begin_inset Formula $\kappa$
+\begin_inset Formula $A$
 \end_inset
 
- עוצמה אזי
+ קבוצה אזי
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-\begin_inset Formula $n\cdot\kappa=\underbrace{\kappa+\ldots+\kappa}_{n\text{ times}}$
+\begin_inset Formula $n\cdot\left|A\right|=\left|\biguplus_{i=1}^{n}A\times\left\{ i\right\} \right|$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\kappa^{n}=\underbrace{\kappa\cdot\ldots\cdot\kappa}_{n\text{ times}}$
+\begin_inset Formula $\left|A\right|^{n}=\left|A^{n}\right|$
 \end_inset
 
 .
@@ -18805,9 +20617,183 @@ status open
 
 \end_deeper
 \begin_layout Proof
-...
+יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+מתקיים 
+\begin_inset Formula $\left|\left\{ 1\ldots n\right\} \right|=n$
+\end_inset
+
+ אזי מהגדרת כפל, מהטענה הקודמת ואי תלות בנציגים יתקיים 
+\begin_inset Formula $n\cdot\left|A\right|=\left|A\times\left\{ 1\ldots n\right\} \right|$
+\end_inset
+
+, כמו כן מטענה שראינו
+\begin_inset Formula 
+\[
+A\times\left\{ 1\ldots n\right\} =\biguplus_{i\in\left\{ 1\ldots n\right\} }A\times\left\{ i\right\} =\biguplus_{i=1}^{n}A\times\left\{ i\right\} 
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula $n\cdot\left|A\right|=\left|\biguplus_{i=1}^{n}A\times\left\{ i\right\} \right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+כאמור מתקיים 
+\begin_inset Formula $\left|\left\{ 1\ldots n\right\} \right|=n$
+\end_inset
+
+ אזי מהגדרת חזקה ואי תלות בנציגים נקבל כי
+\begin_inset Formula 
+\[
+\left|A\right|^{n}=\left|A\right|^{\left|\left\{ 1\ldots n\right\} \right|}=\left|A^{\left\{ 1\ldots n\right\} }\right|
+\]
+
+\end_inset
+
+לכן נגדיר 
+\begin_inset Formula $F:A^{n}\to A^{\left\{ 1\ldots n\right\} }$
+\end_inset
+
+ כך
+\begin_inset Formula 
+\[
+F=\lambda\left<a_{1}\ldots a_{n}\right>\in A^{n}.\left(\lambda i\in\left\{ 1\ldots n\right\} .a_{i}\right)
+\]
+
+\end_inset
+
+נשים לב כי
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $F$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע, תהיינה 
+\begin_inset Formula $\left<a_{1}\ldots a_{n}\right>,\left<b_{1}\ldots b_{n}\right>\in A^{n}$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $F\left(a_{1}\ldots a_{n}\right)=F\left(b_{1}\ldots b_{n}\right)$
+\end_inset
+
+ אזי מהגדרת 
+\begin_inset Formula $F$
+\end_inset
+
+ מתקיים
+\begin_inset Formula 
+\[
+\left(\lambda i\in\left\{ 1\ldots n\right\} .a_{i}\right)=\left(\lambda i\in\left\{ 1\ldots n\right\} .b_{i}\right)
+\]
+
+\end_inset
+
+בפרט מהגדרת שיוויון פונקציות וכן כי התחום של הפונקציות מלעיל זהה נקבל כי
+\begin_inset Formula 
+\[
+\forall j\in\left\{ 1\ldots n\right\} .\left(\lambda i\in\left\{ 1\ldots n\right\} .a_{i}\right)\left(j\right)=\left(\lambda i\in\left\{ 1\ldots n\right\} .b_{i}\right)\left(j\right)
+\]
+
+\end_inset
+
+ומהגדרת יחס וכתיב לאמבדא נקבל כי
+\begin_inset Formula 
+\[
+\forall j\in\left\{ 1\ldots n\right\} .a_{j}=b_{j}
+\]
+
+\end_inset
+
+וזהו התנאי לשיוויון זוגות סדורים, בפרט 
+\begin_inset Formula $\left<a_{1}\ldots a_{n}\right>=\left<b_{1}\ldots b_{n}\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F$
+\end_inset
+
+ על, תהא 
+\begin_inset Formula $f\in A^{\left\{ 1\ldots n\right\} }$
+\end_inset
+
+ נשים לב כי מהגדרת 
+\begin_inset Formula $F$
+\end_inset
+
+ יתקיים
+\begin_inset Formula 
+\[
+F\left(f\left(1\right)\ldots f\left(n\right)\right)=\lambda i\in\left\{ 1\ldots n\right\} .f\left(i\right)
+\]
+
+\end_inset
+
+כעת נשים לב כי מהגדרת הפונקציות
+\begin_inset Formula 
+\[
+\dom\left(f\right)=\dom\left(F\left(f\left(1\right)\ldots f\left(n\right)\right)\right)
+\]
+
+\end_inset
+
+כמו כן יהי 
+\begin_inset Formula $j\in\left\{ 1\ldots n\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $F\left(f\left(1\right)\ldots f\left(n\right)\right)\left(j\right)=f\left(j\right)$
+\end_inset
+
+ מהגדרת 
+\begin_inset Formula $F$
+\end_inset
+
+, בפרט מהגדרת שיוויון פונקציות יתקיים 
+\begin_inset Formula $F\left(f\left(1\right)\ldots f\left(n\right)\right)=f$
+\end_inset
+
+ כנדרש.
+\end_layout
+
+\begin_layout Standard
+בפרט קיבלנו כי
+\begin_inset Formula 
+\[
+\left|A\right|^{n}=\left|A\right|^{\left|\left\{ 1\ldots n\right\} \right|}=\left|\left\{ 1\ldots n\right\} \to A\right|=\left|A^{n}\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Theorem
 \begin_inset Argument 1
 status open
@@ -18987,6 +20973,22 @@ status open
 \end_layout
 
 \begin_layout Proof
+תהא 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ עוצמה אינסופית, ממשפט המונוטוניות מתקיים 
+\begin_inset Formula $\kappa\le\kappa+\aleph_{0}$
+\end_inset
+
+ כמו כן תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה עבורה 
+\begin_inset Formula $\left|A\right|=\kappa$
+\end_inset
+
 ...
 \end_layout
 
@@ -19038,6 +21040,11 @@ status open
 
 
 \end_layout
+
+\begin_layout Standard
+\begin_inset Branch Logic
+inverted 0
+status collapsed
 
 \begin_layout Section
 יחסי סדר
@@ -20350,6 +22357,16 @@ status open
 ...
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Logic
+inverted 0
+status collapsed
+
 \begin_layout Section
 אקסיומת הבחירה
 \end_layout
@@ -21184,11 +23201,326 @@ status open
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
 \end_inset
 
 
+\end_layout
+
+\begin_layout Part
+קומבינטוריקה
+\end_layout
+
+\begin_layout Standard
+קומבינטוריקה הינה הענף המתמטי אשר מתעסק בעוצמות סופיות ובקשרים ביניהן, בתורת
+ הקבוצות נלמד כיצד לתאר קבוצה וכן על עוצמתה באופן כללי בעוד שבקומבינטוריקה
+ ניצור כלים המיועדים לעבודה עם עוצמות סופיות בלבד.
+ הענף עצמו קשור עד כדי התאמה להסתברות בדידה ומטרתו העיקרית הינה למספר אובייקטים
+ ביקום המתמטי ולמצוא שיטות לנתח אותן.
+\end_layout
+
+\begin_layout Section
+קומבינטוריקה בסיסית
+\end_layout
+
+\begin_layout Subsection
+עקרונות ספירה
+\end_layout
+
+\begin_layout Subsubsection
+עקרון החיבור
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+עיקרון החיבור
+\end_layout
+
+\end_inset
+
+תהיינה 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ קבוצות סופיות וזרות בזוגות אזי 
+\begin_inset Formula $\left|\biguplus_{i=1}^{n}A_{i}\right|=\sum_{i=1}^{n}\left|A_{i}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+עבור 
+\begin_inset Formula $n=1$
+\end_inset
+
+ טריוויאלי, נניח עבור 
+\begin_inset Formula $n-1$
+\end_inset
+
+ אזי מהגדרת חיבור
+\begin_inset Formula 
+\[
+\left|\biguplus_{i=1}^{n}A_{i}\right|=\left|\left(\biguplus_{i=1}^{n-1}A_{i}\right)\uplus A_{n}\right|=\left|\biguplus_{i=1}^{n-1}A_{i}\right|+\left|A_{n}\right|=\left(\sum_{i=1}^{n-1}\left|A_{i}\right|\right)+\left|A_{n}\right|=\sum_{i=1}^{n}\left|A_{i}\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Claim
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+עיקרון המשלים
+\end_layout
+
+\end_inset
+
+תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קבוצות סופיות באשר 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|A\right|+\left|B\backslash A\right|=\left|B\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+חיסור עוצמות
+\end_layout
+
+\end_inset
+
+תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קבוצות סופיות באשר 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|A\right|=\left|B\right|-\left|B\backslash A\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Subsubsection
+עיקרון הכפל
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+עיקרון הכפל
+\end_layout
+
+\end_inset
+
+תהיינה 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ קבוצות סופיות וזרות בזוגות המקיימות 
+\begin_inset Formula $\forall i,j\in\left\{ 1\ldots n\right\} .\left|A_{i}\right|=\left|A_{j}\right|$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\biguplus_{i=1}^{n}A_{i}\right|=\left|A_{1}\right|\cdot n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+תהיינה 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ קבוצות סופיות וזרות בזוגות המקיימות 
+\begin_inset Formula $\forall i,j\in\left\{ 1\ldots n\right\} .\left|A_{i}\right|=\left|A_{j}\right|$
+\end_inset
+
+, נשים לב כי מההנחה נקבל בפרט שמתקיים 
+\begin_inset Formula $\forall i\in\left\{ 1\ldots n\right\} .\left|A_{1}\right|=\left|A_{i}\right|$
+\end_inset
+
+ ולכן מהגדרת שיוויון עוצמות קיימת פונקציה הפיכה 
+\begin_inset Formula $f_{i}:A_{1}\to A_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left\{ 1\ldots n\right\} $
+\end_inset
+
+ אזי נגדיר פונקציה הפיכה 
+\begin_inset Formula $f_{i}^{\prime}:A_{1}\times\left\{ i\right\} \to A_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left\{ 1\ldots n\right\} $
+\end_inset
+
+ כך
+\begin_inset Formula 
+\[
+f_{i}^{\prime}=\lambda\left<a,b\right>\in A_{1}\times\left\{ i\right\} .f_{i}\left(a\right)
+\]
+
+\end_inset
+
+לכן קיבלנו כי 
+\begin_inset Formula $\left|A_{1}\times\left\{ i\right\} \right|=\left|A_{i}\right|$
+\end_inset
+
+, כעת מה
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyperlink{claimNormalBeha}{טענה הזאת מפרק תורת הקבוצות}
+\end_layout
+
+\end_inset
+
+ ומעיקרון החיבור נקבל כי מתקיים
+\begin_inset Formula 
+\[
+n\cdot\left|A_{1}\right|=\left|\biguplus_{i=1}^{n}A_{1}\times\left\{ i\right\} \right|=\sum_{i=1}^{n}\left|A_{1}\times\left\{ i\right\} \right|=\sum_{i=1}^{n}\left|A_{i}\right|=\left|\biguplus_{i=1}^{n}A_{i}\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+ניסוחים נוספים לעיקרון הכפל
+\end_layout
+
+\end_inset
+
+קיימים שני ניסוחים נוספים וכלליים יותר לעיקרון הכפל
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס שקילות מעל 
+\begin_inset Formula $A$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ נניח כי מתקיים 
+\begin_inset Formula $\forall y\in A.\left|\left[x\right]_{R}\right|=\left|\left[y\right]_{R}\right|$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|A\right|=\left|\left[x\right]_{R}\right|\cdot\left|\nicefrac{A}{R}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+תהא 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ חלוקה של 
+\begin_inset Formula $A$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $X\in\Pi$
+\end_inset
+
+ נניח כי מתקיים 
+\begin_inset Formula $\forall Y\in\Pi.\left|X\right|=\left|Y\right|$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|A\right|=\left|X\right|\cdot\left|\Pi\right|$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Exercise
+הוכח כי שלושת הניסוחים של עקרון הכפל שקולים.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+עיקרון החלוקה
+\end_layout
+
+\end_inset
+
+תהיינה 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ קבוצות סופיות וזרות בזוגות המקיימות 
+\begin_inset Formula $\forall i,j\in\left\{ 1\ldots n\right\} .\left|A_{i}\right|=\left|A_{j}\right|$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|A_{1}\right|=\frac{\left|\biguplus_{i=1}^{n}A_{i}\right|}{n}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -21198,11 +23530,86 @@ status open
 
 \end_layout
 
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+חילוק עוצמות
+\end_layout
+
+\end_inset
+
+תהיינה 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ קבוצות סופיות וזרות בזוגות המקיימות 
+\begin_inset Formula $\forall i,j\in\left\{ 1\ldots n\right\} .\left|A_{i}\right|=\left|A_{j}\right|$
+\end_inset
+
+ אזי 
+\begin_inset Formula $n=\frac{\left|\biguplus_{i=1}^{n}A_{i}\right|}{\left|A_{1}\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Subsection
+בעיות קומבינטוריות
+\end_layout
+
 \begin_layout Standard
-\begin_inset Separator plain
+בקומבינטוריקה לעומת תחומים מתמטיים רבים השאלות שנקבל יהיו כתובות בשפה לשונית
+ ומטרתינו תהיה למצוא דרך מתמטית לייצג אותה וכן לפתור אותה.
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+שאלה קומבינטורית
+\end_layout
+
 \end_inset
 
 
+\begin_inset Quotes eld
+\end_inset
+
+בכיתה קיימים 
+\begin_inset Formula $n$
+\end_inset
+
+ ילדים, מהו מספר הדרכים לסדרם בשורה?
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+באופן כללי, קיימות שתי תכונות של בעיות קומבינטוריות, האם יש חשיבות לסדר
+ והאם יש חזרה.
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+חשיבות לסדר
+\end_layout
+
+\end_inset
+
+בעיה קומבינטורית נחשבת כבעלת חשיבות לסדר אם סידורים שונים של אותם אובייקטים
+ נספרים כאפשרויות שונות.
 \end_layout
 
 \begin_layout Standard
@@ -21212,144 +23619,194 @@ status open
 
 \end_layout
 
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+חזרות
+\end_layout
+
+\end_inset
+
+בעיה קומבינטורית נחשבת כבעלת חזרות ניתן להשתמש באותם אובייקטים מספר פעמים
+ באותה השאלה.
+\end_layout
+
 \begin_layout Standard
-\begin_inset Separator plain
+על מנת לזכור מהן האפשרויות לשימוש נשתמש בטבלה בסיסית )אשר תכולותיה יוסברו
+ בהמשך(,
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "99text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="20text%">
+<column alignment="center" valignment="middle" width="20text%">
+<column alignment="center" valignment="middle" width="20text%">
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+עם חזרות
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+ללא חזרות
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Formula $n^{k}$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Formula $P\left(n,k\right)$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+הסדר חשוב
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Formula $S\left(n,k\right)$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Formula $C\left(n,k\right)$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\align center
+הסדר לא חשוב
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+\begin_layout Subsubsection
+עם חשיבות לסדר וללא חזרה
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+\begin_layout Subsubsection
+עם חשיבות לסדר ועם חזרה
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+\begin_layout Subsubsection
+ללא חשיבות לסדר וללא חזרה
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $ $
-\end_inset
-
-
+\begin_layout Subsubsection
+ללא חשיבות לסדר ועם חזרה
 \end_layout
 
 \begin_layout Standard
@@ -21364,82 +23821,6 @@ status collapsed
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-סימון: 
-\begin_inset Formula $\left[n\right]=\left\{ 1,\ldots,n\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-הערה: כל הקבוצות מעכשיו הן סופיות.
-\end_layout
-
-\begin_layout Standard
-עיקרון החיבור: 
-\begin_inset Formula $\forall A_{1}\ldots A_{n}.\left|\biguplus_{i=1}^{n}A_{i}\right|=\sum_{i=1}^{n}\left|A_{i}\right|$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-עיקרון המשלים: 
-\begin_inset Formula $\forall A,B.A\subseteq B\implies\left|A\right|+\left|B\backslash A\right|=\left|B\right|$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-עיקרון הכפל: נניח כי 
-\begin_inset Formula $A=\biguplus_{i=1}^{n}A_{i}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left(\forall i,j\in\left[n\right].\left|A_{i}\right|=\left|A_{j}\right|\right)\implies\left(\left|A\right|=n\cdot\left|A_{1}\right|\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-הכללה: יהי 
-\begin_inset Formula $R\subseteq A^{2}$
-\end_inset
-
- יחס שקילות אזי 
-\begin_inset Formula $\left(\forall x,y\in A.\left|\left[x\right]_{R}\right|=\left|\left[y\right]_{R}\right|\right)\implies\left(\forall x\in A.\left|A\right|=\left|\left[x\right]_{R}\right|\cdot\left|\nicefrac{A}{R}\right|\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-הכללה: תהא 
-\begin_inset Formula $\Pi\subseteq\P A{}$
-\end_inset
-
- חלוקה אזי 
-\begin_inset Formula $\left(\forall X,Y\in\Pi.\left|X\right|=\left|Y\right|\right)\implies\left(\forall X\in\Pi.\left|A\right|=\left|\Pi\right|\cdot\left|X\right|\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-עיקרון החלוקה/שיקולי סימטריה: נניח כי 
-\begin_inset Formula $A=\biguplus_{i=1}^{n}A_{i}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left(\forall i,j\in\left[n\right].\left|A_{i}\right|=\left|A_{j}\right|\right)\implies\left(\frac{\left|A\right|}{n}=\left|A_{1}\right|\right)$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -22348,6 +24729,13 @@ a_{n-m} & else
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
