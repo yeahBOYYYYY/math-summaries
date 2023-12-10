@@ -175,12 +175,12 @@ End
 \color #faf0e6
 \end_branch
 \branch Logic
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch Exeption
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -297,11 +297,6 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch Logic
-inverted 0
-status collapsed
-
-\begin_layout Standard
 הלוגיקה המתמטית היא ענף במתמטיקה שעוסק בביטוי טענות מתמטיות פשוטות ומורכבות.
  היא מאפשרת הסרת רב משמעות שקיימת בשפות בני אדם ע"י קביעת כללים מדויקים
  להצגת טענות שונות באופן שניתן להבנה בצורה אחת בלבד.
@@ -393,11 +388,9 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
+\begin_inset Branch Logic
+inverted 0
+status collapsed
 
 \begin_layout Section
 תחשיב הפסוקים
@@ -8735,6 +8728,22 @@ status open
 .
 \end_layout
 
+\begin_layout Exercise
+תהא 
+\begin_inset Formula $B$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $F$
+\end_inset
+
+ קבוצה של קבוצות אזי 
+\begin_inset Formula $\left(\bigcap F\supseteq B\right)\iff\left(\forall X\in F.X\supseteq B\right)$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 איחוד
 \end_layout
@@ -9558,6 +9567,58 @@ status open
 .
 \end_layout
 
+\begin_layout Exercise
+תהא 
+\begin_inset Formula $B$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $F$
+\end_inset
+
+ קבוצה של קבוצות אזי 
+\begin_inset Formula $\left(\bigcup F\subseteq B\right)\iff\left(\forall X\in F.X\subseteq B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+אתגר
+\end_layout
+
+\end_inset
+
+תרגיל זה דורש ידע על הרציונליים והממשיים, הוכח את השיוויונים הבאים,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\bigcap_{n\in\bbn_{+}}\left(\bigcup_{q\in\bbq}\left(q-\frac{1}{n},q+\frac{1}{n}\right)\right)=\bbr$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\bigcup_{n\in\bbn_{+}}\left(\bigcap_{q\in\bbq}\left(q-\frac{1}{n},q+\frac{1}{n}\right)\right)=\bbq$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Subsubsection
 איחוד זר
 \end_layout
@@ -11014,6 +11075,25 @@ status open
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+תהיינה 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ קבוצות אזי 
+\begin_inset Formula $\left(A\triangle B=B\triangle C\right)\implies A=B$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 קבוצת החזקה
 \end_layout
@@ -11144,6 +11224,50 @@ status open
 .
 \end_layout
 
+\begin_layout Exercise
+חשב את הקבוצות הבאות )כלומר מצא צורה מצומצמת לכתיבתן( והוכח את מציאתך,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ X\backslash\left\{ 0\right\} \mid X\in\P\left(\bbn\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \left\{ 0\right\} \backslash X\mid X\in\P\left(\bbn\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה, 
+\begin_inset Formula $\bigcup\P\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה, 
+\begin_inset Formula $\bigcap\P\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_inset
 
 
@@ -15833,6 +15957,34 @@ status open
 .
 \end_layout
 
+\begin_layout Exercise
+תהא 
+\begin_inset Formula $\Pi\subseteq\P\left(A\right)\backslash\left\{ \emptyset\right\} $
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $F_{\Pi}=\left\{ \left<x,X\right>\in A\times\Pi\mid x\in X\right\} $
+\end_inset
+
+, אזי )
+\begin_inset Formula $F_{\Pi}$
+\end_inset
+
+ פונקציה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\Pi$
+\end_inset
+
+ חלוקה של 
+\begin_inset Formula $A$
+\end_inset
+
+(.
+\end_layout
+
 \begin_layout Subsubsection
 טווח
 \end_layout
@@ -16635,9 +16787,103 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $X\subseteq A$
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\subseteq$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $\left<a,b\right>\in f_{\upharpoonright_{X}}$
+\end_inset
+
+ מהגדרת צמצום וכתיב למבדא מתקיים 
+\begin_inset Formula $a\in X$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b=f\left(a\right)\in B$
+\end_inset
+
+ בפרט 
+\begin_inset Formula $\left<a,b\right>\in X\times B$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left<a,b\right>\in f$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<a,b\right>\in f\cap\left(X\times B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\supseteq$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $\left<a,b\right>\in f\cap\left(X\times B\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<a,b\right>\in f$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left<a,b\right>\in X\times B$
+\end_inset
+
+ בפרט נקבל כי 
+\begin_inset Formula $b=f\left(a\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a\in X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f_{\upharpoonright_{X}}\left(a\right)=f\left(a\right)=b$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $\left<a,b\right>\in f_{\upharpoonright_{X}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 הרכבה
 \end_layout
@@ -23594,8 +23840,25 @@ status open
 \end_layout
 
 \begin_layout Standard
-באופן כללי, קיימות שתי תכונות של בעיות קומבינטוריות, האם יש חשיבות לסדר
- והאם יש חזרה.
+בעת פתירת בעיות קומבינטוריות נשאל עצמינו שתי שאלות מנחות, 
+\begin_inset Quotes eld
+\end_inset
+
+האם ספרנו את כל האפשרויות?
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+האם כל אפשרות נספרה בדיוק פעם אחת?
+\begin_inset Quotes erd
+\end_inset
+
+.
+ באופן כללי, קיימות שתי תכונות של בעיות קומבינטוריות, האם יש חשיבות לסדר
+ והאם יש חזרה,
 \end_layout
 
 \begin_layout Definition
@@ -23793,20 +24056,1200 @@ status open
 
 \end_layout
 
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+עצרת
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $0!=1$
+\end_inset
+
+ וכן 
+\begin_inset Formula $n!=\left(n-1\right)!\cdot n$
+\end_inset
+
+.
+ כלומר עצרת של 
+\begin_inset Formula $n$
+\end_inset
+
+ זוהי מכפלת כל המספרים הטבעיים )ללא אפס( הקטנים שווים ל־
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מעל א
+\begin_inset Quotes erd
+\end_inset
+
+ב
+\end_layout
+
+\end_inset
+
+הביטוי מעל א
+\begin_inset Quotes erd
+\end_inset
+
+ב מתאר לנו מהו עולם הדיון של השאלה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
-עם חשיבות לסדר וללא חזרה
+עם חשיבות לסדר וללא חזרה - חליפות
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+חליפות
+\end_layout
+
+\end_inset
+
+יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ נסמן 
+\begin_inset Formula $P\left(n,k\right)=\left|\left\{ f\in\left\{ 1\ldots k\right\} \to\left\{ 1\ldots n\right\} \mid\text{ חח"ע}f\right\} \right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $k\le n$
+\end_inset
+
+ אזי מתקיים 
+\begin_inset Formula $P\left(n,k\right)=\frac{n!}{\left(n-k\right)!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $k\le n$
+\end_inset
+
+ אזי על פי עקרון הכפל מתקיים
+\begin_inset Formula 
+\begin{align*}
+P\left(n,k\right)= & \left|\left\{ f\in\left\{ 1\ldots k\right\} \to\left\{ 1\ldots n\right\} \mid\text{ חח"ע}f\right\} \right|\\
+= & \left|\biguplus_{i=1}^{n}\left\{ f\in\left\{ 1\ldots k\right\} \to\left\{ 1\ldots n\right\} \mid\left(\text{ חח"ע}f\right)\land\left(f\left(k\right)=i\right)\right\} \right|\\
+= & n\cdot\left|\left\{ f\in\left\{ 1\ldots k\right\} \to\left\{ 1\ldots n\right\} \mid\left(\text{ חח"ע}f\right)\land\left(f\left(k\right)=n\right)\right\} \right|\\
+= & n\cdot\left|\left\{ f\in\left\{ 1\ldots k-1\right\} \to\left\{ 1\ldots n-1\right\} \mid\text{ חח"ע}f\right\} \right|\\
+= & n\cdot P\left(n-1,k-1\right)
+\end{align*}
+
+\end_inset
+
+ודאו מדוע המעברים נכונים על ידי מציאת פונקציות חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל בין הקבוצות השונות, כעת נקבל כי
+\begin_inset Formula 
+\begin{align*}
+P\left(n,k\right)= & n\cdot P\left(n-1,k-1\right)=n\left(n-1\right)\cdot P\left(n-2,k-2\right)\\
+= & n\left(n-1\right)\cdot\ldots\cdot\left(n-k+1\right)\cdot P\left(n-k,k-k\right)\\
+= & n\left(n-1\right)\cdot\ldots\cdot\left(n-k+1\right)=\frac{n!}{\left(n-k\right)!}
+\end{align*}
+
+\end_inset
+
+גם חלק זה עליכם לפרמל ולהוכיח בעזרת אינדוקציה.
+ רמז: הוכיחו באינדוקציה על 
+\begin_inset Formula $i$
+\end_inset
+
+ כי
+\begin_inset Formula 
+\[
+P\left(n,k\right)=n\cdot\ldots\cdot\left(n-i+1\right)\cdot P\left(n-i,k-1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+תמורה/פרמוטציה
+\end_layout
+
+\end_inset
+
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה תמורה של 
+\begin_inset Formula $A$
+\end_inset
+
+ הינה 
+\begin_inset Formula $f:A\to A$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל.
+\end_layout
+
+\begin_layout Corollary
+יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\left\{ f\in\left\{ 1\ldots n\right\} \to\left\{ 1\ldots n\right\} \mid\text{ תמורה}f\right\} \right|=n!$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+, נשים לב כי מתקיים
+\begin_inset Formula 
+\[
+\left\{ f\in\left\{ 1\ldots n\right\} \to\left\{ 1\ldots n\right\} \mid\text{ תמורה}f\right\} =\left\{ f\in\left\{ 1\ldots n\right\} \to\left\{ 1\ldots n\right\} \mid\text{ חח"ע}f\right\} 
+\]
+
+\end_inset
+
+ולכן ממשפט מלעיל מתקיים
+\begin_inset Formula 
+\[
+\left|\left\{ f\in\left\{ 1\ldots n\right\} \to\left\{ 1\ldots n\right\} \mid\text{ תמורה}f\right\} \right|=P\left(n,n\right)=\frac{n!}{\left(n-n\right)!}=n!
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+מהמסקנה מלעיל נובעת הגדרה אלטרנטיבית לעצרת של מספר טבעי, כך ניתן להכליל
+ את משמעות העצרת לכל קבוצה,
+\begin_inset Formula 
+\[
+A!=\left|\left\{ f\in A\to A\mid\text{ תמורה}A\right\} \right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Exercise
+תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קבוצות עבורן 
+\begin_inset Formula $\left|A\right|=\left|B\right|$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A!=B!$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Claim
+\begin_inset Formula $\aleph_{0}!=\aleph$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+שימוש בחליפות
+\end_layout
+
+\end_inset
+
+לחליפות מספר שימושים מרכזיים,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+הגדרה חלופית
+\series default
+: מספר האפשרויות לבחור 
+\begin_inset Formula $k$
+\end_inset
+
+ איברים מתוך 
+\begin_inset Formula $n$
+\end_inset
+
+ איברים עם חשיבות לסדר וללא חזרה הינו 
+\begin_inset Formula $P\left(n,k\right)=\frac{n!}{\left(n-k\right)!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+סידור בשורה
+\series default
+: מספר האפשרויות לסדר 
+\begin_inset Formula $n$
+\end_inset
+
+ איברים בשורה הינה 
+\begin_inset Formula $P\left(n,n\right)=n!$
+\end_inset
+
+.
+ סידור בשורה הינה פרמוטציה של כל הילדים, נמספר את הילדים 
+\begin_inset Formula $1,\ldots,n$
+\end_inset
+
+ כעת יש לבחור לכל ילד מקום בשורה, לילד הראשון יש 
+\begin_inset Formula $n$
+\end_inset
+
+ אפשרויות, לילד השני 
+\begin_inset Formula $n-1$
+\end_inset
+
+ אפשרויות )כי הראשון תפס מקום( וכן הלאה, בסה
+\begin_inset Quotes erd
+\end_inset
+
+כ יש 
+\begin_inset Formula $n!=n\cdot\left(n-1\right)\cdot\ldots\cdot1$
+\end_inset
+
+ סידורים בשורה.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+סידור במעגל
+\series default
+: מספר האפשרויות לסדר 
+\begin_inset Formula $n$
+\end_inset
+
+ איברים במעגל הינה 
+\begin_inset Formula $\left(n-1\right)!$
+\end_inset
+
+.
+ סידור במעגל זהה לסידור בשורה אך כאשר 
+\begin_inset Quotes eld
+\end_inset
+
+הזזה
+\begin_inset Quotes erd
+\end_inset
+
+ של כל הילדים מספר קבוע של כיסאות לכיוון מסויים נספר כמה פעמים, לדוגמה הסידור
+ 
+\begin_inset Formula $\left<1,2,3\right>$
+\end_inset
+
+ זהה לסידור 
+\begin_inset Formula $\left<3,1,2\right>$
+\end_inset
+
+ במעגל, מספר הפעמים שספרנו כל כפילות הינה 
+\begin_inset Formula $n$
+\end_inset
+
+ )כי כל כפילות נבדלת רק במי האיבר ה
+\begin_inset Quotes erd
+\end_inset
+
+ראשון
+\begin_inset Quotes erd
+\end_inset
+
+ במעגל( ולכן מספר הסידורים במעגל הוא 
+\begin_inset Formula $\frac{P\left(n,n\right)}{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+ביטול חשיבות לסדר
+\series default
+: מספר האפשרויות לסדר 
+\begin_inset Formula $n$
+\end_inset
+
+ אובייקטים בשורה כאשר יש 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ איברים מסוג אחד, 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ איברים מסוג שני, ..., 
+\begin_inset Formula $n_{\ell}$
+\end_inset
+
+ איברים מסוג 
+\begin_inset Formula $\ell$
+\end_inset
+
+־לי, באשר 
+\begin_inset Formula $\sum_{i=1}^{\ell}n_{i}=n$
+\end_inset
+
+ הוא 
+\begin_inset Formula $\frac{n!}{n_{1}!\cdot n_{2}!\cdot\ldots\cdot n_{\ell}!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+ילד שמן
+\series default
+: מספר האפשרויות לסדר 
+\begin_inset Formula $n$
+\end_inset
+
+ אובייקטים בשורה כאשר אובייקטים 
+\begin_inset Formula $i\ne j$
+\end_inset
+
+ נמצאים זה ליד זה, נשים לב כי אם האובייקטים 
+\begin_inset Formula $i,j$
+\end_inset
+
+ אחד ליד השני בסידור ניתן לצוות אותם ולקרוא להם בשם משותף 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $ij$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ כך להוריד את מספר האיברים שאנו מסדרים ל־
+\begin_inset Formula $n-1$
+\end_inset
+
+, לכן כמות האפשורויות לסידור הינה 
+\begin_inset Formula $2\left(n-1\right)$
+\end_inset
+
+ כאשר ההכפלה ב־
+\begin_inset Formula $2$
+\end_inset
+
+ זהו הסידור הפנימי של 
+\begin_inset Formula $i,j$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+כמה מחרוזות יש באורך 
+\begin_inset Formula $5$
+\end_inset
+
+ מעל א
+\begin_inset Quotes erd
+\end_inset
+
+ב 
+\begin_inset Formula $\left\{ 1,\ldots,100\right\} $
+\end_inset
+
+ כך שכל התווים במחזורית שונים? נשים לב כי מחזורת באורך 
+\begin_inset Formula $5$
+\end_inset
+
+ בשאלה זו פורמלית היא פונקציה 
+\begin_inset Formula $\left\{ 1\ldots100\right\} ^{\left\{ 1\ldots5\right\} }$
+\end_inset
+
+ והעובדה כי כל התווים שונים גוררת כי היא חח
+\begin_inset Quotes erd
+\end_inset
+
+ע בפרט הכמות שקולה לכמות
+\begin_inset Formula 
+\begin{align*}
+\left|\left\{ f\in\left\{ 1\ldots5\right\} \to\left\{ 1\ldots100\right\} \mid\text{ חח"ע}f\right\} \right|= & P\left(100,5\right)=\frac{100!}{\left(100-5\right)!}\\
+= & 100\cdot99\cdot98\cdot97\cdot96
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
 עם חשיבות לסדר ועם חזרה
 \end_layout
 
-\begin_layout Subsubsection
-ללא חשיבות לסדר וללא חזרה
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+חליפות עם חזרות
+\end_layout
+
+\end_inset
+
+יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי מספר החליפות עם חזרות הינו 
+\begin_inset Formula $n^{k}=\left|\left\{ 1\ldots k\right\} \to\left\{ 1\ldots n\right\} \right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+שימוש בחליפות עם חזרות
+\end_layout
+
+\end_inset
+
+לחליפות מספר שימושים מרכזיים,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+הגדרה חלופית
+\series default
+: מספר האפשרויות לבחור 
+\begin_inset Formula $k$
+\end_inset
+
+ איברים מתוך 
+\begin_inset Formula $n$
+\end_inset
+
+ איברים עם חשיבות לסדר ועם חזרה הינו 
+\begin_inset Formula $n^{k}$
+\end_inset
+
+.
+ מכיוון ולכל איבר יש 
+\begin_inset Formula $n$
+\end_inset
+
+ אפשרויות בחירה ואנו בוחרים 
+\begin_inset Formula $k$
+\end_inset
+
+ איברים.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+מחרוזות בעולם דיון
+\series default
+: מספר האפשרויות להרכיב מ־
+\begin_inset Formula $n$
+\end_inset
+
+ תווים מחרוזת באורך 
+\begin_inset Formula $k$
+\end_inset
+
+ הוא 
+\begin_inset Formula $n^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+פונקציות
+\series default
+: כמות הפונקציות מקבוצה בגודל 
+\begin_inset Formula $k$
+\end_inset
+
+ לקבוצה בגודל 
+\begin_inset Formula $n$
+\end_inset
+
+ הוא 
+\begin_inset Formula $n^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+חלוקת כדורים לתאים
+\series default
+\shape italic
+: מספר האפשרויות לחלק 
+\begin_inset Formula $k$
+\end_inset
+
+ כדורים שונים ל־
+\begin_inset Formula $n$
+\end_inset
+
+ תאים שונים הוא 
+\begin_inset Formula $n^{k}$
+\end_inset
+
+.
+ כל אחד מתוך 
+\begin_inset Formula $k$
+\end_inset
+
+ הכדורים בוחר אחד מ־
+\begin_inset Formula $n$
+\end_inset
+
+ התאים לשהות בו.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+...
 \end_layout
 
 \begin_layout Subsubsection
-ללא חשיבות לסדר ועם חזרה
+ללא חשיבות לסדר וללא חזרה - צירופים
+\end_layout
+
+\begin_layout Definition
+יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\P_{k}\left(n\right)=\left\{ X\in\P\left(\left\{ 1\ldots n\right\} \right)\mid\left|X\right|=k\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מקדם בינומי
+\end_layout
+
+\end_inset
+
+יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $k\le n$
+\end_inset
+
+ נסמן 
+\begin_inset Formula ${n \choose k}=\frac{n!}{k!\cdot\left(n-k\right)!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+צירופים
+\end_layout
+
+\end_inset
+
+יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ נסמן 
+\begin_inset Formula $C\left(n,k\right)=\left|\P_{k}\left(n\right)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $k\le n$
+\end_inset
+
+ אזי 
+\begin_inset Formula $C\left(n,k\right)={n \choose k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $k\le n$
+\end_inset
+
+, נסמן
+\begin_inset Formula 
+\[
+A=\left\{ f\in\left\{ 1\ldots k\right\} \to\left\{ 1\ldots n\right\} \mid\text{ חח"ע}f\right\} 
+\]
+
+\end_inset
+
+יהי 
+\begin_inset Formula $X\in\P_{k}\left(n\right)$
+\end_inset
+
+ נסמן 
+\begin_inset Formula $A_{X}=\left\{ f\in A\mid\im\left(f\right)=X\right\} $
+\end_inset
+
+ מהיות 
+\begin_inset Formula $\left|X\right|=k$
+\end_inset
+
+ נשים לב כי אם 
+\begin_inset Formula $\im\left(f\right)=X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f:\left\{ 1\ldots k\right\} \to X$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ולכן גם על בפרט
+\begin_inset Formula 
+\[
+\left|A_{X}\right|=\left|\left\{ f\in\left\{ 1\ldots k\right\} \to X\mid\text{ חח"ע ועל}f\right\} \right|=k!
+\]
+
+\end_inset
+
+כמו כן יתקיים 
+\begin_inset Formula $A=\biguplus_{X\in\P_{k}\left(n\right)}A_{X}$
+\end_inset
+
+ מכיוון ומתקיים 
+\begin_inset Formula $\left|\im\left(f\right)\right|=k$
+\end_inset
+
+ לכל 
+\begin_inset Formula $f\in A$
+\end_inset
+
+ מהיותה חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ופונקציה אזי נקבל מעקרון הכפל כי
+\begin_inset Formula 
+\[
+P\left(n,k\right)=\left|A\right|=\left|\biguplus_{X\in\P_{k}\left(n\right)}A_{X}\right|=\left|\P_{k}\left(n\right)\right|\cdot k!
+\]
+
+\end_inset
+
+ולכן
+\begin_inset Formula 
+\[
+C\left(n,k\right)=\left|\P_{k}\left(n\right)\right|=\frac{P\left(n,k\right)}{k!}=\frac{n!}{k!\cdot\left(n-k\right)!}={n \choose k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+שימוש בצירופים
+\end_layout
+
+\end_inset
+
+לחליפות מספר שימושים מרכזיים,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+הגדרה חלופית
+\series default
+: מספר האפשרויות לבחור 
+\begin_inset Formula $k$
+\end_inset
+
+ איברים מתוך 
+\begin_inset Formula $n$
+\end_inset
+
+ איברים ללא חשיבות לסדר וללא חזרה הינו 
+\begin_inset Formula $C\left(n,k\right)=\frac{n!}{k!\cdot\left(n-k\right)!}$
+\end_inset
+
+.
+ נשים לב כי זה שקול לבחירת 
+\begin_inset Formula $k$
+\end_inset
+
+ איברים מתוך 
+\begin_inset Formula $n$
+\end_inset
+
+ עם חשיבות לסדר וללא חזרה כלומר 
+\begin_inset Formula $P\left(n,k\right)$
+\end_inset
+
+ ולאחר מכן חילוק בכל הספירה המיותרת הנובעת מהסידור הפנימי של 
+\begin_inset Formula $k$
+\end_inset
+
+ האיברים כלומר 
+\begin_inset Formula $\frac{P\left(n,k\right)}{k!}=\frac{n!}{k!\cdot\left(n-k\right)!}={n \choose k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+תת קבוצה בגודל מסוים
+\series default
+: כמות תתי הקבוצות בגודל 
+\begin_inset Formula $k$
+\end_inset
+
+ של קבוצה מגודל 
+\begin_inset Formula $n$
+\end_inset
+
+ הינה 
+\begin_inset Formula $C\left(n,k\right)={n \choose k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+בחירת מקומות
+\series default
+: כמות המחרוזות באורך 
+\begin_inset Formula $9$
+\end_inset
+
+ עם בדיוק שלושה 
+\begin_inset Formula $A$
+\end_inset
+
+ שני 
+\begin_inset Formula $B$
+\end_inset
+
+ וארבעה 
+\begin_inset Formula $C$
+\end_inset
+
+ הינה 
+\begin_inset Formula ${9 \choose 3}\cdot{6 \choose 4}$
+\end_inset
+
+.
+ כלומר בחירת 
+\begin_inset Formula $3$
+\end_inset
+
+ מקומות עבור 
+\begin_inset Formula $A$
+\end_inset
+
+ ולאחר מכן בחירת 
+\begin_inset Formula $4$
+\end_inset
+
+ מקומות עבור 
+\begin_inset Formula $C$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Subsubsection
+ללא חשיבות לסדר ועם חזרה - חלוקות
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+חלוקות
+\end_layout
+
+\end_inset
+
+יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי מספר החלקוות הינו 
+\begin_inset Formula $S\left(n,k\right)={n+k-1 \choose k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מולטי קבוצה
+\end_layout
+
+\end_inset
+
+מולטי קבוצה הינו אובייקט שאין בו חשיבות לסדר ומותרת בו חזרה, זוהי קבוצה
+ בעזרת חזרות.
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+שימוש בחלוקות
+\end_layout
+
+\end_inset
+
+לחליפות מספר שימושים מרכזיים,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+הגדרה חלופית
+\series default
+: מספר האפשרויות לחלק 
+\begin_inset Formula $k$
+\end_inset
+
+ כדורים זהים ל־
+\begin_inset Formula $n$
+\end_inset
+
+ תאים שונים הינו 
+\begin_inset Formula $S\left(n,k\right)$
+\end_inset
+
+.
+ כל חלוקה של כדורים לתאים ניתן לאפיין באופן חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל בעזרת מחזורת בינארית )כלומר של 
+\begin_inset Formula $0,1$
+\end_inset
+
+( המתארת את החלוקה בצורה הבאה
+\begin_inset Formula 
+\[
+\floor{OOO}\floor O\floor{}\floor{OO}\floor{OO}\floor{}\to0001011001001
+\]
+
+\end_inset
+
+כלומר כל כדור יהיה 
+\begin_inset Formula $0$
+\end_inset
+
+ במחזורת וכן כל חוצץ בין תאים יהווה 
+\begin_inset Formula $1$
+\end_inset
+
+, אורך המחרוזת הוא כמספר החוצצים ועוד מספר הכדורים 
+\begin_inset Formula $n+k-1$
+\end_inset
+
+ וכן אנו בוחרים 
+\begin_inset Formula $k$
+\end_inset
+
+ מקומות במחזורת בהם יהיה 
+\begin_inset Formula $1$
+\end_inset
+
+ )מה שאנלוגי לבחירת תאים לכדורים( לכן הכמות הינה 
+\begin_inset Formula ${n+k-1 \choose k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+כמות פתרונות למשוואה
+\series default
+: כמה פתרונות יש למשוואה 
+\begin_inset Formula $x_{1}+\ldots+x_{n}=k$
+\end_inset
+
+ )כאשר כל המשתנים ב־
+\begin_inset Formula $\bbn$
+\end_inset
+
+(.
+ נניח כי קיים לנו פתרון 
+\begin_inset Formula $\left<a_{1}\ldots a_{n}\right>$
+\end_inset
+
+ ניצור ממנו חלוקה של 
+\begin_inset Formula $k$
+\end_inset
+
+ כדורים ל־
+\begin_inset Formula $n$
+\end_inset
+
+ תאים כך
+\begin_inset Formula 
+\[
+\floor{\underbrace{O\ldots O}_{a_{1}}}\floor{\underbrace{O\ldots O}_{a_{2}}}\ldots\floor{\underbrace{O\ldots O}_{a_{n}}}
+\]
+
+\end_inset
+
+אנו יודעים כי 
+\begin_inset Formula $a_{1}+\ldots+a_{n}=k$
+\end_inset
+
+ ולכן מספר הכדורים הוא באמת 
+\begin_inset Formula $k$
+\end_inset
+
+ ולכן יש לבעיה 
+\begin_inset Formula $S\left(n,k\right)$
+\end_inset
+
+ פתרונות, בפרט יש גם למשוואה 
+\begin_inset Formula $S\left(n,k\right)$
+\end_inset
+
+ פתרונות.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+מולטי קבוצה
+\series default
+: כמות המולטי קבוצות בגודל 
+\begin_inset Formula $k$
+\end_inset
+
+ מתוך האיברים 
+\begin_inset Formula $\left\{ 1\ldots n\right\} $
+\end_inset
+
+.
+ בהינתן מולטי קבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+ מגודל 
+\begin_inset Formula $k$
+\end_inset
+
+ של האיברים 
+\begin_inset Formula $\left\{ 1\ldots n\right\} $
+\end_inset
+
+ ניצור ממנה משוואה בצורה הבאה, נסמן בעזרת 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ את כמות הפעמים בה 
+\begin_inset Formula $i$
+\end_inset
+
+ מופיע במולטי קבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+, מהיות גודל 
+\begin_inset Formula $A$
+\end_inset
+
+ נקבל כי 
+\begin_inset Formula $a_{1}+\ldots+a_{n}=k$
+\end_inset
+
+ בפרט קיבלנו כי מספר מולטי הקבוצות הוא כמספר הפתרונות למשוואה כלומר 
+\begin_inset Formula $S\left(n,k\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Section
+טכניקות קומבינטוריות
 \end_layout
 
 \begin_layout Standard
@@ -23821,170 +25264,6 @@ status collapsed
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-תמורה/פרמוטציה: פונקציה 
-\begin_inset Formula $f:A\to A$
-\end_inset
-
- חח
-\begin_inset Quotes erd
-\end_inset
-
-ע ועל.
-\end_layout
-
-\begin_layout Standard
-הערה: 
-\begin_inset Formula $n^{k}$
-\end_inset
-
- זו ספירה עם חשיבות לסדר ועם חזרה.
-\end_layout
-
-\begin_layout Standard
-טענה: 
-\begin_inset Formula $\left|\left\{ f\in\left[n\right]\to\left[n\right]\bmid\text{ חח"ע ועל}f\right\} \right|=n!$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-חליפות: 
-\begin_inset Formula $\left|\left\{ f\in\left[k\right]\to\left[n\right]\bmid\text{חח"ע}f\right\} \right|=P\left(k,n\right)=\frac{n!}{\left(n-k\right)!}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-הערה: 
-\begin_inset Formula $P\left(n,k\right)$
-\end_inset
-
- זו ספירה עם חשיבות לסדר ובלי חזרה.
-\end_layout
-
-\begin_layout Standard
-הגדרה: 
-\begin_inset Formula $\P Ak=\left\{ B\in\P A{}\mid\left|B\right|=k\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-צירופים: 
-\begin_inset Formula $\left|\P{\left[n\right]}k\right|=C\left(n,k\right)=\binom{n}{k}=\frac{n!}{k!\left(n-k\right)!}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-הערה: 
-\begin_inset Formula $\binom{n}{k}$
-\end_inset
-
- זו ספירה בלי חשיבות לסדר ובלי חזרה.
-\end_layout
-
-\begin_layout Standard
-חלוקות: 
-\begin_inset Formula $\left|\left\{ \left<x_{1},\ldots,x_{n}\right>\in\bbn^{n}\mid\sum_{i=1}^{n}x_{i}=k\right\} \right|=S\left(n,k\right)=\binom{k+n-1}{k}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-הערה: 
-\begin_inset Formula $S\left(n,k\right)$
-\end_inset
-
- זו ספירה בלי חשיבות לסדר ועם חזרה.
-\end_layout
-
-\begin_layout Standard
-מולטי קבוצה: תהא 
-\begin_inset Formula $A$
-\end_inset
-
- קבוצה ותהא 
-\begin_inset Formula $f:A\to\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $B=\left(A,f\right)$
-\end_inset
-
- זאת קבוצה עם 
-\begin_inset Formula $f\left(a\right)$
-\end_inset
-
- פעמים האיבר 
-\begin_inset Formula $a$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-סידור עצמים בשורה: כמות האפשרויות לסדר 
-\begin_inset Formula $n$
-\end_inset
-
- עצמים בשורה היא 
-\begin_inset Formula $n!$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-סידור עצמים במעגל: כמות האפשרויות לסדר 
-\begin_inset Formula $n$
-\end_inset
-
- עצמים בשורה היא 
-\begin_inset Formula $\left(n-1\right)!$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-בחירה: כמות האפשרויות לבחור 
-\begin_inset Formula $k$
-\end_inset
-
- עצמים מתוך 
-\begin_inset Formula $n$
-\end_inset
-
- עצמים היא 
-\begin_inset Formula $\binom{n}{k}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-חלוקת כדורים לתאים: כמות האפשרויות לחלק 
-\begin_inset Formula $k$
-\end_inset
-
- כדורים זהים לתוך 
-\begin_inset Formula $n$
-\end_inset
-
- תאים שונים היא 
-\begin_inset Formula $S\left(n,k\right)$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
