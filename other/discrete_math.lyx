@@ -218,7 +218,7 @@ End
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "E:/University/macros.lyx"
+filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 
 \end_inset
 
@@ -11276,7 +11276,7 @@ status open
 \begin_layout Standard
 \begin_inset Branch Logic
 inverted 0
-status collapsed
+status open
 
 \begin_layout Section
 יחסים
@@ -15640,43 +15640,94 @@ status open
 \begin_inset Formula $\nicefrac{A}{R_{\Pi}}=\Pi$
 \end_inset
 
-, נוכיח בעזרת הכלה דו כיוונית
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-\begin_inset Argument item:1
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $\subseteq$
+, נוכיח תחילה כי 
+\begin_inset Formula $\nicefrac{A}{R_{\Pi}}\supseteq\Pi$
 \end_inset
 
-:
-\end_layout
+, תהא 
+\begin_inset Formula $X\in\Pi$
+\end_inset
+
+ מהגדרת חלוקה 
+\begin_inset Formula $X\ne\emptyset$
+\end_inset
+
+ בפרט קיים 
+\begin_inset Formula $a\in X$
+\end_inset
+
+, יהי 
+\begin_inset Formula $b\in A$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $aR_{\Pi}b$
+\end_inset
+
+ מהגדרת 
+\begin_inset Formula $R_{\Pi}$
+\end_inset
+
+ נובע כי קיימת 
+\begin_inset Formula $Y\in\Pi$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $a,b\in Y$
+\end_inset
+
+ אך נשים לב כי 
+\begin_inset Formula $Y\cap X\ne\emptyset$
+\end_inset
+
+ ולכן מהגדרת חלוקה 
+\begin_inset Formula $X=Y$
+\end_inset
+
+, כמו כן נשים לב כי מהגדרת 
+\begin_inset Formula $R_{\Pi}$
+\end_inset
+
+ כל 
+\begin_inset Formula $c\in X$
+\end_inset
+
+ מקיים 
+\begin_inset Formula $aR_{\Pi}c$
+\end_inset
+
+, אזי קיבלנו כי
+\begin_inset Formula 
+\[
+\forall d\in A.\left(aR_{\Pi}d\right)\iff\left(d\in X\right)
+\]
 
 \end_inset
 
-...
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Argument item:1
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $\supseteq$
+ולכן מהגדרת מחלקת שקילות ומהגדרת שיוויון קבוצות נקבל כי 
+\begin_inset Formula $\left[a\right]_{R_{\Pi}}=X$
 \end_inset
 
-:
-\end_layout
-
+ בפרט מהגדרת קבוצת המנה 
+\begin_inset Formula $X\in\nicefrac{A}{R_{\Pi}}$
 \end_inset
 
-...
+.
+ כעת נשים לב כי 
+\begin_inset Formula $\nicefrac{A}{R_{\Pi}},\Pi$
+\end_inset
+
+ חלוקות וכן 
+\begin_inset Formula $\Pi\subseteq\nicefrac{A}{R_{\Pi}}$
+\end_inset
+
+ בפרט ממשפט מלעיל נקבל כי 
+\begin_inset Formula $\Pi=\nicefrac{A}{R_{\Pi}}$
+\end_inset
+
+.
 \end_layout
 
-\end_deeper
 \end_deeper
 \begin_layout Example
 תהא 
@@ -15725,7 +15776,7 @@ status open
 \begin_layout Standard
 \begin_inset Branch Logic
 inverted 0
-status collapsed
+status open
 
 \begin_layout Section
 פונקציות
@@ -16914,9 +16965,129 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+תהיינה 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ קבוצות, תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $g:B\to C$
+\end_inset
+
+, נשים לב כי על מנת להוכיח כי 
+\begin_inset Formula $g\circ f:A\to C$
+\end_inset
+
+ יש להוכיח כי 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ הינה פונקציה, כלומר חד־ערכית ומלאה,
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $g$
+\end_inset
+
+ חד־ערכית, יהי 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $c_{1},c_{2}\in C$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\left<a,c_{1}\right>,\left<a,c_{2}\right>\in g\circ f$
+\end_inset
+
+ מהגדרת הרכבה קיימים 
+\begin_inset Formula $b_{1},b_{2}\in B$
+\end_inset
+
+ עבורם
+\begin_inset Formula 
+\begin{align*}
+\left<a,b_{1}\right>,\left<a,b_{2}\right> & \in f & \left<b_{1},c_{1}\right>,\left<b_{2},c_{2}\right> & \in g
+\end{align*}
+
+\end_inset
+
+מהיות 
+\begin_inset Formula $f$
+\end_inset
+
+ פונקציה ובפרט חד־ערכית נקבל כי 
+\begin_inset Formula $b_{1}=b_{2}$
+\end_inset
+
+ בפרט יתקיים
+\begin_inset Formula 
+\[
+\left<b_{1},c_{1}\right>,\left<b_{1},c_{2}\right>\in f
+\]
+
+\end_inset
+
+כמו כן מהיות 
+\begin_inset Formula $g$
+\end_inset
+
+ פונקציה ובפרט חד־ערכית נקבל כי 
+\begin_inset Formula $c_{1}=c_{2}$
+\end_inset
+
+ כנדרש.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g$
+\end_inset
+
+ מלאה, יהי 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ מהיות 
+\begin_inset Formula $f$
+\end_inset
+
+ פונקציה קיים 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $f\left(a\right)=b$
+\end_inset
+
+ כמו כן מהיות 
+\begin_inset Formula $g$
+\end_inset
+
+ פונקציה קיים 
+\begin_inset Formula $c\in C$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $g\left(b\right)=c$
+\end_inset
+
+ מהגדרת הרכבה נקבל כי
+\begin_inset Formula 
+\[
+\left(\left<a,b\right>\in f\right)\land\left(\left<b,c\right>\in g\right)\implies\left<a,c\right>\in g\circ f
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Theorem
 \begin_inset Argument 1
 status open
@@ -16949,7 +17120,43 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+תהיינה 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ קבוצות, תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ תהא 
+\begin_inset Formula $g:B\to C$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in A$
+\end_inset
+
+, נשים לב כי מהגדרת פונקציה והיותה מלאה מתקיים
+\begin_inset Formula 
+\begin{align*}
+\left<a,f\left(a\right)\right> & \in f & \left<f\left(a\right),g\left(f\left(a\right)\right)\right> & \in g
+\end{align*}
+
+\end_inset
+
+בפרט מהגדרת הרכבה 
+\begin_inset Formula $\left<a,g\left(f\left(a\right)\right)\right>\in g\circ f$
+\end_inset
+
+ ולכן
+\begin_inset Formula 
+\[
+\left(g\circ f\right)\left(a\right)=g\left(f\left(a\right)\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -16989,9 +17196,139 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ נשים לב כי 
+\begin_inset Formula $f^{-1}\subseteq B\times A$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $f\circ f^{-1}\subseteq B\times B$
+\end_inset
+
+ נוכיח הכלה דו כיוונית,
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\subseteq$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $\left<b_{1},b_{2}\right>\in f\circ f^{-1}$
+\end_inset
+
+ מהגדרת הרכבה קיים 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left<b_{1},a\right>\in f^{-1}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left<a,b_{2}\right>\in f$
+\end_inset
+
+ בפרט מהגדרת יחס הופכי נקבל כי 
+\begin_inset Formula $\left<a,b_{1}\right>\in f$
+\end_inset
+
+ כעת מהיות 
+\begin_inset Formula $f$
+\end_inset
+
+ פונקציה ובפרט חד־ערכית נקבל כי 
+\begin_inset Formula $b_{1}=b_{2}$
+\end_inset
+
+ כמו כן 
+\begin_inset Formula $b_{1}\in\im\left(f\right)$
+\end_inset
+
+ כי 
+\begin_inset Formula $\left<a,b_{1}\right>\in f$
+\end_inset
+
+ בפרט מהגדרת 
+\begin_inset Formula $\id$
+\end_inset
+
+ נקבל כי 
+\begin_inset Formula $\left<b_{1},b_{2}\right>\in\id_{\im\left(f\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\supseteq$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $\left<b,b_{1}\right>\in\id_{\im\left(f\right)}$
+\end_inset
+
+ מהגדרת 
+\begin_inset Formula $\id$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $b=b_{1}$
+\end_inset
+
+ כמו כן יתקיים 
+\begin_inset Formula $b\in\im\left(f\right)$
+\end_inset
+
+ ולכן מהגדרת 
+\begin_inset Formula $\im$
+\end_inset
+
+ קיים 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $f\left(a\right)=b$
+\end_inset
+
+ אזי מהגדרת יחס הופכי 
+\begin_inset Formula $\left<b,a\right>\in f^{-1}$
+\end_inset
+
+ ולכן מהגדרת הרכבה
+\begin_inset Formula 
+\[
+\left(\left<b,a\right>\in f^{-1}\right)\land\left(\left<a,b\right>\in f\right)\implies\left(\left<b,b_{1}\right>\in f\circ f^{-1}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 זיווג
 \end_layout
@@ -17054,9 +17391,147 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+יהי 
+\begin_inset Formula $f\subseteq A\times B$
+\end_inset
+
+ יחס חח
+\begin_inset Quotes erd
+\end_inset
+
+ע נשים לב כי 
+\begin_inset Formula $f^{-1}\subseteq B\times A$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $f^{-1}\circ f\subseteq A\times A$
+\end_inset
+
+, נוכיח בעזרת הכלה דו כיוונית,
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\subseteq$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $\left<a_{1},a_{2}\right>\in f^{-1}\circ f$
+\end_inset
+
+ מהגדרת הרכבה קיים 
+\begin_inset Formula $b\in A$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left<a_{1},b\right>\in f$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left<b,a_{2}\right>\in f^{-1}$
+\end_inset
+
+ בפרט מהגדרת יחס הופכי נקבל כי 
+\begin_inset Formula $\left<a_{2},b\right>\in f$
+\end_inset
+
+ כעת מהיות 
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע נקבל כי 
+\begin_inset Formula $a_{1}=a_{2}$
+\end_inset
+
+ כמו כן 
+\begin_inset Formula $a_{1}\in\dom\left(f\right)$
+\end_inset
+
+ כי 
+\begin_inset Formula $\left<a_{1},b\right>\in f$
+\end_inset
+
+ בפרט מהגדרת 
+\begin_inset Formula $\id$
+\end_inset
+
+ נקבל כי 
+\begin_inset Formula $\left<a_{1},a_{2}\right>\in\id_{\dom\left(f\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\supseteq$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $\left<a,a_{1}\right>\in\id_{\dom\left(f\right)}$
+\end_inset
+
+ מהגדרת 
+\begin_inset Formula $\id$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a=a_{1}$
+\end_inset
+
+ כמו כן יתקיים 
+\begin_inset Formula $a\in\dom\left(f\right)$
+\end_inset
+
+ ולכן מהגדרת 
+\begin_inset Formula $\dom$
+\end_inset
+
+ קיים 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $afb$
+\end_inset
+
+ אזי מהגדרת יחס הופכי 
+\begin_inset Formula $\left<b,a\right>\in f^{-1}$
+\end_inset
+
+ ולכן מהגדרת הרכבה
+\begin_inset Formula 
+\[
+\left(\left<a,b\right>\in f\right)\land\left(\left<b,a\right>\in f^{-1}\right)\implies\left(\left<a,a_{1}\right>\in f^{-1}\circ f\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Definition
 \begin_inset Argument 1
 status open
