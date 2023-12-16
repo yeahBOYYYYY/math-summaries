@@ -175,12 +175,12 @@ End
 \color #faf0e6
 \end_branch
 \branch Logic
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch Exeption
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -395,7 +395,7 @@ status open
 \begin_layout Standard
 \begin_inset Branch Logic
 inverted 0
-status collapsed
+status open
 
 \begin_layout Section
 תחשיב הפסוקים
@@ -855,6 +855,62 @@ status open
 .
 \end_layout
 
+\begin_layout Example
+נראה מספר פסוקים ואת ההשמה של ערך האמת שלהם,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $V\left(1<3\right)=\text{true}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V\left(1+1=3\right)=\text{false}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V\left(\left(1+1=3\right)\implies\left(10-1=4\right)\right)=\text{true}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+שקר גורר הכל
+\end_layout
+
+\end_inset
+
+יהיו 
+\begin_inset Formula $A,B$
+\end_inset
+
+ פסוקים יסודיים אזי 
+\begin_inset Formula $\left(V\left(A\right)=\text{false}\right)\implies\left(V\left(A\implies B\right)=\text{true}\right)$
+\end_inset
+
+, כלומר 
+\begin_inset Quotes eld
+\end_inset
+
+אם שקר אז משהו
+\begin_inset Quotes erd
+\end_inset
+
+ זוהי תמיד טענת אמת.
+\end_layout
+
 \begin_layout Exercise
 הצרינו וקבעו האם המשפט הבא הוא פסוק אמת/פסוק שקר/אינו פסוק, 
 \begin_inset Quotes eld
@@ -925,42 +981,6 @@ status open
 \end_inset
 
  השמות של ערכי אמת.
-\end_layout
-
-\begin_layout Remark
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-שקר גורר הכל
-\end_layout
-
-\end_inset
-
-יהיו 
-\begin_inset Formula $A,B$
-\end_inset
-
- פסוקים יסודיים אזי 
-\begin_inset Formula $\left(V\left(A\right)=\text{false}\right)\implies\left(V\left(A\implies B\right)=\text{true}\right)$
-\end_inset
-
-, כלומר 
-\begin_inset Quotes eld
-\end_inset
-
-אם שקר אז משהו
-\begin_inset Quotes erd
-\end_inset
-
- זוהי תמיד טענת אמת.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
 \end_layout
 
 \begin_layout Definition
@@ -2062,7 +2082,7 @@ separation "3pt"
 shadowsize "4pt"
 framecolor "black"
 backgroundcolor "none"
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -5180,13 +5200,102 @@ status open
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
+\begin_layout Example
+יהיו 
+\begin_inset Formula $A,B,C$
 \end_inset
 
+ פסוקים נוכיח כי הפסוק 
+\begin_inset Formula $\alpha=\left(\left(A\implies\left(B\implies C\right)\right)\land B\right)\implies\left(A\implies C\right)$
+\end_inset
 
+ הינו טאוטולוגיה, נחלק למקרים,
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+נניח כי 
+\begin_inset Formula $V\left(\left(A\implies\left(B\implies C\right)\right)\land B\right)=\text{false}$
+\end_inset
+
+ אז 
+\begin_inset Formula $V\left(\alpha\right)=\text{true}$
+\end_inset
+
+ מטבלאת אמת של גרירה, כנדרש.
+\end_layout
+
+\begin_layout Itemize
+אחרת נניח כי 
+\begin_inset Formula $V\left(\left(A\implies\left(B\implies C\right)\right)\land B\right)=\text{true}$
+\end_inset
+
+ אזי מטבלאת האמת של 
+\begin_inset Quotes eld
+\end_inset
+
+וגם
+\begin_inset Quotes erd
+\end_inset
+
+ נקבל כי שני הפסוקים אמת, כלומר 
+\begin_inset Formula $\left(V\left(A\implies\left(B\implies C\right)\right)=\text{true}\right)\land\left(V\left(B\right)=\text{true}\right)$
+\end_inset
+
+, כעת נחלק על פי 
+\begin_inset Formula $A$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+אם 
+\begin_inset Formula $V\left(A\right)=\text{false}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $V\left(A\implies C\right)=\text{true}$
+\end_inset
+
+ מטבלאת האמת של גרירה, ולכן 
+\begin_inset Formula $V\left(\alpha\right)=\text{true}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $V\left(A\right)=\text{true}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $V\left(B\implies C\right)=\text{true}$
+\end_inset
+
+ וכן כי 
+\begin_inset Formula $V\left(B\right)=\text{true}$
+\end_inset
+
+ נקבל 
+\begin_inset Formula $V\left(C\right)=\text{true}$
+\end_inset
+
+, לכן 
+\begin_inset Formula $V\left(A\implies C\right)=\text{true}$
+\end_inset
+
+ בפרט 
+\begin_inset Formula $V\left(\alpha\right)=\text{true}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Definition
 \begin_inset Argument 1
 status open
@@ -5350,6 +5459,26 @@ status open
 .
 \end_layout
 
+\begin_layout Exercise
+יהיו 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ פסוקים, האם הפסוק 
+\begin_inset Formula $B\implies C$
+\end_inset
+
+ נובע סמנטית מהפסוקים 
+\begin_inset Formula $A\implies C$
+\end_inset
+
+, 
+\begin_inset Formula $A\implies B$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -5460,11 +5589,32 @@ status open
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
+\begin_layout Example
+הפסוק 
+\begin_inset Formula $\forall x.x\ge-2$
+\end_inset
+
+ אומר כי 
+\begin_inset Quotes eld
+\end_inset
+
+עבור כל 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $x$
+\end_inset
+
+ גדול שווה 
+\begin_inset Formula $-2$
 \end_inset
 
 
+\begin_inset Quotes erd
+\end_inset
+
+ שימו לב כי לא נאמר האם הטענה אמת או שקר אלא רק את משמעותה.
 \end_layout
 
 \begin_layout Definition
@@ -5484,11 +5634,40 @@ status open
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
+\begin_layout Example
+הפסוק 
+\begin_inset Formula $\forall y.\exists x.x+x=y$
+\end_inset
+
+ אומר כי 
+\begin_inset Quotes eld
+\end_inset
+
+עבור כל 
+\begin_inset Formula $y$
+\end_inset
+
+, קיים 
+\begin_inset Formula $x$
+\end_inset
+
+, כך שמתקיים 
+\begin_inset Formula $x$
+\end_inset
+
+ ועוד 
+\begin_inset Formula $x$
+\end_inset
+
+ שווה 
+\begin_inset Formula $y$
 \end_inset
 
 
+\begin_inset Quotes erd
+\end_inset
+
+ לדוגמה מעל המספרים )הממשיים( טענה זו נכונה.
 \end_layout
 
 \begin_layout Definition
@@ -5614,11 +5793,40 @@ status open
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
+\begin_layout Example
+אנו טוענים כי 
+\begin_inset Quotes eld
+\end_inset
+
+קיים ויחיד 
+\begin_inset Formula $x$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $y$
+\end_inset
+
+ יתקיים 
+\begin_inset Formula $x+y=y$
 \end_inset
 
 
+\begin_inset Quotes erd
+\end_inset
+
+ כמובן אנו יודעים כי אותו ה־
+\begin_inset Formula $x$
+\end_inset
+
+ הוא 
+\begin_inset Formula $0$
+\end_inset
+
+ וכן זהו היחיד המקיים את הטענה, לכן נוכל לכתוב את הטענה בצורה הבאה 
+\begin_inset Formula $\exists!x.\forall y.x+y=y$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Definition
@@ -5650,6 +5858,74 @@ status open
  נכון.
 \end_layout
 
+\begin_layout Example
+נראה מספר דוגמאות
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+בטענה 
+\begin_inset Quotes eld
+\end_inset
+
+קיים ויחיד 
+\begin_inset Formula $x$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $y$
+\end_inset
+
+ יתקיים 
+\begin_inset Formula $x+y=y$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ אמרנו שאותו ה־
+\begin_inset Formula $x$
+\end_inset
+
+ היחידני הוא 
+\begin_inset Formula $0$
+\end_inset
+
+ לכן נכתוב 
+\begin_inset Formula $0=\iota x.\left(\forall y.x+y=y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\iota x.x+1=7\right)=6$
+\end_inset
+
+ זוהי טענת אמת )ודאו עם הוכחה כי זהו האיבר היחיד המקיים זאת(.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\iota x.x^{3}=27\right)=10$
+\end_inset
+
+ זוהי טענת שקר )ודאו עם הוכחה כי זהו אינו האיבר היחיד המקיים זאת או שהאיבר
+ עצמו אינו מקיים את הפרידיקט(.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\iota x.x^{2}=9$
+\end_inset
+
+ זוהי אינה טענה חוקית, לא קיים ויחיד איבר המקיים את הפרידיקט 
+\begin_inset Formula $x^{2}=9$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 תחום הכימות
 \end_layout
@@ -5860,6 +6136,19 @@ status open
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Exercise
+הראה כי הטענה הבאה אינה בהכרח נכונה )כלומר מצא עולם דיון ואינטרפרטציה עבורם
+ הטענה אינה נכונה(
+\begin_inset Formula 
+\[
+\left(\left(\forall x.\exists y.P\left(x,y\right)\right)\land\left(\forall y.\exists x.P\left(x,y\right)\right)\right)\implies\exists x.\exists y.\forall z.\left(P\left(x,z\right)\lor P\left(z,y\right)\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -6381,8 +6670,13 @@ status collapsed
 
 \end_deeper
 \end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
+\begin_layout Exercise
+כתבו פסוק שקול לוגית לפסוק הבא ללא סימני שלילה,
+\begin_inset Formula 
+\[
+\neg\left(\exists\e>0.\forall\d>0.\exists x>0.\exists y>0.\left(\left|x-y\right|<\d\land\left|x-y\right|>\e\right)\right)
+\]
+
 \end_inset
 
 
@@ -6416,7 +6710,7 @@ status collapsed
 \begin_layout Standard
 \begin_inset Branch Logic
 inverted 0
-status collapsed
+status open
 
 \begin_layout Section
 קבוצות
@@ -7232,11 +7526,11 @@ status open
 \end_inset
 
 נסמן 
-\begin_inset Formula $\bbn_{\text{even}}=\left\{ 0,2,4,6\ldots\right\} $
+\begin_inset Formula $\bbn_{\text{even}}=\left\{ 2k\mid k\in\bbn\right\} $
 \end_inset
 
  וכן 
-\begin_inset Formula $\bbn_{\text{odd}}=\left\{ 1,3,5,7\ldots\right\} $
+\begin_inset Formula $\bbn_{\text{odd}}=\left\{ 2k+1\mid k\in\bbn\right\} $
 \end_inset
 
 .
@@ -13265,6 +13559,30 @@ status open
 
 \end_deeper
 \begin_layout Claim
+יהיו 
+\begin_inset Formula $m,n\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $R$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R^{\left(m\right)}\circ R^{\left(n\right)}=R^{\left(m+n\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Claim
 יהי 
 \begin_inset Formula $S$
 \end_inset
@@ -14240,7 +14558,7 @@ status open
 \end_inset
 
  נגדיר 
-\begin_inset Formula $R^{*}=\bigcup_{i=1}^{\infty}R^{\left(i\right)}$
+\begin_inset Formula $R^{\star}=\bigcup_{i=1}^{\infty}R^{\left(i\right)}$
 \end_inset
 
 .
@@ -14248,7 +14566,7 @@ status open
 
 \begin_layout Remark
 ודאו כי 
-\begin_inset Formula $R^{*}$
+\begin_inset Formula $R^{\star}$
 \end_inset
 
  תמיד יחס טרנזיטיבי.
@@ -14285,10 +14603,34 @@ status open
 \end_inset
 
  אזי 
-\begin_inset Formula $R^{*}\subseteq S$
+\begin_inset Formula $R^{\star}\subseteq S$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Example
+נגדיר יחס 
+\begin_inset Formula $R=\left\{ \left<n,n+1\right>\mid n\in\bbn\right\} $
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbn$
+\end_inset
+
+, ונרצה למצוא את 
+\begin_inset Formula $R^{\star}$
+\end_inset
+
+.
+ ...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition
@@ -15845,6 +16187,51 @@ status open
 .
 \end_layout
 
+\begin_layout Example
+הוכח או הפרך האם היחסים הבאים חד־ערכיים,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+היחס 
+\begin_inset Formula $R=\left\{ \left<n,y\right>\in\bbn_{+}\times\bbr\mid n^{2}+y^{2}=5\right\} $
+\end_inset
+
+, ...
+\end_layout
+
+\begin_layout Itemize
+היחס 
+\begin_inset Formula $R=\left\{ \left<n,y\right>\in\bbn_{+}\times\bbr\mid n^{2}+y^{2}=1\right\} $
+\end_inset
+
+, ...
+\end_layout
+
+\begin_layout Itemize
+היחס 
+\begin_inset Formula $R=\left\{ \left<A,B\right>\in\P\left(\bbn\right)^{2}\mid B=A\cup\left\{ 1\right\} \right\} $
+\end_inset
+
+, ...
+\end_layout
+
+\begin_layout Itemize
+היחס 
+\begin_inset Formula $R=\left\{ \left<A,B\right>\in\P\left(\bbn\right)^{2}\mid A=B\backslash\left\{ 1\right\} \right\} $
+\end_inset
+
+, ...
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 יחס מלא
 \end_layout
@@ -16182,6 +16569,35 @@ status open
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Remark
+נגדיר פונקציה 
+\begin_inset Formula $f:\bbr\to\bbr$
+\end_inset
+
+ כך 
+\begin_inset Formula $f=\lambda x\in\bbr.\int_{0}^{x}xydy$
+\end_inset
+
+ אזי נשים לב כי אם נשתמש בהצבה פשוטה יתקיים
+\begin_inset Formula 
+\[
+f\left(y+1\right)=\int_{0}^{y+1}\left(y+1\right)ydy
+\]
+
+\end_inset
+
+אשר לא נכון, במקרה בו המשתנה אשר אותו מציבים נמצא בביטוי הלאמבדא נעלץ לשנות
+ את שמות המשתנים בכתיב הלמבדא כך
+\begin_inset Formula 
+\[
+f\left(y+1\right)=\int_{0}^{y+1}\left(y+1\right)zdz
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -24226,7 +24642,11 @@ status open
 \begin_inset Formula $A_{1}\ldots A_{n}$
 \end_inset
 
- קבוצות סופיות וזרות בזוגות המקיימות 
+ קבוצות סופיות וזרות בזוגות המקיימות
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\forall i,j\in\left\{ 1\ldots n\right\} .\left|A_{i}\right|=\left|A_{j}\right|$
 \end_inset
 
@@ -24303,7 +24723,110 @@ n\cdot\left|A_{1}\right|=\left|\biguplus_{i=1}^{n}A_{1}\times\left\{ i\right\} \
 \end_layout
 
 \begin_layout Example
-...
+כמה מחרוזות יש באורך 
+\begin_inset Formula $2$
+\end_inset
+
+ מעל הא
+\begin_inset Quotes erd
+\end_inset
+
+ב 
+\begin_inset Formula $\left\{ 0,\ldots,9\right\} $
+\end_inset
+
+ כאשר כל האיברים במחרוזת שונים זה מזה.
+ נמדל את הבעיה לכדי עוצמה של קבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+ כך
+\begin_inset Formula 
+\[
+A=\left\{ \left<a,b\right>\in\left\{ 0,\ldots,9\right\} ^{2}\mid a\ne b\right\} 
+\]
+
+\end_inset
+
+כעת עבור 
+\begin_inset Formula $i\in\left\{ 0,\ldots,9\right\} $
+\end_inset
+
+ נסמן
+\begin_inset Formula 
+\[
+A_{i}=\left\{ \left<a,b\right>\in\left\{ i\right\} \times\left\{ 0,\ldots,9\right\} \mid a\ne b\right\} 
+\]
+
+\end_inset
+
+כלומר 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ אלה המחרוזות התקינות אשר מתחילות באיבר 
+\begin_inset Formula $i$
+\end_inset
+
+, נשים לב כי לכל 
+\begin_inset Formula $i,j\in\left\{ 0,\ldots,9\right\} $
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|A_{i}\right|=\left|A_{j}\right|$
+\end_inset
+
+ )ודאו זאת( כמו כן הקבוצות 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ זרות )ודאו גם זאת(, כעת נסמן עבור 
+\begin_inset Formula $i\in\left\{ 1,\ldots,9\right\} $
+\end_inset
+
+ את הקבוצה
+\begin_inset Formula 
+\[
+A_{0,i}=\left\{ \left<a,b\right>\in\left\{ 0\right\} \times\left\{ i\right\} \mid a\ne b\right\} 
+\]
+
+\end_inset
+
+אשר מסמלת את המחרוזות התקינות אשר מתחילות באיברים 
+\begin_inset Formula $0,i$
+\end_inset
+
+, נשים לב כי לכל 
+\begin_inset Formula $i,j\in\left\{ 1,\ldots,9\right\} $
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|A_{0,i}\right|=\left|A_{0,j}\right|$
+\end_inset
+
+ )ודאו זאת(, הקבוצות 
+\begin_inset Formula $A_{0,j}$
+\end_inset
+
+ זרות )ודאו גם זאת(, וכן 
+\begin_inset Formula $\left|A_{0,i}\right|=1$
+\end_inset
+
+.
+ סה
+\begin_inset Quotes erd
+\end_inset
+
+כ מעיקרון הכפל נקבל כי מתקיים
+\begin_inset Formula 
+\begin{align*}
+\left|A\right|= & \left|\biguplus_{i=0}^{9}A_{i}\right|=10\cdot\left|A_{0}\right|=10\cdot\left|\biguplus_{i=1}^{9}A_{0,i}\right|\\
+= & 10\cdot9\cdot\left|A_{0,1}\right|=10\cdot9\cdot1=90
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Remark
@@ -24373,10 +24896,6 @@ status open
 הוכח כי שלושת הניסוחים של עקרון הכפל שקולים.
 \end_layout
 
-\begin_layout Example
-...
-\end_layout
-
 \begin_layout Definition
 \begin_inset Argument 1
 status open
@@ -24391,7 +24910,11 @@ status open
 \begin_inset Formula $A_{1}\ldots A_{n}$
 \end_inset
 
- קבוצות סופיות וזרות בזוגות המקיימות 
+ קבוצות סופיות וזרות בזוגות המקיימות
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\forall i,j\in\left\{ 1\ldots n\right\} .\left|A_{i}\right|=\left|A_{j}\right|$
 \end_inset
 
@@ -24423,7 +24946,11 @@ status open
 \begin_inset Formula $A_{1}\ldots A_{n}$
 \end_inset
 
- קבוצות סופיות וזרות בזוגות המקיימות 
+ קבוצות סופיות וזרות בזוגות המקיימות
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\forall i,j\in\left\{ 1\ldots n\right\} .\left|A_{i}\right|=\left|A_{j}\right|$
 \end_inset
 
@@ -24432,10 +24959,6 @@ status open
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Example
-...
 \end_layout
 
 \begin_layout Subsection
@@ -24724,7 +25247,33 @@ status open
 \end_layout
 
 \begin_layout Example
-...
+תחילה נראה חישוב בפועל של עצרת,
+\begin_inset Formula 
+\begin{align*}
+5!= & 5\cdot4!=5\cdot4\cdot3!=5\cdot4\cdot3\cdot2!=5\cdot4\cdot3\cdot2\cdot1!\\
+= & 5\cdot4\cdot3\cdot2\cdot1\cdot0!=5\cdot4\cdot3\cdot2\cdot1\cdot1=120
+\end{align*}
+
+\end_inset
+
+אך הפיתוח הרקורסיבי הזה ארוך ובפועל פשוט נשתמש בעובדה כי 
+\begin_inset Formula $n!=1\cdot2\cdot3\cdot\ldots\cdot n$
+\end_inset
+
+ ללא פיתוח נוסף.
+ מעבר לזאת נשים לב לתכונת הביטול של העצרת בחילוק, כלומר
+\begin_inset Formula 
+\[
+\frac{n!}{k!}=n\cdot\left(n-1\right)\cdot\ldots\cdot\left(n-k+1\right)
+\]
+
+\end_inset
+
+תכונה זאת שימושית על מנת לכתוב בקצרה כפל של מספרים עוקבים, לדוגמה 
+\begin_inset Formula $\frac{10!}{7!}=10\cdot9\cdot8$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Definition
@@ -24749,7 +25298,35 @@ status open
 \end_layout
 
 \begin_layout Example
-...
+לדוגמה בשאלה 
+\begin_inset Quotes eld
+\end_inset
+
+כמה מחרוזות באורך 
+\begin_inset Formula $2$
+\end_inset
+
+ מעל א
+\begin_inset Quotes erd
+\end_inset
+
+ב 
+\begin_inset Formula $\left\{ 0\ldots9\right\} $
+\end_inset
+
+ יש
+\begin_inset Quotes erd
+\end_inset
+
+ הכוונה היא מחרוזות באורך 
+\begin_inset Formula $2$
+\end_inset
+
+ כאשר האיברים החוקיים הם 
+\begin_inset Formula $0\ldots9$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -24938,6 +25515,23 @@ A!=\left|\left\{ f\in A\to A\mid\text{ תמורה}A\right\} \right|
 .
 \end_layout
 
+\begin_layout Remark
+מכיוון ופעולת העצרת מוגדרת היטב, כלומר לא תלויה בבחירת הנציג לעוצמה, נוכל
+ לסמן 
+\begin_inset Formula $\aleph_{0}!$
+\end_inset
+
+ וכדומה כאשר הפירוש הוא 
+\begin_inset Formula $A!$
+\end_inset
+
+ עבור 
+\begin_inset Formula $A=\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Claim
 \begin_inset Formula $\aleph_{0}!=\aleph$
 \end_inset
@@ -24946,16 +25540,21 @@ A!=\left|\left\{ f\in A\to A\mid\text{ תמורה}A\right\} \right|
 \end_layout
 
 \begin_layout Proof
-נשים לב כי ברור שמתקיים 
-\begin_inset Formula $\bbn!\le\bbn$
-\end_inset
-
- מכיוון ומתקיים 
-\begin_inset Formula $\bbn!\subseteq\bbn^{\bbn}$
+נסמן במהלך ההוכחה 
+\begin_inset Formula ${\cal N}=\left\{ f\in A\to A\mid\text{ תמורה}\bbn\right\} $
 \end_inset
 
 .
- כמו כן עבור 
+ נשים לב כי ברור שמתקיים 
+\begin_inset Formula $\left|{\cal N}\right|\le\left|\bbn^{\bbn}\right|$
+\end_inset
+
+ מכיוון ומתקיים 
+\begin_inset Formula ${\cal N}\subseteq\bbn^{\bbn}$
+\end_inset
+
+.
+ כמו כן לכל 
 \begin_inset Formula $A\subseteq\bbn$
 \end_inset
 
@@ -24971,8 +25570,8 @@ A!=\left|\left\{ f\in A\to A\mid\text{ תמורה}A\right\} \right|
 \begin_inset Formula $\forall a\in A.F_{A}\left(a\right)\ne a$
 \end_inset
 
- כעת נגדיר פונקציה 
-\begin_inset Formula $F:\P\left(\bbn\right)\to\bbn!$
+ )הצדיקו את הפעולה הזאת בעזרת אקסיומת הבחירה( כעת נגדיר פונקציה 
+\begin_inset Formula $F:\P\left(\bbn\right)\to{\cal N}$
 \end_inset
 
  כך
@@ -24991,10 +25590,10 @@ n & \text{else}
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $\im\left(F\right)\subseteq\bbn!$
+\begin_inset Formula $\im\left(F\right)\subseteq{\cal N}$
 \end_inset
 
-, יהי 
+, נראה כי הפונקציה אשר הגדרנו מוגדרת היטב, יהי 
 \begin_inset Formula $f\in\im\left(F\right)$
 \end_inset
 
@@ -25037,14 +25636,136 @@ n & \text{else}
 \begin_inset Formula $f\left(n_{1}\right)=f\left(n_{2}\right)$
 \end_inset
 
+ נניח בשלילה כי 
+\begin_inset Formula $n_{1}\in A$
+\end_inset
 
+ אך 
+\begin_inset Formula $n_{2}\notin A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(n_{2}\right)=n_{2}$
+\end_inset
+
+ אך 
+\begin_inset Formula $f\left(n_{1}\right)=f_{A}\left(n_{1}\right)\in A$
+\end_inset
+
+ מהגדרת 
+\begin_inset Formula $f_{A}$
+\end_inset
+
+ ולכן
+\begin_inset Formula 
+\[
+n_{2}=f\left(n_{2}\right)=f\left(n_{1}\right)=f_{A}\left(n_{1}\right)\in A
+\]
+
+\end_inset
+
+סתירה, באותה מידה גם לא יתכן כי 
+\begin_inset Formula $n_{1}\notin A$
+\end_inset
+
+ וכן 
+\begin_inset Formula $n_{2}\in A$
+\end_inset
+
+,
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+נניח כי 
+\begin_inset Formula $n_{1},n_{2}\in A$
+\end_inset
+
+ אזי מהגדרת תמורה ובפרט העובדה כי היא חח
+\begin_inset Quotes erd
+\end_inset
+
+ע נקבל כי
+\begin_inset Formula 
+\[
+f_{A}\left(n_{1}\right)=f\left(n_{1}\right)=f\left(n_{2}\right)=f_{A}\left(n_{2}\right)
+\]
+
+\end_inset
+
+גורר כי 
+\begin_inset Formula $n_{1}=n_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+נניח כי 
+\begin_inset Formula $n_{1},n_{2}\notin A$
+\end_inset
+
+ אזי מהגדרת 
+\begin_inset Formula $f$
+\end_inset
+
+ נקבל כי 
+\begin_inset Formula $n_{1}=f\left(n_{1}\right)=f\left(n_{2}\right)=n_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 \begin_inset Formula $f$
 \end_inset
 
- על,
+ על, יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אם 
+\begin_inset Formula $n\notin A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(n\right)=n$
+\end_inset
+
+ כנדרש, אחרת אם 
+\begin_inset Formula $n\in A$
+\end_inset
+
+ אזי מהגדרת תמורה ובפרט מהעובדה כי היא על נקבל כי קיים 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $f_{A}\left(a\right)=n$
+\end_inset
+
+ בפרט 
+\begin_inset Formula $f\left(a\right)=f_{A}\left(a\right)=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אזי קיבלנו כי 
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל לכן 
+\begin_inset Formula $f\in{\cal N}$
+\end_inset
+
+ כנדרש.
 \end_layout
 
 \end_deeper
@@ -25056,7 +25777,126 @@ n & \text{else}
 \begin_inset Quotes erd
 \end_inset
 
-ע,
+ע, יהיו 
+\begin_inset Formula $A,B\in\P\left(\bbn\right)$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $F\left(A\right)=F\left(B\right)$
+\end_inset
+
+ אזי מהגדרת 
+\begin_inset Formula $F$
+\end_inset
+
+ יתקיים
+\begin_inset Formula 
+\[
+\left(\lambda n\in\bbn.\begin{cases}
+f_{A}\left(n\right) & n\in A\\
+n & \text{else}
+\end{cases}\right)=F\left(A\right)=F\left(B\right)=\left(\lambda n\in\bbn.\begin{cases}
+f_{B}\left(n\right) & n\in B\\
+n & \text{else}
+\end{cases}\right)
+\]
+
+\end_inset
+
+יהי 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ משיוויון פונקציות וכן מהגדרת 
+\begin_inset Formula $f_{A}$
+\end_inset
+
+ יתקיים
+\begin_inset Formula 
+\[
+\left(\lambda n\in\bbn.\begin{cases}
+f_{B}\left(n\right) & n\in B\\
+n & \text{else}
+\end{cases}\right)\left(a\right)=\left(\lambda n\in\bbn.\begin{cases}
+f_{A}\left(n\right) & n\in A\\
+n & \text{else}
+\end{cases}\right)\left(a\right)=f_{A}\left(a\right)\ne a
+\]
+
+\end_inset
+
+בפרט נניח כי 
+\begin_inset Formula $a\notin B$
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\[
+\left(\lambda n\in\bbn.\begin{cases}
+f_{B}\left(n\right) & n\in B\\
+n & \text{else}
+\end{cases}\right)\left(a\right)=a
+\]
+
+\end_inset
+
+בסתירה לעובדה כי האגף השמאלי שונה מ־
+\begin_inset Formula $a$
+\end_inset
+
+ בפרט 
+\begin_inset Formula $a\in B$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+, מסימטריה בין 
+\begin_inset Formula $A,B$
+\end_inset
+
+ נסיק כי גם 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $A=B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+בפרט הסקנו כי 
+\begin_inset Formula $F$
+\end_inset
+
+ פונקציה חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ולכן 
+\begin_inset Formula $\left|\P\left(\bbn\right)\right|\le\left|{\cal N}\right|$
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\[
+\aleph=\left|\P\left(\bbn\right)\right|\le\left|{\cal N}\right|=\aleph_{0}!\le\left|\bbn^{\bbn}\right|=\aleph
+\]
+
+\end_inset
+
+ולכן מקש
+\begin_inset Quotes erd
+\end_inset
+
+ב ומהתרגיל מלעיל נקבל 
+\begin_inset Formula $\aleph_{0}!=\aleph$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -26343,11 +27183,44 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+בהסבר על המקור של הבינום ניתנה הוכחה קומבינטורית למשפט, בכל זאת אתן הוכחה
+ אלגברית בעזרת אינדוקציה.
+ יהיו 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ מתקיים
+\begin_inset Formula 
+\[
+\left(a+b\right)^{0}=1={n \choose 0}a^{0}b^{0-0}=\sum_{k=0}^{0}{0 \choose k}a^{k}b^{0-k}
+\]
+
+\end_inset
+
+נניח עבור 
+\begin_inset Formula $n-1$
+\end_inset
+
+ שהטענה נכונה, לכן
+\begin_inset Formula 
+\begin{align*}
+\left(a+b\right)^{n}= & \left(a+b\right)^{n-1}\left(a+b\right)=\left(\sum_{k=0}^{n-1}{n-1 \choose k}a^{k}b^{n-1-k}\right)\left(a+b\right)\\
+= & \left(a\sum_{k=0}^{n-1}{n-1 \choose k}a^{k}b^{n-1-k}\right)+\left(b\sum_{k=0}^{n-1}{n-1 \choose k}a^{k}b^{n-1-k}\right)\\
+= & \left(\sum_{k=0}^{n-1}{n-1 \choose k}a^{k+1}b^{n-1-k}\right)+\left(\sum_{k=0}^{n-1}{n-1 \choose k}a^{k}b^{n-k}\right)\\
+= & \left(\sum_{k=1}^{n}{n-1 \choose k-1}a^{k}b^{n-k}\right)+\left(\sum_{k=0}^{n-1}{n-1 \choose k}a^{k}b^{n-k}\right)\\
+= & \left({n-1 \choose n-1}a^{n}b^{n-n}+\sum_{k=1}^{n-1}{n-1 \choose k-1}a^{k}b^{n-k}\right)+\left({n-1 \choose 0}a^{0}b^{n-0}+\sum_{k=1}^{n-1}{n-1 \choose k}a^{k}b^{n-k}\right)\\
+= & a^{n}+b^{n}+\left(\sum_{k=1}^{n-1}{n-1 \choose k-1}a^{k}b^{n-k}+\sum_{k=1}^{n-1}{n-1 \choose k}a^{k}b^{n-k}\right)\\
+= & a^{n}+b^{n}+\sum_{k=1}^{n-1}\left({n-1 \choose k-1}+{n-1 \choose k}\right)a^{k}b^{n-k}=a^{n}+b^{n}+\sum_{k=1}^{n-1}{n \choose k}a^{k}b^{n-k}\\
+= & \sum_{k=0}^{n}{n \choose k}a^{k}b^{n-k}
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
-נוכיח מספר טענות בסיסיות, יהי 
+נראה מספר טענות בסיסיות, יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -26403,9 +27276,21 @@ status open
  קומבינטוריקה
 \end_layout
 
+\begin_layout Remark
+נסמן בעזרת 
+\begin_inset Formula $\P_{\text{even}}\left(A\right),\P_{\text{odd}}\left(A\right)$
+\end_inset
+
+ תתי קבוצות בעוצמה זוגית ואי זוגית בהתאמה, בכללי כאשר יש כיתוב מתחת ל־
+\begin_inset Formula $\P$
+\end_inset
+
+ נתכוון לקבוצות המקיימות זאת, וכיתוב זה יהיה אינטואיטיבי להבנה.
+\end_layout
+
 \begin_layout Theorem
 תהא 
-\begin_inset Formula $A$
+\begin_inset Formula $A\ne\emptyset$
 \end_inset
 
  קבוצה סופית אזי 
@@ -26416,9 +27301,139 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+תהא 
+\begin_inset Formula $A\ne\emptyset$
+\end_inset
+
+ קבוצה סופית ויהי 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ נגדיר פונקציה חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל 
+\begin_inset Formula $f:\P_{\text{even}}\left(A\right)\to\P_{\text{odd}}\left(A\right)$
+\end_inset
+
+ כך
+\begin_inset Formula 
+\[
+f=\lambda S\in\P_{\text{even}}\left(A\right).\begin{cases}
+S\backslash\left\{ a\right\}  & a\in S\\
+S\uplus\left\{ a\right\}  & a\notin S
+\end{cases}
+\]
+
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע, יהיו 
+\begin_inset Formula $S_{1},S_{2}\in\P_{\text{even}}\left(A\right)$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $f\left(S_{1}\right)=f\left(S_{2}\right)$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+אם 
+\begin_inset Formula $a\notin S_{1}\cup S_{2}$
+\end_inset
+
+ או אם 
+\begin_inset Formula $a\in S_{1}\cap S_{2}$
+\end_inset
+
+ נשאר לקורא להוכיח כי במקרים אלו 
+\begin_inset Formula $S_{1}=S_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $a\in S_{1}\triangle S_{2}$
+\end_inset
+
+, בה
+\begin_inset Quotes erd
+\end_inset
+
+כ 
+\begin_inset Formula $a\in S_{1}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $a\notin S_{2}$
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\[
+S_{1}\backslash\left\{ a\right\} =f\left(S_{1}\right)=f\left(S_{2}\right)=S_{2}\uplus\left\{ a\right\} 
+\]
+
+\end_inset
+
+אך אז 
+\begin_inset Formula $a\in f\left(S_{2}\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a\notin f\left(S_{1}\right)$
+\end_inset
+
+ סתירה להגדרת שיוויון קבוצות.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+ על, תהא 
+\begin_inset Formula $S\in\P_{\text{odd}}\left(A\right)$
+\end_inset
+
+ נשים לב כי
+\begin_inset Formula 
+\begin{align*}
+a\in S & \implies & f\left(S\backslash\left\{ a\right\} \right)=\left(S\backslash\left\{ a\right\} \right)\uplus\left\{ a\right\} =S\\
+a\notin S & \implies & f\left(S\uplus\left\{ a\right\} \right)=\left(S\uplus\left\{ a\right\} \right)\backslash\left\{ a\right\} =S
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+אזי מהגדרת שיוויון עוצמות קיבלנו כי 
+\begin_inset Formula $\left|\P_{\text{even}}\left(A\right)\right|=\left|\P_{\text{odd}}\left(A\right)\right|$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Corollary
 תהא 
 \begin_inset Formula $A$
@@ -27514,7 +28529,24 @@ status open
 \end_layout
 
 \begin_layout Example
-...
+נגדיר סדרה 
+\begin_inset Formula $a$
+\end_inset
+
+ כך 
+\begin_inset Formula $a_{n}=2n+1$
+\end_inset
+
+, שימו לב כי אנו מרשים לעצמינו לכתוב לא בכתיב למבדא את הסדרה מנוחות העניין
+ וכן היות 
+\begin_inset Formula $\dom\left(a\right)=\bbn$
+\end_inset
+
+ תמיד, אך פורמלית הסדרה היא 
+\begin_inset Formula $a=\lambda n\in\bbn.2n+1$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Definition
@@ -27544,9 +28576,70 @@ status open
 \end_layout
 
 \begin_layout Example
-...
+נראה מספר דוגמאות עבור טורים, שימו לב כי טור הוא פונקציה במשתנה 
+\begin_inset Formula $x$
+\end_inset
+
+ לכל דבר,
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+הביטויים הבאים הינם טורים, 
+\begin_inset Formula $\sum_{n=0}^{\infty}\frac{1}{n}x^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $\sum_{n=0}^{\infty}x^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $\sum_{n=0}^{\infty}x^{2n+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+מתקיים 
+\begin_inset Formula $e^{x}=\sum_{n=0}^{\infty}\frac{1}{n!}x^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+כמו כן נשים לב כי כל פולינום הוא טור חזקה עבורו הכל ממקום מסויים 
+\begin_inset Formula $a_{n}=0$
+\end_inset
+
+, לדוגמה עבור הפולינום 
+\begin_inset Formula $x^{2}+x+1$
+\end_inset
+
+ נגדיר
+\begin_inset Formula 
+\[
+a_{n}=\begin{cases}
+1 & n\le2\\
+0 & \text{else}
+\end{cases}
+\]
+
+\end_inset
+
+ואז נקבל כי מתקיים
+\begin_inset Formula 
+\[
+\sum_{n=0}^{\infty}a_{n}x^{n}=\sum_{n=0}^{2}a_{n}x^{n}+\sum_{n=3}^{\infty}a_{n}x^{n}=\sum_{n=0}^{2}x^{n}+\sum_{n=3}^{\infty}0\cdot x^{n}=x^{2}+x+1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Claim
 \begin_inset Argument 1
 status open
@@ -30091,8 +31184,74 @@ vspace{0.1cm}
 פירוק לשברים חלקיים
 \end_layout
 
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+פונקציה רציונלית
+\end_layout
+
+\end_inset
+
+פונקציה 
+\begin_inset Formula $f:\bbr\to\bbr$
+\end_inset
+
+ עבורה קיימים שני פולינומים 
+\begin_inset Formula $P,Q$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $f=\frac{P}{Q}$
+\end_inset
+
+, כלומר יחס בין פולינומים.
+\end_layout
+
+\begin_layout Example
+הפונקציות הבאות הן רציונליות 
+\begin_inset Formula $\frac{x^{5}+8x}{\left(x+1\right)\left(x^{3}+1\right)}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{x}{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{-3x+x^{2}}{x}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{1}{x^{8}+x^{7}+1}$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
-...
+פירוק לשברים חלקיים זוהי שיטה בה אנו הופכים פונקציה רציונלית מורכבת, כלומר
+ בעלת מכנה 
+\begin_inset Quotes eld
+\end_inset
+
+מורכב
+\begin_inset Quotes erd
+\end_inset
+
+ למכנה 
+\begin_inset Quotes eld
+\end_inset
+
+פשוט
+\begin_inset Quotes erd
+\end_inset
+
+, בכדי להשתמש בפונקציות יוצרות נרצה שהפונקציה הרציונלית תהיה מהצורה 
+\begin_inset Formula $\frac{1}{\left(1-x\right)^{m}}$
+\end_inset
+
+ או דומה לכך, לכן נפרק פונקציות רציונליות לפונקציות כאלו, ...
 \end_layout
 
 \begin_layout Section
@@ -30293,11 +31452,329 @@ status open
 \end_layout
 
 \begin_layout Proof
-ההוכחה תינתן בקורס אלגברה לינארית.
+ההוכחה תינתן בקורס אלגברה לינארית, עבור ההוכחה עצמה ראה ...
 \end_layout
 
 \begin_layout Standard
-...
+
+\series bold
+השיטה עצמה
+\series default
+ כעת נציג את השיטה עצמה, תהא נוסחת נסיגה לינארית הומוגנית 
+\begin_inset Formula $a$
+\end_inset
+
+ מעומק 
+\begin_inset Formula $k$
+\end_inset
+
+ ויהיו תנאי התחלה, מההגדרות נובע כי 
+\begin_inset Formula $a_{n}=\sum_{i=1}^{k}c_{i}a_{n-i}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $c_{1},\ldots,c_{k}\in\bbr$
+\end_inset
+
+ קבועים,
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+מציאת פולינום אופייני
+\series default
+: ננחש כי הפתרונות של נוסחת הנסיגה הם מהצורה 
+\begin_inset Formula $\lambda n\in\bbn.x^{n}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $x$
+\end_inset
+
+ הינו משתנה לא ידוע, אזי ממשוואת הרקורסיה נקבל כי מתקיים
+\begin_inset Formula 
+\[
+x^{n}=\sum_{i=1}^{k}c_{i}x^{n-i}
+\]
+
+\end_inset
+
+זהו הפולינום האופייני של נוסחת הנסיגה.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+מציאת שורשים לפולינום האופייני
+\series default
+: נמצא את הפתרונות של הפולינום האופייני של נוסחת הנסיגה, נניח כי הם 
+\begin_inset Formula $\mu_{1},\ldots\mu_{k}$
+\end_inset
+
+ אזי נקבל כי בסיס מרחב הפתרונות של הפולינום האופייני הינם 
+\begin_inset Formula $\lambda n\in\bbn.\mu_{i}^{n}$
+\end_inset
+
+.
+ כאשר יש ריבוי פתרונות לפולינום האופייני, לדוגמה נניח כי 
+\begin_inset Formula $\omega$
+\end_inset
+
+ פתרון מריבוי 
+\begin_inset Formula $\ell$
+\end_inset
+
+ אזי הפתרונות היסודיים של אותו הפתרון הינם
+\begin_inset Formula 
+\[
+\left(\lambda n\in\bbn.\omega^{n}\right),\left(\lambda n\in\bbn.n\cdot\omega^{n}\right),\ldots,\left(\lambda n\in\bbn.n^{\ell}\cdot\omega^{n}\right)
+\]
+
+\end_inset
+
+כך שבסופו של דבר יהיו 
+\begin_inset Formula $k$
+\end_inset
+
+ פתרונות בסיסיים לנוסחת הנסיגה, מכאן והלאה נניח כי לא קיים ריבוי אך בדוגמאות
+ ינתן מקרה כזה.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+פתרון לתנאי ההתחלה
+\series default
+: מהיות מרחב הפתרונות של נוסחת הנסיגה מרחב וקטורי הפתרון הכללי של הנוסחה
+ הוא מהצורה
+\begin_inset Formula 
+\[
+a_{n}=A_{1}\mu_{1}^{n}+\ldots A_{k}\mu_{k}^{n}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $A_{1}\ldots A_{k}\in\bbr$
+\end_inset
+
+ לכן נציב את 
+\begin_inset Formula $k$
+\end_inset
+
+ תנאי ההתחלה שלנו,
+\begin_inset Formula 
+\begin{align*}
+a_{0} & =A_{1}\mu_{1}^{0}+\ldots A_{k}\mu_{k}^{0}\\
+a_{1} & =A_{1}\mu_{1}^{1}+\ldots A_{k}\mu_{k}^{1}\\
+ & \vdots\\
+a_{k} & =A_{1}\mu_{1}^{k}+\ldots A_{k}\mu_{k}^{k}
+\end{align*}
+
+\end_inset
+
+ונפתור עבור 
+\begin_inset Formula $A_{1}\ldots A_{k}$
+\end_inset
+
+, בסופו של דבר נקבל ביטוי סגור עבור 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+נסתכל על נוסחת הנסיגה 
+\begin_inset Formula $a_{n}=a_{n-1}+6a_{n-2}$
+\end_inset
+
+ עם מקרי הבסיס 
+\begin_inset Formula $a_{0}=0$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a_{1}=3$
+\end_inset
+
+.
+ ננחש כי הפתרון הוא 
+\begin_inset Formula $\lambda n\in\bbn.x^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $x^{n}=x^{n-1}+6x^{n-2}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $x^{2}-x-6=0$
+\end_inset
+
+, שימו לב כי הצמצום מותר רק כי 
+\begin_inset Formula $\lambda n\in\bbn.0$
+\end_inset
+
+ אינו פתרון אפשרי, זהו הפולינום האופייני של נוסחת הנסיגה.
+ נפתור בעזרת נוסחת השורשים ונקבל כי הפתרונות של הפולינום האופייני הינם 
+\begin_inset Formula $x\in\left\{ 3,-2\right\} $
+\end_inset
+
+ ושניהם ללא ריבוי לכן הפתרונות הבסיסיים של נוסחת הנסיגה הם 
+\begin_inset Formula $\lambda n\in\bbn.3^{n}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\lambda n\in\bbn.\left(-2\right)^{n}$
+\end_inset
+
+.
+ כעת יתקיים
+\begin_inset Formula 
+\[
+a_{n}=A\left(-2\right)^{n}+B3^{n}
+\]
+
+\end_inset
+
+נציב את תנאי ההתחלה שלנו ונקבל
+\begin_inset Formula 
+\[
+\left.\substack{0=a_{0}=A\left(-2\right)^{0}+B3^{0}\\
+3=a_{1}=A\left(-2\right)^{1}+B3^{1}
+}
+\right\} \implies\left\{ \substack{A=-\frac{3}{5}\\
+B=\frac{3}{5}
+}
+\right.
+\]
+
+\end_inset
+
+בפרט הנוסחה הסגורה הסופית היא 
+\begin_inset Formula $a_{n}=-\frac{3}{5}\left(-2\right)^{n}+\frac{3}{5}\cdot3^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+ריבוי שורשים
+\end_layout
+
+\end_inset
+
+נסתכל על נוסחת הנסיגה
+\begin_inset Formula 
+\[
+a_{n}=10a_{n-1}-40a_{n-2}+82a_{n-3}-91a_{n-4}+52a_{n-5}-12a_{n-6}
+\]
+
+\end_inset
+
+עם תנאי ההתחלה 
+\begin_inset Formula $a_{i}=0$
+\end_inset
+
+ עבור 
+\begin_inset Formula $i\in\left\{ 0\ldots4\right\} $
+\end_inset
+
+ וכן 
+\begin_inset Formula $a_{5}=1$
+\end_inset
+
+.
+ ננחש כי הפתרון הוא 
+\begin_inset Formula $\lambda n\in\bbn.x^{n}$
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\[
+x^{n}=10x^{n-1}-40x^{n-2}+82x^{n-3}-91x^{n-4}+52x^{n-5}-12x^{n-6}
+\]
+
+\end_inset
+
+נשים לב כי 
+\begin_inset Formula $\lambda n\in\bbn.0$
+\end_inset
+
+ אינו פתרון ולכן הפולינום האופייני הוא
+\begin_inset Formula 
+\[
+x^{6}-10x^{5}+40x^{4}-82x^{3}+91x^{2}-52x+12=0
+\]
+
+\end_inset
+
+על מנת למצוא שורשים נשים לב כי בפירוק לגורמים נקבל
+\begin_inset Formula 
+\[
+\left(x-1\right)^{3}\left(x-2\right)^{2}\left(x-3\right)=0
+\]
+
+\end_inset
+
+ולכן השורשים הם 
+\begin_inset Formula $1,2,3$
+\end_inset
+
+ אך שניים מהם בעלי ריבוי, לכן הפתרונות הבסיסיים של נוסחת הנסיגה הם
+\begin_inset Formula 
+\[
+\left(\lambda n\in\bbn.1^{n}\right),\left(\lambda n\in\bbn.n1^{n}\right),\left(\lambda n\in\bbn.n^{2}1^{n}\right),\left(\lambda n\in\bbn.2^{n}\right),\left(\lambda n\in\bbn.n2^{n}\right),\left(\lambda n\in\bbn.3^{n}\right)
+\]
+
+\end_inset
+
+בפרט הפתרון של נוסחת הנסיגה שלנו היא
+\begin_inset Formula 
+\[
+a_{n}=A\cdot1^{n}+B\cdot n1^{n}+C\cdot n^{2}1^{n}+D\cdot2^{n}+E\cdot n2^{n}+F\cdot3^{n}
+\]
+
+\end_inset
+
+נציב את תנאי ההתחלה ונקבל את המשוואות
+\size tiny
+
+\begin_inset Formula 
+\begin{align*}
+ & 0=a_{0}=A+D+F &  & 0=a_{1}=A+B+C+2D+2E+3F\\
+ & 0=a_{2}=A+2B+4C+4D+8E+9F &  & 0=a_{3}=A+3B+9C+8D+24E+27F\\
+ & 0=a_{4}=A+4B+16C+16D+64E+81F &  & 1=a_{5}=A+5B+25C+32D+160E+243F
+\end{align*}
+
+\end_inset
+
+
+\size default
+סה
+\begin_inset Quotes erd
+\end_inset
+
+כ נקבל את הצורה
+\begin_inset Formula 
+\[
+a_{n}=-\frac{17}{8}-n-\frac{1}{4}\cdot n^{2}+2\cdot2^{n}-\frac{1}{2}\cdot n2^{n}+\frac{1}{8}\cdot3^{n}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
