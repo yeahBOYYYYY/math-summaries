@@ -175,17 +175,17 @@ End
 \color #faf0e6
 \end_branch
 \branch Logic
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch Exeption
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch Combi
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -395,7 +395,7 @@ status open
 \begin_layout Standard
 \begin_inset Branch Logic
 inverted 0
-status open
+status collapsed
 
 \begin_layout Section
 תחשיב הפסוקים
@@ -6710,7 +6710,7 @@ status collapsed
 \begin_layout Standard
 \begin_inset Branch Logic
 inverted 0
-status open
+status collapsed
 
 \begin_layout Section
 קבוצות
@@ -7380,7 +7380,7 @@ hyperlink{NisGood}{הטבעיים כיחס סדר טוב}
 status open
 
 \begin_layout Plain Layout
-הוכחה באינדוקציה
+אי־שיוויון ברנולי
 \end_layout
 
 \end_inset
@@ -24388,7 +24388,7 @@ status open
 \begin_layout Standard
 \begin_inset Branch Combi
 inverted 0
-status open
+status collapsed
 
 \begin_layout Section
 קומבינטוריקה בסיסית
@@ -31914,11 +31914,196 @@ status open
 תורת הגרפים
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
+\begin_layout Section
+גרפים
+\end_layout
+
+\begin_layout Subsubsection
+גרף מכוון
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+גרף מכוון
+\end_layout
+
 \end_inset
 
+תהא 
+\begin_inset Formula $V$
+\end_inset
 
+ קבוצה ויהי 
+\begin_inset Formula $E\subseteq V^{2}$
+\end_inset
+
+ אזי הזוג הסדור 
+\begin_inset Formula $\left<V,E\right>$
+\end_inset
+
+ מתאר גרף, לאיברים ב־
+\begin_inset Formula $V$
+\end_inset
+
+ קוראים הצמתים/הקודקודים ולאיברים ב־
+\begin_inset Formula $E$
+\end_inset
+
+ קוראים הקשתות/הצלעות.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+לולאה
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $\left<V,E\right>$
+\end_inset
+
+ גרף מכוון, צומת 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ יקרא לולאה אם 
+\begin_inset Formula $\left<v,v\right>\in E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+גרף מכוון פשוט
+\end_layout
+
+\end_inset
+
+גרף מכוון 
+\begin_inset Formula $\left<V,E\right>$
+\end_inset
+
+ יקרא פשוט אם אין בו לולאות.
+\end_layout
+
+\begin_layout Subsubsection
+גרף לא מכוון
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+גרף לא מכוון
+\end_layout
+
+\end_inset
+
+תהא 
+\begin_inset Formula $V$
+\end_inset
+
+ קבוצה ויהי 
+\begin_inset Formula $E\in\P_{2}\left(V\right)$
+\end_inset
+
+ אזי הזוג הסדור 
+\begin_inset Formula $\left<V,E\right>$
+\end_inset
+
+ מתאר גרף, לאיברים ב־
+\begin_inset Formula $V$
+\end_inset
+
+ קוראים הצמתים/הקודקודים ולאיברים ב־
+\begin_inset Formula $E$
+\end_inset
+
+ קוראים הקשתות/הצלעות.
+ בהינתן גרף לא מכוון 
+\begin_inset Formula $G=\left<V^{\prime},E^{\prime}\right>$
+\end_inset
+
+ נסמן את קבוצת הקודקודים 
+\begin_inset Formula $V\left(G\right)$
+\end_inset
+
+ ואת קבוצת הקשתות 
+\begin_inset Formula $E\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+בקורס זה נשתמש אך ורק בגרפים לא מכוונים אלא אם כן נאמר אחרת.
+\end_layout
+
+\begin_layout Example
+נראה מספר גרפים,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+...
+\end_layout
+
+\begin_layout Itemize
+גרף שרוך: ...
+\end_layout
+
+\begin_layout Itemize
+גרף מעגל: ...
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+קליקה/גרף מלא
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ נגדיר קליקה מגודל 
+\begin_inset Formula $n$
+\end_inset
+
+ להיות הגרף 
+\begin_inset Formula $K_{n}=\left<\left\{ 1\ldots n\right\} ,\P_{2}\left(\left\{ 1\ldots n\right\} \right)\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
 \end_layout
 
 \begin_layout Standard
@@ -31928,74 +32113,110 @@ status open
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
+\begin_layout Definition
+\begin_inset Argument 1
+status open
 
-
+\begin_layout Plain Layout
+גרף דו צדדי
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
 \end_inset
 
+גרף 
+\begin_inset Formula $G$
+\end_inset
 
+ עבורו קיימות 
+\begin_inset Formula $A,B$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $V\left(G\right)=A\uplus B$
+\end_inset
+
+ וכן אם 
+\begin_inset Formula $\left\{ a,b\right\} \in E\left(G\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b\in B$
+\end_inset
+
+.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+\begin_layout Example
+...
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
+\begin_layout Definition
+\begin_inset Argument 1
+status open
 
-
+\begin_layout Plain Layout
+גרף דו צדדי מלא
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
 \end_inset
 
+יהיו 
+\begin_inset Formula $n,m\in\bbn$
+\end_inset
 
+ נגדיר גרף מלא מגודל 
+\begin_inset Formula $n,m$
+\end_inset
+
+ להיות גרף דו צדדי 
+\begin_inset Formula $G$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $V\left(G\right)=A\uplus B$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left(\left|A\right|=m\right)\land\left(\left|B\right|=n\right)$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left\{ a,b\right\} \in E\left(G\right)$
+\end_inset
+
+.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+\begin_layout Example
+...
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+\begin_layout Subsection
+דרגה
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+\begin_layout Subsection
+תת גרף
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+\begin_layout Subsection
+טיול
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
+\begin_layout Subsection
+קשירות
 \end_layout
 
 \begin_layout Standard
@@ -32008,7 +32229,7 @@ status open
 \begin_layout Standard
 \begin_inset Branch lbl
 inverted 0
-status collapsed
+status open
 
 \begin_layout Standard
 \begin_inset FormulaMacro
@@ -32017,325 +32238,6 @@ status collapsed
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-פירוק לשברים חלקיים: יהי 
-\begin_inset Formula $P\in\bbc_{n}\left[x\right]$
-\end_inset
-
- ויהיו 
-\begin_inset Formula $\a_{1},\ldots\a_{n}\in\bbc$
-\end_inset
-
- נמצא 
-\begin_inset Formula $A_{1},\ldots A_{n}$
-\end_inset
-
- עבורם 
-\begin_inset Formula $\frac{P\left(x\right)}{\prod_{i=1}^{n}\left(x-\a_{i}\right)}=\sum_{i=1}^{n}\frac{A_{i}}{x-\a_{i}}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-פונקציה יוצרת מעריכית: תהא 
-\begin_inset Formula $\lambda n\in\bbn.a_{n}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\sum_{n=0}^{\infty}a_{n}\frac{x^{n}}{n!}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-נוסחה סגורה: סדרה 
-\begin_inset Formula $\lambda n\in\bbn.a_{n}$
-\end_inset
-
- כך ש־
-\begin_inset Formula $a_{n}$
-\end_inset
-
- לא תלויה ב־
-\begin_inset Formula $a_{1},\ldots,a_{n-1}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-נוסחת נסיגה: סדרה 
-\begin_inset Formula $\lambda n\in\bbn.a_{n}$
-\end_inset
-
- כך ש־
-\begin_inset Formula $a_{n}$
-\end_inset
-
- תלויה ב־
-\begin_inset Formula $a_{1},\ldots,a_{n-1}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-עומק הרקורסיה: אם 
-\begin_inset Formula $i$
-\end_inset
-
- הוא האינדקס המינימלי כך ש־
-\begin_inset Formula $a_{n}$
-\end_inset
-
- תלוי ב־
-\begin_inset Formula $a_{i}$
-\end_inset
-
- אזי 
-\begin_inset Formula $n-i$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-תנאי התחלה: תהא נוסחת נסיגה 
-\begin_inset Formula $a_{n}$
-\end_inset
-
- עם עומק רקורסיה 
-\begin_inset Formula $i$
-\end_inset
-
- אזי חובה להגדיר את 
-\begin_inset Formula $a_{1},\ldots,a_{i}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-בעיית התחלה: נוסחת נסיגה עם תנאי התחלה.
-\end_layout
-
-\begin_layout Standard
-סדרת פיבונאצ'י: 
-\begin_inset Formula $a_{n}=a_{n-1}+a_{n-2}$
-\end_inset
-
-, 
-\begin_inset Formula $a_{1}=1$
-\end_inset
-
-, 
-\begin_inset Formula $a_{0}=0$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-משפט: לכל בעיית התחלה קיים פתרון יחיד.
-\end_layout
-
-\begin_layout Standard
-נוסחת נסיגה לינארית: יהיו 
-\begin_inset Formula $\a_{0},\ldots,\a_{n}\in\bbr$
-\end_inset
-
- אזי 
-\begin_inset Formula $a_{n}=\sum_{i=0}^{n-1}\a_{i}a_{i}+\a_{n}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-נוסחת נסיגה לינארית הומוגנית: 
-\begin_inset Formula $a_{n}=\sum_{i=0}^{n-1}\a_{i}a_{i}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-פולינום אופייני: תהא נוסחת נסיגה הומוגנית 
-\begin_inset Formula $a_{n}=\sum_{i=0}^{n-1}\a_{i}a_{i}$
-\end_inset
-
- אזי 
-\begin_inset Formula $x^{n}=\sum_{i=0}^{n-1}\a_{i}x^{i}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-פתרון לבעיית ההתחלה: תהא נוסחת נסיגה הומוגנית 
-\begin_inset Formula $a_{n}$
-\end_inset
-
- בעומק 
-\begin_inset Formula $i$
-\end_inset
-
- אזי יהיו 
-\begin_inset Formula $\b_{1},\ldots,\b_{i}$
-\end_inset
-
- פתרונות של הפולינום האופייני אזי
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula $\exists A_{1},\ldots,A_{j}.a_{n}=\sum_{j=1}^{i}A_{j}\b_{j}^{n}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-פתרון לסדרת פיבונאצ'י: 
-\begin_inset Formula $a_{n}=\frac{1}{\sqrt{5}}\left(\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-יחס הזהב: 
-\begin_inset Formula $\varphi=\lim_{n\to\infty}\frac{a_{n+1}}{a_{n}}=\frac{1+\sqrt{5}}{2}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-משפט: תהנא 
-\begin_inset Formula $S_{0},\ldots,S_{k}\subseteq\bbn$
-\end_inset
-
- נסמן ב־
-\begin_inset Formula $a_{n}$
-\end_inset
-
- את מספר הפתרונות של 
-\begin_inset Formula $n=\sum_{i=0}^{k}x_{i}$
-\end_inset
-
- בעבור 
-\begin_inset Formula $x_{i}\in S_{i}$
-\end_inset
-
- אזי
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula $\sum_{n=0}^{\infty}a_{n}x^{n}=\prod_{i=1}^{k}\left(\sum_{\ell=0}^{\infty}\mathds{1}_{S_{i}}\left(\ell\right)x^{\ell}\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $ $
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-גרף מכוון: תהא 
-\begin_inset Formula $V$
-\end_inset
-
- ותהא 
-\begin_inset Formula $E\subseteq V^{2}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left<V,E\right>$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-גרף לא מכוון: תהא 
-\begin_inset Formula $V$
-\end_inset
-
- ותהא 
-\begin_inset Formula $E\subseteq\P V2$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left<V,E\right>$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-מולטי גרף: ...
-\end_layout
-
-\begin_layout Standard
-הערה: בקורס מדובר רק על גרפים לא מכוונים אלא אם כן מצויין אחרת.
-\end_layout
-
-\begin_layout Standard
-קודקודים/צמתים: יהי 
-\begin_inset Formula $\left<V,E\right>$
-\end_inset
-
- גרף אזי 
-\begin_inset Formula $V$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-סימון: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף אזי 
-\begin_inset Formula $V\left(G\right)$
-\end_inset
-
- היא קבוצת הקודקודים.
-\end_layout
-
-\begin_layout Standard
-קשתות/צלעות: יהי 
-\begin_inset Formula $\left<V,E\right>$
-\end_inset
-
- גרף אזי 
-\begin_inset Formula $E$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-סימון: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף אזי 
-\begin_inset Formula $E\left(G\right)$
-\end_inset
-
- היא קבוצת הקשתות.
 \end_layout
 
 \begin_layout Standard
