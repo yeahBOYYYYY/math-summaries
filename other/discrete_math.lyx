@@ -7719,7 +7719,7 @@ status open
 \end_inset
 
 , 
-\begin_inset Formula $\ceil0=0$
+\begin_inset Formula $\ceil 0=0$
 \end_inset
 
 .
@@ -32134,7 +32134,12 @@ status open
 \end_layout
 
 \begin_layout Remark
-בקורס זה נשתמש אך ורק בגרפים לא מכוונים אלא אם כן נאמר אחרת.
+בקורס זה נשתמש אך ורק בגרפים לא מכוונים וסופיים )כלומר גרפים עבורם 
+\begin_inset Formula $\left|V\right|\in\bbn$
+\end_inset
+
+( אלא אם כן נאמר אחרת, שימו לב כי רוב הטענות תקפות גם לסוגי גרפים אחרים
+ ורוב הזמן הטרמינולוגיה זהה.
 \end_layout
 
 \begin_layout Example
@@ -32155,6 +32160,35 @@ status open
 \end_layout
 
 \end_deeper
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+גרף ריק
+\end_layout
+
+\end_inset
+
+גרף 
+\begin_inset Formula $G$
+\end_inset
+
+ יקרא ריק אם 
+\begin_inset Formula $E\left(G\right)=\emptyset$
+\end_inset
+
+.
+ שימו לב כי הגרף הריק אינו יחיד.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Definition
 \begin_inset Argument 1
 status open
@@ -32285,16 +32319,706 @@ status open
 דרגה
 \end_layout
 
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+קבוצת השכנים
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי צומת 
+\begin_inset Formula $v\in V\left(G\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $N\left(v\right)=\left\{ u\in V\mid\left\{ v,u\right\} \in E\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+דרגה של צומת
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי צומת 
+\begin_inset Formula $v\in V\left(G\right)$
+\end_inset
+
+ אזי נגדיר את דרגת הצומת להיות 
+\begin_inset Formula $\deg\left(v\right)=\left|N\left(v\right)\right|$
+\end_inset
+
+.
+ צומת יקרא עלה אם 
+\begin_inset Formula $\deg\left(v\right)=1$
+\end_inset
+
+, וצומת יקרא קודקוד מבודד אם 
+\begin_inset Formula $d\left(v\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+סימון הדרגה
+\end_layout
+
+\end_inset
+
+שימו לב כי אם יש מספר גרפים מקובל לסמן 
+\begin_inset Formula $\deg_{G}\left(v\right)$
+\end_inset
+
+ עבור גרף 
+\begin_inset Formula $G$
+\end_inset
+
+ כמו כן מקובל לסמן בקיצור 
+\begin_inset Formula $d\left(v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי צומת 
+\begin_inset Formula $v\in V\left(G\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $0\le\deg\left(v\right)\le\left|V\left(G\right)\right|-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+נוסחת לחיצות הידיים
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי 
+\begin_inset Formula $\sum_{v\in V\left(G\right)}\deg\left(v\right)=2\left|E\left(G\right)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
 \begin_layout Subsection
 תת גרף
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+תת גרף
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף, גרף 
+\begin_inset Formula $G^{\prime}$
+\end_inset
+
+ יקרא תת גרף של 
+\begin_inset Formula $G$
+\end_inset
+
+ אם הוא מקיים
+\begin_inset Formula 
+\[
+\left(V\left(G^{\prime}\right)\subseteq V\left(G\right)\right)\land\left(E\left(G^{\prime}\right)\subseteq E\left(G\right)\cap\P_{2}\left(V\left(G^{\prime}\right)\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+סימון תת גרף
+\end_layout
+
+\end_inset
+
+בחלק מהמקומות תראו סימונים כמו 
+\begin_inset Formula $G^{\prime}\le G$
+\end_inset
+
+ או 
+\begin_inset Formula $G^{\prime}\lhd G$
+\end_inset
+
+ עבור העובדה כי 
+\begin_inset Formula $G^{\prime}$
+\end_inset
+
+ תת גרף של 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+תת גרף נפרש
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ותהא 
+\begin_inset Formula $A\subseteq V\left(G\right)$
+\end_inset
+
+ התת גרף הנפרש על ידי 
+\begin_inset Formula $A$
+\end_inset
+
+ הוא הגרף 
+\begin_inset Formula $G\left[A\right]=\left<A,\P_{2}\left(A\right)\cap E\left(G\right)\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+הגרף המשלים
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי הגרף המשלים ל־
+\begin_inset Formula $G$
+\end_inset
+
+ הינו הגרף 
+\begin_inset Formula $\overline{G}=\left<V\left(G\right),\P_{2}\left(V\left(G\right)\right)\backslash E\left(G\right)\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Theorem
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי צומת 
+\begin_inset Formula $v\in V\left(G\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\deg_{G}\left(v\right)+\deg_{\overline{G}}\left(v\right)=\left|V\left(G\right)\right|-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
 \end_layout
 
 \begin_layout Subsection
 טיול
 \end_layout
 
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+טיול
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי סדרה 
+\begin_inset Formula $\left<a_{0},\ldots,a_{n}\right>\in V\left(G\right)^{n}$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $i\in\left\{ 1\ldots n\right\} $
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left\{ a_{i-1},a_{i}\right\} \in E\left(G\right)$
+\end_inset
+
+.
+ עבור טיול 
+\begin_inset Formula $\sigma=\left<a_{0},\ldots,a_{n}\right>$
+\end_inset
+
+ נסמן את אורך הטיול כך 
+\begin_inset Formula $\ell\left(\sigma\right)=n-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מסלול
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי טיול 
+\begin_inset Formula $\left<a_{0},\ldots,a_{n}\right>\in V\left(G\right)^{n}$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $i,j\in\left\{ 1\ldots n\right\} $
+\end_inset
+
+ שונים מתקיים 
+\begin_inset Formula $\left\{ a_{i-1},a_{i}\right\} \ne\left\{ a_{j-1},a_{j}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מעגל
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי מסלול 
+\begin_inset Formula $\left<a_{0},\ldots,a_{n}\right>\in V\left(G\right)^{n}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $a_{0}=a_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Exercise
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $\left<a_{0},\ldots,a_{n}\right>\in V\left(G\right)^{n}$
+\end_inset
+
+ מסלול אזי לכל 
+\begin_inset Formula $i\in\left\{ 1\ldots n\right\} $
+\end_inset
+
+ נקבל כי 
+\begin_inset Formula $\left<a_{0},\ldots,a_{i}\right>$
+\end_inset
+
+ מסלול.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מסלול פשוט
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי מסלול 
+\begin_inset Formula $\left<a_{0},\ldots,a_{n}\right>\in V\left(G\right)^{n}$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $i\in\left\{ 1\ldots n\right\} $
+\end_inset
+
+ המסלול 
+\begin_inset Formula $\left<a_{0}\ldots a_{i}\right>$
+\end_inset
+
+ חסר מעגלים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מעגל פשוט
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי מעגל 
+\begin_inset Formula $\left<a_{0},\ldots,a_{n}\right>\in V\left(G\right)^{n}$
+\end_inset
+
+ עבורו המסלול 
+\begin_inset Formula $\left<a_{0},\ldots,a_{n-1}\right>$
+\end_inset
+
+ הינו מסלול פשוט.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהיו 
+\begin_inset Formula $v_{1},v_{2}\in V\left(G\right)$
+\end_inset
+
+ צמתים שונים אזי )קיים מסלול פשוט בין 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ ל־
+\begin_inset Formula $v_{2}$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיים טיול בין 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ ל־
+\begin_inset Formula $v_{2}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $v\in V\left(G\right)$
+\end_inset
+
+ צומת אזי )קיים מעגל פשוט סביב 
+\begin_inset Formula $v$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיים מעגל סביב 
+\begin_inset Formula $v$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Definition
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף נסמן 
+\begin_inset Formula 
+\begin{align*}
+\Delta\left(G\right) & =\max_{v\in V\left(G\right)}\deg_{G}\left(v\right) & \delta\left(G\right) & =\min_{v\in V\left(G\right)}\deg_{G}\left(v\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Subsubsection
+מסלול המילטון
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מסלול המילטון
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף, מסלול המילטון הינו מסלול אשר עובר דרך כל הצמתים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מעגל המילטון
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף, מעגל המילטון הינו מסלול המילטון אשר גם מעגל.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי קיים מסלול 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\sigma=\delta\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף המקיים 
+\begin_inset Formula $\delta\left(G\right)\ge\frac{\left|V\left(G\right)\right|}{2}$
+\end_inset
+
+ אזי קיים מעגל המילטון בגרף.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
 \begin_layout Subsection
 קשירות
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+יחס הקשירות
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף נגדיר יחס 
+\begin_inset Formula $\xrightarrow[G]{}$
+\end_inset
+
+ מעל 
+\begin_inset Formula $V\left(G\right)$
+\end_inset
+
+ כך, יהיו 
+\begin_inset Formula $v,u\in V\left(G\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\iff\left(v\xrightarrow[G]{}u\right)$
+\end_inset
+
+)קיים טיול מ־
+\begin_inset Formula $v$
+\end_inset
+
+ ל־
+\begin_inset Formula $u$
+\end_inset
+
+ בגרף 
+\begin_inset Formula $G$
+\end_inset
+
+(
 \end_layout
 
 \begin_layout Standard
@@ -32307,7 +33031,7 @@ status open
 \begin_layout Standard
 \begin_inset Branch lbl
 inverted 0
-status open
+status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
