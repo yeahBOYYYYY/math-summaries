@@ -175,17 +175,17 @@ End
 \color #faf0e6
 \end_branch
 \branch Logic
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch Exeption
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch Combi
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -223,7 +223,7 @@ End
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "E:/University/macros.lyx"
+filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 
 \end_inset
 
@@ -16194,7 +16194,7 @@ status open
 \begin_layout Standard
 \begin_inset Branch Logic
 inverted 0
-status collapsed
+status open
 
 \begin_layout Section
 פונקציות
@@ -18090,7 +18090,79 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+יהי 
+\begin_inset Formula $f$
+\end_inset
+
+ יחס חח
+\begin_inset Quotes erd
+\end_inset
+
+ע מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $g$
+\end_inset
+
+ יחס חח
+\begin_inset Quotes erd
+\end_inset
+
+ע מעל 
+\begin_inset Formula $B,C$
+\end_inset
+
+, יהיו 
+\begin_inset Formula $a_{1},a_{2}\in A$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $c\in C$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\left<a_{1},c\right>,\left<a_{2},c\right>\in g\circ f$
+\end_inset
+
+, מהגדרת הרכבה קיימים 
+\begin_inset Formula $b_{1},b_{2}\in B$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\left<a_{1},b_{1}\right>,\left<a_{2},b_{2}\right>\in f$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left<b_{1},c\right>,\left<b_{2},c\right>\in g$
+\end_inset
+
+ נשים לב כי מהיות 
+\begin_inset Formula $g$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע נקבל כי 
+\begin_inset Formula $b_{1}=b_{2}$
+\end_inset
+
+ ולכן מהיות 
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע נקבל כי 
+\begin_inset Formula $a_{1}=a_{2}$
+\end_inset
+
+ כנדרש.
 \end_layout
 
 \begin_layout Standard
@@ -18138,12 +18210,12 @@ status open
 status open
 
 \begin_layout Plain Layout
-הרכבת יחסים על
+הרכבת פונקציות על
 \end_layout
 
 \end_inset
 
-יהיו 
+יהיו פונקציות 
 \begin_inset Formula $f,g$
 \end_inset
 
@@ -18155,7 +18227,55 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ על ותהא 
+\begin_inset Formula $g:B\to C$
+\end_inset
+
+ על, יהי 
+\begin_inset Formula $c\in C$
+\end_inset
+
+ מהיות 
+\begin_inset Formula $g$
+\end_inset
+
+ על קיים 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $g\left(b\right)=c$
+\end_inset
+
+ כמו כן מהיות 
+\begin_inset Formula $f$
+\end_inset
+
+ על קיים 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $f\left(a\right)=b$
+\end_inset
+
+ בפרט ממשפט משמעות ההרכבה מתקיים
+\begin_inset Formula 
+\[
+\left(g\circ f\right)\left(a\right)=g\left(f\left(a\right)\right)=g\left(b\right)=c
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula $\left<a,c\right>\in g\circ f$
+\end_inset
+
+ כנדרש.
 \end_layout
 
 \begin_layout Subsubsection
@@ -18163,8 +18283,12 @@ status open
 \end_layout
 
 \begin_layout Theorem
-תהא 
-\begin_inset Formula $f:A\to B$
+יהי 
+\begin_inset Formula $f$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A,B$
 \end_inset
 
  אזי
@@ -18209,12 +18333,214 @@ status open
 
 \end_deeper
 \begin_layout Proof
-...
+יהי 
+\begin_inset Formula $f$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+,
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+נוכיח גרירה דו כיוונית,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\impliedby$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי 
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע, יהי 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $a_{1},a_{2}\in A$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\left<b,a_{1}\right>,\left<b,a_{2}\right>\in f^{-1}$
+\end_inset
+
+ אזי מהגדרת יחס הופכי מתקיים 
+\begin_inset Formula $\left<a_{1},b\right>,\left<a_{2},b\right>\in f$
+\end_inset
+
+ כעת מהיות 
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע מתקיים 
+\begin_inset Formula $a_{1}=a_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ חד־ערכית, יהיו 
+\begin_inset Formula $a_{1},a_{2}\in A$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\left<a_{1},b\right>,\left<a_{2},b\right>\in f$
+\end_inset
+
+ מהגדרת יחס הופכי מתקיים 
+\begin_inset Formula $\left<b,a_{1}\right>,\left<b,a_{2}\right>\in f^{-1}$
+\end_inset
+
+ כעת מהיות 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ חד ערכית מתקיים 
+\begin_inset Formula $a_{1}=a_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+נוכיח גרירה דו כיוונית,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\impliedby$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי 
+\begin_inset Formula $f$
+\end_inset
+
+ על, יהי 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ מהיות 
+\begin_inset Formula $f$
+\end_inset
+
+ על קיים 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left<a,b\right>\in f$
+\end_inset
+
+ אזי מהגדרת יחס הופכי מתקיים 
+\begin_inset Formula $\left<b,a\right>\in f^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ מלאה, יהי 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ מהיות 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ מלאה קיים 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left<b,a\right>\in f^{-1}$
+\end_inset
+
+ אזי מהגדרת יחס הופכי מתקיים 
+\begin_inset Formula $\left<a,b\right>\in f$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Corollary
-תהא 
-\begin_inset Formula $f:A\to B$
+יהי 
+\begin_inset Formula $f$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A,B$
 \end_inset
 
  אזי )
@@ -18233,9 +18559,95 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+יהי 
+\begin_inset Formula $f$
+\end_inset
+
+ יחס מעל 
+\begin_inset Formula $A,B$
+\end_inset
+
+, נוכיח גרירה דו כיוונית,
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\impliedby$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי 
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל, מהמשפט מלעיל מתקיים 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ מלאה וחד־ערכית בפרט 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ פונקציה.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ פונקציה, בפרט 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ מלאה וחד־ערכית אזי ממשפט מלעיל 
+\begin_inset Formula $\left(f^{-1}\right)^{-1}$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל, כמו כן ממשפט מפרק היחסים מתקיים 
+\begin_inset Formula $\left(f^{-1}\right)^{-1}=f$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל.
+\end_layout
+
+\end_deeper
 \begin_layout Definition
 \begin_inset Argument 1
 status open
@@ -18246,11 +18658,11 @@ status open
 
 \end_inset
 
-פונקציה 
+תהא 
 \begin_inset Formula $f:A\to B$
 \end_inset
 
- עבורה קיימת 
+ אם קיימת 
 \begin_inset Formula $g:B\to A$
 \end_inset
 
@@ -18258,8 +18670,7 @@ status open
 \begin_inset Formula $\left(g\circ f=\text{Id}_{A}\right)\land\left(f\circ g=\text{Id}_{B}\right)$
 \end_inset
 
-.
- במקרה זה נקרא לפונקציה 
+ אזי נקרא לפונקציה 
 \begin_inset Formula $g$
 \end_inset
 
@@ -18370,14 +18781,80 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+,
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי 
+\begin_inset Formula $f$
+\end_inset
+
+ הפיכה, אזי קיימת 
+\begin_inset Formula $g:B\to A$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left(g\circ f=\text{Id}_{A}\right)\land\left(f\circ g=\text{Id}_{B}\right)$
+\end_inset
+
+ אזי ממשפט מלעיל מתקיים 
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\impliedby$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי 
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל, ...
+\end_layout
+
+\end_deeper
 \begin_layout Example
 ...
 \end_layout
 
-\begin_layout Theorem
+\begin_layout Exercise
 \begin_inset Argument 1
 status open
 
@@ -18387,6 +18864,26 @@ status open
 
 \end_inset
 
+תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ הפיכה ויהיו 
+\begin_inset Formula $g,h:B\to A$
+\end_inset
+
+ הופכיות של 
+\begin_inset Formula $f$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g=h$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
 תהא 
 \begin_inset Formula $f:A\to B$
 \end_inset
@@ -18403,6 +18900,62 @@ status open
 \end_layout
 
 \begin_layout Proof
+תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ הפיכה, ממשפט מלעיל נובע כי 
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל בפרט מתקיים 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ פונקציה, כמו כן ממשפט מפרק היחסים מתקיים
+\begin_inset Formula 
+\begin{align*}
+f^{-1}\circ f & =\id_{A} & f\circ f^{-1} & =\id_{B}
+\end{align*}
+
+\end_inset
+
+לכן מהגדרת פונקציה הפיכה וכן מיחידותה נקבל כי 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ ההופכית של 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+תהא 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל אזי 
+\begin_inset Formula $f^{-1}:B\to A$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל.
+\end_layout
+
+\begin_layout Proof
 ...
 \end_layout
 
@@ -18414,7 +18967,7 @@ status open
 \begin_layout Standard
 \begin_inset Branch Exeption
 inverted 0
-status collapsed
+status open
 
 \begin_layout Section
 עוצמות
@@ -18724,9 +19277,59 @@ f=\lambda n\in\bbn.\lambda m\in\bbn.\begin{cases}
 
 \end_deeper
 \begin_layout Proof
+תהיינה 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ קבוצות,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+נשים לב כי 
+\begin_inset Formula $\id_{A}:A\to A$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל.
+\end_layout
+
+\begin_layout Enumerate
+מהיות 
+\begin_inset Formula $\left|A\right|=\left|B\right|$
+\end_inset
+
+ קיימת 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל בפרט 
+\begin_inset Formula $f^{-1}:B\to A$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל לכן 
+\begin_inset Formula $\left|B\right|=\left|A\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
 ...
 \end_layout
 
+\end_deeper
 \begin_layout Remark
 \begin_inset Argument 1
 status open
