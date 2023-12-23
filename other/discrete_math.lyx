@@ -180,12 +180,17 @@ End
 \color #faf0e6
 \end_branch
 \branch Exeption
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch Combi
-\selected 0
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch Graph
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -223,7 +228,7 @@ End
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "C:/Users/user/OneDrive/Documents/macros.lyx"
+filename "E:/University/macros.lyx"
 
 \end_inset
 
@@ -6694,6 +6699,13 @@ status collapsed
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Part
 תורת הקבוצות
 \end_layout
@@ -6708,7 +6720,7 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch Logic
+\begin_inset Branch Exeption
 inverted 0
 status collapsed
 
@@ -8252,7 +8264,7 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch Logic
+\begin_inset Branch Exeption
 inverted 0
 status collapsed
 
@@ -11566,7 +11578,7 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch Logic
+\begin_inset Branch Exeption
 inverted 0
 status collapsed
 
@@ -14010,7 +14022,7 @@ R^{\left(m+1\right)}\circ R^{\left(n\right)} & =R\circ R^{\left(m\right)}\circ R
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch Logic
+\begin_inset Branch Exeption
 inverted 0
 status collapsed
 
@@ -16192,9 +16204,9 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch Logic
+\begin_inset Branch Exeption
 inverted 0
-status open
+status collapsed
 
 \begin_layout Section
 פונקציות
@@ -18967,7 +18979,7 @@ f^{-1}\circ f & =\id_{A} & f\circ f^{-1} & =\id_{B}
 \begin_layout Standard
 \begin_inset Branch Exeption
 inverted 0
-status open
+status collapsed
 
 \begin_layout Section
 עוצמות
@@ -22886,7 +22898,7 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch Logic
+\begin_inset Branch Exeption
 inverted 0
 status collapsed
 
@@ -23844,7 +23856,7 @@ status open
 \end_layout
 
 \begin_layout Subsection
-איזומורפיזם
+איזומורפיזם של יחסי סדר
 \end_layout
 
 \begin_layout Definition
@@ -24212,7 +24224,7 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch Logic
+\begin_inset Branch Exeption
 inverted 0
 status collapsed
 
@@ -25049,6 +25061,13 @@ status open
 ...
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -27136,7 +27155,7 @@ P\left(n,k\right)=\left|A\right|=\left|\biguplus_{X\in\P_{k}\left(n\right)}A_{X}
 ולכן
 \begin_inset Formula 
 \[
-C\left(n,k\right)=\left|\P_{k}\left(n\right)\right|=\frac{P\left(n,k\right)}{k!}=\frac{n!}{k!\cdot\left(n-k\right)!}={n \choose k}
+C\left(n,k\right)=\left|\P_{k}\left(n\right)\right|=\frac{P\left(n,k\right)}{k!}=\frac{n!}{k!\cdot\left(n-k\right)!}=\binom{n}{k}
 \]
 
 \end_inset
@@ -27822,7 +27841,7 @@ status open
 אך נשים לב כי זה גם שווה
 \begin_inset Formula 
 \[
-\left(a+b\right)^{3}={3 \choose 3}a^{3}b^{0}+{3 \choose 2}a^{2}b^{1}+{3 \choose 1}a^{1}b^{2}+{3 \choose 0}a^{0}b^{3}
+\left(a+b\right)^{3}=\binom{3}{3}a^{3}b^{0}+\binom{3}{2}a^{2}b^{1}+\binom{3}{1}a^{1}b^{2}+\binom{3}{0}a^{0}b^{3}
 \]
 
 \end_inset
@@ -27855,7 +27874,7 @@ status open
  אזי
 \begin_inset Formula 
 \[
-\left(a+b\right)^{n}=\sum_{k=0}^{n}{n \choose k}a^{k}b^{n-k}
+\left(a+b\right)^{n}=\sum_{k=0}^{n}\binom{n}{k}a^{k}b^{n-k}
 \]
 
 \end_inset
@@ -27873,7 +27892,7 @@ status open
  מתקיים
 \begin_inset Formula 
 \[
-\left(a+b\right)^{0}=1={n \choose 0}a^{0}b^{0-0}=\sum_{k=0}^{0}{0 \choose k}a^{k}b^{0-k}
+\left(a+b\right)^{0}=1=\binom{n}{0}a^{0}b^{0-0}=\sum_{k=0}^{0}\binom{0}{k}a^{k}b^{0-k}
 \]
 
 \end_inset
@@ -27885,14 +27904,14 @@ status open
  שהטענה נכונה, לכן
 \begin_inset Formula 
 \begin{align*}
-\left(a+b\right)^{n}= & \left(a+b\right)^{n-1}\left(a+b\right)=\left(\sum_{k=0}^{n-1}{n-1 \choose k}a^{k}b^{n-1-k}\right)\left(a+b\right)\\
-= & \left(a\sum_{k=0}^{n-1}{n-1 \choose k}a^{k}b^{n-1-k}\right)+\left(b\sum_{k=0}^{n-1}{n-1 \choose k}a^{k}b^{n-1-k}\right)\\
-= & \left(\sum_{k=0}^{n-1}{n-1 \choose k}a^{k+1}b^{n-1-k}\right)+\left(\sum_{k=0}^{n-1}{n-1 \choose k}a^{k}b^{n-k}\right)\\
-= & \left(\sum_{k=1}^{n}{n-1 \choose k-1}a^{k}b^{n-k}\right)+\left(\sum_{k=0}^{n-1}{n-1 \choose k}a^{k}b^{n-k}\right)\\
-= & \left({n-1 \choose n-1}a^{n}b^{n-n}+\sum_{k=1}^{n-1}{n-1 \choose k-1}a^{k}b^{n-k}\right)+\left({n-1 \choose 0}a^{0}b^{n-0}+\sum_{k=1}^{n-1}{n-1 \choose k}a^{k}b^{n-k}\right)\\
-= & a^{n}+b^{n}+\left(\sum_{k=1}^{n-1}{n-1 \choose k-1}a^{k}b^{n-k}+\sum_{k=1}^{n-1}{n-1 \choose k}a^{k}b^{n-k}\right)\\
-= & a^{n}+b^{n}+\sum_{k=1}^{n-1}\left({n-1 \choose k-1}+{n-1 \choose k}\right)a^{k}b^{n-k}=a^{n}+b^{n}+\sum_{k=1}^{n-1}{n \choose k}a^{k}b^{n-k}\\
-= & \sum_{k=0}^{n}{n \choose k}a^{k}b^{n-k}
+\left(a+b\right)^{n}= & \left(a+b\right)^{n-1}\left(a+b\right)=\left(\sum_{k=0}^{n-1}\binom{n-1}{k}a^{k}b^{n-1-k}\right)\left(a+b\right)\\
+= & \left(a\sum_{k=0}^{n-1}\binom{n-1}{k}a^{k}b^{n-1-k}\right)+\left(b\sum_{k=0}^{n-1}\binom{n-1}{k}a^{k}b^{n-1-k}\right)\\
+= & \left(\sum_{k=0}^{n-1}\binom{n-1}{k}a^{k+1}b^{n-1-k}\right)+\left(\sum_{k=0}^{n-1}\binom{n-1}{k}a^{k}b^{n-k}\right)\\
+= & \left(\sum_{k=1}^{n}\binom{n-1}{k-1}a^{k}b^{n-k}\right)+\left(\sum_{k=0}^{n-1}\binom{n-1}{k}a^{k}b^{n-k}\right)\\
+= & \left(\binom{n-1}{n-1}a^{n}b^{n-n}+\sum_{k=1}^{n-1}\binom{n-1}{k-1}a^{k}b^{n-k}\right)+\left(\binom{n-1}{0}a^{0}b^{n-0}+\sum_{k=1}^{n-1}\binom{n-1}{k}a^{k}b^{n-k}\right)\\
+= & a^{n}+b^{n}+\left(\sum_{k=1}^{n-1}\binom{n-1}{k-1}a^{k}b^{n-k}+\sum_{k=1}^{n-1}\binom{n-1}{k}a^{k}b^{n-k}\right)\\
+= & a^{n}+b^{n}+\sum_{k=1}^{n-1}\left(\binom{n-1}{k-1}+\binom{n-1}{k}\right)a^{k}b^{n-k}=a^{n}+b^{n}+\sum_{k=1}^{n-1}\binom{n}{k}a^{k}b^{n-k}\\
+= & \sum_{k=0}^{n}\binom{n}{k}a^{k}b^{n-k}
 \end{align*}
 
 \end_inset
@@ -27913,7 +27932,7 @@ status open
 נשים לב כי
 \begin_inset Formula 
 \[
-2^{n}=\left(1+1\right)^{n}=\sum_{k=0}^{n}{n \choose k}1^{k}1^{n-k}=\sum_{k=0}^{n}{n \choose k}
+2^{n}=\left(1+1\right)^{n}=\sum_{k=0}^{n}\binom{n}{k}1^{k}1^{n-k}=\sum_{k=0}^{n}\binom{n}{k}
 \]
 
 \end_inset
@@ -27925,9 +27944,9 @@ status open
 נשים לב כי
 \begin_inset Formula 
 \begin{align*}
-\sum_{k=0}^{n}k{n \choose k}= & \sum_{k=1}^{n}k\cdot\frac{n!}{k!\cdot\left(n-k\right)!}=\sum_{k=1}^{n}\frac{n!}{\left(k-1\right)!\cdot\left(n-k\right)!}\\
-= & \sum_{k=1}^{n}\frac{n\cdot\left(n-1\right)!}{\left(k-1\right)!\cdot\left(\left(n-1\right)-\left(k-1\right)\right)!}=\sum_{k=1}^{n}n{n-1 \choose k-1}\\
-= & n\sum_{k=1}^{n}{n-1 \choose k-1}=n\sum_{k=0}^{n-1}{n-1 \choose k}=n2^{n-1}
+\sum_{k=0}^{n}k\binom{n}{k}= & \sum_{k=1}^{n}k\cdot\frac{n!}{k!\cdot\left(n-k\right)!}=\sum_{k=1}^{n}\frac{n!}{\left(k-1\right)!\cdot\left(n-k\right)!}\\
+= & \sum_{k=1}^{n}\frac{n\cdot\left(n-1\right)!}{\left(k-1\right)!\cdot\left(\left(n-1\right)-\left(k-1\right)\right)!}=\sum_{k=1}^{n}n\binom{n-1}{k-1}\\
+= & n\sum_{k=1}^{n}\binom{n-1}{k-1}=n\sum_{k=0}^{n-1}\binom{n-1}{k}=n2^{n-1}
 \end{align*}
 
 \end_inset
@@ -28164,7 +28183,7 @@ status open
  אזי
 \begin_inset Formula 
 \[
-{n \choose k_{1},k_{2},\ldots,k_{\ell}}=\frac{n!}{\prod_{i=1}^{\ell}\left(k_{i}!\right)}
+\binom{n}{k_{1},k_{2},\ldots,k_{\ell}}=\frac{n!}{\prod_{i=1}^{\ell}\left(k_{i}!\right)}
 \]
 
 \end_inset
@@ -28200,7 +28219,7 @@ status open
 \left(\sum_{i=1}^{\ell}x_{i}\right)^{n}=\sum_{\substack{\left<k_{1},\ldots,k_{\ell}\right>\in\bbn^{\ell}\\
 \sum_{i=1}^{\ell}k_{i}=n
 }
-}\left({n \choose k_{1},k_{2},\ldots,k_{\ell}}\prod_{i=1}^{\ell}x_{i}^{k_{\ell}}\right)
+}\left(\binom{n}{k_{1},k_{2},\ldots,k_{\ell}}\prod_{i=1}^{\ell}x_{i}^{k_{\ell}}\right)
 \]
 
 \end_inset
@@ -28231,7 +28250,7 @@ status open
 \ell^{n}=\sum_{\substack{\left<k_{1},\ldots,k_{\ell}\right>\in\bbn^{\ell}\\
 \sum_{i=1}^{\ell}k_{i}=n
 }
-}{n \choose k_{1},k_{2},\ldots,k_{\ell}}
+}\binom{n}{k_{1},k_{2},\ldots,k_{\ell}}
 \]
 
 \end_inset
@@ -28331,7 +28350,7 @@ status open
  אזי
 \begin_inset Formula 
 \[
-\left(x+y\right)^{\a}=\sum_{k=0}^{\infty}{\a \choose k}x^{k}y^{\a-k}
+\left(x+y\right)^{\a}=\sum_{k=0}^{\infty}\binom{\a}{k}x^{k}y^{\a-k}
 \]
 
 \end_inset
@@ -28347,7 +28366,7 @@ status open
 נשים לב כי
 \begin_inset Formula 
 \[
-\sqrt{2}=\left(1+1\right)^{\frac{1}{2}}=\sum_{k=0}^{\infty}{\frac{1}{2} \choose k}=1+\frac{1}{2}-\frac{1}{8}+\frac{1}{16}+\ldots\approx1.41421
+\sqrt{2}=\left(1+1\right)^{\frac{1}{2}}=\sum_{k=0}^{\infty}\binom{\frac{1}{2}}{k}=1+\frac{1}{2}-\frac{1}{8}+\frac{1}{16}+\ldots\approx1.41421
 \]
 
 \end_inset
@@ -28465,7 +28484,7 @@ status open
 אזי
 \begin_inset Formula 
 \[
-\left|\bigcup_{i=1}^{n}A_{i}\right|=\sum_{k=1}^{n}\left(-1\right)^{k+1}{n \choose k}\left|\bigcap_{i=1}^{k}A_{i}\right|
+\left|\bigcup_{i=1}^{n}A_{i}\right|=\sum_{k=1}^{n}\left(-1\right)^{k+1}\binom{n}{k}\left|\bigcap_{i=1}^{k}A_{i}\right|
 \]
 
 \end_inset
@@ -28687,7 +28706,7 @@ status open
 C_{n}= & \frac{1}{n+1}{2n \choose n}=\frac{1}{n+1}\cdot\frac{\left(2n\right)!}{n!\cdot n!}=\frac{\left(2n\right)!}{\left(n+1\right)!\cdot n!}=\frac{\left(2n\right)!}{\left(n+1\right)!\cdot n!}\\
 = & \frac{\left(2n\right)!}{\left(n-1\right)!\cdot n!}\cdot\frac{1}{n\left(n+1\right)}=\frac{\left(2n\right)!}{\left(n-1\right)!\cdot n!}\cdot\left(\frac{1}{n}-\frac{1}{n+1}\right)\\
 = & \frac{\left(2n\right)!}{\left(n-1\right)!\cdot n!}\cdot\frac{1}{n}-\frac{\left(2n\right)!}{\left(n-1\right)!\cdot n!}\cdot\frac{1}{n+1}\\
-= & \frac{\left(2n\right)!}{n!\cdot n!}-\frac{\left(2n\right)!}{\left(n-1\right)!\cdot\left(n+1\right)!}={2n \choose n}-{2n \choose n-1}
+= & \frac{\left(2n\right)!}{n!\cdot n!}-\frac{\left(2n\right)!}{\left(n-1\right)!\cdot\left(n+1\right)!}=\binom{2n}{n}-\binom{2n}{n-1}
 \end{align*}
 
 \end_inset
@@ -32591,9 +32610,21 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Part
 תורת הגרפים
 \end_layout
+
+\begin_layout Standard
+\begin_inset Branch Graph
+inverted 0
+status collapsed
 
 \begin_layout Section
 גרפים
@@ -32756,10 +32787,20 @@ status open
 
 \begin_layout Itemize
 גרף שרוך: ...
+ 
+\begin_inset Formula $\left<\left[n\right],\left\{ \left\{ k,k+1\right\} \mid k\in\left[n-1\right]\right\} \right>$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
 גרף מעגל: ...
+ 
+\begin_inset Formula $C_{n}=\left<\left[n\right],\left\{ \left\{ k,k+1\right\} \mid k\in\left[n-1\right]\right\} \cup\left\{ \left\{ 0,n\right\} \right\} \right>$
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -32821,11 +32862,20 @@ status open
 ...
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
+\begin_layout Remark
+באופן כללי יותר, עבור קבוצה 
+\begin_inset Formula $A$
 \end_inset
 
+ נגדיר את הקליקה של 
+\begin_inset Formula $A$
+\end_inset
 
+ להיות 
+\begin_inset Formula $K_{A}=\left<A,\P_{2}\left(A\right)\right>$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Definition
@@ -32945,6 +32995,10 @@ status open
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Remark
+באותה מידה, נקרא לשני צמתים המחוברים בעזרת קשת שכנים.
 \end_layout
 
 \begin_layout Example
@@ -33212,7 +33266,7 @@ status open
 \end_layout
 
 \begin_layout Subsection
-טיול
+טיולים ומסלולים
 \end_layout
 
 \begin_layout Definition
@@ -33474,6 +33528,18 @@ status open
 ...
 \end_layout
 
+\begin_layout Subsubsection
+אלגוריתם דייקסטרא
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Subsubsection
+מסלול המילטון
+\end_layout
+
 \begin_layout Definition
 יהי 
 \begin_inset Formula $G$
@@ -33492,10 +33558,6 @@ status open
 
 \begin_layout Example
 ...
-\end_layout
-
-\begin_layout Subsubsection
-מסלול המילטון
 \end_layout
 
 \begin_layout Definition
@@ -33559,7 +33621,20 @@ status open
 .
 \end_layout
 
+\begin_layout Proof
+...
+\end_layout
+
 \begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+משפט דיראק
+\end_layout
+
+\end_inset
+
 יהי 
 \begin_inset Formula $G$
 \end_inset
@@ -33625,564 +33700,178 @@ status open
 \begin_inset Formula $G$
 \end_inset
 
-(
+(.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
+\begin_layout Exercise
+יהי 
+\begin_inset Formula $G$
 \end_inset
 
-
+ גרף אזי יחס הקשירות הינו יחס שקילות.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Branch lbl
-inverted 0
-status collapsed
+\begin_layout Definition
+\begin_inset Argument 1
+status open
 
-\begin_layout Standard
-\begin_inset FormulaMacro
-\renewcommand{\P}[2]{\mathcal{P}_{#2}\left(#1\right)}
-{\mathcal{P}_{#2}\left(#1\right)}
+\begin_layout Plain Layout
+רכיב קשירות
+\end_layout
+
 \end_inset
 
+יהי 
+\begin_inset Formula $G$
+\end_inset
 
+ גרף אזי מחלקת שקילות ביחס 
+\begin_inset Formula $\xrightarrow[G]{}$
+\end_inset
+
+ נקראת רכיב קשירות, זאת מכיוון וכל הצמתים באותה מחלקת שקילות מקושרים אחד
+ לשני בגרף.
 \end_layout
 
-\begin_layout Standard
-שרוך: 
-\begin_inset Formula $\left<\left[n\right],\left\{ \left\{ k,k+1\right\} \mid k\in\left[n-1\right]\right\} \right>$
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף יהי 
+\begin_inset Formula $K$
+\end_inset
+
+ רכיב קשירות של 
+\begin_inset Formula $G$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $v\in K$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\deg_{G\left[K\right]}\left(v\right)=\deg_{G}\left(v\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-גרף מעגל: 
-\begin_inset Formula $C_{n}=\left<\left[n\right],\left\{ \left\{ k,k+1\right\} \mid k\in\left[n-1\right]\right\} \cup\left\{ \left\{ 0,n\right\} \right\} \right>$
-\end_inset
-
-.
+\begin_layout Proof
+...
 \end_layout
 
-\begin_layout Standard
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+גרף קשיר
+\end_layout
+
+\end_inset
+
 גרף 
-\begin_inset Formula $n$
+\begin_inset Formula $G$
 \end_inset
 
-־צדדי: 
-\begin_inset Formula $\left<V_{1}\uplus\ldots\uplus V_{n},E\right>$
-\end_inset
-
- המקיים 
-\begin_inset Formula $\forall e\in E.\exists i\ne j.\left|e\cap V_{i}\right|=\left|e\cap V_{j}\right|$
+ יקרא קשיר אם קיים בו רכיב קשירות יחיד, כלומר 
+\begin_inset Formula $\left|\nicefrac{V\left(G\right)}{\xrightarrow[G]{}}\right|=1$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-גרף 
-\begin_inset Formula $n$
-\end_inset
-
-־צדדי מלא: 
-\begin_inset Formula $\left<V_{1}\uplus\ldots\uplus V_{n},E\right>$
-\end_inset
-
- גרף 
-\begin_inset Formula $n$
-\end_inset
-
-־צדדי המקיים 
-\begin_inset Formula $E=\bigcup_{i=1}^{n}\bigcup_{j=i+1}^{n}\left\{ \left\{ e_{1},e_{2}\right\} \mid e_{1}\in V_{i}\land e_{2}\in V_{j}\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-סימון: יהי 
-\begin_inset Formula $G=\left<V_{1}\uplus\ldots\uplus V_{n},E\right>$
-\end_inset
-
- גרף 
-\begin_inset Formula $n$
-\end_inset
-
-־צדדי מלא נסמנו 
-\begin_inset Formula $K_{\left|V_{1}\right|,\ldots\left|V_{n}\right|}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-קליקה: 
-\begin_inset Formula $K_{n}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-קבוצת השכנים: יהי 
+\begin_layout Claim
+יהי 
 \begin_inset Formula $G$
 \end_inset
 
  גרף ויהי 
-\begin_inset Formula $v\in V\left(G\right)$
+\begin_inset Formula $K$
+\end_inset
+
+ רכיב קשירות אזי 
+\begin_inset Formula $G\left[K\right]$
+\end_inset
+
+ גרף קשיר.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Definition
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $E^{\prime}\subseteq\P_{2}\left(V\left(G\right)\right)$
 \end_inset
 
  אזי
-\begin_inset Formula $N_{G}\left(v\right)=\left\{ u\in V\left(G\right)\mid\left\{ u,v\right\} \in E\left(G\right)\right\} $
+\begin_inset Formula 
+\begin{align*}
+G+E^{\prime} & =\left<V\left(G\right),E\left(G\right)\cup E^{\prime}\right> & G-E^{\prime} & =\left<V\left(G\right),E\left(G\right)\backslash E^{\prime}\right>
+\end{align*}
+
 \end_inset
 
-.
+
 \end_layout
 
-\begin_layout Standard
-לולאה: יהי 
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Claim
+יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף מכוון ויהי 
-\begin_inset Formula $v\in V\left(G\right)$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left<v,v\right>\in E\left(G\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-גרף פשוט: גרף לא מכוון חסר לולאות.
-\end_layout
-
-\begin_layout Standard
-דרגה: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף ויהי 
-\begin_inset Formula $v\in V\left(G\right)$
-\end_inset
-
- אזי 
-\begin_inset Formula $\deg\left(v\right)=d_{G}\left(v\right)=\left|N\left(v\right)\right|$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-קודקוד מבודד: 
-\begin_inset Formula $v\in V\left(G\right)$
-\end_inset
-
- המקיים 
-\begin_inset Formula $d\left(v\right)=0$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-עלה: 
-\begin_inset Formula $v\in V\left(G\right)$
-\end_inset
-
- המקיים 
-\begin_inset Formula $d\left(v\right)=1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-טענה: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף אזי 
-\begin_inset Formula $\forall v\in V\left(G\right).0\le d\left(v\right)\le\left|V\left(G\right)\right|-1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-נוסחת לחיצות הידיים: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף מתקיים 
-\begin_inset Formula $2\left|E\left(G\right)\right|=\sum_{v\in V\left(G\right)}\left(d\left(v\right)\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-תת גרף: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף אזי 
-\begin_inset Formula $G'$
-\end_inset
-
- המקיימת 
-\begin_inset Formula $\left(V\left(G'\right)\subseteq V\left(G\right)\right)\land\left(E\left(G'\right)\subseteq E\left(G\right)\cap\P{V\left(G'\right)}2\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-תת הגרף הנפרש: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף ותהא 
-\begin_inset Formula $V'\subseteq V\left(G\right)$
-\end_inset
-
- אזי 
-\begin_inset Formula $G\left[V'\right]=\left<V',\P{V'}2\cap E\left(G\right)\right>$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-גרף משלים: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף אזי 
-\begin_inset Formula $\overline{G}=\left<V\left(G\right),\P{V\left(G\right)}2\backslash E\left(G\right)\right>$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-טיול: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף ויהיו 
-\begin_inset Formula $a_{1},a_{n}\in V\left(G\right)$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left<a_{1},\ldots,a_{n}\right>\in V\left(G\right)^{n}$
-\end_inset
-
- המקיימת 
-\begin_inset Formula $\forall i\in\left[n-1\right].\left\{ a_{i},a_{i+1}\right\} \in E\left(G\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-אורך טיול: יהי 
-\begin_inset Formula $\sigma=\left<a_{1},\ldots,a_{n}\right>$
-\end_inset
-
- טיול אזי 
-\begin_inset Formula $\ell\left(\sigma\right)=n-1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-מסלול: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף ויהיו 
-\begin_inset Formula $a_{1},a_{n}\in V\left(G\right)$
-\end_inset
-
- אזי מסלול המקיים 
-\begin_inset Formula $\forall i\ne j\in\left[n-1\right].\left\{ a_{i},a_{i+1}\right\} \ne\left\{ a_{j},a_{j+1}\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-תת מסלול: יהי 
-\begin_inset Formula $\left<a_{1},\ldots,a_{n}\right>$
-\end_inset
-
- מסלול אזי 
-\begin_inset Formula $\left<a_{i},\ldots,a_{j}\right>$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-מעגל: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף ויהי 
-\begin_inset Formula $v\in V\left(G\right)$
-\end_inset
-
- אזי מסלול בין 
-\begin_inset Formula $v$
-\end_inset
-
- ל־
-\begin_inset Formula $v$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-מסלול פשוט: )מסלול(
-\begin_inset Formula $\land$
-\end_inset
-
-)כל תת מסלול שלו אינו מעגל(.
-\end_layout
-
-\begin_layout Standard
-מעגל פשוט: מעגל 
-\begin_inset Formula $\left<a_{1},\ldots,a_{n},a_{1}\right>$
-\end_inset
-
- המקיים 
-\begin_inset Formula $\left<a_{1},\ldots,a_{n}\right>$
-\end_inset
-
- מסלול פשוט.
-\end_layout
-
-\begin_layout Standard
-משפט: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף ויהיו 
-\begin_inset Formula $v_{1},v_{2}\in V\left(G\right)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-)קיים מסלול פשוט מ־
-\begin_inset Formula $v_{1}$
-\end_inset
-
- ל־
-\begin_inset Formula $v_{2}$
-\end_inset
-
-( 
-\begin_inset Formula $\iff$
-\end_inset
-
- )קיים טיול מ־
-\begin_inset Formula $v_{1}$
-\end_inset
-
- ל־
-\begin_inset Formula $v_{2}$
-\end_inset
-
-(.
-\end_layout
-
-\begin_layout Itemize
-)קיים מעגל פשוט מ־
-\begin_inset Formula $v_{1}$
-\end_inset
-
- ל־
-\begin_inset Formula $v_{1}$
-\end_inset
-
-( 
-\begin_inset Formula $\iff$
-\end_inset
-
- )קיים מעגל מ־
-\begin_inset Formula $v_{1}$
-\end_inset
-
- ל־
-\begin_inset Formula $v_{1}$
-\end_inset
-
-(.
-\end_layout
-
-\begin_layout Standard
-משפט: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף חסר מעגלים אזי 
-\begin_inset Formula $\cn{E\left(G\right)}<\cn{V\left(G\right)}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-למה: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף חסר מעגלים אזי קיימים 
+ גרף ויהיו צמתים 
 \begin_inset Formula $v,u\in V\left(G\right)$
 \end_inset
 
- שונים כך ש־
-\begin_inset Formula $v,u$
-\end_inset
-
- עלים.
-\end_layout
-
-\begin_layout Standard
-יחס הקשירות: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף אזי )קיים טיול מ־
-\begin_inset Formula $v$
-\end_inset
-
- ל־
-\begin_inset Formula $u$
-\end_inset
-
-(
-\begin_inset Formula $\forall u,v\in V\left(G\right).v\underset{G}{\to}u\iff$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-טענה: יחס הקשירות הוא יחס שקילות.
-\end_layout
-
-\begin_layout Standard
-רכיב קשירות: מחלקת שקילות ביחס הקשירות.
-\end_layout
-
-\begin_layout Standard
-מסקנה: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף ויהי 
-\begin_inset Formula $K\in\nicefrac{V\left(G\right)}{\underset{G}{\to}}$
-\end_inset
-
  אזי 
-\begin_inset Formula $\forall v\in K.d_{G\left[K\right]}\left(v\right)=d_{G}\left(v\right)$
+\begin_inset Formula $\left(v\xrightarrow[G]{}u\right)\implies\left(\left[v\right]_{\xrightarrow[G]{}}=\left[v\right]_{\xrightarrow[G+\left\{ \left\{ v,u\right\} \right\} ]{}}\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-גרף קשיר: גרף 
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Claim
+יהי 
 \begin_inset Formula $G$
 \end_inset
 
- המקיים 
-\begin_inset Formula $\left|\nicefrac{V\left(G\right)}{\underset{G}{\to}}\right|=1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-הגדרה: יהי 
-\begin_inset Formula $G=\left<V,E\right>$
-\end_inset
-
- גרף ותהא 
-\begin_inset Formula $\P V2\supseteq E'$
-\end_inset
-
- אזי 
-\begin_inset Formula $G+E'=\left<V,E\cup E'\right>$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-הגדרה: יהי 
-\begin_inset Formula $G=\left<V,E\right>$
-\end_inset
-
- גרף ותהא 
-\begin_inset Formula $\P V2\supseteq E'$
-\end_inset
-
- אזי 
-\begin_inset Formula $G-E'=\left<V,E\backslash E'\right>$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-טענה: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף ויהיו 
+ גרף ויהיו צמתים 
 \begin_inset Formula $v,u\in V\left(G\right)$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Enumerate
-אם 
-\begin_inset Formula $v\underset{G}{\to}u$
-\end_inset
-
- אז 
-\begin_inset Formula $\left[v\right]_{\xrightarrow[G]{}}=\left[v\right]_{\xrightarrow[G+\left\{ \left\{ v,u\right\} \right\} ]{}}$
+ אזי 
+\begin_inset Formula $\neg\left(v\xrightarrow[G]{}u\right)\implies\left(\left[v\right]_{\xrightarrow[G]{}}\uplus\left[u\right]_{\xrightarrow[G]{}}=\left[v\right]_{\xrightarrow[G+\left\{ \left\{ v,u\right\} \right\} ]{}}\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Enumerate
-אם 
-\begin_inset Formula $\neg\left(v\underset{G}{\to}u\right)$
-\end_inset
-
- אז 
-\begin_inset Formula $\left[v\right]_{\xrightarrow[G]{}}\uplus\left[u\right]_{\xrightarrow[G]{}}=\left[v\right]_{\xrightarrow[G+\left\{ \left\{ v,u\right\} \right\} ]{}}$
-\end_inset
-
-.
+\begin_layout Proof
+...
 \end_layout
 
-\begin_layout Standard
-מסקנה: יהי 
+\begin_layout Corollary
+יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -34193,140 +33882,220 @@ status collapsed
 .
 \end_layout
 
-\begin_layout Standard
-אלגוריתם דייקסטרה: ...
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsubsection
+מסלול אוילר
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מסלול אוילר
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף, מסלול אוילר הינו מסלול אשר עובר דרך כל הקשתות.
 \end_layout
 
 \begin_layout Standard
-מסקנה: יהי 
-\begin_inset Formula $G$
+\begin_inset Separator plain
 \end_inset
 
- גרף אם 
-\begin_inset Formula $\cn{V\left(G\right)}-1>\cn{E\left(G\right)}$
-\end_inset
 
- אז 
-\begin_inset Formula $G$
-\end_inset
-
- לא קשיר.
 \end_layout
 
-\begin_layout Standard
-מסקנה: אם 
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מעגל אוילר
+\end_layout
+
+\end_inset
+
+יהי 
 \begin_inset Formula $G$
 \end_inset
 
- קשיר אז 
-\begin_inset Formula $\cn{E\left(G\right)}\ge\cn{V\left(G\right)}-1$
+ גרף, מעגל אוילר הינו מסלול אוילר אשר גם מעגל.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+משפט אוילר
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר אזי
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+)קיים מעגל אוילר ב־
+\begin_inset Formula $G$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\forall v\in V\left(G\right).\deg\left(v\right)\in\bbn_{\text{even}}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Itemize
+)קיים מסלול אוילר ב־
+\begin_inset Formula $G$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\left|\left\{ v\in V\left(G\right)\mid\deg\left(v\right)\in\bbn_{\text{even}}\right\} \right|\in\left\{ 0,2\right\} $
+\end_inset
+
+(.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Section
+עצים
+\end_layout
+
+\begin_layout Lemma
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף לא ריק וחסר מעגלים אזי קיימים לפחות שני עלים ב־
+\begin_inset Formula $G$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-טענה: אם 
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Claim
+ׁיהי 
 \begin_inset Formula $G$
 \end_inset
 
- חסר מעגלים אז 
-\begin_inset Formula $\cn{E\left(G\right)}\le\cn{V\left(G\right)}-1$
+ גרף לא ריק וחסר מעגלים אזי 
+\begin_inset Formula $\left|E\left(G\right)\right|\le\left|V\left(G\right)\right|-1$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-עץ: )קשיר(
-\begin_inset Formula $\land$
-\end_inset
-
-)חסר מעגלים(.
+\begin_layout Proof
+...
 \end_layout
 
-\begin_layout Standard
-טענה: יהי 
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+עץ
+\end_layout
+
+\end_inset
+
+גרף 
 \begin_inset Formula $G$
 \end_inset
 
- גרף אזי כל 
-\begin_inset Formula $K\in\nicefrac{V\left(G\right)}{\xrightarrow[G]{}}$
-\end_inset
-
- הוא עץ.
+ יקרא עץ אם הינו קשיר וחסר מעגלים.
 \end_layout
 
-\begin_layout Standard
-מסקנה: אם 
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Corollary
+יהי 
 \begin_inset Formula $T$
 \end_inset
 
- עץ אז 
-\begin_inset Formula $\cn{E\left(G\right)}=\cn{V\left(G\right)}-1$
+ עץ אזי 
+\begin_inset Formula $\left|E\left(T\right)\right|=\left|V\left(T\right)\right|-1$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-עץ פורש: יהי 
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+יער
+\end_layout
+
+\end_inset
+
+גרף 
 \begin_inset Formula $G$
 \end_inset
 
- גרף ותהא 
-\begin_inset Formula $E'\subseteq E\left(G\right)$
-\end_inset
-
- אזי 
-\begin_inset Formula $T=\left<V\left(G\right),E'\right>$
-\end_inset
-
- כך ש־
-\begin_inset Formula $T$
-\end_inset
-
- עץ.
+ יקרא עץ אם הינו חסר מעגלים, כלומר הגרף מורכב ממספר רכיבי קשירות אשר הינם
+ עצים.
 \end_layout
 
-\begin_layout Standard
-יער: חסר מעגלים.
+\begin_layout Example
+...
 \end_layout
 
-\begin_layout Standard
-קשיר מינימלי: גרף 
-\begin_inset Formula $G$
-\end_inset
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
 
- כך שלכל 
-\begin_inset Formula $e\in E\left(G\right)$
-\end_inset
-
- מתקיים כי 
-\begin_inset Formula $G-\left\{ e\right\} $
-\end_inset
-
- לא קשיר.
+\begin_layout Plain Layout
+משפט העצים
 \end_layout
 
-\begin_layout Standard
-חסר מעגלים מקסימלי: גרף 
-\begin_inset Formula $G$
 \end_inset
 
- כך שלכל 
-\begin_inset Formula $v,u\in V\left(G\right)$
-\end_inset
-
- מתקיים כי 
-\begin_inset Formula $G+\left\{ \left\{ v,u\right\} \right\} $
-\end_inset
-
- בעל מעגל.
-\end_layout
-
-\begin_layout Standard
-משפט העצים: יהי 
+יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -34334,17 +34103,18 @@ status collapsed
 \begin_inset Quotes erd
 \end_inset
 
-ש )התנאים הבאים שקולים(
+ש
 \end_layout
 
-\begin_layout Itemize
+\begin_deeper
+\begin_layout Enumerate
 \begin_inset Formula $G$
 \end_inset
 
  עץ.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 )
 \begin_inset Formula $G$
 \end_inset
@@ -34354,13 +34124,13 @@ status collapsed
 \end_inset
 
 )
-\begin_inset Formula $\cn{E\left(G\right)}=\cn{V\left(G\right)}-1$
+\begin_inset Formula $\left|E\left(G\right)=\left|V\left(G\right)\right|\right|-1$
 \end_inset
 
 (.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 )
 \begin_inset Formula $G$
 \end_inset
@@ -34370,299 +34140,331 @@ status collapsed
 \end_inset
 
 )
-\begin_inset Formula $\cn{E\left(G\right)}=\cn{V\left(G\right)}-1$
+\begin_inset Formula $\left|E\left(G\right)=\left|V\left(G\right)\right|\right|-1$
 \end_inset
 
 (.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $G$
 \end_inset
 
  קשיר מינימלי.
+ כלומר החסרה של כל קשת תהפוך את 
+\begin_inset Formula $G$
+\end_inset
+
+ ללא קשיר.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $G$
 \end_inset
 
  חסר מעגלים מקסימלי.
-\end_layout
-
-\begin_layout Itemize
-בין כל שני קודקודים ב־
+ כלומר הוספה של כל קשת תהפוך את 
 \begin_inset Formula $G$
 \end_inset
 
- קיים מסלול יחיד.
+ לבעל מעגל.
 \end_layout
 
-\begin_layout Standard
-גרף מישורי: גרף 
+\begin_layout Enumerate
+יהיו 
+\begin_inset Formula $v,u\in V\left(G\right)$
+\end_inset
+
+ צמתים אזי קיים ויחיד מסלול ביניהם.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsection
+עץ פורש
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+עץ פורש
+\end_layout
+
+\end_inset
+
+יהי 
 \begin_inset Formula $G$
 \end_inset
 
- כך שכל הקשתות בדיאגרמה של הגרף לא נחתכות אחת עם השנייה.
-\end_layout
-
-\begin_layout Standard
-הגדרה: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף אזי 
-\begin_inset Formula $\Delta\left(G\right)=\max\left(d_{G}\left(v\right)\mid v\in V\left(G\right)\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-הגדרה: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף אזי 
-\begin_inset Formula $\d\left(G\right)=\min\left(d_{G}\left(v\right)\mid v\in V\left(G\right)\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-מעגל המילטון: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף אזי 
-\begin_inset Formula $\sigma$
-\end_inset
-
- מעגל המקיים 
-\begin_inset Formula $\ell\left(\sigma\right)=\cn{V\left(G\right)}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-משפט דיראק: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף על 
-\begin_inset Formula $n$
-\end_inset
-
- קודקודים אזי )
-\begin_inset Formula $\d\left(G\right)\ge\frac{n}{2}$
-\end_inset
-
-( 
-\begin_inset Formula $\impliedby$
-\end_inset
-
- )קיים מעגל המילטון בגרף(.
-\end_layout
-
-\begin_layout Standard
-הגדרה: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף ויהי קודקוד 
-\begin_inset Formula $v\in V\left(G\right)$
-\end_inset
-
- נגדיר 
-\begin_inset Formula $G+\left\{ v\right\} =\left<V\left(G\right)\cup\left\{ v\right\} ,E\left(G\right)\right>$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-הגדרה: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף ויהי קודקוד 
-\begin_inset Formula $v\in V\left(G\right)$
-\end_inset
-
- נגדיר 
-\begin_inset Formula $G-\left\{ v\right\} =\left<V\left(G\right)\backslash\left\{ v\right\} ,E\left(G\right)\backslash\left\{ \left\{ v,u\right\} \mid u\in V\left(G\right)\right\} \right>$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-טענה: יהי 
+ גרף, תת גרף 
 \begin_inset Formula $T$
 \end_inset
 
- עץ ויהי 
+ יקרא עץ פורש ב־
+\begin_inset Formula $G$
+\end_inset
+
+ אם הינו עץ וכן 
+\begin_inset Formula $V\left(T\right)=V\left(G\right)$
+\end_inset
+
+.
+ כלומר זהו עץ המורכב מאותם הצמתים וכן תת קבוצה של הקשתות.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Theorem
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר אזי קיים עץ פורש ב־
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsubsection
+אלגוריתם קרוסקל
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Subsubsection
+אלגוריתם פרים
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Subsection
+קידוד פרופר
+\end_layout
+
+\begin_layout Definition
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $v\in V\left(G\right)$
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\[
+G-\left\{ v\right\} =\left<V\left(G\right)\backslash\left\{ v\right\} ,E\left(G\right)\backslash\left\{ \left\{ v,u\right\} \mid u\in V\left(G\right)\right\} \right>
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $T$
+\end_inset
+
+ עץ ויהי צומת 
 \begin_inset Formula $v\in V\left(T\right)$
 \end_inset
 
- עלה אזי 
-\begin_inset Formula $G-\left\{ v\right\} $
+ אזי 
+\begin_inset Formula $T-\left\{ v\right\} $
 \end_inset
 
  עץ.
 \end_layout
 
-\begin_layout Standard
-גרף ממושקל: גרף 
-\begin_inset Formula $G$
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+משפט קיילי
+\end_layout
+
 \end_inset
 
- ופונקציה 
-\begin_inset Formula $f:E\left(G\right)\to\bbr$
+מספר העצים על הצמתים 
+\begin_inset Formula $\left\{ 1\ldots n\right\} $
+\end_inset
+
+ הינו 
+\begin_inset Formula $n^{n-2}$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-אלגוריתם קרוסקל: ...
+\begin_layout Proof
+...
 \end_layout
 
-\begin_layout Standard
-אלגוריתם פרים: ...
+\begin_layout Section
+צביעת גרפים
 \end_layout
 
-\begin_layout Standard
-קידוד פרופר: שיטה לקידוד עץ בינארי למחרוזת, בכל שלב נבחר עלה בעל ערך קטן
- ביותר ונוסיף למחרוזת את הקודקוד היחידי שהוא מחובר אליו, לאחר מכן נמחק את
- אותו עלה ונמשיך ברקורסיה עד שישארו שני קודקודים בגרף.
+\begin_layout Subsection
+איזומורפיזם של גרפים
 \end_layout
 
-\begin_layout Standard
-משפט קיילי: כמות העצים על 
-\begin_inset Formula $n$
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+איזומורפיזם של גרפים
+\end_layout
+
 \end_inset
 
- קודקודים הוא 
-\begin_inset Formula $n^{\left(n-2\right)}$
+יהיו 
+\begin_inset Formula $G_{1},G_{2}$
+\end_inset
+
+ גרפים, איזומורפיזם הינו פונקציה 
+\begin_inset Formula $f:V\left(G_{1}\right)\to V\left(G_{2}\right)$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל המקיימת
+\begin_inset Formula 
+\[
+\forall v,u\in V\left(G_{1}\right).\left(\left\{ v,u\right\} \in E\left(G_{1}\right)\right)\iff\left(\left\{ f\left(v\right),f\left(u\right)\right\} \in E\left(G_{1}\right)\right)
+\]
+
+\end_inset
+
+במקרה של קיום איזומורפיזם בין 
+\begin_inset Formula $G_{1}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $G_{2}$
+\end_inset
+
+ נסמן 
+\begin_inset Formula $G_{1}\cong G_{2}$
+\end_inset
+
+ ונגיד כי הגרפים איזומורפיים.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Claim
+יהיו 
+\begin_inset Formula $G_{1},G_{2}$
+\end_inset
+
+ גרפים ויהי 
+\begin_inset Formula $f:V\left(G_{1}\right)\to V\left(G_{2}\right)$
+\end_inset
+
+ איזומורפיזם אזי
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left|V\left(G_{1}\right)\right|=\left|V\left(G_{2}\right)\right|$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-הערה: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף אזי מספר המופעים של 
-\begin_inset Formula $v\in V\left(G\right)$
-\end_inset
-
- בקידוד פרופר הוא 
-\begin_inset Formula $\deg\left(v\right)-1$
+\begin_layout Enumerate
+\begin_inset Formula $\left|E\left(G_{1}\right)\right|=\left|E\left(G_{2}\right)\right|$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-מסלול אוילר: מסלול העובר על כל הקשתות בגרף.
-\end_layout
-
-\begin_layout Standard
-מעגל אוילר: )מעגל(
-\begin_inset Formula $\land$
+\begin_layout Enumerate
+\begin_inset Formula $\forall v\in V\left(G_{1}\right).\deg_{G_{1}}\left(v\right)=\deg_{G_{2}}\left(f\left(v\right)\right)$
 \end_inset
 
-)מסלול אוילר(.
+.
 \end_layout
 
-\begin_layout Standard
-משפט אוילר: יהי 
-\begin_inset Formula $G$
+\begin_layout Enumerate
+תהא 
+\begin_inset Formula $\sigma\in V\left(G_{1}\right)^{n}$
 \end_inset
 
- גרף קשיר
-\end_layout
-
-\begin_layout Itemize
-)ב־
-\begin_inset Formula $G$
+ אזי )
+\begin_inset Formula $\sigma$
 \end_inset
 
- יש מעגל אוילר( 
+ טיול ב־
+\begin_inset Formula $G_{1}$
+\end_inset
+
+(
 \begin_inset Formula $\iff$
 \end_inset
 
- )
-\begin_inset Formula $\forall v\in V\left(G\right).d\left(v\right)\in\bbn_{even}$
+)
+\begin_inset Formula $f\left(\sigma\right)$
+\end_inset
+
+ טיול ב־
+\begin_inset Formula $G_{2}$
 \end_inset
 
 (.
 \end_layout
 
-\begin_layout Itemize
-)ב־
-\begin_inset Formula $G$
+\begin_layout Enumerate
+)
+\begin_inset Formula $G_{1}$
 \end_inset
 
- יש מסלול אוילר( 
+ קשיר(
 \begin_inset Formula $\iff$
 \end_inset
 
- )
-\begin_inset Formula $\exists!v,u\in V\left(G\right).\left(v\ne u\right)\land\left(d\left(v\right),d\left(u\right)\in\bbn_{odd}\right)$
-\end_inset
-
-(
-\begin_inset Formula $\lor$
-\end_inset
-
-)ב־
-\begin_inset Formula $G$
-\end_inset
-
- יש מעגל אוילר(.
-\end_layout
-
-\begin_layout Standard
-הומומורפיזם: יהיו 
-\begin_inset Formula $G_{1}$
-\end_inset
-
-, 
+)
 \begin_inset Formula $G_{2}$
 \end_inset
 
- גרפים אזי 
-\begin_inset Formula $f:V\left(G_{1}\right)\to V\left(G_{2}\right)$
-\end_inset
-
- המקיימת 
-\begin_inset Formula $\forall\left\{ v,u\right\} \in E\left(G_{1}\right).\left\{ f\left(v\right),f\left(u\right)\right\} \in E\left(G_{2}\right)$
-\end_inset
-
-.
+ קשיר(.
 \end_layout
 
-\begin_layout Standard
-איזומורפיזם: )הומומורפיזם(
-\begin_inset Formula $\land$
-\end_inset
-
-)זיווג(.
+\end_deeper
+\begin_layout Proof
+...
 \end_layout
 
-\begin_layout Standard
-טענה: יהיו 
-\begin_inset Formula $G_{1}$
-\end_inset
-
-, 
-\begin_inset Formula $G_{2}$
+\begin_layout Exercise
+הוכיחו את ההכללה של שני הסעיפים האחרונים של הטענה מלעיל, יהיו 
+\begin_inset Formula $G_{1},G_{2}$
 \end_inset
 
  גרפים ויהי 
@@ -34672,129 +34474,538 @@ status collapsed
  איזומורפיזם
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $\cn{V\left(G_{1}\right)}=\cn{V\left(G_{2}\right)}$
-\end_inset
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
 
+\begin_layout Plain Layout
+
+\numeric on
+4
+\numeric off
 .
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $\cn{E\left(G_{1}\right)}=\cn{E\left(G_{2}\right)}$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\forall v\in V\left(G_{1}\right).d_{G_{1}}\left(v\right)=d_{G_{2}}\left(f\left(v\right)\right)$
+תהא 
+\begin_inset Formula $\sigma\in V\left(G_{1}\right)^{n}$
 \end_inset
 
-.
+ אזי
 \end_layout
 
-\begin_layout Itemize
+\begin_deeper
+\begin_layout Enumerate
 )
-\begin_inset Formula $\left<a_{1},\ldots,a_{n}\right>$
+\begin_inset Formula $\sigma$
 \end_inset
 
- טיול ב־
+ מסלול ב־
 \begin_inset Formula $G_{1}$
 \end_inset
 
-( 
+(
 \begin_inset Formula $\iff$
 \end_inset
 
- )
-\begin_inset Formula $\left<f\left(a_{1}\right),\ldots,f\left(a_{n}\right)\right>$
+)
+\begin_inset Formula $f\left(\sigma\right)$
 \end_inset
 
- טיול ב־
+ מסלול ב־
 \begin_inset Formula $G_{2}$
 \end_inset
 
 (.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
+)
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מסלול פשוט ב־
+\begin_inset Formula $G_{1}$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $f\left(\sigma\right)$
+\end_inset
+
+ מסלול פשוט ב־
+\begin_inset Formula $G_{2}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Enumerate
+)
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מעגל ב־
+\begin_inset Formula $G_{1}$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $f\left(\sigma\right)$
+\end_inset
+
+ מעגל ב־
+\begin_inset Formula $G_{2}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Enumerate
+)
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מעגל פשוט ב־
+\begin_inset Formula $G_{1}$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $f\left(\sigma\right)$
+\end_inset
+
+ מעגל פשוט ב־
+\begin_inset Formula $G_{2}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Enumerate
+)
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מסלול אוילר ב־
+\begin_inset Formula $G_{1}$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $f\left(\sigma\right)$
+\end_inset
+
+ מסלול אוילר ב־
+\begin_inset Formula $G_{2}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Enumerate
+)
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מעגל אוילר ב־
+\begin_inset Formula $G_{1}$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $f\left(\sigma\right)$
+\end_inset
+
+ מעגל אוילר ב־
+\begin_inset Formula $G_{2}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Enumerate
+)
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מסלול המילטון ב־
+\begin_inset Formula $G_{1}$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $f\left(\sigma\right)$
+\end_inset
+
+ מסלול המילטון ב־
+\begin_inset Formula $G_{2}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Enumerate
+)
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מעגל המילטון ב־
+\begin_inset Formula $G_{1}$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $f\left(\sigma\right)$
+\end_inset
+
+ מעגל המילטון ב־
+\begin_inset Formula $G_{2}$
+\end_inset
+
+(.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+
+\numeric on
+5
+\numeric off
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
 )
 \begin_inset Formula $G_{1}$
 \end_inset
 
- קשיר/עץ/חסר מעגלים( 
+ חסר מעגלים(
 \begin_inset Formula $\iff$
 \end_inset
 
- )
+)
 \begin_inset Formula $G_{2}$
 \end_inset
 
- קשיר/עץ/חסר מעגלים(.
+ חסר מעגלים(.
 \end_layout
 
-\begin_layout Standard
-הגדרה: 
-\begin_inset Formula $\text{Graph}\left(V\right)=\left\{ \left<V,E\right>\mid E\subseteq\P V2\right\} $
+\begin_layout Enumerate
+)
+\begin_inset Formula $G_{1}$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Standard
-גרף לא מסומן: 
-\begin_inset Formula $\nicefrac{\text{Graph}\left(V\right)}{\cong}\ni K$
+ עץ(
+\begin_inset Formula $\iff$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Standard
-הערה: 
-\begin_inset Formula $\frac{2^{\binom{n}{2}}}{n!}\le\left|\nicefrac{\text{Graph}\left(\left[n\right]\right)}{\cong}\right|\le2^{\binom{n}{2}}$
+)
+\begin_inset Formula $G_{2}$
 \end_inset
 
-.
+ עץ(.
 \end_layout
 
-\begin_layout Standard
-צביעת קשתות: יהי 
+\end_deeper
+\end_deeper
+\begin_layout Subsubsection
+גרף לא מסומן
+\end_layout
+
+\begin_layout Claim
+יהי 
 \begin_inset Formula $G$
 \end_inset
 
  גרף אזי 
+\begin_inset Formula $\id_{V\left(G\right)}$
+\end_inset
+
+ איזומורפיזם של גרפים.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Claim
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+ההופכי של איזומורפיזם הוא איזומורפיזם
+\end_layout
+
+\end_inset
+
+יהיו 
+\begin_inset Formula $G_{1},G_{2}$
+\end_inset
+
+ גרפים ויהי 
+\begin_inset Formula $f:V\left(G_{1}\right)\to V\left(G_{2}\right)$
+\end_inset
+
+ איזומורפיזם אזי 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ איזומורפיזם.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Claim
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+הרכבת איזומורפיזמים הוא איזומורפיזם
+\end_layout
+
+\end_inset
+
+יהיו 
+\begin_inset Formula $G_{1},G_{2},G_{3}$
+\end_inset
+
+ גרפים יהי 
+\begin_inset Formula $f:V\left(G_{1}\right)\to V\left(G_{2}\right)$
+\end_inset
+
+ איזומורפיזם ויהי 
+\begin_inset Formula $g:V\left(G_{2}\right)\to V\left(G_{3}\right)$
+\end_inset
+
+ איזומורפיזם אזי 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ איזומורפיזם.
+\end_layout
+
+\begin_layout Claim
+\begin_inset FormulaMacro
+\newcommand{\graph}{\text{Graph}}
+{\text{Graph}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+תהא 
+\begin_inset Formula $V$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\graph\left(V\right)=\left\{ \left<V,E\right>\mid E\subseteq\P_{2}\left(V\right)\right\} $
+\end_inset
+
+.
+ כלומר קבוצת כל הגרפים על הצמתים 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+תהא 
+\begin_inset Formula $V$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\cong$
+\end_inset
+
+ יחס שקילות על 
+\begin_inset Formula $\graph\left(V\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Remark
+נשים לב כי מאיזומורפיזם של גרפים מסיקים כי שני הגרפים 
+\begin_inset Quotes eld
+\end_inset
+
+נראים
+\begin_inset Quotes erd
+\end_inset
+
+ אותו הדבר, כלומר ציור שלהם הינו זהה עד כדי שינוי שמות הצמתים, לכן ניתן
+ לתאר גרף באופן מספק ללא קבוצת הצמתים, מכאן עולה ההגדרה הבאה,
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+גרף לא מסומן
+\end_layout
+
+\end_inset
+
+תהא 
+\begin_inset Formula $V$
+\end_inset
+
+ קבוצה אזי איבר בקבוצה 
+\begin_inset Formula $\nicefrac{\graph\left(V\right)}{\cong}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Theorem
+יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{2^{{n \choose 2}}}{n!}\le\left|\nicefrac{\graph\left(\left\{ 1\ldots n\right\} \right)}{\cong}\right|\le2^{{n \choose 2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsection
+צביעת קשתות
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+צביעת קשתות
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף, צביעת קשתות של 
+\begin_inset Formula $G$
+\end_inset
+
+ היא פונקציה 
 \begin_inset Formula $f:E\left(G\right)\to A$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-תת גרף מונוכרומטי: יהי 
+ במקרה זה נגיד כי קשתות 
 \begin_inset Formula $G$
 \end_inset
 
- גרף ותהא 
-\begin_inset Formula $f$
+ נצבעו ב־
+\begin_inset Formula $\left|A\right|$
 \end_inset
 
- צביעה אזי 
-\begin_inset Formula $G'$
-\end_inset
-
- תת גרף של 
-\begin_inset Formula $G$
-\end_inset
-
- כך שמתקיים 
-\begin_inset Formula $\forall e_{1},e_{2}\in E\left(G'\right).f\left(e_{1}\right)=f\left(e_{2}\right)$
-\end_inset
-
-.
+ צבעים.
 \end_layout
 
-\begin_layout Standard
-מספר ראמזי: לכל 
+\begin_layout Remark
+נאמר כי צביעה או גרף הוא מונוכרומטי אם הוא נצבע בצבע יחיד, מונוכרומטי פירושו
+ 
+\begin_inset Quotes eld
+\end_inset
+
+צבע אחד
+\begin_inset Quotes erd
+\end_inset
+
+ ביוונית.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Theorem
+תהא צביעת קשתות של 
+\begin_inset Formula $K_{6}$
+\end_inset
+
+ בשני צבעים אזי קיים תת גרף 
+\begin_inset Formula $K_{3}$
+\end_inset
+
+ מונוכרומטי.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsubsection
+מספרי רמזי
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מספר רמזי
+\end_layout
+
+\end_inset
+
+יהיו 
 \begin_inset Formula $s,t\ge2$
 \end_inset
 
@@ -34821,104 +35032,278 @@ status collapsed
  כחולה.
 \end_layout
 
-\begin_layout Standard
-משפט: 
+\begin_layout Corollary
 \begin_inset Formula $R\left(3,3\right)=6$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-משפט: 
-\begin_inset Formula $\forall s,t\ge2.R\left(s,t\right)=R\left(t,s\right)$
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Claim
+יהיו 
+\begin_inset Formula $s,t\ge2$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R\left(s,t\right)=R\left(t,s\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-משפט ראמזי: מתקיים 
-\begin_inset Formula $\forall s,t\ge2.\exists n\in\bbn.R\left(s,t\right)=n$
-\end_inset
-
-.
+\begin_layout Proof
+...
 \end_layout
 
-\begin_layout Standard
-משפט קונינג: לכל 
-\begin_inset Formula $\forall f\in\P{\bbn}2\to\left\{ 0,1\right\} .\exists H\subseteq\bbn.\left(\left|H\right|=\aleph_{0}\right)\land\left(\cn{f\left[\P H2\right]}=1\right)$
-\end_inset
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
 
-.
+\begin_layout Plain Layout
+משפט רמזי
 \end_layout
 
-\begin_layout Standard
-משפט ארדש־ראדו: יהי 
-\begin_inset Formula $G$
 \end_inset
 
- גרף שמקיים 
-\begin_inset Formula $\aleph<\left|V\left(G\right)\right|$
+יהיו 
+\begin_inset Formula $s,t\ge2$
 \end_inset
 
- ותהא 
-\begin_inset Formula $f\in\P{V\left(G\right)}2\to\bbn$
+ אזי 
+\begin_inset Formula $R\left(s,t\right)$
 \end_inset
 
- אזי קיימת 
+ קיים וסופי.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מספרי רמזי ידועים
+\end_layout
+
+\end_inset
+
+...
+\end_layout
+
+\begin_layout Subsubsection
+צביעה אינסופית
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+משפט קוניג
+\end_layout
+
+\end_inset
+
+תהא צביעת קשתות של 
+\begin_inset Formula $K_{\bbn}$
+\end_inset
+
+ לשני צבעים אזי קיימת 
+\begin_inset Formula $H\subseteq\bbn$
+\end_inset
+
+ אינסופית מונוכרומטית.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+משפט ארדש־ראדו
+\end_layout
+
+\end_inset
+
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה עבורה 
+\begin_inset Formula $\left|A\right|>2^{\aleph_{0}}$
+\end_inset
+
+ ותהא צביעת קשתות של 
+\begin_inset Formula $K_{A}$
+\end_inset
+
+ ל־
+\begin_inset Formula $\aleph_{0}$
+\end_inset
+
+ צבעים אזי קיימת 
 \begin_inset Formula $B\subseteq A$
 \end_inset
 
  מונוכרומטית המקיימת 
-\begin_inset Formula $\aleph_{0}<\left|B\right|$
+\begin_inset Formula $\left|B\right|>\aleph_{0}$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-צביעת קודקודים: יהי 
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsection
+צביעת קודקודים
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+צביעת קודקודים
+\end_layout
+
+\end_inset
+
+יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף אזי 
+ גרף, צביעת קודקודים של 
+\begin_inset Formula $G$
+\end_inset
+
+ היא פונקציה 
 \begin_inset Formula $f:V\left(G\right)\to A$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-צביעת קודקודים חוקית: יהי 
+ במקרה זה נגיד כי קודקודי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף אזי צביעת קודקודים 
-\begin_inset Formula $f:V\left(G\right)\to A$
+ נצבעו ב־
+\begin_inset Formula $\left|A\right|$
 \end_inset
 
- המקיימת
-\begin_inset Newline newline
+ צבעים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 
-\begin_inset Formula $\forall v,u\in V\left(G\right).\left\{ v,u\right\} \in E\left(G\right)\implies f\left(v\right)\ne f\left(u\right)$
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+צביעת קודקודים חוקית
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ותהא 
+\begin_inset Formula $f$
+\end_inset
+
+ צביעת קודקודים, 
+\begin_inset Formula $f$
+\end_inset
+
+ תיקרא צביעת קודקודים חוקית אם
+\begin_inset Formula 
+\[
+\forall v,u\in V\left(G\right).\left(\left\{ v,u\right\} \in E\left(G\right)\right)\implies\left(f\left(u\right)\ne f\left(v\right)\right)
+\]
+
+\end_inset
+
+כלומר אם לכל שכנים יש צבע אחר בצביעה.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Claim
+כמות הצביעות החוקיות ב־
+\begin_inset Formula $n$
+\end_inset
+
+ צבעים של 
+\begin_inset Formula $K_{n}$
+\end_inset
+
+ היא 
+\begin_inset Formula $n!$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Subsubsection
+מספר הצביעה
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
 גרף 
 \begin_inset Formula $k$
 \end_inset
 
-־צביע: גרף 
+־צביע
+\end_layout
+
+\end_inset
+
+יהי 
 \begin_inset Formula $G$
 \end_inset
 
- המקיים כי קיימת צביעה חוקית של 
+ גרף ויהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+, הגרף 
+\begin_inset Formula $G$
+\end_inset
+
+ יקרא 
+\begin_inset Formula $k$
+\end_inset
+
+־צביע אם קיימת צביעת קודקודים חוקית של 
 \begin_inset Formula $G$
 \end_inset
 
@@ -34929,103 +35314,169 @@ status collapsed
  צבעים.
 \end_layout
 
+\begin_layout Example
+...
+\end_layout
+
 \begin_layout Standard
-הערה: לכל גרף 
-\begin_inset Formula $G$
+\begin_inset Separator plain
 \end_inset
 
 
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Claim
+יהי 
 \begin_inset Formula $G$
 \end_inset
 
- 
+ גרף אזי )
+\begin_inset Formula $G$
+\end_inset
+
+ גרף 
 \begin_inset Formula $1$
 \end_inset
 
-־צביע 
+־צביע(
 \begin_inset Formula $\iff$
 \end_inset
 
- 
-\begin_inset Formula $E\left(G\right)=\emptyset$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
+)
 \begin_inset Formula $G$
 \end_inset
 
- 
+ גרף ריק(.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי )
+\begin_inset Formula $G$
+\end_inset
+
+ גרף 
 \begin_inset Formula $2$
 \end_inset
 
-־צביע 
+־צביע(
 \begin_inset Formula $\iff$
 \end_inset
 
- 
+)
 \begin_inset Formula $G$
 \end_inset
 
- גרף דו צדדי.
+ גרף דו צדדי(.
 \end_layout
 
-\begin_layout Standard
-משפט: 
-\begin_inset Formula $G$
-\end_inset
-
- גרף דו צדדי 
-\begin_inset Formula $\iff$
-\end_inset
-
- אין ב־
-\begin_inset Formula $G$
-\end_inset
-
- מעגלים באורך אי־זוגי.
+\begin_layout Proof
+...
 \end_layout
 
-\begin_layout Standard
-מספר הצביעה: יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף אזי 
-\begin_inset Formula $\chi\left(G\right)$
-\end_inset
-
- הינו המספר הטבעי 
+\begin_layout Remark
+כעת ניתן להכליל את הגדרת גרף דו צדדי לגרף 
 \begin_inset Formula $n$
 \end_inset
 
- הכי קטן כך ש־
+ צדדי כך, גרף 
 \begin_inset Formula $G$
 \end_inset
 
- 
+ יקרא 
+\begin_inset Formula $n$
+\end_inset
+
+ צדדי אם 
+\begin_inset Formula $G$
+\end_inset
+
+ הוא 
 \begin_inset Formula $n$
 \end_inset
 
 ־צביע.
 \end_layout
 
-\begin_layout Standard
-הערה: יהי 
+\begin_layout Theorem
+יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרףׂ שמקיים 
-\begin_inset Formula $E\left(G\right)\ne\emptyset$
+ גרף אזי )
+\begin_inset Formula $G$
 \end_inset
 
- אזי 
-\begin_inset Formula $2\le\chi\left(G\right)\le\cn{V\left(G\right)}$
+ גרף דו צדדי(
+\begin_inset Formula $\iff$
+\end_inset
+
+)אין ב־
+\begin_inset Formula $G$
+\end_inset
+
+ מעגלים באורך אי־זוגי(.
+\end_layout
+
+\begin_layout Proof
+...
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+מספר הצביעה
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף, נגדיר את מספר הצביעה של 
+\begin_inset Formula $G$
+\end_inset
+
+ להיות ה־
+\begin_inset Formula $k$
+\end_inset
+
+ המינימלי עבורו 
+\begin_inset Formula $G$
+\end_inset
+
+ הינו 
+\begin_inset Formula $k$
+\end_inset
+
+־צביע ונסמנו בעזרת 
+\begin_inset Formula $\chi\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Claim
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף לא ריק אזי 
+\begin_inset Formula $2\le\chi\left(2\right)\le\left|V\left(G\right)\right|$
 \end_inset
 
 .
@@ -35037,13 +35488,20 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch Logic
-inverted 0
-status collapsed
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
 
 \begin_layout Part
 שונות
 \end_layout
+
+\begin_layout Standard
+\begin_inset Branch Logic
+inverted 0
+status collapsed
 
 \begin_layout Section
 הגדרת המספרים
