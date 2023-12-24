@@ -228,7 +228,7 @@ End
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "C:/Users/user/OneDrive/Documents/macros.lyx"
+filename "E:/University/macros.lyx"
 
 \end_inset
 
@@ -16547,7 +16547,7 @@ status open
 \begin_layout Standard
 \begin_inset Branch Exeption
 inverted 0
-status open
+status collapsed
 
 \begin_layout Section
 פונקציות
@@ -20065,26 +20065,6 @@ f=\lambda\left<n,m\right>\in\bbz.\begin{cases}
 קנטור שרדר ברנשטיין
 \end_layout
 
-\begin_layout Exercise
-תהא 
-\begin_inset Formula $f:A\to B$
-\end_inset
-
- חח
-\begin_inset Quotes erd
-\end_inset
-
-ע אזי 
-\begin_inset Formula $f:A\to\im\left(f\right)$
-\end_inset
-
- חח
-\begin_inset Quotes erd
-\end_inset
-
-ע ועל.
-\end_layout
-
 \begin_layout Standard
 נשים לב לשקילות הקיימת עבור קבוצות סופיות )ומספרים(, אם 
 \begin_inset Formula $\left(n\le m\right)\land\left(m\le n\right)$
@@ -20094,10 +20074,69 @@ f=\lambda\left<n,m\right>\in\bbz.\begin{cases}
 \begin_inset Formula $n=m$
 \end_inset
 
-, אך האם הדבר עדיין תקף עבור קבוצות אינסופיות? האם הוא תקף עבור עוצמה? המשפט
- הבא מראה זאת,
+, אך האם הדבר עדיין תקף עבור קבוצות אינסופיות? האם הוא תקף עבור עוצמה? מטרת
+ משפט קנטור שרדר ברנשטיין הוא להראות זאת בדיוק.
 \end_layout
 
+\begin_layout Exercise
+נשאיר שני תרגילים לקורא על מנת להשלים את ההוכחה של המשפט הבא.
+ תהיינה 
+\begin_inset Formula $A,B,C,D$
+\end_inset
+
+ קבוצות עבורן 
+\begin_inset Formula $A,C$
+\end_inset
+
+ זרות וכן 
+\begin_inset Formula $B,D$
+\end_inset
+
+ זרות, תהיינה 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ וכן 
+\begin_inset Formula $g:C\to D$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+נניח כי 
+\begin_inset Formula $f,g$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע אזי 
+\begin_inset Formula $f\uplus g$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע.
+\end_layout
+
+\begin_layout Enumerate
+נניח כי 
+\begin_inset Formula $f,g$
+\end_inset
+
+ על אזי 
+\begin_inset Formula $f\uplus g$
+\end_inset
+
+ על.
+\end_layout
+
+\end_deeper
 \begin_layout Theorem
 \begin_inset Argument 1
 status open
@@ -20133,19 +20172,19 @@ status open
 
 \begin_layout Proof
 תהיינה 
-\begin_inset Formula $A_{0},B_{0}$
+\begin_inset Formula $A,B$
 \end_inset
 
  קבוצות המקיימות 
-\begin_inset Formula $\left|A_{0}\right|\le\left|B_{0}\right|$
+\begin_inset Formula $\left|A\right|\le\left|B\right|$
 \end_inset
 
  וכן 
-\begin_inset Formula $\left|B_{0}\right|\le\left|A_{0}\right|$
+\begin_inset Formula $\left|B\right|\le\left|A\right|$
 \end_inset
 
  אזי תהיינה 
-\begin_inset Formula $f_{0}:A_{0}\to B_{0}$
+\begin_inset Formula $f:A\to B$
 \end_inset
 
  חח
@@ -20153,91 +20192,446 @@ status open
 \end_inset
 
 ע וכן 
-\begin_inset Formula $g_{0}:B_{0}\to A_{0}$
+\begin_inset Formula $g:B\to A$
 \end_inset
 
  חח
 \begin_inset Quotes erd
 \end_inset
 
-ע, נסמן 
-\begin_inset Formula $A_{1}=\im\left(f_{0}\right)$
-\end_inset
-
- וכן 
-\begin_inset Formula $B_{1}=\im\left(g_{0}\right)$
-\end_inset
-
- לכן מהתרגיל מלעיל מתקיים 
-\begin_inset Formula $\left|A_{0}\right|=\left|A_{1}\right|$
-\end_inset
-
- וכן 
-\begin_inset Formula $\left|B_{0}\right|=\left|B_{1}\right|$
-\end_inset
-
- בפרט מתכונות עוצמה נקבל כי
-\begin_inset Formula 
-\begin{align*}
-\left|A_{1}\right| & \le\left|B_{1}\right| & \left|B_{1}\right| & \le\left|A_{1}\right|
-\end{align*}
-
-\end_inset
-
-כעת עבור 
+ע, נסמן לכל 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
- נגדיר באותה צורה באופן רקורסיבי, מתקיים 
-\begin_inset Formula $\left|A_{n}\right|\le\left|B_{n}\right|$
-\end_inset
 
- וכן 
-\begin_inset Formula $\left|B_{n}\right|\le\left|A_{n}\right|$
-\end_inset
-
- אזי תהיינה 
-\begin_inset Formula $f_{n}:A_{n}\to B_{n}$
-\end_inset
-
- חח
-\begin_inset Quotes erd
-\end_inset
-
-ע וכן 
-\begin_inset Formula $g_{n}:B_{n}\to A_{n}$
-\end_inset
-
- חח
-\begin_inset Quotes erd
-\end_inset
-
-ע, נסמן 
-\begin_inset Formula $A_{n+1}=\im\left(f_{n}\right)$
-\end_inset
-
- וכן 
-\begin_inset Formula $B_{n+1}=\im\left(g_{n}\right)$
-\end_inset
-
- לכן מהתרגיל מלעיל מתקיים 
-\begin_inset Formula $\left|A_{n}\right|=\left|A_{n+1}\right|$
-\end_inset
-
- וכן 
-\begin_inset Formula $\left|B_{n}\right|=\left|B_{n+1}\right|$
-\end_inset
-
- בפרט מתכונות עוצמה נקבל כי
 \begin_inset Formula 
 \begin{align*}
-\left|A_{n+1}\right| & \le\left|B_{n+1}\right| & \left|B_{n+1}\right| & \le\left|A_{n+1}\right|
+A_{0} & =A & B_{0} & =B\\
+A_{n+1} & =A\backslash g\left[B\backslash B_{n+1}\right] & B_{n+1} & =f\left[A_{n}\right]
 \end{align*}
 
 \end_inset
 
-ויואלית ...
- , 
+...
+ )ויזואלי כמו על הלוח(, כמו כן נשים לב כי מתקיים 
+\begin_inset Formula $A_{1}\subseteq A_{0}$
+\end_inset
+
+ מהגדרת 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+, נניח עבור 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ כי 
+\begin_inset Formula $A_{n}\subseteq A_{n-1}$
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\begin{align*}
+A_{n}\subseteq A_{n-1} & \implies f\left[A_{n}\right]\subseteq f\left[A_{n-1}\right]\implies B\backslash B_{n}\subseteq B\backslash B_{n+1}\\
+ & \implies g\left[B\backslash B_{n}\right]\subseteq g\left[B\backslash B_{n+1}\right]\implies A\backslash g\left[B\backslash B_{n+1}\right]\subseteq A\backslash g\left[B\backslash B_{n}\right]\\
+ & \implies A_{n+1}\subseteq A_{n}
+\end{align*}
+
+\end_inset
+
+ולכן יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\[
+B_{n+1}=f\left[A_{n}\right]\subseteq f\left[A_{n-1}\right]=B_{n}
+\]
+
+\end_inset
+
+נסמן
+\begin_inset Formula 
+\begin{align*}
+A_{\omega} & =\bigcap_{n=0}^{\infty}A_{n} & B_{\omega} & =\bigcap_{n=0}^{\infty}B_{n}
+\end{align*}
+
+\end_inset
+
+אזי נשים לב כי
+\end_layout
+
+\begin_layout Proof
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "48col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+הפונקציה 
+\begin_inset Formula $f_{\upharpoonright_{A_{\omega}}}:A_{\omega}\to B_{\omega}$
+\end_inset
+
+ היא חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל,
+\end_layout
+
+\begin_layout Itemize
+מוגדרת היטב, תהא 
+\begin_inset Formula $a\in A_{\omega}$
+\end_inset
+
+ מהגדרת 
+\begin_inset Formula $A_{\omega}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a\in A_{n}$
+\end_inset
+
+ לכן 
+\begin_inset Formula $f\left(a\right)\in f\left[A_{n}\right]$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $a\in B_{\omega}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+חח
+\begin_inset Quotes erd
+\end_inset
+
+ע, יהיו 
+\begin_inset Formula $a_{1},a_{2}\in A_{\omega}$
+\end_inset
+
+ נניח כי 
+\begin_inset Formula $f_{\upharpoonright_{A_{\omega}}}\left(a_{1}\right)=f_{\upharpoonright_{A_{\omega}}}\left(a_{2}\right)$
+\end_inset
+
+ אזי מהגדרת צמצום 
+\begin_inset Formula $f\left(a_{1}\right)=f\left(a_{2}\right)$
+\end_inset
+
+ ומהגדרת 
+\begin_inset Formula $f$
+\end_inset
+
+ היא חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ולכן 
+\begin_inset Formula $a_{1}=a_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+על, יהי 
+\begin_inset Formula $b\in B_{\omega}$
+\end_inset
+
+ אזי מהגדרת 
+\begin_inset Formula $B_{\omega}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $b\in B_{n}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $b\in f\left[A_{n-1}\right]$
+\end_inset
+
+ בפרט לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ קיים 
+\begin_inset Formula $a_{n}\in A_{n}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $f\left(a_{n}\right)=b$
+\end_inset
+
+ מהיות 
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע קיים 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $a_{n}=a$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ נשים לב כי 
+\begin_inset Formula $f\left(a\right)=b$
+\end_inset
+
+ כמו כן 
+\begin_inset Formula $a\in A_{\omega}$
+\end_inset
+
+ מכיוון והוא מקיים 
+\begin_inset Formula $a\in A_{n}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ בפרט 
+\begin_inset Formula $f_{\upharpoonright_{A_{\omega}}}\left(a\right)=b$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hfill
+\backslash
+vline
+\backslash
+hfill
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "48col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+הפונקציה 
+\begin_inset Formula $g_{\upharpoonright_{B\backslash B_{\omega}}}:B\backslash B_{\omega}\to A\backslash A_{\omega}$
+\end_inset
+
+ היא חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל,
+\end_layout
+
+\begin_layout Itemize
+מוגדרת היטב, תהא 
+\begin_inset Formula $b\in B\backslash B_{\omega}$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $b\notin B_{n+1}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g\left(b\right)\in g\left[B\backslash B_{n+1}\right]$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $b\notin A_{n+1}$
+\end_inset
+
+ בפרט 
+\begin_inset Formula $b\notin A_{\omega}$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $b\in A\backslash A_{\omega}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+חח
+\begin_inset Quotes erd
+\end_inset
+
+ע, יהיו 
+\begin_inset Formula $b_{1},b_{2}\in B\backslash B_{\omega}$
+\end_inset
+
+ נניח כי 
+\begin_inset Formula $g_{\upharpoonright_{B\backslash B_{\omega}}}\left(b_{1}\right)=g_{\upharpoonright_{B\backslash B_{\omega}}}\left(b_{2}\right)$
+\end_inset
+
+ אזי מהגדרת צמצום 
+\begin_inset Formula $g\left(b_{1}\right)=g\left(b_{2}\right)$
+\end_inset
+
+ ומהגדרת 
+\begin_inset Formula $g$
+\end_inset
+
+ היא חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ולכן 
+\begin_inset Formula $b_{1}=b_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+על, יהי 
+\begin_inset Formula $a\in A\backslash A_{\omega}$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $a\notin A_{n+1}$
+\end_inset
+
+ בפרט 
+\begin_inset Formula $a\in g\left[B\backslash B_{n+1}\right]$
+\end_inset
+
+ ולכן קיים 
+\begin_inset Formula $b\in B\backslash B_{n+1}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $g\left(b\right)=a$
+\end_inset
+
+ כמו כן מתקיים 
+\begin_inset Formula $b\in B\backslash B_{\omega}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+כעת נגדיר 
+\begin_inset Formula $h:A\to B$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל בתור 
+\begin_inset Formula $h=f_{\upharpoonright_{A_{\omega}}}\uplus\left(g_{\upharpoonright_{B\backslash B_{\omega}}}\right)^{-1}$
+\end_inset
+
+ ובכתיב לאמבדא
+\begin_inset Formula 
+\[
+h=\lambda a\in A.\begin{cases}
+f\left(a\right) & a\in A_{\omega}\\
+g^{-1}\left(a\right) & a\notin A_{\omega}
+\end{cases}
+\]
+
+\end_inset
+
+כעת מהתרגיל מלעיל נובע כי 
+\begin_inset Formula $h$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל, כלומר 
+\begin_inset Formula $\left|A\right|=\left|B\right|$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Example
