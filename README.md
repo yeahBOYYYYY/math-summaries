@@ -1,4 +1,1 @@
-# lbl
-sfsfsf
-gfdhderhjrtdjh
-trjpokrtpjortk op
+# math summaries
