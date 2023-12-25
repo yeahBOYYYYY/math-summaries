@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="main.css">
         <script src="main.js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="test.png">
     </head>
     <body>
         <h1>סיכומים במתמטיקה</h1>
@@ -23,29 +24,33 @@
                 <ul>
                     <li><a href="../lbl/calculus_1a_lbl.pdf">חדו"א1</a></li>
                     <li><a href="">חדו"א2</a></li>
-                    <li><a href="..">חדו"א3</a></li>
-                    <li><a href="../lbl/calculus_1a_lbl.pdf">מרוכבות1</a></li>
+                    <li><a href="">חדו"א3</a></li>
+                    <li><a href="">מרוכבות1</a></li>
                 </ul>
             </li>
             <li>אלגברה
                 <ul>
-                    <li><a href="../lbl/calculus_1a_lbl.pdf">לינארית1</a></li>
-                    <li><a href="../lbl/calculus_1a_lbl.pdf">לינארית2</a></li>
-                    <li><a href="../lbl/calculus_1a_lbl.pdf">חבורות</a></li>
+                    <li><a href="../lbl/linear_algebra_1a_lbl.pdf">לינארית1</a></li>
+                    <li>
+                        <a href="../lbl/linear_algebra_2a_lbl_v2.pdf">לינארית2 - 2023ב</a>
+                        או ראה גרסה ישנה יותר של הקורס
+                        <a href="../lbl/linear_algebra_2a_lbl_v1.pdf">לינארית2 - 2022ב</a>
+                    </li>
+                    <li><a href="../lbl/group_theory_lbl.pdf">חבורות</a></li>
                 </ul>
             </li>
             <li>הסתברות וסטטיסטיקה
                 <ul>
-                    <li><a href="../lbl/calculus_1a_lbl.pdf">הסתברות בדידה</a></li>
-                    <li><a href="../lbl/calculus_1a_lbl.pdf">הסתברות רציפה</a></li>
+                    <li><a href="../lbl/introduction_to_probability_theory_lbl.pdf">הסתברות בדידה</a></li>
+                    <li><a href="">הסתברות רציפה</a></li>
                 </ul>
             </li>
-            <li><a href="../lbl/calculus_1a_lbl.pdf">תורת המספרים</a></li>
+            <li><a href="../lbl/number_theory_lbl.pdf">תורת המספרים</a></li>
             <li>בגרות
                 <ul>
-                    <li><a href="../lbl/calculus_1a_lbl.pdf">קורס A</a></li>
-                    <li><a href="../lbl/calculus_1a_lbl.pdf">קורס B</a></li>
-                    <li><a href="../lbl/calculus_1a_lbl.pdf">פיזיקה</a></li>
+                    <li><a href="../lbl/course_A_lbl.pdf">קורס A</a></li>
+                    <li><a href="../lbl/course_B_lbl.lyx">קורס B</a></li>
+                    <li><a href="../lbl/physics_bagrut_lbl.pdf">פיזיקה</a></li>
                 </ul>
             </li>
         </ul>
@@ -56,6 +61,13 @@
         
 
         <table border="1" id="myTable">
+            <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col style="width: 25%;">
+            </colgroup>
             <tr>
                 <td style="font-weight: bold;">
                     <div id="HASH">
@@ -81,72 +93,97 @@
                         <span><button onclick="sortTable(3)">Sort</button></span>
                     </div>
                 </td>
+                <td style="font-weight: bold;">
+                    <div id="HASH">
+                        <span>מרצה</span>
+                        <span><button onclick="sortTable(4)">Sort</button></span>
+                    </div>
+                </td>
             </tr>
             <tr>
                 <td>בדידה</td>
                 <td>מתמטיקה בדידה</td>
                 <td>2021 ב</td>
                 <td>03681118</td>
+                <td>מר בנאמו תום, ד"ר רובינשטיין אמיר</td>
             </tr>
             <tr>
                 <td>חדו"א1</td>
                 <td>חשבון דיפרנציאלי ואינטגרלי 1א</td>
                 <td>2023 א</td>
                 <td>03661101</td>
+                <td>ד"ר פיטן ארז, פרופ' ארטשטיין שירי</td>
             </tr>
             <tr>
                 <td>חדו"א2</td>
                 <td>חשבון דיפרנציאלי ואינטגרלי 2א</td>
                 <td>2024 א</td>
                 <td>03661102</td>
+                <td></td>
             </tr>
             <tr>
                 <td>חדו"א3</td>
                 <td>חשבון דיפרנציאלי ואינטגרלי 3</td>
                 <td>2024 א</td>
                 <td>03662141</td>
+                <td></td>
             </tr>
             <tr>
                 <td>מרוכבות1</td>
                 <td>תורת הפונקציות המרוכבות 1</td>
                 <td>2024 א</td>
                 <td>03662123</td>
+                <td></td>
             </tr>
             <tr>
                 <td>לינארית1</td>
                 <td>אלגברה לינארית 1א</td>
                 <td>2022 א</td>
                 <td>03661111</td>
+                <td>מר בנאמו תום, פרופ' גינסבורג דוד, ד"ר מוזיקנטוב יבגני</td>
             </tr>
             <tr>
                 <td>לינארית2</td>
                 <td>אלגברה לינארית 2א</td>
-                <td></td>
+                <td>
+                    2023 ב
+                    <br>
+                    2022 ב
+                </td>
                 <td>03661112</td>
+                <td>
+                    פרופ' שוסטין יבגני
+                    <br>
+                    מר בנאמו תום, פרופ' שלום יהודה, ד"ר אמיר ענת
+                </td>
             </tr>
             <tr>
                 <td>חבורות</td>
                 <td>תורת החבורות</td>
                 <td>2012 ב</td>
                 <td>03662132</td>
+                <td></td>
             </tr>
             <tr>
                 <td>הסתברות בדידה</td>
                 <td>מבוא להסתברות</td>
                 <td>2023 ב</td>
                 <td>03662010</td>
+                <td>מר לוטן רז, ד"ר סלומקה בועז אברהם</td>
             </tr>
             <tr>
                 <td>הסתברות רציפה</td>
                 <td>הסתברות למדעים</td>
                 <td>2024 א</td>
                 <td>03652100</td>
+                <td></td>
             </tr>
             <tr>
                 <td>תורת המספרים</td>
                 <td>תורת המספרים</td>
                 <td>2022 א</td>
                 <td>03662140</td>
+                <td></td>
         </table>
     </body>
 </html>
