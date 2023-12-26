@@ -1,30 +1,34 @@
+var colState = Array(5).fill(0); // 0 = unsorted, 1 = ascending, 2 = descending
+
+
 function sortTable(col) {
-    var table, rows, switching, i, x, y, shouldSwitch;
-    table = document.getElementById("myTable");
-    switching = true;
-    while (switching) {
-      switching = false;
-      rows = table.rows;
-      for (i = 1; i < (rows.length - 1); i++) {
-        shouldSwitch = false;
-        x = rows[i].getElementsByTagName("TD")[col];
-        y = rows[i + 1].getElementsByTagName("TD")[col];
-        if (col == 2 || col == 3){
-          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-              shouldSwitch = true;
-              break;
-          }
-        } else {
-          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-              shouldSwitch = true;
-              break;
-          }
-        }
-  
-      }
-      if (shouldSwitch) {
-        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-        switching = true;
-      }
-    }
-  }
+	if (colState[col] == 0){
+		sortUnsortedTable(col);
+		colState[col] = 1;
+	}
+}
+
+function sortUnsortedTable(col) {
+	// Get the table element
+	var table = document.getElementById("myTable");
+
+	// Get the rows of the table
+	var rows = Array.from(table.rows);
+
+	// Sort the rows based on the column values
+	rows.sort(function(a, b) {
+		var aValue = a.cells[col].textContent;
+		var bValue = b.cells[col].textContent;
+		return aValue.localeCompare(bValue);
+	});
+
+	// Remove existing rows from the table
+	while (table.rows.length > 0) {
+		table.deleteRow(0);
+	}
+
+	// Add sorted rows back to the table
+	rows.forEach(function(row) {
+		table.appendChild(row);
+	});
+}
