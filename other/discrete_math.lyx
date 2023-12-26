@@ -180,17 +180,17 @@ End
 \color #faf0e6
 \end_branch
 \branch Exeption
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch Combi
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch Graph
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -1937,7 +1937,14 @@ status open
 \end_inset
 
 .
- ידוע כי סבתא של אלון מעולם לא הייתה רכבת, אך סבתא של נעם כן הייתה רכבת.
+ כמו כן ידוע כי 
+\begin_inset Quotes eld
+\end_inset
+
+סבתא של אלון מעולם לא הייתה רכבת, אך סבתא של נעם כן הייתה רכבת.
+\begin_inset Quotes erd
+\end_inset
+
  איזה אחד מהבאים ניתן להסיק?
 \end_layout
 
@@ -15054,11 +15061,91 @@ status open
 \end_inset
 
 .
- ...
-\end_layout
+ נראה באינדוקציה כי
+\begin_inset Formula 
+\[
+R^{\left(m\right)}=\left\{ \left<n,n+m\right>\mid n\in\bbn\right\} 
+\]
 
-\begin_layout Standard
-\begin_inset Separator plain
+\end_inset
+
+עבור 
+\begin_inset Formula $m=1$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $R^{\left(1\right)}=R$
+\end_inset
+
+ כנדרש, נניח עבור 
+\begin_inset Formula $m\in\bbn_{+}$
+\end_inset
+
+, נשים לב כי מתקיים 
+\begin_inset Formula $R^{\left(m+1\right)}=R^{\left(m\right)}\circ R$
+\end_inset
+
+, אזי עבור 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ מתקיים
+\begin_inset Formula 
+\[
+\left.\substack{\left<n,n+1\right>\in R\\
+\left<n+1,n+1+m\right>\in R^{\left(m\right)}
+}
+\right\} \implies\left<n,n+m+1\right>\in R^{\left(m+1\right)}
+\]
+
+\end_inset
+
+כמו כן יהי 
+\begin_inset Formula $\left<x,y\right>\in R^{\left(m+1\right)}$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $z\in\bbn$
+\end_inset
+
+ עבורו
+\begin_inset Formula 
+\begin{align*}
+\left<x,z\right>\in & R & \left<z,y\right>\in & R^{\left(m\right)}
+\end{align*}
+
+\end_inset
+
+בפרט מהנחת האינדוקציה והגדרת 
+\begin_inset Formula $R$
+\end_inset
+
+ נקבל 
+\begin_inset Formula $z=x+1$
+\end_inset
+
+ וכן 
+\begin_inset Formula $y=z+m$
+\end_inset
+
+ כלומר 
+\begin_inset Formula $y=x+m+1$
+\end_inset
+
+, בפרט קיבלנו כי
+\begin_inset Formula 
+\[
+R^{\left(m\right)}=\left\{ \left<n,n+m\right>\mid n\in\bbn\right\} 
+\]
+
+\end_inset
+
+לכן מהגדרת הסגור הטרנזיטיבי
+\begin_inset Formula 
+\[
+R^{\star}=\bigcup_{i=1}^{\infty}R^{\left(i\right)}=\bigcup_{i=1}^{\infty}\left\{ \left<n,n+i\right>\mid n\in\bbn\right\} =<_{\bbn}
+\]
+
 \end_inset
 
 
@@ -15666,7 +15753,46 @@ status open
 \begin_inset Formula $\Pi$
 \end_inset
 
- חלוקה, ...
+ חלוקה, נייצג חלוקה בצורה הבאה
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svgs/halukaVenn.svg
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+בצורה זאת כל 
+\begin_inset Quotes eld
+\end_inset
+
+שבר
+\begin_inset Quotes erd
+\end_inset
+
+ בקבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+ מתאר תת־קבוצה 
+\begin_inset Formula $X\subseteq A$
+\end_inset
+
+ אשר נמצאת בחלוקה, כלומר 
+\begin_inset Formula $X\in\Pi$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -19404,7 +19530,7 @@ f^{-1}\circ f & =\id_{A} & f\circ f^{-1} & =\id_{B}
 \begin_layout Standard
 \begin_inset Branch Exeption
 inverted 0
-status open
+status collapsed
 
 \begin_layout Section
 עוצמות
