@@ -180,17 +180,17 @@ End
 \color #faf0e6
 \end_branch
 \branch Exeption
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch Combi
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch Graph
-\selected 0
+\selected 1
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -28279,8 +28279,11 @@ status open
 .
 \end_layout
 
-\begin_layout Example
-...
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition
@@ -28309,7 +28312,23 @@ status open
 \end_layout
 
 \begin_layout Example
-...
+נשים לב כי לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula ${n \choose 0}=1$
+\end_inset
+
+, 
+\begin_inset Formula ${n \choose 1}=n$
+\end_inset
+
+, 
+\begin_inset Formula ${n \choose 2}=\frac{n\left(n-1\right)}{2}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Definition
@@ -29410,14 +29429,27 @@ a\notin S & \implies & f\left(S\uplus\left\{ a\right\} \right)=\left(S\uplus\lef
 \end_inset
 
  קבוצה סופית אזי 
-\begin_inset Formula $\left|\P_{\text{even}}\left(A\right)\right|=2^{n-1}$
+\begin_inset Formula $\left|\P_{\text{even}}\left(A\right)\right|=2^{\left|A\right|-1}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Proof
-...
+תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה סופית אזי
+\begin_inset Formula 
+\begin{align*}
+2^{\left|A\right|} & =\left|\P\left(A\right)\right|=\left|\P_{\text{even}}\left(A\right)\uplus\P_{\text{odd}}\left(A\right)\right|=\left|\P_{\text{even}}\left(A\right)\right|+\left|\P_{\text{odd}}\left(A\right)\right|=2\left|\P_{\text{even}}\left(A\right)\right|\\
+ & \implies\left|\P_{\text{even}}\left(A\right)\right|=2^{\left|A\right|-1}
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -29676,7 +29708,19 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קבוצות סופיות
+\begin_inset Formula 
+\[
+\left|A\cup B\right|=\left|A\uplus\left(B\backslash A\right)\right|=\left|A\right|+\left|B\backslash A\right|=\left|A\right|+\left|B\backslash\left(A\cap B\right)\right|=\left|A\right|+\left|B\right|-\left|A\cap B\right|
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -29722,7 +29766,35 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+עבור 
+\begin_inset Formula $n=2$
+\end_inset
+
+ הוכחנו מלעיל, נניח עבור 
+\begin_inset Formula $A_{1}\ldots A_{n-1}$
+\end_inset
+
+ קבוצות סופיות, אזי ...
+\begin_inset Formula 
+\begin{align*}
+\left|\bigcup_{i=1}^{n}A_{i}\right| & =\left|\left(\bigcup_{i=1}^{n-1}A_{i}\right)\cup A_{n}\right|=\left|\bigcup_{i=1}^{n-1}A_{i}\right|+\left|A_{n}\backslash\left(\bigcup_{i=1}^{n-1}A_{i}\right)\right|\\
+ & =\left(\sum_{k=1}^{n-1}\left(-1\right)^{k+1}\left(\sum_{I\in\P_{k}\left(n-1\right)}\left|\bigcap_{i\in I}A_{i}\right|\right)\right)+\left|A_{n}\backslash\left(\left(\bigcup_{i=1}^{n-1}A_{i}\right)\cap A_{n}\right)\right|\\
+ & =\left(\sum_{k=1}^{n-1}\left(-1\right)^{k+1}\left(\sum_{I\in\P_{k}\left(n-1\right)}\left|\bigcap_{i\in I}A_{i}\right|\right)\right)+\left|A_{n}\right|-\left|\left(\bigcup_{i=1}^{n-1}A_{i}\right)\cap A_{n}\right|\\
+ & =\left(\sum_{k=1}^{n-1}\left(-1\right)^{k+1}\left(\sum_{I\in\P_{k}\left(n-1\right)}\left|\bigcap_{i\in I}A_{i}\right|\right)\right)+\left|A_{n}\right|-\left|\bigcup_{i=1}^{n-1}\left(A_{i}\cap A_{n}\right)\right|\\
+ & =\left(\sum_{k=1}^{n-1}\left(-1\right)^{k+1}\left(\sum_{I\in\P_{k}\left(n-1\right)}\left|\bigcap_{i\in I}A_{i}\right|\right)\right)+\left|A_{n}\right|-\sum_{k=1}^{n-1}\left(-1\right)^{k+1}\left(\sum_{I\in\P_{k}\left(n-1\right)}\left|\bigcap_{i\in I}\left(A_{i}\cap A_{n}\right)\right|\right)\\
+ & =\left(\sum_{k=1}^{n-1}\left(-1\right)^{k+1}\left(\sum_{I\in\P_{k}\left(n-1\right)}\left|\bigcap_{i\in I}A_{i}\right|\right)\right)+\left|A_{n}\right|-\sum_{k=1}^{n-1}\left(-1\right)^{k+1}\left(\sum_{I\in\P_{k}\left(n-1\right)}\left|\bigcap_{i\in I\cup\left\{ n\right\} }A_{i}\right|\right)\\
+ & =\left(\sum_{k=1}^{n-1}\left(-1\right)^{k+1}\left(\sum_{\substack{I\in\P_{k}\left(n\right)\\
+n\notin I
+}
+}\left|\bigcap_{i\in I}A_{i}\right|\right)\right)+\left|A_{n}\right|+\sum_{k=1}^{n-1}\left(-1\right)^{k+2}\left(\sum_{\substack{I\in\P_{k}\left(n\right)\\
+n\in I
+}
+}\left|\bigcap_{i\in I}A_{i}\right|\right)
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -29763,7 +29835,28 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+תהיינה 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ קבוצות סופיות ונניח כי
+\begin_inset Formula 
+\[
+\forall k\in\left\{ 1\ldots n\right\} .\forall I,J\in\P_{k}\left(n\right).\left|\bigcap_{i\in I}A_{i}\right|=\left|\bigcap_{j\in J}A_{J}\right|
+\]
+
+\end_inset
+
+ממשפט מלעיל מתקיים
+\begin_inset Formula 
+\begin{align*}
+\left|\bigcup_{i=1}^{n}A_{i}\right| & =\sum_{k=1}^{n}\left(-1\right)^{k+1}\left(\sum_{I\in\P_{k}\left(n\right)}\left|\bigcap_{i\in I}A_{i}\right|\right)=\sum_{k=1}^{n}\left(-1\right)^{k+1}\left(\sum_{I\in\P_{k}\left(n\right)}\left|\bigcap_{i\in\left\{ 1\ldots k\right\} }A_{i}\right|\right)\\
+ & =\sum_{k=1}^{n}\left(-1\right)^{k+1}\left(\left|\P_{k}\left(n\right)\right|\cdot\left|\bigcap_{i=1}^{k}A_{i}\right|\right)=\sum_{k=1}^{n}\left(-1\right)^{k+1}\binom{n}{k}\left|\bigcap_{i=1}^{k}A_{i}\right|
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Example
@@ -29829,6 +29922,22 @@ status open
 
 \begin_layout Proof
 ...
+\end_layout
+
+\begin_layout Remark
+מהמשפט מלעיל נובע כי כמות התמורות בקבוצה 
+\begin_inset Formula $\left\{ 1\ldots n\right\} $
+\end_inset
+
+ ללא נקודת שבת הוא בקירוב טוב 
+\begin_inset Formula $\frac{n!}{e}$
+\end_inset
+
+, בפרט ההסתברות של תמורה אקראית להיות ללא נקודת שבת שואף ל־
+\begin_inset Formula $\frac{1}{e}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -30625,7 +30734,7 @@ status open
 \end_inset
 
  ויהי 
-\begin_inset Formula $x\in\bbr$
+\begin_inset Formula $x\in\bbr\backslash\left\{ 1\right\} $
 \end_inset
 
  אזי 
@@ -30636,7 +30745,36 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+עבור 
+\begin_inset Formula $n=0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\bbr\backslash\left\{ 1\right\} $
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\sum_{k=0}^{0}x^{k}=1=\frac{1-x^{0+1}}{1-x}$
+\end_inset
+
+ נניח עבור 
+\begin_inset Formula $n-1$
+\end_inset
+
+ כעת יהי 
+\begin_inset Formula $x\in\bbr\backslash\left\{ 1\right\} $
+\end_inset
+
+ מתקיים
+\begin_inset Formula 
+\begin{align*}
+\sum_{k=0}^{n}x^{k} & =x^{n}+\sum_{k=0}^{n-1}x^{k}=x^{n}+\frac{1-x^{n}}{1-x}=\frac{x^{n}\left(1-x\right)}{1-x}+\frac{1-x^{n}}{1-x}\\
+ & =\frac{x^{n}-x^{n+1}+1-x^{n}}{1-x}=\frac{1-x^{n+1}}{1-x}
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Claim
@@ -30665,7 +30803,27 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+יהי 
+\begin_inset Formula $x\in\bbr$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\left|x\right|<1$
+\end_inset
+
+ נשים לב כי
+\begin_inset Formula 
+\[
+\sum_{k=0}^{\infty}x^{k}=\lim_{n\to\infty}\sum_{k=0}^{n}x^{k}=\lim_{n\to\infty}\frac{1-x^{n+1}}{1-x}=\frac{1}{1-x}
+\]
+
+\end_inset
+
+עבור הוכחה פורמלית כי 
+\begin_inset Formula $\lim_{n\to\infty}\frac{1-x^{n+1}}{1-x}=\frac{1}{1-x}$
+\end_inset
+
+ ראו את קורסי החשבון האינטגרלי והדיפרנציאלי.
 \end_layout
 
 \begin_layout Example
@@ -33266,13 +33424,6 @@ status open
 מספר האיברים הנדרשים על מנת לייצג את האיבר הבא בסדרה.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
 \begin_layout Example
 ...
 \end_layout
@@ -33401,8 +33552,8 @@ status open
  הנסיגה.
 \end_layout
 
-\begin_layout Proof
-...
+\begin_layout Remark
+ההוכחה של המשפט נמצאת בקורסי אלגברה לינארית.
 \end_layout
 
 \begin_layout Subsubsection
@@ -33946,7 +34097,34 @@ status open
 \end_layout
 
 \begin_layout Example
-...
+נשים לב כי הגרף הבא
+\begin_inset Formula 
+\[
+{\scriptstyle \left<\left\{ 1,2,3,4,5,6\right\} ,\left\{ \left<1,2\right>,\left<1,4\right>,\left<1,5\right>,\left<2,1\right>,\left<2,3\right>,\left<2,5\right>,\left<3,6\right>,\left<4,3\right>,\left<4,4\right>,\left<4,5\right>,\left<4,6\right>,\left<5,6\right>\right\} \right>}
+\]
+
+\end_inset
+
+ניתן לייצוג על ידי הדיאגרמה
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svgs/graphDirected.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+נשים לב כי החיבורים בין הקודקודים בעלי ראש על מנת לייצג מאיזה צומת לאיזה
+ צומת הקשת.
 \end_layout
 
 \begin_layout Definition
@@ -33975,7 +34153,41 @@ status open
 \end_layout
 
 \begin_layout Example
-...
+בגרף בדוגמה מלעיל
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svgs/graphDirected.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+הצומת 
+\begin_inset Formula $4$
+\end_inset
+
+ היא לולאה מכיוון ומתקיים 
+\begin_inset Formula $\left<4,4\right>\in E$
+\end_inset
+
+, שימו לב כי בגרף זה אומר כי קיימת קשת היוצאת מ־
+\begin_inset Formula $4$
+\end_inset
+
+ וחוזרת אל 
+\begin_inset Formula $4$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Definition
@@ -34060,11 +34272,41 @@ status open
 
 \begin_deeper
 \begin_layout Itemize
-...
+נגדיר גרף
+\begin_inset Formula 
+\[
+{\scriptstyle \left<\left\{ 1,2,3,4,5,6\right\} ,\left\{ \left\{ 1,2\right\} ,\left\{ 1,4\right\} ,\left\{ 1,5\right\} ,\left\{ 2,3\right\} ,\left\{ 2,4\right\} ,\left\{ 2,5\right\} ,\left\{ 3,4\right\} ,\left\{ 3,6\right\} ,\left\{ 4,5\right\} ,\left\{ 4,6\right\} ,\left\{ 5,6\right\} \right\} \right>}
+\]
+
+\end_inset
+
+נשים לב כי הוא ניתן לייצוג על ידי הדיאגרמה
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svgs/graphExample.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-גרף שרוך: עבור 
+
+\series bold
+גרף שרוך
+\series default
+: עבור 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -34076,12 +34318,175 @@ status open
 
 \end_inset
 
-ובציור הגרף יראה כך,
+ובציור הגרף יראה כך )שימו לב כי אלו שלושה גרפים אחד ליד השני(
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svgs/graphSruchN.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vline
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "20col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svgs/graphSruch2.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Formula $n=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vline
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "15col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svgs/graphSruch1.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Formula $n=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-גרף מעגל: עבור 
-\begin_inset Formula $n\in\bbn_{+}$
+
+\series bold
+גרף מעגל
+\series default
+: עבור 
+\begin_inset Formula $n\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
  נגדיר גרף מעגל כך
@@ -34092,7 +34497,114 @@ C_{n}=\left<\left\{ 1\ldots n\right\} ,\left\{ \left\{ k,k+1\right\} \mid k\in\l
 
 \end_inset
 
-ובציור הגרף יראה כך,
+ובציור הגרף יראה כך )שימו לב כי אלו שני גרפים אחד ליד השני(
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "39col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svgs/graphIgul7.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Formula $C_{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vline
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "39col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svgs/graphIgul3.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Formula $C_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -34151,7 +34663,86 @@ status open
 \end_layout
 
 \begin_layout Example
-...
+מבחינת ציור כך נראות קליקות
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svgs/graphK4.pdf
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+K_{4}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svgs/graphK8.pdf
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+K_{8}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svgs/graphK26.pdf
+	scale 80
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+K_{26}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Remark
@@ -34208,7 +34799,26 @@ status open
 \end_layout
 
 \begin_layout Example
-...
+כך נראה גרף דו צדדי בדיאגרמה
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svgs/graphTwoSided.svg
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition
@@ -34257,7 +34867,30 @@ status open
 \end_layout
 
 \begin_layout Example
-...
+כך נראה גרף דו צדדי מלא מסדר 
+\begin_inset Formula $4,4$
+\end_inset
+
+ בדיאגרמה
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svgs/graphTwoSidedComplete.pdf
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -34283,7 +34916,7 @@ status open
 \end_inset
 
  אזי 
-\begin_inset Formula $N\left(v\right)=\left\{ u\in V\mid\left\{ v,u\right\} \in E\right\} $
+\begin_inset Formula $N\left(v\right)=\left\{ u\in V\left(G\right)\mid\left\{ v,u\right\} \in E\left(G\right)\right\} $
 \end_inset
 
 .
@@ -34294,7 +34927,34 @@ status open
 \end_layout
 
 \begin_layout Example
-...
+בגרף הבא
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svgs/graphExample.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+קבוצות השכנים הן
+\begin_inset Formula 
+\begin{align*}
+N\left(1\right) & =\left\{ 2,4,5\right\}  & N\left(2\right) & =\left\{ 1,3,4,5\right\}  & N\left(3\right) & =\left\{ 2,4,6\right\} \\
+N\left(4\right) & =\left\{ 1,2,3,5,6\right\}  & N\left(5\right) & =\left\{ 1,2,4,6\right\}  & N\left(6\right) & =\left\{ 3,4,5\right\} 
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Definition
@@ -34357,7 +35017,34 @@ status open
 \end_layout
 
 \begin_layout Example
-...
+בגרף הבא
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svgs/graphExample.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+דרגות הצמתים הן
+\begin_inset Formula 
+\begin{align*}
+\deg\left(1\right) & =3 & \deg\left(2\right) & =4 & \deg\left(3\right) & =3\\
+\deg\left(4\right) & =5 & \deg\left(5\right) & =4 & \deg\left(6\right) & =3
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Claim
@@ -34377,7 +35064,47 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי צומת 
+\begin_inset Formula $v\in V\left(G\right)$
+\end_inset
+
+ נשים לב כי מהגדרת 
+\begin_inset Formula $\deg$
+\end_inset
+
+ וכן מהגדרת עוצמה מתקיים 
+\begin_inset Formula $0\le\deg\left(v\right)$
+\end_inset
+
+, כעת נניח בשלילה כי 
+\begin_inset Formula $\deg\left(v\right)>\left|V\left(G\right)\right|-1$
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\[
+\left|N\left(v\right)\right|>\left|V\left(G\right)\right|-1
+\]
+
+\end_inset
+
+ולכן מהיות 
+\begin_inset Formula $N\left(v\right)\subseteq V\left(G\right)$
+\end_inset
+
+ נקבל כי
+\begin_inset Formula 
+\[
+\left|V\left(G\right)\right|\ge\left|N\left(v\right)\right|>\left|V\left(G\right)\right|-1
+\]
+
+\end_inset
+
+סתירה.
 \end_layout
 
 \begin_layout Theorem
@@ -34401,8 +35128,221 @@ status open
 .
 \end_layout
 
+\begin_layout Remark
+הוכחה לא פורמלית תהיה מהצורה, נשים לב כי בסכימה באגף הימני כל קשת 
+\begin_inset Formula $\left\{ u,v\right\} $
+\end_inset
+
+ בגרף נספרת פעמיים, פעם אחת על ידי הדרגה של 
+\begin_inset Formula $v$
+\end_inset
+
+ ופעם אחת על ידי הדרגה של 
+\begin_inset Formula $u$
+\end_inset
+
+, לכן הסכום יהיה פי שתיים ממספר הקשתות.
+ נשתמש בסקיצה הזאת בהוכחת המשפט )בעצם לכל קשת נצוות מספר סידורי של כמה פעמים
+ ראינו אותה(.
+\end_layout
+
 \begin_layout Proof
-...
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכיוון ומתקיים 
+\begin_inset Formula $\left|V\left(G\right)\right|\in\bbn$
+\end_inset
+
+ נסמן 
+\begin_inset Formula $n=\left|V\left(G\right)\right|$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:V\left(G\right)\to\left\{ 1\ldots n\right\} $
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל, נשים לב כי
+\begin_inset Formula 
+\begin{align*}
+\sum_{v\in V\left(G\right)}\deg\left(v\right) & =\sum_{v\in V\left(G\right)}\left|N\left(v\right)\right|=\left|\biguplus_{v\in V\left(G\right)}N\left(v\right)\times\left\{ v\right\} \right|=\left|\biguplus_{v\in V\left(G\right)}\left\{ u\in V\left(G\right)\mid\left\{ v,u\right\} \in E\left(G\right)\right\} \times\left\{ v\right\} \right|\\
+ & =\left|\biguplus_{v\in V\left(G\right)}\left\{ \left<u,v\right>\mid u\in V\left(G\right)\land\left\{ v,u\right\} \in E\right\} \right|=\left|\left\{ \left<u,v\right>\in V\left(G\right)^{2}\mid\left\{ v,u\right\} \in E\right\} \right|
+\end{align*}
+
+\end_inset
+
+לכן נסמן
+\begin_inset Formula 
+\[
+A=\left\{ \left<u,v\right>\in V\left(G\right)^{2}\mid\left\{ v,u\right\} \in E\right\} 
+\]
+
+\end_inset
+
+כמו כן מתקיים 
+\begin_inset Formula $2\left|E\left(G\right)\right|=\left|\left(E\left(G\right)\times\left\{ 0\right\} \right)\uplus\left(E\left(G\right)\times\left\{ 1\right\} \right)\right|$
+\end_inset
+
+ ונסמן
+\begin_inset Formula 
+\[
+B=\left(E\left(G\right)\times\left\{ 0\right\} \right)\uplus\left(E\left(G\right)\times\left\{ 1\right\} \right)
+\]
+
+\end_inset
+
+ולכן נגדיר פונקציה 
+\begin_inset Formula $g:A\to B$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל כך
+\begin_inset Formula 
+\[
+g=\lambda\left<u,v\right>\in A.\begin{cases}
+\left\{ u,v\right\} \times\left\{ 0\right\}  & f\left(u\right)<f\left(v\right)\\
+\left\{ u,v\right\} \times\left\{ 1\right\}  & f\left(v\right)<f\left(u\right)
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $g$
+\end_inset
+
+ מוגדרת היטב, נשאר לקורא.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע, יהיו 
+\begin_inset Formula $\left<u_{1},v_{1}\right>,\left<u_{2},v_{2}\right>\in A$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $g\left(u_{1},v_{1}\right)=g\left(u_{2},v_{2}\right)$
+\end_inset
+
+ בה
+\begin_inset Quotes erd
+\end_inset
+
+כ
+\begin_inset Formula 
+\[
+g\left(u_{1},v_{1}\right)=\left\{ u_{1},v_{1}\right\} \times\left\{ 0\right\} 
+\]
+
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\[
+\left\{ u_{1},v_{1}\right\} \times\left\{ 0\right\} =g\left(u_{1},v_{1}\right)=g\left(u_{2},v_{2}\right)=\left\{ u_{2},v_{2}\right\} \times\left\{ i\right\} 
+\]
+
+\end_inset
+
+כמובן 
+\begin_inset Formula $i=0$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\left\{ u_{1},v_{1}\right\} \times\left\{ 0\right\} =\left\{ u_{2},v_{2}\right\} \times\left\{ 0\right\} $
+\end_inset
+
+ כעת מתכונת הזוג הסדור
+\begin_inset Formula 
+\[
+\left\{ u_{1},v_{1}\right\} =\left\{ u_{2},v_{2}\right\} 
+\]
+
+\end_inset
+
+נניח בשלילה כי 
+\begin_inset Formula $u_{1}=v_{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $v_{1}=u_{2}$
+\end_inset
+
+, אך אז מתקיים מההנחה
+\begin_inset Formula 
+\begin{align*}
+f\left(v_{2}\right) & <f\left(u_{2}\right) & f\left(u_{1}\right) & <f\left(v_{1}\right) & f\left(u_{2}\right) & <f\left(v_{2}\right)
+\end{align*}
+
+\end_inset
+
+סתירה ולכן 
+\begin_inset Formula $\left(v_{1}=v_{2}\right)\land\left(u_{1}=u_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g$
+\end_inset
+
+ על, יהי 
+\begin_inset Formula $\left\{ v,u\right\} \times\left\{ i\right\} \in B$
+\end_inset
+
+ נשים לב כי 
+\begin_inset Formula $\left\{ v,u\right\} \in E\left(G\right)$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\left<v,u\right>,\left<u,v\right>\in A$
+\end_inset
+
+ בפרט
+\begin_inset Formula 
+\begin{align*}
+g\left(v,u\right) & =\left\{ v,u\right\} \times\left\{ j\right\}  & g\left(u,v\right) & =\left\{ v,u\right\} \times\left\{ 1-j\right\} 
+\end{align*}
+
+\end_inset
+
+ולכן כי 
+\begin_inset Formula $i\in\left\{ j,1-j\right\} $
+\end_inset
+
+ נקבל כי אחד מהם שווה לדרוש.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+ולכן מתקיים
+\begin_inset Formula 
+\[
+\sum_{v\in V\left(G\right)}\deg\left(v\right)=\left|A\right|=\left|B\right|=2\left|E\left(G\right)\right|
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
