@@ -180,12 +180,12 @@ End
 \color #faf0e6
 \end_branch
 \branch Exeption
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch Combi
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -17029,6 +17029,15 @@ status open
 \end_inset
 
 .
+ בפרט אנו מחוייבים להוכיח כי הפונקציות אשר אנו מגדירים הן 
+\series bold
+מוגדרות היטב
+\series default
+, כלומר שמתקיים 
+\begin_inset Formula $\im\left(f\right)\subseteq\range\left(f\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -17145,7 +17154,7 @@ f\left(y+1\right)=\int_{0}^{y+1}\left(y+1\right)ydy
 
 \end_inset
 
-אשר לא נכון, במקרה בו המשתנה אשר אותו מציבים נמצא בביטוי הלאמבדא נעלץ לשנות
+אשר לא נכון, במקרה בו המשתנה אשר אותו מציבים נמצא בביטוי הלאמבדא נאלץ לשנות
  את שמות המשתנים בכתיב הלמבדא כך
 \begin_inset Formula 
 \[
@@ -34053,7 +34062,7 @@ status open
 \begin_layout Standard
 \begin_inset Branch Graph
 inverted 0
-status collapsed
+status open
 
 \begin_layout Section
 גרפים
@@ -35346,158 +35355,6 @@ g\left(v,u\right) & =\left\{ v,u\right\} \times\left\{ j\right\}  & g\left(u,v\r
 \end_layout
 
 \begin_layout Subsection
-תת גרף
-\end_layout
-
-\begin_layout Definition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-תת גרף
-\end_layout
-
-\end_inset
-
-יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף, גרף 
-\begin_inset Formula $G^{\prime}$
-\end_inset
-
- יקרא תת גרף של 
-\begin_inset Formula $G$
-\end_inset
-
- אם הוא מקיים
-\begin_inset Formula 
-\[
-\left(V\left(G^{\prime}\right)\subseteq V\left(G\right)\right)\land\left(E\left(G^{\prime}\right)\subseteq E\left(G\right)\cap\P_{2}\left(V\left(G^{\prime}\right)\right)\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Remark
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-סימון תת גרף
-\end_layout
-
-\end_inset
-
-בחלק מהמקומות תראו סימונים כמו 
-\begin_inset Formula $G^{\prime}\le G$
-\end_inset
-
- או 
-\begin_inset Formula $G^{\prime}\lhd G$
-\end_inset
-
- עבור העובדה כי 
-\begin_inset Formula $G^{\prime}$
-\end_inset
-
- תת גרף של 
-\begin_inset Formula $G$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Example
-...
-\end_layout
-
-\begin_layout Definition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-תת גרף נפרש
-\end_layout
-
-\end_inset
-
-יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף ותהא 
-\begin_inset Formula $A\subseteq V\left(G\right)$
-\end_inset
-
- התת גרף הנפרש על ידי 
-\begin_inset Formula $A$
-\end_inset
-
- הוא הגרף 
-\begin_inset Formula $G\left[A\right]=\left<A,\P_{2}\left(A\right)\cap E\left(G\right)\right>$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Example
-...
-\end_layout
-
-\begin_layout Definition
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-הגרף המשלים
-\end_layout
-
-\end_inset
-
-יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף אזי הגרף המשלים ל־
-\begin_inset Formula $G$
-\end_inset
-
- הינו הגרף 
-\begin_inset Formula $\overline{G}=\left<V\left(G\right),\P_{2}\left(V\left(G\right)\right)\backslash E\left(G\right)\right>$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Example
-...
-\end_layout
-
-\begin_layout Theorem
-יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף ויהי צומת 
-\begin_inset Formula $v\in V\left(G\right)$
-\end_inset
-
- אזי 
-\begin_inset Formula $\deg_{G}\left(v\right)+\deg_{\overline{G}}\left(v\right)=\left|V\left(G\right)\right|-1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Proof
-...
-\end_layout
-
-\begin_layout Subsection
 טיולים ומסלולים
 \end_layout
 
@@ -35533,7 +35390,7 @@ status open
 \end_inset
 
  נסמן את אורך הטיול כך 
-\begin_inset Formula $\ell\left(\sigma\right)=n-1$
+\begin_inset Formula $\ell\left(\sigma\right)=n$
 \end_inset
 
 .
@@ -35729,9 +35586,347 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהיו 
+\begin_inset Formula $v_{1},v_{2}\in V\left(G\right)$
+\end_inset
+
+ צמתים שונים
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\impliedby$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי קיים מסלול פשוט בין 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ ל־
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ נשים לב כי מסלול פשוט הינו טיול ולכן קיים טיול בין 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ ל־
+\begin_inset Formula $v_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי קיים טיול בין 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ ל־
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ נסמנו 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, אם 
+\begin_inset Formula $\ell\left(\sigma\right)=1$
+\end_inset
+
+ כלומר הטיול הוא 
+\begin_inset Formula $\left<v_{1},v_{2}\right>$
+\end_inset
+
+ אזי זהו גם מסלול פשוט וסיימנו, נניח כי עבור 
+\begin_inset Formula $\ell\left(\sigma\right)<n$
+\end_inset
+
+ הטענה נכונה, כעת עבור טיול 
+\begin_inset Formula $\ell\left(\sigma\right)=n$
+\end_inset
+
+ נסמן 
+\begin_inset Formula $\sigma=\left<a_{0},\ldots,a_{n}\right>$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a_{0}=v_{1}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a_{n}=v_{2}$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+אם 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ אינו מסלול, אזי קיימים 
+\begin_inset Formula $i,j\in\left\{ 1\ldots n\right\} $
+\end_inset
+
+ שונים בה
+\begin_inset Quotes erd
+\end_inset
+
+כ 
+\begin_inset Formula $i<j$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\left\{ a_{i-1},a_{i}\right\} =\left\{ a_{j-1},a_{j}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+אם 
+\begin_inset Formula $a_{i}=a_{j}$
+\end_inset
+
+, נסתכל על המסלול
+\begin_inset Formula 
+\[
+\mu=\left<a_{0},\ldots,a_{i-1},a_{i},a_{j+1},a_{j+2},\ldots,a_{n}\right>
+\]
+
+\end_inset
+
+כלומר החסרנו מהטיול את הקטע 
+\begin_inset Formula $\left<a_{i+1}\ldots a_{j}\right>$
+\end_inset
+
+, נשים לב כי 
+\begin_inset Formula $\mu$
+\end_inset
+
+ הינו טיול מכיוון ו־
+\begin_inset Formula $\sigma$
+\end_inset
+
+ טיול וכן כי מתקיים
+\begin_inset Formula 
+\[
+\left\{ a_{i},a_{j+1}\right\} =\left\{ a_{j},a_{j+1}\right\} \in E\left(G\right)
+\]
+
+\end_inset
+
+אזי 
+\begin_inset Formula $\mu$
+\end_inset
+
+ טיול בין 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ ל־
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\sigma\left(\mu\right)<n$
+\end_inset
+
+ ולכן מהנחת האינדוקציה קיים מסלול פשוט בין 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ ל־
+\begin_inset Formula $v_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $a_{i}=a_{j-1}$
+\end_inset
+
+, נסתכל על המסלול
+\begin_inset Formula 
+\[
+\zeta=\left<a_{0},\ldots,a_{i-1},a_{j+1},a_{j+2},\ldots,a_{n}\right>
+\]
+
+\end_inset
+
+כלומר החסרנו מהטיול את הקטע 
+\begin_inset Formula $\left<a_{i}\ldots a_{j}\right>$
+\end_inset
+
+, נשים לב כי 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ הינו טיול מכיוון ו־
+\begin_inset Formula $\sigma$
+\end_inset
+
+ טיול וכן כי מתקיים
+\begin_inset Formula 
+\[
+\left\{ a_{i-1},a_{j+1}\right\} =\left\{ a_{j},a_{j+1}\right\} \in E\left(G\right)
+\]
+
+\end_inset
+
+אזי 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ טיול בין 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ ל־
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\sigma\left(\zeta\right)<n$
+\end_inset
+
+ ולכן מהנחת האינדוקציה קיים מסלול פשוט בין 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ ל־
+\begin_inset Formula $v_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+אם 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ הינו מסלול, אם 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מסלול פשוט סיימנו אחרת נניח כי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מסלול לא פשוט אזי קיים 
+\begin_inset Formula $i\in\left\{ 1\ldots n\right\} $
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left<a_{0}\ldots a_{i}\right>$
+\end_inset
+
+ בעל מעגל, כלומר קיימים 
+\begin_inset Formula $j,k\in\left\{ 1\ldots i\right\} $
+\end_inset
+
+ בה
+\begin_inset Quotes erd
+\end_inset
+
+כ 
+\begin_inset Formula $j<k$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $a_{j}=a_{k}$
+\end_inset
+
+, נגדיר את הטיול
+\begin_inset Formula 
+\[
+\eta=\left<a_{0},\ldots,a_{j},a_{k+1},\ldots a_{n}\right>
+\]
+
+\end_inset
+
+נשים לב כי 
+\begin_inset Formula $\eta$
+\end_inset
+
+ טיול בין 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ ל־
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ מכיוון ומתקיים 
+\begin_inset Formula $v_{1}\ne v_{2}$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ אינו מעגל וכן כי
+\begin_inset Formula 
+\[
+\left\{ a_{k},a_{k+1}\right\} =\left\{ a_{j},a_{k+1}\right\} \in E\left(G\right)
+\]
+
+\end_inset
+
+מהיות 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ טיול, כמו כן 
+\begin_inset Formula $\ell\left(\eta\right)<n$
+\end_inset
+
+ ולכן מהנחת האינדוקציה קיים מסלול פשוט בין 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ ל־
+\begin_inset Formula $v_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Claim
 יהי 
 \begin_inset Formula $G$
@@ -35757,9 +35952,103 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $v\in V\left(G\right)$
+\end_inset
+
+ צומת
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\impliedby$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי קיים מעגל פשוט סביב 
+\begin_inset Formula $v$
+\end_inset
+
+ נשים לב כי מעגל פשוט הינו מעגל ולכן קיים מעגל סביב 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\implies$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+נניח כי קיים מעגל סביב 
+\begin_inset Formula $v$
+\end_inset
+
+ נסמנו 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, נסמן 
+\begin_inset Formula $n=\ell\left(\sigma\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\sigma=\left<a_{0},\ldots,a_{n}\right>$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a_{0}=a_{n}=v$
+\end_inset
+
+, נשים לב כי 
+\begin_inset Formula $\left<a_{0},\ldots,a_{n-1}\right>$
+\end_inset
+
+ מסלול ובפרט טיול ולכן מהטענה מלעיל קיים מסלול פשוט 
+\begin_inset Formula $\mu$
+\end_inset
+
+ בין 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ ל־
+\begin_inset Formula $a_{n-1}$
+\end_inset
+
+ בפרט המעגל 
+\begin_inset Formula $\left<\mu,a_{n}\right>$
+\end_inset
+
+ סביב 
+\begin_inset Formula $v$
+\end_inset
+
+ הינו מעגל פשוט.
+\end_layout
+
+\end_deeper
 \begin_layout Subsubsection
 אלגוריתם דייקסטרא
 \end_layout
@@ -35847,14 +36136,94 @@ status open
 \end_inset
 
  המקיים 
-\begin_inset Formula $\sigma=\delta\left(G\right)$
+\begin_inset Formula $\ell\left(\sigma\right)=\delta\left(G\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Proof
-...
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף, אם 
+\begin_inset Formula $\delta\left(G\right)=0$
+\end_inset
+
+ אזי נקח את המסלול הריק, אחרת יהי 
+\begin_inset Formula $v_{0}\in V\left(G\right)$
+\end_inset
+
+ מהגדרת 
+\begin_inset Formula $\delta\left(G\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula 
+\[
+\d\left(G\right)\le\deg\left(v_{0}\right)\implies\d\left(G\right)\le\left|N\left(v_{0}\right)\right|
+\]
+
+\end_inset
+
+ולכן קיים 
+\begin_inset Formula $v_{1}\in V\left(G\right)\backslash\left\{ v_{0}\right\} $
+\end_inset
+
+ שכן של 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+ כעת מהגדרת 
+\begin_inset Formula $\delta\left(G\right)$
+\end_inset
+
+ מתקיים
+\begin_inset Formula 
+\[
+\d\left(G\right)\le\left|N\left(v_{1}\right)\right|\implies\d\left(G\right)-1\le\left|N\left(v_{1}\right)\backslash\left\{ v_{0}\right\} \right|
+\]
+
+\end_inset
+
+אזי נבחר 
+\begin_inset Formula $v_{2}\in V\left(G\right)\backslash\left\{ v_{0},v_{1}\right\} $
+\end_inset
+
+ שכן של 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+, נמשיך כך כאשר נבחר 
+\begin_inset Formula $v_{i+1}\in V\left(G\right)\backslash\left\{ v_{0},\ldots,v_{i}\right\} $
+\end_inset
+
+ שכן של 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ המקיים
+\begin_inset Formula 
+\[
+\d\left(G\right)\le\left|N\left(v_{i+1}\right)\right|\implies\d\left(G\right)-\left(i+1\right)\le\left|N\left(v_{i+1}\right)\backslash\left\{ v_{0},\ldots,v_{i}\right\} \right|
+\]
+
+\end_inset
+
+בפרט בצורה זו ניתן לבחור 
+\begin_inset Formula $v_{0},v_{1},\ldots,v_{\delta\left(G\right)}$
+\end_inset
+
+ שונים, לכן 
+\begin_inset Formula $\sigma=\left<v_{0},v_{1},\ldots,v_{\delta\left(G\right)}\right>$
+\end_inset
+
+ הינו מסלול המקיים 
+\begin_inset Formula $\ell\left(\sigma\right)=\d\left(G\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Theorem
@@ -35880,6 +36249,232 @@ status open
 
 \begin_layout Proof
 ...
+\end_layout
+
+\begin_layout Subsection
+תת גרף
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+תת גרף
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף, גרף 
+\begin_inset Formula $G^{\prime}$
+\end_inset
+
+ יקרא תת גרף של 
+\begin_inset Formula $G$
+\end_inset
+
+ אם הוא מקיים
+\begin_inset Formula 
+\[
+\left(V\left(G^{\prime}\right)\subseteq V\left(G\right)\right)\land\left(E\left(G^{\prime}\right)\subseteq E\left(G\right)\cap\P_{2}\left(V\left(G^{\prime}\right)\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+סימון תת גרף
+\end_layout
+
+\end_inset
+
+בחלק מהמקומות תראו סימונים כמו 
+\begin_inset Formula $G^{\prime}\le G$
+\end_inset
+
+ או 
+\begin_inset Formula $G^{\prime}\lhd G$
+\end_inset
+
+ עבור העובדה כי 
+\begin_inset Formula $G^{\prime}$
+\end_inset
+
+ תת גרף של 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+תת גרף נפרש
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ותהא 
+\begin_inset Formula $A\subseteq V\left(G\right)$
+\end_inset
+
+ התת גרף הנפרש על ידי 
+\begin_inset Formula $A$
+\end_inset
+
+ הוא הגרף 
+\begin_inset Formula $G\left[A\right]=\left<A,\P_{2}\left(A\right)\cap E\left(G\right)\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Definition
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+הגרף המשלים
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי הגרף המשלים ל־
+\begin_inset Formula $G$
+\end_inset
+
+ הינו הגרף 
+\begin_inset Formula $\overline{G}=\left<V\left(G\right),\P_{2}\left(V\left(G\right)\right)\backslash E\left(G\right)\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+...
+\end_layout
+
+\begin_layout Theorem
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי צומת 
+\begin_inset Formula $v\in V\left(G\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\deg_{G}\left(v\right)+\deg_{\overline{G}}\left(v\right)=\left|V\left(G\right)\right|-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי צומת 
+\begin_inset Formula $v\in V\left(G\right)$
+\end_inset
+
+, נניח בשלילה כי 
+\begin_inset Formula $N_{G}\left(v\right)\cap N_{\overline{G}}\left(v\right)\ne\emptyset$
+\end_inset
+
+ אזי יהי 
+\begin_inset Formula $u\in N_{G}\left(v\right)\cap N_{\overline{G}}\left(v\right)$
+\end_inset
+
+ מהגדרת קבוצת השכנים מתקיים
+\begin_inset Formula 
+\begin{align*}
+\left\{ v,u\right\}  & \in E\left(G\right) & \left\{ v,u\right\}  & \in E\left(\overline{G}\right)
+\end{align*}
+
+\end_inset
+
+ומהגדרת הגרף המשלים
+\begin_inset Formula 
+\begin{align*}
+\left\{ v,u\right\}  & \in E\left(G\right) & \left\{ v,u\right\}  & \in\P_{2}\left(V\left(G\right)\right)\backslash E\left(G\right)
+\end{align*}
+
+\end_inset
+
+סתירה להגדרת הפרש קבוצות, אזי מתקיים
+\size small
+
+\begin_inset Formula 
+\begin{align*}
+\deg_{G}\left(v\right)+\deg_{\overline{G}}\left(v\right) & =\left|N_{G}\left(v\right)\right|+\left|N_{\overline{G}}\left(v\right)\right|\\
+ & =\left|\left\{ u\in V\left(G\right)\mid\left\{ v,u\right\} \in E\left(G\right)\right\} \right|+\left|\left\{ u\in V\left(\overline{G}\right)\mid\left\{ v,u\right\} \in E\left(\overline{G}\right)\right\} \right|\\
+ & =\left|\left\{ u\in V\left(G\right)\mid\left\{ v,u\right\} \in E\left(G\right)\right\} \right|+\left|\left\{ u\in V\left(G\right)\mid\left\{ v,u\right\} \in\P_{2}\left(V\left(G\right)\right)\backslash E\left(G\right)\right\} \right|\\
+ & =\left|\left\{ u\in V\left(G\right)\mid\left\{ v,u\right\} \in E\left(G\right)\right\} \uplus\left\{ u\in V\left(G\right)\mid\left\{ v,u\right\} \in\P_{2}\left(V\left(G\right)\right)\backslash E\left(G\right)\right\} \right|\\
+ & =\left|\left\{ u\in V\left(G\right)\mid\left(\left\{ v,u\right\} \in E\left(G\right)\right)\lor\left(\left\{ v,u\right\} \in\P_{2}\left(V\left(G\right)\right)\backslash E\left(G\right)\right)\right\} \right|\\
+ & =\left|\left\{ u\in V\left(G\right)\mid\left\{ v,u\right\} \in\left(\P_{2}\left(V\left(G\right)\right)\backslash E\left(G\right)\right)\uplus E\left(G\right)\right\} \right|\\
+ & =\left|\left\{ u\in V\left(G\right)\mid\left\{ v,u\right\} \in\P_{2}\left(V\left(G\right)\right)\right\} \right|
+\end{align*}
+
+\end_inset
+
+
+\size default
+נשים לב כי לכל 
+\begin_inset Formula $u\in V\left(G\right)$
+\end_inset
+
+ שונה מ־
+\begin_inset Formula $v$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left\{ v,u\right\} \in\P_{2}\left(V\left(G\right)\right)$
+\end_inset
+
+ מהגדרת 
+\begin_inset Formula $\P_{2}$
+\end_inset
+
+ ולכן
+\begin_inset Formula 
+\[
+\deg_{G}\left(v\right)+\deg_{\overline{G}}\left(v\right)=\left|\left\{ u\in V\left(G\right)\mid\left\{ v,u\right\} \in\P_{2}\left(V\left(G\right)\right)\right\} \right|=\left|V\left(G\right)\backslash\left\{ v\right\} \right|=\left|V\left(G\right)\right|-1
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -35994,9 +36589,147 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף יהי 
+\begin_inset Formula $K$
+\end_inset
+
+ רכיב קשירות של 
+\begin_inset Formula $G$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $v\in K$
+\end_inset
+
+, נשים לב כי
+\begin_inset Formula 
+\begin{align*}
+\deg_{G}\left(v\right) & =\left|N_{G}\left(v\right)\right| & \deg_{G\left[K\right]}\left(v\right) & =\left|N_{G\left[K\right]}\left(v\right)\right|
+\end{align*}
+
+\end_inset
+
+נוכיח כי 
+\begin_inset Formula $N_{G}\left(v\right)=N_{G\left[K\right]}\left(v\right)$
+\end_inset
+
+,
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\subseteq$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $u\in N_{G}\left(v\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $u\in V\left(G\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left\{ v,u\right\} \in E\left(G\right)$
+\end_inset
+
+ נשים לב כי 
+\begin_inset Formula $v\xrightarrow[G]{}u$
+\end_inset
+
+ מכיוון ו־
+\begin_inset Formula $\left<v,u\right>$
+\end_inset
+
+ טיול בין שניהם אזי כי 
+\begin_inset Formula $v\in K$
+\end_inset
+
+ נקבל 
+\begin_inset Formula $v,u\in K$
+\end_inset
+
+ בפרט גם
+\begin_inset Formula 
+\[
+\left\{ v,u\right\} \in\P_{2}\left(K\right)\cap E\left(G\right)
+\]
+
+\end_inset
+
+ולכן 
+\begin_inset Formula $\left\{ v,u\right\} \in E\left(G\left[K\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $u\in N_{G\left[K\right]}\left(v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $\supseteq$
+\end_inset
+
+:
+\end_layout
+
+\end_inset
+
+יהי 
+\begin_inset Formula $u\in N_{G\left[K\right]}\left(v\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $u\in V\left(G\left[K\right]\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left\{ v,u\right\} \in E\left(G\left[K\right]\right)$
+\end_inset
+
+ לכן מהגדרת תת גרף נפרש מתקיים
+\begin_inset Formula 
+\begin{align*}
+u & \in K & \left\{ v,u\right\}  & \in\P_{2}\left(K\right)\cap E\left(G\right)
+\end{align*}
+
+\end_inset
+
+בפרט גם מתקיים
+\begin_inset Formula 
+\begin{align*}
+u & \in V\left(G\right) & \left\{ v,u\right\}  & \in E\left(G\right)
+\end{align*}
+
+\end_inset
+
+ולכן 
+\begin_inset Formula $u\in N_{G}\left(v\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Definition
 \begin_inset Argument 1
 status open
@@ -36035,9 +36768,123 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $K$
+\end_inset
+
+ רכיב קשירות, נניח בשלילה כי 
+\begin_inset Formula $G\left[K\right]$
+\end_inset
+
+ אינו גרף קשיר,
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+נניח כי 
+\begin_inset Formula $\left|\nicefrac{V\left(G\left[K\right]\right)}{\xrightarrow[G\left[K\right]]{}}\right|=0$
+\end_inset
+
+, מהיות 
+\begin_inset Formula $K$
+\end_inset
+
+ רכיב קשירות קיים 
+\begin_inset Formula $v\in V\left(G\right)$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left[v\right]_{\xrightarrow[G]{}}=K$
+\end_inset
+
+ בפרט 
+\begin_inset Formula $v\in K$
+\end_inset
+
+ אזי מהגדרת גרף פורש 
+\begin_inset Formula $v\in V\left(G\left[K\right]\right)$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $\left[v\right]_{\xrightarrow[G\left[K\right]]{}}\in\nicefrac{V\left(G\left[K\right]\right)}{\xrightarrow[G\left[K\right]]{}}$
+\end_inset
+
+ סתירה.
+\end_layout
+
+\begin_layout Itemize
+נניח כי 
+\begin_inset Formula $\left|\nicefrac{V\left(G\left[K\right]\right)}{\xrightarrow[G\left[K\right]]{}}\right|\ge1$
+\end_inset
+
+ , אזי בהכרח קיימים 
+\begin_inset Formula $u,v\in V\left(G\left[K\right]\right)$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\left[u\right]_{\xrightarrow[G\left[K\right]]{}}\ne\left[v\right]_{\xrightarrow[G\left[K\right]]{}}$
+\end_inset
+
+ לכן לא קיים טיול בין 
+\begin_inset Formula $u$
+\end_inset
+
+ ל־
+\begin_inset Formula $v$
+\end_inset
+
+ בגרף 
+\begin_inset Formula $G\left[K\right]$
+\end_inset
+
+ אך מהגרת גרף פורש 
+\begin_inset Formula $u,v\in K$
+\end_inset
+
+ ולכן קיים טיול בין 
+\begin_inset Formula $u$
+\end_inset
+
+ ל־
+\begin_inset Formula $v$
+\end_inset
+
+ בגרף 
+\begin_inset Formula $G$
+\end_inset
+
+, נסמנו 
+\begin_inset Formula $\left<u,a_{1}\ldots,a_{n},v\right>$
+\end_inset
+
+ נשים לב כי קיים טיול בין 
+\begin_inset Formula $u$
+\end_inset
+
+ לבין 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ בגרף 
+\begin_inset Formula $G$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left\{ 1\ldots n\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $a_{i}\in\left[u\right]_{\xrightarrow[G]{}}$
+\end_inset
+
+ ...
+\end_layout
+
+\end_deeper
 \begin_layout Definition
 יהי 
 \begin_inset Formula $G$
@@ -37326,7 +38173,33 @@ status open
 
 \end_inset
 
-...
+מספרי רמזי הם דבר קשה מאוד לחישוב, לכן במקום לחשב את מספר רמזי המדוייק מקובל
+ להסתכל על האסימפטוטיקה של מספרי רמזי, האסימפטוטיקה לא תוצג כאן וגם לא תוכח,
+ לעומת זאת נראה טבלה עבור חלק ממספרי רמזי ידועים או טווחים ידועים עבור מספרי
+ רמזי, שימו לב כי הטבלה היא רק עבור 
+\begin_inset Formula $r\le s$
+\end_inset
+
+ מהיות מספרי רמזי סימטריים בקלט,
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename svgs/ramseyTable.svg
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -37355,7 +38228,67 @@ status open
 \end_layout
 
 \begin_layout Proof
-...
+תהא צביעת קשתות של 
+\begin_inset Formula $K_{\bbn}$
+\end_inset
+
+ לשני צבעים 
+\begin_inset Formula $f:\bbn\to\left\{ 0,1\right\} $
+\end_inset
+
+ מתקיים
+\begin_inset Formula 
+\[
+f^{-1}\left[\left\{ 0\right\} \right]\uplus f^{-1}\left[\left\{ 1\right\} \right]=\bbn
+\]
+
+\end_inset
+
+לכן מתקיים
+\begin_inset Formula 
+\begin{align*}
+\left|f^{-1}\left[\left\{ 0\right\} \right]\right| & \le\aleph_{0} & \left|f^{-1}\left[\left\{ 1\right\} \right]\right| & \le\aleph_{0}
+\end{align*}
+
+\end_inset
+
+נניח בשלילה כי 
+\begin_inset Formula $\left|f^{-1}\left[\left\{ 0\right\} \right]\right|,\left|f^{-1}\left[\left\{ 1\right\} \right]\right|\in\bbn$
+\end_inset
+
+ אזי
+\begin_inset Formula 
+\[
+\aleph_{0}=\left|f^{-1}\left[\left\{ 0\right\} \right]\uplus f^{-1}\left[\left\{ 1\right\} \right]\right|\in\bbn
+\]
+
+\end_inset
+
+סתירה, לכן בהכרח מתקיים
+\begin_inset Formula 
+\[
+\left(\left|f^{-1}\left[\left\{ 0\right\} \right]\right|=\aleph_{0}\right)\lor\left(\left|f^{-1}\left[\left\{ 1\right\} \right]\right|=\aleph_{0}\right)
+\]
+
+\end_inset
+
+בה
+\begin_inset Quotes erd
+\end_inset
+
+כ 
+\begin_inset Formula $\left|f^{-1}\left[\left\{ 0\right\} \right]\right|=\aleph_{0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $K_{\bbn}\left[f^{-1}\left[\left\{ 0\right\} \right]\right]$
+\end_inset
+
+ קליקה מונוכרומטית אינסופית מכיוון ומתקיים 
+\begin_inset Formula $f\left[f^{-1}\left[\left\{ 0\right\} \right]\right]=\left\{ 0\right\} $
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Theorem
