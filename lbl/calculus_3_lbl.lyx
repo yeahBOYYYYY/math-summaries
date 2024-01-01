@@ -15,49 +15,49 @@
 \usepackage{pgfplots}
 \usepackage{hyperref}
 \usepackage{xcolor}
-\usepackage[cm]{fullpage}
+% \usepackage[cm]{fullpage}
 \usepackage{polynom}
 \usepackage{booktabs}
+\usepackage{fancyhdr}
 
+% it's here?
 \setlength{\tabcolsep}{1pt}
 \renewcommand{\arraystretch}{1.25} % Default value: 1
 
+% tikz
 \usetikzlibrary{math}
 \usetikzlibrary{shadows,trees}
+\tikzset{edge from parent fork down, level distance=2cm, every node/.style= {rectangle,rounded corners, minimum height=8mm, very thick, align=center}}
+
+% enumarte
 \counterwithin*{section}{part}
 \setlist{nosep, noitemsep}
-% \setlist[enumerate,levels]{format}
 \setlist[enumerate,1]{label = \arabic*., ref = \arabic*}
 \setlist[enumerate,2]{label = \emph{\alph*}), ref = \theenumi.\emph{\alph*}}
 \setlist[enumerate,3]{label = .\roman*, ref = \theenumii.\roman*}
+\setlist[itemize,1]{label={\fontfamily{david}\fontencoding{T1}\selectfont\textbullet}}
 
-
-% Convert the Lyx colors into more pleasent colors:
+% colors
 \definecolor{blue}{RGB}{14,107,217}
 \definecolor{green}{RGB}{0,158,40}
 \definecolor{red}{RGB}{235,16,16}
 \definecolor{brown}{RGB}{164,66,0}
 \definecolor{orange}{RGB}{231,135,26}
 \definecolor{purple}{RGB}{94,53,177}
-
-
-% Program Listing colors
 \definecolor{keywordcolor}{RGB}{255,117,0}
 \definecolor{commentcolor}{RGB}{128,128,128}
 \definecolor{stringcolor}{RGB}{0,168,0}
+\definecolor{remarkcolor}{RGB}{150,145,91} % 255,225,88
 
-
-% Trees formating
-\tikzset{edge from parent fork down, level distance=2cm, every node/.style= {rectangle,rounded corners, minimum height=8mm, very thick, align=center}}
-
-
+% hyperlinks
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
-    urlcolor=blue,
-    }
+    linkcolor=black,
+    urlcolor=black,
+}
+\newcommand\colorAutoref[1]{{\hypersetup{linkcolor=blue}\autoref{#1}}}  %% allows for calls to \autoref{} that have a different color from other links.
 
-
+% math font and implies arrow
 \setmathfont{NewCMMath-Regular.otf}
 \let\RonMikhelmanLol\implies
 \renewcommand{\implies}{\negthickspace\RonMikhelmanLol\negthickspace}
@@ -68,17 +68,63 @@
 \end_preamble
 \use_default_options true
 \begin_modules
+figs-within-sections
+eqs-within-sections
+tabs-within-sections
 theorems-ams-chap-bytype
-theorems-ams-extended-chap-bytype
 \end_modules
 \maintain_unincluded_children false
+\begin_local_layout
+Format 66
+
+
+Style Remark
+	CopyStyle             Theorem
+	LatexName             rem
+	LabelString           "Remark \theremark."
+	Preamble
+	  \newtheoremstyle{myremark}{3pt}{3pt}{\itshape}{}{\itshape\color{remarkcolor}}{.}{.5em}{}
+	  \theoremstyle{myremark}
+	  \newtheorem{rem}{\protect\remarkname}[section]
+	EndPreamble
+	LangPreamble
+		\providecommand{\remarkname}{_(Remark)}
+	EndLangPreamble
+	BabelPreamble
+		\addto\captions$$lang{\renewcommand{\remarkname}{_(Remark)}}
+	EndBabelPreamble
+	LabelFont
+	  Series              Medium
+	  Shape               Italic
+	EndFont
+	LabelCounter          remark
+End
+
+Style Claim
+	CopyStyle             Theorem
+	LatexName             claim
+	LabelString           "Claim \theclaim."
+	Preamble
+	  \theoremstyle{plain}
+	  \newtheorem{claim}{\protect\claimname}[section]
+	EndPreamble
+	Requires              amsthm
+	LangPreamble
+		\providecommand{\claimname}{_(Claim)}
+	EndLangPreamble
+	BabelPreamble
+		\addto\captions$$lang{\renewcommand{\claimname}{_(Claim)}}
+	EndBabelPreamble
+	LabelCounter          claim
+End
+\end_local_layout
 \language hebrew
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "David"
-\font_sans "default" "David"
-\font_typewriter "default" "David"
+\font_roman "default" "David CLM"
+\font_sans "default" "David CLM"
+\font_typewriter "default" "David CLM"
 \font_math "auto" "default"
 \font_default_family default
 \use_non_tex_fonts true
@@ -98,7 +144,7 @@ theorems-ams-extended-chap-bytype
 \spacing onehalf
 \use_hyperref false
 \papersize letterpaper
-\use_geometry false
+\use_geometry true
 \use_package amsmath 2
 \use_package amssymb 2
 \use_package cancel 2
@@ -119,7 +165,7 @@ theorems-ams-extended-chap-bytype
 \justification false
 \use_refstyle 1
 \use_minted 0
-\branch LinearAlgebra2Recap
+\branch lbl
 \selected 0
 \filename_suffix 0
 \color #faf0e6
@@ -128,6 +174,10 @@ theorems-ams-extended-chap-bytype
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -138,7 +188,7 @@ theorems-ams-extended-chap-bytype
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
-\paperpagestyle default
+\paperpagestyle empty
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -151,7 +201,7 @@ theorems-ams-extended-chap-bytype
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "C:/Users/user/OneDrive/Documents/macros.lyx"
+filename "E:/University/macros.lyx"
 
 \end_inset
 
@@ -159,7 +209,106 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-כדור פתוח: יהי 
+
+\series bold
+נורמה
+\series default
+: יהי 
+\begin_inset Formula $L$
+\end_inset
+
+ מרחב אוקלידי נוצר סופית אזי 
+\begin_inset Formula $\upsilon:L\to\bbr$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $a\in L$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\lambda\in\bbr$
+\end_inset
+
+ מתקיים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\upsilon\left(a\right)\ge0\right)\land\left(\left(\upsilon\left(a\right)=0\right)\iff\left(a=0\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+הומוגניות: 
+\begin_inset Formula $\upsilon\left(\lambda a\right)=\left|\lambda\right|\cdot\upsilon\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אי שיוויון המשולש )אש
+\begin_inset Quotes erd
+\end_inset
+
+מ(: 
+\begin_inset Formula $\upsilon\left(a+b\right)\le\upsilon\left(a\right)+\upsilon\left(b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נורמת 
+\begin_inset Formula $\ell_{p}$
+\end_inset
+
+
+\series default
+: עבור 
+\begin_inset Formula $p\in\bbn_{+}$
+\end_inset
+
+ נגדיר נורמה 
+\begin_inset Formula $\norm{\cdot}_{p}:\bbr^{n}\to\bbr$
+\end_inset
+
+ כך 
+\begin_inset Formula $\norm v_{p}=\left(\sum_{i=1}^{n}\left|v_{i}\right|^{p}\right)^{\frac{1}{p}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נורמת 
+\begin_inset Formula $\ell_{\infty}$
+\end_inset
+
+
+\series default
+: נגדיר נורמה 
+\begin_inset Formula $\norm{\cdot}_{\infty}:\bbr^{n}\to\bbr$
+\end_inset
+
+ כך 
+\begin_inset Formula $\norm v_{\infty}=\max_{1\le i\le n}\left|v_{i}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כדור פתוח
+\series default
+: יהי 
 \begin_inset Formula $a\in\bbr^{n}$
 \end_inset
 
@@ -175,7 +324,11 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-כדור סגור: יהי 
+
+\series bold
+כדור סגור
+\series default
+: יהי 
 \begin_inset Formula $a\in\bbr^{n}$
 \end_inset
 
@@ -191,7 +344,11 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-ספירה: יהי 
+
+\series bold
+ספירה
+\series default
+: יהי 
 \begin_inset Formula $a\in\bbr^{n}$
 \end_inset
 
@@ -207,7 +364,11 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-תיבה פתוחה: יהיו 
+
+\series bold
+תיבה פתוחה
+\series default
+: יהיו 
 \begin_inset Formula $a,b\in\bbr^{n}$
 \end_inset
 
@@ -219,7 +380,11 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-תיבה סגורה: יהיו 
+
+\series bold
+תיבה סגורה
+\series default
+: יהיו 
 \begin_inset Formula $a,b\in\bbr^{n}$
 \end_inset
 
@@ -231,31 +396,167 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-שפה של קבוצה: תהא 
+
+\series bold
+נקודה פנימית
+\series default
+: תהא 
+\begin_inset Formula $M\subseteq\bbr^{n}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $x\in M$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\exists r>0.B_{r}\left(x\right)\subseteq M$
+\end_inset
+
+ אזי 
+\begin_inset Formula $x$
+\end_inset
+
+ נקודה פנימית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פנים של קבוצה
+\series default
+: תהא 
 \begin_inset Formula $M\subseteq\bbr^{n}$
 \end_inset
 
  אזי 
-\begin_inset Formula $\partial M=\left\{ x\in M\mid\forall\e>0.\left(B_{\e}\left(x\right)\nsubseteq M\right)\land\left(B_{\e}\left(x\right)\nsubseteq M^{{\cal C}}\right)\right\} $
+\begin_inset Formula $\overset{\circ}{M}=\left\{ x\in M\mid M\text{ נקודה פנימית של }x\right\} $
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-פנים של קבוצה: תהא 
+
+\series bold
+קבוצה פתוחה
+\series default
+: קבוצה 
 \begin_inset Formula $M\subseteq\bbr^{n}$
 \end_inset
 
- אזי 
-\begin_inset Formula $\overset{\circ}{M}=\left\{ x\in M\mid\forall\e>0.B_{\e}\left(x\right)\nsubseteq M\right\} $
+ עבורה 
+\begin_inset Formula $M=\overset{\circ}{M}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-סגור של קבוצה: תהא 
+
+\series bold
+נקודה חיצונית
+\series default
+: תהא 
+\begin_inset Formula $M\subseteq\bbr^{n}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $x\in\bbr^{n}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\exists r>0.B_{r}\left(x\right)\subseteq\bbr^{n}\backslash M$
+\end_inset
+
+ אזי 
+\begin_inset Formula $x$
+\end_inset
+
+ נקודה חיצונית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נקודה מבודדת
+\series default
+: תהא 
+\begin_inset Formula $M\subseteq\bbr^{n}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $x\in M$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\exists r>0.B_{r}\left(x\right)\cap M=\left\{ x\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $x$
+\end_inset
+
+ נקודה מבודדת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נקודת שפה
+\series default
+: תהא 
+\begin_inset Formula $M\subseteq\bbr^{n}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $x\in\bbr^{n}$
+\end_inset
+
+ לא נקודה פנימית ולא נקודה חיצונית אזי 
+\begin_inset Formula $x$
+\end_inset
+
+ נקודת שפה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה של קבוצה
+\series default
+: תהא 
+\begin_inset Formula $M\subseteq\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\partial M=\left\{ x\in M\mid M\text{ נקודת שפה של }x\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קבוצה סגורה
+\series default
+: קבוצה 
+\begin_inset Formula $M\subseteq\bbr^{n}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\partial M\subseteq M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סגור של קבוצה
+\series default
+: תהא 
 \begin_inset Formula $M\subseteq\bbr^{n}$
 \end_inset
 
@@ -267,19 +568,83 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-קבוצה חסומה: קבוצה 
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $M\subseteq\bbr^{n}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $x$
+\end_inset
+
+ נקודה חיצונית של 
+\begin_inset Formula $M$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $x$
+\end_inset
+
+ נקודה פנימית של 
+\begin_inset Formula $\bbr^{n}\backslash M$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: תהא 
+\begin_inset Formula $M\subseteq\bbr^{n}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $M$
+\end_inset
+
+ פתוחה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $M^{{\cal C}}$
+\end_inset
+
+ סגורה(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קבוצה חסומה
+\series default
+: קבוצה 
 \begin_inset Formula $M\subseteq\bbr^{n}$
 \end_inset
 
  המקיימת 
-\begin_inset Formula $\exists r\in\bbr.M\subseteq B_{r}\left(0\right)$
+\begin_inset Formula $\exists r>0.M\subseteq B_{r}\left(0\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-קבוצה קומפקטית: קבוצה 
+
+\series bold
+קבוצה קומפקטית
+\series default
+: קבוצה 
 \begin_inset Formula $K\subseteq\bbr^{n}$
 \end_inset
 
@@ -287,7 +652,11 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-טענה: תהא 
+
+\series bold
+טענה היינה בורל
+\series default
+: תהא 
 \begin_inset Formula $K\subseteq\bbr^{n}$
 \end_inset
 
@@ -299,12 +668,28 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \begin_inset Formula $\iff$
 \end_inset
 
-)היינה בורל - תשלים אחרי(.
+)לכל 
+\begin_inset Formula $\left\{ I_{n}\right\} _{n\in\Lambda}$
+\end_inset
+
+ קבוצות פתוחות עבורן 
+\begin_inset Formula $A\subseteq\bigcup_{n\in\Lambda}I_{n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\exists{\cal B}\in\P_{<\aleph_{0}}\left(\Lambda\right).A\subseteq\bigcup_{n\in{\cal B}}I_{n}$
+\end_inset
+
+(.
 \end_layout
 
 \begin_layout Standard
-סימון: תהא 
-\begin_inset Formula $a\in\bbn\to\bbr^{n}$
+
+\series bold
+סימון
+\series default
+: תהא 
+\begin_inset Formula $a\in\left(\bbr^{n}\right)^{\bbn}$
 \end_inset
 
  אזי 
@@ -315,117 +700,135 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-גבול: תהא 
-\begin_inset Formula $a\in\bbn\to\bbr^{n}$
+
+\series bold
+גבול
+\series default
+: תהא 
+\begin_inset Formula $a\in\left(\bbr^{n}\right)^{\bbn}$
 \end_inset
 
- ויהי 
-\begin_inset Formula $b\in\bbr^{n}$
+ ותהא 
+\begin_inset Formula $L\in\bbr^{n}$
 \end_inset
 
- עבורם 
-\begin_inset Formula $\lim_{k\to\infty}\norm{a^{\left(k\right)}-b}=0$
-\end_inset
-
- אזי 
-\begin_inset Formula $\lim_{k\to\infty}a^{\left(k\right)}=b$
-\end_inset
-
- .
-\end_layout
-
-\begin_layout Standard
-טענה: תהא 
-\begin_inset Formula $a\in\bbn\to\bbr^{n}$
-\end_inset
-
- ויהי 
-\begin_inset Formula $b\in\bbr^{n}$
+ עבורן 
+\begin_inset Formula $\lim_{k\to\infty}\norm{a^{\left(k\right)}-L}=0$
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(\forall j\in\left[n\right].x_{j}^{\left(k\right)}\to a_{j}\right)\iff\left(a^{\left(k\right)}\to b\right)$
+\begin_inset Formula $\lim_{k\to\infty}a^{\left(k\right)}=L$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-משפט: כל הטענות גבול מחדווא
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-1
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\numeric off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-עובד.
-\end_layout
 
-\begin_layout Standard
-משפט קושי: 
-\begin_inset Formula $\forall\e>0.\exists k\in\bbn.\forall m,i>k.\norm{x^{\left(m\right)}-x^{\left(i\right)}}<\e$
+\series bold
+הערה
+\series default
+: נשתמש באותם סימני גבול כמו במשתנה יחיד, כלומר 
+\begin_inset Formula $\lim_{x\to a}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\xrightarrow[x\to a]{}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-טענה: קושי בכל קואורדינטה זה כמו קושי כללי.
+
+\series bold
+משפט
+\series default
+: תהא 
+\begin_inset Formula $a\in\left(\bbr^{n}\right)^{\bbn}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $b\in\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\forall j\in\left[n\right].a_{j}^{\left(k\right)}\xrightarrow[k\to\infty]{}b_{j}\right)\iff\left(a^{\left(k\right)}\xrightarrow[k\to\infty]{}b\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-משפט בולצאנו ווירשטראס: בכל סדרה חסומה יש סדרה מתכנסת.
+
+\series bold
+מסקנה
+\series default
+: כל מניפולציות הגבול של סדרה מחדו
+\begin_inset Quotes erd
+\end_inset
+
+א
+\begin_inset Formula $1$
+\end_inset
+
+ מתקיימות.
 \end_layout
 
 \begin_layout Standard
-משפט: תהא 
+
+\series bold
+משפט קושי
+\series default
+: תהא 
+\begin_inset Formula $a\in\left(\bbr^{n}\right)^{\bbn}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $a$
+\end_inset
+
+ מתכנסת(
+\begin_inset Formula $\left(\forall\e>0.\exists k\in\bbn.\forall m,p>k.\norm{a^{\left(m\right)}-a^{\left(p\right)}}<\e\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: תהא 
+\begin_inset Formula $a\in\left(\bbr^{n}\right)^{\bbn}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $a$
+\end_inset
+
+ מתכנסת(
+\begin_inset Formula $\left(\forall j\in\left[n\right].\forall\e>0.\exists k\in\bbn.\forall m,p>k.\norm{a_{j}^{\left(m\right)}-a_{j}^{\left(p\right)}}<\e\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט בולצאנו ווירשטראס
+\series default
+: לכל סדרה חסומה קיימת תת־סדרה מתכנסת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: תהא 
 \begin_inset Formula $K\subseteq\bbr^{n}$
 \end_inset
 
@@ -437,130 +840,206 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל סדרה 
-\begin_inset Formula $x:\bbn\to K$
+)לכל 
+\begin_inset Formula $a\in K^{\bbn}$
 \end_inset
 
- קיימת תת סדרה 
-\begin_inset Formula $x^{\left(k_{i}\right)}$
+ קיימת תת־סדרה 
+\begin_inset Formula $a^{\left(k_{i}\right)}$
 \end_inset
 
- המתכנסת לנקודה בתוך 
-\begin_inset Formula $K$
+ המקיימת 
+\begin_inset Formula $\lim_{k\to\infty}a^{\left(k_{i}\right)}\in K$
 \end_inset
 
 (.
 \end_layout
 
 \begin_layout Standard
-גבול היינה: תהא 
+
+\series bold
+גבול
+\series default
+: תהא 
 \begin_inset Formula $A\subseteq\bbr^{n}$
 \end_inset
 
- ותהא 
+ תהא 
 \begin_inset Formula $f:A\to\bbr^{m}$
 \end_inset
 
- נניח כי לכל 
-\begin_inset Formula $\left\{ x^{\left(k\right)}\right\} \in A$
+ תהא 
+\begin_inset Formula $a\in\bbr^{n}$
 \end_inset
 
- המקיימת 
-\begin_inset Formula $x^{\left(k\right)}\to a$
+ ותהא 
+\begin_inset Formula $L\in\bbr^{m}$
 \end_inset
 
- מתקיים 
-\begin_inset Formula $f\left(x^{\left(k\right)}\right)\to\ell$
+ אזי
+\end_layout
+
+\begin_layout Itemize
+היינה: אם 
+\begin_inset Formula $\forall x\in A^{\bbn}.\left(x^{\left(k\right)}\to a\right)\implies\left(f\left(x^{\left(k\right)}\right)\to L\right)$
 \end_inset
 
  אזי 
-\begin_inset Formula $\lim_{x\to a}f\left(x\right)=\ell$
+\begin_inset Formula $\lim_{x\to a}f\left(x\right)=L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קושי: אם 
+\begin_inset Formula $\forall\e>0.\exists\d>0.\norm{x-a}<\d\implies\norm{f\left(x\right)-L}<\e$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lim_{x\to a}f\left(x\right)=L$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-גבול קושי: 
-\begin_inset Formula $\forall\e>0.\exists\d>0.\norm{x-\ell}<\d\implies\norm{f\left(x\right)-\ell}<\e$
-\end_inset
 
-.
-\end_layout
-
-\begin_layout Standard
-רציפות: גבול שואף לערך ומסמנים עם 
-\begin_inset Formula $f\in C\left(A\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-טענה: כל הטענות רציפות מחדווא
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
+\series bold
+מסקנה
 \series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-1
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\numeric off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
+: כל מניפולציות הגבול של פונקציה מחדו
+\begin_inset Quotes erd
+\end_inset
+
+א
+\begin_inset Formula $1$
+\end_inset
+
+ מתקיימות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רציפות בנקודה
 \series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-עובד.
+: תהא 
+\begin_inset Formula $A\subseteq\bbr^{n}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:A\to\bbr^{m}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $f\left(a\right)=\lim_{x\to a}f\left(x\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-עקומה: ...
+
+\series bold
+סימון
+\series default
+: תהא 
+\begin_inset Formula $A\subseteq\bbr^{n}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:A\to\bbr^{m}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+ אזי )
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה נקודתית עבור כל 
+\begin_inset Formula $b\in B$
+\end_inset
+
+(
+\begin_inset Formula $\left(f\in C\left(B\right)\right)\iff$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-עקומה של קו ישר: ...
- קטע של שני וקטורים
+
+\series bold
+מסקנה
+\series default
+: כל מניפולציות הרציפות של פונקציה מחדו
+\begin_inset Quotes erd
+\end_inset
+
+א
+\begin_inset Formula $1$
+\end_inset
+
+ מתקיימות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+עקומה פרמטרית
+\series default
+: יהי 
+\begin_inset Formula $I\subseteq\bbr$
+\end_inset
+
+ קטע אזי 
+\begin_inset Formula $\gamma:I\to\bbr^{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסילה
+\series default
+: עקומה פרמטרית רציפה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסילה של קו ישר
+\series default
+: יהיו 
+\begin_inset Formula $a,b\in\bbr^{m}$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $\left[a,b\right]:\left[0,1\right]\to\bbr^{m}$
+\end_inset
+
+ כך 
+\begin_inset Formula $\left[a,b\right]\left(t\right)=\left(1-t\right)a+tb$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
