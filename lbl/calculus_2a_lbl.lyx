@@ -124,6 +124,11 @@ theorems-ams-extended-chap-bytype
 \filename_suffix 0
 \color #faf0e6
 \end_branch
+\branch notDoneYet
+\selected 0
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -151,91 +156,11 @@ theorems-ams-extended-chap-bytype
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "C:/Users/user/OneDrive/Documents/macros.lyx"
+filename "E:/University/macros.lyx"
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color gray
-פולינום טיילור
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f\in\bbr^{I}$
-\end_inset
-
- גזירה 
-\begin_inset Formula $n$
-\end_inset
-
- פעמים על 
-\begin_inset Formula $a$
-\end_inset
-
- אזי 
-\begin_inset Formula $P_{n}\left(f,a\right)\left(x\right)=\sum_{k=0}^{n}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color gray
-שארית
-\series default
-\color inherit
- 
-\series bold
-\color gray
-טיילור
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f\in\bbr^{I}$
-\end_inset
-
- גזירה 
-\begin_inset Formula $n$
-\end_inset
-
- פעמים על 
-\begin_inset Formula $a$
-\end_inset
-
- אזי 
-\begin_inset Formula $R_{n}\left(f,a\right)\left(x\right)=f\left(x\right)-P_{n}\left(f,a\right)\left(x\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color gray
-טור טיילור
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f\in\bbr^{I}$
-\end_inset
-
- חלקה על 
-\begin_inset Formula $a$
-\end_inset
-
- אזי 
-\begin_inset Formula $P\left(f,a\right)\left(x\right)=\sum_{k=0}^{\infty}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -349,6 +274,73 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 
  עבור 
 \begin_inset Formula $c\in\bbr$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהיינה 
+\begin_inset Formula $f,g\in\bbr^{I}$
+\end_inset
+
+ בעלות פונקציות קדומות אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\int\left(f+g\right)=\left(\int f\right)+\left(\int g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int\left(\a f\right)=\a\left(\int f\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה אינטגרציה בחלקים
+\series default
+: תהיינה 
+\begin_inset Formula $u,v\in\bbr^{I}$
+\end_inset
+
+ גזירות אזי 
+\begin_inset Formula $\int uv^{\prime}=u\cdot v-\int u^{\prime}v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה החלפת משתנים
+\series default
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F\in\int f$
+\end_inset
+
+ אזי 
+\begin_inset Formula $F\circ g=\int\left(\left(f\circ g\right)\cdot g^{\prime}\right)$
 \end_inset
 
 .
@@ -664,6 +656,91 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_inset
 
  חסומה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch notDoneYet
+inverted 0
+status collapsed
+
+\begin_layout Standard
+
+\series bold
+\color gray
+פולינום טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ גזירה 
+\begin_inset Formula $n$
+\end_inset
+
+ פעמים על 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $P_{n}\left(f,a\right)\left(x\right)=\sum_{k=0}^{n}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color gray
+שארית
+\series default
+\color inherit
+ 
+\series bold
+\color gray
+טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ גזירה 
+\begin_inset Formula $n$
+\end_inset
+
+ פעמים על 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R_{n}\left(f,a\right)\left(x\right)=f\left(x\right)-P_{n}\left(f,a\right)\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color gray
+טור טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ חלקה על 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $P\left(f,a\right)\left(x\right)=\sum_{k=0}^{\infty}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -5621,6 +5698,11 @@ status collapsed
 \end_inset
 
 .
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
