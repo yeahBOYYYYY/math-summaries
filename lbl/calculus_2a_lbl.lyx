@@ -15,49 +15,49 @@
 \usepackage{pgfplots}
 \usepackage{hyperref}
 \usepackage{xcolor}
-\usepackage[cm]{fullpage}
+% \usepackage[cm]{fullpage}
 \usepackage{polynom}
 \usepackage{booktabs}
+\usepackage{fancyhdr}
 
+% it's here?
 \setlength{\tabcolsep}{1pt}
 \renewcommand{\arraystretch}{1.25} % Default value: 1
 
+% tikz
 \usetikzlibrary{math}
 \usetikzlibrary{shadows,trees}
+\tikzset{edge from parent fork down, level distance=2cm, every node/.style= {rectangle,rounded corners, minimum height=8mm, very thick, align=center}}
+
+% enumarte
 \counterwithin*{section}{part}
 \setlist{nosep, noitemsep}
-% \setlist[enumerate,levels]{format}
 \setlist[enumerate,1]{label = \arabic*., ref = \arabic*}
 \setlist[enumerate,2]{label = \emph{\alph*}), ref = \theenumi.\emph{\alph*}}
 \setlist[enumerate,3]{label = .\roman*, ref = \theenumii.\roman*}
+\setlist[itemize,1]{label={\fontfamily{david}\fontencoding{T1}\selectfont\textbullet}}
 
-
-% Convert the Lyx colors into more pleasent colors:
+% colors
 \definecolor{blue}{RGB}{14,107,217}
 \definecolor{green}{RGB}{0,158,40}
 \definecolor{red}{RGB}{235,16,16}
 \definecolor{brown}{RGB}{164,66,0}
 \definecolor{orange}{RGB}{231,135,26}
 \definecolor{purple}{RGB}{94,53,177}
-
-
-% Program Listing colors
 \definecolor{keywordcolor}{RGB}{255,117,0}
 \definecolor{commentcolor}{RGB}{128,128,128}
 \definecolor{stringcolor}{RGB}{0,168,0}
+\definecolor{remarkcolor}{RGB}{150,145,91} % 255,225,88
 
-
-% Trees formating
-\tikzset{edge from parent fork down, level distance=2cm, every node/.style= {rectangle,rounded corners, minimum height=8mm, very thick, align=center}}
-
-
+% hyperlinks
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
-    urlcolor=blue,
-    }
+    linkcolor=black,
+    urlcolor=black,
+}
+\newcommand\colorAutoref[1]{{\hypersetup{linkcolor=blue}\autoref{#1}}}  %% allows for calls to \autoref{} that have a different color from other links.
 
-
+% math font and implies arrow
 \setmathfont{NewCMMath-Regular.otf}
 \let\RonMikhelmanLol\implies
 \renewcommand{\implies}{\negthickspace\RonMikhelmanLol\negthickspace}
@@ -68,17 +68,63 @@
 \end_preamble
 \use_default_options true
 \begin_modules
+figs-within-sections
+eqs-within-sections
+tabs-within-sections
 theorems-ams-chap-bytype
-theorems-ams-extended-chap-bytype
 \end_modules
 \maintain_unincluded_children false
+\begin_local_layout
+Format 66
+
+
+Style Remark
+	CopyStyle             Theorem
+	LatexName             rem
+	LabelString           "Remark \theremark."
+	Preamble
+	  \newtheoremstyle{myremark}{3pt}{3pt}{\itshape}{}{\itshape\color{remarkcolor}}{.}{.5em}{}
+	  \theoremstyle{myremark}
+	  \newtheorem{rem}{\protect\remarkname}[section]
+	EndPreamble
+	LangPreamble
+		\providecommand{\remarkname}{_(Remark)}
+	EndLangPreamble
+	BabelPreamble
+		\addto\captions$$lang{\renewcommand{\remarkname}{_(Remark)}}
+	EndBabelPreamble
+	LabelFont
+	  Series              Medium
+	  Shape               Italic
+	EndFont
+	LabelCounter          remark
+End
+
+Style Claim
+	CopyStyle             Theorem
+	LatexName             claim
+	LabelString           "Claim \theclaim."
+	Preamble
+	  \theoremstyle{plain}
+	  \newtheorem{claim}{\protect\claimname}[section]
+	EndPreamble
+	Requires              amsthm
+	LangPreamble
+		\providecommand{\claimname}{_(Claim)}
+	EndLangPreamble
+	BabelPreamble
+		\addto\captions$$lang{\renewcommand{\claimname}{_(Claim)}}
+	EndBabelPreamble
+	LabelCounter          claim
+End
+\end_local_layout
 \language hebrew
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "David"
-\font_sans "default" "David"
-\font_typewriter "default" "David"
+\font_roman "default" "David CLM"
+\font_sans "default" "David CLM"
+\font_typewriter "default" "David CLM"
 \font_math "auto" "default"
 \font_default_family default
 \use_non_tex_fonts true
@@ -98,7 +144,7 @@ theorems-ams-extended-chap-bytype
 \spacing onehalf
 \use_hyperref false
 \papersize letterpaper
-\use_geometry false
+\use_geometry true
 \use_package amsmath 2
 \use_package amssymb 2
 \use_package cancel 2
@@ -119,12 +165,17 @@ theorems-ams-extended-chap-bytype
 \justification false
 \use_refstyle 1
 \use_minted 0
-\branch LinearAlgebra2Recap
+\branch lbl
 \selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch notDoneYet
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\branch LinearAlgebra2Recap
 \selected 0
 \filename_suffix 0
 \color #faf0e6
@@ -133,6 +184,10 @@ theorems-ams-extended-chap-bytype
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -143,7 +198,7 @@ theorems-ams-extended-chap-bytype
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
-\paperpagestyle default
+\paperpagestyle empty
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -156,7 +211,97 @@ theorems-ams-extended-chap-bytype
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "C:/Users/user/OneDrive/Documents/macros.lyx"
+filename "E:/University/macros.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch notDoneYet
+inverted 0
+status collapsed
+
+\begin_layout Standard
+
+\series bold
+\color gray
+פולינום טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ גזירה 
+\begin_inset Formula $n$
+\end_inset
+
+ פעמים על 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $P_{n}\left(f,a\right)\left(x\right)=\sum_{k=0}^{n}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color gray
+שארית
+\series default
+\color inherit
+ 
+\series bold
+\color gray
+טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ גזירה 
+\begin_inset Formula $n$
+\end_inset
+
+ פעמים על 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R_{n}\left(f,a\right)\left(x\right)=f\left(x\right)-P_{n}\left(f,a\right)\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color gray
+טור טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ חלקה על 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $P\left(f,a\right)\left(x\right)=\sum_{k=0}^{\infty}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
+\end_inset
+
+.
+\end_layout
 
 \end_inset
 
@@ -662,86 +807,6 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \begin_inset Branch notDoneYet
 inverted 0
 status collapsed
-
-\begin_layout Standard
-
-\series bold
-\color gray
-פולינום טיילור
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f\in\bbr^{I}$
-\end_inset
-
- גזירה 
-\begin_inset Formula $n$
-\end_inset
-
- פעמים על 
-\begin_inset Formula $a$
-\end_inset
-
- אזי 
-\begin_inset Formula $P_{n}\left(f,a\right)\left(x\right)=\sum_{k=0}^{n}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color gray
-שארית
-\series default
-\color inherit
- 
-\series bold
-\color gray
-טיילור
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f\in\bbr^{I}$
-\end_inset
-
- גזירה 
-\begin_inset Formula $n$
-\end_inset
-
- פעמים על 
-\begin_inset Formula $a$
-\end_inset
-
- אזי 
-\begin_inset Formula $R_{n}\left(f,a\right)\left(x\right)=f\left(x\right)-P_{n}\left(f,a\right)\left(x\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color gray
-טור טיילור
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f\in\bbr^{I}$
-\end_inset
-
- חלקה על 
-\begin_inset Formula $a$
-\end_inset
-
- אזי 
-\begin_inset Formula $P\left(f,a\right)\left(x\right)=\sum_{k=0}^{\infty}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
-\end_inset
-
-.
-\end_layout
 
 \begin_layout Standard
 

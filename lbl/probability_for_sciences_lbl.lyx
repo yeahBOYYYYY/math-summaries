@@ -68,11 +68,10 @@
 \end_preamble
 \use_default_options true
 \begin_modules
-theorems-bytype
-theorems-sec-bytype
 figs-within-sections
 eqs-within-sections
 tabs-within-sections
+theorems-ams-chap-bytype
 \end_modules
 \maintain_unincluded_children false
 \begin_local_layout
@@ -176,9 +175,9 @@ End
 \color #008000
 \end_index
 \leftmargin 2cm
-\topmargin 2.5cm
+\topmargin 2cm
 \rightmargin 2cm
-\bottommargin 2.5cm
+\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -189,7 +188,7 @@ End
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
-\paperpagestyle fancy
+\paperpagestyle empty
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -202,11 +201,394 @@ End
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "C:/Users/user/OneDrive/Documents/macros.lyx"
+filename "E:/University/macros.lyx"
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגברה
+\series default
+: תהא 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\mathcal{F}\subseteq2^{\Omega}$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Omega\in{\cal F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall E\in{\cal F}.E^{{\cal C}}\in{\cal F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $E\subseteq{\cal F}$
+\end_inset
+
+ סופית מתקיים 
+\begin_inset Formula $\bigcup E\in{\cal F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: תהא 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ אלגברה אזי 
+\begin_inset Formula $\emptyset\in{\cal F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: תהא 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ אלגברה ותהא 
+\begin_inset Formula $E\subseteq{\cal F}$
+\end_inset
+
+ סופית אזי 
+\begin_inset Formula $\bigcap E\in{\cal F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה
+\series default
+: תהא 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\mathcal{F}\subseteq2^{\Omega}$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Omega\in{\cal F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall E\in{\cal F}.E^{{\cal C}}\in{\cal F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $E\subseteq{\cal F}$
+\end_inset
+
+ בת מנייה מתקיים 
+\begin_inset Formula $\bigcup E\in{\cal F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: תהא 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה אזי 
+\begin_inset Formula $\emptyset\in{\cal F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: תהא 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה ותהא 
+\begin_inset Formula $E\subseteq{\cal F}$
+\end_inset
+
+ בת מנייה אזי 
+\begin_inset Formula $\bigcap E\in{\cal F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: תהא 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה מעל 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ אזי 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ הינה אלגברה מעל 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציה אדטיבית
+\series default
+: פונקציה 
+\begin_inset Formula $\mu:{\cal A}\to\bbr$
+\end_inset
+
+ המקיימת לכל 
+\begin_inset Formula $B_{1}\ldots B_{n}\in{\cal A}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\mu\left(\bigcup_{i=1}^{n}B_{i}\right)=\sum_{i=1}^{n}\mu\left(B_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מידה על אלגברה
+\series default
+: תהא 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ אלגברה אזי 
+\begin_inset Formula $\mu:{\cal F}\to\left[0,\infty\right]$
+\end_inset
+
+ אדטיבית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציה 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אדטיבית
+\series default
+: פונקציה 
+\begin_inset Formula $\mu:{\cal A}\to\bbr$
+\end_inset
+
+ המקיימת לכל 
+\begin_inset Formula $\left\{ B_{i}\right\} _{i=1}^{\infty}\subseteq{\cal A}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\mu\left(\bigcup_{i=1}^{\infty}B_{i}\right)=\sum_{i=1}^{\infty}\mu\left(B_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מידה על 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה
+\series default
+: תהא 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה אזי 
+\begin_inset Formula $\mu:{\cal F}\to\left[0,\infty\right]$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אדטיבית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מרחב מדיד
+\series default
+: תהא 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה מעל 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\Omega,{\cal F}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קבוצה מדידה
+\series default
+: תהא 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה מעל 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ אזי 
+\begin_inset Formula $E\in{\cal F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: תהא 
+\begin_inset Formula $\mu$
+\end_inset
+
+ מידה על אלגברה/
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\exists E\in{\cal F}.\mu\left(E\right)<0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu\left(\emptyset\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: תהא 
+\begin_inset Formula $\mu$
+\end_inset
+
+ מידה מעל 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה 
+\begin_inset Formula ${\cal F}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu$
+\end_inset
+
+ אדטיבית.
 \end_layout
 
 \end_body
