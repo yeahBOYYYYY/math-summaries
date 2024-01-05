@@ -201,7 +201,7 @@ End
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "C:/Users/user/OneDrive/Documents/macros.lyx"
+filename "E:/University/macros.lyx"
 
 \end_inset
 
@@ -286,6 +286,157 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 
  עבורם 
 \begin_inset Formula $z=a+ib$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מטריצה קונפורמית
+\series default
+: 
+\begin_inset Formula $0\ne A\in M_{2}\left(\bbr\right)$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\exists a,b\in\bbr.A=\left(\begin{smallmatrix}a & -b\\
+b & a
+\end{smallmatrix}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: 
+\begin_inset Formula $O\left(n\right)=\left\{ A\in M_{2}\left(\bbr\right)\mid\text{ קונפורמית}A\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: ההעתקה 
+\begin_inset Formula $T\in\Hom\left(\bbc,O\left(2\right)\right)$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $T\left(a+ib\right)=\left(\begin{smallmatrix}a & -b\\
+b & a
+\end{smallmatrix}\right)$
+\end_inset
+
+ היא איזומורפיזם.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $A\in M_{2}\left(\bbr\right)$
+\end_inset
+
+ אזי )
+\begin_inset Formula $A$
+\end_inset
+
+ קונפורמית(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $A$
+\end_inset
+
+ הפיכה ושומרת זווית(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מטריצה אנטי־קונפורמית
+\series default
+: 
+\begin_inset Formula $0\ne A\in M_{2}\left(\bbr\right)$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\exists a,b\in\bbr.A=\left(\begin{smallmatrix}a & b\\
+b & -a
+\end{smallmatrix}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $A\in M_{2}\left(\bbr\right)$
+\end_inset
+
+ אזי )
+\begin_inset Formula $A$
+\end_inset
+
+ אנטי־קונפורמית(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $A$
+\end_inset
+
+ הפיכה והופכת זווית(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size small
+משפט
+\series default
+: תהא 
+\begin_inset Formula $A\in M_{2}\left(\bbr\right)$
+\end_inset
+
+ אזי קיימות ויחידות 
+\begin_inset Formula $B,C\in M_{2}\left(\bbr\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $B$
+\end_inset
+
+ קונפורמית או 
+\begin_inset Formula $0$
+\end_inset
+
+ וכן 
+\begin_inset Formula $C$
+\end_inset
+
+ אנטי־קונפורמית או 
+\begin_inset Formula $0$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $A=B+C$
 \end_inset
 
 .
@@ -870,19 +1021,53 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-הערה: במרחב 
-\begin_inset Formula $\bbr^{3}$
+
+\series bold
+המשפט היסודי של האלגברה
+\series default
+: יהי 
+\begin_inset Formula $p\in\bbc_{\ge1}\left[x\right]$
 \end_inset
 
- נגדיר את 
-\begin_inset Formula $\bbc$
+ אזי קיים 
+\begin_inset Formula $x\in\bbc$
 \end_inset
 
- להיות שני הצירים הראשונים.
+ עבורו 
+\begin_inset Formula $p\left(x\right)=0$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-הקוטב הצפוני: נסמן ב־
+
+\series bold
+מסקנה
+\series default
+: יהי 
+\begin_inset Formula $p\in\bbc_{\ge1}\left[x\right]$
+\end_inset
+
+ אזי קיימים 
+\begin_inset Formula $a_{0}\ldots a_{n}\in\bbc$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $p\left(x\right)=a_{0}\prod_{i=1}^{n}\left(x-a_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הקוטב הצפוני
+\series default
+\color inherit
+: נסמן ב־
 \begin_inset Formula $\bbr^{3}$
 \end_inset
 
@@ -894,27 +1079,107 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-הטלה סטריאוגרפית: נגדיר 
-\begin_inset Formula $f:\bbc\to S^{2}\backslash\left\{ N\right\} $
+
+\series bold
+\color blue
+ספירה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
- כך 
-\begin_inset Formula $f\left(x,y,0\right)=\left(\frac{2x}{x^{2}+y^{2}+1},\frac{2y}{x^{2}+y^{2}+1},1-\frac{2}{x^{2}+y^{2}+1}\right)$
+ אזי 
+\begin_inset Formula $\bbs^{n}=\left\{ x\in\bbr^{n+1}\mid\norm x=1\right\} $
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-טענה: 
-\begin_inset Formula $f$
+
+\series bold
+\color blue
+ההמיספרה העליונה
+\series default
+\color inherit
+: כל הנקודות 
+\begin_inset Formula $\left(x,y,z\right)\in\bbs^{2}$
 \end_inset
 
- הפיכה, 
-\begin_inset Formula $f\left(z\right)=z\iff z\in S^{1}$
+ המקיימות 
+\begin_inset Formula $z>0$
 \end_inset
 
-, 
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+ההמיספרה התחתונה
+\series default
+\color inherit
+: כל הנקודות 
+\begin_inset Formula $\left(x,y,z\right)\in\bbs^{2}$
+\end_inset
+
+ המקיימות 
+\begin_inset Formula $z<0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הטלה סטריאוגרפית
+\series default
+\color inherit
+: נגדיר 
+\begin_inset Formula $f:\bbc\to\bbs^{2}\backslash\left\{ N\right\} $
+\end_inset
+
+ כך 
+\begin_inset Formula $f\left(x+iy\right)=\left(\frac{2x}{x^{2}+y^{2}+1},\frac{2y}{x^{2}+y^{2}+1},1-\frac{2}{x^{2}+y^{2}+1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הערה
+\series default
+\color inherit
+: במרחב 
+\begin_inset Formula $\bbr^{3}$
+\end_inset
+
+ נגדיר את 
+\begin_inset Formula $\bbc$
+\end_inset
+
+ להיות שני הצירים הראשונים, אז ההטלה הסטריאוגרפית היא מבחינה מעשית 
+\begin_inset Formula $f\left(p\right)=\text{line}_{p,N}\cap\bbs^{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
 \begin_inset Formula $f$
 \end_inset
 
@@ -922,12 +1187,101 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-הספירה של רימן: 
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $z\in\bbc$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(z\in\bbs^{1}\right)\iff\left(f\left(z\right)=z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+)
+\begin_inset Formula $f\left(z\right)$
+\end_inset
+
+ בהמיספרה העליונה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $z$
+\end_inset
+
+ מחוץ ל־
+\begin_inset Formula $\bbs^{1}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Itemize
+)
+\begin_inset Formula $f\left(z\right)$
+\end_inset
+
+ בהמיספרה התחתונה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $z$
+\end_inset
+
+ בתוך 
+\begin_inset Formula $\bbs^{1}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
 \begin_inset Formula $f$
 \end_inset
 
- רציפה וניתנת להרחבה 
-\begin_inset Formula $f:\bbc\cup\left\{ \infty\right\} \to S^{2}$
+ הפיכה ומתקיים 
+\begin_inset Formula $f^{-1}:\bbs^{2}\backslash\left\{ N\right\} \to\bbc$
+\end_inset
+
+ כך 
+\begin_inset Formula $f^{-1}\left(x,y,z\right)=\frac{x}{1-z}+i\frac{y}{1-z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הספירה של רימן
+\series default
+\color inherit
+: 
+\begin_inset Formula $f$
+\end_inset
+
+ ניתנת להרחבה רציפה 
+\begin_inset Formula $f:\bbc\cup\left\{ \infty\right\} \to\bbs^{2}$
 \end_inset
 
  וכן 
@@ -938,31 +1292,73 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-טענה: מתקיים 
-\begin_inset Formula $f^{-1}:S^{2}\backslash\left\{ N\right\} \to\bbc$
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\subseteq\bbs^{2}\backslash\left\{ N\right\} $
 \end_inset
 
- כך 
-\begin_inset Formula $f^{-1}\left(x,y,z\right)=\left(\frac{x}{1-z},\frac{y}{1-z},0\right)$
+ אזי )
+\begin_inset Formula $A$
 \end_inset
 
-.
+ מעגל(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $f^{-1}\left[A\right]$
+\end_inset
+
+ מעגל או ישר(.
 \end_layout
 
 \begin_layout Standard
-טענה: מעגל על 
-\begin_inset Formula $S^{2}$
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $C\subseteq\bbs^{2}\backslash\left\{ N\right\} $
 \end_inset
 
- מועתק להיות מעגל או ישר על 
-\begin_inset Formula $\bbc$
+ מעגל ויהי 
+\begin_inset Formula $P$
 \end_inset
 
-.
+ מישור עבורו 
+\begin_inset Formula $C=P\cap\bbs^{2}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $f^{-1}\left[C\right]$
+\end_inset
+
+ ישר(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $N\in P$
+\end_inset
+
+(.
 \end_layout
 
 \begin_layout Standard
-גבול: תהיינה 
+
+\series bold
+\color blue
+גבול
+\series default
+\color inherit
+: תהיינה 
 \begin_inset Formula $\bbf_{1},\bbf_{2}\in\left\{ \bbr,\bbc\right\} $
 \end_inset
 
@@ -974,7 +1370,19 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \begin_inset Formula $A\in\bbf_{2}$
 \end_inset
 
- אזי )הגדרת גבול רגיל(.
+ אם
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\forall\e>0.\exists\d>0.\forall x\in\bbf_{1}\backslash\left\{ a\right\} .\norm{x-a}<\d\implies\norm{f\left(x\right)-A}<\e$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lim_{x\to a}f\left(x\right)=A$
+\end_inset
+
+.
 \end_layout
 
 \end_body

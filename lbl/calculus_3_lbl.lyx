@@ -201,106 +201,11 @@ End
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "C:/Users/user/OneDrive/Documents/macros.lyx"
+filename "E:/University/macros.lyx"
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-נורמה
-\series default
-: יהי 
-\begin_inset Formula $L$
-\end_inset
-
- מרחב אוקלידי נוצר סופית אזי 
-\begin_inset Formula $\upsilon:L\to\bbr$
-\end_inset
-
- עבורה לכל 
-\begin_inset Formula $a\in L$
-\end_inset
-
- ולכל 
-\begin_inset Formula $\lambda\in\bbr$
-\end_inset
-
- מתקיים
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\left(\upsilon\left(a\right)\ge0\right)\land\left(\left(\upsilon\left(a\right)=0\right)\iff\left(a=0\right)\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-הומוגניות: 
-\begin_inset Formula $\upsilon\left(\lambda a\right)=\left|\lambda\right|\cdot\upsilon\left(a\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-אי שיוויון המשולש )אש
-\begin_inset Quotes erd
-\end_inset
-
-מ(: 
-\begin_inset Formula $\upsilon\left(a+b\right)\le\upsilon\left(a\right)+\upsilon\left(b\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-נורמת 
-\begin_inset Formula $\ell_{p}$
-\end_inset
-
-
-\series default
-: עבור 
-\begin_inset Formula $p\in\bbn_{+}$
-\end_inset
-
- נגדיר נורמה 
-\begin_inset Formula $\norm{\cdot}_{p}:\bbr^{n}\to\bbr$
-\end_inset
-
- כך 
-\begin_inset Formula $\norm v_{p}=\left(\sum_{i=1}^{n}\left|v_{i}\right|^{p}\right)^{\frac{1}{p}}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-נורמת 
-\begin_inset Formula $\ell_{\infty}$
-\end_inset
-
-
-\series default
-: נגדיר נורמה 
-\begin_inset Formula $\norm{\cdot}_{\infty}:\bbr^{n}\to\bbr$
-\end_inset
-
- כך 
-\begin_inset Formula $\norm v_{\infty}=\max_{1\le i\le n}\left|v_{i}\right|$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -798,6 +703,7 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \begin_layout Standard
 
 \series bold
+\size small
 מסקנה
 \series default
 : תהא 
@@ -826,6 +732,7 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \begin_layout Standard
 
 \series bold
+\size small
 משפט
 \series default
 : תהא 
@@ -921,7 +828,7 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 
 \begin_layout Itemize
 קושי: אם 
-\begin_inset Formula $\forall\e>0.\exists\d>0.\norm{x-a}<\d\implies\norm{f\left(x\right)-L}<\e$
+\begin_inset Formula $\forall\e>0.\exists\d>0.\forall x\in A\backslash\left\{ a\right\} .\norm{x-a}<\d\implies\norm{f\left(x\right)-L}<\e$
 \end_inset
 
  אזי 
@@ -974,6 +881,7 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \begin_layout Standard
 
 \series bold
+\size small
 סימון
 \series default
 : תהא 
@@ -1183,7 +1091,8 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \begin_layout Standard
 
 \series bold
-קבוצה קשירה מסילתית
+\size small
+קבוצה קשירה
 \series default
 : 
 \begin_inset Formula $M\subseteq\bbr^{n}$
@@ -1237,7 +1146,13 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-תכונת דרבו: 
+
+\series bold
+\color blue
+תכונת דרבו
+\series default
+\color inherit
+: 
 \begin_inset Formula $f:A\to\bbr$
 \end_inset
 
@@ -1257,7 +1172,13 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-טענה: תהא 
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: תהא 
 \begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
 \end_inset
 
@@ -1273,7 +1194,13 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-משפט ווירשטראס: תהא 
+
+\series bold
+\color blue
+משפט ווירשטראס
+\series default
+\color inherit
+: תהא 
 \begin_inset Formula ${\cal K}\subseteq\bbr^{n}$
 \end_inset
 
@@ -1285,7 +1212,11 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \begin_inset Formula $x,y\in{\cal K}$
 \end_inset
 
- עבורם 
+ עבורם
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $f\left({\cal K}\right)=\left[f\left(x\right),f\left(y\right)\right]$
 \end_inset
 
@@ -1293,11 +1224,17 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color blue
 רציפה במידה שווה )במ
 \begin_inset Quotes erd
 \end_inset
 
-ש(: תהא 
+ש(
+\series default
+\color inherit
+: תהא 
 \begin_inset Formula ${\cal M}\subseteq\bbr^{n}$
 \end_inset
 
@@ -1305,15 +1242,25 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \begin_inset Formula $f:{\cal M}\to\bbr^{n}$
 \end_inset
 
- המקיימת 
-\begin_inset Formula $\forall\e>0.\exists\d>0.\norm{x_{1}-x_{2}}<\d\implies\norm{f\left(x_{1}\right)-f\left(x_{2}\right)}<\e$
+ המקיימת
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\forall\e>0.\exists\d>0.\forall x,y\in\cal M.\norm{x-y}<\d\implies\norm{f\left(x\right)-f\left(y\right)}<\e$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-טענה: תהא 
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: תהא 
 \begin_inset Formula ${\cal K}\subseteq\bbr^{n}$
 \end_inset
 
@@ -1330,6 +1277,227 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_inset
 
 ש.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+נורמה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $L$
+\end_inset
+
+ מרחב אוקלידי נוצר סופית אזי 
+\begin_inset Formula $\upsilon:L\to\bbr$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $a\in L$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\lambda\in\bbr$
+\end_inset
+
+ מתקיים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\upsilon\left(a\right)\ge0\right)\land\left(\left(\upsilon\left(a\right)=0\right)\iff\left(a=0\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+הומוגניות: 
+\begin_inset Formula $\upsilon\left(\lambda a\right)=\left|\lambda\right|\cdot\upsilon\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אי שיוויון המשולש )אש
+\begin_inset Quotes erd
+\end_inset
+
+מ(: 
+\begin_inset Formula $\upsilon\left(a+b\right)\le\upsilon\left(a\right)+\upsilon\left(b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\upsilon:\bbr^{n}\to\bbr$
+\end_inset
+
+ נורמה אזי קיים 
+\begin_inset Formula $c>0$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\forall x\in\bbr^{n}.\upsilon\left(x\right)\le c\norm x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\upsilon:\bbr^{n}\to\bbr$
+\end_inset
+
+ נורמה אזי 
+\begin_inset Formula $\upsilon\in C\left(\bbr^{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\upsilon:\bbr^{n}\to\bbr$
+\end_inset
+
+ נורמה אזי קיים 
+\begin_inset Formula $c>0$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\forall x\in\bbr^{n}.c\norm x\le\upsilon\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+נורמות שקולות
+\series default
+\color inherit
+: 
+\begin_inset Formula $\upsilon,\eta:\bbr^{n}\to\bbr$
+\end_inset
+
+ נורמות עבורן קיימים 
+\begin_inset Formula $a,b>0$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $a\cdot\eta\le\upsilon\le b\cdot\eta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: שקילות נורמות הינו יחס שקילות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\upsilon:\bbr^{n}\to\bbr$
+\end_inset
+
+ נורמה אזי 
+\begin_inset Formula $\upsilon,\norm{\cdot}$
+\end_inset
+
+ שקולות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+נורמת 
+\begin_inset Formula $\ell_{p}$
+\end_inset
+
+
+\series default
+\color inherit
+: עבור 
+\begin_inset Formula $p\in\bbn_{+}$
+\end_inset
+
+ נגדיר נורמה 
+\begin_inset Formula $\norm{\cdot}_{p}:\bbr^{n}\to\bbr$
+\end_inset
+
+ כך 
+\begin_inset Formula $\norm v_{p}=\left(\sum_{i=1}^{n}\left|v_{i}\right|^{p}\right)^{\frac{1}{p}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+נורמת 
+\begin_inset Formula $\ell_{\infty}$
+\end_inset
+
+
+\series default
+\color inherit
+: נגדיר נורמה 
+\begin_inset Formula $\norm{\cdot}_{\infty}:\bbr^{n}\to\bbr$
+\end_inset
+
+ כך 
+\begin_inset Formula $\norm v_{\infty}=\max_{1\le i\le n}\left|v_{i}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+ציור של מעגלי היחידה בנורמות 
+\begin_inset Formula $\ell_{p}$
+\end_inset
+
+ ...
 \end_layout
 
 \end_body
