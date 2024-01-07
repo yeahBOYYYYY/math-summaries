@@ -201,7 +201,7 @@ End
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "E:/University/macros.lyx"
+filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 
 \end_inset
 
@@ -582,7 +582,7 @@ filename "E:/University/macros.lyx"
 \end_inset
 
  מתקיים 
-\begin_inset Formula $\exists{\cal B}\in\P{}{}_{<\aleph_{0}}\left(\Lambda\right).A\subseteq\bigcup_{n\in{\cal B}}I_{n}$
+\begin_inset Formula $\exists{\cal B}\in\P_{<\aleph_{0}}\left(\Lambda\right).A\subseteq\bigcup_{n\in{\cal B}}I_{n}$
 \end_inset
 
 (.
@@ -1247,7 +1247,7 @@ filename "E:/University/macros.lyx"
 \end_inset
 
 
-\begin_inset Formula $\forall\e>0.\exists\d>0.\forall x,y\in\cal M.\norm{x-y}<\d\implies\norm{f\left(x\right)-f\left(y\right)}<\e$
+\begin_inset Formula $\forall\e>0.\exists\d>0.\forall x,y\in\mathcal{M}.\norm{x-y}<\d\implies\norm{f\left(x\right)-f\left(y\right)}<\e$
 \end_inset
 
 .
@@ -1290,7 +1290,11 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $L$
 \end_inset
 
- מרחב אוקלידי נוצר סופית אזי 
+ מרחב וקטורי נוצר סופית מעל 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\upsilon:L\to\bbr$
 \end_inset
 
@@ -1448,6 +1452,28 @@ filename "E:/University/macros.lyx"
 
 \series bold
 \color blue
+מסקנה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $\upsilon,\rho:\bbr^{n}\to\bbr$
+\end_inset
+
+ נורמות ותהא 
+\begin_inset Formula $x\in\left(\bbr^{n}\right)^{\bbn}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\upsilon\left(x^{\left(k\right)}\right)\to0\right)\iff\left(\rho\left(x^{\left(k\right)}\right)\to0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
 נורמת 
 \begin_inset Formula $\ell_{p}$
 \end_inset
@@ -1498,6 +1524,133 @@ filename "E:/University/macros.lyx"
 \end_inset
 
  ...
+\end_layout
+
+\begin_layout Standard
+נגזרת של עקומה: תהא 
+\begin_inset Formula $\gamma:\left[0,1\right]\to\bbr^{m}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\left(0,1\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gamma^{\prime}\left(a\right)=\lim_{t\to a}\frac{\gamma\left(t\right)-\gamma\left(a\right)}{t-a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מסקנה: תהא 
+\begin_inset Formula $\gamma:\left[0,1\right]\to\bbr^{m}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gamma^{\prime}=\left(\begin{smallmatrix}\gamma_{1}^{\prime}\\
+\vdots\\
+\gamma_{m}^{\prime}
+\end{smallmatrix}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+פונקציה דיפרנציאבילית: יהי 
+\begin_inset Formula $\cal U\subseteq\bbr^{n}$
+\end_inset
+
+ תחום ויהי 
+\begin_inset Formula $t\in\cal U$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f:\cal U\to\bbr$
+\end_inset
+
+ המקיימת
+\begin_inset Formula 
+\[
+f\left(x\right)=f\left(t\right)+\sum_{j=1}^{n}a_{j}\left(x_{j}-t_{j}\right)+o\left(\norm{x-t}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+סימון: יהי 
+\begin_inset Formula $\cal U\subseteq\bbr^{n}$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f:\cal U\to\bbr$
+\end_inset
+
+ דיפרנציאבילית על 
+\begin_inset Formula $a\in\cal U$
+\end_inset
+
+ אז 
+\begin_inset Formula $f\in\cal D\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהי 
+\begin_inset Formula $\cal U\subseteq\bbr^{n}$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\cal U\to\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\cal U$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\in\cal D\left(a\right)\implies f\in C\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נגזרת חלקית: יהי 
+\begin_inset Formula $\cal U\subseteq\bbr^{n}$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\cal U\to\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\cal U$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $g_{i}\left(x\right)=f\left(a_{1}\ldots a_{i-1},x,a_{i+1},\ldots,a_{n}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\partial f}{\partial x_{i}}\left(a\right)=\frac{dg_{i}}{dx}\left(a_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: קיום נגזרות חלקיות 
+\begin_inset Formula $\not\impliedby$
+\end_inset
+
+ רציפות.
 \end_layout
 
 \end_body
