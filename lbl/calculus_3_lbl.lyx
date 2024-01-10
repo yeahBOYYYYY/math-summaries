@@ -6,6 +6,8 @@
 \origin unavailable
 \textclass article
 \begin_preamble
+\usepackage{amstext}
+
 \usepackage{centernot}
 \usepackage{enumitem}
 \usepackage{chngcntr}
@@ -33,7 +35,7 @@
 \counterwithin*{section}{part}
 \setlist{nosep, noitemsep}
 \setlist[enumerate,1]{label = \arabic*., ref = \arabic*}
-\setlist[enumerate,2]{label = \emph{\alph*}), ref = \theenumi.\emph{\alph*}}
+\setlist[enumerate,2]{label = \alph*), ref = \theenumi.\emph{\alph*}}
 \setlist[enumerate,3]{label = .\roman*, ref = \theenumii.\roman*}
 \setlist[itemize,1]{label={\fontfamily{david}\fontencoding{T1}\selectfont\textbullet}}
 
@@ -58,7 +60,7 @@
 \newcommand\colorAutoref[1]{{\hypersetup{linkcolor=blue}\autoref{#1}}}  %% allows for calls to \autoref{} that have a different color from other links.
 
 % math font and implies arrow
-\setmathfont{NewCMMath-Regular.otf}
+% \setmathfont{NewCMMath-Regular.otf}
 \let\RonMikhelmanLol\implies
 \renewcommand{\implies}{\negthickspace\RonMikhelmanLol\negthickspace}
 \let\RonMikhelmanLoll\iff
@@ -122,12 +124,12 @@ End
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "David CLM"
-\font_sans "default" "David CLM"
-\font_typewriter "default" "David CLM"
-\font_math "auto" "default"
+\font_roman "default" "default"
+\font_sans "helvet" "Arial"
+\font_typewriter "courier" "Courier New"
+\font_math "auto" "auto"
 \font_default_family default
-\use_non_tex_fonts true
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100 100
@@ -140,7 +142,7 @@ End
 \bibtex_command default
 \index_command default
 \float_placement H
-\paperfontsize 12
+\paperfontsize default
 \spacing onehalf
 \use_hyperref false
 \papersize letterpaper
@@ -955,6 +957,30 @@ filename "E:/University/macros.lyx"
 \begin_layout Standard
 
 \series bold
+פונקציה הומאומורפית
+\series default
+: תהיינה 
+\begin_inset Formula $A\subseteq\bbr^{n}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $B\subseteq\bbr^{m}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ הפיכה עבורה 
+\begin_inset Formula $f,f^{-1}$
+\end_inset
+
+ רציפות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 עקומה פרמטרית
 \series default
 : יהי 
@@ -1527,7 +1553,7 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-נגזרת של עקומה: תהא 
+דיפרנציאל של עקומה: תהא 
 \begin_inset Formula $\gamma:\left[0,1\right]\to\bbr^{m}$
 \end_inset
 
@@ -1563,7 +1589,7 @@ filename "E:/University/macros.lyx"
 
 \begin_layout Standard
 פונקציה דיפרנציאבילית: יהי 
-\begin_inset Formula $\mathcal{U}\subseteq\bbr$
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
 \end_inset
 
  תחום ויהי 
@@ -1598,7 +1624,7 @@ f\left(x\right)=f\left(t\right)+\sum_{j=1}^{n}a_{j}\left(x_{j}-t_{j}\right)+o\le
 \begin_inset Formula $a\in{\cal U}$
 \end_inset
 
- אז 
+ אזי 
 \begin_inset Formula $f\in\mathcal{D}\left(a\right)$
 \end_inset
 
@@ -1638,23 +1664,76 @@ f\left(x\right)=f\left(t\right)+\sum_{j=1}^{n}a_{j}\left(x_{j}-t_{j}\right)+o\le
 \begin_inset Formula $a\in\mathcal{U}$
 \end_inset
 
- נגדיר 
-\begin_inset Formula $g_{i}\left(x\right)=f\left(a_{1}\ldots a_{i-1},x,a_{i+1},\ldots,a_{n}\right)$
-\end_inset
-
  אזי 
-\begin_inset Formula $\frac{\partial f}{\partial x_{i}}\left(a\right)=\frac{dg_{i}}{dx}\left(a_{i}\right)$
+\begin_inset Formula $\frac{\partial f}{\partial x_{i}}\left(a\right)=\lim_{t\to a_{i}}\frac{f\left(a_{1},\ldots a_{i-1},t,a_{i+1},\ldots a_{n}\right)-f\left(a\right)}{t-a_{i}}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-טענה: קיום נגזרות חלקיות 
+הערה: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $\frac{\partial f}{\partial x_{i}}\left(a\right)$
+\end_inset
+
+ קיימת לכל 
+\begin_inset Formula $i$
+\end_inset
+
+(
 \begin_inset Formula $\not\impliedby$
 \end_inset
 
- רציפות.
+)
+\begin_inset Formula $f\in\mathcal{D}\left(a\right)$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\numeric on
+07.01.2024
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+- עדיין בהכנה
 \end_layout
 
 \end_body
