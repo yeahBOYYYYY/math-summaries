@@ -146,7 +146,7 @@
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "E:/University/macros.lyx"
+filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 
 \end_inset
 
@@ -1801,36 +1801,6 @@ filename "E:/University/macros.lyx"
 
 \series bold
 \color red
-טענה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
-\end_inset
-
- תחום יהי 
-\begin_inset Formula $v\in\bbr^{n}$
-\end_inset
-
- ותהא 
-\begin_inset Formula $f:\mathcal{U}\to\bbr$
-\end_inset
-
- המקיימת 
-\begin_inset Formula $f\in\mathcal{D}\left(a\right)$
-\end_inset
-
- אזי 
-\begin_inset Formula $\frac{\partial f}{\partial v}\left(a\right)=\nabla f\left(a\right)\cdot v$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
 פונקציה דיפרנציאבילית
 \series default
 \color inherit
@@ -1891,7 +1861,7 @@ filename "E:/University/macros.lyx"
 
 \series bold
 \color red
-סימון
+דיפרנציאל
 \series default
 \color inherit
 : יהי 
@@ -1937,62 +1907,6 @@ filename "E:/University/macros.lyx"
 
  אזי 
 \begin_inset Formula $\left(\mathcal{D}_{f}\left(a\right)\right)_{i,j}=\frac{\partial f_{i}}{\partial x_{j}}\left(a\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-מסקנה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
-\end_inset
-
- תחום יהי 
-\begin_inset Formula $v\in\bbr^{n}$
-\end_inset
-
- ותהא 
-\begin_inset Formula $f:\mathcal{U}\to\bbr^{m}$
-\end_inset
-
- המקיימת 
-\begin_inset Formula $f\in\mathcal{D}\left(a\right)$
-\end_inset
-
- אזי 
-\begin_inset Formula $\frac{\partial f}{\partial v}\left(a\right)=\mathcal{D}_{f}\left(a\right)\cdot v$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-דיפרנציאל
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
-\end_inset
-
- תחום ותהא 
-\begin_inset Formula $f:\mathcal{U}\to\bbr^{m}$
-\end_inset
-
- המקיימת 
-\begin_inset Formula $f\in\mathcal{D}\left(a\right)$
-\end_inset
-
- אזי 
-\begin_inset Formula $\mathcal{D}_{f}\left(a\right)$
 \end_inset
 
 .
@@ -2049,7 +1963,7 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\left(\forall x\in\mathcal{U}.f\left(x\right)=c\right)\iff\left(\forall x\in\mathcal{U}.\mathcal{D}_{f}\left(x\right)=0\right)$
+\begin_inset Formula $\left(\forall x\in\mathcal{U}.f\left(x\right)=c\right)\implies\left(\forall x\in\mathcal{U}.\mathcal{D}_{f}\left(x\right)=0\right)$
 \end_inset
 
 .
@@ -2058,6 +1972,258 @@ filename "E:/University/macros.lyx"
 \begin_layout Itemize
 תהא 
 \begin_inset Formula $A\in M_{m\times n}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\forall x\in\mathcal{U}.f\left(x\right)=Ax+c\right)\implies\left(\forall x\in\mathcal{U}.\mathcal{D}_{f}\left(x\right)=A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+פונקציה גזירה ברציפות: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום אזי 
+\begin_inset Formula $f:\mathcal{U}\to\bbr^{m}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $f\in\mathcal{D}\left(\mathcal{U}\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\mathcal{D}_{f}\in C\left(\mathcal{U}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+סימון: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr^{m}$
+\end_inset
+
+ גזירה ברציפות אזי 
+\begin_inset Formula $f\in C^{1}\left(\mathcal{U},\bbr^{m}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מסקנה: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f\in C^{1}\left(\mathcal{U},\bbr^{m}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\forall i\in\left[m\right].\forall j\in\left[n\right].\frac{\partial f_{i}}{\partial x_{j}}\in C\left(\mathcal{U}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+משפט: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr^{m}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\forall i\in\left[m\right].\forall j\in\left[n\right].\frac{\partial f_{i}}{\partial x_{j}}\in C\left(\mathcal{U}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\in\mathcal{D}\left(\mathcal{U}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מסקנה: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr^{m}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\forall i\in\left[m\right].\forall j\in\left[n\right].\frac{\partial f_{i}}{\partial x_{j}}\in C\left(\mathcal{U}\right)\right)\iff\left(f\in C^{1}\left(\mathcal{U},\bbr^{m}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נגזרת כיוונית: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr$
+\end_inset
+
+ יהי 
+\begin_inset Formula $v\in\bbs^{n-1}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\partial f}{\partial v}\left(a\right)=\lim_{h\to0}\frac{f\left(a+hv\right)-f\left(a\right)}{h}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום יהי 
+\begin_inset Formula $v\in\bbs^{n-1}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $f\in\mathcal{D}\left(a\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\partial f}{\partial v}\left(a\right)=\nabla f\left(a\right)\cdot v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מסקנה: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום יהי 
+\begin_inset Formula $v\in\bbs^{n-1}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr^{m}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $f\in\mathcal{D}\left(a\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\partial f}{\partial v}\left(a\right)=\mathcal{D}_{f}\left(a\right)\cdot v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: קשירות על ידי קווים ישרים ...
+\end_layout
+
+\begin_layout Standard
+משפט: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr^{m}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $c\in\bbr^{m}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\forall x\in\mathcal{U}.f\left(x\right)=c\right)\impliedby\left(\forall x\in\mathcal{U}.\mathcal{D}_{f}\left(x\right)=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מסקנה: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr^{m}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $c\in\bbr^{m}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\forall x\in\mathcal{U}.f\left(x\right)=c\right)\iff\left(\forall x\in\mathcal{U}.\mathcal{D}_{f}\left(x\right)=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr^{m}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $A\in M_{m\times n}\left(\bbr\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $c\in\bbr^{m}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\forall x\in\mathcal{U}.f\left(x\right)=Ax+c\right)\implies\left(\forall x\in\mathcal{U}.\mathcal{D}_{f}\left(x\right)=A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מסקנה: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr^{m}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $A\in M_{m\times n}\left(\bbr\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $c\in\bbr^{m}$
 \end_inset
 
  אזי 
