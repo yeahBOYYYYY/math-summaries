@@ -201,7 +201,7 @@ End
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "E:/University/macros.lyx"
+filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 
 \end_inset
 
@@ -216,7 +216,7 @@ filename "E:/University/macros.lyx"
 
 
 \begin_inset FormulaMacro
-\newcommand{\Arg}{\text{Arg}}
+\renewcommand{\Arg}{\text{Arg}}
 {\text{Arg}}
 \end_inset
 
@@ -1352,9 +1352,45 @@ b & -a
 \end_layout
 
 \begin_layout Standard
+טענה: תהא 
+\begin_inset Formula $a\in\bbc^{\bbn}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left|a_{n}\right|\to0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a_{n}\to0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: תהיינה 
+\begin_inset Formula $a,b\in\bbc^{\bbn}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a$
+\end_inset
+
+ חסומה וכן 
+\begin_inset Formula $b_{n}\to0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a_{n}b_{n}\to0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 
 \series bold
-\color blue
+\color red
 גבול
 \series default
 \color inherit
@@ -1383,6 +1419,200 @@ b & -a
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+טענה: תהיינה 
+\begin_inset Formula $f,g:\bbf_{1}\to\bbf_{2}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\lim_{x\to a}f\left(x\right)=A$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\lim_{x\to a}g\left(x\right)=B$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim_{x\to a}\left(f+g\right)\left(x\right)=A+B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim_{x\to a}\left(fg\right)\left(x\right)=AB$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+נניח 
+\begin_inset Formula $B\ne0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lim_{x\to a}\left(\frac{f}{g}\right)\left(x\right)=\frac{A}{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: תהא 
+\begin_inset Formula $f:\bbf_{1}\to\bbf_{2}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\lim_{x\to a}f\left(x\right)=A$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim_{x\to a}\overline{f\left(x\right)}=\overline{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim_{x\to a}\left|f\left(x\right)\right|=\left|A\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim_{x\to a}\re\left(f\left(x\right)\right)=\re\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim_{x\to a}\im\left(f\left(x\right)\right)=\im\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+גבול אינסופי: תהא 
+\begin_inset Formula $f:\bbc\to\bbc$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbc$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+שאיפה לאינסוף בנקודה: לכל 
+\begin_inset Formula $0<M$
+\end_inset
+
+ קיים 
+\begin_inset Formula $0<\d$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $z\in\bbc$
+\end_inset
+
+ אם 
+\begin_inset Formula $0<\left|z-a\right|<\d$
+\end_inset
+
+ אז 
+\begin_inset Formula $M<\left|f\left(z\right)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+שאיפה לנקודה באינסוף: לכל 
+\begin_inset Formula $0<\e$
+\end_inset
+
+ קיים 
+\begin_inset Formula $0<R$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $z\in\bbc$
+\end_inset
+
+ אם 
+\begin_inset Formula $R<\left|z\right|$
+\end_inset
+
+ אז 
+\begin_inset Formula $\left|f\left(z\right)-a\right|<\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+שאיפה לאינסוף באינסוף: לכל 
+\begin_inset Formula $0<M$
+\end_inset
+
+ קיים 
+\begin_inset Formula $0<R$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $z\in\bbc$
+\end_inset
+
+ אם 
+\begin_inset Formula $R<\left|z\right|$
+\end_inset
+
+ אז 
+\begin_inset Formula $M<\left|f\left(z\right)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+פונקציה רציפה: תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbf_{1}$
+\end_inset
+
+ פתוחה יהי 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f:\mathcal{U}\to\bbf_{2}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\lim_{x\to a}f\left(x\right)=f\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: רציפות פועלת במנה חיבור חיסור כפל והרכבה.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body
