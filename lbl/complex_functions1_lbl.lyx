@@ -146,7 +146,7 @@
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "C:/Users/user/OneDrive/Documents/macros.lyx"
+filename "E:/University/macros.lyx"
 
 \end_inset
 
@@ -1218,6 +1218,20 @@ b & -a
 
 \series bold
 \color blue
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $\widehat{\bbc}=\bbc\cup\left\{ \infty\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
 הספירה של רימן
 \series default
 \color inherit
@@ -1226,7 +1240,7 @@ b & -a
 \end_inset
 
  ניתנת להרחבה רציפה 
-\begin_inset Formula $f:\bbc\cup\left\{ \infty\right\} \to\bbs^{2}$
+\begin_inset Formula $f:\widehat{\bbc}\to\bbs^{2}$
 \end_inset
 
  וכן 
@@ -1297,7 +1311,251 @@ b & -a
 \end_layout
 
 \begin_layout Standard
-טענה: תהא 
+
+\series bold
+\color red
+גבול
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $a\in\bbc^{\bbn}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $z\in\bbc$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\forall\e>0.\exists N\in\bbn.\forall n\ge N.\left|a_{n}-a\right|<\e$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $a\in\bbc^{\bbn}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $z\in\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(a_{n}\to z\right)\iff\left(\left|a_{n}-z\right|\to0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+גבול אינסופי
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $a\in\bbc^{\bbn}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\forall M\in\bbr.\exists N\in\bbn.\forall n\ge N.M<\left|a_{n}\right|$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $a\in\bbc^{\bbn}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(a_{n}\to\infty\right)\iff\left(\left|a_{n}\right|\to\infty\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $a,b\in\bbc^{\bbn}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $z,w\in\widehat{\bbc}$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $a_{n}\to z$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b_{n}\to w$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{n}+b_{n}\to z+w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{n}\cdot b_{n}\to z\cdot w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+נניח כי 
+\begin_inset Formula $w\ne0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{a_{n}}{b_{n}}\to\frac{z}{w}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $a\in\bbc^{\bbn}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $z\in\widehat{\bbc}$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $a_{n}\to z$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\overline{a_{n}}\to\overline{z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|a_{n}\right|\to\left|z\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\re\left(a_{n}\right)\to\re\left(z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\im\left(a_{n}\right)\to\im\left(z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $a\in\bbc^{\bbn}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $a$
+\end_inset
+
+ מתכנסת(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\re\left(a\right),\im\left(a\right)$
+\end_inset
+
+ מתכנסות(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $a\in\bbc^{\bbn}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $a$
+\end_inset
+
+ מתכנסת(
+\begin_inset Formula $\left(\forall\e>0.\exists N\in\bbn.\forall n,m\ge N.\left|a_{n}-a_{m}\right|<\e\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: תהא 
 \begin_inset Formula $a\in\bbc^{\bbn}$
 \end_inset
 
@@ -1313,7 +1571,13 @@ b & -a
 \end_layout
 
 \begin_layout Standard
-טענה: תהיינה 
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: תהיינה 
 \begin_inset Formula $a,b\in\bbc^{\bbn}$
 \end_inset
 
@@ -1334,63 +1598,111 @@ b & -a
 
 \begin_layout Standard
 
+\color red
+הערה
+\color inherit
+: מכאן והלאה הסימון 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ יתאר שדה מבין 
+\begin_inset Formula $\bbr,\bbc$
+\end_inset
+
+ וכאשר נאמר כי 
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+ פתוחה הכוונה היא ביחס לשדה.
+\end_layout
+
+\begin_layout Standard
+
 \series bold
 \color red
 גבול
 \series default
 \color inherit
-: תהיינה 
-\begin_inset Formula $\bbf_{1},\bbf_{2}\in\left\{ \bbr,\bbc\right\} $
+: תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbf_{1}$
 \end_inset
 
- תהא 
+ פתוחה תהא 
 \begin_inset Formula $a\in\bbf_{1}$
 \end_inset
 
- ותהא 
+ תהא 
 \begin_inset Formula $A\in\bbf_{2}$
 \end_inset
 
- אם
-\begin_inset Newline newline
+ ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbf_{2}$
 \end_inset
 
-
-\begin_inset Formula $\forall\e>0.\exists\d>0.\forall x\in\bbf_{1}\backslash\left\{ a\right\} .\norm{x-a}<\d\implies\norm{f\left(x\right)-A}<\e$
+ עבורה 
+\begin_inset Formula $\forall\e>0.\exists\d>0.\forall z\in\mathcal{U}\backslash\left\{ a\right\} .\norm{z-a}<\d\implies\norm{f\left(z\right)-A}<\e$
 \end_inset
 
  אזי 
-\begin_inset Formula $\lim_{x\to a}f\left(x\right)=A$
+\begin_inset Formula $\lim_{z\to a}f\left(z\right)=A$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-טענה: תהיינה 
-\begin_inset Formula $f,g:\bbf_{1}\to\bbf_{2}$
+
+\series bold
+\color red
+משפט היינה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbf_{1}$
+\end_inset
+
+ פתוחה אזי 
+\begin_inset Formula $\left(\lim_{z\to a}f\left(z\right)=A\right)\iff\left(\forall b\in\bbc^{\bbn}.\left(b_{n}\to a\right)\implies\left(f\left(b_{n}\right)\to A\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbf_{1}$
+\end_inset
+
+ פתוחה ותהיינה 
+\begin_inset Formula $f,g:\mathcal{U}\to\bbf_{2}$
 \end_inset
 
  באשר 
-\begin_inset Formula $\lim_{x\to a}f\left(x\right)=A$
+\begin_inset Formula $\lim_{z\to a}f\left(z\right)=A$
 \end_inset
 
  וכן 
-\begin_inset Formula $\lim_{x\to a}g\left(x\right)=B$
+\begin_inset Formula $\lim_{z\to a}g\left(z\right)=B$
 \end_inset
 
  אזי
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\lim_{x\to a}\left(f+g\right)\left(x\right)=A+B$
+\begin_inset Formula $\lim_{z\to a}\left(f+g\right)\left(z\right)=A+B$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\lim_{x\to a}\left(fg\right)\left(x\right)=AB$
+\begin_inset Formula $\lim_{z\to a}\left(fg\right)\left(z\right)=AB$
 \end_inset
 
 .
@@ -1402,54 +1714,70 @@ b & -a
 \end_inset
 
  אזי 
-\begin_inset Formula $\lim_{x\to a}\left(\frac{f}{g}\right)\left(x\right)=\frac{A}{B}$
+\begin_inset Formula $\lim_{z\to a}\left(\frac{f}{g}\right)\left(z\right)=\frac{A}{B}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-טענה: תהא 
-\begin_inset Formula $f:\bbf_{1}\to\bbf_{2}$
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbf$
+\end_inset
+
+ פתוחה ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
 \end_inset
 
  באשר 
-\begin_inset Formula $\lim_{x\to a}f\left(x\right)=A$
+\begin_inset Formula $\lim_{z\to a}f\left(z\right)=A$
 \end_inset
 
  אזי
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\lim_{x\to a}\overline{f\left(x\right)}=\overline{A}$
+\begin_inset Formula $\lim_{z\to a}\overline{f\left(z\right)}=\overline{A}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\lim_{x\to a}\left|f\left(x\right)\right|=\left|A\right|$
+\begin_inset Formula $\lim_{z\to a}\left|f\left(z\right)\right|=\left|A\right|$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\lim_{x\to a}\re\left(f\left(x\right)\right)=\re\left(A\right)$
+\begin_inset Formula $\lim_{z\to a}\re\left(f\left(z\right)\right)=\re\left(A\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\lim_{x\to a}\im\left(f\left(x\right)\right)=\im\left(A\right)$
+\begin_inset Formula $\lim_{z\to a}\im\left(f\left(z\right)\right)=\im\left(A\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-גבול אינסופי: תהא 
+
+\series bold
+\color red
+גבול אינסופי
+\series default
+\color inherit
+: תהא 
 \begin_inset Formula $f:\bbc\to\bbc$
 \end_inset
 
@@ -1461,79 +1789,49 @@ b & -a
 \end_layout
 
 \begin_layout Itemize
-שאיפה לאינסוף בנקודה: לכל 
-\begin_inset Formula $0<M$
+שאיפה לאינסוף בנקודה: אם 
+\begin_inset Formula $\forall M>0.\exists\d>0.\forall z\in\bbc\backslash\left\{ a\right\} .\left|z-a\right|<\d\implies M<\left|f\left(z\right)\right|$
 \end_inset
 
- קיים 
-\begin_inset Formula $0<\d$
-\end_inset
-
- עבורו לכל 
-\begin_inset Formula $z\in\bbc$
-\end_inset
-
- אם 
-\begin_inset Formula $0<\left|z-a\right|<\d$
-\end_inset
-
- אז 
-\begin_inset Formula $M<\left|f\left(z\right)\right|$
+ אזי 
+\begin_inset Formula $\lim_{z\to a}f\left(z\right)=\infty$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-שאיפה לנקודה באינסוף: לכל 
-\begin_inset Formula $0<\e$
+שאיפה לנקודה באינסוף: אם 
+\begin_inset Formula $\forall\e>0.\exists R>0.\forall z\in\bbc.R<\left|z\right|\implies\left|f\left(z\right)-a\right|<\e$
 \end_inset
 
- קיים 
-\begin_inset Formula $0<R$
-\end_inset
-
- עבורו לכל 
-\begin_inset Formula $z\in\bbc$
-\end_inset
-
- אם 
-\begin_inset Formula $R<\left|z\right|$
-\end_inset
-
- אז 
-\begin_inset Formula $\left|f\left(z\right)-a\right|<\e$
+ אזי 
+\begin_inset Formula $\lim_{z\to\infty}f\left(z\right)=a$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-שאיפה לאינסוף באינסוף: לכל 
-\begin_inset Formula $0<M$
+שאיפה לאינסוף באינסוף: אם 
+\begin_inset Formula $\forall M>0.\exists R>0.\forall z\in\bbc.R<\left|z\right|\implies M<\left|f\left(z\right)\right|$
 \end_inset
 
- קיים 
-\begin_inset Formula $0<R$
-\end_inset
-
- עבורו לכל 
-\begin_inset Formula $z\in\bbc$
-\end_inset
-
- אם 
-\begin_inset Formula $R<\left|z\right|$
-\end_inset
-
- אז 
-\begin_inset Formula $M<\left|f\left(z\right)\right|$
+ אזי 
+\begin_inset Formula $\lim_{z\to\infty}f\left(z\right)=\infty$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-פונקציה רציפה: תהא 
+
+\series bold
+\color red
+פונקציה רציפה
+\series default
+\color inherit
+: תהא 
 \begin_inset Formula $\mathcal{U}\subseteq\bbf_{1}$
 \end_inset
 
@@ -1546,14 +1844,44 @@ b & -a
 \end_inset
 
  המקיימת 
-\begin_inset Formula $\lim_{x\to a}f\left(x\right)=f\left(a\right)$
+\begin_inset Formula $\lim_{z\to a}f\left(z\right)=f\left(a\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-טענה: רציפות פועלת במנה חיבור חיסור כפל והרכבה.
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: כל מניפולציות הרציפות של פונקציה מחדו
+\begin_inset Quotes erd
+\end_inset
+
+א
+\begin_inset Formula $1$
+\end_inset
+
+ מתקיימות.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $09.01.2024$
+\end_inset
+
+ - הכל
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

@@ -66,6 +66,7 @@
 \let\RonMikhelmanLolll\impliedby
 \renewcommand{\impliedby}{\negthickspace\RonMikhelmanLolll\negthickspace}
 \end_preamble
+\options no-math
 \use_default_options true
 \maintain_unincluded_children false
 \language hebrew
@@ -133,7 +134,7 @@
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
-\paperpagestyle default
+\paperpagestyle empty
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -687,7 +688,6 @@ filename "E:/University/macros.lyx"
 \begin_layout Standard
 
 \series bold
-\size small
 \color blue
 גבול
 \series default
@@ -714,7 +714,6 @@ filename "E:/University/macros.lyx"
 \begin_layout Standard
 
 \series bold
-\size small
 \color blue
 טענה
 \series default
@@ -885,7 +884,6 @@ filename "E:/University/macros.lyx"
 \begin_layout Standard
 
 \series bold
-\size small
 \color blue
 אינווריאנטיות להזזות
 \series default
@@ -1023,12 +1021,8 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $\bbr$
 \end_inset
 
- המכילות את כל הקבוצות הפתוחות אזי
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula $\frak{B}_{\bbr}=\bigcap_{i\in I}{\cal F}_{i}$
+ המכילות את כל הקבוצות הפתוחות אזי 
+\begin_inset Formula $\mathfrak{B}_{\bbr}=\bigcap_{i\in I}{\cal F}_{i}$
 \end_inset
 
 .
@@ -1042,7 +1036,7 @@ filename "E:/University/macros.lyx"
 \series default
 \color inherit
 : 
-\begin_inset Formula $B\in\frak{B}_{\bbr}$
+\begin_inset Formula $B\in\mathfrak{B}_{\bbr}$
 \end_inset
 
 .
@@ -1090,7 +1084,7 @@ filename "E:/University/macros.lyx"
 \end_inset
 
  המכילה את כל הקבוצות הפתוחות אזי 
-\begin_inset Formula $\frak{B}_{\bbr}\subseteq\mathcal{F}$
+\begin_inset Formula $\mathfrak{B}_{\bbr}\subseteq\mathcal{F}$
 \end_inset
 
 .
@@ -1099,7 +1093,6 @@ filename "E:/University/macros.lyx"
 \begin_layout Standard
 
 \series bold
-\size small
 \color red
 טענה
 \series default
@@ -1154,7 +1147,7 @@ filename "E:/University/macros.lyx"
 \series default
 \color inherit
 : 
-\begin_inset Formula $\frak{B}_{\left(0,1\right]}=\left\{ B\cap\left(0,1\right]\mid B\in\frak{B}_{\bbr}\right\} $
+\begin_inset Formula $\mathfrak{B}_{\left(0,1\right]}=\left\{ B\cap\left(0,1\right]\mid B\in\mathfrak{B}_{\bbr}\right\} $
 \end_inset
 
 .
@@ -1168,7 +1161,7 @@ filename "E:/University/macros.lyx"
 \series default
 \color inherit
 : תהא 
-\begin_inset Formula $B\in\frak{B}$
+\begin_inset Formula $B\in\mathfrak{B}$
 \end_inset
 
  אזי 
@@ -1226,11 +1219,7 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $\mathcal{T}$
 \end_inset
 
-
-\begin_inset Newline newline
-\end_inset
-
-אזי 
+ אזי 
 \begin_inset Formula $\sigma\left(\mathcal{T}\right)=\bigcap_{i\in I}{\cal F}_{i}$
 \end_inset
 
@@ -1291,26 +1280,22 @@ filename "E:/University/macros.lyx"
 \end_inset
 
  נסמן
-\begin_inset Formula 
-\[
-\mathcal{F}_{\a+1}=\mathcal{F}_{\a}\cup\left\{ A^{\mathcal{C}}\mid A\in\mathcal{F}_{\a}\right\} \cup\left\{ \bigcap_{n=1}^{\infty}A_{n}\mid A_{n}\in\mathcal{F}_{\a}\right\} 
-\]
-
+\begin_inset Newline newline
 \end_inset
 
-ולכל סודר גבול 
+
+\begin_inset Formula $\mathcal{F}_{\a+1}=\mathcal{F}_{\a}\cup\left\{ A^{\mathcal{C}}\mid A\in\mathcal{F}_{\a}\right\} \cup\left\{ \bigcap_{n=1}^{\infty}A_{n}\mid A_{n}\in\mathcal{F}_{\a}\right\} $
+\end_inset
+
+ ולכל סודר גבול 
 \begin_inset Formula $\lambda$
 \end_inset
 
- נסמן
-\begin_inset Formula 
-\[
-\mathcal{F}_{\lambda}=\bigcup_{\a<\lambda}\mathcal{F}_{\a}
-\]
-
+ נסמן 
+\begin_inset Formula $\mathcal{F}_{\lambda}=\bigcup_{\a<\lambda}\mathcal{F}_{\a}$
 \end_inset
 
-אזי 
+ אזי 
 \begin_inset Formula $\sigma\left(\mathcal{T}\right)=\mathcal{F}_{\omega_{1}}$
 \end_inset
 
@@ -1346,6 +1331,127 @@ filename "E:/University/macros.lyx"
 
  אזי 
 \begin_inset Formula $\forall A\in\sigma\left(\mathcal{T}\right).\omega\in A\iff\kappa\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משתנה מקרי/פונקציה מדידה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\left(\Omega,\mathcal{F},\bbp\right)$
+\end_inset
+
+ מרחב הסתברות אזי 
+\begin_inset Formula $X:\Omega\to\bbr$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\forall B\in\mathfrak{B}_{\bbr}.X^{-1}\left[B\right]\in\mathcal{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f:\bbr\to\bbr$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $A,B\subseteq\bbr$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f^{-1}\left[A\cup B\right]=f^{-1}\left[A\right]\cup f^{-1}\left[B\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f^{-1}\left[A\cap B\right]=f^{-1}\left[A\right]\cap f^{-1}\left[B\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f^{-1}\left[A^{\mathcal{C}}\right]=f^{-1}\left[A\right]^{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\left(\Omega,\mathcal{F}\right)$
+\end_inset
+
+ מרחב מדיד ותהא 
+\begin_inset Formula $X:\Omega\to\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ E\subseteq\bbr\mid X^{-1}\left[E\right]\in\mathcal{F}\right\} $
+\end_inset
+
+ הינה 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה מעל 
+\begin_inset Formula $\bbr$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\left(\Omega,\mathcal{F},\bbp\right)$
+\end_inset
+
+ מרחב הסתברות ותהא 
+\begin_inset Formula $X:\Omega\to\bbr$
+\end_inset
+
+ אזי )
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ(
+\begin_inset Formula $\left(\forall t\in\bbr.X^{-1}\left[\left(-\infty,t\right)\right]\in\mathcal{F}\right)\iff$
 \end_inset
 
 .
