@@ -6,8 +6,6 @@
 \origin unavailable
 \textclass article
 \begin_preamble
-\usepackage{amstext}
-
 \usepackage{centernot}
 \usepackage{enumitem}
 \usepackage{chngcntr}
@@ -69,67 +67,17 @@
 \renewcommand{\impliedby}{\negthickspace\RonMikhelmanLolll\negthickspace}
 \end_preamble
 \use_default_options true
-\begin_modules
-figs-within-sections
-eqs-within-sections
-tabs-within-sections
-theorems-ams-chap-bytype
-\end_modules
 \maintain_unincluded_children false
-\begin_local_layout
-Format 66
-
-
-Style Remark
-	CopyStyle             Theorem
-	LatexName             rem
-	LabelString           "Remark \theremark."
-	Preamble
-	  \newtheoremstyle{myremark}{3pt}{3pt}{\itshape}{}{\itshape\color{remarkcolor}}{.}{.5em}{}
-	  \theoremstyle{myremark}
-	  \newtheorem{rem}{\protect\remarkname}[section]
-	EndPreamble
-	LangPreamble
-		\providecommand{\remarkname}{_(Remark)}
-	EndLangPreamble
-	BabelPreamble
-		\addto\captions$$lang{\renewcommand{\remarkname}{_(Remark)}}
-	EndBabelPreamble
-	LabelFont
-	  Series              Medium
-	  Shape               Italic
-	EndFont
-	LabelCounter          remark
-End
-
-Style Claim
-	CopyStyle             Theorem
-	LatexName             claim
-	LabelString           "Claim \theclaim."
-	Preamble
-	  \theoremstyle{plain}
-	  \newtheorem{claim}{\protect\claimname}[section]
-	EndPreamble
-	Requires              amsthm
-	LangPreamble
-		\providecommand{\claimname}{_(Claim)}
-	EndLangPreamble
-	BabelPreamble
-		\addto\captions$$lang{\renewcommand{\claimname}{_(Claim)}}
-	EndBabelPreamble
-	LabelCounter          claim
-End
-\end_local_layout
 \language hebrew
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
-\font_sans "helvet" "Arial"
-\font_typewriter "courier" "Courier New"
+\font_roman "default" "David CLM"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
-\use_non_tex_fonts false
+\use_non_tex_fonts true
 \font_sc false
 \font_osf false
 \font_sf_scale 100 100
@@ -167,11 +115,6 @@ End
 \justification false
 \use_refstyle 1
 \use_minted 0
-\branch lbl
-\selected 0
-\filename_suffix 0
-\color #faf0e6
-\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -190,7 +133,7 @@ End
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
-\paperpagestyle empty
+\paperpagestyle default
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -205,6 +148,15 @@ End
 LatexCommand include
 filename "E:/University/macros.lyx"
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\grad}{\text{grad}}
+{\text{grad}}
 \end_inset
 
 
@@ -583,7 +535,11 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $A\subseteq\bigcup_{n\in\Lambda}I_{n}$
 \end_inset
 
- מתקיים 
+ מתקיים
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\exists{\cal B}\in\P_{<\aleph_{0}}\left(\Lambda\right).A\subseteq\bigcup_{n\in{\cal B}}I_{n}$
 \end_inset
 
@@ -705,7 +661,6 @@ filename "E:/University/macros.lyx"
 \begin_layout Standard
 
 \series bold
-\size small
 מסקנה
 \series default
 : תהא 
@@ -734,7 +689,6 @@ filename "E:/University/macros.lyx"
 \begin_layout Standard
 
 \series bold
-\size small
 משפט
 \series default
 : תהא 
@@ -883,7 +837,6 @@ filename "E:/University/macros.lyx"
 \begin_layout Standard
 
 \series bold
-\size small
 סימון
 \series default
 : תהא 
@@ -1117,7 +1070,6 @@ filename "E:/University/macros.lyx"
 \begin_layout Standard
 
 \series bold
-\size small
 קבוצה קשירה
 \series default
 : 
@@ -1545,15 +1497,13 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-ציור של מעגלי היחידה בנורמות 
-\begin_inset Formula $\ell_{p}$
-\end_inset
 
- ...
-\end_layout
-
-\begin_layout Standard
-דיפרנציאל של עקומה: תהא 
+\series bold
+\color red
+דיפרנציאל של עקומה
+\series default
+\color inherit
+: תהא 
 \begin_inset Formula $\gamma:\left[0,1\right]\to\bbr^{m}$
 \end_inset
 
@@ -1562,14 +1512,20 @@ filename "E:/University/macros.lyx"
 \end_inset
 
  אזי 
-\begin_inset Formula $\gamma^{\prime}\left(a\right)=\lim_{t\to a}\frac{\gamma\left(t\right)-\gamma\left(a\right)}{t-a}$
+\begin_inset Formula $\gamma^{\prime}\left(a\right)=\lim_{h\to0}\frac{\gamma\left(a+h\right)-\gamma\left(a\right)}{h}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-מסקנה: תהא 
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: תהא 
 \begin_inset Formula $\gamma:\left[0,1\right]\to\bbr^{m}$
 \end_inset
 
@@ -1588,31 +1544,47 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-פונקציה דיפרנציאבילית: יהי 
+
+\series bold
+\color red
+פונקציה דיפרנציאבילית
+\series default
+\color inherit
+: יהי 
 \begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
 \end_inset
 
  תחום ויהי 
-\begin_inset Formula $t\in{\cal U}$
+\begin_inset Formula $a\in{\cal U}$
 \end_inset
 
  אזי 
 \begin_inset Formula $f:{\cal U\to\bbr}$
 \end_inset
 
- המקיימת
-\begin_inset Formula 
-\[
-f\left(x\right)=f\left(t\right)+\sum_{j=1}^{n}a_{j}\left(x_{j}-t_{j}\right)+o\left(\norm{x-t}\right)
-\]
+ עבורה קיימת 
+\begin_inset Formula $L\in\Hom\left(\bbr^{n},\bbr\right)$
+\end_inset
 
+ המקיימת
+\begin_inset Newline newline
 \end_inset
 
 
+\begin_inset Formula $f\left(x\right)=f\left(a\right)+L\left(x-a\right)+o\left(\norm{x-a}\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-סימון: יהי 
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: יהי 
 \begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
 \end_inset
 
@@ -1632,7 +1604,13 @@ f\left(x\right)=f\left(t\right)+\sum_{j=1}^{n}a_{j}\left(x_{j}-t_{j}\right)+o\le
 \end_layout
 
 \begin_layout Standard
-טענה: יהי 
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
 \begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
 \end_inset
 
@@ -1652,7 +1630,65 @@ f\left(x\right)=f\left(t\right)+\sum_{j=1}^{n}a_{j}\left(x_{j}-t_{j}\right)+o\le
 \end_layout
 
 \begin_layout Standard
-נגזרת חלקית: יהי 
+
+\series bold
+\color red
+גרדיאנט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום יהי 
+\begin_inset Formula $a\in{\cal U}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:{\cal U\to\bbr}$
+\end_inset
+
+ דיפרנציאבילית אזי 
+\begin_inset Formula $\grad f\left(a\right)=\left[L\right]_{\text{st}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום יהי 
+\begin_inset Formula $a\in{\cal U}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:{\cal U\to\bbr}$
+\end_inset
+
+ דיפרנציאבילית אזי 
+\begin_inset Formula $\nabla f\left(a\right)=\grad f\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+נגזרת חלקית
+\series default
+\color inherit
+: יהי 
 \begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
 \end_inset
 
@@ -1665,14 +1701,72 @@ f\left(x\right)=f\left(t\right)+\sum_{j=1}^{n}a_{j}\left(x_{j}-t_{j}\right)+o\le
 \end_inset
 
  אזי 
-\begin_inset Formula $\frac{\partial f}{\partial x_{i}}\left(a\right)=\lim_{t\to a_{i}}\frac{f\left(a_{1},\ldots a_{i-1},t,a_{i+1},\ldots a_{n}\right)-f\left(a\right)}{t-a_{i}}$
+\begin_inset Formula $\frac{\partial f}{\partial x_{i}}\left(a\right)=\lim_{h\to0}\frac{f\left(a+hx_{i}\right)-f\left(a\right)}{h}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-הערה: יהי 
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $f\in\mathcal{D}\left(a\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\partial f}{\partial x_{i}}\left(a\right)=\left(\nabla f\left(a\right)\right)_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $f\in\mathcal{D}\left(a\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nabla f\left(a\right)=\left(\frac{\partial f}{\partial x_{1}}\left(a\right),\ldots,\frac{\partial f}{\partial x_{n}}\left(a\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הערה
+\series default
+\color inherit
+: יהי 
 \begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
 \end_inset
 
@@ -1705,35 +1799,288 @@ f\left(x\right)=f\left(t\right)+\sum_{j=1}^{n}a_{j}\left(x_{j}-t_{j}\right)+o\le
 
 \begin_layout Standard
 
-\numeric on
-07.01.2024
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\numeric off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
+\series bold
+\color red
+טענה
 \series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
 \color inherit
-- עדיין בהכנה
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום יהי 
+\begin_inset Formula $v\in\bbr^{n}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $f\in\mathcal{D}\left(a\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\partial f}{\partial v}\left(a\right)=\nabla f\left(a\right)\cdot v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+פונקציה דיפרנציאבילית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום ויהי 
+\begin_inset Formula $a\in{\cal U}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f:\mathcal{U}\to\bbr^{m}$
+\end_inset
+
+ עבורה קיימת 
+\begin_inset Formula $L\in\Hom\left(\bbr^{n},\bbr^{m}\right)$
+\end_inset
+
+ המקיימת
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $f\left(x\right)=f\left(a\right)+L\left(x-a\right)+o\left(\norm{x-a}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in{\cal U}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(f\in\mathcal{D}\left(a\right)\right)\iff\left(\forall i\in\left\{ 1\ldots m\right\} .f_{i}\in\mathcal{D}\left(a\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr^{m}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $f\in\mathcal{D}\left(a\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{D}_{f}\left(a\right)=\left(\begin{smallmatrix}-\nabla f_{1}\left(a\right)-\\
+\vdots\\
+-\nabla f_{m}\left(a\right)-
+\end{smallmatrix}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr^{m}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $f\in\mathcal{D}\left(a\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\mathcal{D}_{f}\left(a\right)\right)_{i,j}=\frac{\partial f_{i}}{\partial x_{j}}\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום יהי 
+\begin_inset Formula $v\in\bbr^{n}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr^{m}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $f\in\mathcal{D}\left(a\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\partial f}{\partial v}\left(a\right)=\mathcal{D}_{f}\left(a\right)\cdot v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+דיפרנציאל
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr^{m}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $f\in\mathcal{D}\left(a\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{D}_{f}\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
+\end_inset
+
+ תחום תהיינה 
+\begin_inset Formula $f,g:\mathcal{U}\to\bbr^{m}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $c\in\bbr^{m}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $f\in\mathcal{D}\left(a\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\in C\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $f,g\in\mathcal{D}\left(a\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $cf,f+g\in\mathcal{D}\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\forall x\in\mathcal{U}.f\left(x\right)=c\right)\iff\left(\forall x\in\mathcal{U}.\mathcal{D}_{f}\left(x\right)=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+תהא 
+\begin_inset Formula $A\in M_{m\times n}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\forall x\in\mathcal{U}.f\left(x\right)=Ax+c\right)\iff\left(\forall x\in\mathcal{U}.\mathcal{D}_{f}\left(x\right)=A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $07.01.2024$
+\end_inset
+
+ - הכל
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

@@ -33,7 +33,7 @@
 \counterwithin*{section}{part}
 \setlist{nosep, noitemsep}
 \setlist[enumerate,1]{label = \arabic*., ref = \arabic*}
-\setlist[enumerate,2]{label = \emph{\alph*}), ref = \theenumi.\emph{\alph*}}
+\setlist[enumerate,2]{label = \alph*), ref = \theenumi.\emph{\alph*}}
 \setlist[enumerate,3]{label = .\roman*, ref = \theenumii.\roman*}
 \setlist[itemize,1]{label={\fontfamily{david}\fontencoding{T1}\selectfont\textbullet}}
 
@@ -58,7 +58,7 @@
 \newcommand\colorAutoref[1]{{\hypersetup{linkcolor=blue}\autoref{#1}}}  %% allows for calls to \autoref{} that have a different color from other links.
 
 % math font and implies arrow
-\setmathfont{NewCMMath-Regular.otf}
+% \setmathfont{NewCMMath-Regular.otf}
 \let\RonMikhelmanLol\implies
 \renewcommand{\implies}{\negthickspace\RonMikhelmanLol\negthickspace}
 \let\RonMikhelmanLoll\iff
@@ -67,65 +67,15 @@
 \renewcommand{\impliedby}{\negthickspace\RonMikhelmanLolll\negthickspace}
 \end_preamble
 \use_default_options true
-\begin_modules
-figs-within-sections
-eqs-within-sections
-tabs-within-sections
-theorems-ams-chap-bytype
-\end_modules
 \maintain_unincluded_children false
-\begin_local_layout
-Format 66
-
-
-Style Remark
-	CopyStyle             Theorem
-	LatexName             rem
-	LabelString           "Remark \theremark."
-	Preamble
-	  \newtheoremstyle{myremark}{3pt}{3pt}{\itshape}{}{\itshape\color{remarkcolor}}{.}{.5em}{}
-	  \theoremstyle{myremark}
-	  \newtheorem{rem}{\protect\remarkname}[section]
-	EndPreamble
-	LangPreamble
-		\providecommand{\remarkname}{_(Remark)}
-	EndLangPreamble
-	BabelPreamble
-		\addto\captions$$lang{\renewcommand{\remarkname}{_(Remark)}}
-	EndBabelPreamble
-	LabelFont
-	  Series              Medium
-	  Shape               Italic
-	EndFont
-	LabelCounter          remark
-End
-
-Style Claim
-	CopyStyle             Theorem
-	LatexName             claim
-	LabelString           "Claim \theclaim."
-	Preamble
-	  \theoremstyle{plain}
-	  \newtheorem{claim}{\protect\claimname}[section]
-	EndPreamble
-	Requires              amsthm
-	LangPreamble
-		\providecommand{\claimname}{_(Claim)}
-	EndLangPreamble
-	BabelPreamble
-		\addto\captions$$lang{\renewcommand{\claimname}{_(Claim)}}
-	EndBabelPreamble
-	LabelCounter          claim
-End
-\end_local_layout
 \language hebrew
 \language_package default
 \inputencoding auto
 \fontencoding global
 \font_roman "default" "David CLM"
-\font_sans "default" "David CLM"
-\font_typewriter "default" "David CLM"
-\font_math "auto" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
@@ -140,7 +90,7 @@ End
 \bibtex_command default
 \index_command default
 \float_placement H
-\paperfontsize 12
+\paperfontsize default
 \spacing onehalf
 \use_hyperref false
 \papersize letterpaper
@@ -165,11 +115,6 @@ End
 \justification false
 \use_refstyle 1
 \use_minted 0
-\branch lbl
-\selected 0
-\filename_suffix 0
-\color #faf0e6
-\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -188,7 +133,7 @@ End
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
-\paperpagestyle empty
+\paperpagestyle default
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -216,7 +161,7 @@ filename "E:/University/macros.lyx"
 
 
 \begin_inset FormulaMacro
-\newcommand{\Arg}{\text{Arg}}
+\renewcommand{\Arg}{\text{Arg}}
 {\text{Arg}}
 \end_inset
 

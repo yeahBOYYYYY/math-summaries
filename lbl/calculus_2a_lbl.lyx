@@ -33,7 +33,7 @@
 \counterwithin*{section}{part}
 \setlist{nosep, noitemsep}
 \setlist[enumerate,1]{label = \arabic*., ref = \arabic*}
-\setlist[enumerate,2]{label = \emph{\alph*}), ref = \theenumi.\emph{\alph*}}
+\setlist[enumerate,2]{label = \alph*), ref = \theenumi.\emph{\alph*}}
 \setlist[enumerate,3]{label = .\roman*, ref = \theenumii.\roman*}
 \setlist[itemize,1]{label={\fontfamily{david}\fontencoding{T1}\selectfont\textbullet}}
 
@@ -58,7 +58,7 @@
 \newcommand\colorAutoref[1]{{\hypersetup{linkcolor=blue}\autoref{#1}}}  %% allows for calls to \autoref{} that have a different color from other links.
 
 % math font and implies arrow
-\setmathfont{NewCMMath-Regular.otf}
+% \setmathfont{NewCMMath-Regular.otf}
 \let\RonMikhelmanLol\implies
 \renewcommand{\implies}{\negthickspace\RonMikhelmanLol\negthickspace}
 \let\RonMikhelmanLoll\iff
@@ -67,65 +67,15 @@
 \renewcommand{\impliedby}{\negthickspace\RonMikhelmanLolll\negthickspace}
 \end_preamble
 \use_default_options true
-\begin_modules
-figs-within-sections
-eqs-within-sections
-tabs-within-sections
-theorems-ams-chap-bytype
-\end_modules
 \maintain_unincluded_children false
-\begin_local_layout
-Format 66
-
-
-Style Remark
-	CopyStyle             Theorem
-	LatexName             rem
-	LabelString           "Remark \theremark."
-	Preamble
-	  \newtheoremstyle{myremark}{3pt}{3pt}{\itshape}{}{\itshape\color{remarkcolor}}{.}{.5em}{}
-	  \theoremstyle{myremark}
-	  \newtheorem{rem}{\protect\remarkname}[section]
-	EndPreamble
-	LangPreamble
-		\providecommand{\remarkname}{_(Remark)}
-	EndLangPreamble
-	BabelPreamble
-		\addto\captions$$lang{\renewcommand{\remarkname}{_(Remark)}}
-	EndBabelPreamble
-	LabelFont
-	  Series              Medium
-	  Shape               Italic
-	EndFont
-	LabelCounter          remark
-End
-
-Style Claim
-	CopyStyle             Theorem
-	LatexName             claim
-	LabelString           "Claim \theclaim."
-	Preamble
-	  \theoremstyle{plain}
-	  \newtheorem{claim}{\protect\claimname}[section]
-	EndPreamble
-	Requires              amsthm
-	LangPreamble
-		\providecommand{\claimname}{_(Claim)}
-	EndLangPreamble
-	BabelPreamble
-		\addto\captions$$lang{\renewcommand{\claimname}{_(Claim)}}
-	EndBabelPreamble
-	LabelCounter          claim
-End
-\end_local_layout
 \language hebrew
 \language_package default
 \inputencoding auto
 \fontencoding global
 \font_roman "default" "David CLM"
-\font_sans "default" "David CLM"
-\font_typewriter "default" "David CLM"
-\font_math "auto" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
@@ -140,7 +90,7 @@ End
 \bibtex_command default
 \index_command default
 \float_placement H
-\paperfontsize 12
+\paperfontsize default
 \spacing onehalf
 \use_hyperref false
 \papersize letterpaper
@@ -165,11 +115,6 @@ End
 \justification false
 \use_refstyle 1
 \use_minted 0
-\branch lbl
-\selected 0
-\filename_suffix 0
-\color #faf0e6
-\end_branch
 \branch notDoneYet
 \selected 1
 \filename_suffix 0
@@ -198,7 +143,7 @@ End
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
-\paperpagestyle empty
+\paperpagestyle default
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -221,7 +166,7 @@ filename "E:/University/macros.lyx"
 \begin_layout Standard
 \begin_inset Branch notDoneYet
 inverted 0
-status collapsed
+status open
 
 \begin_layout Standard
 
@@ -353,7 +298,11 @@ status collapsed
 \begin_inset Formula $F_{+}^{\prime}\left(a\right)=f\left(a\right)$
 \end_inset
 
- וכן 
+ וכן
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $F_{-}^{\prime}\left(b\right)=f\left(b\right)$
 \end_inset
 
@@ -1144,6 +1093,7 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\size small
 \color blue
 תנודה כוללת של פונקציה חסומה ביחס לחלוקה
 \series default
@@ -1156,11 +1106,7 @@ status collapsed
 \begin_inset Formula $\Pi$
 \end_inset
 
- חלוקה אזי
-\begin_inset Newline newline
-\end_inset
-
-
+ חלוקה אזי 
 \begin_inset Formula $\omega\left(f,\Pi\right)=\sum_{i=1}^{n}\omega\left(f,\left[x_{i-1},x_{i}\right]\right)\Delta x_{i}$
 \end_inset
 
@@ -1188,11 +1134,6 @@ status collapsed
 
 .
 \end_layout
-
-\begin_layout Standard
-\begin_inset Branch notDoneYet
-inverted 0
-status open
 
 \begin_layout Standard
 
@@ -1327,7 +1268,6 @@ status open
 \begin_layout Standard
 
 \series bold
-\size small
 \color red
 קריטריון דרבו משופר
 \series default
@@ -1963,6 +1903,11 @@ f\left(x\right) & \text{else}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Branch notDoneYet
+inverted 0
+status collapsed
+
+\begin_layout Standard
 
 \series bold
 \color magenta
@@ -1981,7 +1926,11 @@ f\left(x\right) & \text{else}
 \begin_inset Formula $f$
 \end_inset
 
- נגדיר 
+ נגדיר
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $F\left(x\right)=\int_{a}^{x}f\left(t\right)dt$
 \end_inset
 
@@ -2025,7 +1974,6 @@ f\left(x\right) & \text{else}
 \begin_layout Standard
 
 \series bold
-\size footnotesize
 \color magenta
 מסקנה
 \series default
@@ -2209,7 +2157,6 @@ $
 \begin_layout Standard
 
 \series bold
-\size small
 \color magenta
 טענה דעיכת מקמדי פורייה בהינתן גזירות
 \series default
@@ -2472,8 +2419,6 @@ $
 \end_layout
 
 \begin_layout Itemize
-
-\size footnotesize
 ניוטון לייבניץ: תהא 
 \begin_inset Formula $f\in R\left(\left[a,\omega\right)\right)$
 \end_inset
@@ -2498,8 +2443,6 @@ $
 \end_layout
 
 \begin_layout Itemize
-
-\size small
 אינטגרציה בחלקים: תהיינה 
 \begin_inset Formula $f,g\in\bbr^{\left[a,\omega\right)}$
 \end_inset
@@ -2516,8 +2459,6 @@ $
 \end_layout
 
 \begin_layout Itemize
-
-\size small
 שינוי משתנה: תהא 
 \begin_inset Formula $f\in R\left(\left[a,\omega\right)\right)$
 \end_inset
@@ -2558,7 +2499,11 @@ $
 \begin_inset Formula $\forall b\in\left(a,\omega\right).f\in R\left(\left[a,b\right]\right)$
 \end_inset
 
- אזי 
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\left(\forall\e>0.\exists B\in\left(a,\omega\right).\forall b_{1},b_{2}\in\left[B,\omega\right).\left|\int_{b_{1}}^{b_{2}}f\right|<\e\right)\iff\left(f\in R\left(\left[a,\omega\right)\right)\right)$
 \end_inset
 
@@ -2660,7 +2605,6 @@ $
 \begin_layout Standard
 
 \series bold
-\size small
 \color brown
 טענה
 \series default
@@ -2845,11 +2789,7 @@ $
 \begin_inset Formula $f\in C^{1}\left(\left[a,\omega\right)\right)$
 \end_inset
 
- מונוטונית עבורה
-\begin_inset Newline newline
-\end_inset
-
-
+ מונוטונית עבורה 
 \begin_inset Formula $\lim_{x\to\omega}f\left(x\right)=0$
 \end_inset
 
@@ -2895,7 +2835,6 @@ $
 \begin_layout Standard
 
 \series bold
-\size small
 \color orange
 התכנסות נקודתית
 \series default
@@ -3013,7 +2952,6 @@ $
 \begin_layout Standard
 
 \series bold
-\size footnotesize
 \color orange
 התכנסות במידה שווה )במ
 \begin_inset Quotes erd
@@ -3034,7 +2972,11 @@ $
 \begin_inset Formula $f\in\left(\bbr^{I}\right)^{\bbn}$
 \end_inset
 
- אזי 
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\left(f_{n}\xrightarrow{{\scriptscriptstyle \text{uniform}}}g\right)\iff\left(\underset{n\to\infty}{\lim}\underset{x\in I}{\sup}\left|f_{n}\left(x\right)-f\left(x\right)\right|=0\right)$
 \end_inset
 
@@ -3180,10 +3122,7 @@ $
 \begin_inset Formula $A\subseteq\bigcup_{n\in\Lambda}I_{n}$
 \end_inset
 
- מתקיים
-\end_layout
-
-\begin_layout Standard
+ מתקיים 
 \begin_inset Formula $\exists{\cal B}\in\mathcal{P}_{<\aleph_{0}}\left(\Lambda\right).A\subseteq\bigcup_{n\in{\cal B}}I_{n}$
 \end_inset
 
@@ -3342,11 +3281,7 @@ $
 \begin_inset Formula $\forall n\in\bbn.\left|f_{n}\right|\le\Psi$
 \end_inset
 
-
-\begin_inset Newline newline
-\end_inset
-
-אזי 
+ אזי 
 \begin_inset Formula $\left(\int_{a}^{\omega}f=\underset{n\to\infty}{\lim}\int_{a}^{\omega}f_{n}\right)\land\left(\text{ מתכנסת בהחלט}\int_{a}^{\omega}f\right)\land\left(\forall b\in\left[a,\omega\right).f\in R\left(\left[a,b\right]\right)\right)$
 \end_inset
 
@@ -3370,7 +3305,6 @@ $
 \begin_layout Standard
 
 \series bold
-\size small
 משפט
 \series default
 : תהיינה 
@@ -3890,7 +3824,6 @@ $
 \begin_layout Standard
 
 \series bold
-\size small
 \color blue
 טענה
 \series default
@@ -4537,7 +4470,11 @@ $
 \begin_inset Formula $f$
 \end_inset
 
- אזי 
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\left(\int_{a}^{x}f\left(t\right)dt\right)^{\prime}\left(x_{0}\right)=f\left(x_{0}\right)$
 \end_inset
 
@@ -5781,6 +5718,22 @@ status collapsed
 \end_inset
 
 .
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $09.01.2024$
+\end_inset
+
+ - הכל
 \end_layout
 
 \end_inset
