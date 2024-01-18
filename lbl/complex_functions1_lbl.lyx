@@ -147,7 +147,7 @@
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "E:/University/macros.lyx"
+filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 
 \end_inset
 
@@ -1599,8 +1599,10 @@ b & -a
 
 \begin_layout Standard
 
+\series bold
 \color red
 הערה
+\series default
 \color inherit
 : מכאן והלאה הסימון 
 \begin_inset Formula $\bbf$
@@ -2208,11 +2210,562 @@ b & -a
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sum_{i=0}^{n}a_{i}z^{i}\in\bbc\left[z\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\sum_{i=0}^{n}a_{i}z^{i}\right)^{\prime}=\sum_{i=1}^{n}a_{i}iz^{i-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $f\in\bbr\left[z\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\forall z\in\bbc.f\left(\overline{z}\right)=\overline{f\left(z\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+התכנסות טור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $a\in\bbc^{\bbn}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum_{i=0}^{\infty}a_{n}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\sum_{i=0}^{n}a_{n}$
+\end_inset
+
+ מתכנסת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+התכנסות נקודתית
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ פתוחה ויהי 
+\begin_inset Formula $a\in\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\in\left(\bbc^{\mathcal{U}}\right)^{\bbn}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $f_{n}\left(a\right)$
+\end_inset
+
+ מתכנסת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+התכנסות במידה שווה )במ
+\begin_inset Quotes erd
+\end_inset
+
+ש(
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ פתוחה ותהא 
+\begin_inset Formula $f\in\left(\bbc^{\mathcal{U}}\right)^{\bbn}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g:\bbc\to\bbc$
+\end_inset
+
+ עבורה
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\forall\e>0.\exists N\in\bbn.\forall x\in A.\forall n>N.\left|f_{n}\left(x\right)-f\left(x\right)\right|<\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size small
+\color magenta
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ פתוחה ותהא 
+\begin_inset Formula $f\in\left(\bbc^{\mathcal{U}}\right)^{\bbn}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $f$
+\end_inset
+
+ מתכנסת במ
+\begin_inset Quotes erd
+\end_inset
+
+ש(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\forall\e>0.\exists N\in\bbn.\forall n,m\ge N.\forall z\in\mathcal{U}\left|f_{n}\left(z\right)-f_{m}\left(z\right)\right|<\e$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה מבחן 
+\begin_inset Formula $\text{M}$
+\end_inset
+
+ של ווירשטראס להתכנסות
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\left(\bbc^{\mathcal{U}}\right)^{\bbn}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $M\in\bbr^{\bbn}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\sum_{n=1}^{\infty}M_{n}<\infty$
+\end_inset
+
+ וכן
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\forall x\in\bbr.\forall n\in\bbn.\left|u_{n}\left(x\right)\right|\le M_{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum_{i=0}^{n}u_{i}$
+\end_inset
+
+ מתכנסת בהחלט ובמ
+\begin_inset Quotes erd
+\end_inset
+
+ש.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $g:\bbc\to\bbc$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f\in\left(\bbc^{\mathcal{U}}\right)^{\bbn}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\forall n\in\bbn.f_{n}\in C\left(\mathcal{U}\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $f_{n}\limu g$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g\in C\left(\mathcal{U}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טור חזקות
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $a\in\bbc^{\bbn}$
+\end_inset
+
+ סדרה ויהי 
+\begin_inset Formula $b\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum_{i=0}^{\infty}a_{i}\left(x-b\right)^{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט אבל
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sum_{i=0}^{\infty}a_{i}z^{i}$
+\end_inset
+
+ טור חזקות אזי קיים 
+\begin_inset Formula $R\in\left[0,\infty\right]$
+\end_inset
+
+ המקיים
+\end_layout
+
+\begin_layout Itemize
+הטור מתכנס בהחלט על 
+\begin_inset Formula $\left|z\right|<R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $0\le\rho<R$
+\end_inset
+
+ אזי הטור מתכנס במ
+\begin_inset Quotes erd
+\end_inset
+
+ש על 
+\begin_inset Formula $\left|z\right|<\rho$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $\left|z\right|>R$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum a_{n}z^{n}$
+\end_inset
+
+ לא מתכנס.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sum_{i=0}^{\infty}a_{i}z^{i}$
+\end_inset
+
+ טור חזקות אזי הפונקציה 
+\begin_inset Formula $\sum a_{n}z^{n}$
+\end_inset
+
+ הולומורפית על 
+\begin_inset Formula $\left|z\right|<R$
+\end_inset
+
+ ובפרט 
+\begin_inset Formula $\left(\sum_{i=1}^{\infty}a_{i}z^{i}\right)^{\prime}=\sum_{i=1}^{\infty}ia_{i}z^{i-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט קושי־הדמר
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sum_{i=0}^{\infty}a_{i}z^{i}$
+\end_inset
+
+ טור חזקות ויהי 
+\begin_inset Formula $R$
+\end_inset
+
+ רדיוס ההתכנסות אזי 
+\begin_inset Formula $R=\frac{1}{\limsup_{n\to\infty}\sqrt[n]{\left|a_{n}\right|}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $g,h:\bbc\to\bbc$
+\end_inset
+
+ פתרונות של המד
+\begin_inset Quotes erd
+\end_inset
+
+ר 
+\begin_inset Formula $\left(f^{\prime}\left(z\right)=f\left(z\right)\right)\land\left(f\left(0\right)=1\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g=h$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+פונקציה מעריכית
+\series default
+\color inherit
+: נגדיר 
+\begin_inset Formula $\exp:\bbc\to\bbc$
+\end_inset
+
+ להיות פתרון של המד
+\begin_inset Quotes erd
+\end_inset
+
+ר 
+\begin_inset Formula $\left(f^{\prime}\left(z\right)=f\left(z\right)\right)\land\left(f\left(0\right)=1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\exp\left(z\right)=\sum_{i=0}^{\infty}\frac{z^{i}}{i!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\exp$
+\end_inset
+
+ מתכנסת על 
+\begin_inset Formula $\bbc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(e^{z}\right)^{\prime}=e^{z}$
+\end_inset
+
+, 
+\begin_inset Formula $e^{0}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\exp\left(z\right)=e^{z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $e^{a+b}=e^{a}\cdot e^{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $z\in\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $e^{z}\ne0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $z\in\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $e^{\overline{z}}=\overline{e^{z}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+קוסינוס
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $z\in\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\cos\left(z\right)=\frac{e^{iz}+e^{iz}}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סינוס
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $z\in\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sin\left(z\right)=\frac{e^{iz}-e^{-iz}}{2i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $16.01.2024$
+\begin_inset Formula $18.01.2024$
 \end_inset
 
  - הכל
