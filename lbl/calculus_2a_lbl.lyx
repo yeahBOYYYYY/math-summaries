@@ -117,7 +117,7 @@
 \use_refstyle 1
 \use_minted 0
 \branch notDoneYet
-\selected 1
+\selected 0
 \filename_suffix 0
 \color #faf0e6
 \end_branch
@@ -158,96 +158,6 @@
 \begin_inset CommandInset include
 LatexCommand include
 filename "E:/University/macros.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Branch notDoneYet
-inverted 0
-status open
-
-\begin_layout Standard
-
-\series bold
-\color gray
-פולינום טיילור
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f\in\bbr^{I}$
-\end_inset
-
- גזירה 
-\begin_inset Formula $n$
-\end_inset
-
- פעמים על 
-\begin_inset Formula $a$
-\end_inset
-
- אזי 
-\begin_inset Formula $P_{n}\left(f,a\right)\left(x\right)=\sum_{k=0}^{n}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color gray
-שארית
-\series default
-\color inherit
- 
-\series bold
-\color gray
-טיילור
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f\in\bbr^{I}$
-\end_inset
-
- גזירה 
-\begin_inset Formula $n$
-\end_inset
-
- פעמים על 
-\begin_inset Formula $a$
-\end_inset
-
- אזי 
-\begin_inset Formula $R_{n}\left(f,a\right)\left(x\right)=f\left(x\right)-P_{n}\left(f,a\right)\left(x\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color gray
-טור טיילור
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f\in\bbr^{I}$
-\end_inset
-
- חלקה על 
-\begin_inset Formula $a$
-\end_inset
-
- אזי 
-\begin_inset Formula $P\left(f,a\right)\left(x\right)=\sum_{k=0}^{\infty}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
-\end_inset
-
-.
-\end_layout
 
 \end_inset
 
@@ -643,7 +553,7 @@ status open
 \end_inset
 
  אינטגרביליות רימן אזי 
-\begin_inset Formula $\int_{a}^{b}f=\int_{\left[a,b\right]}f=\int_{\left[a,b\right]}f\left(t\right)dt=\int_{a}^{b}f\left(t\right)dt$
+\begin_inset Formula $\int_{a}^{b}f=\int_{\left[a,b\right]}f=\int_{\left[a,b\right]}f\left(t\right)\text{d}t=\int_{a}^{b}f\left(t\right)\text{d}t$
 \end_inset
 
 .
@@ -659,7 +569,7 @@ status open
 \end_inset
 
  אזי 
-\begin_inset Formula $\int_{a}^{b}f\left(\varphi\right)d\varphi$
+\begin_inset Formula $\int_{a}^{b}f\left(\varphi\right)\text{d}\varphi$
 \end_inset
 
  אינטגרל על פי המשתנה 
@@ -695,7 +605,7 @@ status open
 הערה
 \series default
 : ניתן להגדיר אינטגרביליות רימן בסימון 
-\begin_inset Formula $\int_{a}^{b}f\left(t\right)dt=\lim_{\lambda\left(\Pi\right)\to0}S\left(f,\Pi,\left\{ t_{i}\right\} \right)$
+\begin_inset Formula $\int_{a}^{b}f\left(t\right)\text{d}t=\lim_{\lambda\left(\Pi\right)\to0}S\left(f,\Pi,\left\{ t_{i}\right\} \right)$
 \end_inset
 
 .
@@ -719,7 +629,7 @@ status open
 \end_inset
 
  נקודות מתאימות אזי 
-\begin_inset Formula $\int_{a}^{b}c\cdot dt=c\left(b-a\right)$
+\begin_inset Formula $\int_{a}^{b}c\cdot\text{d}t=c\left(b-a\right)$
 \end_inset
 
 .
@@ -1094,9 +1004,8 @@ status open
 \begin_layout Standard
 
 \series bold
-\size small
 \color blue
-תנודה כוללת של פונקציה חסומה ביחס לחלוקה
+תנודה כוללת ביחס לחלוקה
 \series default
 \color inherit
 : תהא 
@@ -1139,7 +1048,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color red
+\color blue
 למה
 \series default
 \color inherit
@@ -1171,7 +1080,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color red
+\color blue
 מסקנה
 \series default
 \color inherit
@@ -1269,6 +1178,7 @@ status open
 \begin_layout Standard
 
 \series bold
+\size small
 \color red
 קריטריון דרבו משופר
 \series default
@@ -1277,7 +1187,11 @@ status open
 \begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
 \end_inset
 
- חסומה כך שלכל 
+ חסומה אזי 
+\begin_inset Formula $\iff\left(f\in R\left(\left[a,b\right]\right)\right)$
+\end_inset
+
+)לכל 
 \begin_inset Formula $\e>0$
 \end_inset
 
@@ -1289,11 +1203,7 @@ status open
 \begin_inset Formula $\overline{\Sigma}\left(f,\Pi\right)-\underline{\Sigma}\left(f,\Pi\right)<\e$
 \end_inset
 
- אזי 
-\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
-\end_inset
-
-.
+(.
 \end_layout
 
 \begin_layout Standard
@@ -1321,7 +1231,7 @@ status open
 \begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
 \end_inset
 
- מונוטונית אזי 
+ חסומה ומונוטונית אזי 
 \begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -1605,7 +1515,7 @@ f\left(x\right) & \text{else}
 \begin_layout Standard
 
 \series bold
-\color green
+\color red
 קבוצה צפופה
 \series default
 \color inherit
@@ -1627,7 +1537,7 @@ f\left(x\right) & \text{else}
 \begin_layout Standard
 
 \series bold
-\color green
+\color red
 טענה
 \series default
 \color inherit
@@ -1644,7 +1554,7 @@ f\left(x\right) & \text{else}
 \end_inset
 
  אזי 
-\begin_inset Formula $\int_{a}^{b}f\left(x\right)dx=\int_{a}^{b}g\left(x\right)dx$
+\begin_inset Formula $\int_{a}^{b}f=\int_{a}^{b}g$
 \end_inset
 
 .
@@ -1669,7 +1579,7 @@ f\left(x\right) & \text{else}
 \end_inset
 
  אזי 
-\begin_inset Formula $\int_{a}^{c}f\left(x\right)dx=\int_{a}^{c}g\left(x\right)dx$
+\begin_inset Formula $\int_{a}^{c}f=\int_{a}^{c}g$
 \end_inset
 
 .
@@ -1753,7 +1663,7 @@ f\left(x\right) & \text{else}
 \end_inset
 
  אזי 
-\begin_inset Formula $\int_{a}^{b}f\left(x\right)dx\ge0$
+\begin_inset Formula $\int_{a}^{b}f\ge0$
 \end_inset
 
 .
@@ -1775,7 +1685,33 @@ f\left(x\right) & \text{else}
 \end_inset
 
  אזי 
-\begin_inset Formula $\int_{a}^{b}f\left(x\right)dx\ge\int_{a}^{b}g\left(x\right)dx$
+\begin_inset Formula $\int_{a}^{b}f\ge\int_{a}^{b}g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ רציפה המקיימת 
+\begin_inset Formula $f\ge0$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\int_{a}^{b}f=0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f=0$
 \end_inset
 
 .
@@ -1797,7 +1733,7 @@ f\left(x\right) & \text{else}
 \end_inset
 
  אזי 
-\begin_inset Formula $m\left(b-a\right)\le\int_{a}^{b}f\left(x\right)dx\le M\left(b-a\right)$
+\begin_inset Formula $m\left(b-a\right)\le\int_{a}^{b}f\le M\left(b-a\right)$
 \end_inset
 
 .
@@ -1833,7 +1769,7 @@ f\left(x\right) & \text{else}
 \end_inset
 
  נגדיר 
-\begin_inset Formula $F\left(x\right)=\int_{a}^{x}f\left(t\right)dt$
+\begin_inset Formula $F\left(x\right)=\int_{a}^{x}f\left(t\right)\text{d}t$
 \end_inset
 
  אזי 
@@ -1862,12 +1798,8 @@ f\left(x\right) & \text{else}
 \begin_inset Formula $x_{0}\in\left[a,b\right]$
 \end_inset
 
- עבורו
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula $\int_{a}^{b}f\left(x\right)g\left(x\right)dx=f\left(x_{0}\right)\int_{a}^{b}g\left(x\right)dx$
+ עבורו 
+\begin_inset Formula $\int_{a}^{b}\left(f\cdot g\right)=f\left(x_{0}\right)\int_{a}^{b}g$
 \end_inset
 
 .
@@ -1877,41 +1809,6 @@ f\left(x\right) & \text{else}
 
 \series bold
 \color green
-הלמה של בונה
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f$
-\end_inset
-
- מונוטונית ותהא 
-\begin_inset Formula $0\le g\in R\left(\left[a,b\right]\right)$
-\end_inset
-
- אזי קיים 
-\begin_inset Formula $x_{0}\in\left[a,b\right]$
-\end_inset
-
- עבורו
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula $\int_{a}^{b}f\left(x\right)g\left(x\right)dx=f\left(a\right)\int_{a}^{x_{0}}g\left(x\right)dx+f\left(b\right)\int_{x_{0}}^{b}g\left(x\right)dx$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Branch notDoneYet
-inverted 0
-status open
-
-\begin_layout Standard
-
-\series bold
-\color magenta
 המשפט היסודי של החשבון הדיפרנציאלי והאינטגרלי
 \series default
 \color inherit
@@ -1932,7 +1829,7 @@ status open
 \end_inset
 
 
-\begin_inset Formula $F\left(x\right)=\int_{a}^{x}f\left(t\right)dt$
+\begin_inset Formula $F\left(x\right)=\int_{a}^{x}f\left(t\right)\text{d}t$
 \end_inset
 
  אזי 
@@ -1945,7 +1842,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color magenta
+\color green
 משפט ניוטון לייבניץ
 \series default
 \color inherit
@@ -1966,7 +1863,7 @@ status open
 \end_inset
 
  אזי 
-\begin_inset Formula $\int_{a}^{b}f\left(x\right)dx=F\left(b\right)-F\left(a\right)$
+\begin_inset Formula $\int_{a}^{b}f=F\left(b\right)-F\left(a\right)$
 \end_inset
 
 .
@@ -1975,7 +1872,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color magenta
+\color green
 מסקנה
 \series default
 \color inherit
@@ -2000,7 +1897,7 @@ status open
 \end_inset
 
  אזי 
-\begin_inset Formula $\int_{a}^{b}f\left(x\right)dx=F\left(b\right)-F\left(a\right)$
+\begin_inset Formula $\int_{a}^{b}f\left(x\right)=F\left(b\right)-F\left(a\right)$
 \end_inset
 
 .
@@ -2050,61 +1947,6 @@ status open
 
 \series bold
 \color magenta
-הלמה של בונה
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $\substack{f\in C\left(\left[a,b\right]\right)\\
-f\in C^{1}\left(\left(a,b\right)\right)
-}
-$
-\end_inset
-
- עבורה 
-\begin_inset Formula $\left(f'\ge0\right)\lor\left(f'\le0\right)$
-\end_inset
-
- ותהא 
-\begin_inset Formula $g\in C\left(\left[a,b\right]\right)$
-\end_inset
-
- אזי קיים 
-\begin_inset Formula $x_{0}\in\left[a,b\right]$
-\end_inset
-
- עבורו
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula $\int_{a}^{b}f\left(x\right)g\left(x\right)dx=f\left(a\right)\int_{a}^{x_{0}}g\left(x\right)dx+f\left(b\right)\int_{x_{0}}^{b}g\left(x\right)dx$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-טענה
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f\in C^{n+1}\left(\left[a,b\right]\right)$
-\end_inset
-
- אזי 
-\begin_inset Formula $R_{n}\left(f,a\right)\left(x\right)=\frac{1}{n!}\int_{a}^{x}f^{\left(n+1\right)}\left(t\right)\left(x-t\right)^{n}dt$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
 משפט שינוי משתנה
 \series default
 \color inherit
@@ -2113,43 +1955,19 @@ $
 \end_inset
 
  ותהא 
-\begin_inset Formula $\substack{\varphi\in\left[a,b\right]^{\left[\a,\b\right]}\\
-\varphi\in C^{1}\left(\left[\a,\b\right]\right)
-}
-$
+\begin_inset Formula $\varphi\in C^{1}\left(\left[\a,\b\right],\left[a,b\right]\right)$
 \end_inset
 
  המקיימת 
-\begin_inset Formula $\substack{\varphi\left(\a\right)=a\\
-\varphi\left(\b\right)=b
-}
-$
+\begin_inset Formula $\left(\varphi\left(\a\right)=a\right)\land\left(\varphi\left(\b\right)=b\right)$
 \end_inset
 
- אזי 
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\int_{a}^{b}f\left(x\right)dx=\int_{\a}^{\b}f\left(\varphi\left(t\right)\right)\varphi^{\prime}\left(t\right)dt$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-למה
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f\in C^{1}\left(\left[0,2\pi\right]\right)$
-\end_inset
-
- ויהי 
-\begin_inset Formula $n\in\bbn$
-\end_inset
-
- אזי 
-\begin_inset Formula $\int_{0}^{2\pi}f\left(x\right)\cos\left(nx\right)dx=-\int_{0}^{2\pi}f^{\prime}\left(x\right)\frac{\sin\left(nx\right)}{n}dx$
 \end_inset
 
 .
@@ -2181,59 +1999,6 @@ $
 
 \series bold
 \color magenta
-סימון
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $k\in\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $k!!=\prod_{n=0}^{\floor{\frac{k}{2}}-1}\left(k-2n\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-למה
-\series default
-\color inherit
-: יהי 
-\begin_inset Formula $m\in\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\int_{0}^{\frac{\pi}{2}}\sin\left(x\right)^{m}dx=\int_{0}^{\frac{\pi}{2}}\cos\left(x\right)^{m}dx=\begin{cases}
-\frac{\pi}{2}\cdot\frac{\left(m-1\right)!!}{m!!} & m\in\bbn_{\text{even}}\\
-\frac{\left(m-1\right)!!}{m!!} & m\in\bbn_{\text{odd}}
-\end{cases}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-משפט מכפלת ואליס
-\series default
-\color inherit
-: 
-\begin_inset Formula $\underset{n\to\infty}{\lim}\frac{2\cdot2\cdot4\cdot4\cdot6\cdot6\dots\left(2n-2\right)\cdot\left(2n-2\right)\cdot2n}{1\cdot3\cdot3\cdot5\cdot5\dots\left(2n-1\right)\cdot\left(2n-1\right)}=\prod_{n=1}^{\infty}\left(\frac{2n}{2n-1}\cdot\frac{2n}{2n+1}\right)=\frac{\pi}{2}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color purple
 אינטגרל רימן לא אמיתי
 \series default
 \color inherit
@@ -2331,7 +2096,33 @@ $
 \begin_layout Standard
 
 \series bold
-\color purple
+\color magenta
+אינטגרל
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f:\left(a,b\right]\to\bbr$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $c\in\left(a,b\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $f\in R\left(\left[c,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{b}f=\lim_{\e\to0^{+}}\int_{a+\e}^{b}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
 סימון
 \series default
 \color inherit
@@ -2349,18 +2140,7 @@ $
 \begin_layout Standard
 
 \series bold
-\color purple
-הערה
-\series default
-\color inherit
-: מכאן כל המשפטים יהיו חד צדדים ימינה אך תקפים לכל סוגי הקטעים עם שינויים
- קלים.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color purple
+\color magenta
 משפט
 \series default
 \color inherit
@@ -2615,7 +2395,7 @@ $
 \end_inset
 
  המקיימת 
-\begin_inset Formula ${\scriptstyle \forall b\in\left(a,\omega\right).f\in R\left(\left[a,b\right]\right)}$
+\begin_inset Formula $\forall b\in\left(a,\omega\right).f\in R\left(\left[a,b\right]\right)$
 \end_inset
 
  אזי 
@@ -2717,94 +2497,6 @@ $
 
 \series bold
 \color brown
-פונקציית זטא של רימן
-\series default
-\color inherit
-: נגדיר 
-\begin_inset Formula $\zeta:\left(1,\infty\right)\to\bbr$
-\end_inset
-
- כך 
-\begin_inset Formula $\zeta\left(s\right)=\sum_{n=1}^{\infty}\frac{1}{n^{s}}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-טענה
-\series default
-\color inherit
-: 
-\begin_inset Formula $\lim_{s\to1^{+}}\zeta\left(s\right)\left(s-1\right)=1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-משפט
-\series default
- 
-\series bold
-אבל
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $g\in C\left(\left[a,\omega\right)\right)\cap R\left(\left[a,\omega\right)\right)$
-\end_inset
-
- ותהא 
-\begin_inset Formula $f\in C^{1}\left(\left[a,\omega\right)\right)$
-\end_inset
-
- מונוטונית וחסומה אזי 
-\begin_inset Formula $\int_{a}^{\omega}fg<\infty$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-משפט דיריכלה
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $g\in C\left(\left[a,\omega\right)\right)$
-\end_inset
-
- עבורה 
-\begin_inset Formula $G\left(x\right)=\int_{a}^{x}g$
-\end_inset
-
- חסומה ותהא 
-\begin_inset Formula $f\in C^{1}\left(\left[a,\omega\right)\right)$
-\end_inset
-
- מונוטונית עבורה 
-\begin_inset Formula $\lim_{x\to\omega}f\left(x\right)=0$
-\end_inset
-
- אזי 
-\begin_inset Formula $\int_{a}^{\omega}fg<\infty$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
 טענה נוסחאת סטירלינג
 \series default
 \color inherit
@@ -2831,6 +2523,351 @@ $
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch notDoneYet
+inverted 0
+status collapsed
+
+\begin_layout Standard
+\begin_inset Branch notDoneYet
+inverted 0
+status collapsed
+
+\begin_layout Standard
+
+\series bold
+\color gray
+פולינום טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ גזירה 
+\begin_inset Formula $n$
+\end_inset
+
+ פעמים על 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $P_{n}\left(f,a\right)\left(x\right)=\sum_{k=0}^{n}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color gray
+שארית
+\series default
+\color inherit
+ 
+\series bold
+\color gray
+טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ גזירה 
+\begin_inset Formula $n$
+\end_inset
+
+ פעמים על 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R_{n}\left(f,a\right)\left(x\right)=f\left(x\right)-P_{n}\left(f,a\right)\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color gray
+טור טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ חלקה על 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $P\left(f,a\right)\left(x\right)=\sum_{k=0}^{\infty}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: תהא 
+\begin_inset Formula $f\in C^{1}\left(\left[0,2\pi\right]\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{0}^{2\pi}f\left(x\right)\cos\left(nx\right)dx=-\int_{0}^{2\pi}f^{\prime}\left(x\right)\frac{\sin\left(nx\right)}{n}dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הלמה של בונה
+\series default
+: תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ מונוטונית ותהא 
+\begin_inset Formula $0\le g\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $x_{0}\in\left[a,b\right]$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\int_{a}^{b}f\left(x\right)g\left(x\right)\text{d}x=f\left(a\right)\int_{a}^{x_{0}}g\left(x\right)\text{d}x+f\left(b\right)\int_{x_{0}}^{b}g\left(x\right)\text{d}x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הלמה של בונה
+\series default
+: תהא 
+\begin_inset Formula $\substack{f\in C\left(\left[a,b\right]\right)\\
+f\in C^{1}\left(\left(a,b\right)\right)
+}
+$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\left(f'\ge0\right)\lor\left(f'\le0\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $g\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $x_{0}\in\left[a,b\right]$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\int_{a}^{b}f\left(x\right)g\left(x\right)dx=f\left(a\right)\int_{a}^{x_{0}}g\left(x\right)dx+f\left(b\right)\int_{x_{0}}^{b}g\left(x\right)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $f\in C^{n+1}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R_{n}\left(f,a\right)\left(x\right)=\frac{1}{n!}\int_{a}^{x}f^{\left(n+1\right)}\left(t\right)\left(x-t\right)^{n}dt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט מכפלת ואליס
+\series default
+: 
+\begin_inset Formula $\underset{n\to\infty}{\lim}\frac{2\cdot2\cdot4\cdot4\cdot6\cdot6\dots\left(2n-2\right)\cdot\left(2n-2\right)\cdot2n}{1\cdot3\cdot3\cdot5\cdot5\dots\left(2n-1\right)\cdot\left(2n-1\right)}=\prod_{n=1}^{\infty}\left(\frac{2n}{2n-1}\cdot\frac{2n}{2n+1}\right)=\frac{\pi}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $k!!=\prod_{n=0}^{\floor{\frac{k}{2}}-1}\left(k-2n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: יהי 
+\begin_inset Formula $m\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{0}^{\frac{\pi}{2}}\sin\left(x\right)^{m}dx=\int_{0}^{\frac{\pi}{2}}\cos\left(x\right)^{m}dx=\begin{cases}
+\frac{\pi}{2}\cdot\frac{\left(m-1\right)!!}{m!!} & m\in\bbn_{\text{even}}\\
+\frac{\left(m-1\right)!!}{m!!} & m\in\bbn_{\text{odd}}
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+ 
+\series bold
+אבל
+\series default
+: תהא 
+\begin_inset Formula $g\in C\left(\left[a,\omega\right)\right)\cap R\left(\left[a,\omega\right)\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f\in C^{1}\left(\left[a,\omega\right)\right)$
+\end_inset
+
+ מונוטונית וחסומה אזי 
+\begin_inset Formula $\int_{a}^{\omega}fg<\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט דיריכלה
+\series default
+: תהא 
+\begin_inset Formula $g\in C\left(\left[a,\omega\right)\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $G\left(x\right)=\int_{a}^{x}g$
+\end_inset
+
+ חסומה ותהא 
+\begin_inset Formula $f\in C^{1}\left(\left[a,\omega\right)\right)$
+\end_inset
+
+ מונוטונית עבורה 
+\begin_inset Formula $\lim_{x\to\omega}f\left(x\right)=0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{a}^{\omega}fg<\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית זטא של רימן
+\series default
+: נגדיר 
+\begin_inset Formula $\zeta:\left(1,\infty\right)\to\bbr$
+\end_inset
+
+ כך 
+\begin_inset Formula $\zeta\left(s\right)=\sum_{n=1}^{\infty}\frac{1}{n^{s}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\lim_{s\to1^{+}}\zeta\left(s\right)\left(s-1\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+למה: יהי 
+\begin_inset Formula $m\in\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p>m$
+\end_inset
+
+ נסמן 
+\begin_inset Formula $q\left(x\right)=\frac{1}{\left(p-1\right)!}x^{p-1}\left(x-1\right)^{p}\left(x-2\right)^{p}\cdot\ldots\cdot\left(x-m\right)^{p}$
+\end_inset
+
+ ...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט הרמיט
+\series default
+: 
+\begin_inset Formula $e$
+\end_inset
+
+ הינו טרנסצנדנטי.
 \end_layout
 
 \begin_layout Standard
@@ -5731,7 +5768,7 @@ status collapsed
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $09.01.2024$
+\begin_inset Formula $16.01.2024$
 \end_inset
 
  - הכל
