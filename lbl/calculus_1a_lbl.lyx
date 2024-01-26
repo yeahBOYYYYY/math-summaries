@@ -15,7 +15,7 @@
 \usepackage{pgfplots}
 \usepackage{hyperref}
 \usepackage{xcolor}
-\usepackage[cm]{fullpage}
+% \usepackage[cm]{fullpage}
 \usepackage{polynom}
 \usepackage{booktabs}
 \usepackage{fancyhdr}
@@ -33,7 +33,7 @@
 \counterwithin*{section}{part}
 \setlist{nosep, noitemsep}
 \setlist[enumerate,1]{label = \arabic*., ref = \arabic*}
-\setlist[enumerate,2]{label = \emph{\alph*}), ref = \theenumi.\emph{\alph*}}
+\setlist[enumerate,2]{label = \alph*), ref = \theenumi.\emph{\alph*}}
 \setlist[enumerate,3]{label = .\roman*, ref = \theenumii.\roman*}
 \setlist[itemize,1]{label={\fontfamily{david}\fontencoding{T1}\selectfont\textbullet}}
 
@@ -48,17 +48,17 @@
 \definecolor{commentcolor}{RGB}{128,128,128}
 \definecolor{stringcolor}{RGB}{0,168,0}
 \definecolor{remarkcolor}{RGB}{150,145,91} % 255,225,88
-\renewcommand\qedsymbol{$\blacksquare$}
 
 % hyperlinks
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
-    urlcolor=blue,
-    }
+    linkcolor=black,
+    urlcolor=black,
+}
+\newcommand\colorAutoref[1]{{\hypersetup{linkcolor=blue}\autoref{#1}}}  %% allows for calls to \autoref{} that have a different color from other links.
 
 % math font and implies arrow
-\setmathfont{NewCMMath-Regular.otf}
+% \setmathfont{NewCMMath-Regular.otf}
 \let\RonMikhelmanLol\implies
 \renewcommand{\implies}{\negthickspace\RonMikhelmanLol\negthickspace}
 \let\RonMikhelmanLoll\iff
@@ -66,67 +66,17 @@
 \let\RonMikhelmanLolll\impliedby
 \renewcommand{\impliedby}{\negthickspace\RonMikhelmanLolll\negthickspace}
 \end_preamble
+\options no-math
 \use_default_options true
-\begin_modules
-theorems-ams-chap-bytype
-theorems-ams-extended-chap-bytype
-eqs-within-sections
-figs-within-sections
-tabs-within-sections
-\end_modules
 \maintain_unincluded_children false
-\begin_local_layout
-Format 66
-
-
-Style Remark
-	CopyStyle             Theorem
-	LatexName             rem
-	LabelString           "Remark \theremark."
-	Preamble
-	  \newtheoremstyle{myremark}{3pt}{3pt}{\itshape}{}{\itshape\color{remarkcolor}}{.}{.5em}{}
-	  \theoremstyle{myremark}
-	  \newtheorem{rem}{\protect\remarkname}[section]
-	EndPreamble
-	LangPreamble
-		\providecommand{\remarkname}{_(Remark)}
-	EndLangPreamble
-	BabelPreamble
-		\addto\captions$$lang{\renewcommand{\remarkname}{_(Remark)}}
-	EndBabelPreamble
-	LabelFont
-	  Series              Medium
-	  Shape               Italic
-	EndFont
-	LabelCounter          remark
-End
-
-Style Claim
-	CopyStyle             Theorem
-	LatexName             claim
-	LabelString           "Claim \theclaim."
-	Preamble
-	  \theoremstyle{plain}
-	  \newtheorem{claim}{\protect\claimname}[section]
-	EndPreamble
-	Requires              amsthm
-	LangPreamble
-		\providecommand{\claimname}{_(Claim)}
-	EndLangPreamble
-	BabelPreamble
-		\addto\captions$$lang{\renewcommand{\claimname}{_(Claim)}}
-	EndBabelPreamble
-	LabelCounter          claim
-End
-\end_local_layout
 \language hebrew
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "David"
-\font_sans "default" "David"
-\font_typewriter "default" "David"
-\font_math "auto" "default"
+\font_roman "default" "David CLM"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
@@ -141,11 +91,11 @@ End
 \bibtex_command default
 \index_command default
 \float_placement H
-\paperfontsize 12
+\paperfontsize default
 \spacing onehalf
 \use_hyperref false
 \papersize letterpaper
-\use_geometry false
+\use_geometry true
 \use_package amsmath 2
 \use_package amssymb 2
 \use_package cancel 2
@@ -155,7 +105,7 @@ End
 \use_package mhchem 2
 \use_package stackrel 2
 \use_package stmaryrd 2
-\use_package undertilde 0
+\use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
@@ -166,15 +116,14 @@ End
 \justification false
 \use_refstyle 1
 \use_minted 0
-\branch LinearAlgebra2Recap
-\selected 0
-\filename_suffix 0
-\color #faf0e6
-\end_branch
 \index Index
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -185,7 +134,7 @@ End
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
-\paperpagestyle default
+\paperpagestyle empty
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -200,15 +149,6 @@ End
 LatexCommand include
 filename "E:/University/macros.lyx"
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\renewcommand{\P}{{\cal P}}
-{{\cal P}}
 \end_inset
 
 
@@ -3579,19 +3519,6 @@ x & x\ge0\\
 \begin_inset Formula $\left(S_{n}^{a}\to L\right)\implies\left(\sum_{i=0}^{\infty}a_{i}=L\right)$
 \end_inset
 
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
 .
 \end_layout
 
@@ -3713,7 +3640,7 @@ x & x\ge0\\
 \end_inset
 
  מתכנס(
-\begin_inset Formula $\left(\forall\e>0.\exists N\in\bbn.\forall m>N.\forall k\in\bbn.\left|{\displaystyle \sum_{n=m}^{m+k}a_{n}}\right|<\e\right)\iff$
+\begin_inset Formula $\left(\forall\e>0.\exists N\in\bbn.\forall m>N.\forall k\in\bbn.\left|\sum_{n=m}^{m+k}a_{n}\right|<\e\right)\iff$
 \end_inset
 
 .
@@ -4374,10 +4301,14 @@ x & x\ge0\\
 \end_inset
 
  סדרה ותהא 
-\begin_inset Formula $\underset{b_{0}=0}{b\in\bbn^{\bbn}}$
+\begin_inset Formula $b\in\bbn^{\bbn}$
 \end_inset
 
- עולה ממש כך 
+ עולה ממש עבורה 
+\begin_inset Formula $b_{0}=0$
+\end_inset
+
+ וכן 
 \begin_inset Formula $\left(a_{i}\right)_{i=b_{n}}^{b_{n+1}-1}$
 \end_inset
 
@@ -6373,7 +6304,6 @@ literal "false"
 \begin_layout Standard
 
 \series bold
-\size small
 \color brown
 מסקנה
 \series default
@@ -6957,10 +6887,7 @@ literal "false"
 \begin_inset Formula $A\subseteq\bigcup_{n\in\Lambda}I_{n}$
 \end_inset
 
- מתקיים
-\end_layout
-
-\begin_layout Standard
+ מתקיים 
 \begin_inset Formula $\exists{\cal B}\in\P_{<\aleph_{0}}\left(\Lambda\right).A\subseteq\bigcup_{n\in{\cal B}}I_{n}$
 \end_inset
 
@@ -6988,7 +6915,6 @@ literal "false"
 \begin_layout Standard
 
 \series bold
-\size small
 \color orange
 פונקציה רציפה במידה שווה )במ
 \begin_inset Quotes erd
@@ -7674,11 +7600,7 @@ literal "false"
 \begin_inset Formula $f\left(x_{0}\right)$
 \end_inset
 
- אזי
-\begin_inset Newline newline
-\end_inset
-
-
+ אזי 
 \begin_inset Formula $\left(g\circ f\right)'\left(x_{0}\right)=g'\left(f\left(x\right)\right)\cdot f'\left(x\right)$
 \end_inset
 
@@ -8306,10 +8228,7 @@ literal "false"
 \begin_inset Formula $\frac{1}{p}+\frac{1}{q}=1$
 \end_inset
 
- אזי
-\end_layout
-
-\begin_layout Standard
+ אזי 
 \begin_inset Formula $\sum_{i=1}^{n}\left|x_{i}y_{i}\right|\le\left(\sum_{i=1}^{n}\left|x_{i}\right|^{p}\right)^{\frac{1}{p}}\left(\sum_{i=1}^{n}\left|y_{i}\right|^{q}\right)^{\frac{1}{q}}$
 \end_inset
 
@@ -8334,9 +8253,10 @@ literal "false"
 \end_inset
 
  אזי
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
+
 \begin_inset Formula $\left(\sum_{i=1}^{n}\left|x_{i}+y_{i}\right|^{p}\right)^{\frac{1}{p}}\le\left(\sum_{i=1}^{n}\left|x_{i}\right|^{p}\right)^{\frac{1}{p}}\left(\sum_{i=1}^{n}\left|y_{i}\right|^{q}\right)^{\frac{1}{q}}$
 \end_inset
 
@@ -8756,9 +8676,10 @@ j! & j=k\\
 \end_inset
 
  אזי
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
+
 \begin_inset Formula $\forall x\in\left(a,b\right).\exists c\in\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right).g\left(x\right)=\frac{g^{\left(n+1\right)}\left(c\right)}{\left(n+1\right)!}\left(x-x_{0}\right)^{n+1}$
 \end_inset
 
@@ -8781,9 +8702,10 @@ j! & j=k\\
 \end_inset
 
  פעמים אזי
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
+
 \begin_inset Formula $\forall x\in\left(a,b\right).\exists c\in\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right).R_{n}\left(x\right)=\frac{f^{\left(n+1\right)}\left(c\right)}{\left(n+1\right)!}\left(x-x_{0}\right)^{n+1}$
 \end_inset
 
@@ -8850,9 +8772,10 @@ j! & j=k\\
 \end_inset
 
  אזי
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
+
 \begin_inset Formula $\forall c\in\bbr.\left(\lim_{m\to\infty}\frac{a_{m}}{m!}c^{m}=0\right)\implies\left(\forall x\in\left[x_{0}-c,x_{0}+c\right].f\left(x\right)=\sum_{k=0}^{\infty}\frac{f^{\left(k\right)}\left(x_{0}\right)}{k!}\left(x-x_{0}\right)^{k}\right)$
 \end_inset
 
@@ -8903,9 +8826,10 @@ j! & j=k\\
 \end_inset
 
  פעמים אזי
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
+
 \begin_inset Formula $\forall x\in\left(a,b\right).\exists c\in\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right).R_{n}\left(x\right)=\frac{f^{\left(n+1\right)}\left(c\right)}{n!}\left(x-c\right)^{n}\left(x-x_{0}\right)$
 \end_inset
 
