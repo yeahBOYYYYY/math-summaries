@@ -1977,6 +1977,28 @@ f\left(x\right) & \text{else}
 
 \series bold
 \color magenta
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C^{1}\left(\left[0,2\pi\right]\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{0}^{2\pi}f\left(x\right)\cos\left(nx\right)dx=-\int_{0}^{2\pi}f^{\prime}\left(x\right)\frac{\sin\left(nx\right)}{n}dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
 טענה דעיכת מקמדי פורייה בהינתן גזירות
 \series default
 \color inherit
@@ -2088,32 +2110,6 @@ f\left(x\right) & \text{else}
 
  אזי 
 \begin_inset Formula $\int_{a}^{b}f=\underset{r\to b^{-}}{\lim}\int_{a}^{r}f$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-אינטגרל
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f:\left(a,b\right]\to\bbr$
-\end_inset
-
- כך שלכל 
-\begin_inset Formula $c\in\left(a,b\right]$
-\end_inset
-
- מתקיים 
-\begin_inset Formula $f\in R\left(\left[c,b\right]\right)$
-\end_inset
-
- אזי 
-\begin_inset Formula $\int_{a}^{b}f=\lim_{\e\to0^{+}}\int_{a+\e}^{b}f$
 \end_inset
 
 .
@@ -2245,17 +2241,15 @@ f\left(x\right) & \text{else}
 \end_inset
 
  ותהא 
-\begin_inset Formula $\substack{\varphi\in\left[a,\omega\right)^{\left[c,\eta\right)}\\
-\varphi\in C^{1}\left(\left[c,\eta\right)\right)
-}
-$
+\begin_inset Formula $\varphi\in C^{1}\left(\left[c,\eta\right),\left[a,\omega\right)\right)$
 \end_inset
 
  המקיימת 
-\begin_inset Formula $\substack{\varphi\left(c\right)=a\\
-\lim_{b\to\eta}\varphi\left(b\right)=\omega
-}
-$
+\begin_inset Formula $\varphi\left(c\right)=a$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\lim_{b\to\eta}\varphi\left(b\right)=\omega$
 \end_inset
 
  אזי 
@@ -2268,7 +2262,7 @@ $
 \begin_layout Standard
 
 \series bold
-\color brown
+\color purple
 משפט קריטריון קושי להתכנסות אינטגרל לא אמיתי
 \series default
 \color inherit
@@ -2294,7 +2288,7 @@ $
 \begin_layout Standard
 
 \series bold
-\color brown
+\color purple
 התכנסות בהחלט
 \series default
 \color inherit
@@ -2316,7 +2310,7 @@ $
 \begin_layout Standard
 
 \series bold
-\color brown
+\color purple
 התכנסות בתנאי
 \series default
 \color inherit
@@ -2342,7 +2336,7 @@ $
 \begin_layout Standard
 
 \series bold
-\color brown
+\color purple
 טענה
 \series default
 \color inherit
@@ -2364,7 +2358,7 @@ $
 \begin_layout Standard
 
 \series bold
-\color brown
+\color purple
 מסקנה
 \series default
 \color inherit
@@ -2386,7 +2380,7 @@ $
 \begin_layout Standard
 
 \series bold
-\color brown
+\color purple
 טענה
 \series default
 \color inherit
@@ -2416,7 +2410,7 @@ $
 \begin_layout Standard
 
 \series bold
-\color brown
+\color purple
 מסקנה
 \series default
 \color inherit
@@ -2428,29 +2422,17 @@ $
 \begin_inset Formula $\forall b\in\left(a,\omega\right).f,g\in R\left(\left[a,b\right]\right)$
 \end_inset
 
- אזי 
+ אזי
+\end_layout
+
+\begin_layout Itemize
 \begin_inset Formula $\left(\int_{a}^{\omega}g<\infty\right)\implies\left(\int_{a}^{\omega}f<\infty\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-
-\series bold
-\color brown
-מסקנה
-\series default
-\color inherit
-: תהיינה 
-\begin_inset Formula $0\le f\le g\in\bbr^{\left[a,\omega\right)}$
-\end_inset
-
- המקיימות 
-\begin_inset Formula $\forall b\in\left(a,\omega\right).f,g\in R\left(\left[a,b\right]\right)$
-\end_inset
-
- אזי 
+\begin_layout Itemize
 \begin_inset Formula $\left(\int_{a}^{\omega}f=\infty\right)\implies\left(\int_{a}^{\omega}g=\infty\right)$
 \end_inset
 
@@ -2460,7 +2442,7 @@ $
 \begin_layout Standard
 
 \series bold
-\color brown
+\color purple
 משפט
 \series default
 \color inherit
@@ -2478,7 +2460,7 @@ $
 \begin_layout Standard
 
 \series bold
-\color brown
+\color purple
 טענה
 \series default
 \color inherit
@@ -2496,7 +2478,7 @@ $
 \begin_layout Standard
 
 \series bold
-\color brown
+\color purple
 טענה נוסחאת סטירלינג
 \series default
 \color inherit
@@ -2514,7 +2496,7 @@ $
 \begin_layout Standard
 
 \series bold
-\color brown
+\color purple
 מסקנה
 \series default
 \color inherit
@@ -2526,251 +2508,16 @@ $
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch notDoneYet
-inverted 0
-status collapsed
-
-\begin_layout Standard
-\begin_inset Branch notDoneYet
-inverted 0
-status collapsed
-
-\begin_layout Standard
 
 \series bold
-\color gray
-פולינום טיילור
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f\in\bbr^{I}$
-\end_inset
-
- גזירה 
-\begin_inset Formula $n$
-\end_inset
-
- פעמים על 
-\begin_inset Formula $a$
-\end_inset
-
- אזי 
-\begin_inset Formula $P_{n}\left(f,a\right)\left(x\right)=\sum_{k=0}^{n}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color gray
-שארית
-\series default
-\color inherit
- 
-\series bold
-\color gray
-טיילור
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f\in\bbr^{I}$
-\end_inset
-
- גזירה 
-\begin_inset Formula $n$
-\end_inset
-
- פעמים על 
-\begin_inset Formula $a$
-\end_inset
-
- אזי 
-\begin_inset Formula $R_{n}\left(f,a\right)\left(x\right)=f\left(x\right)-P_{n}\left(f,a\right)\left(x\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color gray
-טור טיילור
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f\in\bbr^{I}$
-\end_inset
-
- חלקה על 
-\begin_inset Formula $a$
-\end_inset
-
- אזי 
-\begin_inset Formula $P\left(f,a\right)\left(x\right)=\sum_{k=0}^{\infty}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-למה
-\series default
-: תהא 
-\begin_inset Formula $f\in C^{1}\left(\left[0,2\pi\right]\right)$
-\end_inset
-
- ויהי 
-\begin_inset Formula $n\in\bbn$
-\end_inset
-
- אזי 
-\begin_inset Formula $\int_{0}^{2\pi}f\left(x\right)\cos\left(nx\right)dx=-\int_{0}^{2\pi}f^{\prime}\left(x\right)\frac{\sin\left(nx\right)}{n}dx$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-...
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-הלמה של בונה
-\series default
-: תהא 
-\begin_inset Formula $f$
-\end_inset
-
- מונוטונית ותהא 
-\begin_inset Formula $0\le g\in R\left(\left[a,b\right]\right)$
-\end_inset
-
- אזי קיים 
-\begin_inset Formula $x_{0}\in\left[a,b\right]$
-\end_inset
-
- עבורו 
-\begin_inset Formula $\int_{a}^{b}f\left(x\right)g\left(x\right)\text{d}x=f\left(a\right)\int_{a}^{x_{0}}g\left(x\right)\text{d}x+f\left(b\right)\int_{x_{0}}^{b}g\left(x\right)\text{d}x$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-הלמה של בונה
-\series default
-: תהא 
-\begin_inset Formula $\substack{f\in C\left(\left[a,b\right]\right)\\
-f\in C^{1}\left(\left(a,b\right)\right)
-}
-$
-\end_inset
-
- עבורה 
-\begin_inset Formula $\left(f'\ge0\right)\lor\left(f'\le0\right)$
-\end_inset
-
- ותהא 
-\begin_inset Formula $g\in C\left(\left[a,b\right]\right)$
-\end_inset
-
- אזי קיים 
-\begin_inset Formula $x_{0}\in\left[a,b\right]$
-\end_inset
-
- עבורו 
-\begin_inset Formula $\int_{a}^{b}f\left(x\right)g\left(x\right)dx=f\left(a\right)\int_{a}^{x_{0}}g\left(x\right)dx+f\left(b\right)\int_{x_{0}}^{b}g\left(x\right)dx$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-טענה
-\series default
-: תהא 
-\begin_inset Formula $f\in C^{n+1}\left(\left[a,b\right]\right)$
-\end_inset
-
- אזי 
-\begin_inset Formula $R_{n}\left(f,a\right)\left(x\right)=\frac{1}{n!}\int_{a}^{x}f^{\left(n+1\right)}\left(t\right)\left(x-t\right)^{n}dt$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-משפט מכפלת ואליס
-\series default
-: 
-\begin_inset Formula $\underset{n\to\infty}{\lim}\frac{2\cdot2\cdot4\cdot4\cdot6\cdot6\dots\left(2n-2\right)\cdot\left(2n-2\right)\cdot2n}{1\cdot3\cdot3\cdot5\cdot5\dots\left(2n-1\right)\cdot\left(2n-1\right)}=\prod_{n=1}^{\infty}\left(\frac{2n}{2n-1}\cdot\frac{2n}{2n+1}\right)=\frac{\pi}{2}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-סימון
-\series default
-: יהי 
-\begin_inset Formula $k\in\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $k!!=\prod_{n=0}^{\floor{\frac{k}{2}}-1}\left(k-2n\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-למה
-\series default
-: יהי 
-\begin_inset Formula $m\in\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\int_{0}^{\frac{\pi}{2}}\sin\left(x\right)^{m}dx=\int_{0}^{\frac{\pi}{2}}\cos\left(x\right)^{m}dx=\begin{cases}
-\frac{\pi}{2}\cdot\frac{\left(m-1\right)!!}{m!!} & m\in\bbn_{\text{even}}\\
-\frac{\left(m-1\right)!!}{m!!} & m\in\bbn_{\text{odd}}
-\end{cases}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
+\color brown
 משפט
 \series default
  
 \series bold
 אבל
 \series default
+\color inherit
 : תהא 
 \begin_inset Formula $g\in C\left(\left[a,\omega\right)\right)\cap R\left(\left[a,\omega\right)\right)$
 \end_inset
@@ -2789,8 +2536,10 @@ $
 \begin_layout Standard
 
 \series bold
+\color brown
 משפט דיריכלה
 \series default
+\color inherit
 : תהא 
 \begin_inset Formula $g\in C\left(\left[a,\omega\right)\right)$
 \end_inset
@@ -2817,8 +2566,141 @@ $
 \begin_layout Standard
 
 \series bold
+\color brown
+הלמה של בונה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ מונוטונית ותהא 
+\begin_inset Formula $0\le g\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $x_{0}\in\left[a,b\right]$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\int_{a}^{b}f\left(x\right)g\left(x\right)\text{d}x=f\left(a\right)\int_{a}^{x_{0}}g\left(x\right)\text{d}x+f\left(b\right)\int_{x_{0}}^{b}g\left(x\right)\text{d}x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הלמה של בונה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C^{1}\left(\left(a,b\right)\right)$
+\end_inset
+
+ רציפה על 
+\begin_inset Formula $a,b$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\left(f'\ge0\right)\lor\left(f'\le0\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $g\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $x_{0}\in\left[a,b\right]$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\int_{a}^{b}f\left(x\right)g\left(x\right)dx=f\left(a\right)\int_{a}^{x_{0}}g\left(x\right)dx+f\left(b\right)\int_{x_{0}}^{b}g\left(x\right)dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C^{n+1}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R_{n}\left(f,a\right)\left(x\right)=\frac{1}{n!}\int_{a}^{x}f^{\left(n+1\right)}\left(t\right)\left(x-t\right)^{n}dt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $k!!=\prod_{n=0}^{\floor{\frac{k}{2}}-1}\left(k-2n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+למה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $m\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{0}^{\frac{\pi}{2}}\sin\left(x\right)^{m}dx=\int_{0}^{\frac{\pi}{2}}\cos\left(x\right)^{m}dx=\begin{cases}
+\frac{\pi}{2}\cdot\frac{\left(m-1\right)!!}{m!!} & m\in\bbn_{\text{even}}\\
+\frac{\left(m-1\right)!!}{m!!} & m\in\bbn_{\text{odd}}
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+משפט מכפלת ואליס
+\series default
+\color inherit
+: 
+\begin_inset Formula $\underset{n\to\infty}{\lim}\frac{2\cdot2\cdot4\cdot4\cdot6\cdot6\dots\left(2n-2\right)\cdot\left(2n-2\right)\cdot2n}{1\cdot3\cdot3\cdot5\cdot5\dots\left(2n-1\right)\cdot\left(2n-1\right)}=\prod_{n=1}^{\infty}\left(\frac{2n}{2n-1}\cdot\frac{2n}{2n+1}\right)=\frac{\pi}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
 פונקציית זטא של רימן
 \series default
+\color inherit
 : נגדיר 
 \begin_inset Formula $\zeta:\left(1,\infty\right)\to\bbr$
 \end_inset
@@ -2833,8 +2715,10 @@ $
 \begin_layout Standard
 
 \series bold
+\color brown
 טענה
 \series default
+\color inherit
 : 
 \begin_inset Formula $\lim_{s\to1^{+}}\zeta\left(s\right)\left(s-1\right)=1$
 \end_inset
@@ -2843,26 +2727,12 @@ $
 \end_layout
 
 \begin_layout Standard
-למה: יהי 
-\begin_inset Formula $m\in\bbn$
-\end_inset
-
- ויהי 
-\begin_inset Formula $p>m$
-\end_inset
-
- נסמן 
-\begin_inset Formula $q\left(x\right)=\frac{1}{\left(p-1\right)!}x^{p-1}\left(x-1\right)^{p}\left(x-2\right)^{p}\cdot\ldots\cdot\left(x-m\right)^{p}$
-\end_inset
-
- ...
-\end_layout
-
-\begin_layout Standard
 
 \series bold
+\color brown
 משפט הרמיט
 \series default
+\color inherit
 : 
 \begin_inset Formula $e$
 \end_inset
@@ -3196,15 +3066,16 @@ $
 \begin_inset Formula $f_{n}\in C\left(\left[a,b\right]\right)$
 \end_inset
 
- עבורן 
-\begin_inset Formula $\substack{f_{n}\limpw f\\
-\forall n<m.f_{m}<f_{n}
-}
-$
+ ותהא 
+\begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
 \end_inset
 
- באשר 
-\begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
+ עבורן 
+\begin_inset Formula $f_{n}\limpw f$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\forall n<m.f_{m}<f_{n}$
 \end_inset
 
  אזי 
@@ -3343,8 +3214,10 @@ $
 \begin_layout Standard
 
 \series bold
+\color teal
 משפט
 \series default
+\color inherit
 : תהיינה 
 \begin_inset Formula $f_{n}\in C^{1}\left(\left[a,b\right]\right)$
 \end_inset
@@ -3370,6 +3243,101 @@ $
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch notDoneYet
+inverted 0
+status collapsed
+
+\begin_layout Standard
+\begin_inset Branch notDoneYet
+inverted 0
+status collapsed
+
+\begin_layout Standard
+
+\series bold
+\color gray
+פולינום טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ גזירה 
+\begin_inset Formula $n$
+\end_inset
+
+ פעמים על 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $P_{n}\left(f,a\right)\left(x\right)=\sum_{k=0}^{n}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color gray
+שארית
+\series default
+\color inherit
+ 
+\series bold
+\color gray
+טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ גזירה 
+\begin_inset Formula $n$
+\end_inset
+
+ פעמים על 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R_{n}\left(f,a\right)\left(x\right)=f\left(x\right)-P_{n}\left(f,a\right)\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color gray
+טור טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ חלקה על 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $P\left(f,a\right)\left(x\right)=\sum_{k=0}^{\infty}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5768,7 +5736,7 @@ status collapsed
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $16.01.2024$
+\begin_inset Formula $31.01.2024$
 \end_inset
 
  - הכל
