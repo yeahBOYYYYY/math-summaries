@@ -2063,6 +2063,64 @@ b & -a
 
 \series bold
 \color green
+הגדרה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbr^{2}$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbr^{2}$
+\end_inset
+
+ דיפרנציאבילית אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{\partial f}{\partial z}=\frac{1}{2}\left(\frac{\partial f}{\partial x}-i\frac{\partial f}{\partial y}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{\partial f}{\partial\bar z}=\frac{1}{2}\left(\frac{\partial f}{\partial x}+i\frac{\partial f}{\partial y}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ גזירה אזי )
+\begin_inset Formula $f$
+\end_inset
+
+ הולומורפית(
+\begin_inset Formula $\left(\frac{\partial f}{\partial\bar z}=0\right)\iff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
 טענה
 \series default
 \color inherit
@@ -3093,10 +3151,24 @@ b & -a
 \end_inset
 
  קטע אזי 
-\begin_inset Formula $\gamma:I\to\bbc$
+\begin_inset Formula $\gamma\in C\left(I,\bbc\right)$
 \end_inset
 
- חלקה למקוטעין.
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסילה חלקה למקוטעין
+\series default
+\color inherit
+: מסילה 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ אשר חלקה עד כדי מספר סופי של נקודות ובהן קיימות נגזרות חד־צדדיות מכל סדר.
 \end_layout
 
 \begin_layout Standard
@@ -3184,11 +3256,250 @@ b & -a
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color brown
+סכום מסילות
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $\gamma_{i}:\left[a_{i},a_{i+1}\right]\to\bbc$
+\end_inset
+
+ מסילות אזי 
+\begin_inset Formula $\left(\sum\gamma_{i}\right)\left(t\right)=\left\{ \begin{smallmatrix}\gamma_{0}\left(t\right) &  & t\in\left[a_{0},a_{1}\right]\\
+\vdots\\
+\gamma_{n}\left(t\right) &  & t\in\left[a_{n},a_{n+1}\right]
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $\gamma_{i}:\left[a_{i},a_{i+1}\right]\to\bbc$
+\end_inset
+
+ מסילות אזי 
+\begin_inset Formula $\sum\gamma_{i}$
+\end_inset
+
+ מסילה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $\gamma_{i}:\left[a_{i},a_{i+1}\right]\to\bbc$
+\end_inset
+
+ מסילות אזי 
+\begin_inset Formula $\int_{\sum\gamma_{i}}f\left(z\right)\text{d}z=\sum\int_{\gamma_{i}}f\left(z\right)\text{d}z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסילה סגורה
+\series default
+\color inherit
+: מסילה 
+\begin_inset Formula $\gamma:\left[a,b\right]\to\bbc$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\gamma\left(a\right)=\gamma\left(b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+אינטגרל לפי אורך קשת
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ מסילה אזי 
+\begin_inset Formula $\int_{\gamma}f\left(z\right)\left|\text{d}z\right|=\int_{I}f\left(\gamma\left(t\right)\right)\left|\gamma^{\prime}\left(t\right)\right|\text{d}t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הערה
+\series default
+\color inherit
+: מקובל מאוד גם הסימון 
+\begin_inset Formula $\int_{\gamma}f\left(z\right)\text{d}s=\int_{\gamma}f\left(z\right)\left|\text{d}z\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+אורך מסילה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ מסילה אזי 
+\begin_inset Formula $\int_{\gamma}\left|\text{d}z\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ מסילה אזי 
+\begin_inset Formula $\int_{\gamma}\left(f+g\right)\left|\text{d}z\right|=\int_{\gamma}f\left|\text{d}z\right|+\int_{\gamma}g\left|\text{d}z\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ מסילה אזי 
+\begin_inset Formula $\left|\int_{\gamma}f\left(z\right)\text{d}z\right|\le\int_{\gamma}\left|f\left(z\right)\right|\left|\text{d}z\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+אינטגרל על פי צמוד
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ מסילה אזי 
+\begin_inset Formula $\int_{\gamma}f\left(z\right)\bar{\text{d}z}=\bar{\int_{I}\bar f\left(\gamma\left(t\right)\right)\gamma^{\prime}\left(t\right)\text{d}t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הגדרה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ מסילה אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\int_{\gamma}f\left(z\right)\text{d}x=\frac{1}{2}\left(\int_{\gamma}f\left(z\right)\text{d}z+\int_{\gamma}f\left(z\right)\bar{\text{d}z}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\int_{\gamma}f\left(z\right)\text{d}y=\frac{1}{2i}\left(\int_{\gamma}f\left(z\right)\text{d}z-\int_{\gamma}f\left(z\right)\bar{\text{d}z}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ מסילה אזי 
+\begin_inset Formula $\int_{\gamma}f\left(z\right)\text{d}z=\left(\int_{\gamma}u\left(x,y\right)\text{d}x-\int_{\gamma}v\left(x,y\right)\text{d}y\right)+i\left(\int_{\gamma}u\left(x,y\right)\text{d}y-\int_{\gamma}v\left(x,y\right)\text{d}x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הערה
+\series default
+\color inherit
+: מהמשוואה מלעיל ניתן לחשוב על כך שמתקיים 
+\begin_inset Formula $\text{d}z=\text{d}x+i\text{d}y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $30.01.2024$
+\begin_inset Formula $02.02.2024$
 \end_inset
 
  - הכל
