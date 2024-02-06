@@ -2326,11 +2326,853 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color teal
+התפלגות ברנולי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\left[0,1\right]$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+המשתנה המקרי: 
+\begin_inset Formula $X$
+\end_inset
+
+ אינדיקטור להצלחה בניסוי בעל סיכוי הצלחה 
+\begin_inset Formula $p$
+\end_inset
+
+ וסיכוי כישלון 
+\begin_inset Formula $1-p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+פונקציית הסתברות: 
+\begin_inset Formula $\bbp\left(X=1\right)=p$
+\end_inset
+
+, 
+\begin_inset Formula $\bbp\left(X=0\right)=1-p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סימון: 
+\begin_inset Formula $X\sim\text{Ber}\left(p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+התפלגות בינומית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\left[0,1\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+המשתנה המקרי: 
+\begin_inset Formula $X$
+\end_inset
+
+ מספר הניסויים שצלחו בביצוע 
+\begin_inset Formula $n$
+\end_inset
+
+ ניסויי ברנולי בלתי תלויים בסיכוי הצלחה 
+\begin_inset Formula $p$
+\end_inset
+
+ לניסוי.
+\end_layout
+
+\begin_layout Itemize
+פונקציית הסתברות: יהי 
+\begin_inset Formula $k\in\left\{ 0,\ldots,n\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(X=k\right)={n \choose k}p^{k}\left(1-p\right)^{n-k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סימון: 
+\begin_inset Formula $X\sim\text{Bin}\left(n,p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+התפלגות גאומטרית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\left[0,1\right]$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+המשתנה המקרי: 
+\begin_inset Formula $X$
+\end_inset
+
+ מספר ניסויי ברנולי בלתי תלויים בסיכוי הצלחה 
+\begin_inset Formula $p$
+\end_inset
+
+ שנדרשו עד הצלחה הראשונה כולל.
+\end_layout
+
+\begin_layout Itemize
+פונקציית הסתברות: יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(X=k\right)=\left(1-p\right)^{k-1}p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סימון: 
+\begin_inset Formula $X\sim\text{Geo}\left(p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+התפלגות פואסונית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+המשתנה המקרי: 
+\begin_inset Formula $X$
+\end_inset
+
+ מספר האירועים שקרו בפרק זמן נתון בעל קצב אירועים בפרק זמן זה 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+פונקציית הסתברות: יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(X=k\right)=e^{-\lambda}\frac{\lambda^{k}}{k!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סימון: 
+\begin_inset Formula $X\sim\text{Poi}\left(\lambda\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $X_{n}\sim\text{Bin}\left(n,\frac{\lambda}{n}\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ יהי 
+\begin_inset Formula $X\sim\text{Poi}\left(\lambda\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ויהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(X_{n}=k\right)\xrightarrow[n\to\infty]{}\bbp\left(X=k\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+תהליך פואסון
+\series default
+\color inherit
+: משתנים מקריים 
+\begin_inset Formula $\left\{ N_{t}\right\} _{t\in\bbr_{+}}$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $t\in\bbr_{+}$
+\end_inset
+
+ המ
+\begin_inset Quotes erd
+\end_inset
+
+מ 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+ סופר את מספר האירועים בלתי תלויים שקרו עד זמן 
+\begin_inset Formula $t$
+\end_inset
+
+, בפרט
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $N_{0}=0$
+\end_inset
+
+ וכן 
+\begin_inset Formula $N_{t+s}-N_{s}\sim\text{Poi}\left(\lambda t\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ ממוצע האירועים ליחידת זמן.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+התפלגות אחידה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a<b$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+המשתנה המקרי: 
+\begin_inset Formula $X$
+\end_inset
+
+ בחירה אקראית של נקודה בקטע 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+פונקציית התפלגות מצטברת: 
+\begin_inset Formula $F_{X}\left(t\right)=\left\{ \begin{smallmatrix}0 &  & t\le a\\
+\frac{t-a}{b-a} &  & t\in\left(a,b\right)\\
+1 &  & t\ge b
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+פונקציית צפיפות: 
+\begin_inset Formula $f_{X}\left(t\right)=\left\{ \begin{smallmatrix}\frac{1}{b-a} &  & t\in\left(a,b\right)\\
+0 &  & \text{else}
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סימון: 
+\begin_inset Formula $X\sim\text{Uni}\left(a,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+התפלגות מעריכית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+המשתנה המקרי: 
+\begin_inset Formula $X$
+\end_inset
+
+ משך חיים של תהליך הנמשך 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ יחידות זמן בממוצע.
+\end_layout
+
+\begin_layout Itemize
+פונקציית התפלגות מצטברת: 
+\begin_inset Formula $F_{X}\left(t\right)=\left\{ \begin{smallmatrix}1-e^{-\lambda x} &  & x\ge0\\
+0 &  & x<0
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+פונקציית צפיפות: 
+\begin_inset Formula $f_{X}\left(t\right)=\left\{ \begin{smallmatrix}\lambda e^{-\lambda x} &  & x\ge0\\
+0 &  & x<0
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סימון: 
+\begin_inset Formula $X\sim\text{Exp}\left(\lambda\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+ יהי 
+\begin_inset Formula $X\sim\text{Exp}\left(\lambda\right)$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $a,b>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(X>a+b\mid X>a\right)=\bbp\left(X>b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ המקיים 
+\begin_inset Formula $\forall a,b>0.\bbp\left(X>a+b\mid X>a\right)=\bbp\left(X>b\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $X\sim\text{Exp}\left(\lambda\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: הזמן הבינמופעי של תהליך פואסון עם קצב 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ מופעים ליחידת זמן מתפלג 
+\begin_inset Formula $\text{Exp}\left(\lambda\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ רציף ותהא 
+\begin_inset Formula $\varphi:\bbr\to\bbr$
+\end_inset
+
+ על, עולה ממש וגזירה אזי 
+\begin_inset Formula $f_{\varphi\circ X}\left(t\right)=\frac{f_{X}\left(\varphi^{-1}\left(t\right)\right)}{\varphi^{\prime}\left(\varphi^{-1}\left(t\right)\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ רציף ותהא 
+\begin_inset Formula $\varphi:\bbr\to\bbr$
+\end_inset
+
+ על, יורדת ממש וגזירה אזי 
+\begin_inset Formula $f_{\varphi\circ X}\left(t\right)=-\frac{f_{X}\left(\varphi^{-1}\left(t\right)\right)}{\varphi^{\prime}\left(\varphi^{-1}\left(t\right)\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+הגדרה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $X^{+}=\max\left\{ X,0\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $X^{-}=\min\left\{ X,0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+תוחלת
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ בדיד אזי 
+\begin_inset Formula $\bbe\left[X\right]=\sum_{c\in A_{X}}c\cdot\bbp\left(X=c\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ בדיד אזי 
+\begin_inset Formula $\bbe\left[X\right]=\bbe\left[X^{+}\right]+\bbe\left[X^{-}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משתנה מקרי אינטגרבילי
+\series default
+\color inherit
+: מ
+\begin_inset Quotes erd
+\end_inset
+
+מ בדיד 
+\begin_inset Formula $X$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\bbe\left[X\right]$
+\end_inset
+
+ סופי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משתנה מקרי סימטרי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $a\in\bbr$
+\end_inset
+
+ אזי מ
+\begin_inset Quotes erd
+\end_inset
+
+מ 
+\begin_inset Formula $X$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\forall b\in\bbr.\bbp\left(X\ge a+k\right)=\bbp\left(X\le a-k\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $a\in\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ בדיד אינטגרבילי סימטרי סביב 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbe\left[X\right]=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה לינאריות התוחלת
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ בדיד אינטגרבילי אזי 
+\begin_inset Formula $\bbe\left[aX+b\right]=a\bbe\left[X\right]+b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה מונוטוניות התוחלת
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X\ge Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ בדידים אזי 
+\begin_inset Formula $\bbe\left[X\right]\ge\bbe\left[Y\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+תוחלת
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\bbe\left[X^{+}\right]=\sup\left\{ \bbe\left[Y\right]\mid\left(0\le Y\le X^{+}\right)\land\left(\text{ מ"מ בדיד}Y\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\bbe\left[X^{-}\right]=-\sup\left\{ \bbe\left[Y\right]\mid\left(0\le Y\le-X^{-}\right)\land\left(\text{ מ"מ בדיד}Y\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\bbe\left[X\right]=\bbe\left[X^{+}\right]+\bbe\left[X^{-}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משתנה מקרי אינטגרבילי
+\series default
+\color inherit
+: מ
+\begin_inset Quotes erd
+\end_inset
+
+מ 
+\begin_inset Formula $X$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\bbe\left[X\right]$
+\end_inset
+
+ סופי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה לינאריות התוחלת
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אינטגרבילי אזי 
+\begin_inset Formula $\bbe\left[aX+b\right]=a\bbe\left[X\right]+b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה מונוטוניות התוחלת
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X\ge Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\bbe\left[X\right]\ge\bbe\left[Y\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $31.01.2024$
+\begin_inset Formula $04.02.2024$
 \end_inset
 
  - הכל
