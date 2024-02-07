@@ -2942,11 +2942,11 @@ b & -a
 
 \series default
 \color inherit
-: תהא 
+: יהי 
 \begin_inset Formula $\mathcal{U}\subseteq\bbc$
 \end_inset
 
- פתוחה וקשירה עבורה 
+ תחום עבורו 
 \begin_inset Formula $0\notin\mathcal{U}$
 \end_inset
 
@@ -2972,11 +2972,11 @@ b & -a
 
 \series default
 \color inherit
-: תהא 
+: יהי 
 \begin_inset Formula $\mathcal{U}\subseteq\bbc$
 \end_inset
 
- פתוחה וקשירה עבורה 
+ תחום עבורו 
 \begin_inset Formula $0\notin\mathcal{U}$
 \end_inset
 
@@ -2998,11 +2998,11 @@ b & -a
 טענה
 \series default
 \color inherit
-: תהא 
+: יהי 
 \begin_inset Formula $\mathcal{U}\subseteq\bbc$
 \end_inset
 
- פתוחה וקשירה עבורה 
+ תחום עבורו 
 \begin_inset Formula $0\notin\mathcal{U}$
 \end_inset
 
@@ -3036,7 +3036,7 @@ b & -a
 טענה
 \series default
 \color inherit
-: בקבוצה 
+: בתחום 
 \begin_inset Formula $\bbc\backslash\left\{ 0\right\} $
 \end_inset
 
@@ -3495,11 +3495,173 @@ b & -a
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $g:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית עבורה 
+\begin_inset Formula $g^{\prime}=f$
+\end_inset
+
+ אזי לכל מסילה 
+\begin_inset Formula $\gamma:\left[a,b\right]\to\mathcal{U}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\int_{\gamma}f\left(z\right)\text{d}z=g\left(\gamma\left(b\right)\right)-g\left(\gamma\left(a\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט קושי למלבן
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $R\subseteq\bbc$
+\end_inset
+
+ מלבן סגור תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ פתוחה עבורה 
+\begin_inset Formula $R\subseteq\mathcal{U}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית אזי 
+\begin_inset Formula $\int_{\partial R}f\left(z\right)\text{d}z=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט קושי למלבן משופר
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $R\subseteq\bbc$
+\end_inset
+
+ מלבן סגור תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ פתוחה עבורה 
+\begin_inset Formula $R\subseteq\mathcal{U}$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $\left\{ \zeta_{1},\ldots,\zeta_{k}\right\} \subseteq R\backslash\partial R$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\mathcal{U}\backslash\left\{ \zeta_{1},\ldots,\zeta_{k}\right\} \to\bbc$
+\end_inset
+
+ הולומורפית עבורה לכל 
+\begin_inset Formula $i\in\left[k\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\lim_{z\to\zeta_{i}}\left(z-\zeta_{i}\right)f\left(z\right)=0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\int_{\partial R}f\left(z\right)\text{d}z=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+למה
+\series default
+\color inherit
+: תהא מסילה 
+\begin_inset Formula $\gamma:\left[\a,\b\right]\to\bbc$
+\end_inset
+
+ סגורה חלקה למקוטעין ותהא 
+\begin_inset Formula $a\in\bbc\backslash\gamma\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $k\in\bbz$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\int_{\gamma}\frac{\text{d}z}{z-a}=2\pi ik$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מספר הליפופים
+\series default
+\color inherit
+: תהא מסילה 
+\begin_inset Formula $\gamma:\left[\a,\b\right]\to\bbc$
+\end_inset
+
+ סגורה חלקה למקוטעין ותהא 
+\begin_inset Formula $a\in\bbc\backslash\gamma\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי מספר הליפופים של 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ סביב 
+\begin_inset Formula $a$
+\end_inset
+
+ הינו 
+\begin_inset Formula $n\left(\gamma,a\right)=\frac{1}{2\pi i}\int_{\gamma}\frac{\text{d}z}{z-a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $02.02.2024$
+\begin_inset Formula $07.02.2024$
 \end_inset
 
  - הכל
