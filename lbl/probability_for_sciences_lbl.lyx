@@ -1396,6 +1396,24 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 
 \series bold
 \color green
+פונקציה מדידה בורל
+\series default
+\color inherit
+: 
+\begin_inset Formula $\varphi:\bbr\to\bbr$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\forall B\in\mathfrak{B}_{\bbr}.\varphi^{-1}\left[B\right]\in\mathfrak{B}_{\bbr}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
 סימון
 \series default
 \color inherit
@@ -3044,6 +3062,36 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 
 \series bold
 \color teal
+משתנה מקרי שולט
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $X$
+\end_inset
+
+ שולט על 
+\begin_inset Formula $Y$
+\end_inset
+
+ אם 
+\begin_inset Formula $Y\le X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
 טענה מונוטוניות התוחלת
 \series default
 \color inherit
@@ -3126,10 +3174,8 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \begin_layout Standard
 
 \series bold
-\color teal
 טענה לינאריות התוחלת
 \series default
-\color inherit
 : יהיו 
 \begin_inset Formula $a,b\in\bbr$
 \end_inset
@@ -3152,10 +3198,8 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \begin_layout Standard
 
 \series bold
-\color teal
 טענה מונוטוניות התוחלת
 \series default
-\color inherit
 : יהיו 
 \begin_inset Formula $X\ge Y$
 \end_inset
@@ -3172,11 +3216,555 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $\bbe\left[X\right]=\int_{0}^{\infty}\left(1-F_{X}\left(t\right)\right)\text{d}t+\int_{-\infty}^{0}\left(0-F_{X}\left(t\right)\right)\text{d}t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ רציף אזי 
+\begin_inset Formula $\bbe\left[X\right]=\int_{-\infty}^{\infty}tf_{X}\left(t\right)\text{d}t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משתנה מקרי שולט סטוכסטית
+\series default
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $X$
+\end_inset
+
+ שולט סטוכסטית על 
+\begin_inset Formula $Y$
+\end_inset
+
+ אם 
+\begin_inset Formula $F_{Y}\ge F_{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ עבורם 
+\begin_inset Formula $\bbp\left(Y\le X\right)=1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $X$
+\end_inset
+
+ שולט סטוכסטית על 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $X$
+\end_inset
+
+ שולט סטוכסטית על 
+\begin_inset Formula $Y$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbe\left[Y\right]\le\bbe\left[X\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $\bbp\left(Y\le X\right)=1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbe\left[Y\right]\le\bbe\left[X\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+חיבוריות: 
+\begin_inset Formula $\bbe\left[X+Y\right]=\bbe\left[X\right]+\bbe\left[Y\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה אי־שיוויון מרקוב
+\series default
+: יהי 
+\begin_inset Formula $X\ge0$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אינטגרבילי ויהי 
+\begin_inset Formula $b>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(X\ge b\right)\le\frac{\bbe\left[X\right]}{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אינטגרבילי בדיד ותהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ מדידה בורל אזי 
+\begin_inset Formula $\bbe\left[\varphi\circ X\right]=\sum_{c\in A_{X}}\varphi\left(c\right)\cdot\bbp\left(X=c\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ רציף ותהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ רציפה למקוטעין אזי 
+\begin_inset Formula $\bbe\left[\varphi\circ X\right]=\int_{-\infty}^{\infty}\varphi\left(t\right)f_{X}\left(t\right)\text{d}t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ חסום אזי 
+\begin_inset Formula $\bbe\left[X\right]=\int_{0}^{1}X^{\star}\left(t\right)\text{d}t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ חסום מלרע אזי 
+\begin_inset Formula $\bbe\left[X\right]=\lim_{\e\to0}\int_{0}^{1-\e}X^{\star}\left(t\right)\text{d}t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ חסום מלעיל אזי 
+\begin_inset Formula $\bbe\left[X\right]=\lim_{\e\to0}\int_{0+\e}^{1}X^{\star}\left(t\right)\text{d}t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+שונות
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אינטגרבילי אזי 
+\begin_inset Formula $\var\left(X\right)=\bbe\left[\left(X-\bbe\left[X\right]\right)^{2}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סטיית תקן
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אינטגרבילי אזי 
+\begin_inset Formula $\sigma\left(X\right)=\sqrt{\var\left(X\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אינטגרבילי אזי 
+\begin_inset Formula $\var\left(X\right)=\bbe\left[X^{2}\right]-\bbe^{2}\left[X\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אינטגרבילי ויהיו 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\var\left(aX+b\right)=a^{2}\var\left(X\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה אי־שיוויון צ'בישב
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אינטגרבילי ובעל שונות ויהי 
+\begin_inset Formula $a>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp\left(\left|X-\bbe\left[X\right]\right|\ge a\right)\le\frac{\var\left(X\right)}{a^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+פונקציה יוצרת מומנטים
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ אזי 
+\begin_inset Formula $M_{X}:\bbr\to\bbr$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $M_{X}\left(t\right)=\bbe\left[e^{tX}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ויהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע עבורו 
+\begin_inset Formula $0\in I$
+\end_inset
+
+ וכן 
+\begin_inset Formula $M_{X}\in C^{n}\left(I\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $M_{X}^{\left(n\right)}\left(0\right)=\bbe\left[X^{n}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ויהי 
+\begin_inset Formula $I$
+\end_inset
+
+ קטע עבורו 
+\begin_inset Formula $0\in I$
+\end_inset
+
+ וכן 
+\begin_inset Formula $M_{X}\left(t\right)$
+\end_inset
+
+ קיים וסופי על 
+\begin_inset Formula $I$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbe\left[\left|X\right|^{n}\right]$
+\end_inset
+
+ מתכנס לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+מ ויהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $M_{X}\left(t\right)$
+\end_inset
+
+ קיים וסופי על 
+\begin_inset Formula $\left(-\e,\e\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $M_{X}\left(t\right)=\sum_{n=0}^{n}\frac{t^{n}\bbe\left[X^{n}\right]}{n!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $04.02.2024$
+\begin_inset Formula $11.02.2024$
 \end_inset
 
  - הכל

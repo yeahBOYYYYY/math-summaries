@@ -2383,7 +2383,7 @@ b & -a
 \end_inset
 
 
-\begin_inset Formula $\forall\e>0.\exists N\in\bbn.\forall x\in A.\forall n>N.\left|f_{n}\left(x\right)-f\left(x\right)\right|<\e$
+\begin_inset Formula $\forall\e>0.\exists N\in\bbn.\forall x\in\mathcal{U}.\forall n>N.\left|f_{n}\left(x\right)-g\left(x\right)\right|<\e$
 \end_inset
 
 .
@@ -2508,11 +2508,11 @@ b & -a
 \end_inset
 
  סדרה ויהי 
-\begin_inset Formula $b\in\bbr$
+\begin_inset Formula $b\in\bbc$
 \end_inset
 
  אזי 
-\begin_inset Formula $\sum_{i=0}^{\infty}a_{i}\left(x-b\right)^{i}$
+\begin_inset Formula $\sum_{i=0}^{\infty}a_{i}\left(z-b\right)^{i}$
 \end_inset
 
 .
@@ -3212,7 +3212,7 @@ b & -a
 \begin_inset Formula $\varphi:\left(\a,\b\right)\to\left(a,b\right)$
 \end_inset
 
- עולה המקיימת חלקה למקוטעין אזי 
+ עולה וחלקה למקוטעין אזי 
 \begin_inset Formula $\int_{\gamma}f\left(z\right)\text{d}z=\int_{\gamma\circ\varphi}f\left(z\right)\text{d}z$
 \end_inset
 
@@ -3657,11 +3657,97 @@ b & -a
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C\left(\left[\a,\b\right],\bbc\right)$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $F:\left[\a,\b\right]\to\bbc$
+\end_inset
+
+ כך 
+\begin_inset Formula $F\left(t\right)=\int_{\a}^{t}f\left(\tau\right)\text{d}\tau$
+\end_inset
+
+ אזי 
+\begin_inset Formula $F$
+\end_inset
+
+ גזירה וכן 
+\begin_inset Formula $\frac{dF}{dt}=f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משפט קושי לדיסק
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $D\subseteq\bbc$
+\end_inset
+
+ דיסק תהא 
+\begin_inset Formula $f:D\to\bbc$
+\end_inset
+
+ הולומורפית ותהא 
+\begin_inset Formula $\gamma:\left[a,b\right]\to D$
+\end_inset
+
+ מסילה סגורה אזי 
+\begin_inset Formula $\int_{\gamma}f\left(z\right)\text{d}z=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משפט קושי לדיסק משופר
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $D\subseteq\bbc$
+\end_inset
+
+ דיסק פתוח יהיו 
+\begin_inset Formula $\left\{ \zeta_{1},\ldots,\zeta_{k}\right\} \subseteq D$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:D\backslash\left\{ \zeta_{1},\ldots,\zeta_{k}\right\} \to\bbc$
+\end_inset
+
+ הולומורפית ותהא 
+\begin_inset Formula $\gamma:\left[a,b\right]\to D\backslash\left\{ \zeta_{1},\ldots,\zeta_{k}\right\} $
+\end_inset
+
+ מסילה סגורה אזי 
+\begin_inset Formula $\int_{\gamma}f\left(z\right)\text{d}z=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $07.02.2024$
+\begin_inset Formula $10.02.2024$
 \end_inset
 
  - הכל

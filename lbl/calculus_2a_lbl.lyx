@@ -2527,10 +2527,10 @@ f\left(x\right) & \text{else}
 \end_inset
 
  מונוטונית וחסומה אזי 
-\begin_inset Formula $\int_{a}^{\omega}fg<\infty$
+\begin_inset Formula $\int_{a}^{\omega}fg$
 \end_inset
 
-.
+ מתכנס.
 \end_layout
 
 \begin_layout Standard
@@ -2557,10 +2557,10 @@ f\left(x\right) & \text{else}
 \end_inset
 
  אזי 
-\begin_inset Formula $\int_{a}^{\omega}fg<\infty$
+\begin_inset Formula $\int_{a}^{\omega}fg$
 \end_inset
 
-.
+ מתכנס.
 \end_layout
 
 \begin_layout Standard
@@ -3167,31 +3167,43 @@ $
 
 \series bold
 \color teal
-משפט מז'ורנטה
+פונקציית וירשטראס
 \series default
 \color inherit
-: תהיינה 
-\begin_inset Formula $f_{n}\in R\left(\left[a,\omega\right)\right)$
+: יהי 
+\begin_inset Formula $a\in\left(0,1\right)$
 \end_inset
 
- עבורן 
-\begin_inset Formula $f_{n}\limu f$
+ ויהי 
+\begin_inset Formula $b\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
- על 
-\begin_inset Formula $\left[a,b\right]$
-\end_inset
-
- ותהא 
-\begin_inset Formula $\Psi\in R\left(\left[a,\omega\right)\right)$
-\end_inset
-
- עבורה 
-\begin_inset Formula $\forall n\in\bbn.\left|f_{n}\right|\le\Psi$
+ עבורם 
+\begin_inset Formula $ab>1+\frac{3\pi}{2}$
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(\int_{a}^{\omega}f=\underset{n\to\infty}{\lim}\int_{a}^{\omega}f_{n}\right)\land\left(\text{ מתכנסת בהחלט}\int_{a}^{\omega}f\right)\land\left(\forall b\in\left[a,\omega\right).f\in R\left(\left[a,b\right]\right)\right)$
+\begin_inset Formula $W\left(x\right)=\sum_{k=0}^{\infty}a^{k}\cos\left(b^{k}\pi x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+הגדרה
+\series default
+\color inherit
+: נגדיר 
+\begin_inset Formula $\triangle_{n}\in\bbr^{\bbr}$
+\end_inset
+
+ כך 
+\begin_inset Formula $\left(\triangle_{0}\left(x\right)=\left\{ \begin{smallmatrix}x & 0\le x\le\frac{1}{2}\\
+1-x & \frac{1}{2}\le x\le1
+\end{smallmatrix}\right.\right)\land\left(\forall x\in\bbr.\triangle_{0}\left(x+1\right)=\triangle_{0}\left(x\right)\right)\land\left(\triangle_{k}=\frac{\triangle_{0}\left(4^{k}x\right)}{4^{k}}\right)$
 \end_inset
 
 .
@@ -3205,10 +3217,38 @@ $
 \series default
 \color inherit
 : 
-\begin_inset Formula $\int_{0}^{\infty}e^{-x^{2}}=\frac{\sqrt{\pi}}{2}$
+\begin_inset Formula $\triangle_{n}\limu\triangle$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\triangle$
+\end_inset
+
+ רציפה בכל נקודה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משפט
+\series default
+\color inherit
+: 
+\begin_inset Formula $\triangle$
+\end_inset
+
+ אינה גזירה באף נקודה.
 \end_layout
 
 \begin_layout Standard
@@ -3243,101 +3283,7 @@ $
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Branch notDoneYet
-inverted 0
-status collapsed
-
-\begin_layout Standard
-\begin_inset Branch notDoneYet
-inverted 0
-status collapsed
-
-\begin_layout Standard
-
-\series bold
-\color gray
-פולינום טיילור
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f\in\bbr^{I}$
-\end_inset
-
- גזירה 
-\begin_inset Formula $n$
-\end_inset
-
- פעמים על 
-\begin_inset Formula $a$
-\end_inset
-
- אזי 
-\begin_inset Formula $P_{n}\left(f,a\right)\left(x\right)=\sum_{k=0}^{n}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color gray
-שארית
-\series default
-\color inherit
  
-\series bold
-\color gray
-טיילור
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f\in\bbr^{I}$
-\end_inset
-
- גזירה 
-\begin_inset Formula $n$
-\end_inset
-
- פעמים על 
-\begin_inset Formula $a$
-\end_inset
-
- אזי 
-\begin_inset Formula $R_{n}\left(f,a\right)\left(x\right)=f\left(x\right)-P_{n}\left(f,a\right)\left(x\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color gray
-טור טיילור
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f\in\bbr^{I}$
-\end_inset
-
- חלקה על 
-\begin_inset Formula $a$
-\end_inset
-
- אזי 
-\begin_inset Formula $P\left(f,a\right)\left(x\right)=\sum_{k=0}^{\infty}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -3555,22 +3501,56 @@ status collapsed
 \begin_layout Standard
 
 \series bold
-פונקציית וירשטראס
+למה
 \series default
-: יהי 
-\begin_inset Formula $a\in\left(0,1\right)$
+: תהא 
+\begin_inset Formula $f\in C\left(\left[0,1\right]\right)$
 \end_inset
 
  ויהי 
-\begin_inset Formula $b\in\bbn\backslash\left\{ 0,1\right\} $
+\begin_inset Formula $\e>0$
 \end_inset
 
- עבורם 
-\begin_inset Formula $ab>1+\frac{3\pi}{2}$
+ אזי קיימת 
+\begin_inset Formula $\varphi:\left[0,1\right]\to\bbr$
+\end_inset
+
+ רציפה למקוטעין ולינארית למקוטעין עבורה 
+\begin_inset Formula $\max\left|f-\varphi\right|<\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C\left(\left[0,1\right]\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $N\in\bbn$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $\varphi:\left[0,1\right]\to\bbr$
+\end_inset
+
+ רציפה למקוטעין ולינארית למקוטעין כך
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\varphi\left(x\right)=f\left(0\right)+N\sum_{k=0}^{N-1}\left(f\left(a_{k+1}\right)-2f\left(a_{k}\right)+f\left(a_{k-1}\right)\right)\max\left\{ x-a_{k},0\right\} $
 \end_inset
 
  אזי 
-\begin_inset Formula $W\left(x\right)=\sum_{k=0}^{\infty}a^{k}\cos\left(b^{k}\pi x\right)$
+\begin_inset Formula $\forall m\in\left\{ 0\ldots N\right\} .\varphi\left(a_{m}\right)=f\left(a_{m}\right)$
 \end_inset
 
 .
@@ -3579,55 +3559,19 @@ status collapsed
 \begin_layout Standard
 
 \series bold
-הגדרה
+\color blue
+למה
 \series default
-: נגדיר 
-\begin_inset Formula $\triangle_{n}\in\bbr^{\bbr}$
+\color inherit
+: קיימות 
+\begin_inset Formula $p_{n}\in\bbr\left[x\right]$
 \end_inset
 
- כך 
-\begin_inset Formula $\left(\triangle_{0}\left(x\right)=\left\{ \begin{smallmatrix}x & 0\le x\le\frac{1}{2}\\
-1-x & \frac{1}{2}\le x\le1
-\end{smallmatrix}\right.\right)\land\left(\forall x\in\bbr.\triangle_{0}\left(x+1\right)=\triangle_{0}\left(x\right)\right)\land\left(\triangle_{k}=\frac{\triangle_{0}\left(4^{k}x\right)}{4^{k}}\right)$
+ עבורן 
+\begin_inset Formula $\lim_{n\to\infty}\max_{\left[-1,1\right]}\left|p_{n}\left(x\right)-\left|x\right|\right|=0$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-טענה
-\series default
-: 
-\begin_inset Formula $\triangle_{n}\limu\triangle$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-מסקנה
-\series default
-: 
-\begin_inset Formula $\triangle$
-\end_inset
-
- רציפה בכל נקודה.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-משפט
-\series default
-: 
-\begin_inset Formula $\triangle$
-\end_inset
-
- אינה גזירה באף נקודה.
 \end_layout
 
 \begin_layout Standard
@@ -3663,11 +3607,11 @@ status collapsed
 \begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
 \end_inset
 
- אזי קיימת 
+ אזי קיימות 
 \begin_inset Formula $p_{n}\in\bbr\left[x\right]$
 \end_inset
 
- עבורה 
+ עבורן 
 \begin_inset Formula $p_{n}\limu f$
 \end_inset
 
@@ -3705,6 +3649,54 @@ status collapsed
 
  אזי 
 \begin_inset Formula $B_{n}\limu f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט מז'ורנטה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $f_{n}\in R\left(\left[a,\omega\right)\right)$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $f_{n}\limu f$
+\end_inset
+
+ על 
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\Psi\in R\left(\left[a,\omega\right)\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\forall n\in\bbn.\left|f_{n}\right|\le\Psi$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\int_{a}^{\omega}f=\underset{n\to\infty}{\lim}\int_{a}^{\omega}f_{n}\right)\land\left(\text{ מתכנסת בהחלט}\int_{a}^{\omega}f\right)\land\left(\forall b\in\left[a,\omega\right).f\in R\left(\left[a,b\right]\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\int_{0}^{\infty}e^{-x^{2}}=\frac{\sqrt{\pi}}{2}$
 \end_inset
 
 .
@@ -3915,6 +3907,101 @@ status collapsed
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch notDoneYet
+inverted 0
+status collapsed
+
+\begin_layout Standard
+\begin_inset Branch notDoneYet
+inverted 0
+status collapsed
+
+\begin_layout Standard
+
+\series bold
+\color gray
+פולינום טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ גזירה 
+\begin_inset Formula $n$
+\end_inset
+
+ פעמים על 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $P_{n}\left(f,a\right)\left(x\right)=\sum_{k=0}^{n}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color gray
+שארית
+\series default
+\color inherit
+ 
+\series bold
+\color gray
+טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ גזירה 
+\begin_inset Formula $n$
+\end_inset
+
+ פעמים על 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R_{n}\left(f,a\right)\left(x\right)=f\left(x\right)-P_{n}\left(f,a\right)\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color gray
+טור טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in\bbr^{I}$
+\end_inset
+
+ חלקה על 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $P\left(f,a\right)\left(x\right)=\sum_{k=0}^{\infty}\frac{f^{\left(k\right)}\left(a\right)}{k!}\left(x-a\right)^{k}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5736,7 +5823,7 @@ status collapsed
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $31.01.2024$
+\begin_inset Formula $11.02.2024$
 \end_inset
 
  - הכל
