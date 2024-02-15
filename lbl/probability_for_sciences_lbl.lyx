@@ -2095,6 +2095,50 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \begin_inset Quotes erd
 \end_inset
 
+מ אזי )
+\begin_inset Formula $X$
+\end_inset
+
+ רציף(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\bbp\left(X\in A_{X}\right)=0$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הערה
+\series default
+\color inherit
+: לא כל משתנה מקרה הוא בדיד או רציף, ובמקרה זה 
+\begin_inset Formula $0<\bbp\left(X\in A_{X}\right)<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
 מ רציף אזי
 \end_layout
 
@@ -2285,7 +2329,7 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_inset
 
 
-\begin_inset Formula $X^{\star}\left(s\right)=\sup\left\{ t\mid F_{X}\left(t\right)\le s\right\} $
+\begin_inset Formula $X^{\star}\left(s\right)=\sup\left\{ t\mid F\left(t\right)\le s\right\} $
 \end_inset
 
 .
@@ -2303,11 +2347,11 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \end_inset
 
  מונוטונית עולה רציפה מימין עבורה 
-\begin_inset Formula $\lim_{x\to-\infty}F\left(x\right)=0$
+\begin_inset Formula ${\displaystyle \lim_{x\to-\infty}F\left(x\right)=0}$
 \end_inset
 
  וכן 
-\begin_inset Formula $\lim_{x\to\infty}F\left(x\right)=1$
+\begin_inset Formula ${\displaystyle \lim_{x\to\infty}F\left(x\right)=1}$
 \end_inset
 
  אזי 
@@ -2318,7 +2362,11 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \begin_inset Quotes erd
 \end_inset
 
-מ.
+מ על 
+\begin_inset Formula $\left(\left(0,1\right),\mathfrak{B}_{\left(0,1\right)},\lambda\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2732,8 +2780,8 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 
 \begin_layout Itemize
 פונקציית התפלגות מצטברת: 
-\begin_inset Formula $F_{X}\left(t\right)=\left\{ \begin{smallmatrix}1-e^{-\lambda x} &  & x\ge0\\
-0 &  & x<0
+\begin_inset Formula $F_{X}\left(t\right)=\left\{ \begin{smallmatrix}1-e^{-\lambda t} &  & t\ge0\\
+0 &  & t<0
 \end{smallmatrix}\right.$
 \end_inset
 
@@ -2742,8 +2790,8 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 
 \begin_layout Itemize
 פונקציית צפיפות: 
-\begin_inset Formula $f_{X}\left(t\right)=\left\{ \begin{smallmatrix}\lambda e^{-\lambda x} &  & x\ge0\\
-0 &  & x<0
+\begin_inset Formula $f_{X}\left(t\right)=\left\{ \begin{smallmatrix}\lambda e^{-\lambda t} &  & t\ge0\\
+0 &  & t<0
 \end{smallmatrix}\right.$
 \end_inset
 
@@ -3218,7 +3266,7 @@ filename "C:/Users/user/OneDrive/Documents/macros.lyx"
 \begin_layout Standard
 
 \series bold
-טענה
+טענה נוסחת הזנב
 \series default
 : יהי 
 \begin_inset Formula $X$

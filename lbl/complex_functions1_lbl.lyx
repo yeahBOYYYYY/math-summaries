@@ -3731,8 +3731,16 @@ b & -a
 \begin_inset Formula $f:D\backslash\left\{ \zeta_{1},\ldots,\zeta_{k}\right\} \to\bbc$
 \end_inset
 
- הולומורפית ותהא 
-\begin_inset Formula $\gamma:\left[a,b\right]\to D\backslash\left\{ \zeta_{1},\ldots,\zeta_{k}\right\} $
+ הולומורפית עבורה לכל 
+\begin_inset Formula $i\in\left[k\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\lim_{z\to\zeta_{i}}\left(z-\zeta_{i}\right)f\left(z\right)=0$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\gamma:\left[\a,\b\right]\to D\backslash\left\{ \zeta_{1},\ldots,\zeta_{k}\right\} $
 \end_inset
 
  מסילה סגורה אזי 
@@ -3740,6 +3748,309 @@ b & -a
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $D\subseteq\bbc$
+\end_inset
+
+ דיסק פתוח תהא 
+\begin_inset Formula $\gamma:\left[\a,\b\right]\to D$
+\end_inset
+
+ מסילה סגורה ויהי 
+\begin_inset Formula $a\in\bbc\backslash D$
+\end_inset
+
+ אזי 
+\begin_inset Formula $n\left(\gamma,a\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $\gamma:\left[\a,\b\right]\to\bbc$
+\end_inset
+
+ מסילה ויהיו 
+\begin_inset Formula $a,b\in\bbc\backslash\g\left(\left[\a,\b\right]\right)$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ לא נחתכת עם 
+\begin_inset Formula $\g$
+\end_inset
+
+ אזי 
+\begin_inset Formula $n\left(\g,a\right)=n\left(\g,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט נוסחת האינטגרל של קושי
+\series default
+: יהי 
+\begin_inset Formula $D\subseteq\bbc$
+\end_inset
+
+ דיסק פתוח תהא 
+\begin_inset Formula $\g:\left[\a,\b\right]\to D$
+\end_inset
+
+ מסילה סגורה תהא 
+\begin_inset Formula $f:D\to\bbc$
+\end_inset
+
+ הולומורפית ויהי 
+\begin_inset Formula $a\in D\backslash\g\left(\left[\a,\b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $n\left(\g,a\right)\cdot f\left(a\right)=\frac{1}{2\pi i}\int_{\g}\frac{f\left(z\right)}{z-a}\text{d}z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה משפט הערך הממוצע
+\series default
+: יהי 
+\begin_inset Formula $r>0$
+\end_inset
+
+ יהי 
+\begin_inset Formula $a\in\bbc$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:B_{a}\left(r\right)\to\bbc$
+\end_inset
+
+ הולומורפית אזי 
+\begin_inset Formula $f\left(a\right)=\frac{1}{2\pi}\intop_{0}^{2\pi}f\left(a+re^{it}\right)\text{d}t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סימון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $D\subseteq\bbc$
+\end_inset
+
+ דיסק פתוח תהא 
+\begin_inset Formula $\gamma:\left[\a,\b\right]\to D$
+\end_inset
+
+ מסילה סגורה תהא 
+\begin_inset Formula $\varphi\in C\left(\g\left(\left[\a,\b\right]\right),\bbc\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ נגדיר
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $F_{n}:D\to\g\left(\left[\a,\b\right]\right)$
+\end_inset
+
+ כך 
+\begin_inset Formula $F_{n}\left(z\right)=\int_{\gamma}\frac{\varphi\left(\zeta\right)}{\left(\zeta-z\right)^{n}}\text{d}\zeta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $D\subseteq\bbc$
+\end_inset
+
+ דיסק פתוח תהא 
+\begin_inset Formula $\gamma:\left[\a,\b\right]\to D$
+\end_inset
+
+ מסילה סגורה תהא 
+\begin_inset Formula $\varphi\in C\left(\g\left(\left[\a,\b\right]\right),\bbc\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F_{n}$
+\end_inset
+
+ רציפה.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F_{n}$
+\end_inset
+
+ גזירה.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F_{n}^{\prime}=n\cdot F_{n+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $D\subseteq\bbc$
+\end_inset
+
+ דיסק פתוח תהא 
+\begin_inset Formula $f:D\to\bbc$
+\end_inset
+
+ הולומורפית אזי 
+\begin_inset Formula $f\in C^{\infty}\left(D\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $D\subseteq\bbc$
+\end_inset
+
+ דיסק פתוח תהא 
+\begin_inset Formula $f:D\to\bbc$
+\end_inset
+
+ הולומורפית אזי 
+\begin_inset Formula $f^{\left(n\right)}\left(z\right)=\frac{n!}{2\pi i}\int_{\partial B_{r}\left(z\right)}\frac{f\left(\zeta\right)}{\left(\zeta-z\right)^{n+1}}\text{d}\zeta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $D\subseteq\bbc$
+\end_inset
+
+ דיסק פתוח ותהא 
+\begin_inset Formula $f:D\to\bbc$
+\end_inset
+
+ בעלת קדומה אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ הולומורפית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה משפט מוררה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $\g:\left[\a,\b\right]\to\mathcal{U}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\int_{\g}f\left(z\right)\text{d}z=0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ הלומורפית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט ליוביל
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f:\bbc\to\bbc$
+\end_inset
+
+ הלומורפית וחסומה אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ קבועה.
 \end_layout
 
 \begin_layout Standard
