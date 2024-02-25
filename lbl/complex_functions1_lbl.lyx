@@ -3976,7 +3976,7 @@ b & -a
 \begin_inset Formula $D\subseteq\bbc$
 \end_inset
 
- דיסק פתוח תהא 
+ דיסק פתוח ותהא 
 \begin_inset Formula $f:D\to\bbc$
 \end_inset
 
@@ -4002,8 +4002,20 @@ b & -a
 \begin_inset Formula $f:D\to\bbc$
 \end_inset
 
- הולומורפית אזי 
-\begin_inset Formula $f^{\left(n\right)}\left(z\right)=\frac{n!}{2\pi i}\int_{\partial B_{r}\left(z\right)}\frac{f\left(\zeta\right)}{\left(\zeta-z\right)^{n+1}}\text{d}\zeta$
+ הולומורפית ויהי 
+\begin_inset Formula $C_{r}$
+\end_inset
+
+ מעגל סביב 
+\begin_inset Formula $z$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $n\left(C_{r},z\right)=1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f^{\left(n\right)}\left(z\right)=\frac{n!}{2\pi i}\int_{C_{r}}\frac{f\left(\zeta\right)}{\left(\zeta-z\right)^{n+1}}\text{d}\zeta$
 \end_inset
 
 .
@@ -4080,6 +4092,348 @@ b & -a
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color red
+טענה חסם קושי לנגזרת
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $D\subseteq\bbc$
+\end_inset
+
+ דיסק פתוח תהא 
+\begin_inset Formula $f:D\to\bbc$
+\end_inset
+
+ הולומורפית ויהי 
+\begin_inset Formula $C_{r}$
+\end_inset
+
+ מעגל סביב 
+\begin_inset Formula $z$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $n\left(C_{r},z\right)=1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|f^{\left(n\right)}\right|\le\frac{n!\max_{C_{r}}\left|f\right|}{r^{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה המשפט היסודי של האלגברה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $p\in\bbc\left[x\right]$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\deg\left(p\right)\ge1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\exists\a\in\bbc.p\left(\a\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+נקודה יחודית/יחודיות/סינגולריות
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ פתוחה אזי 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $f:\mathcal{U}\backslash\left\{ a\right\} \to\bbc$
+\end_inset
+
+ הולומורפית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+נקודת יחודיות סליקה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ נקודת יחודיות עבורה קיימת הרחבה הולומורפית 
+\begin_inset Formula $g:\mathcal{U}\to\bbc$
+\end_inset
+
+ המקיימת
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\forall z\in\mathcal{U}\backslash\left\{ a\right\} .g\left(z\right)=f\left(z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הערה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ פתוחה ותהא 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ סליקה עבור 
+\begin_inset Formula $f:\mathcal{U}\backslash\left\{ a\right\} \to\bbc$
+\end_inset
+
+ הולומורפית אזי קיימת הרחבה יחידה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ פתוחה תהא 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\mathcal{U}\backslash\left\{ a\right\} \to\bbc$
+\end_inset
+
+ הולומורפית אזי )
+\begin_inset Formula $a$
+\end_inset
+
+ סליקה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\lim_{z\to a}\left(z-a\right)f\left(z\right)=0$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט טיילור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ פתוחה תהא 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $f_{n}:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית עבורה
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $f\left(z\right)=\sum_{i=0}^{n-1}\frac{f^{\left(i\right)}\left(a\right)}{i!}\left(z-a\right)^{i}+f_{n}\left(z\right)\left(z-a\right)^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ פתוחה תהא 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל סביב 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי לכל 
+\begin_inset Formula $z\in C$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $f_{n}\left(z\right)=\frac{1}{2\pi i}\int_{C}\frac{f\left(\zeta\right)}{\left(\zeta-a\right)^{n}\left(\zeta-z\right)}\text{d}\zeta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+אפס מסדר 
+\begin_inset Formula $n$
+\end_inset
+
+
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית אזי 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $n=\min\left\{ j\in\bbn\bmid f^{\left(j\right)}\left(a\right)\ne0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+למה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית תהא 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\forall n\in\bbn.f^{\left(n\right)}\left(a\right)=0$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $r>0$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\overline{B_{r}\left(a\right)}\subseteq\mathcal{U}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f_{\upharpoonright_{B_{r}\left(a\right)}}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית ותהא 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\forall n\in\bbn.f^{\left(n\right)}\left(a\right)=0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
@@ -4092,7 +4446,7 @@ status open
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Standard
