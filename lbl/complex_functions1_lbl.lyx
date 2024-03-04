@@ -4014,7 +4014,11 @@ b & -a
 \begin_inset Formula $n\left(C_{r},z\right)=1$
 \end_inset
 
- אזי 
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $f^{\left(n\right)}\left(z\right)=\frac{n!}{2\pi i}\int_{C_{r}}\frac{f\left(\zeta\right)}{\left(\zeta-z\right)^{n+1}}\text{d}\zeta$
 \end_inset
 
@@ -4119,7 +4123,7 @@ b & -a
 \end_inset
 
  אזי 
-\begin_inset Formula $\left|f^{\left(n\right)}\right|\le\frac{n!\max_{C_{r}}\left|f\right|}{r^{n}}$
+\begin_inset Formula $\left|f^{\left(n\right)}\left(z\right)\right|\le\frac{n!\max_{C_{r}}\left|f\right|}{r^{n}}$
 \end_inset
 
 .
@@ -4177,18 +4181,22 @@ b & -a
 \series default
 \color inherit
 : תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ פתוחה אזי 
 \begin_inset Formula $a\in\mathcal{U}$
 \end_inset
 
- נקודת יחודיות עבורה קיימת הרחבה הולומורפית 
+ יחודיות של 
+\begin_inset Formula $f:\mathcal{U}\backslash\left\{ a\right\} \to\bbc$
+\end_inset
+
+ עבורה קיימת הרחבה הולומורפית 
 \begin_inset Formula $g:\mathcal{U}\to\bbc$
 \end_inset
 
- המקיימת
-\begin_inset Newline newline
-\end_inset
-
-
+ המקיימת 
 \begin_inset Formula $\forall z\in\mathcal{U}\backslash\left\{ a\right\} .g\left(z\right)=f\left(z\right)$
 \end_inset
 
@@ -4278,11 +4286,7 @@ b & -a
 \begin_inset Formula $f_{n}:\mathcal{U}\to\bbc$
 \end_inset
 
- הולומורפית עבורה
-\begin_inset Newline newline
-\end_inset
-
-
+ הולומורפית עבורה 
 \begin_inset Formula $f\left(z\right)=\sum_{i=0}^{n-1}\frac{f^{\left(i\right)}\left(a\right)}{i!}\left(z-a\right)^{i}+f_{n}\left(z\right)\left(z-a\right)^{n}$
 \end_inset
 
@@ -4335,6 +4339,32 @@ b & -a
 
 \series bold
 \color red
+אפס
+\series default
+\color inherit
+:יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית אזי 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $f\left(a\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
 אפס מסדר 
 \begin_inset Formula $n$
 \end_inset
@@ -4343,7 +4373,7 @@ b & -a
 \series default
 \color inherit
 : יהי 
-\begin_inset Formula $n\in\bbn$
+\begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
  יהי 
@@ -4368,7 +4398,7 @@ b & -a
 \begin_layout Standard
 
 \series bold
-\color red
+\color green
 למה
 \series default
 \color inherit
@@ -4406,7 +4436,7 @@ b & -a
 \begin_layout Standard
 
 \series bold
-\color red
+\color green
 טענה
 \series default
 \color inherit
@@ -4434,11 +4464,715 @@ b & -a
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית עבורה 
+\begin_inset Formula $f\ne0$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ אפס אזי הסדר של 
+\begin_inset Formula $a$
+\end_inset
+
+ סופי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+אפס מבודד
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית אזי אפס 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\exists r>0.\forall z\in B_{r}\left(a\right)\backslash\left\{ a\right\} .f\left(z\right)\ne0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית עבורה 
+\begin_inset Formula $f\ne0$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ אפס אזי 
+\begin_inset Formula $a$
+\end_inset
+
+ אפס מבודד.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהיינה 
+\begin_inset Formula $f,g:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית ותהא 
+\begin_inset Formula $E\subseteq\mathcal{U}$
+\end_inset
+
+ בעלת נקודת הצטברות ב־
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+ נניח כי 
+\begin_inset Formula $f=g$
+\end_inset
+
+ על 
+\begin_inset Formula $E$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f=g$
+\end_inset
+
+ על 
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית ותהא 
+\begin_inset Formula $\mathcal{O}\subseteq\mathcal{U}$
+\end_inset
+
+ פתוחה עבורה 
+\begin_inset Formula $f=0$
+\end_inset
+
+ על 
+\begin_inset Formula $\mathcal{O}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f=0$
+\end_inset
+
+ על 
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית ותהא 
+\begin_inset Formula $\g$
+\end_inset
+
+ מסילה עבורה 
+\begin_inset Formula $f=0$
+\end_inset
+
+ על 
+\begin_inset Formula $\g$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f=0$
+\end_inset
+
+ על 
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+נקודת קוטב
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום אזי 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ יחודית של 
+\begin_inset Formula $f:\mathcal{U}\backslash\left\{ a\right\} \to\bbc$
+\end_inset
+
+ עבורה קיימת 
+\begin_inset Formula $\mathcal{O}\subseteq\mathcal{U}\backslash\left\{ a\right\} $
+\end_inset
+
+ סביבה של 
+\begin_inset Formula $a$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\frac{1}{f}$
+\end_inset
+
+ מוגדרת היטב בעלת יחודיות סליקה ב־
+\begin_inset Formula $a$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\frac{1}{f}\left(a\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+הערה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ יחודית של 
+\begin_inset Formula $f:\mathcal{U}\backslash\left\{ a\right\} \to\bbc$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\mathcal{O}\subseteq\mathcal{U}\backslash\left\{ a\right\} $
+\end_inset
+
+ סביבה של 
+\begin_inset Formula $a$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\frac{1}{f}$
+\end_inset
+
+ מוגדרת היטב בעלת יחודיות סליקה ב־
+\begin_inset Formula $a$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\frac{1}{f}\left(a\right)\ne0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a$
+\end_inset
+
+ יחודית סליקה של 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ יחודית של 
+\begin_inset Formula $f:\mathcal{U}\backslash\left\{ a\right\} \to\bbc$
+\end_inset
+
+ אזי )
+\begin_inset Formula $a$
+\end_inset
+
+ קוטב(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\lim_{z\to a}f\left(z\right)=\infty$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+קוטב מסדר 
+\begin_inset Formula $n$
+\end_inset
+
+
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום אזי 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ קוטב של 
+\begin_inset Formula $f:\mathcal{U}\backslash\left\{ a\right\} \to\bbc$
+\end_inset
+
+ אשר אפס מסדר 
+\begin_inset Formula $n$
+\end_inset
+
+ של 
+\begin_inset Formula $\frac{1}{f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+קוטב פשוט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום אזי 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ קוטב מסדר 
+\begin_inset Formula $1$
+\end_inset
+
+ של 
+\begin_inset Formula $f:\mathcal{U}\backslash\left\{ a\right\} \to\bbc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ קוטב מסדר 
+\begin_inset Formula $n$
+\end_inset
+
+ של 
+\begin_inset Formula $f:\mathcal{U}\backslash\left\{ a\right\} \to\bbc$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $f_{n}:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית עבורה 
+\begin_inset Formula $f\left(z\right)=f_{n}\left(z\right)\left(z-a\right)^{-n}$
+\end_inset
+
+ על 
+\begin_inset Formula $z\in\mathcal{U}\backslash\left\{ a\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+פונקציה מרומורפית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $E\subseteq\mathcal{U}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f:\mathcal{U}\backslash E\to\bbc$
+\end_inset
+
+ הולומורפית עבורה כל 
+\begin_inset Formula $a\in E$
+\end_inset
+
+ הינה קוטב של 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום ותהיינה 
+\begin_inset Formula $f,g:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפיות באשר 
+\begin_inset Formula $g\ne0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{f}{g}$
+\end_inset
+
+ מרומורפית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום ותהיינה 
+\begin_inset Formula $f,g:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפיות באשר 
+\begin_inset Formula $g\ne0$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+)מספר האפסים של 
+\begin_inset Formula $\frac{f}{g}$
+\end_inset
+
+(
+\begin_inset Formula $\ge$
+\end_inset
+
+)מספר האפסים של 
+\begin_inset Formula $f$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Itemize
+)מספר הקטבים של 
+\begin_inset Formula $\frac{f}{g}$
+\end_inset
+
+(
+\begin_inset Formula $\ge$
+\end_inset
+
+)מספר האפסים של 
+\begin_inset Formula $g$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום ותהיינה 
+\begin_inset Formula $f,g:\mathcal{U}\to\bbc$
+\end_inset
+
+ מרומורפיות אזי 
+\begin_inset Formula $f+g,f\cdot g$
+\end_inset
+
+ מרומורפיות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+יחודיות עיקרית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום אזי 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ יחודיות של 
+\begin_inset Formula $f:\mathcal{U}\backslash\left\{ a\right\} \to\bbc$
+\end_inset
+
+ אשר אינה סליקה ואינה קוטב של 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט ויירשטראס
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ יחודיות עיקרית של 
+\begin_inset Formula $f:\mathcal{U}\backslash\left\{ a\right\} \to\bbc$
+\end_inset
+
+ אזי לכל 
+\begin_inset Formula $\mathcal{O}\subseteq\mathcal{U}$
+\end_inset
+
+ סביבה של 
+\begin_inset Formula $a$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $f\left(\mathcal{O}\backslash\left\{ a\right\} \right)$
+\end_inset
+
+ צפופה ב־
+\begin_inset Formula $\bbc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ יחודיות מבודדת של 
+\begin_inset Formula $f:\mathcal{U}\backslash\left\{ a\right\} \to\bbc$
+\end_inset
+
+ אזי בדיוק אחד מהבאים מתקיים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיים 
+\begin_inset Formula $k\in\bbz$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $k<h$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\lim_{z\to a}\left|z-a\right|^{h}\left|f\left(z\right)\right|=0$
+\end_inset
+
+ וכן לכל 
+\begin_inset Formula $h<k$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\lim_{z\to a}\left|z-a\right|^{h}\left|f\left(z\right)\right|=\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $h\in\bbr$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\lim_{z\to a}\left|z-a\right|^{h}\left|f\left(z\right)\right|\notin\left\{ 0,\infty\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+לסכם את כל התרגולים! חשוב מאוד, תעבור על כולם בכל הקורסים אבל האחד הזה ספציפית
+ מאוד חשוב
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $10.02.2024$
+\begin_inset Formula $02.03.2024$
 \end_inset
 
  - הכל
@@ -4446,7 +5180,7 @@ status open
 
 \end_inset
 
- 
+
 \end_layout
 
 \begin_layout Standard
