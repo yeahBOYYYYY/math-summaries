@@ -2829,6 +2829,32 @@ b & -a
 \begin_layout Standard
 
 \series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $e^{z}$
+\end_inset
+
+ הינה 
+\begin_inset Formula $2\pi i$
+\end_inset
+
+־מחזורית, 
+\begin_inset Formula $\cos,\sin$
+\end_inset
+
+ הן 
+\begin_inset Formula $2\pi$
+\end_inset
+
+־מחזוריות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 \color purple
 טענה
 \series default
@@ -2995,6 +3021,32 @@ b & -a
 
 \series bold
 \color purple
+ענף של 
+\begin_inset Formula $\sqrt[n]{}$
+\end_inset
+
+
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום אזי 
+\begin_inset Formula $\rho\in C\left(\mathcal{U},\bbc\right)$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\forall z\in\mathcal{U}.\rho\left(z\right)\in\sqrt[n]{z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
 טענה
 \series default
 \color inherit
@@ -3071,6 +3123,104 @@ b & -a
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\ell:\mathcal{U}\to\bbc$
+\end_inset
+
+ ענף של 
+\begin_inset Formula $\sqrt[n]{}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ell$
+\end_inset
+
+ הולומורפית וכן 
+\begin_inset Formula $\ell^{\prime}\left(z\right)=\frac{1}{n\ell\left(z\right)^{n-1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום אזי )קיים ענף של 
+\begin_inset Formula $\log$
+\end_inset
+
+ על 
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+(
+\begin_inset Formula $\impliedby$
+\end_inset
+
+)קיים ענף של 
+\begin_inset Formula $\sqrt[n]{}$
+\end_inset
+
+ על 
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום עבורו 
+\begin_inset Formula $0\notin\mathcal{U}$
+\end_inset
+
+ אזי )קיים ענף של 
+\begin_inset Formula $\sqrt[n]{}$
+\end_inset
+
+ על 
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+(
+\begin_inset Formula $\impliedby$
+\end_inset
+
+)קיים ענף של 
+\begin_inset Formula $\log$
+\end_inset
+
+ על 
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+(.
 \end_layout
 
 \begin_layout Standard
@@ -3183,15 +3333,45 @@ b & -a
 \end_inset
 
  קטע תהא 
-\begin_inset Formula $\gamma:I\to\bbc$
+\begin_inset Formula $\gamma\in C^{1}\left(I,\bbc\right)$
 \end_inset
 
  מסילה ותהא 
-\begin_inset Formula $f\in C\left(\gamma\left[I\right],\bbc\right)$
+\begin_inset Formula $f\in C\left(\gamma\left(I\right),\bbc\right)$
 \end_inset
 
  אזי 
 \begin_inset Formula $\int_{\gamma}f\left(z\right)\text{d}z=\int_{I}f\left(\gamma\left(t\right)\right)\gamma^{\prime}\left(t\right)\text{d}t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+רפרמטריזציה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\g:\left[a,b\right]\to\bbc$
+\end_inset
+
+ מסילה ותהא 
+\begin_inset Formula $\varphi:\left[c,d\right]\to\left[a,b\right]$
+\end_inset
+
+ רציפה ועולה עבורה 
+\begin_inset Formula $\varphi\left(c\right)=a$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\varphi\left(d\right)=b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\g\circ\varphi$
 \end_inset
 
 .
@@ -3208,11 +3388,11 @@ b & -a
 \begin_inset Formula $\gamma:\left(a,b\right)\to\bbc$
 \end_inset
 
- מסילה תהא 
-\begin_inset Formula $\varphi:\left(\a,\b\right)\to\left(a,b\right)$
+ מסילה ותהא 
+\begin_inset Formula $\g\circ\varphi$
 \end_inset
 
- עולה וחלקה למקוטעין אזי 
+ רפרמטריזציה גזירה ברציפות אזי 
 \begin_inset Formula $\int_{\gamma}f\left(z\right)\text{d}z=\int_{\gamma\circ\varphi}f\left(z\right)\text{d}z$
 \end_inset
 
@@ -3227,11 +3407,15 @@ b & -a
 \series default
 \color inherit
 : תהא 
-\begin_inset Formula $\gamma$
+\begin_inset Formula $\gamma:\left[a,b\right]\to\bbc$
 \end_inset
 
  מסילה אזי 
-\begin_inset Formula $-\gamma$
+\begin_inset Formula $-\gamma:\left[-b,-a\right]\to\bbc$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $-\g\left(t\right)=\g\left(-t\right)$
 \end_inset
 
 .
@@ -3334,6 +3518,24 @@ b & -a
 
 \series bold
 \color brown
+סימון
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\gamma:\left[a,b\right]\to\bbc$
+\end_inset
+
+ מסילה סגורה אזי 
+\begin_inset Formula $\oint_{\g}f\left(z\right)\text{d}z=\int_{\g}f\left(z\right)\text{d}z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
 אינטגרל לפי אורך קשת
 \series default
 \color inherit
@@ -3392,7 +3594,29 @@ b & -a
 \end_inset
 
  מסילה אזי 
-\begin_inset Formula $\int_{\gamma}\left(f+g\right)\left|\text{d}z\right|=\int_{\gamma}f\left|\text{d}z\right|+\int_{\gamma}g\left|\text{d}z\right|$
+\begin_inset Formula $\int_{\gamma}\left(f+g\right)\left(z\right)\left|\text{d}z\right|=\int_{\gamma}f\left(z\right)\left|\text{d}z\right|+\int_{\gamma}g\left(z\right)\left|\text{d}z\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ מסילה ותהא 
+\begin_inset Formula $\g\circ\varphi$
+\end_inset
+
+ רפרמטריזציה אזי 
+\begin_inset Formula $\int_{\gamma}f\left(z\right)\left|\text{d}z\right|=\int_{\gamma\circ\varphi}f\left(z\right)\left|\text{d}z\right|$
 \end_inset
 
 .
@@ -3411,6 +3635,24 @@ b & -a
 
  מסילה אזי 
 \begin_inset Formula $\left|\int_{\gamma}f\left(z\right)\text{d}z\right|\le\int_{\gamma}\left|f\left(z\right)\right|\left|\text{d}z\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\gamma:\left[a,b\right]\to\bbc$
+\end_inset
+
+ מסילה אזי 
+\begin_inset Formula $\left|\int_{\gamma}f\left(z\right)\text{d}z\right|\le\left(\int_{\gamma}\left|\text{d}z\right|\right)\max_{z\in\g\left(\left[a,b\right]\right)}\left|f\left(z\right)\right|$
 \end_inset
 
 .
@@ -3659,6 +3901,200 @@ b & -a
 \begin_layout Standard
 
 \series bold
+\color orange
+ענף של 
+\begin_inset Formula $\log\left(f\right)$
+\end_inset
+
+
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית אזי 
+\begin_inset Formula $\ell\in C\left(\mathcal{U},\bbc\right)$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\forall z\in\mathcal{U}.\ell\left(z\right)\in\log\left(f\left(z\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+ענף של 
+\begin_inset Formula $\sqrt[n]{f}$
+\end_inset
+
+
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית אזי 
+\begin_inset Formula $\rho\in C\left(\mathcal{U},\bbc\right)$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\forall z\in\mathcal{U}.\rho\left(z\right)\in\sqrt[n]{f\left(z\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc\backslash\left\{ 0\right\} $
+\end_inset
+
+ הולומורפית ויהי 
+\begin_inset Formula $\ell:\mathcal{U}\to\bbc$
+\end_inset
+
+ ענף של 
+\begin_inset Formula $\log\left(f\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ell$
+\end_inset
+
+ הולומורפית וכן 
+\begin_inset Formula $\ell^{\prime}\left(z\right)=\frac{f^{\prime}\left(z\right)}{f\left(z\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית ויהי 
+\begin_inset Formula $\ell:\mathcal{U}\to\bbc$
+\end_inset
+
+ ענף של 
+\begin_inset Formula $\sqrt[n]{f}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ell$
+\end_inset
+
+ הולומורפית וכן 
+\begin_inset Formula $\ell^{\prime}\left(z\right)=\frac{f^{\prime}\left(z\right)}{n\ell\left(z\right)^{n-1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f\in C^{1}\left(\mathcal{U},\bbc\backslash\left\{ 0\right\} \right)$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+)קיים ענף של 
+\begin_inset Formula $\log\left(f\right)$
+\end_inset
+
+ על 
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $\g$
+\end_inset
+
+ מסילה סגורה גזירה ברציפות למקוטעין מתקיים 
+\begin_inset Formula $n\left(f\circ\g,0\right)=0$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Itemize
+)קיים ענף של 
+\begin_inset Formula $\sqrt[n]{f}$
+\end_inset
+
+ על 
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $\g$
+\end_inset
+
+ מסילה סגורה גזירה ברציפות למקוטעין מתקיים 
+\begin_inset Formula $n\left(f\circ\g,0\right)\in n\bbz$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 \color teal
 טענה
 \series default
@@ -3684,6 +4120,36 @@ b & -a
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f\in C\left(\mathcal{U},\bbc\right)$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $\g$
+\end_inset
+
+ סגורה מתקיים 
+\begin_inset Formula $\int_{\g}f\left(z\right)\text{d}z=0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ בעלת קדומה.
 \end_layout
 
 \begin_layout Standard
@@ -4003,22 +4469,14 @@ b & -a
 \end_inset
 
  הולומורפית ויהי 
-\begin_inset Formula $C_{r}$
+\begin_inset Formula $C_{r}\subseteq D$
 \end_inset
 
  מעגל סביב 
 \begin_inset Formula $z$
 \end_inset
 
- עבורו 
-\begin_inset Formula $n\left(C_{r},z\right)=1$
-\end_inset
-
- אזי
-\begin_inset Newline newline
-\end_inset
-
-
+ אזי 
 \begin_inset Formula $f^{\left(n\right)}\left(z\right)=\frac{n!}{2\pi i}\int_{C_{r}}\frac{f\left(\zeta\right)}{\left(\zeta-z\right)^{n+1}}\text{d}\zeta$
 \end_inset
 
@@ -4081,6 +4539,20 @@ b & -a
 
 \series bold
 \color blue
+פונקציה שלמה
+\series default
+\color inherit
+: פונקציה הולומורפית על 
+\begin_inset Formula $\bbc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
 משפט ליוביל
 \series default
 \color inherit
@@ -4111,15 +4583,11 @@ b & -a
 \end_inset
 
  הולומורפית ויהי 
-\begin_inset Formula $C_{r}$
+\begin_inset Formula $C_{r}\subseteq D$
 \end_inset
 
  מעגל סביב 
 \begin_inset Formula $z$
-\end_inset
-
- עבורו 
-\begin_inset Formula $n\left(C_{r},z\right)=1$
 \end_inset
 
  אזי 
@@ -5158,13 +5626,6 @@ b & -a
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-לסכם את כל התרגולים! חשוב מאוד, תעבור על כולם בכל הקורסים אבל האחד הזה ספציפית
- מאוד חשוב
 \end_layout
 
 \begin_layout Standard

@@ -1,0 +1,526 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{centernot}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usepackage{wrapfig}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usepackage{xcolor}
+% \usepackage[cm]{fullpage}
+\usepackage{polynom}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+
+% it's here?
+\setlength{\tabcolsep}{1pt}
+\renewcommand{\arraystretch}{1.25} % Default value: 1
+
+% tikz
+\usetikzlibrary{math}
+\usetikzlibrary{shadows,trees}
+\tikzset{edge from parent fork down, level distance=2cm, every node/.style= {rectangle,rounded corners, minimum height=8mm, very thick, align=center}}
+
+% enumarte
+\counterwithin*{section}{part}
+\setlist{nosep, noitemsep}
+\setlist[enumerate,1]{label = \arabic*., ref = \arabic*}
+\setlist[enumerate,2]{label = \alph*), ref = \theenumi.\emph{\alph*}}
+\setlist[enumerate,3]{label = .\roman*, ref = \theenumii.\roman*}
+\setlist[itemize,1]{label={\fontfamily{david}\fontencoding{T1}\selectfont\textbullet}}
+
+% colors
+\definecolor{blue}{RGB}{14,107,217}
+\definecolor{green}{RGB}{0,158,40}
+\definecolor{red}{RGB}{235,16,16}
+\definecolor{brown}{RGB}{164,66,0}
+\definecolor{orange}{RGB}{231,135,26}
+\definecolor{purple}{RGB}{94,53,177}
+\definecolor{keywordcolor}{RGB}{255,117,0}
+\definecolor{commentcolor}{RGB}{128,128,128}
+\definecolor{stringcolor}{RGB}{0,168,0}
+\definecolor{remarkcolor}{RGB}{150,145,91} % 255,225,88
+
+% hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+}
+\newcommand\colorAutoref[1]{{\hypersetup{linkcolor=blue}\autoref{#1}}}  %% allows for calls to \autoref{} that have a different color from other links.
+
+% math font and implies arrow
+% \setmathfont{NewCMMath-Regular.otf}
+\let\RonMikhelmanLol\implies
+\renewcommand{\implies}{\negthickspace\RonMikhelmanLol\negthickspace}
+\let\RonMikhelmanLoll\iff
+\renewcommand{\iff}{\negthickspace\RonMikhelmanLoll\negthickspace}
+\let\RonMikhelmanLolll\impliedby
+\renewcommand{\impliedby}{\negthickspace\RonMikhelmanLolll\negthickspace}
+\end_preamble
+\options no-math
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "David CLM"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 2
+\use_package esint 2
+\use_package mathdots 2
+\use_package mathtools 2
+\use_package mhchem 2
+\use_package stackrel 2
+\use_package stmaryrd 2
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification false
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\P}{\mathcal{P}}
+{\mathcal{P}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\M}[2][m\times n][\bbf]{M_{#1}\left(#2\right)}
+{M_{#1}\left(#2\right)}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\lint}[2]{\int\limits _{#2}^{#1}}
+{\int\limits _{#2}^{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\cn}[1]{\left|#1\right|}
+{\left|#1\right|}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\a}{\alpha}
+{\alpha}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\b}{\beta}
+{\beta}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\g}{\gamma}
+{\gamma}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\e}{\varepsilon}
+{\varepsilon}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\d}{\delta}
+{\delta}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\bbp}{\mathbb{P}}
+{\mathbb{P}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\bbn}{\mathbb{N}}
+{\mathbb{N}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\bbf}{\mathbb{F}}
+{\mathbb{F}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\bbz}{\mathbb{Z}}
+{\mathbb{Z}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\bbq}{\mathbb{Q}}
+{\mathbb{Q}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\bbr}{\mathbb{R}}
+{\mathbb{R}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\bbc}{\mathbb{C}}
+{\mathbb{C}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\bbe}{\mathbb{E}}
+{\mathbb{E}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\bbk}{\mathbb{K}}
+{\mathbb{K}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\bbs}{\mathbb{S}}
+{\mathbb{S}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\bbt}{\mathbb{T}}
+{\mathbb{T}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\limpw}{\xrightarrow{p.w.}}
+{\xrightarrow{\text{p.w.}}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\limu}{\xrightarrow{u}}
+{\xrightarrow{\text{u}}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\liml}{\xrightarrow{L_{2}}}
+{\xrightarrow{\text{L}_{\text{2}}}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\limd}{\xrightarrow{D}}
+{\xrightarrow{\text{D}}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\limp}{\xrightarrow{p}}
+{\xrightarrow{\text{p}}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\limas}{\xrightarrow{a.s.}}
+{\xrightarrow{\text{a.s.}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\emptyset}{\varnothing}
+{\varnothing}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\*}{\cdot}
+{\cdot}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ceil}[1]{\left\lceil #1\right\rceil }
+{\left\lceil #1\right\rceil }
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\floor}[1]{\left\lfloor #1\right\rfloor }
+{\left\lfloor #1\right\rfloor }
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ang}{\sphericalangle}
+{\sphericalangle}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\O}{{\cal O}}
+{{\cal O}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\tle}{\unlhd}
+{\unlhd}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\bmid}{\;\middle|\;}
+{\mid}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\norm}[1]{\left\Vert #1\right\Vert }
+{\left\Vert #1\right\Vert }
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\notimplies}{\rlap{\hskip.5em/}\implies}
+{\not\implies}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\char}{\text{char}}
+{\text{char}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ord}{\text{ord}}
+{\text{ord}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\sols}{\text{sols}}
+{\text{sols}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\sp}{\text{span}}
+{\text{span}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\LD}{\text{LD}}
+{\text{LD}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\adj}{\text{adj}}
+{\text{adj}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\sign}{\text{sign}}
+{\text{sign}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\rank}{\text{rank}}
+{\text{rank}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\Hom}{\text{Hom}}
+{\text{Hom}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\tr}{\text{trace}}
+{\text{trace}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\diag}{\text{Diag}}
+{\text{Diag}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\dom}{\text{Dom}}
+{\text{Dom}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\im}{\text{Im}}
+{\text{Im}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\range}{\text{Range}}
+{\text{Range}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\cis}{\text{cis}}
+{\text{cis}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\re}{\text{Re}}
+{\text{Re}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\lcm}{\text{lcm}}
+{\text{lcm}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\dist}{\text{dist}}
+{\text{dist}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\supp}{\text{supp}}
+{\text{supp}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\vol}{\text{Vol}}
+{\text{Vol}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\cov}{\text{Cov}}
+{\text{Cov}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\var}{\text{Var}}
+{\text{Var}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\id}{\text{Id}}
+{\text{Id}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\Arg}{\text{Arg}}
+{\text{Arg}}
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

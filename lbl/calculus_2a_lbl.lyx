@@ -6924,6 +6924,50 @@ status open
 
 \series bold
 \color orange
+נורמת 
+\begin_inset Formula $\ell_{p}^{n}$
+\end_inset
+
+
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $x\in\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\norm x_{p}=\left(\sum_{i=1}^{n}\left|x_{i}\right|^{p}\right)^{\frac{1}{p}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+נורמת 
+\begin_inset Formula $\ell_{\infty}^{n}$
+\end_inset
+
+
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $x\in\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\norm x_{\infty}=\max_{i=1}^{n}\left|x_{i}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
 למה
 \series default
 \color inherit
@@ -6956,7 +7000,7 @@ status open
 \series default
 \color inherit
 : תהא 
-\begin_inset Formula $x^{\left(m\right)}\in\bbr^{n}$
+\begin_inset Formula $\left\{ x^{\left(m\right)}\right\} \subseteq\bbr^{n}$
 \end_inset
 
  סדרה ותהא 
@@ -7158,11 +7202,613 @@ status open
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color teal
+סביבה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $a\in X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ פתוחה עבורה 
+\begin_inset Formula $a\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{int}\left(A\right)=\bigcup\left\{ B\subseteq A\mid\text{ פתוחה}B\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+קבוצה סגורה
+\series default
+\color inherit
+: קבוצה 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $X\backslash A$
+\end_inset
+
+ פתוחה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+נקודת סגור
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a\in X$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\forall r>0.B_{r}\left(a\right)\cap A\ne\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סגור של קבוצה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{cl}\left(A\right)=\overline{A}=\left\{ a\in X\mid A\text{ נקודת סגור של }a\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ אזי )
+\begin_inset Formula $A$
+\end_inset
+
+ סגורה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $A=\overline{A}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\overline{A}=X\backslash\text{int}\left(X\backslash A\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\text{int}\left(A\right)=X\backslash\overline{\left(X\backslash A\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\overline{A}=\bigcap\left\{ A\subseteq B\mid\text{ סגורה}B\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $a\in X$
+\end_inset
+
+ אזי )
+\begin_inset Formula $a\in\overline{A}$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיימת סדרה 
+\begin_inset Formula $x_{n}\in A$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $x_{n}\to a$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+נקודת הצטברות
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a\in X$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\forall r>0.\left(B_{r}\left(a\right)\backslash\left\{ a\right\} \right)\cap A\ne\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $a\in X$
+\end_inset
+
+ אזי )
+\begin_inset Formula $a$
+\end_inset
+
+ הצטברות של 
+\begin_inset Formula $A$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיימת סדרה 
+\begin_inset Formula $x_{n}\in A\backslash\left\{ a\right\} $
+\end_inset
+
+ עבורה 
+\begin_inset Formula $x_{n}\to a$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+שפה של קבוצה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\partial A=\overline{A}\cap\overline{X\backslash A}=\overline{A}\backslash\text{int}\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+קבוצה צפופה
+\series default
+\color inherit
+: קבוצה 
+\begin_inset Formula $Y\subseteq X$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\overline{Y}=X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $Y\subseteq X$
+\end_inset
+
+ אזי )
+\begin_inset Formula $Y$
+\end_inset
+
+ צפופה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ פתוחה באשר 
+\begin_inset Formula $A\ne\emptyset$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $Y\cap A\ne\emptyset$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מרחב מטרי ספרבילי
+\series default
+\color inherit
+: מרחב מטרי 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ עבורו קיימת 
+\begin_inset Formula $Y\subseteq X$
+\end_inset
+
+ צפופה לכל היותר בת מנייה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+קבוצה חסומה
+\series default
+\color inherit
+: קבוצה 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\exists r>0.\exists a\in X.A\subseteq B_{r}\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+קוטר של קבוצה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ חסומה אזי 
+\begin_inset Formula $\text{diam}\left(A\right)=\sup\left\{ d\left(x,y\right)\mid x,y\in A\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left\{ x^{\left(m\right)}\right\} \subseteq\bbr^{n}$
+\end_inset
+
+ סדרה חסומה אזי קיימת תת סדרה 
+\begin_inset Formula $x^{\left(m_{j}\right)}$
+\end_inset
+
+ מתכנסת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: לכל קבוצה חסומה ואינסופית קיימת נקודת הצטברות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סדרת
+\series default
+ 
+\series bold
+קושי
+\series default
+\color inherit
+: סדרה 
+\begin_inset Formula $\left\{ x_{n}\right\} \subseteq X$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\forall\e>0.\exists N\in\bbn.\forall k,m\ge N.d\left(x_{k},x_{m}\right)<\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+למה
+\series default
+\color inherit
+: סדרת קושי הינה חסומה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: סדרה מתכנסת הינה סדרת קושי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מרחב מטרי שלם
+\series default
+\color inherit
+: מרחב מטרי 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ עבורו כל סדרת קושי מתכנסת.
+\end_layout
+
+\begin_layout Standard
+משפט: 
+\begin_inset Formula $\bbr^{n}$
+\end_inset
+
+ סטנדרטי שלם, 
+\begin_inset Formula $C\left(\left[a,b\right]\right)$
+\end_inset
+
+ שלם, 
+\begin_inset Formula $\ell_{2}$
+\end_inset
+
+ שלם.
+\end_layout
+
+\begin_layout Standard
+טענה: יהי 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ מרחב מטרי שלם ותהא 
+\begin_inset Formula $Y\subseteq X$
+\end_inset
+
+ אזי )
+\begin_inset Formula $\left(Y,d\right)$
+\end_inset
+
+ שלם(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $Y$
+\end_inset
+
+ סגורה(.
+\end_layout
+
+\begin_layout Standard
+מרחבים מטריים איזומטריים: מרחבים מטריים 
+\begin_inset Formula $\left(X,d\right),\left(Y,\rho\right)$
+\end_inset
+
+ עבורם קיימת 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל המקיימת 
+\begin_inset Formula $\forall x,y\in X.d\left(x,y\right)=d\left(\left(x\right),f\left(y\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+השלמה של מרחב מטרי: יהי 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ מרחב מטרי אזי 
+\begin_inset Formula $\left(Y,\rho\right)$
+\end_inset
+
+ מרחב מטרי שלם עבורו 
+\begin_inset Formula $X\subseteq Y$
+\end_inset
+
+ צפופה וכן 
+\begin_inset Formula $\rho_{\upharpoonright_{X^{2}}}=d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+משפט: לכל מרחב מטרי קיימת השלמה.
+\end_layout
+
+\begin_layout Standard
+טענה: יהי 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ מרחב מטרי בעל השלמות 
+\begin_inset Formula $\left(Y,\rho\right),\left(Z,\zeta\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(Y,\rho\right),\left(Z,\zeta\right)$
+\end_inset
+
+ איזומטריים.
+\end_layout
+
+\begin_layout Standard
+נקודת שבת: תהא 
+\begin_inset Formula $f:A\to A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $f\left(a\right)=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+העתקה מכווצת: יהי 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ מרחב מטרי אזי 
+\begin_inset Formula $f:X\to X$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\exists\lambda<1.\forall a,b\in X.d\left(f\left(x\right),f\left(y\right)\right)\le\lambda d\left(x,y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+משפט נקודת השבת של בנך: 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $04.03.2024$
+\begin_inset Formula $06.03.2024$
 \end_inset
 
  - הכל
