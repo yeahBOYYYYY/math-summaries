@@ -152,7 +152,7 @@
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "E:/University/macros.lyx"
+filename "C:/Users/user/OneDrive/Documents/summaries/macros.lyx"
 
 \end_inset
 
@@ -7768,39 +7768,487 @@ status open
 \end_layout
 
 \begin_layout Standard
-נקודת שבת: תהא 
-\begin_inset Formula $f:A\to A$
+כיסוי פתוח: יהי 
+\begin_inset Formula $\left(X,d\right)$
 \end_inset
 
- אזי 
-\begin_inset Formula $a\in A$
+ מרחב מטרי ותהא 
+\begin_inset Formula $A\subseteq X$
 \end_inset
 
- המקיימת 
-\begin_inset Formula $f\left(a\right)=a$
+ אזי קבוצות 
+\begin_inset Formula $\left\{ A_{\a}\right\} _{\a\in I}$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $A\subseteq\bigcup_{\a\in I}A_{\a}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-העתקה מכווצת: יהי 
+מרחב קומפקטי: מרחב מטרי 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $\left\{ A_{\a}\right\} _{\a\in I}$
+\end_inset
+
+ כיסוי פתוח של 
+\begin_inset Formula $X$
+\end_inset
+
+ קיימות 
+\begin_inset Formula $\left\{ \b_{i}\right\} _{i=1}^{m}\in I$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $X=\bigcup_{i=1}^{m}A_{\b_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+קבוצה קומפקטית: יהי 
 \begin_inset Formula $\left(X,d\right)$
 \end_inset
 
  מרחב מטרי אזי 
-\begin_inset Formula $f:X\to X$
+\begin_inset Formula $B\subseteq X$
 \end_inset
 
- עבורה 
-\begin_inset Formula $\exists\lambda<1.\forall a,b\in X.d\left(f\left(x\right),f\left(y\right)\right)\le\lambda d\left(x,y\right)$
+ עבורו 
+\begin_inset Formula $\left(B,d\right)$
+\end_inset
+
+ מרחב קומפקטי.
+\end_layout
+
+\begin_layout Standard
+טענה קבוצה פתוחה יחסית: יהי 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ מרחב מטרי ותהא 
+\begin_inset Formula $Y\subseteq X$
+\end_inset
+
+ אזי )
+\begin_inset Formula $U\subseteq Y$
+\end_inset
+
+ פתוחה ב־
+\begin_inset Formula $\left(Y,d\right)$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיימת 
+\begin_inset Formula $V\subseteq X$
+\end_inset
+
+ פתוחה עבורה 
+\begin_inset Formula $U=V\cap Y$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+טענה קבוצה סגורה יחסית: יהי 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ מרחב מטרי ותהא 
+\begin_inset Formula $Y\subseteq X$
+\end_inset
+
+ אזי )
+\begin_inset Formula $U\subseteq Y$
+\end_inset
+
+ סגורה ב־
+\begin_inset Formula $\left(Y,d\right)$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיימת 
+\begin_inset Formula $V\subseteq X$
+\end_inset
+
+ סגורה עבורה 
+\begin_inset Formula $U=V\cap Y$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+טענה: תהא 
+\begin_inset Formula $K\subseteq X$
+\end_inset
+
+ קומפקטית אזי 
+\begin_inset Formula $K$
+\end_inset
+
+ חסומה וכן 
+\begin_inset Formula $K$
+\end_inset
+
+ סגורה.
+\end_layout
+
+\begin_layout Standard
+טענה: יהי 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ מרחב מטרי אזי )
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ קומפקטי(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל סדרה יורדת 
+\begin_inset Formula $\left\{ K_{i}\right\} _{i=1}^{\infty}\subseteq X$
+\end_inset
+
+ סגורות לא ריקות אזי 
+\begin_inset Formula $\bigcap_{i=1}^{\infty}K_{i}\ne\emptyset$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+קומפקטיות סדרתית: מרחב מטרי 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ עבורו לכל סדרה קיימת תת סדרה מתכנסת.
+\end_layout
+
+\begin_layout Standard
+משפט: יהי 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ מרחב מטרי אזי )
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ קומפקטי(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ קומפקטי סדרתית(.
+\end_layout
+
+\begin_layout Standard
+טענה: תהא 
+\begin_inset Formula $A\subseteq\bbr^{n}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $A$
+\end_inset
+
+ קומפקטית(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $A$
+\end_inset
+
+ סגורה וחסומה(.
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+גבול: יהיו 
+\begin_inset Formula $\left(X,d\right),\left(Y,\rho\right)$
+\end_inset
+
+ מרחבים מטריים תהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ תהא 
+\begin_inset Formula $a\in X$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $L\in Y$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+קושי: 
+\begin_inset Formula $\left(\lim_{x\to a}f\left(x\right)=L\right)\iff\left(\forall\e>0.\exists\d>0.\forall x\in B\left(a,\d\right).f\left(x\right)\in B\left(L,\e\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+היינה: 
+\begin_inset Formula $\left(\lim_{x\to a}f\left(x\right)=L\right)\iff\left(\forall x\in\left(X\backslash\left\{ a\right\} \right)^{\bbn}.\left(x_{k}\to a\right)\implies\left(f\left(x_{k}\right)\to L\right)\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-משפט נקודת השבת של בנך: 
+רציפות בנקודה: יהיו 
+\begin_inset Formula $\left(X,d\right),\left(Y,\rho\right)$
+\end_inset
+
+ מרחבים מטריים ותהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a\in X$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\lim_{x\to a}f\left(x\right)=f\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+משפט: יהיו 
+\begin_inset Formula $\left(X,d\right),\left(Y,\rho\right)$
+\end_inset
+
+ מרחבים מטריים ותהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ אזי )
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $U\subseteq Y$
+\end_inset
+
+ פתוחה מתקיים 
+\begin_inset Formula $f^{-1}\left(U\right)$
+\end_inset
+
+ פתוחה(.
+\end_layout
+
+\begin_layout Standard
+טענה: יהי 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ מרחב מטרי ותהא 
+\begin_inset Formula $f:X\to\bbr^{m}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $i\in\left[m\right]$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ רציפה(.
+\end_layout
+
+\begin_layout Standard
+רציפות במידה שווה: יהיו 
+\begin_inset Formula $\left(X,d\right),\left(Y,\rho\right)$
+\end_inset
+
+ מרחבים מטריים ותהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f:A\to Y$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\forall\e>0.\exists\d>0.\forall x,y\in A.\left(d\left(x,y\right)<\d\right)\implies\left(\rho\left(f\left(x\right),f\left(y\right)\right)<\e\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+משפט: תהיינה 
+\begin_inset Formula $f,g:X\to\bbr^{n}$
+\end_inset
+
+ רציפות ויהיו 
+\begin_inset Formula $\a,\b\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\a f+\b g$
+\end_inset
+
+ רציפה וכן 
+\begin_inset Formula $\left<f,g\right>$
+\end_inset
+
+ רציפה.
+\end_layout
+
+\begin_layout Standard
+משפט רציפות ההרכבה: יהיו 
+\begin_inset Formula $\left(X,d\right),\left(Y,\rho\right),\left(Z,\eta\right)$
+\end_inset
+
+ מרחבים מטריים תהא 
+\begin_inset Formula $a\in X$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ רציפה על 
+\begin_inset Formula $a$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $g:f\left(X\right)\to Z$
+\end_inset
+
+ רציפה על 
+\begin_inset Formula $f\left(a\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ רציפה על 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+משפט קנטור: יהי 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ מרחב מטרי קומפקטי יהי 
+\begin_inset Formula $\left(Y,\rho\right)$
+\end_inset
+
+ מרחב מטרי ותהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ רציפה אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה במ
+\begin_inset Quotes erd
+\end_inset
+
+ש.
+\end_layout
+
+\begin_layout Standard
+משפט ווירשטראס: יהי 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ מרחב מטרי קומפקטי ותהא 
+\begin_inset Formula $f:X\to\bbr$
+\end_inset
+
+ רציפה אזי קיימים 
+\begin_inset Formula $a,b\in X$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $f\left(X\right)=\left[f\left(a\right),f\left(b\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהי 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ מרחב מטרי קומפקטי יהי 
+\begin_inset Formula $\left(Y,\rho\right)$
+\end_inset
+
+ מרחב מטרי ותהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ רציפה אזי 
+\begin_inset Formula $f\left(X\right)$
+\end_inset
+
+ קומפקטית.
+\end_layout
+
+\begin_layout Standard
+מסקנה: תהיו 
+\begin_inset Formula $\nu,\eta:X\to\bbr$
+\end_inset
+
+ נורמות אזי קיימים 
+\begin_inset Formula $c,C\in\bbr$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $c\nu\le\eta\le C\nu$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -7808,7 +8256,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $06.03.2024$
+\begin_inset Formula $12.03.2024$
 \end_inset
 
  - הכל
