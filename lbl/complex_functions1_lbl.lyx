@@ -116,6 +116,11 @@
 \justification false
 \use_refstyle 1
 \use_minted 0
+\branch bonus
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -164,6 +169,12 @@ filename "E:/University/macros.lyx"
 \begin_inset FormulaMacro
 \renewcommand{\Arg}{\text{Arg}}
 {\text{Arg}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\u}{\mathcal{U}}
+{\mathcal{U}}
 \end_inset
 
 
@@ -4590,7 +4601,11 @@ b & -a
 \begin_inset Formula $z$
 \end_inset
 
- אזי 
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\left|f^{\left(n\right)}\left(z\right)\right|\le\frac{n!\max_{C_{r}}\left|f\right|}{r^{n}}$
 \end_inset
 
@@ -4810,7 +4825,7 @@ b & -a
 אפס
 \series default
 \color inherit
-:יהי 
+: יהי 
 \begin_inset Formula $\mathcal{U}\subseteq\bbc$
 \end_inset
 
@@ -5629,11 +5644,913 @@ b & -a
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהיינה 
+\begin_inset Formula $f_{n}:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפיות ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $f_{n}\limpw f$
+\end_inset
+
+ וכן לכל 
+\begin_inset Formula $\mathcal{K}\subseteq\mathcal{U}$
+\end_inset
+
+ קומפקטית מתקיים 
+\begin_inset Formula $f_{n}\limu f$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ הולומורפית וכן 
+\begin_inset Formula $f_{n}^{\prime}\limpw f^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהיינה 
+\begin_inset Formula $f_{n}:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפיות ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\sum_{n=0}^{\infty}f_{n}=f$
+\end_inset
+
+ במ
+\begin_inset Quotes erd
+\end_inset
+
+ש אזי 
+\begin_inset Formula $\sum_{n=0}^{\infty}f_{n}^{\prime}=f^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט טיילור
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(z\right)=\sum_{n=0}^{\infty}\frac{f^{\left(n\right)}\left(a\right)}{n!}\left(z-a\right)^{n}$
+\end_inset
+
+ על 
+\begin_inset Formula $B_{\sup\left\{ r\mid B_{r}\left(a\right)\subseteq\mathcal{U}\right\} }\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+פונקציה אנליטית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה ויהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbf$
+\end_inset
+
+ תחום אזי 
+\begin_inset Formula $f\in C^{\infty}\left(\mathcal{U},\bbf\right)$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $a\in\mathcal{U}$
+\end_inset
+
+ קיימת סביבה 
+\begin_inset Formula $\mathcal{O}\subseteq\mathcal{U}$
+\end_inset
+
+ של 
+\begin_inset Formula $a$
+\end_inset
+
+ בה 
+\begin_inset Formula $f\left(z\right)=\sum_{n=0}^{\infty}\frac{f^{\left(n\right)}\left(a\right)}{n!}\left(z-a\right)^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ אזי )
+\begin_inset Formula $f$
+\end_inset
+
+ הולומורפית(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $f$
+\end_inset
+
+ אנליטית(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טור לורן
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $c\in\bbc$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $a\in\bbc^{\bbn}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum_{n=-\infty}^{\infty}a_{n}\left(z-c\right)^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $c\in\bbc$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $a\in\bbc^{\bbn}$
+\end_inset
+
+ אזי קיימים 
+\begin_inset Formula $R_{1},R_{2}\in\bbr$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\sum_{n=-\infty}^{\infty}a_{n}\left(z-c\right)^{n}$
+\end_inset
+
+ מתכנס בטבעת 
+\begin_inset Formula $R_{1}<\left|z-c\right|<R_{2}$
+\end_inset
+
+ וכן לכל 
+\begin_inset Formula $\mathcal{K}\subseteq\left\{ R_{1}<\left|z-c\right|<R_{2}\right\} $
+\end_inset
+
+ קומפקטית 
+\begin_inset Formula $\sum_{n=-\infty}^{\infty}a_{n}\left(z-c\right)^{n}$
+\end_inset
+
+ מתכנס במ
+\begin_inset Quotes erd
+\end_inset
+
+ש ובהחלט.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ טבעת תהא 
+\begin_inset Formula $c\in\bbc$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית אזי קיימת 
+\begin_inset Formula $a\in\bbc^{\bbn}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $f\left(z\right)=\sum_{n=-\infty}^{\infty}a_{n}\left(z-c\right)^{n}$
+\end_inset
+
+ על 
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ טבעת תהא 
+\begin_inset Formula $c\in\bbc$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית אזי מקדמי טור לורן של 
+\begin_inset Formula $f$
+\end_inset
+
+ הם 
+\begin_inset Formula $a_{n}=\frac{1}{2\pi i}\int_{\left|\zeta-c\right|=r}\frac{f\left(\zeta\right)}{\left(\zeta-c\right)^{n+1}}\text{d}\zeta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ טבעת תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית ויהי 
+\begin_inset Formula $c\in\mathcal{U}$
+\end_inset
+
+ אפס מסדר 
+\begin_inset Formula $m\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(z\right)=\sum_{n=m}^{\infty}a_{n-m}\left(z-c\right)^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ טבעת תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית ויהי 
+\begin_inset Formula $c\in\mathcal{U}$
+\end_inset
+
+ קוטב מסדר 
+\begin_inset Formula $m\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(z\right)=\sum_{n=-m}^{\infty}a_{n+m}\left(z-c\right)^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסילה כווויצה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום אזי 
+\begin_inset Formula $\g$
+\end_inset
+
+ מסילה סגורה עבורה 
+\begin_inset Formula $\forall a\in\bbc\backslash\mathcal{U}.n\left(\g,a\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+תחום פשוט קשר
+\series default
+\color inherit
+: תחום 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ עבורו כל מסילה 
+\begin_inset Formula $\g$
+\end_inset
+
+ סגורה הינה כוויצה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום אזי )
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+ פשוט קשר(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\hat{\bbc}\backslash\mathcal{U}$
+\end_inset
+
+ קשירה(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסילות הומוטופיות
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום אזי מסילות 
+\begin_inset Formula $\g_{0},\g_{1}:\left[a,b\right]\to\mathcal{U}$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $\left(\g_{0}\left(a\right)=\g_{1}\left(a\right)\right)\land\left(\g_{0}\left(b\right)=\g_{1}\left(b\right)\right)$
+\end_inset
+
+ וכן קיימת 
+\begin_inset Formula $\eta\in C\left(\left[a,b\right]\times\left[0,1\right],\mathcal{U}\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\left(\eta\left(t,1\right)=\g_{1}\left(t\right)\right)\land\left(\eta\left(t,0\right)=\g_{0}\left(t\right)\right)\land\left(\eta\left(b,s\right)=\g_{0}\left(b\right)\right)\land\left(\eta\left(a,s\right)=\g_{0}\left(a\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $\g$
+\end_inset
+
+ מסילה סגורה אזי )
+\begin_inset Formula $\g$
+\end_inset
+
+ כוויצה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\g$
+\end_inset
+
+ הומוטופית למסילה קבועה(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+משפט קושי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית ותהא 
+\begin_inset Formula $\g$
+\end_inset
+
+ מסילה סגורה כוויצה אזי 
+\begin_inset Formula $\intop_{\g}f\left(z\right)\text{d}z=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה נוסחת האינטגרל של קושי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $\g:\left[\a,\b\right]\to D$
+\end_inset
+
+ מסילה סגורה כוויצה תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית ויהי 
+\begin_inset Formula $a\in\mathcal{U}\backslash\g\left(\left[\a,\b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $n\left(\g,a\right)\cdot f\left(a\right)=\frac{1}{2\pi i}\int_{\g}\frac{f\left(z\right)}{z-a}\text{d}z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה נוסחת הנגזרת של קושי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית ויהי 
+\begin_inset Formula $C_{r}\subseteq D$
+\end_inset
+
+ מעגל כוויץ סביב 
+\begin_inset Formula $z$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f^{\left(n\right)}\left(z\right)=\frac{n!}{2\pi i}\int_{C_{r}}\frac{f\left(\zeta\right)}{\left(\zeta-z\right)^{n+1}}\text{d}\zeta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהי 
+\begin_inset Formula $a\in\bbc$
+\end_inset
+
+ תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ טבעת סביב 
+\begin_inset Formula $a$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית ויהיו 
+\begin_inset Formula $C_{1},C_{2}$
+\end_inset
+
+ מעגלים ב־
+\begin_inset Formula $\u$
+\end_inset
+
+ סביב 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{C_{1}}f\left(z\right)\text{d}z=\intop_{C_{2}}f\left(z\right)\text{d}z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהי 
+\begin_inset Formula $a\in\bbc$
+\end_inset
+
+ תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ טבעת סביב 
+\begin_inset Formula $a$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית תהא 
+\begin_inset Formula $\g$
+\end_inset
+
+ מסילה סגורה עבורה 
+\begin_inset Formula $n\left(\g,a\right)=1$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל ב־
+\begin_inset Formula $\u$
+\end_inset
+
+ סביב 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{\g}f\left(z\right)\text{d}z=\intop_{C}f\left(z\right)\text{d}z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מסקנה: יהי 
+\begin_inset Formula $a\in\bbc$
+\end_inset
+
+ תהא 
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ טבעת סביב 
+\begin_inset Formula $a$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:\mathcal{U}\to\bbc$
+\end_inset
+
+ הולומורפית תהא 
+\begin_inset Formula $\g$
+\end_inset
+
+ מסילה סגורה ויהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל ב־
+\begin_inset Formula $\u$
+\end_inset
+
+ סביב 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{\g}f\left(z\right)\text{d}z=n\left(\g,a\right)\cdot\intop_{C}f\left(z\right)\text{d}z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+שארית: יהי 
+\begin_inset Formula $\u\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $a\in\bbc$
+\end_inset
+
+ יחודיות מבודדת של 
+\begin_inset Formula $f:\u\backslash\left\{ a\right\} \to\bbc$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל ב־
+\begin_inset Formula $\u$
+\end_inset
+
+ סביב 
+\begin_inset Formula $a$
+\end_inset
+
+ ללא נקודות יחודיות נוספות בתוכו אזי 
+\begin_inset Formula $\res_{a}\left(f\right)=\frac{1}{2\pi i}\intop_{C}f\left(z\right)\text{d}z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהי 
+\begin_inset Formula $\u\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $a\in\bbc$
+\end_inset
+
+ יחודיות מבודדת של 
+\begin_inset Formula $f:\u\backslash\left\{ a\right\} \to\bbc$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\mathcal{V}\subseteq\u$
+\end_inset
+
+ טבעת סביב 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(z\right)-\frac{\res_{a}\left(f\right)}{z-a}$
+\end_inset
+
+ בעלת קדומה ב־
+\begin_inset Formula $\mathcal{V}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהי 
+\begin_inset Formula $\u\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $a\in\bbc$
+\end_inset
+
+ יחודיות סליקה מבודדת של 
+\begin_inset Formula $f:\u\backslash\left\{ a\right\} \to\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\res_{a}\left(f\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהי 
+\begin_inset Formula $\u\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $c\in\bbc$
+\end_inset
+
+ יחודיות מבודדת של 
+\begin_inset Formula $f:\u\backslash\left\{ c\right\} \to\bbc$
+\end_inset
+
+ תהא 
+\begin_inset Formula $\mathcal{V}\subseteq\u$
+\end_inset
+
+ טבעת סביב 
+\begin_inset Formula $a$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\sum_{n=-\infty}^{\infty}a_{n}\left(z-a\right)^{n}$
+\end_inset
+
+ טור לורן של 
+\begin_inset Formula $f$
+\end_inset
+
+ ב־
+\begin_inset Formula $\mathcal{V}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\res_{a}\left(f\right)=a_{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהי 
+\begin_inset Formula $\u\subseteq\bbc$
+\end_inset
+
+ תחום יהי 
+\begin_inset Formula $a\in\bbc$
+\end_inset
+
+ קוטב פשוט מבודד של 
+\begin_inset Formula $f:\u\backslash\left\{ a\right\} \to\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\res_{a}\left(f\right)=\lim_{z\to a}\left(z-a\right)f\left(z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+משפט השאריות: יהי 
+\begin_inset Formula $\u\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $E\subseteq\u$
+\end_inset
+
+ בת מנייה לכל היותר תהא 
+\begin_inset Formula $f:\u\backslash E\to\bbc$
+\end_inset
+
+ הולומורפית ותהא 
+\begin_inset Formula $\g:\left[a,b\right]\to\u\backslash E$
+\end_inset
+
+ כיווצה ב־
+\begin_inset Formula $\u$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{1}{2\pi i}\intop_{\g}f\left(z\right)\text{d}z=\sum_{w\in E}n\left(\g,w\right)\cdot\res_{w}\left(f\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+משפט עקרון הארגומנט: יהי 
+\begin_inset Formula $\u\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\u\to\bbc$
+\end_inset
+
+ מורומורפית יהיו 
+\begin_inset Formula $\left\{ a_{i}\right\} $
+\end_inset
+
+ אפסי 
+\begin_inset Formula $f$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $\left\{ b_{i}\right\} $
+\end_inset
+
+ קטבי 
+\begin_inset Formula $f$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\g$
+\end_inset
+
+ מסילה סגורה כוויצה ב־
+\begin_inset Formula $\u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $02.03.2024$
+\begin_inset Formula $18.03.2024$
 \end_inset
 
  - הכל
@@ -5643,6 +6560,11 @@ status open
 
 
 \end_layout
+
+\begin_layout Standard
+\begin_inset Branch bonus
+inverted 0
+status collapsed
 
 \begin_layout Standard
 \begin_inset Newpage newpage
@@ -6722,6 +7644,11 @@ f_{1}\left(p\right)b-f_{2}\left(p\right)a
 \end_inset
 
 .
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
