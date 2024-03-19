@@ -6722,11 +6722,268 @@ b & -a
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+תחום טוב
+\series default
+: קבוצה 
+\begin_inset Formula $G\subseteq\bbc$
+\end_inset
+
+ פתוחה חסומה עבורה קיימות 
+\begin_inset Formula $\g_{1}\ldots\g_{n}$
+\end_inset
+
+ מסילות זרות סגורות פשוטות וחלקות למקוטעין המקיימות 
+\begin_inset Formula $\forall j\in\left[n\right].\forall t\in\dom\left(\g_{j}\right).\exists\e>0.\g_{j}\left(t\right)\cdot i\cdot\e\in G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $\u\subseteq\bbc$
+\end_inset
+
+ תחום יהי 
+\begin_inset Formula $G\subseteq\u$
+\end_inset
+
+ תחום טוב ותהא 
+\begin_inset Formula $f:\u\to\bbc$
+\end_inset
+
+ הולומורפית אזי 
+\begin_inset Formula $\int_{\partial G}f\left(z\right)\text{d}z=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט עקרון המקסימום
+\series default
+: יהי 
+\begin_inset Formula $\u\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\u\to\bbc$
+\end_inset
+
+ הולומורפית תהא 
+\begin_inset Formula $a\in\u$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $r>0$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\overline{B}_{r}\left(a\right)\subseteq\u$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left|f\left(a\right)\right|=\max_{z\in\overline{B}_{r}\left(a\right)}\left|f\left(z\right)\right|$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ קבועה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $\u\subseteq\bbc$
+\end_inset
+
+ תחום ותהא 
+\begin_inset Formula $f:\u\to\bbc$
+\end_inset
+
+ הולומורפית התב
+\begin_inset Quotes erd
+\end_inset
+
+ש
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|f\right|$
+\end_inset
+
+ חסרת מקסימום מקומי.
+\end_layout
+
+\begin_layout Itemize
+)
+\begin_inset Formula $f$
+\end_inset
+
+ לא קבועה(
+\begin_inset Formula $\impliedby$
+\end_inset
+
+)
+\begin_inset Formula $\left|f\right|$
+\end_inset
+
+ חסרת מקסימום ב־
+\begin_inset Formula $\u$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Itemize
+נניח כי 
+\begin_inset Formula $\overline{\u}$
+\end_inset
+
+ חסומה וכן 
+\begin_inset Formula $f:\overline{\u}\to\bbc$
+\end_inset
+
+ רציפה אזי 
+\begin_inset Formula $\max_{z\in\overline{\u}}\left|f\left(z\right)\right|$
+\end_inset
+
+ מתקבל ב־
+\begin_inset Formula $\partial\overline{\u}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה עקרון המינימום
+\series default
+: יהי 
+\begin_inset Formula $\u\subseteq\bbc$
+\end_inset
+
+ תחום תהא 
+\begin_inset Formula $f:\u\to\bbc$
+\end_inset
+
+ הולומורפית תהא 
+\begin_inset Formula $a\in\u$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $r>0$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\overline{B}_{r}\left(a\right)\subseteq\u$
+\end_inset
+
+ וכן 
+\begin_inset Formula $0<\left|f\left(a\right)\right|=\min_{z\in\overline{B}_{r}\left(a\right)}\left|f\left(z\right)\right|$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ קבועה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה הלמה של שוורץ
+\series default
+: תהא 
+\begin_inset Formula $f:B_{1}\left(0\right)\to\bbc$
+\end_inset
+
+ הולומורפית עבורה 
+\begin_inset Formula $\left|f\right|\le1$
+\end_inset
+
+ וכן 
+\begin_inset Formula $f\left(0\right)=0$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall z\in B_{1}\left(0\right).\left|f\left(z\right)\right|\le\left|z\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|f^{\prime}\left(0\right)\right|\le1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+נניח כי קיימת 
+\begin_inset Formula $a\in B_{1}\left(0\right)\backslash\left\{ 0\right\} $
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\left|f\left(a\right)\right|=\left|a\right|$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $f\left(z\right)=e^{i\a}z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט ההעתקה הפתוחה
+\series default
+: תהא 
+\begin_inset Formula $\u\subseteq\bbc$
+\end_inset
+
+ פתוחה ותהא 
+\begin_inset Formula $f:\u\to\bbc$
+\end_inset
+
+ הולומורפית לא קבועה אזי 
+\begin_inset Formula $f\left(U\right)$
+\end_inset
+
+ פתוחה.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $18.03.2024$
+\begin_inset Formula $19.03.2024$
 \end_inset
 
  - הכל
@@ -6740,7 +6997,7 @@ status open
 \begin_layout Standard
 \begin_inset Branch bonus
 inverted 0
-status open
+status collapsed
 
 \begin_layout Standard
 \begin_inset Newpage newpage
