@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>סיכומים במתמטיקה</h1>
+        <p>Click on the links below to open PDF files in a new tab:</p>
+        <a class="pdf-link gradient-generic" href="example.pdf" target="_blank">PDF Link</a>
+        <a class="pdf-link gradient-purple1" href="example.pdf" target="_blank">PDF Link</a>
+        <a class="pdf-link gradient-purple2" href="example.pdf" target="_blank">PDF Link</a>
+        <a class="pdf-link gradient-blue1" href="example.pdf" target="_blank">PDF Link</a>
+        <a class="pdf-link gradient-blue2" href="example.pdf" target="_blank">PDF Link</a>
+        <a class="pdf-link gradient-red1" href="example.pdf" target="_blank">PDF Link</a>
+        <a class="pdf-link gradient-green1" href="example.pdf" target="_blank">PDF Link</a>
+        <a class="pdf-link gradient-green2" href="example.pdf" target="_blank">PDF Link</a>
+        <a class="pdf-link gradient-pink1" href="example.pdf" target="_blank">PDF Link</a>
+        <a class="pdf-link gradient-orange1" href="example.pdf" target="_blank">PDF Link</a>
+        <a class="pdf-link gradient-orange2" href="example.pdf" target="_blank">PDF Link</a>
+        <a class="pdf-link gradient-brown1" href="example.pdf" target="_blank">PDF Link</a>
+        <a class="pdf-link gradient-brown2" href="example.pdf" target="_blank">PDF Link</a>
+        <a class="pdf-link gradient-brown3" href="example.pdf" target="_blank">PDF Link</a>
+
+        <div class="pdf-button gradient-brown3">
+            <a class="pdf-link" href="example.pdf" target="_blank">PDF Link</a>
+            <button class="info-button" data-course="bdida">
+                <img src="image.jpg">
+            </button>
+        </div>
+
+        <ul>
+            <li>
+                <a class="pdf-link gradient-blue1" href="level1.pdf" target="_blank">Level 1 PDF</a>
+                <ul>
+                    <li>
+                        <a class="pdf-link gradient-2" href="level1_1.pdf" target="_blank">Level 1.1 PDF</a>
+                    </li>
+                    <li>
+                        <a class="pdf-link gradient-3" href="level1_2.pdf" target="_blank">Level 1.2 PDF</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="pdf-link gradient-1" href="level2.pdf" target="_blank">Level 2 PDF</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="info-box-overlay">
+        <div class="info-box">
+            <button class="close-button">&times;</button>
+            <div class="info-content"></div>
+        </div>
+    </div>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const infoButtons = document.querySelectorAll('.info-button');
+            const infoBoxOverlay = document.querySelector('.info-box-overlay');
+            const infoContent = document.querySelector('.info-content');
+            const closeButton = document.querySelector('.close-button');
+
+            infoButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    const course = button.dataset.course;
+                    fetch(`./coursesInfo/${course}.txt`)
+                        .then(response => response.text())
+                        .then(data => {
+                            infoContent.textContent = data;
+                            infoBoxOverlay.style.display = 'flex';
+                        })
+                        .catch(error => console.error('Error fetching info:', error));
+                });
+            });
+
+            closeButton.addEventListener('click', function() {
+                infoBoxOverlay.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
