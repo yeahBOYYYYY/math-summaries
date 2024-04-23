@@ -44,7 +44,9 @@
         <p>
             סיכומי lbl אלו סיכומים של החומר ללא הוכחות, דוגמאות וכדומה. הסיכום הוא בעצם רשימה של כל המשפטים ההגדרות וכדומה אשר נועד למי שלמד את הקורס או בעל רקע מתמטי מספק בשביל ללמוד אותו לבד מהצורה הזאת.
         </p>
-        <p>על מנת לראות גרסאות ישנות או עוד מידע על הקורס לחצו על לחצן המידע.</p>
+        <p>
+            על מנת לראות גרסאות ישנות או עוד מידע על הקורס לחצו על לחצן המידע.
+        </p>
         
         <br>
         <h3>
@@ -52,16 +54,10 @@
         </h3>
         <script>
             document.write(createPdfButtonContainer('בדידה', '../../lbl/discrete_math_lbl.pdf', 'gradient-red1', 'bdida.txt'));
-        </script>
 
-        <div class="pdf-button-container gradient-generic">
-            <a class="pdf-button" target="_blank">לוגיקה למדמח</a>
-        </div>
-        <!--
-        <script>
-            document.write(createPdfButtonContainer('לוגיקה למדמח', 'example.pdf', 'gradient-red2', 'logicMadmah.txt'));
+            document.write(createGenericContainer('לוגיקה למדמח'));
+            /* document.write(createPdfButtonContainer('לוגיקה למדמח', 'example.pdf', 'gradient-red2', 'logicMadmah.txt')); */
         </script>
-        -->
 
         <br><br>
         <h3>
@@ -69,45 +65,20 @@
         </h3>
         <script>
             document.write(createPdfButtonContainer('חדו"א1', '../../lbl/calculus_1a_lbl.pdf', 'gradient-blue1', 'hedva1a.txt'));
-        </script>
-        <script>
             document.write(createPdfButtonContainer('חדו"א2', '../../lbl/calculus_2a_lbl.pdf', 'gradient-blue2', 'hedva2a.txt'));
-        </script>
-        <script>
             document.write(createPdfButtonContainer('חדו"א3', '../../lbl/calculus_3_lbl.pdf', 'gradient-blue3', 'hedva3.txt'));
-        </script>
 
-        <div class="pdf-button-container gradient-generic">
-            <a class="pdf-button" target="_blank">חדו"א4</a>
-        </div>
-        <!--
-        <script>
-            document.write(createPdfButtonContainer('חדו"א4', 'example.pdf', 'gradient-blue4', 'hedva4.txt'));
-        </script>
-        -->
+            document.write(createGenericContainer('חדו"א4'));
+            /* document.write(createPdfButtonContainer('חדו"א4', 'example.pdf', 'gradient-blue4', 'hedva4.txt')); */
 
-        <script>
             document.write(createPdfButtonContainer('מרוכבות1', '../../lbl/complex_functions1_lbl.pdf', 'gradient-lightblue1', 'merocavot1.txt'));
-        </script>
 
+            document.write(createGenericContainer('מד"ר1'));
+            /* document.write(createPdfButtonContainer('1מד"ר', 'example.pdf', 'gradient-blue5', 'madar1.txt'); */
 
-        <div class="pdf-button-container gradient-generic">
-            <a class="pdf-button" target="_blank">מד"ר1</a>
-        </div>
-        <!--
-        <script>
-            document.write(createPdfButtonContainer('1מד"ר', 'example.pdf', 'gradient-blue5', 'madar1.txt');
+            document.write(createGenericContainer('ממשיות'));
+            /* document.write(createPdfButtonContainer('ממשיות', 'example.pdf', 'gradient-blue6', 'mamashiot.txt'); */
         </script>
-        -->
-
-        <div class="pdf-button-container gradient-generic">
-            <a class="pdf-button" target="_blank">ממשיות</a>
-        </div>
-        <!--
-        <script>
-            document.write(createPdfButtonContainer('ממשיות', 'example.pdf', 'gradient-blue6', 'mamashiot.txt');
-        </script>
-        -->
 
         <br><br>
         <h3>
@@ -115,11 +86,7 @@
         </h3>
         <script>
             document.write(createPdfButtonContainer('לינארית1', '../../lbl/linear_algebra_1a_lbl.pdf', 'gradient-green1', 'lini1a.txt'));
-        </script>
-        <script>
             document.write(createPdfButtonContainer('לינארית2', '../../lbl/linear_algebra_2a_lbl_v2.pdf', 'gradient-green2', 'lini2a.txt'));
-        </script>
-        <script>
             document.write(createPdfButtonContainer('חבורות', '../../lbl/group_theory_lbl.pdf', 'gradient-green3', 'groups.txt'));
         </script>
 
@@ -129,16 +96,8 @@
         </h3>
         <script>
             document.write(createPdfButtonContainer('מבוא להסתברות', '../../lbl/introduction_to_probability_theory_lbl.pdf', 'gradient-purple1', 'preprob.txt'));
-        </script>
-        <script>
             document.write(createPdfButtonContainer('הסתברות למדעים', '../../lbl/probability_for_sciences_lbl.pdf', 'gradient-pink1', 'scienceprob.txt'));
         </script>
-
-        <!--
-        <script>
-            document.write(createPdfButtonContainer('הסתברות למתמטיקאים', 'example.pdf', 'gradient-purple2', 'mathprob.txt'));
-        </script>
-        -->
 
         <br><br>
         <h3>
@@ -146,34 +105,16 @@
         </h3>
         <script>
             document.write(createPdfButtonContainer('תורת המספרים', '../../lbl/number_theory_lbl.pdf', 'gradient-orange1', 'numbers.txt'));
-        </script>
 
-        <div class="pdf-button-container gradient-generic">
-            <a class="pdf-button" target="_blank">נומרית</a>
-        </div>
-        <!--
-        <script>
-            document.write(createPdfButtonContainer('נומרית', 'example.pdf', 'gradient-orange2', 'nomerit.txt'));
-        </script>
-        -->
+            document.write(createGenericContainer('נומרית'));
+            /* document.write(createPdfButtonContainer('נומרית', 'example.pdf', 'gradient-orange2', 'nomerit.txt')); */            
+            
+            document.write(createGenericContainer('טופולוגיה'));
+            /* document.write(createPdfButtonContainer('טופולוגיה', 'example.pdf', 'gradient-orange3', 'topologia.txt')); */
 
-        <div class="pdf-button-container gradient-generic">
-            <a class="pdf-button" target="_blank">טופולוגיה</a>
-        </div>
-        <!--
-        <script>
-            document.write(createPdfButtonContainer('טופולוגיה', 'example.pdf', 'gradient-orange3', 'topologia.txt'));
+            document.write(createGenericContainer('מודלים'));
+            /* document.write(createPdfButtonContainer('מודלים', 'example.pdf', 'gradient-orange4', 'modelim.txt')); */
         </script>
-        -->
-
-        <div class="pdf-button-container gradient-generic">
-            <a class="pdf-button" target="_blank">מודלים</a>
-        </div>
-        <!--
-        <script>
-            document.write(createPdfButtonContainer('מודלים', 'example.pdf', 'gradient-orange4', 'modelim.txt'));
-        </script>
-        -->
 
         <br><br>
         <h3>
@@ -181,12 +122,26 @@
         </h3>
         <script>
             document.write(createPdfButtonContainer('קורס A', '../../lbl/course_A_lbl.pdf', 'gradient-brown1', 'courseA.txt'));
-        </script>
-        <script>
             document.write(createPdfButtonContainer('קורס B', '../../lbl/course_B_lbl.pdf', 'gradient-brown2', 'courseB.txt'));
-        </script>
-        <script>
             document.write(createPdfButtonContainer('פיזיקה', '../../lbl/physics_bagrut_lbl.pdf', 'gradient-brown3', 'physicsBagrut.txt'));
+        </script>
+    </div>
+
+    <div class="container">
+        <h2>
+            קורסים לסיכום עתידי
+        </h2>
+        <p>רשימת קורסים חסרי סיכום באתר שאשמח לסכם או לקבל סיכומים ממי שיכול לעזור.</p>
+        <script>
+            document.write(createGenericContainer('תורת הקבוצות'));
+            document.write(createGenericContainer('הסתברות למתמטיקאים'));
+            document.write(createGenericContainer('מרוכבות2'));
+            document.write(createGenericContainer('גיאומטריה דיפרנציאלית'));
+            document.write(createGenericContainer('מרחבי הילברט'));
+            document.write(createGenericContainer('תורת גלואה'));
+            document.write(createGenericContainer('אלגברה קומוטטיבית'));
+            document.write(createGenericContainer('לוגיקה'));
+            document.write(createGenericContainer('גרפים'));
         </script>
     </div>
 

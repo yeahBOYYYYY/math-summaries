@@ -34,3 +34,11 @@ function createPdfButtonContainer(buttonText, pdfLink, gradient, infoData) {
         </div>
     `;
 }
+
+function createGenericContainer(buttonText) {
+    return `
+        <div class="pdf-button-container gradient-generic">
+            <a class="pdf-button" target="_blank">${buttonText}</a>
+        </div>
+    `;
+}
