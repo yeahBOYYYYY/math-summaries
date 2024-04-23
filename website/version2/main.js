@@ -6,11 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     infoButtons.forEach(function(button) {
         button.addEventListener('click', function() {
-            const course = button.dataset.course;
-            fetch(`./coursesInfo/${course}.txt`)
+            const infoFile = button.dataset.info;
+            fetch(infoFile)
                 .then(response => response.text())
                 .then(data => {
-                    infoContent.textContent = data;
+                    infoContent.innerHTML = data;
                     infoBoxOverlay.style.display = 'flex';
                 })
                 .catch(error => console.error('Error fetching info:', error));
@@ -21,3 +21,15 @@ document.addEventListener('DOMContentLoaded', function() {
         infoBoxOverlay.style.display = 'none';
     });
 });
+
+
+function createPdfButtonContainer(buttonText, pdfLink, gradient, infoData) {
+    return `
+        <div class="pdf-button-container ${gradient}">
+            <a class="pdf-button" href="${pdfLink}" target="_blank">${buttonText}</a>
+            <button class="info-button" data-info="./coursesInfo/${infoData}">
+                <img src="info.png">
+            </button>
+        </div>
+    `;
+}

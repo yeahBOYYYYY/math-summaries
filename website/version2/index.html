@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Summaries</title>
     <link rel="stylesheet" href="main.css">
     <script src="main.js"></script>
 </head>
@@ -12,8 +13,16 @@
         <p>
             על מנת לראות את קבצי המקור, לתקן טעות או להעלות סיכום פרטי של קורס, לחצו על הלינק הבא,
         </p>
+        <div class="pdf-button-container gradient-generic">
+            <a class="pdf-button" href="https://github.com/yeahBOYYYYY/math-summaries" target="_blank">חזרה לעמוד ה־github</a>
+        </div>
 
-        <a class="pdf-link gradient-generic" href="https://github.com/yeahBOYYYYY/math-summaries" target="_blank">חזרה לעמוד ה־github</a>
+        <p>
+            על מנת לחזור לגרסה הישנה של האתר לחץ על הלינק הבא,
+        </p>
+        <div class="pdf-button-container gradient-generic">
+            <a class="pdf-button" href="https://yeahboyyyyy.github.io/math-summaries/website/version1/index.html" target="_blank">האתר הישן</a>
+        </div>
     </div>
 
 
@@ -21,8 +30,9 @@
         <h2>
             סיכומים מלאים
         </h2>
-        <a class="pdf-link gradient-red1" href="example.pdf" target="_blank">בדידה</a>
-
+        <script>
+            document.write(createPdfButtonContainer('בדידה', '../../other/discrete_math.pdf', 'gradient-red1', 'bdida.txt'));
+        </script>
     </div>
 
 
@@ -38,12 +48,47 @@
         <h3>
             לוגיקה
         </h3>
-        <a class="pdf-link gradient-red1" href="example.pdf" target="_blank">בדידה</a>
+        <div class="pdf-button-container gradient-red1">
+            <a class="pdf-button" href="example.pdf" target="_blank">בדידה</a>
+            <button class="info-button" data-info="./coursesInfo/bdida.txt">
+                <img src="info.png">
+            </button>
+        </div>
 
         <br><br>
         <h3>
             אנליזה
         </h3>
+        <div class="pdf-button-container gradient-red1">
+            <a class="pdf-button" href="example.pdf" target="_blank">בדידה</a>
+            <button class="info-button" data-info="./coursesInfo/bdida.txt">
+                <img src="info.png">
+            </button>
+        </div>
+        <div class="pdf-button-container gradient-red1">
+            <a class="pdf-button" href="example.pdf" target="_blank">בדידה</a>
+            <button class="info-button" data-info="./coursesInfo/bdida.txt">
+                <img src="info.png">
+            </button>
+        </div>
+        <div class="pdf-button-container gradient-red1">
+            <a class="pdf-button" href="example.pdf" target="_blank">בדידה</a>
+            <button class="info-button" data-info="./coursesInfo/bdida.txt">
+                <img src="info.png">
+            </button>
+        </div>
+        <div class="pdf-button-container gradient-red1">
+            <a class="pdf-button" href="example.pdf" target="_blank">בדידה</a>
+            <button class="info-button" data-info="./coursesInfo/bdida.txt">
+                <img src="info.png">
+            </button>
+        </div>
+        <div class="pdf-button-container gradient-red1">
+            <a class="pdf-button" href="example.pdf" target="_blank">בדידה</a>
+            <button class="info-button" data-info="./coursesInfo/bdida.txt">
+                <img src="info.png">
+            </button>
+        </div>
         <a class="pdf-link gradient-blue1" href="example.pdf" target="_blank">חדו"א1</a>
         <a class="pdf-link gradient-blue2" href="example.pdf" target="_blank">חדו"א2</a>
         <a class="pdf-link gradient-blue3" href="example.pdf" target="_blank">חדו"א3</a>
@@ -54,6 +99,24 @@
         <h3>
             אלגברה
         </h3>
+        <div class="pdf-button-container gradient-red1">
+            <a class="pdf-button" href="example.pdf" target="_blank">בדידה</a>
+            <button class="info-button" data-info="./coursesInfo/bdida.txt">
+                <img src="info.png">
+            </button>
+        </div>
+        <div class="pdf-button-container gradient-red1">
+            <a class="pdf-button" href="example.pdf" target="_blank">בדידה</a>
+            <button class="info-button" data-info="./coursesInfo/bdida.txt">
+                <img src="info.png">
+            </button>
+        </div>
+        <div class="pdf-button-container gradient-red1">
+            <a class="pdf-button" href="example.pdf" target="_blank">בדידה</a>
+            <button class="info-button" data-info="./coursesInfo/bdida.txt">
+                <img src="info.png">
+            </button>
+        </div>
         <a class="pdf-link gradient-green1" href="example.pdf" target="_blank">לינארית1</a>
         <a class="pdf-link gradient-green2" href="example.pdf" target="_blank">לינארית2</a>
         <a class="pdf-link gradient-green3" href="example.pdf" target="_blank">חבורות</a>
@@ -80,6 +143,14 @@
         <a class="pdf-link gradient-brown2" href="example.pdf" target="_blank">קורס B</a>
         <a class="pdf-link gradient-brown3" href="example.pdf" target="_blank">פיזיקה</a>
         
+    </div>
+
+
+    <!-- Info box overlay -->
+    <div class="info-box-overlay">
+        <div class="info-box">
+            <button class="close-button">&times;</button>
+        <div class="info-content"></div>
     </div>
 </body>
 </html>
