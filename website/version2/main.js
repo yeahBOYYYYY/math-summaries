@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
             fetch(infoFile)
                 .then(response => response.text())
                 .then(data => {
-                    infoContent.innerHTML = data;
+                    const formattedData = data.replace(/\n/g, '<br>');
+                    infoContent.innerHTML = formattedData;
                     infoBoxOverlay.style.display = 'flex';
                 })
                 .catch(error => console.error('Error fetching info:', error));
