@@ -179,7 +179,7 @@ filename "E:/University/macros.lyx"
 
 \begin_layout Itemize
 תהיינה 
-\begin_inset Formula $\left\{ A_{i}\right\} _{i=1}^{\infty}\subseteq\bbr^{n}$
+\begin_inset Formula $\left\{ A_{i}\right\} _{i=1}^{\infty}\subseteq\P\left(\bbr^{n}\right)$
 \end_inset
 
  אזי 
@@ -1348,6 +1348,342 @@ filename "E:/University/macros.lyx"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+מרחב מדיד: תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $\Sigma\subseteq\P\left(X\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה אזי 
+\begin_inset Formula $\left(X,\Sigma\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+פונקציית מידה: יהי 
+\begin_inset Formula $\left(X,\Sigma\right)$
+\end_inset
+
+ מרחב מדיד אזי 
+\begin_inset Formula $\mu:\Sigma\to\left[0,\infty\right]$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mu\left(\emptyset\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אדטיביות: תהיינה 
+\begin_inset Formula $\left\{ B_{i}\right\} _{i=1}^{\infty}\subseteq\Sigma$
+\end_inset
+
+ זרות בזוגות אזי 
+\begin_inset Formula $\mu\left(\biguplus_{i=1}^{\infty}B_{i}\right)=\sum_{i=1}^{\infty}\mu\left(B_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מרחב מידה: יהי 
+\begin_inset Formula $\left(X,\Sigma\right)$
+\end_inset
+
+ מרחב מדיד ותהא 
+\begin_inset Formula $\mu$
+\end_inset
+
+ פונקציית מידה אזי 
+\begin_inset Formula $\left(X,\Sigma,\mu\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מידה סופית: פונקציית מידה 
+\begin_inset Formula $\mu$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\mu\left(X\right)<\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מידה 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־סופית: פונקציית מידה 
+\begin_inset Formula $\mu$
+\end_inset
+
+ עבורה קיימים 
+\begin_inset Formula $\left\{ B_{i}\right\} _{i=1}^{\infty}\subseteq\Sigma$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $X=\bigcup_{i=1}^{\infty}B_{i}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\forall i\in\bbn_{+}.\mu\left(B_{i}\right)<\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מידת הסתברות: פונקציית מידה 
+\begin_inset Formula $\mu$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\mu\left(X\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהי 
+\begin_inset Formula $\left(X,\Sigma,\mu\right)$
+\end_inset
+
+ מרחב מידה אזי
+\end_layout
+
+\begin_layout Itemize
+מונוטוניות: יהיו 
+\begin_inset Formula $A,B\in\Sigma$
+\end_inset
+
+ באשר 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu\left(A\right)\le\mu\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma$
+\end_inset
+
+־תת־אדיטיביות: תהיינה 
+\begin_inset Formula $\left\{ A_{i}\right\} _{i=1}^{\infty}\subseteq\Sigma$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu\left(\bigcup_{i=1}^{\infty}A_{i}\right)\le\sum_{i=1}^{\infty}\mu\left(A_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+רציפות מלעיל: תהיינה 
+\begin_inset Formula $\left\{ A_{i}\right\} _{i=1}^{\infty}\subseteq\Sigma$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\forall i\in\bbn_{+}.A_{i}\subseteq A_{i+1}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu\left(\bigcup_{i=1}^{\infty}A_{i}\right)=\lim_{n\to\infty}\mu\left(A_{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+רציפות מלרע: תהיינה 
+\begin_inset Formula $\left\{ A_{i}\right\} _{i=1}^{\infty}\subseteq\Sigma$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\forall i\in\bbn_{+}.A_{i}\supseteq A_{i+1}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\mu\left(A_{1}\right)<\infty$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu\left(\bigcap_{i=1}^{\infty}A_{i}\right)=\lim_{n\to\infty}\mu\left(A_{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+קבוצה ממידה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ אפס/זניחה: 
+\begin_inset Formula $E\in\Sigma$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\mu\left(E\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+סימון: יהי 
+\begin_inset Formula $\left(X,\Sigma,\mu\right)$
+\end_inset
+
+ מרחב מידה אזי 
+\begin_inset Formula $\mathcal{N}=\left\{ E\in\Sigma\mid\mu\left(E\right)=0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: תהיינה 
+\begin_inset Formula $\left\{ E_{i}\right\} _{i=1}^{\infty}\subseteq\Sigma$
+\end_inset
+
+ זניחות אזי 
+\begin_inset Formula $\bigcup_{i=1}^{\infty}E_{i}$
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+זניחה
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+.
+\end_layout
+
+\begin_layout Standard
+כמעט בכל מקום )כ.ב.מ.(: יהי 
+\begin_inset Formula $\psi$
+\end_inset
+
+ פרידיקט עבורו קיימת 
+\begin_inset Formula $E\in\mathcal{N}$
+\end_inset
+
+ המקיים כי 
+\begin_inset Formula $\psi$
+\end_inset
+
+ מתקיים לכל 
+\begin_inset Formula $X\backslash E$
+\end_inset
+
+ אזי נאמר כי 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\psi$
+\end_inset
+
+ נכונה 
+\begin_inset Formula $\mu$
+\end_inset
+
+ כמעט בכל מקום
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מידה שלמה: פונקציית מידה 
+\begin_inset Formula $\mu$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $E\in\mathcal{N}$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $F\subseteq E$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $F\in\mathcal{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+השלמה של 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה: ...
 \end_layout
 
 \end_body
