@@ -1,0 +1,1354 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{centernot}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usepackage{wrapfig}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usepackage{xcolor}
+% \usepackage[cm]{fullpage}
+\usepackage{polynom}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+
+% it's here?
+\setlength{\tabcolsep}{1pt}
+\renewcommand{\arraystretch}{1.25} % Default value: 1
+
+% tikz
+\usetikzlibrary{math}
+\usetikzlibrary{shadows,trees}
+\tikzset{edge from parent fork down, level distance=2cm, every node/.style= {rectangle,rounded corners, minimum height=8mm, very thick, align=center}}
+
+% enumarte
+\counterwithin*{section}{part}
+\setlist{nosep, noitemsep}
+\setlist[enumerate,1]{label = \arabic*., ref = \arabic*}
+\setlist[enumerate,2]{label = \alph*), ref = \theenumi.\emph{\alph*}}
+\setlist[enumerate,3]{label = .\roman*, ref = \theenumii.\roman*}
+\setlist[itemize,1]{label={\fontfamily{david}\fontencoding{T1}\selectfont\textbullet}}
+
+% colors
+\definecolor{blue}{RGB}{14,107,217}
+\definecolor{green}{RGB}{0,158,40}
+\definecolor{red}{RGB}{235,16,16}
+\definecolor{brown}{RGB}{164,66,0}
+\definecolor{orange}{RGB}{231,135,26}
+\definecolor{purple}{RGB}{94,53,177}
+\definecolor{keywordcolor}{RGB}{255,117,0}
+\definecolor{commentcolor}{RGB}{128,128,128}
+\definecolor{stringcolor}{RGB}{0,168,0}
+\definecolor{remarkcolor}{RGB}{150,145,91} % 255,225,88
+
+% hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+}
+\newcommand\colorAutoref[1]{{\hypersetup{linkcolor=blue}\autoref{#1}}}  %% allows for calls to \autoref{} that have a different color from other links.
+
+% math font and implies arrow
+% \setmathfont{NewCMMath-Regular.otf}
+\let\RonMikhelmanLol\implies
+\renewcommand{\implies}{\negthickspace\RonMikhelmanLol\negthickspace}
+\let\RonMikhelmanLoll\iff
+\renewcommand{\iff}{\negthickspace\RonMikhelmanLoll\negthickspace}
+\let\RonMikhelmanLolll\impliedby
+\renewcommand{\impliedby}{\negthickspace\RonMikhelmanLolll\negthickspace}
+\end_preamble
+\options no-math
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "David CLM"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 2
+\use_package esint 2
+\use_package mathdots 2
+\use_package mathtools 2
+\use_package mhchem 2
+\use_package stackrel 2
+\use_package stmaryrd 2
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification false
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "E:/University/macros.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי לא קיימת 
+\begin_inset Formula $\vol_{n}:\P\left(\bbr^{n}\right)\to\left[0,\infty\right]$
+\end_inset
+
+ עבורה
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\vol_{n}\left(\left[0,1\right]^{n}\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+תהיינה 
+\begin_inset Formula $\left\{ A_{i}\right\} _{i=1}^{\infty}\subseteq\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\vol_{n}\left(\biguplus_{i=1}^{\infty}A_{i}\right)=\sum_{i=1}^{n}\vol_{n}\left(A_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+תהא 
+\begin_inset Formula $\varphi:\bbr^{n}\to\bbr^{n}$
+\end_inset
+
+ איזומטריה ותהא 
+\begin_inset Formula $A\subseteq\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\vol_{n}\left(\varphi\left(A\right)\right)=\vol_{n}\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קבוצות חופפות בחלקים
+\series default
+: 
+\begin_inset Formula $X,Y\subseteq\bbr^{n}$
+\end_inset
+
+ עבורן קיים 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ קיימות 
+\begin_inset Formula $X_{1}\ldots X_{k},Y_{1}\ldots Y_{k}\subseteq\bbr^{n}$
+\end_inset
+
+ וקיימות 
+\begin_inset Formula $\varphi_{1}\ldots\varphi_{k}$
+\end_inset
+
+ איזומטריות המקיימות 
+\begin_inset Formula $X=\biguplus_{i=1}^{k}X_{i}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $Y=\biguplus_{i=1}^{k}Y_{i}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\forall j\in\left[k\right].Y_{j}=\varphi_{j}\left(X_{j}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: תהיינה 
+\begin_inset Formula $X,Y\subseteq\bbr^{n}$
+\end_inset
+
+ חופפות בחלקים אזי 
+\begin_inset Formula $X\equiv Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט פרדוקס בנך־טרסקי
+\series default
+: יהי 
+\begin_inset Formula $n\in\bbn\backslash\left\{ 0,1,2\right\} $
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $X,Y\subseteq\bbr^{n}$
+\end_inset
+
+ חסומות עבורן 
+\begin_inset Formula $\text{int}\left(X\right)\ne\emptyset$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\text{int}\left(Y\right)\ne\emptyset$
+\end_inset
+
+ אזי 
+\begin_inset Formula $X\equiv Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: יהי 
+\begin_inset Formula $n\in\bbn\backslash\left\{ 0,1,2\right\} $
+\end_inset
+
+ אזי לא קיימת 
+\begin_inset Formula $\vol_{n}:\P\left(\bbr^{n}\right)\to\left[0,\infty\right]$
+\end_inset
+
+ עבורה
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\vol_{n}\left(\left[0,1\right]^{n}\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+תהיינה 
+\begin_inset Formula $A,B\subseteq\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\vol_{n}\left(A\uplus B\right)=\vol_{n}\left(A\right)+\vol_{n}\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+תהא 
+\begin_inset Formula $\varphi:\bbr^{n}\to\bbr^{n}$
+\end_inset
+
+ איזומטריה ותהא 
+\begin_inset Formula $A\subseteq\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\vol_{n}\left(\varphi\left(A\right)\right)=\vol_{n}\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט בנך
+\series default
+: יהי 
+\begin_inset Formula $n\in\left\{ 1,2\right\} $
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $\vol_{n}:\P\left(\bbr^{n}\right)\to\left[0,\infty\right]$
+\end_inset
+
+ עבורה
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\vol_{n}\left(\left[0,1\right]^{n}\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+תהיינה 
+\begin_inset Formula $A,B\subseteq\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\vol_{n}\left(A\uplus B\right)=\vol_{n}\left(A\right)+\vol_{n}\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+תהא 
+\begin_inset Formula $\varphi:\bbr^{n}\to\bbr^{n}$
+\end_inset
+
+ איזומטריה ותהא 
+\begin_inset Formula $A\subseteq\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\vol_{n}\left(\varphi\left(A\right)\right)=\vol_{n}\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגברה
+\series default
+: תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\mathcal{A}\subseteq\P\left(X\right)$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\in\mathcal{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall E\in\mathcal{A}.E^{\mathcal{C}}\in\mathcal{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $E\subseteq\mathcal{A}$
+\end_inset
+
+ סופית מתקיים 
+\begin_inset Formula $\bigcup E\in\mathcal{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אלגברה ותהיינה 
+\begin_inset Formula $A,B\in\mathcal{A}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\cap B\in\mathcal{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אידיאל
+\series default
+: תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\mathcal{I}\subseteq\P\left(X\right)$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\notin\mathcal{I}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall A\in\mathcal{I}.\forall B\subseteq A.B\in\mathcal{I}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $E\subseteq\mathcal{A}$
+\end_inset
+
+ סופית מתקיים 
+\begin_inset Formula $\bigcup E\in\mathcal{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה
+\series default
+: תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\mathcal{A}\subseteq\P\left(X\right)$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\in\mathcal{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall E\in\mathcal{A}.E^{\mathcal{C}}\in\mathcal{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $E\subseteq\mathcal{A}$
+\end_inset
+
+ בת מנייה מתקיים 
+\begin_inset Formula $\bigcup E\in\mathcal{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: תהא 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה אזי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אלגברה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אידיאל
+\series default
+: תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\mathcal{I}\subseteq\P\left(X\right)$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\notin\mathcal{I}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall A\in\mathcal{I}.\forall B\subseteq A.B\in\mathcal{I}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $E\subseteq\mathcal{A}$
+\end_inset
+
+ בת מנייה מתקיים 
+\begin_inset Formula $\bigcup E\in\mathcal{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהיינה 
+\begin_inset Formula $\left\{ \mathcal{A}_{\a}\right\} _{\a\in I}\subseteq\P\left(X\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגבראות אזי 
+\begin_inset Formula $\bigcap_{\a\in I}\mathcal{A}_{\a}$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה נוצרת
+\series default
+: תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה תהא 
+\begin_inset Formula $A\subseteq\P\left(X\right)$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $\left\{ \mathcal{A}_{\a}\right\} _{\a\in I}$
+\end_inset
+
+ כל ה
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגבראות מעל 
+\begin_inset Formula $X$
+\end_inset
+
+ המכילות את 
+\begin_inset Formula $A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sigma\left(A\right)=\bigcap_{\a\in I}\mathcal{A}_{\a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: תהא 
+\begin_inset Formula $A\subseteq\P\left(X\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sigma\left(A\right)$
+\end_inset
+
+ הינה ה־
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה הקטנה ביותר המכילה את 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה בורל
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב מטרי אזי 
+\begin_inset Formula $\mathcal{B}\left(X\right)=\sigma\left(\left\{ \O\in\P\left(X\right)\mid\text{ פתוחה}\O\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב מטרי אזי הקבוצות הבאות שוות
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה בורל על 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma\left(\left\{ B_{r}\left(a\right)\mid\left(r>0\right)\land\left(a\in X\right)\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma\left(\left\{ B_{r}\left(a\right)\mid\left(r\in\bbq_{+}\right)\land\left(a\in X\right)\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+תהא 
+\begin_inset Formula $Y\subseteq X$
+\end_inset
+
+ צפופה אזי 
+\begin_inset Formula $\sigma\left(\left\{ B_{r}\left(a\right)\mid\left(r\in\bbq_{+}\right)\land\left(a\in Y\right)\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+קבוצה 
+\begin_inset Formula $G_{\d}$
+\end_inset
+
+
+\series default
+\color inherit
+: 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ עבורה קיימות 
+\begin_inset Formula $\left\{ \O_{i}\right\} _{i=1}^{\infty}$
+\end_inset
+
+ פתוחות המקיימות 
+\begin_inset Formula $A=\bigcap_{i=1}^{\infty}\O_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+קבוצה 
+\begin_inset Formula $F_{\delta}$
+\end_inset
+
+
+\series default
+\color inherit
+: 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ עבורה קיימות 
+\begin_inset Formula $\left\{ \O_{i}\right\} _{i=1}^{\infty}$
+\end_inset
+
+ סגורות המקיימות 
+\begin_inset Formula $A=\bigcup_{i=1}^{\infty}\O_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה 
+\begin_inset Formula $G_{\d}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $B$
+\end_inset
+
+ קבוצה 
+\begin_inset Formula $F_{\delta}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A,B\in\mathcal{B}\left(X\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: הקבוצות הבאות שוות
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אלגברה בורל על 
+\begin_inset Formula $\bbr^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma\left(\left\{ \prod_{i=1}^{n}\left[a_{i},b_{i}\right)\mid a_{1},b_{1}\ldots a_{n},b_{n}\in\bbr\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma\left(\left\{ \prod_{i=1}^{n}\left[a_{i},b_{i}\right)\mid a_{1},b_{1}\ldots a_{n},b_{n}\in\bbq\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f:\bbr\to\bbr$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $C\left(f\right)=\left\{ x\in\bbr\mid x\text{ רציפה ב־}f\right\} $
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $C\left(f\right)\in G_{\d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+תהא 
+\begin_inset Formula $X\in G_{\d}$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $f$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $C\left(f\right)=X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+קבוצה דלילה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב מטרי אזי 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\text{int}\left(\overline{A}\right)=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+קבוצה מקטגוריה ראשונה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב מטרי אזי 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ עבורה קיימות 
+\begin_inset Formula $\left\{ B_{i}\right\} _{i=1}^{\infty}$
+\end_inset
+
+ דלילות עבורן 
+\begin_inset Formula $A=\bigcup_{i=1}^{\infty}B_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+קבוצה מקטגוריה שנייה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב מטרי אזי 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ שאינה מקטגוריה ראשונה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+קבוצה שיורית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב מטרי ותהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ מקטגוריה ראשונה אזי 
+\begin_inset Formula $A^{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+למה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב מטרי אזי
+\end_layout
+
+\begin_layout Itemize
+תהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ דלילה ותהא 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $B$
+\end_inset
+
+ דלילה.
+\end_layout
+
+\begin_layout Itemize
+תהיינה 
+\begin_inset Formula $A_{1}\ldots A_{n}\subseteq X$
+\end_inset
+
+ דלילות אזי 
+\begin_inset Formula $\bigcup_{i=1}^{n}A_{i}$
+\end_inset
+
+ דלילה.
+\end_layout
+
+\begin_layout Itemize
+תהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ דלילה אזי 
+\begin_inset Formula $\overline{A}$
+\end_inset
+
+ דלילה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: קבוצות דלילות מהוות אידיאל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט בייר
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב מטרי שלם ותהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ מקטגוריה ראשונה אזי 
+\begin_inset Formula $\text{int}\left(A\right)=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: קבוצות דלילות מהוות 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־אידיאל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbq\notin G_{\d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\subseteq\bbr$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $F\subseteq\bbr$
+\end_inset
+
+ מקטגוריה ראשונה וקיימת 
+\begin_inset Formula $N\subseteq\bbr$
+\end_inset
+
+ זניחה עבורה 
+\begin_inset Formula $A=F\uplus N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט בנך
+\series default
+\color inherit
+: במרחב המטרי 
+\begin_inset Formula $C\left(\left[0,1\right]\right)$
+\end_inset
+
+ עם נורמת מקסימום הקבוצה 
+\begin_inset Formula $\left\{ f\in C\left(\left[0,1\right]\right)\mid\exists x\in\left(0,1\right).f\in\mathcal{D}\left(x\right)\right\} $
+\end_inset
+
+ היא מקטגוריה ראשונה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הערה
+\series default
+\color inherit
+: 
+\begin_inset Quotes eld
+\end_inset
+
+רוב
+\begin_inset Quotes erd
+\end_inset
+
+ הפונקציות הרציפות לא גזירות באף נקודה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+קבוצה בעלת תכונת בייר
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב מטרי אזי 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ עבורה קיימת 
+\begin_inset Formula $G\subseteq X$
+\end_inset
+
+ פתוחה וקיימת 
+\begin_inset Formula $Q\subseteq X$
+\end_inset
+
+ מקטגוריה ראשונה עבורה 
+\begin_inset Formula $A=G\triangle Q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+:תהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ אזי )ל־
+\begin_inset Formula $A$
+\end_inset
+
+ יש את תכונת בייר(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיימת 
+\begin_inset Formula $F\subseteq X$
+\end_inset
+
+ סגורה וקיימת 
+\begin_inset Formula $P\subseteq X$
+\end_inset
+
+ מקטגוריה ראשונה עבורה 
+\begin_inset Formula $A=F\triangle P$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ בעלת תכונת בייר אזי 
+\begin_inset Formula $A^{\mathcal{C}}$
+\end_inset
+
+ בעלת תכונת בייר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב מטרי אזי 
+\begin_inset Formula $\left\{ A\subseteq X\mid\text{ בעלת תכונת בייר}A\right\} =\sigma\left(\left\{ A\subseteq X\mid\left(\text{ פתוחה}A\right)\lor\left(\text{ מקטגוריה ראשונה}A\right)\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $\mathcal{T}\subseteq\P\left(X\right)$
+\end_inset
+
+ נסמן 
+\begin_inset Formula $\mathcal{F}_{0}={\cal T}\cup\left\{ \emptyset,\Omega\right\} $
+\end_inset
+
+, לכל סודר עוקב 
+\begin_inset Formula $\a+1$
+\end_inset
+
+ נסמן
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{F}_{\a+1}=\mathcal{F}_{\a}\cup\left\{ A^{\mathcal{C}}\mid A\in\mathcal{F}_{\a}\right\} \cup\left\{ \bigcap_{n=1}^{\infty}A_{n}\mid A_{n}\in\mathcal{F}_{\a}\right\} $
+\end_inset
+
+ ולכל סודר גבול 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ נסמן 
+\begin_inset Formula $\mathcal{F}_{\lambda}=\bigcup_{\a<\lambda}\mathcal{F}_{\a}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sigma\left(\mathcal{T}\right)=\mathcal{F}_{\omega_{1}}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+ הסודר הגבולי הקטן ביותר שאינו בן מניה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה עבורה 
+\begin_inset Formula $\left|X\right|=\aleph$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\sigma\left(X\right)\right|=\aleph$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
