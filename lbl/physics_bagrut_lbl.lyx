@@ -15,89 +15,93 @@
 \usepackage{pgfplots}
 \usepackage{hyperref}
 \usepackage{xcolor}
-\usepackage[cm]{fullpage}
+% \usepackage[cm]{fullpage}
 \usepackage{polynom}
 \usepackage{booktabs}
+\usepackage{fancyhdr}
 
+% it's here?
 \setlength{\tabcolsep}{1pt}
 \renewcommand{\arraystretch}{1.25} % Default value: 1
 
+% tikz
 \usetikzlibrary{math}
 \usetikzlibrary{shadows,trees}
+\tikzset{edge from parent fork down, level distance=2cm, every node/.style= {rectangle,rounded corners, minimum height=8mm, very thick, align=center}}
+
+% enumarte
 \counterwithin*{section}{part}
 \setlist{nosep, noitemsep}
-% \setlist[enumerate,levels]{format}
 \setlist[enumerate,1]{label = \arabic*., ref = \arabic*}
-\setlist[enumerate,2]{label = \emph{\alph*}), ref = \theenumi.\emph{\alph*}}
+\setlist[enumerate,2]{label = \alph*), ref = \theenumi.\emph{\alph*}}
 \setlist[enumerate,3]{label = .\roman*, ref = \theenumii.\roman*}
+\setlist[itemize,1]{label={\fontfamily{david}\fontencoding{T1}\selectfont\textbullet}}
 
-
-% Convert the Lyx colors into more pleasent colors:
+% colors
 \definecolor{blue}{RGB}{14,107,217}
 \definecolor{green}{RGB}{0,158,40}
 \definecolor{red}{RGB}{235,16,16}
 \definecolor{brown}{RGB}{164,66,0}
 \definecolor{orange}{RGB}{231,135,26}
 \definecolor{purple}{RGB}{94,53,177}
-
-
-% Program Listing colors
 \definecolor{keywordcolor}{RGB}{255,117,0}
 \definecolor{commentcolor}{RGB}{128,128,128}
 \definecolor{stringcolor}{RGB}{0,168,0}
+\definecolor{remarkcolor}{RGB}{150,145,91} % 255,225,88
 
-
-% Trees formating
-\tikzset{edge from parent fork down, level distance=2cm, every node/.style= {rectangle,rounded corners, minimum height=8mm, very thick, align=center}}
-
-
+% hyperlinks
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
-    urlcolor=blue,
-    }
+    linkcolor=black,
+    urlcolor=black,
+}
+\newcommand\colorAutoref[1]{{\hypersetup{linkcolor=blue}\autoref{#1}}}  %% allows for calls to \autoref{} that have a different color from other links.
 
-
-\setmathfont{NewCMMath-Regular.otf}
+% math font and implies arrow
+% \setmathfont{NewCMMath-Regular.otf}
 \let\RonMikhelmanLol\implies
 \renewcommand{\implies}{\negthickspace\RonMikhelmanLol\negthickspace}
 \let\RonMikhelmanLoll\iff
 \renewcommand{\iff}{\negthickspace\RonMikhelmanLoll\negthickspace}
 \let\RonMikhelmanLolll\impliedby
 \renewcommand{\impliedby}{\negthickspace\RonMikhelmanLolll\negthickspace}
+
+%for defnos
+\usepackage{multicol}
+\usepackage{color}
+\setlength{\columnseprule}{1pt}
+\def\columnseprulecolor{\color{black}}
 \end_preamble
+\options no-math
 \use_default_options true
-\begin_modules
-theorems-ams-chap-bytype
-theorems-ams-extended-chap-bytype
-\end_modules
 \maintain_unincluded_children false
 \language hebrew
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "David"
-\font_sans "default" "David"
-\font_typewriter "default" "David"
-\font_math "auto" "default"
+\font_roman "default" "David CLM"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
-\use_microtype true
+\use_microtype false
 \use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize 12
+\float_placement H
+\paperfontsize default
 \spacing onehalf
 \use_hyperref false
 \papersize letterpaper
-\use_geometry false
+\use_geometry true
 \use_package amsmath 2
 \use_package amssymb 2
 \use_package cancel 2
@@ -107,26 +111,25 @@ theorems-ams-extended-chap-bytype
 \use_package mhchem 2
 \use_package stackrel 2
 \use_package stmaryrd 2
-\use_package undertilde 0
+\use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
 \biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
-\suppress_date false
-\justification true
+\suppress_date true
+\justification false
 \use_refstyle 1
 \use_minted 0
-\branch LinearAlgebra2Recap
-\selected 0
-\filename_suffix 0
-\color #faf0e6
-\end_branch
 \index Index
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -137,7 +140,7 @@ theorems-ams-extended-chap-bytype
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
-\paperpagestyle default
+\paperpagestyle empty
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -181,90 +184,8 @@ theorems-ams-extended-chap-bytype
 \begin_inset Formula $9192631770$
 \end_inset
 
- מחזורי קרינה הנובע ממעבר בין שתי רמות של אטוס צזיום-
-\numeric on
-133
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\numeric off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-במצב מנוחה בטמפרטורה
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-0
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\numeric off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-קלווין.
+ מחזורי קרינה הנובע ממעבר בין שתי רמות של אטוס צזיום-133 במצב מנוחה בטמפרטורה
+ 0 קלווין.
 \end_layout
 
 \begin_layout Standard
@@ -2961,34 +2882,74 @@ theorems-ams-extended-chap-bytype
 \end_layout
 
 \begin_layout Standard
-אליפסה: המקום הגאומטרי של נקודות במישור שסכום מרחקיהן משתי נקודות קבועות
- במישור הוא גודל קבוע.
+
+\series bold
+\color teal
+אליפסה
+\series default
+\color inherit
+: המקום הגאומטרי של נקודות במישור שסכום מרחקיהן משתי נקודות קבועות במישור
+ הוא גודל קבוע.
 \end_layout
 
 \begin_layout Standard
-חוק המסלולים/החוק הראשון של קפלר: כל כוכב לכת נע במסלול אליפטי יתר על כן
- השמש נמצאת באחד ממוקדי האליפסה.
+
+\series bold
+\color teal
+חוק המסלולים/החוק הראשון של קפלר
+\series default
+\color inherit
+: כל כוכב לכת נע במסלול אליפטי יתר על כן השמש נמצאת באחד ממוקדי האליפסה.
 \end_layout
 
 \begin_layout Standard
-פריהליון: המרחק הקצר ביותר בין כוכב לכת לשמש.
+
+\series bold
+\color teal
+פריהליון
+\series default
+\color inherit
+: המרחק הקצר ביותר בין כוכב לכת לשמש.
 \end_layout
 
 \begin_layout Standard
-אפיהליון: המרחק הארוך ביותר בין כוכב לכת לשמש.
+
+\series bold
+\color teal
+אפיהליון
+\series default
+\color inherit
+: המרחק הארוך ביותר בין כוכב לכת לשמש.
 \end_layout
 
 \begin_layout Standard
-הציר הראשי של האליפסה: הקו הישר העובר דרך נקודת הפריהליון והאפיהליון.
+
+\series bold
+\color teal
+הציר הראשי של האליפסה
+\series default
+\color inherit
+: הקו הישר העובר דרך נקודת הפריהליון והאפיהליון.
 \end_layout
 
 \begin_layout Standard
-חוק השטחים/החוק השני של קפלר: הקו הישר המקשר את השמש עם כוכב לכת חולף על
- פני שטחים שווים בפרקי זמן שווים.
+
+\series bold
+\color teal
+חוק השטחים/החוק השני של קפלר
+\series default
+\color inherit
+: הקו הישר המקשר את השמש עם כוכב לכת חולף על פני שטחים שווים בפרקי זמן שווים.
 \end_layout
 
 \begin_layout Standard
-הרדיוס הממוצע של המסלול: 
+
+\series bold
+\color teal
+הרדיוס הממוצע של המסלול
+\series default
+\color inherit
+: 
 \begin_inset Formula $\overline{r}$
 \end_inset
 
@@ -2996,7 +2957,13 @@ theorems-ams-extended-chap-bytype
 \end_layout
 
 \begin_layout Standard
-חוק זמני המחזור/החוק השלישי של קפלר: עבור כוכבי לכת 
+
+\series bold
+\color teal
+חוק זמני המחזור/החוק השלישי של קפלר
+\series default
+\color inherit
+: עבור כוכבי לכת 
 \begin_inset Formula $T^{2}=k\overline{r}^{3}$
 \end_inset
 
@@ -3004,7 +2971,13 @@ theorems-ams-extended-chap-bytype
 \end_layout
 
 \begin_layout Standard
-טענה: עבור כוכבי לכת 
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: עבור כוכבי לכת 
 \begin_inset Formula $k$
 \end_inset
 
@@ -3012,7 +2985,13 @@ theorems-ams-extended-chap-bytype
 \end_layout
 
 \begin_layout Standard
-מסקנה: עבור שני כוכבי לכת מתקיים 
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: עבור שני כוכבי לכת מתקיים 
 \begin_inset Formula $\left(\frac{T_{1}}{T_{2}}\right)^{2}=\left(\frac{\overline{r}_{1}}{\overline{r}_{2}}\right)^{3}$
 \end_inset
 
@@ -3020,7 +2999,13 @@ theorems-ams-extended-chap-bytype
 \end_layout
 
 \begin_layout Standard
-יחידה אסטרונומית: המרחק בין כדור הארץ לשמש 
+
+\series bold
+\color teal
+יחידה אסטרונומית
+\series default
+\color inherit
+: המרחק בין כדור הארץ לשמש 
 \begin_inset Formula $A.U.=1.5\cdot10^{11}m$
 \end_inset
 
@@ -3028,7 +3013,13 @@ theorems-ams-extended-chap-bytype
 \end_layout
 
 \begin_layout Standard
-טענה: לוויין הנע במסלול אליפטי בשדה רדיאלי של גרם השמיים מקיים 
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: לוויין הנע במסלול אליפטי בשדה רדיאלי של גרם השמיים מקיים 
 \begin_inset Formula $T^{2}=k\overline{r}^{3}$
 \end_inset
 
@@ -3036,7 +3027,13 @@ theorems-ams-extended-chap-bytype
 \end_layout
 
 \begin_layout Standard
-קבוע הגרביטציה: 
+
+\series bold
+\color teal
+קבוע הגרביטציה
+\series default
+\color inherit
+: 
 \begin_inset Formula $G=6.67\cdot10^{-11}\,_{N\cdot m^{2}\cdot kg^{-2}}$
 \end_inset
 
@@ -3044,7 +3041,13 @@ theorems-ams-extended-chap-bytype
 \end_layout
 
 \begin_layout Standard
-חוק הכבידה העולמי: בהינתן שני עצמים בעלי מרחק 
+
+\series bold
+\color teal
+חוק הכבידה העולמי
+\series default
+\color inherit
+: בהינתן שני עצמים בעלי מרחק 
 \begin_inset Formula $r$
 \end_inset
 
