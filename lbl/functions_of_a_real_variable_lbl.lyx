@@ -5631,6 +5631,46 @@ height "1pt"
 \begin_layout Standard
 
 \series bold
+הצגה סטנדרטית של פונקציה פשוטה
+\series default
+: יהי 
+\begin_inset Formula $\left(X,\Sigma\right)$
+\end_inset
+
+ מרחב מדיד ותהא 
+\begin_inset Formula $\varphi:X\to\bbr$
+\end_inset
+
+ פשוטה אזי 
+\begin_inset Formula $\varphi=\sum_{i=1}^{n}a_{i}\mathds{1}_{E_{i}}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\biguplus_{i=1}^{n}E_{i}=X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $\left(X,\Sigma\right)$
+\end_inset
+
+ מרחב מדיד ותהא 
+\begin_inset Formula $\varphi:X\to\bbr$
+\end_inset
+
+ פשוטה אזי קיימת הצגה סטנדרטית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 טענה
 \series default
 : יהי 
@@ -6305,7 +6345,7 @@ height "1pt"
 \end_inset
 
 ס עבורה 
-\begin_inset Formula $f_{n_{k}}f_{n}\xrightarrow{a.e.}ff$
+\begin_inset Formula $f_{n_{k}}\xrightarrow{a.e.}f$
 \end_inset
 
 .
@@ -6501,6 +6541,488 @@ height "1pt"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $\left(X,\Sigma,\mu\right)$
+\end_inset
+
+ מרחב מידה אזי 
+\begin_inset Formula $\mathcal{S}\left(\Sigma\right)=\left\{ \varphi\in X\to\bbr\mid\text{ פונקציה פשוטה}\varphi\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $\left(X,\Sigma,\mu\right)$
+\end_inset
+
+ מרחב מידה אזי 
+\begin_inset Formula $\mathcal{S}^{+}\left(\Sigma\right)=\left\{ \varphi\in\mathcal{S}\left(\Sigma\right)\mid\varphi\ge0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: תהא 
+\begin_inset Formula $f\in\mathcal{S}^{+}\left(\Sigma\right)$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $f=\sum_{i=1}^{N}x_{i}\mathds{1}_{A_{i}}=\sum_{i=1}^{M}y_{i}\mathds{1}_{B_{i}}$
+\end_inset
+
+ הצגות סטנדרטיות אזי 
+\begin_inset Formula $\sum_{i=1}^{N}x_{i}\mu\left(A_{i}\right)=\sum_{i=1}^{M}y_{i}\mu\left(B_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אינטגרל
+\series default
+: תהא 
+\begin_inset Formula $f\in\mathcal{S}^{+}\left(\Sigma\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f=\sum_{i=1}^{N}x_{i}\mathds{1}_{A_{i}}$
+\end_inset
+
+ הצגה סטנדרטית אזי 
+\begin_inset Formula $\intop_{X}f\text{d}\mu=\sum_{i=1}^{N}x_{i}\mu\left(A_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אינטגרל
+\series default
+: תהא 
+\begin_inset Formula $f\in\mathcal{S}^{+}\left(\Sigma\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $E\in\Sigma$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{E}f\text{d}\mu=\intop_{X}\mathds{1}_{E}f\text{d}\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהיינה 
+\begin_inset Formula $f,g\in\mathcal{S}^{+}\left(\Sigma\right)$
+\end_inset
+
+ תהא 
+\begin_inset Formula $A\in\Sigma$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\lambda\ge0$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\intop_{X}\mathds{1}_{A}\text{d}\mu=\mu\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+הומוגניות חיובית: 
+\begin_inset Formula $\intop_{X}\lambda f\text{d}\mu=\lambda\intop_{X}f\text{d}\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+חיבוריות: 
+\begin_inset Formula $\intop_{X}\left(f+g\right)\text{d}\mu=\intop_{X}f\text{d}\mu+\intop_{X}g\text{d}\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+מונוטוניות: נניח כי 
+\begin_inset Formula $f\le g$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{X}f\text{d}\mu\le\intop_{X}g\text{d}\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $f\in\mathcal{S}^{+}\left(\Sigma\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\psi:\Sigma\to\bbr$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\psi\left(E\right)=\intop_{E}f\text{d}\mu$
+\end_inset
+
+ הינה מידה מעל 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $\left(X,\Sigma,\mu\right)$
+\end_inset
+
+ מרחב מידה אזי 
+\begin_inset Formula $L^{0}\left(X,\Sigma\right)=\left\{ f\in X\to\overline{\bbr}\mid\left(\Sigma,\mathcal{B}\left(\overline{\bbr}\right)\right)\text{ מדידה־}f\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $\left(X,\Sigma,\mu\right)$
+\end_inset
+
+ מרחב מידה אזי 
+\begin_inset Formula $L_{+}^{0}\left(X,\Sigma\right)=\left\{ f\in L^{0}\left(X,\Sigma\right)\mid f\ge0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: תהא 
+\begin_inset Formula $f\in\mathcal{S}^{+}\left(\Sigma\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{X}f\text{d}\mu=\sup\left\{ \intop_{X}\varphi\text{d}\mu\mid\left(\varphi\in\mathcal{S}^{+}\left(\Sigma\right)\right)\land\left(\varphi\le f\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אינטגרל
+\series default
+: תהא 
+\begin_inset Formula $f\in L_{+}^{0}\left(X,\Sigma\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{X}f\text{d}\mu=\sup\left\{ \intop_{X}\varphi\text{d}\mu\mid\left(\varphi\in\mathcal{S}^{+}\left(\Sigma\right)\right)\land\left(\varphi\le f\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אינטגרל
+\series default
+: תהא 
+\begin_inset Formula $f\in L_{+}^{0}\left(X,\Sigma\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $E\in\Sigma$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{E}f\text{d}\mu=\intop_{X}\mathds{1}_{E}f\text{d}\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהיינה 
+\begin_inset Formula $f,\left\{ f_{n}\right\} \subseteq L_{+}^{0}\left(X,\Sigma\right)$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $f_{n}\uparrow f$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $g\in\mathcal{S}^{+}\left(\Sigma\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $g\le f$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{X}g\text{d}\mu\le\sup_{n\in\bbn}\intop_{X}f_{n}\text{d}\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט התכנסות מונוטונית
+\series default
+: תהיינה 
+\begin_inset Formula $f,\left\{ f_{n}\right\} \subseteq L_{+}^{0}\left(X,\Sigma\right)$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $f_{n}\uparrow f$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{X}f\text{d}\mu=\sup_{n\in\bbn}\intop_{X}f_{n}\text{d}\mu=\lim_{n\to\infty}\intop_{X}f_{n}\text{d}\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: תהא 
+\begin_inset Formula $f\in L_{+}^{0}\left(X,\Sigma\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left\{ \varphi_{n}\right\} \subseteq\mathcal{S}^{+}\left(\Sigma\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\varphi_{n}\uparrow f$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{X}f\text{d}\mu=\lim_{n\to\infty}\intop_{X}\varphi_{n}\text{d}\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהיינה 
+\begin_inset Formula $f,g\in L_{+}^{0}\left(X,\Sigma\right)$
+\end_inset
+
+ תהא 
+\begin_inset Formula $A\in\Sigma$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\lambda\ge0$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\intop_{X}\mathds{1}_{A}\text{d}\mu=\mu\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+הומוגניות חיובית: 
+\begin_inset Formula $\intop_{X}\lambda f\text{d}\mu=\lambda\intop_{X}f\text{d}\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+חיבוריות: 
+\begin_inset Formula $\intop_{X}\left(f+g\right)\text{d}\mu=\intop_{X}f\text{d}\mu+\intop_{X}g\text{d}\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+מונוטוניות: נניח כי 
+\begin_inset Formula $f\le g$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{X}f\text{d}\mu\le\intop_{X}g\text{d}\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: תהא 
+\begin_inset Formula $\left\{ f_{n}\right\} \subseteq L_{+}^{0}\left(X,\Sigma\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $E\in\Sigma$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{E}f\text{d}\mu=\sum_{n=1}^{\infty}\intop_{E}f_{n}\text{d}\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $f\in L_{+}^{0}\left(X,\Sigma\right)$
+\end_inset
+
+ אזי )
+\begin_inset Formula $\intop_{X}f\text{d}\mu=0$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $f=0$
+\end_inset
+
+ כמעט בכל מקום(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה התכנסות מונוטונית
+\series default
+: תהיינה 
+\begin_inset Formula $f,\left\{ f_{n}\right\} \subseteq L_{+}^{0}\left(X,\Sigma\right)$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $f_{n}\uparrow f$
+\end_inset
+
+ כמעט בכל מקום אזי 
+\begin_inset Formula $\intop_{X}f\text{d}\mu=\lim_{n\to\infty}\intop_{X}f_{n}\text{d}\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט הלמה של פטו
+\series default
+: תהא 
+\begin_inset Formula $\left\{ f_{n}\right\} \subseteq L_{+}^{0}\left(X,\Sigma\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{X}\left(\liminf_{n\to\infty}f_{n}\right)\text{d}\mu\le\liminf_{n\to\infty}\intop_{X}f_{n}\text{d}\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: תהיינה 
+\begin_inset Formula $f,\left\{ f_{n}\right\} \subseteq L_{+}^{0}\left(X,\Sigma\right)$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $f_{n}\xrightarrow{a.e.}f$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{X}f\text{d}\mu\le\liminf_{n\to\infty}\intop_{X}f_{n}\text{d}\mu$
+\end_inset
+
+.
 \end_layout
 
 \end_body
