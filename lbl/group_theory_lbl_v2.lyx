@@ -160,5 +160,377 @@ filename "../../macros.lyx"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\aut}{\text{Aut}}
+{\text{Aut}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+פעולה בינארית
+\series default
+\color inherit
+: פונקציה 
+\begin_inset Formula $*:A\times A\to A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: תהא 
+\begin_inset Formula $*$
+\end_inset
+
+ פעולה בינארית אזי 
+\begin_inset Formula $a*b:=*\left(\left<a,b\right>\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אגודה
+\series default
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $*$
+\end_inset
+
+ פעולה בינארית אזי 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+אסוציטיביות/קיבוציות: 
+\begin_inset Formula $\forall a,b,c\in A.a*\left(b*c\right)=\left(a*b\right)*c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מונואיד
+\series default
+: אגודה 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+איבר יחידה: 
+\begin_inset Formula $\exists e\in A.\forall g\in G.e*g=g*e=g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהיו 
+\begin_inset Formula $a,b\in G$
+\end_inset
+
+ איברי יחידה אזי 
+\begin_inset Formula $a=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: איבר היחידה של 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ הוא 
+\begin_inset Formula $e_{G}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורה
+\series default
+: מונואיד 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+איבר הופכי/נגדי: 
+\begin_inset Formula $\forall g\in G.\exists h\in A.g*h=h*g=e_{G}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $a\in G$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $b,c\in G$
+\end_inset
+
+ איברים הופכיים של 
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $b=c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $a\in G$
+\end_inset
+
+ אזי האיבר ההופכי של 
+\begin_inset Formula $a$
+\end_inset
+
+ הוא 
+\begin_inset Formula $a^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קומוטטיביות/חילופיות/אבליות
+\series default
+: 
+\begin_inset Formula $\forall a,b\in A.a*b=b*a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: 
+\begin_inset Formula $GL_{n}\left(\bbf\right)=\left\{ A\in\M[n]\mid\det\left(A\right)\ne0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\left<GL_{n}\left(\bbf\right),\cdot\right>$
+\end_inset
+
+ חבורה לא אבלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $S_{A}=A\stackrel[onto]{1-1}{\to}A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+החבורה הסימטרית
+\series default
+: יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S_{n}=S_{\left[n\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\left<S_{n},\circ\right>$
+\end_inset
+
+ חבורה לא אבלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תת חבורה
+\series default
+: תהא 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\subseteq G$
+\end_inset
+
+ אזי החבורה 
+\begin_inset Formula $\left<H,*_{\upharpoonright_{H}}\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: אם 
+\begin_inset Formula $H$
+\end_inset
+
+ תת חבורה של 
+\begin_inset Formula $G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H\le G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה בוחן
+\series default
+ 
+\series bold
+תת
+\series default
+ 
+\series bold
+חבורה
+\series default
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\subseteq G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אמ
+\begin_inset Quotes erd
+\end_inset
+
+מ
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $e\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall a,b\in H.ab\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall a\in H.a^{-1}\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $26.05.2024$
+\end_inset
+
+ - הכל
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
 \end_body
 \end_document
