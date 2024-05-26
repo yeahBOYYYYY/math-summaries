@@ -160,5 +160,507 @@ filename "../../macros.lyx"
 
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+רישום קבוצה בעזרת רשימת איברים
+\series default
+: 
+\begin_inset Formula $\left\{ a_{1},\ldots,a_{n}\right\} $
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(a\in\left\{ a_{1},\ldots,a_{n}\right\} \right)\iff\left(\left(a=a_{1}\right)\lor\ldots\lor\left(a=a_{n}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: תהא 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית אזי 
+\begin_inset Formula $\Sigma^{*}$
+\end_inset
+
+ כל המחרוזות הסופיות באלפבית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי עולם 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ תהא 
+\begin_inset Formula $B\subseteq\Sigma^{*}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F=\left\{ f_{i}:\left(\Sigma^{*}\right)^{n_{i}}\to\Sigma^{*}\mid i\in I\right\} $
+\end_inset
+
+ אזי קיימת ויחידה 
+\begin_inset Formula $S\subseteq\Sigma^{*}$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B\subseteq S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S$
+\end_inset
+
+ סגורה להפעלת 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+מינימליות: תהא 
+\begin_inset Formula $A\subseteq\Sigma^{*}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+ וכן 
+\begin_inset Formula $A$
+\end_inset
+
+ סגורה להפעלת 
+\begin_inset Formula $F$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S\subseteq A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אינדוקציה מבנית
+\series default
+: יהי עולם 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ תהא 
+\begin_inset Formula $B\subseteq\Sigma^{*}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F=\left\{ f_{i}:\left(\Sigma^{*}\right)^{n_{i}}\to\Sigma^{*}\mid i\in I\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $X_{B,F}\subseteq\Sigma^{*}$
+\end_inset
+
+ מינימלית סגורה להפעלת 
+\begin_inset Formula $F$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $B\subseteq X_{B,F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: יהי עולם 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $Y\subseteq\Sigma^{*}$
+\end_inset
+
+ סגורה להפעלת 
+\begin_inset Formula $F$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $B\subseteq Y$
+\end_inset
+
+ אזי 
+\begin_inset Formula $X_{B,F}\subseteq Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סדרת יצירה
+\series default
+: יהי 
+\begin_inset Formula $a\in X_{B,F}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(a_{1},\ldots,a_{n}\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $a_{n}=a$
+\end_inset
+
+ וכן לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים )
+\begin_inset Formula $a_{i}\in B$
+\end_inset
+
+(
+\begin_inset Formula $\lor$
+\end_inset
+
+)
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ מתקבל על ידי הפעלת 
+\begin_inset Formula $F$
+\end_inset
+
+ על חלק מ־
+\begin_inset Formula $\left\{ a_{1},\ldots,a_{i-1}\right\} $
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $a\in\Sigma^{*}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $a\in X_{B,F}$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיימת סדרת יצירה ל־
+\begin_inset Formula $a$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: 
+\begin_inset Formula $X_{B,F}=\bigcup_{i=1}^{\infty}\left\{ a\in\Sigma^{*}\mid n\text{ בעלת סדרת יצירה באורך }a\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+עולם תחשיב הפסוקים
+\series default
+: 
+\begin_inset Formula $\Sigma=\left\{ \land,\lor,\neg,\implies,(,)\right\} \cup\left\{ p_{i}\mid i\in\bbn\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ביטוי
+\series default
+: יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ תחשיב הפסוקים אזי 
+\begin_inset Formula $a\in\Sigma^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: יהיו 
+\begin_inset Formula $\omega_{1},\omega_{2}\in\left\{ p_{i}\mid i\in\bbn\right\} $
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\land\left(\omega_{1},\omega_{2}\right)="\left(\omega_{1}\land\omega_{2}\right)"$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lor\left(\omega_{1},\omega_{2}\right)="\left(\omega_{1}\lor\omega_{2}\right)"$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\implies\left(\omega_{1},\omega_{2}\right)="\left(\omega_{1}\implies\omega_{2}\right)"$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\neg\left(\omega_{1}\right)="\left(\neg\omega_{1}\right)"$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קבוצת הנוסחאות המוגדרות היטב/ביטוי חוקי/פסוק
+\series default
+: 
+\begin_inset Formula $\text{WFF}=X_{\left\{ p_{i}\mid i\in\bbn\right\} ,\left\{ \land,\lor,\neg,\implies\right\} }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פסוק אטומי
+\series default
+: 
+\begin_inset Formula $p\in\text{WFF}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $p\in\left\{ p_{i}\mid i\in\bbn\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $p\in\text{WFF}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $p$
+\end_inset
+
+ פסוק אטומי(
+\begin_inset Formula $\lor$
+\end_inset
+
+)הפסוק 
+\begin_inset Formula $p$
+\end_inset
+
+ מתחיל עם 
+\begin_inset Formula $"("$
+\end_inset
+
+ ונגמר עם 
+\begin_inset Formula $")"$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: יהיו 
+\begin_inset Formula $q_{1},q_{2}\in\text{WFF}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $q_{1}(q_{2}\notin\text{WFF}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט הקריאה היחידה
+\series default
+: יהי 
+\begin_inset Formula $\a\in\text{WFF}$
+\end_inset
+
+ אזי מתקיים בדיוק אחד מהבאים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\a$
+\end_inset
+
+ פסוק אטומי.
+\end_layout
+
+\begin_layout Itemize
+קיימים ויחידים 
+\begin_inset Formula $\b,\g\in\text{WFF}$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\a=\left(\b\land\g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיימים ויחידים 
+\begin_inset Formula $\b,\g\in\text{WFF}$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\a=\left(\b\lor\g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיימים ויחידים 
+\begin_inset Formula $\b,\g\in\text{WFF}$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\a=\left(\b\implies\g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיים ויחיד 
+\begin_inset Formula $\b\in\text{WFF}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\a=\left(\neg\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה אלגוריתם לבדיקת חוקיות
+\series default
+: ...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סדר קדימות של קשרים
+\series default
+: נגדיר סדר ביצוע פעולות
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\neg$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\land,\lor$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\implies$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $26.05.2024$
+\end_inset
+
+ - חסר אלגוריתם
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
