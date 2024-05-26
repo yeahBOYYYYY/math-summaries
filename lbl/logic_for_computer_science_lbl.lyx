@@ -293,6 +293,26 @@ filename "../../macros.lyx"
 \begin_layout Standard
 
 \series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $B\subseteq\Sigma^{*}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F=\left\{ f_{i}:\left(\Sigma^{*}\right)^{n_{i}}\to\Sigma^{*}\mid i\in I\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $X_{B,F}=\bigcap\left\{ Y\subseteq\Sigma^{*}\mid\left(B\subseteq Y\right)\land\left(F\text{ סגורה להפעלת }Y\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 מסקנה
 \series default
 : יהי עולם 
@@ -313,6 +333,26 @@ filename "../../macros.lyx"
 
  אזי 
 \begin_inset Formula $X_{B,F}\subseteq Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה משפט האינדוקציה
+\series default
+: תהא 
+\begin_inset Formula $p$
+\end_inset
+
+ טענה על 
+\begin_inset Formula $\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(p\left(0\right)\land\left(\forall n\in\bbn.p\left(n\right)\implies p\left(n+1\right)\right)\right)\implies\left(\forall n\in\bbn.p\left(n\right)\right)$
 \end_inset
 
 .
@@ -614,7 +654,66 @@ filename "../../macros.lyx"
 \series bold
 מסקנה אלגוריתם לבדיקת חוקיות
 \series default
-: ...
+: יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ תחשיב הפסוקים ויהי 
+\begin_inset Formula $\a\in\Sigma^{*}$
+\end_inset
+
+ ביטוי אזי
+\size tiny
+
+\begin_inset Formula 
+\begin{align*}
+ & \text{\textbf{function}}\;\text{IsWellFormedFormula}\left(\a\right)\\
+ & \qquad\mid\text{\textbf{if}}\;\a\in\left\{ p_{i}\mid i\in\bbn\right\} \\
+ & \qquad\mid\qquad\text{\textbf{return}}\;\text{true}\\
+ & \qquad\mid\\
+ & \qquad\mid\text{\textbf{if}}\;\left(\a\left[0\right]="("\right)\lor\left(\a\left[-1\right]=")"\right)\\
+ & \qquad\mid\qquad\a.\text{DeleteFirst}\left(\right)\\
+ & \qquad\mid\qquad\a.\text{DeleteLast}\left(\right)\\
+ & \qquad\mid\text{\textbf{else}}\text{\textbf{return}}\;\text{false}\\
+ & \qquad\mid\\
+ & \qquad\mid\text{\textbf{if}}\;\a\left[0\right]="\neg"\\
+ & \qquad\mid\qquad\a.\text{DeleteFirst}\left(\right)\\
+ & \qquad\mid\qquad\text{\textbf{return}}\;\text{IsWellFormedFormula}\left(\a\right)\\
+ & \qquad\mid\text{\textbf{else}}\\
+ & \qquad\mid\qquad\left(\text{LeftParentheses},\text{RightParentheses},i\right)\leftarrow0\\
+ & \qquad\mid\qquad\text{\textbf{while}}\;\left(\text{LeftParentheses}\ne\text{RightParentheses}\right)\lor\left(\text{LeftParentheses}=0\right)\\
+ & \qquad\mid\qquad\mid\qquad\text{\textbf{if}}\;\a\left[i\right]="("\\
+ & \qquad\mid\qquad\mid\qquad\mid\qquad\text{LeftParentheses}\leftarrow\text{LeftParentheses}+1\\
+ & \qquad\mid\qquad\mid\qquad\text{\textbf{if}}\;\a\left[i\right]=")"\\
+ & \qquad\mid\qquad\mid\qquad\mid\qquad\text{RightParentheses}\leftarrow\text{RightParentheses}+1\\
+ & \qquad\mid\qquad\mid\qquad i\leftarrow i+1\\
+ & \qquad\mid\qquad\text{\textbf{if}}\;\a\left[i+1\right]\notin\left\{ \land,\lor,\neg,\implies\right\} \\
+ & \qquad\mid\qquad\mid\qquad\text{\textbf{return}}\;\text{false}\\
+ & \qquad\mid\qquad\text{\textbf{else}}\\
+ & \qquad\mid\qquad\mid\qquad\left(\b,\g\right)\leftarrow\left(\a\left[:i+1\right],\a\left[i+2:\right]\right)\\
+ & \qquad\mid\qquad\mid\qquad\text{\textbf{return}}\;\left(\text{IsWellFormedFormula}\left(\b\right)\right)\land\left(\text{IsWellFormedFormula}\left(\g\right)\right)
+\end{align*}
+
+\end_inset
+
+
+\series bold
+\size default
+טענה
+\series default
+: יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ תחשיב הפסוקים ויהי 
+\begin_inset Formula $\a\in\Sigma^{*}$
+\end_inset
+
+ ביטוי אזי 
+\begin_inset Formula $\left(\text{IsWellFormedFormula}\left(\a\right)=\text{true}\right)\iff\left(\a\in\text{WFF}\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -654,7 +753,7 @@ status open
 \begin_inset Formula $26.05.2024$
 \end_inset
 
- - חסר אלגוריתם
+ - הכל
 \end_layout
 
 \end_inset
