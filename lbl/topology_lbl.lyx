@@ -185,11 +185,11 @@ filename "../../macros.lyx"
 
 \begin_layout Itemize
 תהיינה 
-\begin_inset Formula $\left\{ \mathcal{U}\right\} _{\a\in\Lambda}\subseteq\mathcal{T}$
+\begin_inset Formula $\mathcal{U}\subseteq\mathcal{T}$
 \end_inset
 
  אזי 
-\begin_inset Formula $\bigcup_{\a\in\Lambda}\mathcal{U}_{\a}\in\mathcal{T}$
+\begin_inset Formula $\bigcup\mathcal{U}\in\mathcal{T}$
 \end_inset
 
 .
@@ -197,11 +197,11 @@ filename "../../macros.lyx"
 
 \begin_layout Itemize
 תהיינה 
-\begin_inset Formula $\left\{ \mathcal{U}_{i}\right\} _{i=1}^{n}\subseteq\mathcal{T}$
+\begin_inset Formula $\left\{ U_{i}\right\} _{i=1}^{n}\subseteq\mathcal{T}$
 \end_inset
 
  אזי 
-\begin_inset Formula $\bigcap_{i=1}^{n}\mathcal{U}_{i}\in\mathcal{T}$
+\begin_inset Formula $\bigcap_{i=1}^{n}U_{i}\in\mathcal{T}$
 \end_inset
 
 .
@@ -245,11 +245,11 @@ filename "../../macros.lyx"
 \end_inset
 
  מרחב טופולוגיה אזי 
-\begin_inset Formula $\mathcal{U}\subseteq X$
+\begin_inset Formula $U\subseteq X$
 \end_inset
 
  המקיימת 
-\begin_inset Formula $\mathcal{U}\in\mathcal{T}$
+\begin_inset Formula $U\in\mathcal{T}$
 \end_inset
 
 .
@@ -289,7 +289,7 @@ filename "../../macros.lyx"
 \end_inset
 
  וכן 
-\begin_inset Formula $\forall\left\{ \mathcal{U}\right\} _{\a\in\Lambda}\subseteq\mathcal{T}.\left(\bigcup_{\a\in\Lambda}\mathcal{U}_{\a}\in\mathcal{T}\right)$
+\begin_inset Formula $\forall\mathcal{U}\subseteq\mathcal{T}.\left(\bigcup\mathcal{U}\in\mathcal{T}\right)$
 \end_inset
 
  אזי )
@@ -301,11 +301,11 @@ filename "../../macros.lyx"
 \end_inset
 
 )לכל 
-\begin_inset Formula $\mathcal{U},\mathcal{V}\in\mathcal{T}$
+\begin_inset Formula $U,V\in\mathcal{T}$
 \end_inset
 
  מתקיים 
-\begin_inset Formula $\mathcal{U}\cap\mathcal{V}\in\mathcal{T}$
+\begin_inset Formula $U\cap V\in\mathcal{T}$
 \end_inset
 
 (.
@@ -353,7 +353,7 @@ filename "../../macros.lyx"
 \end_inset
 
  מרחב מטרי אזי 
-\begin_inset Formula $\left\{ \mathcal{O}\subseteq X\mid\forall x\in\O.\exists r>0.B_{r}\left(x\right)\subseteq\O\right\} $
+\begin_inset Formula $\left\{ U\subseteq X\mid\forall x\in U.\exists r>0.B_{r}\left(x\right)\subseteq U\right\} $
 \end_inset
 
 .
@@ -478,11 +478,342 @@ filename "../../macros.lyx"
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color blue
+הטופולוגיה הנוצרת מבסיס
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה ויהי 
+\begin_inset Formula $\mathcal{B}\subseteq\P\left(X\right)$
+\end_inset
+
+ בסיס אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{T}\left(\mathcal{B}\right)=\left\{ U\subseteq X\mid\forall x\in U.\exists B\in\mathcal{B}.\left(x\in B\right)\land\left(B\subseteq U\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה ויהי 
+\begin_inset Formula $\mathcal{B}\subseteq\P\left(X\right)$
+\end_inset
+
+ בסיס אזי 
+\begin_inset Formula $\mathcal{T}\left(\mathcal{B}\right)$
+\end_inset
+
+ טופולוגיה על 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $\mathcal{B}_{E}=\left\{ \left(a,b\right)\mid a<b\right\} $
+\end_inset
+
+ וכן 
+\begin_inset Formula $\mathcal{B}_{\text{Sorg}}=\left\{ \left[a,b\right)\mid a<b\right\} $
+\end_inset
+
+ וכן 
+\begin_inset Formula $\mathcal{B}_{K}=\mathcal{B}_{E}\cup\left\{ \left(a,b\right)\backslash\left\{ \frac{1}{n}\mid n\in\bbn_{+}\right\} \mid a<b\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\mathcal{B}_{E},\mathcal{B}_{\text{Sorg}},\mathcal{B}_{K}$
+\end_inset
+
+ בסיסים של 
+\begin_inset Formula $\bbr$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הטופולוגיה האוקלידית/הסטנדרטית
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr=\left(\bbr,\mathcal{T}\left(\mathcal{B}_{E}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הישר של זורגנפריי
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr_{\text{Sorg}}=\left(\bbr,\mathcal{T}\left(\mathcal{B}_{\text{Sorg}}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טופולוגיית־
+\begin_inset Formula $K$
+\end_inset
+
+
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr_{K}=\left(\bbr,\mathcal{T}\left(\mathcal{B}_{K}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט אפיון שקול לטופולוגיה נוצרת
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{B}\subseteq\P\left(X\right)$
+\end_inset
+
+ בסיס אזי 
+\begin_inset Formula $\mathcal{T}\left(\mathcal{B}\right)=\left\{ U\subseteq X\mid\exists A\subseteq\mathcal{B}.U=\bigcup A\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\mathcal{B}_{1},\mathcal{B}_{2}\subseteq\P\left(X\right)$
+\end_inset
+
+ בסיסים עבורם 
+\begin_inset Formula $\mathcal{B}_{1}\subseteq\mathcal{T}\left(\mathcal{B}_{2}\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\mathcal{B}_{2}\subseteq\mathcal{T}\left(\mathcal{B}_{1}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{T}\left(\mathcal{B}_{1}\right)=\mathcal{T}\left(\mathcal{B}_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\left(X,\mathcal{T}\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט ויהי 
+\begin_inset Formula $\mathcal{A}\subseteq\mathcal{T}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\forall U\in\mathcal{T}.\forall x\in U.\exists A\in\mathcal{A}.\left(x\in A\right)\land\left(A\subseteq U\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ בסיס של 
+\begin_inset Formula $\mathcal{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה בעלת יחס סדר מלא אזי 
+\begin_inset Formula $\left\{ \left(a,b\right)\mid a<b\right\} \cup\left\{ \left[a,b\right)\mid\forall x\in X.a\le x\right\} \cup\left\{ \left(a,b\right]\mid\forall x\in X.x\le b\right\} $
+\end_inset
+
+ בסיס.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טופולוגיית הסדר
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה בעלת יחס סדר מלא אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{T}\left(\left\{ \left(a,b\right)\mid a<b\right\} \cup\left\{ \left[a,b\right)\mid\forall x\in X.a\le x\right\} \cup\left\{ \left(a,b\right]\mid\forall x\in X.x\le b\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+תת בסיס
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\mathcal{S}\subseteq\P\left(X\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\bigcup\mathcal{S}=X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הטופולוגיה הנוצרת מתת־בסיס
+\color inherit
+: 
+\series default
+תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה ויהי 
+\begin_inset Formula $\mathcal{S}\subseteq\P\left(X\right)$
+\end_inset
+
+ תת־בסיס אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{T}\left(\mathcal{S}\right)=\left\{ U\subseteq X\mid\exists A_{1}\ldots A_{k}\subseteq\mathcal{S}.U=\bigcup\left(\bigcap_{i=1}^{k}A\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה ויהי 
+\begin_inset Formula $\mathcal{S}\subseteq\P\left(X\right)$
+\end_inset
+
+ תת־בסיס אזי 
+\begin_inset Formula $\mathcal{T}\left(\mathcal{S}\right)$
+\end_inset
+
+ טופולוגיה על 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $27.03.2024$
+\begin_inset Formula $28.03.2024$
 \end_inset
 
  - הכל
