@@ -426,8 +426,28 @@ filename "../../macros.lyx"
 \begin_layout Standard
 
 \series bold
+\color blue
+סדר
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית אזי 
+\begin_inset Formula $o\left(G\right)=\ord\left(G\right)=\left|G\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
 תת חבורה
 \series default
+\color inherit
 : תהא 
 \begin_inset Formula $\left<G,*\right>$
 \end_inset
@@ -446,8 +466,10 @@ filename "../../macros.lyx"
 \begin_layout Standard
 
 \series bold
+\color blue
 סימון
 \series default
+\color inherit
 : אם 
 \begin_inset Formula $H$
 \end_inset
@@ -466,6 +488,7 @@ filename "../../macros.lyx"
 \begin_layout Standard
 
 \series bold
+\color blue
 טענה בוחן
 \series default
  
@@ -476,6 +499,7 @@ filename "../../macros.lyx"
 \series bold
 חבורה
 \series default
+\color inherit
 : תהא 
 \begin_inset Formula $G$
 \end_inset
@@ -517,11 +541,485 @@ filename "../../macros.lyx"
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color blue
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\subseteq G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(H\ne\emptyset\right)\land\left(\forall x,y\in H.xy^{-1}\in H\right)\iff\left(H\le G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הגדרה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $G_{*}=\left\{ a\in G\mid\exists h\in G.a*h=h*a=e_{G}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הגדרה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $x,y\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(x\sim_{n}y\right)\iff\left(x-y\in n\bbz\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $C_{n}=\left<\nicefrac{\bbz}{\sim_{n}},+\right>$
+\end_inset
+
+ חבורה באשר 
+\begin_inset Formula $\left[a\right]_{\sim_{n}}+\left[b\right]_{\sim_{n}}=\left[a+b\right]_{\sim n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $n\bbz\le\bbz$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $n,m\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(m|n\right)\iff\left(n\bbz\le m\bbz\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הגדרה
+\series default
+\color inherit
+: 
+\begin_inset Formula $SL_{n}\left(\bbf\right)=\left\{ A\in GL_{n}\left(\bbf\right)\mid\det\left(A\right)=1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $SL_{n}\left(\bbf\right)\le GL_{n}\left(\bbf\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מייצב
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{stab}\left(i\right)=\left\{ \pi\in S_{n}\mid\pi\left(i\right)=i\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left\{ z\in\bbc\mid z^{n}=1\right\} \le\bbc_{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהיינה 
+\begin_inset Formula $\left\{ H_{\a}\right\} _{\a\in\Lambda}\subseteq\P\left(G\right)$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $H_{\a}\le G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bigcap_{\a\in\Lambda}H_{\a}\le G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סימון
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $S\le G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{F}_{S}=\left\{ H\le G\mid S\subseteq H\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+תת חבורה נוצרת
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $S\le G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<S\right>=\bigcap_{H\in\mathcal{F}_{S}}H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $S\le G$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S\subseteq\left<S\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left<S\right>\le G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+תהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $S\subseteq H$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<S\right>\subseteq H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+חבורה ציקלית/מעגלית
+\series default
+\color inherit
+: חבורה 
+\begin_inset Formula $G$
+\end_inset
+
+ עבורה קיים 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $G=\left<g\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<g\right>=\left\{ g^{n}\mid n\in\bbz\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+למה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי )
+\begin_inset Formula $G$
+\end_inset
+
+ ציקלית(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיים 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $G=\left\{ g^{n}\mid n\in\bbz\right\} $
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ציקלית אזי 
+\begin_inset Formula $G$
+\end_inset
+
+ אבלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\ge3$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ אינה ציקלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סדר של איבר
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ord\left(g\right)=\ord\left(\left<g\right>\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט לגראנז'
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ord\left(H\right)|\ord\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ord\left(g\right)|\ord\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $26.05.2024$
+\begin_inset Formula $29.05.2024$
 \end_inset
 
  - הכל
@@ -529,7 +1027,7 @@ status open
 
 \end_inset
 
- 
+
 \end_layout
 
 \end_body
