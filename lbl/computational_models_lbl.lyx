@@ -162,6 +162,532 @@ filename "../../macros.lyx"
 
 \begin_layout Standard
 
+\series bold
+אלפבית
+\series default
+: קבוצה 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $0<\left|\Sigma\right|<\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מילים
+\series default
+: יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית אזי 
+\begin_inset Formula $\Sigma^{*}=\bigcup_{n=0}^{\infty}\Sigma^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה
+\series default
+: יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית אזי 
+\begin_inset Formula $L\subseteq\Sigma^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם מכריע שפה
+\series default
+: תהא 
+\begin_inset Formula $L\subseteq\Sigma^{*}$
+\end_inset
+
+ שפה אזי אלגוריתם 
+\begin_inset Formula $A:\Sigma^{*}\to\left\{ \text{true},\text{false}\right\} $
+\end_inset
+
+ המקיים
+\end_layout
+
+\begin_layout Itemize
+מקבל: לכל 
+\begin_inset Formula $x\in L$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $A\left(x\right)=\text{true}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+דוחה: לכל 
+\begin_inset Formula $x\notin L$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $A\left(x\right)=\text{false}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציה בולאנית
+\series default
+: תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $f:X\to\left\{ 0,1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בסיס דה־מורגן
+\series default
+: 
+\begin_inset Formula $\mathcal{B}=\left\{ \land,\lor,\neg\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מעגל בוליאני
+\series default
+: תהיינה 
+\begin_inset Formula $f_{1}\ldots f_{n}$
+\end_inset
+
+ פונקציות בוליאניות ותהיינה 
+\begin_inset Formula $x_{1}\ldots x_{m},y_{1}\ldots y_{k}\in\left\{ 0,1\right\} $
+\end_inset
+
+ אזי גרף מכוון 
+\begin_inset Formula $G$
+\end_inset
+
+ מעל
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left\{ f_{1}\ldots f_{n},x_{1}\ldots x_{m},y_{1}\ldots y_{k}\right\} $
+\end_inset
+
+ המקיים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G$
+\end_inset
+
+ חסר מעגלים מכוונים.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $i\in\left[k\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\deg^{-}\left(y_{i}\right)=1$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\deg^{+}\left(y_{i}\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $i\in\left[m\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\deg^{-}\left(y_{i}\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שער
+\series default
+: יהי מעגל בוליאני אזי 
+\begin_inset Formula $f_{1}\ldots f_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+הערה: במעגל שער יכול להופיע במספר קודקודים שונים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חוטים
+\series default
+: יהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל בוליאני אזי 
+\begin_inset Formula $E\left(C\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula $\boldsymbol{\text{fan-out}}$
+\end_inset
+
+
+\series default
+: יהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל בולינארי אזי 
+\begin_inset Formula $\max_{v\in V\left(C\right)}\deg^{+}\left(v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נוחסאות
+\series default
+: יהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל בולינארי אזי 
+\begin_inset Formula $\left\{ G\le C\mid1\text{ הוא }G\text{ של }\text{fan-out}\text{ה־}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שערוך מעגל בולינארי על קלט
+\series default
+: יהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל בולינאני ויהי 
+\begin_inset Formula $v\in\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(x_{1}\ldots x_{m}\right)=v$
+\end_inset
+
+ וכן 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ הינו הפלט הנוצר מהפעלת הפונקציות הבוליאניות על הקודקודים הנכנסים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל בולינאני ויהי 
+\begin_inset Formula $v\in\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+ אזי השערוך של 
+\begin_inset Formula $C$
+\end_inset
+
+ על 
+\begin_inset Formula $v$
+\end_inset
+
+ הוא 
+\begin_inset Formula $C\left(v\right)=\left(y_{1}\ldots y_{k}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט אוניברסליות דה־מורגן
+\series default
+: תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{m}\to\left\{ 0,1\right\} ^{k}$
+\end_inset
+
+ אזי קיים מעגל בוליאני 
+\begin_inset Formula $C$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $v\in\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+ מתקיים
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $C\left(v\right)=f\left(v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפחה של מעגלים
+\series default
+: מעגלים בוליאניים 
+\begin_inset Formula $\left\{ C_{n}\right\} _{n\in\bbn}$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+ מקבל קלט באורך 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפחה מכריעה שפה
+\series default
+: תהא 
+\begin_inset Formula $L\subseteq\Sigma^{*}$
+\end_inset
+
+ שפה אזי משפחה של מעגלים 
+\begin_inset Formula $\left\{ C_{n}\right\} _{n\in\bbn}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $C_{n}$
+\end_inset
+
+ מכריעה את 
+\begin_inset Formula $\Sigma^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מודל לא יוניפורמי
+\series default
+: משפחה של מעגלים 
+\begin_inset Formula $\left\{ C_{n}\right\} _{n\in\bbn}$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ יש אלגוריתם שונה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מודל יוניפורמי
+\series default
+: משפחה של מעגלים 
+\begin_inset Formula $\left\{ C_{n}\right\} _{n\in\bbn}$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ יש אלגוריתם זהה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+גודל מעגל
+\series default
+: יהי מעגל בוליאני 
+\begin_inset Formula $C$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|C\right|$
+\end_inset
+
+ מספר השערים ב־
+\begin_inset Formula $C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חסם עליון לגודל משפחת מעגלים
+\series default
+: תהא 
+\begin_inset Formula $\left\{ C_{n}\right\} _{n\in\bbn}$
+\end_inset
+
+ משפחה של מעגלים אזי 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\left|C_{n}\right|\le S\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי קיים מעגל 
+\begin_inset Formula $C$
+\end_inset
+
+ שמחשב את 
+\begin_inset Formula $f$
+\end_inset
+
+ בגודל 
+\begin_inset Formula $\O\left(n\cdot2^{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי קיים מעגל 
+\begin_inset Formula $C$
+\end_inset
+
+ שמחשב את 
+\begin_inset Formula $f$
+\end_inset
+
+ בגודל 
+\begin_inset Formula $\O\left(\frac{2^{n}}{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה שאנון
+\series default
+: קיים 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ עבורו קיימת 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ שאינה ניתנת לחישוב בעזרת מעגל 
+\begin_inset Formula $C$
+\end_inset
+
+ בגודל קטן מאשר 
+\begin_inset Formula $\frac{2^{n}}{10n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $29.05.2024$
+\end_inset
+
+ - הכל
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
