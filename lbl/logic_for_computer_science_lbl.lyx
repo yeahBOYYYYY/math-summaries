@@ -161,6 +161,21 @@ filename "../../macros.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\WFF}{\text{WFF}}
+{\text{WFF}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\wff}{\WFF}
+{\WFF}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 רישום קבוצה בעזרת רשימת איברים
@@ -444,7 +459,7 @@ filename "../../macros.lyx"
 עולם תחשיב הפסוקים
 \series default
 : 
-\begin_inset Formula $\Sigma=\left\{ \land,\lor,\neg,\implies,(,)\right\} \cup\left\{ p_{i}\mid i\in\bbn\right\} $
+\begin_inset Formula $\Sigma=\left\{ \land,\lor,\neg,\implies,(,)\right\} \cup\left\{ p_{i}\mid i\in\left[n\right]\right\} $
 \end_inset
 
 .
@@ -472,7 +487,7 @@ filename "../../macros.lyx"
 הגדרה
 \series default
 : יהיו 
-\begin_inset Formula $\omega_{1},\omega_{2}\in\left\{ p_{i}\mid i\in\bbn\right\} $
+\begin_inset Formula $\omega_{1},\omega_{2}\in\left\{ p_{i}\mid i\in\left[n\right]\right\} $
 \end_inset
 
  אזי
@@ -512,7 +527,7 @@ filename "../../macros.lyx"
 קבוצת הנוסחאות המוגדרות היטב/ביטוי חוקי/פסוק
 \series default
 : 
-\begin_inset Formula $\text{WFF}=X_{\left\{ p_{i}\mid i\in\bbn\right\} ,\left\{ \land,\lor,\neg,\implies\right\} }$
+\begin_inset Formula $\WFF=X_{\left\{ p_{i}\mid i\in\left[n\right]\right\} ,\left\{ \land,\lor,\neg,\implies\right\} }$
 \end_inset
 
 .
@@ -521,14 +536,14 @@ filename "../../macros.lyx"
 \begin_layout Standard
 
 \series bold
-פסוק אטומי
+פסוק אטומי/יסודי
 \series default
 : 
-\begin_inset Formula $p\in\text{WFF}$
+\begin_inset Formula $p\in\WFF$
 \end_inset
 
  עבורו 
-\begin_inset Formula $p\in\left\{ p_{i}\mid i\in\bbn\right\} $
+\begin_inset Formula $p\in\left\{ p_{i}\mid i\in\left[n\right]\right\} $
 \end_inset
 
 .
@@ -540,7 +555,7 @@ filename "../../macros.lyx"
 טענה
 \series default
 : יהי 
-\begin_inset Formula $p\in\text{WFF}$
+\begin_inset Formula $p\in\WFF$
 \end_inset
 
  אזי )
@@ -572,11 +587,11 @@ filename "../../macros.lyx"
 מסקנה
 \series default
 : יהיו 
-\begin_inset Formula $q_{1},q_{2}\in\text{WFF}$
+\begin_inset Formula $q_{1},q_{2}\in\WFF$
 \end_inset
 
  אזי 
-\begin_inset Formula $q_{1}(q_{2}\notin\text{WFF}$
+\begin_inset Formula $q_{1}(q_{2}\notin\WFF$
 \end_inset
 
 .
@@ -588,7 +603,7 @@ filename "../../macros.lyx"
 משפט הקריאה היחידה
 \series default
 : יהי 
-\begin_inset Formula $\a\in\text{WFF}$
+\begin_inset Formula $\a\in\WFF$
 \end_inset
 
  אזי מתקיים בדיוק אחד מהבאים
@@ -603,7 +618,7 @@ filename "../../macros.lyx"
 
 \begin_layout Itemize
 קיימים ויחידים 
-\begin_inset Formula $\b,\g\in\text{WFF}$
+\begin_inset Formula $\b,\g\in\WFF$
 \end_inset
 
  עבורם 
@@ -615,7 +630,7 @@ filename "../../macros.lyx"
 
 \begin_layout Itemize
 קיימים ויחידים 
-\begin_inset Formula $\b,\g\in\text{WFF}$
+\begin_inset Formula $\b,\g\in\WFF$
 \end_inset
 
  עבורם 
@@ -627,7 +642,7 @@ filename "../../macros.lyx"
 
 \begin_layout Itemize
 קיימים ויחידים 
-\begin_inset Formula $\b,\g\in\text{WFF}$
+\begin_inset Formula $\b,\g\in\WFF$
 \end_inset
 
  עבורם 
@@ -639,7 +654,7 @@ filename "../../macros.lyx"
 
 \begin_layout Itemize
 קיים ויחיד 
-\begin_inset Formula $\b\in\text{WFF}$
+\begin_inset Formula $\b\in\WFF$
 \end_inset
 
  עבורו 
@@ -668,13 +683,13 @@ filename "../../macros.lyx"
 \begin_inset Formula 
 \begin{align*}
  & \text{\textbf{function}}\;\text{IsWellFormedFormula}\left(\a\right)\\
- & \qquad\mid\text{\textbf{if}}\;\a\in\left\{ p_{i}\mid i\in\bbn\right\} \\
+ & \qquad\mid\text{\textbf{if}}\;\a\in\left\{ p_{i}\mid i\in\left[n\right]\right\} \\
  & \qquad\mid\qquad\text{\textbf{return}}\;\text{true}\\
  & \qquad\mid\\
- & \qquad\mid\text{\textbf{if}}\;\left(\a\left[0\right]="("\right)\lor\left(\a\left[-1\right]=")"\right)\\
+ & \qquad\mid\text{\textbf{if}}\;\left(\a\left[0\right]="("\right)\land\left(\a\left[-1\right]=")"\right)\\
  & \qquad\mid\qquad\a.\text{DeleteFirst}\left(\right)\\
  & \qquad\mid\qquad\a.\text{DeleteLast}\left(\right)\\
- & \qquad\mid\text{\textbf{else}}\text{\textbf{return}}\;\text{false}\\
+ & \qquad\mid\text{\textbf{else}}\;\text{\textbf{return}}\;\text{false}\\
  & \qquad\mid\\
  & \qquad\mid\text{\textbf{if}}\;\a\left[0\right]="\neg"\\
  & \qquad\mid\qquad\a.\text{DeleteFirst}\left(\right)\\
@@ -710,7 +725,7 @@ filename "../../macros.lyx"
 \end_inset
 
  ביטוי אזי 
-\begin_inset Formula $\left(\text{IsWellFormedFormula}\left(\a\right)=\text{true}\right)\iff\left(\a\in\text{WFF}\right)$
+\begin_inset Formula $\left(\text{IsWellFormedFormula}\left(\a\right)=\text{true}\right)\iff\left(\a\in\WFF\right)$
 \end_inset
 
 .
@@ -746,11 +761,1673 @@ filename "../../macros.lyx"
 \end_layout
 
 \begin_layout Standard
+אמת: 
+\begin_inset Formula $T,\text{true}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+שקר: 
+\begin_inset Formula $F,\text{false}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טבלת אמת: טבלה אשר מסכמת את אמיתו של פסוק בשינוי ערכם של פסוקי היסוד בו.
+\end_layout
+
+\begin_layout Standard
+סימון: תהא 
+\begin_inset Formula $\circ\in\left\{ \land,\lor,\neg,\implies\right\} $
+\end_inset
+
+ אזי טבלת האמת של 
+\begin_inset Formula $\circ$
+\end_inset
+
+ הינה 
+\begin_inset Formula $TT_{\circ}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהיו 
+\begin_inset Formula $p,q$
+\end_inset
+
+ פסוקים אזי
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "27text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="35pt">
+<column alignment="center" valignment="top" width="35pt">
+<column alignment="center" valignment="top" width="35pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q\lor p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "27text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="35pt">
+<column alignment="center" valignment="top" width="35pt">
+<column alignment="center" valignment="top" width="35pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q\land p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "27text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="35pt">
+<column alignment="center" valignment="top" width="35pt">
+<column alignment="center" valignment="top" width="35pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q\implies p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "19text%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="35pt">
+<column alignment="center" valignment="top" width="35pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\neg q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{false}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{true}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+השמה: פונקציה 
+\begin_inset Formula $v:\left\{ p_{i}\right\} \to\left\{ F,T\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+השמת ערך אמת לפסוק: תהא 
+\begin_inset Formula $v$
+\end_inset
+
+ השמה אזי פונקציה 
+\begin_inset Formula $\overline{v}:\WFF\to\left\{ F,T\right\} $
+\end_inset
+
+ המוגדרת
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $p$
+\end_inset
+
+ פסוק אטומי אזי 
+\begin_inset Formula $\overline{v}\left(p\right)=v\left(p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $\a$
+\end_inset
+
+ פסוק אזי 
+\begin_inset Formula $\overline{v}\left(\neg\a\right)=TT_{\neg}\left(\overline{v}\left(\a\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהיו 
+\begin_inset Formula $\b,\g$
+\end_inset
+
+ פסוקים ותהא 
+\begin_inset Formula $\circ$
+\end_inset
+
+ פעולה בינארית אזי 
+\begin_inset Formula $\overline{v}\left(\b\circ\g\right)=TT_{\circ}\left(\overline{v}\left(\b\right),\overline{v}\left(\g\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+השמה מספקת פסוק: תהא 
+\begin_inset Formula $v$
+\end_inset
+
+ השמה אזי 
+\begin_inset Formula $\a\in\WFF$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\overline{v}\left(\a\right)=T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+סימון: תהא 
+\begin_inset Formula $v$
+\end_inset
+
+ השמה ותהא 
+\begin_inset Formula $\a\in\WFF$
+\end_inset
+
+ מסופקת על ידי 
+\begin_inset Formula $v$
+\end_inset
+
+ אזי 
+\begin_inset Formula $v\models\a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+סימון: תהא 
+\begin_inset Formula $v$
+\end_inset
+
+ השמה ותהא 
+\begin_inset Formula $\a\in\WFF$
+\end_inset
+
+ לא מסופקת על ידי 
+\begin_inset Formula $v$
+\end_inset
+
+ אזי 
+\begin_inset Formula $v\not\models\a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+הפסוקים האטומיים בפסוק: פונקציה 
+\begin_inset Formula $A:\WFF\to\P\left(\left\{ p_{i}\right\} \right)$
+\end_inset
+
+ המוגדרת
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $p$
+\end_inset
+
+ פסוק אטומי אזי 
+\begin_inset Formula $A\left(p\right)=\left\{ p\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $\a$
+\end_inset
+
+ פסוק אזי 
+\begin_inset Formula $A\left(\neg\a\right)=A\left(\a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהיו 
+\begin_inset Formula $\b,\g$
+\end_inset
+
+ פסוקים ותהא 
+\begin_inset Formula $\circ$
+\end_inset
+
+ פעולה בינארית אזי 
+\begin_inset Formula $A\left(\b\circ\g\right)=A\left(\b\right)\cup A\left(\g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: תהיינה 
+\begin_inset Formula $v_{1},v_{2}$
+\end_inset
+
+ השמות ויהי 
+\begin_inset Formula $\a\in\WFF$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\forall p\in A\left(\a\right).v_{1}\left(p\right)=v_{2}\left(p\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\overline{v_{1}}\left(\a\right)=\overline{v_{2}}\left(\a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מסקנה: יהי 
+\begin_inset Formula $\a\in\WFF$
+\end_inset
+
+ אזי ניתן לייצג את 
+\begin_inset Formula $\a$
+\end_inset
+
+ על ידי 
+\begin_inset Formula $TT_{\a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מערכת קשרים שלמה פונקציונלית: קבוצה 
+\begin_inset Formula $K\subseteq\left\{ \land,\lor,\neg,\implies\right\} $
+\end_inset
+
+ עבורה לכל טבלת אמת 
+\begin_inset Formula $TT$
+\end_inset
+
+ קיים 
+\begin_inset Formula $\a\in\WFF$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $TT=TT_{\a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: 
+\begin_inset Formula $\left\{ \land,\lor,\neg,\implies\right\} $
+\end_inset
+
+ שלמה פונקציונלית.
+\end_layout
+
+\begin_layout Standard
+טענה: תהא 
+\begin_inset Formula $K$
+\end_inset
+
+ מערכת קשרים עבורה 
+\begin_inset Formula $\neg,\land,\lor\in K$
+\end_inset
+
+ אזי 
+\begin_inset Formula $K$
+\end_inset
+
+ שלמה פונקציונלית.
+\end_layout
+
+\begin_layout Standard
+פסוק ספיק: פסוק 
+\begin_inset Formula $\a\in\WFF$
+\end_inset
+
+ עבורו קיימת השמה 
+\begin_inset Formula $v$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $v\models\a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טאוטולוגיה: פסוק 
+\begin_inset Formula $\a\in\WFF$
+\end_inset
+
+ עבורו לכל השמה 
+\begin_inset Formula $v$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $v\models\a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+סימון: יהי 
+\begin_inset Formula $\a\in\WFF$
+\end_inset
+
+ טאוטולוגיה אזי 
+\begin_inset Formula $\models\a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+סתירה: פסוק 
+\begin_inset Formula $\a\in\WFF$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\models\left(\neg\a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+פסוקים שקולים: פסוקים 
+\begin_inset Formula $\a,\b\in\WFF$
+\end_inset
+
+ עבורם לכל השמה 
+\begin_inset Formula $v$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\overline{v}\left(\a\right)=\overline{v}\left(\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+סימון: יהיו 
+\begin_inset Formula $\a,\b\in\WFF$
+\end_inset
+
+ שקולים אזי 
+\begin_inset Formula $\a\equiv\b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+קבוצה ספיקה: קבוצה 
+\begin_inset Formula $\Gamma\subseteq\WFF$
+\end_inset
+
+ עבורה קיימת השמה 
+\begin_inset Formula $v$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $\a\in\Gamma$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $v\models\a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+סימון: תהא 
+\begin_inset Formula $\Gamma\subseteq\WFF$
+\end_inset
+
+ קבוצה ספיקה על ידי השמה 
+\begin_inset Formula $v$
+\end_inset
+
+ אזי 
+\begin_inset Formula $v\models\Gamma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+פסוק נובע סמנטית: תהא 
+\begin_inset Formula $\Gamma\subseteq\WFF$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\a\in\WFF$
+\end_inset
+
+ עבורו לכל השמה 
+\begin_inset Formula $v$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $v\models\Gamma$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $v\models\a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+סימון: תהא 
+\begin_inset Formula $\Gamma\subseteq\WFF$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\a\in\WFF$
+\end_inset
+
+ פסוק נובע סמנטית מ־
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Gamma\models\a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהיו 
+\begin_inset Formula $\a,\b,\g\in\WFF$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\a\land\b\right)\lor\g\equiv\left(\a\lor\g\right)\land\left(\b\lor\g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\a\lor\b\right)\land\g\equiv\left(\a\land\g\right)\lor\left(\b\land\g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\a\land\b\right)\equiv\left(\b\land\a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\a\lor\b\right)\equiv\left(\b\lor\a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\a\land\b\right)\land\g\equiv\a\land\left(\b\land\g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\a\lor\b\right)\lor\g\equiv\a\lor\left(\b\lor\g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\neg\left(\neg\a\right)\equiv\a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\neg\left(\a\land\b\right)\equiv\left(\neg\a\right)\lor\left(\neg\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\neg\left(\a\lor\b\right)\equiv\left(\neg\a\right)\land\left(\neg\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\a\implies\b\right)\equiv\left(\neg\a\right)\lor\b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+למה: יהי 
+\begin_inset Formula $\g\in\WFF$
+\end_inset
+
+ סתירה אזי לכל 
+\begin_inset Formula $\a\in\WFF$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\g\models\a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: תהא 
+\begin_inset Formula $\Gamma\subseteq\WFF$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\a,\b\in\WFF$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\Gamma\cup\left\{ \a\right\} \models\b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\Gamma\cup\left\{ \neg\a\right\} \models\b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Gamma\models\b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: תהא 
+\begin_inset Formula $\Gamma\subseteq\WFF$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\a,\b\in\WFF$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\Gamma\cup\left\{ \a\right\} \models\b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\Gamma\cup\left\{ \a\right\} \models\b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Gamma\models\left(\neg\a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהיו 
+\begin_inset Formula $\a,\b\in\WFF$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\a\models\b\right)\iff\left(\models\left(\a\implies\b\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+הצבת פסוק בפסוק: יהיו 
+\begin_inset Formula $\a,\varphi\in\wff$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p$
+\end_inset
+
+ פסוק אטומי אזי
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $\a=p$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\a\left(\nicefrac{\varphi}{p}\right)=\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $\a$
+\end_inset
+
+ פסוק אטומי וכן 
+\begin_inset Formula $\a\ne p$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\a\left(\nicefrac{\varphi}{p}\right)=\a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם קיים 
+\begin_inset Formula $\b\in\wff$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\a=\neg\b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\a\left(\nicefrac{\varphi}{p}\right)=\neg\b\left(\nicefrac{\varphi}{p}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם קיימים 
+\begin_inset Formula $\b,\g\in\wff$
+\end_inset
+
+ וקיימת פעולה בינארית 
+\begin_inset Formula $\circ$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\a=\b\circ\g$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\a\left(\nicefrac{\varphi}{p}\right)=\b\left(\nicefrac{\varphi}{p}\right)\circ\g\left(\nicefrac{\varphi}{p}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהיו 
+\begin_inset Formula $\a,\varphi\in\wff$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p\in A\left(\a\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\a\left(\nicefrac{\varphi}{p}\right)\in\wff$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+הצבת פסוקים בפסוק: יהיו 
+\begin_inset Formula $\a,\varphi_{1}\ldots\varphi_{n}\in\wff$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $p_{1}\ldots p_{n}$
+\end_inset
+
+ פסוקים אטומים אזי
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $\a=p_{i}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\a\left(\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right)=\varphi_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $\a$
+\end_inset
+
+ פסוק אטומי וכן 
+\begin_inset Formula $\a\ne p_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\a\left(\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right)=\a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם קיים 
+\begin_inset Formula $\b\in\wff$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\a=\neg\b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\a\left(\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right)=\neg\b\left(\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם קיימים 
+\begin_inset Formula $\b,\g\in\wff$
+\end_inset
+
+ וקיימת פעולה בינארית 
+\begin_inset Formula $\circ$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\a=\b\circ\g$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\a\left(\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right)=\b\left(\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right)\circ\g\left(\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהיו 
+\begin_inset Formula $\a,\varphi\in\wff$
+\end_inset
+
+ יהי 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ פסוק אטומי ותהא 
+\begin_inset Formula $v$
+\end_inset
+
+ השמה נגדיר השמה 
+\begin_inset Formula $v^{\prime}\left(p_{j}\right)=\left\{ \begin{smallmatrix}v\left(p_{j}\right) &  & i\ne j\\
+\overline{v}\left(\varphi\right) &  & i=j
+\end{smallmatrix}\right.$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\overline{v}\left(\a\left(\nicefrac{\varphi}{p}\right)\right)=\overline{v^{\prime}}\left(\a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מסקנה: טענה: יהיו 
+\begin_inset Formula $\a,\varphi_{1}\ldots\varphi_{n}\in\wff$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $p_{1}\ldots p_{n}$
+\end_inset
+
+ פסוקים אטומים ותהא 
+\begin_inset Formula $v$
+\end_inset
+
+ השמה נגדיר השמה 
+\begin_inset Formula $v^{\prime}\left(p_{j}\right)=\left\{ \begin{smallmatrix}v\left(p_{j}\right) &  & j\notin\left[n\right]\\
+\overline{v}\left(\varphi_{j}\right) &  & j\in\left[n\right]
+\end{smallmatrix}\right.$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\overline{v}\left(\a\left(\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right)\right)=\overline{v^{\prime}}\left(\a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מסקנה: יהי 
+\begin_inset Formula $\a\in\wff$
+\end_inset
+
+ טאוטולוגיה יהיו 
+\begin_inset Formula $\varphi_{1}\ldots\varphi_{n}\in\wff$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $p_{1}\ldots p_{n}$
+\end_inset
+
+ פסוקים אטומים אזי 
+\begin_inset Formula $\a\left(\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right)$
+\end_inset
+
+ טאוטולוגיה.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $26.05.2024$
+\begin_inset Formula $02.06.2024$
 \end_inset
 
  - הכל
