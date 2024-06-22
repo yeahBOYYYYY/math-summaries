@@ -161,27 +161,6 @@ filename "../../macros.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\WFF}{\text{WFF}}
-{\text{WFF}}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\wff}{\WFF}
-{\WFF}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\nnf}{\text{NNF}}
-{\text{NNF}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 רישום קבוצה בעזרת רשימת איברים
@@ -533,7 +512,7 @@ filename "../../macros.lyx"
 קבוצת הנוסחאות המוגדרות היטב/ביטוי חוקי/פסוק
 \series default
 : 
-\begin_inset Formula $\WFF=X_{\left\{ p_{i}\mid i\in\bbn\right\} ,\left\{ \land,\lor,\neg,\implies\right\} }$
+\begin_inset Formula $\wff=X_{\left\{ p_{i}\mid i\in\bbn\right\} ,\left\{ \land,\lor,\neg,\implies\right\} }$
 \end_inset
 
 .
@@ -545,7 +524,7 @@ filename "../../macros.lyx"
 פסוק אטומי/יסודי
 \series default
 : 
-\begin_inset Formula $p\in\WFF$
+\begin_inset Formula $p\in\wff$
 \end_inset
 
  עבורו 
@@ -561,7 +540,7 @@ filename "../../macros.lyx"
 טענה
 \series default
 : יהי 
-\begin_inset Formula $p\in\WFF$
+\begin_inset Formula $p\in\wff$
 \end_inset
 
  אזי )
@@ -593,11 +572,11 @@ filename "../../macros.lyx"
 מסקנה
 \series default
 : יהיו 
-\begin_inset Formula $q_{1},q_{2}\in\WFF$
+\begin_inset Formula $q_{1},q_{2}\in\wff$
 \end_inset
 
  אזי 
-\begin_inset Formula $q_{1}(q_{2}\notin\WFF$
+\begin_inset Formula $q_{1}(q_{2}\notin\wff$
 \end_inset
 
 .
@@ -609,7 +588,7 @@ filename "../../macros.lyx"
 משפט הקריאה היחידה
 \series default
 : יהי 
-\begin_inset Formula $\a\in\WFF$
+\begin_inset Formula $\a\in\wff$
 \end_inset
 
  אזי מתקיים בדיוק אחד מהבאים
@@ -624,7 +603,7 @@ filename "../../macros.lyx"
 
 \begin_layout Itemize
 קיימים ויחידים 
-\begin_inset Formula $\b,\g\in\WFF$
+\begin_inset Formula $\b,\g\in\wff$
 \end_inset
 
  עבורם 
@@ -636,7 +615,7 @@ filename "../../macros.lyx"
 
 \begin_layout Itemize
 קיימים ויחידים 
-\begin_inset Formula $\b,\g\in\WFF$
+\begin_inset Formula $\b,\g\in\wff$
 \end_inset
 
  עבורם 
@@ -648,7 +627,7 @@ filename "../../macros.lyx"
 
 \begin_layout Itemize
 קיימים ויחידים 
-\begin_inset Formula $\b,\g\in\WFF$
+\begin_inset Formula $\b,\g\in\wff$
 \end_inset
 
  עבורם 
@@ -660,7 +639,7 @@ filename "../../macros.lyx"
 
 \begin_layout Itemize
 קיים ויחיד 
-\begin_inset Formula $\b\in\WFF$
+\begin_inset Formula $\b\in\wff$
 \end_inset
 
  עבורו 
@@ -683,55 +662,12 @@ filename "../../macros.lyx"
 \begin_inset Formula $\a\in\Sigma^{*}$
 \end_inset
 
- ביטוי אזי
-\size tiny
-
-\begin_inset Formula 
-\begin{align*}
- & \text{\textbf{function}}\;\text{IsWellFormedFormula}\left(\a\right)\\
- & \qquad\mid\text{\textbf{if}}\;\a\in\left\{ p_{i}\mid i\in\bbn\right\} \\
- & \qquad\mid\qquad\text{\textbf{return}}\;\text{true}\\
- & \qquad\mid\\
- & \qquad\mid\text{\textbf{if}}\;\left(\a\left[0\right]="("\right)\land\left(\a\left[-1\right]=")"\right)\\
- & \qquad\mid\qquad\a.\text{DeleteFirst}\left(\right)\\
- & \qquad\mid\qquad\a.\text{DeleteLast}\left(\right)\\
- & \qquad\mid\text{\textbf{else}}\;\text{\textbf{return}}\;\text{false}\\
- & \qquad\mid\\
- & \qquad\mid\text{\textbf{if}}\;\a\left[0\right]="\neg"\\
- & \qquad\mid\qquad\a.\text{DeleteFirst}\left(\right)\\
- & \qquad\mid\qquad\text{\textbf{return}}\;\text{IsWellFormedFormula}\left(\a\right)\\
- & \qquad\mid\text{\textbf{else}}\\
- & \qquad\mid\qquad\left(\text{LeftParentheses},\text{RightParentheses},i\right)\leftarrow0\\
- & \qquad\mid\qquad\text{\textbf{while}}\;\left(\text{LeftParentheses}\ne\text{RightParentheses}\right)\lor\left(\text{LeftParentheses}=0\right)\\
- & \qquad\mid\qquad\mid\qquad\text{\textbf{if}}\;\a\left[i\right]="("\\
- & \qquad\mid\qquad\mid\qquad\mid\qquad\text{LeftParentheses}\leftarrow\text{LeftParentheses}+1\\
- & \qquad\mid\qquad\mid\qquad\text{\textbf{if}}\;\a\left[i\right]=")"\\
- & \qquad\mid\qquad\mid\qquad\mid\qquad\text{RightParentheses}\leftarrow\text{RightParentheses}+1\\
- & \qquad\mid\qquad\mid\qquad i\leftarrow i+1\\
- & \qquad\mid\qquad\text{\textbf{if}}\;\a\left[i+1\right]\notin\left\{ \land,\lor,\neg,\implies\right\} \\
- & \qquad\mid\qquad\mid\qquad\text{\textbf{return}}\;\text{false}\\
- & \qquad\mid\qquad\text{\textbf{else}}\\
- & \qquad\mid\qquad\mid\qquad\left(\b,\g\right)\leftarrow\left(\a\left[:i+1\right],\a\left[i+2:\right]\right)\\
- & \qquad\mid\qquad\mid\qquad\text{\textbf{return}}\;\left(\text{IsWellFormedFormula}\left(\b\right)\right)\land\left(\text{IsWellFormedFormula}\left(\g\right)\right)
-\end{align*}
-
+ ביטוי אזי קיים אלגוריתם 
+\begin_inset Formula $\O\left(\text{len}\left(\a\right)\right)$
 \end_inset
 
-
-\series bold
-\size default
-טענה
-\series default
-: יהי 
-\begin_inset Formula $\Sigma$
-\end_inset
-
- תחשיב הפסוקים ויהי 
-\begin_inset Formula $\a\in\Sigma^{*}$
-\end_inset
-
- ביטוי אזי 
-\begin_inset Formula $\left(\text{IsWellFormedFormula}\left(\a\right)=\text{true}\right)\iff\left(\a\in\WFF\right)$
+ לבדיקה האם 
+\begin_inset Formula $\a\in\wff$
 \end_inset
 
 .
@@ -1674,7 +1610,7 @@ status open
 \end_inset
 
  השמה אזי פונקציה 
-\begin_inset Formula $\overline{v}:\WFF\to\left\{ F,T\right\} $
+\begin_inset Formula $\overline{v}:\wff\to\left\{ F,T\right\} $
 \end_inset
 
  המוגדרת
@@ -1732,7 +1668,7 @@ status open
 \end_inset
 
  השמה אזי 
-\begin_inset Formula $\a\in\WFF$
+\begin_inset Formula $\a\in\wff$
 \end_inset
 
  עבורה 
@@ -1754,7 +1690,7 @@ status open
 \end_inset
 
  השמה ותהא 
-\begin_inset Formula $\a\in\WFF$
+\begin_inset Formula $\a\in\wff$
 \end_inset
 
  מסופקת על ידי 
@@ -1780,7 +1716,7 @@ status open
 \end_inset
 
  השמה ותהא 
-\begin_inset Formula $\a\in\WFF$
+\begin_inset Formula $\a\in\wff$
 \end_inset
 
  לא מסופקת על ידי 
@@ -1802,7 +1738,7 @@ status open
 \series default
 \color inherit
 : פונקציה 
-\begin_inset Formula $A:\WFF\to\P\left(\left\{ p_{i}\right\} \right)$
+\begin_inset Formula $\var:\wff\to\P\left(\left\{ p_{i}\right\} \right)$
 \end_inset
 
  המוגדרת
@@ -1814,7 +1750,7 @@ status open
 \end_inset
 
  פסוק אטומי אזי 
-\begin_inset Formula $A\left(p\right)=\left\{ p\right\} $
+\begin_inset Formula $\var\left(p\right)=\left\{ p\right\} $
 \end_inset
 
 .
@@ -1826,7 +1762,7 @@ status open
 \end_inset
 
  פסוק אזי 
-\begin_inset Formula $A\left(\neg\a\right)=A\left(\a\right)$
+\begin_inset Formula $\var\left(\neg\a\right)=\var\left(\a\right)$
 \end_inset
 
 .
@@ -1842,7 +1778,7 @@ status open
 \end_inset
 
  פעולה בינארית אזי 
-\begin_inset Formula $A\left(\b\circ\g\right)=A\left(\b\right)\cup A\left(\g\right)$
+\begin_inset Formula $\var\left(\b\circ\g\right)=\var\left(\b\right)\cup\var\left(\g\right)$
 \end_inset
 
 .
@@ -1852,7 +1788,7 @@ status open
 
 \series bold
 \color blue
-טענה
+משפט התלות הסופית
 \series default
 \color inherit
 : תהיינה 
@@ -1860,11 +1796,11 @@ status open
 \end_inset
 
  השמות ויהי 
-\begin_inset Formula $\a\in\WFF$
+\begin_inset Formula $\a\in\wff$
 \end_inset
 
  עבורה 
-\begin_inset Formula $\forall p\in A\left(\a\right).v_{1}\left(p\right)=v_{2}\left(p\right)$
+\begin_inset Formula $\forall p\in\var\left(\a\right).v_{1}\left(p\right)=v_{2}\left(p\right)$
 \end_inset
 
  אזי 
@@ -1882,7 +1818,7 @@ status open
 \series default
 \color inherit
 : יהי 
-\begin_inset Formula $\a\in\WFF$
+\begin_inset Formula $\a\in\wff$
 \end_inset
 
  אזי ניתן לייצג את 
@@ -1912,7 +1848,7 @@ status open
 \end_inset
 
  קיים 
-\begin_inset Formula $\a\in\WFF$
+\begin_inset Formula $\a\in\wff$
 \end_inset
 
  עבורו 
@@ -1966,7 +1902,7 @@ status open
 \series default
 \color inherit
 : פסוק 
-\begin_inset Formula $\a\in\WFF$
+\begin_inset Formula $\a\in\wff$
 \end_inset
 
  עבורו קיימת השמה 
@@ -1988,7 +1924,7 @@ status open
 \series default
 \color inherit
 : פסוק 
-\begin_inset Formula $\a\in\WFF$
+\begin_inset Formula $\a\in\wff$
 \end_inset
 
  עבורו לכל השמה 
@@ -2010,7 +1946,7 @@ status open
 \series default
 \color inherit
 : יהי 
-\begin_inset Formula $\a\in\WFF$
+\begin_inset Formula $\a\in\wff$
 \end_inset
 
  טאוטולוגיה אזי 
@@ -2028,7 +1964,7 @@ status open
 \series default
 \color inherit
 : פסוק 
-\begin_inset Formula $\a\in\WFF$
+\begin_inset Formula $\a\in\wff$
 \end_inset
 
  עבורו 
@@ -2046,7 +1982,7 @@ status open
 \series default
 \color inherit
 : פסוקים 
-\begin_inset Formula $\a,\b\in\WFF$
+\begin_inset Formula $\a,\b\in\wff$
 \end_inset
 
  עבורם לכל השמה 
@@ -2068,7 +2004,7 @@ status open
 \series default
 \color inherit
 : יהיו 
-\begin_inset Formula $\a,\b\in\WFF$
+\begin_inset Formula $\a,\b\in\wff$
 \end_inset
 
  שקולים אזי 
@@ -2086,7 +2022,7 @@ status open
 \series default
 \color inherit
 : קבוצה 
-\begin_inset Formula $\Gamma\subseteq\WFF$
+\begin_inset Formula $\Gamma\subseteq\wff$
 \end_inset
 
  עבורה קיימת השמה 
@@ -2112,7 +2048,7 @@ status open
 \series default
 \color inherit
 : תהא 
-\begin_inset Formula $\Gamma\subseteq\WFF$
+\begin_inset Formula $\Gamma\subseteq\wff$
 \end_inset
 
  קבוצה ספיקה על ידי השמה 
@@ -2134,11 +2070,11 @@ status open
 \series default
 \color inherit
 : תהא 
-\begin_inset Formula $\Gamma\subseteq\WFF$
+\begin_inset Formula $\Gamma\subseteq\wff$
 \end_inset
 
  אזי 
-\begin_inset Formula $\a\in\WFF$
+\begin_inset Formula $\a\in\wff$
 \end_inset
 
  עבורו לכל השמה 
@@ -2164,11 +2100,11 @@ status open
 \series default
 \color inherit
 : תהא 
-\begin_inset Formula $\Gamma\subseteq\WFF$
+\begin_inset Formula $\Gamma\subseteq\wff$
 \end_inset
 
  ויהי 
-\begin_inset Formula $\a\in\WFF$
+\begin_inset Formula $\a\in\wff$
 \end_inset
 
  פסוק נובע סמנטית מ־
@@ -2190,7 +2126,7 @@ status open
 \series default
 \color inherit
 : יהיו 
-\begin_inset Formula $\a,\b,\g\in\WFF$
+\begin_inset Formula $\a,\b,\g\in\wff$
 \end_inset
 
  אזי
@@ -2274,11 +2210,11 @@ status open
 \series default
 \color inherit
 : יהי 
-\begin_inset Formula $\g\in\WFF$
+\begin_inset Formula $\g\in\wff$
 \end_inset
 
  סתירה אזי לכל 
-\begin_inset Formula $\a\in\WFF$
+\begin_inset Formula $\a\in\wff$
 \end_inset
 
  מתקיים 
@@ -2296,11 +2232,11 @@ status open
 \series default
 \color inherit
 : תהא 
-\begin_inset Formula $\Gamma\subseteq\WFF$
+\begin_inset Formula $\Gamma\subseteq\wff$
 \end_inset
 
  ויהיו 
-\begin_inset Formula $\a,\b\in\WFF$
+\begin_inset Formula $\a,\b\in\wff$
 \end_inset
 
  עבורם 
@@ -2326,11 +2262,11 @@ status open
 \series default
 \color inherit
 : תהא 
-\begin_inset Formula $\Gamma\subseteq\WFF$
+\begin_inset Formula $\Gamma\subseteq\wff$
 \end_inset
 
  ויהיו 
-\begin_inset Formula $\a,\b\in\WFF$
+\begin_inset Formula $\a,\b\in\wff$
 \end_inset
 
  עבורם 
@@ -2356,7 +2292,7 @@ status open
 \series default
 \color inherit
 : יהיו 
-\begin_inset Formula $\a,\b\in\WFF$
+\begin_inset Formula $\a,\b\in\wff$
 \end_inset
 
  אזי 
@@ -2460,7 +2396,7 @@ status open
 \end_inset
 
  ויהי 
-\begin_inset Formula $p\in A\left(\a\right)$
+\begin_inset Formula $p\in\var\left(\a\right)$
 \end_inset
 
  אזי 
@@ -2596,7 +2532,7 @@ status open
 
 \series bold
 \color blue
-מסקנה
+מסקנה הקשר בין הצבות לעדכוני שמות
 \series default
 \color inherit
 : טענה: יהיו 
@@ -2653,9 +2589,14 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
-קבוצת הצורות הנורמליות
+\color red
+הצורה הנורמלית
 \series default
+ 
+\begin_inset Formula $\nnf$
+\end_inset
+
+
 \color inherit
 : 
 \begin_inset Formula $\nnf=X_{\left\{ p_{i}\mid i\in\bbn\right\} \cup\left\{ \left(\neg p_{i}\right)\mid i\in\bbn\right\} ,\left\{ \land,\lor\right\} }$
@@ -2667,8 +2608,8 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
-טענה
+\color red
+משפט
 \series default
 \color inherit
 : יהי 
@@ -2687,11 +2628,1024 @@ status open
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $\text{Conj}=X_{\left\{ p_{i}\mid i\in\bbn\right\} \cup\left\{ \left(\neg p_{i}\right)\mid i\in\bbn\right\} ,\left\{ \land\right\} }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הצורה הנורמלית
+\series default
+ 
+\begin_inset Formula $\dnf$
+\end_inset
+
+
+\color inherit
+: 
+\begin_inset Formula $\dnf=X_{\text{Conj},\left\{ \lor\right\} }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\a\in\wff$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $\b\in\dnf$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\a\equiv\b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $\text{Disj}=X_{\left\{ p_{i}\mid i\in\bbn\right\} \cup\left\{ \left(\neg p_{i}\right)\mid i\in\bbn\right\} ,\left\{ \lor\right\} }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הצורה הנורמלית
+\series default
+ 
+\begin_inset Formula $\cnf$
+\end_inset
+
+
+\color inherit
+: 
+\begin_inset Formula $\cnf=X_{\text{Disj},\left\{ \land\right\} }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\a\in\wff$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $\b\in\cnf$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\a\equiv\b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מערכת הוכחה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית תהא 
+\begin_inset Formula $N\subseteq\Sigma^{*}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $A\subseteq N$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F\subseteq\bigcup_{n=1}^{\infty}\left(N^{n}\to N\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\Sigma,N,A,F\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+נוסחאות של מערכת הוכחה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left(\Sigma,N,A,F\right)$
+\end_inset
+
+ מערכת הוכחה אזי 
+\begin_inset Formula $N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+אקסיומת של מערכת הוכחה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left(\Sigma,N,A,F\right)$
+\end_inset
+
+ מערכת הוכחה אזי 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+כללי היסק של מערכת הוכחה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left(\Sigma,N,A,F\right)$
+\end_inset
+
+ מערכת הוכחה אזי 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+קבוצת המשפטים
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left(\Sigma,N,A,F\right)$
+\end_inset
+
+ מערכת הוכחה אזי 
+\begin_inset Formula $X_{A,F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $S$
+\end_inset
+
+ מערכת הוכחה ויהי 
+\begin_inset Formula $\varphi\in N$
+\end_inset
+
+ משפט אזי 
+\begin_inset Formula $\underset{S}{\vdash}\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מערכת הוכחה בעלת הנחות
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left(\Sigma,N,A,F\right)$
+\end_inset
+
+ מערכת הוכחה ותהא 
+\begin_inset Formula $\Gamma\subseteq N$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\Sigma,N,A,F,\Gamma\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+קבוצת הטענות היכיחות מהנחות
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left(\Sigma,N,A,F,\Gamma\right)$
+\end_inset
+
+ מערכת הוכחה בעלת הנחות אזי 
+\begin_inset Formula $X_{A\cup\Gamma,F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הוכחה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left(\Sigma,N,A,F,\Gamma\right)$
+\end_inset
+
+ מערכת הוכחה בעלת הנחות ויהי 
+\begin_inset Formula $\varphi\in N$
+\end_inset
+
+ יכיח אזי סדרת יצירה של 
+\begin_inset Formula $\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $S$
+\end_inset
+
+ מערכת הוכחה תהיינה 
+\begin_inset Formula $\Gamma\subseteq N$
+\end_inset
+
+ הנחות ויהי 
+\begin_inset Formula $\varphi\in N$
+\end_inset
+
+ יכיח אזי 
+\begin_inset Formula $\Gamma\underset{S}{\vdash}\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $S$
+\end_inset
+
+ מערכת הוכחה ויהי 
+\begin_inset Formula $\varphi\in N$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+מונוטוניות: תהא 
+\begin_inset Formula $\Delta\subseteq N$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\Delta\underset{S}{\vdash}\varphi$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\Delta\subseteq\Gamma$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Gamma\underset{S}{\vdash}\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קומפקטיות: תהא 
+\begin_inset Formula $\Gamma\subseteq N$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\Gamma\underset{S}{\vdash}\varphi$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $\Delta\subseteq\Gamma$
+\end_inset
+
+ סופית עבורה 
+\begin_inset Formula $\Delta\underset{S}{\vdash}\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+טרנזיטיביות: תהיינה 
+\begin_inset Formula $\Delta,\Gamma\subseteq N$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\Delta\underset{S}{\vdash}\varphi$
+\end_inset
+
+ וכן לכל 
+\begin_inset Formula $\a\in\Delta$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\Gamma\underset{S}{\vdash}\a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Gamma\underset{S}{\vdash}\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $S$
+\end_inset
+
+ מערכת הוכחה ויהי 
+\begin_inset Formula $f\in F$
+\end_inset
+
+ כלל היסק המקיים 
+\begin_inset Formula $f\left(x_{1},\ldots,x_{n}\right)=y$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f:\frac{x_{1}\ldots x_{n}}{y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+כלל הניתוק )ֵ
+\begin_inset Formula $\text{Modus Ponens}$
+\end_inset
+
+(
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left(\Sigma,N,A,F\right)$
+\end_inset
+
+ מערכת הוכחה אזי 
+\begin_inset Formula $\text{MP}:\frac{\left(\a\implies\b\right),\a}{\b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מערכת ההוכחה של הילברט )
+\begin_inset Formula $\hpc$
+\end_inset
+
+(
+\series default
+\color inherit
+: נגדיר מערכת הוכחה כך
+\end_layout
+
+\begin_layout Itemize
+אלפבית: 
+\begin_inset Formula $\Sigma=\left\{ p_{i}\mid i\in\bbn\right\} \cup\left\{ \neg,\implies,(,)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+נוסחאות: 
+\begin_inset Formula $N=X_{\left\{ p_{i}\mid i\in\bbn\right\} ,\left\{ \neg,\implies\right\} }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אקסיומות: 
+\begin_inset Formula $A_{1}=\left(\a\implies\left(\b\implies\a\right)\right)$
+\end_inset
+
+, 
+\begin_inset Formula $A_{2}=\left(\left(\a\implies\left(\b\implies\g\right)\right)\implies\left(\left(\a\implies\b\right)\implies\left(\a\implies\g\right)\right)\right)$
+\end_inset
+
+, 
+\begin_inset Formula $A_{3}=\left(\left(\left(\neg\a\right)\implies\left(\neg\b\right)\right)\implies\left(\b\implies\a\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+כללי היסק: 
+\begin_inset Formula $F=\left\{ \text{MP}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\a,\b$
+\end_inset
+
+ נוסחאות ב־
+\begin_inset Formula $\hpc$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\underset{\hpc}{\vdash}\left(\a\implies\a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\underset{\hpc}{\vdash}\left(\left(\neg\a\right)\implies\left(\a\implies\b\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\{ \neg\a\right\} \underset{\hpc}{\vdash}\left(\a\implies\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\a,\b$
+\end_inset
+
+ נוסחאות ב־
+\begin_inset Formula $\hpc$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\underset{\hpc}{\vdash}\left(\neg\a\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ \a\right\} \underset{\hpc}{\vdash}\b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הערה
+\series default
+\color inherit
+: בקורס זה ניתן להניח כי הסימון 
+\begin_inset Formula $\vdash$
+\end_inset
+
+ הוא במערכת 
+\begin_inset Formula $\hpc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט הדידוקציה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ הנחות מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $\a,\b$
+\end_inset
+
+ נוחסאות מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\Gamma\vdash\left(\a\implies\b\right)\right)\iff\left(\Gamma\cup\left\{ \a\right\} \vdash\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\a$
+\end_inset
+
+ נוסחא מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\vdash\left(\left(\neg\left(\neg\a\right)\right)\implies\a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מערכת הוכחה נאותה
+\series default
+\color inherit
+: מערכת הוכחה 
+\begin_inset Formula $S$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ הנחות מעל 
+\begin_inset Formula $S$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\a$
+\end_inset
+
+ נוסחה מעל 
+\begin_inset Formula $S$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(\Gamma\underset{S}{\vdash}\a\right)\implies\left(\Gamma\models\a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מערכת הוכחה שלמה
+\series default
+\color inherit
+: מערכת הוכחה 
+\begin_inset Formula $S$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ הנחות מעל 
+\begin_inset Formula $S$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\a$
+\end_inset
+
+ נוסחה מעל 
+\begin_inset Formula $S$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(\Gamma\models\a\right)\implies\left(\Gamma\underset{S}{\vdash}\a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+למה
+\series default
+\color inherit
+: אקסיומות 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ הינן טאוטולוגיות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ מערכת נאותה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+למה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ הנחות מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $\a,\b,\g$
+\end_inset
+
+ נוחסאות מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\left(\Gamma\vdash\left(\a\implies\b\right)\right)\land\left(\Gamma\vdash\left(\b\implies\g\right)\right)\right)\implies\left(\Gamma\vdash\left(\a\implies\g\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט הדיכוטומיה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ הנחות מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $\a,\b$
+\end_inset
+
+ נוחסאות מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\left(\Gamma\cup\left\{ \a\right\} \vdash\b\right)\land\left(\Gamma\cup\left\{ \neg\a\right\} \vdash\b\right)\right)\implies\left(\Gamma\vdash\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+קבוצת הנחות עקבית: תהא מערכת הוכחה 
+\begin_inset Formula $S$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ קבוצת הנחות מעל 
+\begin_inset Formula $S$
+\end_inset
+
+ עבורה קיימת 
+\begin_inset Formula $\a$
+\end_inset
+
+ נוסחה מעל 
+\begin_inset Formula $S$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\Gamma\not\underset{S}{\vdash}\a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: תהא מערכת הוכחה 
+\begin_inset Formula $S$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ הנחות מעל 
+\begin_inset Formula $S$
+\end_inset
+
+ אזי )
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ אינה עקבית(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיימת 
+\begin_inset Formula $\a$
+\end_inset
+
+ נוסחה מעל 
+\begin_inset Formula $S$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left(\Gamma\not\underset{S}{\vdash}\a\right)\land\left(\Gamma\underset{S}{\vdash}\a\right)$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+טענה: תהא מערכת הוכחה 
+\begin_inset Formula $S$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ הנחות מעל 
+\begin_inset Formula $S$
+\end_inset
+
+ אזי )
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ עקבית(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $\Delta\subseteq\Gamma$
+\end_inset
+
+ סופית מתקיים כי 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ עקבית(.
+\end_layout
+
+\begin_layout Standard
+קבוצת הנחות עקבית מקסימלית: תהא מערכת הוכחה 
+\begin_inset Formula $S$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ קבוצת הנחות עקבית מעל 
+\begin_inset Formula $S$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ קבוצת הנחות עקבית מעל 
+\begin_inset Formula $S$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\Gamma\subseteq\Delta$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\Gamma=\Delta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: תהא 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ קבוצת הנחות עקבית מקסימלית מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\a$
+\end_inset
+
+ נוסחה מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\Gamma\vdash\a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\a\in\Gamma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: תהא 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ קבוצת הנחות עקבית מקסימלית מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\a$
+\end_inset
+
+ נוסחה מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\a\in\Gamma\right)\lor\left(\neg\a\in\Gamma\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: תהא 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ קבוצת הנחות עקבית מקסימלית מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $\a,\b$
+\end_inset
+
+ נוסחאות מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\Gamma\vdash\left(\a\implies\b\right)\right)\iff\left(\left(\neg\a\in\Gamma\right)\lor\left(\b\in\Gamma\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ מערכת שלמה.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $02.06.2024$
+\begin_inset Formula $09.06.2024$
 \end_inset
 
  - הכל
