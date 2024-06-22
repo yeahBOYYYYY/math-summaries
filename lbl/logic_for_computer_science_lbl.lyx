@@ -3118,7 +3118,11 @@ status open
 \begin_inset Formula $A_{2}=\left(\left(\a\implies\left(\b\implies\g\right)\right)\implies\left(\left(\a\implies\b\right)\implies\left(\a\implies\g\right)\right)\right)$
 \end_inset
 
-, 
+,
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $A_{3}=\left(\left(\left(\neg\a\right)\implies\left(\neg\b\right)\right)\implies\left(\b\implies\a\right)\right)$
 \end_inset
 
@@ -3241,6 +3245,28 @@ status open
 
  אזי 
 \begin_inset Formula $\left(\Gamma\vdash\left(\a\implies\b\right)\right)\iff\left(\Gamma\cup\left\{ \a\right\} \vdash\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+: תהא מערכת הוכחה 
+\begin_inset Formula $S$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\Gamma\subseteq N$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{Ded}\left(\Gamma\right)=\left\{ \a\in N\mid\Gamma\vdash\a\right\} $
 \end_inset
 
 .
@@ -3387,7 +3413,11 @@ status open
 \begin_inset Formula $\hpc$
 \end_inset
 
- אזי 
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\left(\left(\Gamma\vdash\left(\a\implies\b\right)\right)\land\left(\Gamma\vdash\left(\b\implies\g\right)\right)\right)\implies\left(\Gamma\vdash\left(\a\implies\g\right)\right)$
 \end_inset
 
@@ -3417,7 +3447,11 @@ status open
 \begin_inset Formula $\hpc$
 \end_inset
 
- אזי 
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\left(\left(\Gamma\cup\left\{ \a\right\} \vdash\b\right)\land\left(\Gamma\cup\left\{ \neg\a\right\} \vdash\b\right)\right)\implies\left(\Gamma\vdash\b\right)$
 \end_inset
 
@@ -3425,7 +3459,13 @@ status open
 \end_layout
 
 \begin_layout Standard
-קבוצת הנחות עקבית: תהא מערכת הוכחה 
+
+\series bold
+\color green
+קבוצת הנחות עקבית
+\series default
+\color inherit
+: תהא מערכת הוכחה 
 \begin_inset Formula $S$
 \end_inset
 
@@ -3453,7 +3493,13 @@ status open
 \end_layout
 
 \begin_layout Standard
-טענה: תהא מערכת הוכחה 
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: תהא מערכת הוכחה 
 \begin_inset Formula $S$
 \end_inset
 
@@ -3481,7 +3527,11 @@ status open
 \begin_inset Formula $S$
 \end_inset
 
- המקיימת 
+ המקיימת
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\left(\Gamma\not\underset{S}{\vdash}\a\right)\land\left(\Gamma\underset{S}{\vdash}\a\right)$
 \end_inset
 
@@ -3489,7 +3539,13 @@ status open
 \end_layout
 
 \begin_layout Standard
-טענה: תהא מערכת הוכחה 
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: תהא מערכת הוכחה 
 \begin_inset Formula $S$
 \end_inset
 
@@ -3521,7 +3577,13 @@ status open
 \end_layout
 
 \begin_layout Standard
-קבוצת הנחות עקבית מקסימלית: תהא מערכת הוכחה 
+
+\series bold
+\color green
+קבוצת הנחות עקבית מקסימלית
+\series default
+\color inherit
+: תהא מערכת הוכחה 
 \begin_inset Formula $S$
 \end_inset
 
@@ -3553,7 +3615,13 @@ status open
 \end_layout
 
 \begin_layout Standard
-טענה: תהא 
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: תהא 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -3581,7 +3649,13 @@ status open
 \end_layout
 
 \begin_layout Standard
-טענה: תהא 
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: תהא 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -3605,7 +3679,13 @@ status open
 \end_layout
 
 \begin_layout Standard
-טענה: תהא 
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: תהא 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -3621,7 +3701,11 @@ status open
 \begin_inset Formula $\hpc$
 \end_inset
 
- אזי 
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\left(\Gamma\vdash\left(\a\implies\b\right)\right)\iff\left(\left(\neg\a\in\Gamma\right)\lor\left(\b\in\Gamma\right)\right)$
 \end_inset
 
@@ -3631,8 +3715,58 @@ status open
 \begin_layout Standard
 
 \series bold
+\color green
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ קבוצת הנחות עקבית מקסימלית מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ ספיקה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ קבוצת הנחות עקבית מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ אזי קיימת קבוצת הנחות עקבית מקסימלית 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\Gamma\subseteq\Delta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
 משפט
 \series default
+\color inherit
 : 
 \begin_inset Formula $\hpc$
 \end_inset
@@ -3641,11 +3775,41 @@ status open
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ הנחות מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\a$
+\end_inset
+
+ נוסחה מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\Gamma\vdash\a\right)\iff\left(\Gamma\models\a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $09.06.2024$
+\begin_inset Formula $16.06.2024$
 \end_inset
 
  - הכל
