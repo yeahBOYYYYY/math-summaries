@@ -19,6 +19,14 @@
 \usepackage{polynom}
 \usepackage{booktabs}
 \usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{color}
+
+
+% heb font
+\newfontfamily\hebrewfont{David CLM}
+\newfontfamily\hebrewfontsf{David CLM}
+\newfontfamily\hebrewfonttt{David CLM}
 
 % it's here?
 \setlength{\tabcolsep}{1pt}
@@ -67,22 +75,27 @@
 \renewcommand{\impliedby}{\negthickspace\RonMikhelmanLolll\negthickspace}
 
 %for defnos
-\usepackage{multicol}
-\usepackage{color}
 \setlength{\columnseprule}{1pt}
 \def\columnseprulecolor{\color{black}}
 \end_preamble
 \options no-math
 \use_default_options true
+\begin_modules
+algorithm2e
+\end_modules
 \maintain_unincluded_children false
+\begin_local_layout
+Format 66
+PackageOptions algorithm2e vlined
+\end_local_layout
 \language hebrew
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "David CLM"
-\font_sans "default" "default"
-\font_typewriter "default" "default"
-\font_math "auto" "auto"
+\font_roman "lmodern" "default"
+\font_sans "avant" "default"
+\font_typewriter "courier" "default"
+\font_math "default" "auto"
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
@@ -217,15 +230,641 @@ filename "../../macros.lyx"
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 אלגוריתם 
 \begin_inset Formula $\text{BFS}$
 \end_inset
 
+
+\series default
 : יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף אזי
+ גרף ויהי 
+\begin_inset Formula $s\in V\left(G\right)$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{BFS}{BFS}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+BFS{$G, s$}}{     $
+\backslash
+left(d, 
+\backslash
+pi, 
+\backslash
+text{color}
+\backslash
+right)
+\backslash
+gets$ dict($V
+\backslash
+left(G
+\backslash
+right)$)
+\backslash
+
+\backslash
+     
+\backslash
+For{$u
+\backslash
+in V 
+\backslash
+left( G
+\backslash
+right)
+\backslash
+backslash 
+\backslash
+{s
+\backslash
+}$}{         color[u] $
+\backslash
+leftarrow$ White
+\backslash
+
+\backslash
+         d[u] $
+\backslash
+leftarrow
+\backslash
+infty$
+\backslash
+
+\backslash
+         $
+\backslash
+pi$[u] $
+\backslash
+leftarrow$ Null
+\backslash
+
+\backslash
+     }     color[s] $
+\backslash
+leftarrow$ Grey
+\backslash
+
+\backslash
+     d[s] $
+\backslash
+leftarrow 0$
+\backslash
+
+\backslash
+     $
+\backslash
+pi$[s] $
+\backslash
+leftarrow$ Null
+\backslash
+
+\backslash
+     Q $
+\backslash
+gets$ queue()
+\backslash
+
+\backslash
+     
+\backslash
+While{$Q 
+\backslash
+ne 
+\backslash
+emptyset$}{         $u 
+\backslash
+gets $ Q.head
+\backslash
+
+\backslash
+         
+\backslash
+For{$v
+\backslash
+in Neighbor(u)$}{             
+\backslash
+If{color[v] = White}{                 color[$v$] $
+\backslash
+leftarrow$ Grey
+\backslash
+
+\backslash
+                 $d[v]
+\backslash
+leftarrow d[u]+1$
+\backslash
+
+\backslash
+                 $
+\backslash
+pi[v]
+\backslash
+leftarrow u$
+\backslash
+
+\backslash
+                 Q.enqueue($v$)
+\backslash
+
+\backslash
+             }         }         Q.dequeue()
+\backslash
+
+\backslash
+         color[$u$] $
+\backslash
+gets$ Black
+\backslash
+
+\backslash
+     }     
+\backslash
+Return $
+\backslash
+left(d, 
+\backslash
+pi, 
+\backslash
+text{color}
+\backslash
+right)$ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $s\in V\left(G\right)$
+\end_inset
+
+ אזי סיבוכיות זמן הריצה של 
+\begin_inset Formula $\text{BFS}\left(G,s\right)$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\O\left(\left|V\right|+\left|E\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ v\in V\mid\text{BFS}\left(G,s\right).\text{color}\left[v\right]=\text{Black}\right\} =\left[s\right]_{\to}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהיו 
+\begin_inset Formula $u,v\in V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\d\left(v,u\right)=\min\left(\left\{ \text{len}\left(\sigma\right)\mid v,u\text{ טיול בין }\sigma\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהיו 
+\begin_inset Formula $v,u,w\in V$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left(w,u\right)\in E$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\d\left(v,u\right)\le\d\left(v,w\right)+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהיו 
+\begin_inset Formula $s,v\in V$
+\end_inset
+
+ אזי בכל שלב בהרצת 
+\begin_inset Formula $\text{BFS}\left(G,s\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $d\left[v\right]\ge\d\left(v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף יהי שלב בהרצת 
+\begin_inset Formula $\text{BFS}\left(G,s\right)$
+\end_inset
+
+ בו 
+\begin_inset Formula $Q=\left(v_{1}\ldots v_{n}\right)$
+\end_inset
+
+ אזי מתקיים 
+\begin_inset Formula $d\left[v_{i}\right]\le d\left[v_{i+1}\right]$
+\end_inset
+
+ וכן 
+\begin_inset Formula $d\left[v_{i}\right]\le d\left[v_{1}\right]+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט נכונות מרחקים
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהיו 
+\begin_inset Formula $s,v\in V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{BFS}\left(G,s\right).d\left[v\right]=\d\left(v,s\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+עץ 
+\begin_inset Formula $\text{BFS}$
+\end_inset
+
+
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $V_{\pi}=\left\{ v\in V\mid\text{BFS}\left(G,s\right).\pi\left[v\right]\ne\text{Null}\right\} \cup\left\{ s\right\} $
+\end_inset
+
+ וכן 
+\begin_inset Formula $E_{\pi}=\left\{ \left(\pi\left[v\right],v\right)\mid v\in V_{\pi}\backslash\left\{ s\right\} \right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $G_{\pi}=\left(V_{\pi},E_{\pi}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+מתקיים 
+\begin_inset Formula $\deg_{G_{\pi}}^{-}\left(s\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $v\in V\left(G_{\pi}\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\deg_{G_{\pi}}^{-}\left(v\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $v\in V\left(G_{\pi}\right)$
+\end_inset
+
+ קיים מסלול ב־
+\begin_inset Formula $G_{\pi}$
+\end_inset
+
+ בין 
+\begin_inset Formula $s,v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G_{\pi}$
+\end_inset
+
+ הינו עץ.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $v\in V\left(G_{\pi}\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מסלול ב־
+\begin_inset Formula $G_{\pi}$
+\end_inset
+
+ בין 
+\begin_inset Formula $s,v$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ המסלול הקצר ביותר בין 
+\begin_inset Formula $s,v$
+\end_inset
+
+ ב־
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם זיהוי גרפים דו־צדדיים
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף לא מכוון ופשוט אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{IsBipartite}{IsBipartite}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+IsBipartite{$G$}}{     $
+\backslash
+left(d, 
+\backslash
+pi, 
+\backslash
+text{color}
+\backslash
+right)
+\backslash
+gets$ BFS($G$)
+\backslash
+
+\backslash
+     
+\backslash
+For{$
+\backslash
+left(v,u
+\backslash
+right)
+\backslash
+in V$}{         
+\backslash
+If{$d
+\backslash
+left(v
+\backslash
+right) = d
+\backslash
+left(u
+\backslash
+right)$}{             
+\backslash
+Return false         }     }     
+\backslash
+Return true } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף לא מכוון ופשוט אזי )
+\begin_inset Formula $G$
+\end_inset
+
+ דו צדדי(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\text{IsBipartite}\left(G\right)=\text{true}$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסלול אוילר
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מעגל אוילר
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר ולא מכוון אזי )יש מעגל אוילר ב־
+\begin_inset Formula $G$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\deg\left(v\right)\in\bbn_{\text{even}}$
+\end_inset
+
+.)
 \end_layout
 
 \begin_layout Standard
