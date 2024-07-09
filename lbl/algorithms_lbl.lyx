@@ -21,6 +21,7 @@
 \usepackage{fancyhdr}
 \usepackage{multicol}
 \usepackage{color}
+\usepackage{xcolor}
 
 
 % heb font
@@ -56,6 +57,9 @@
 \definecolor{commentcolor}{RGB}{128,128,128}
 \definecolor{stringcolor}{RGB}{0,168,0}
 \definecolor{remarkcolor}{RGB}{150,145,91} % 255,225,88
+
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{gray}{#1}}
+\SetCommentSty{mycommfont}
 
 % hyperlinks
 \hypersetup{
@@ -712,6 +716,454 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+מסלול אוילר
+\series default
+: מסלול העובר על כל הקשתות בגרף.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מעגל אוילר
+\series default
+: מסלול אוילר שהינו מעגל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר ולא מכוון אזי )יש מעגל אוילר ב־
+\begin_inset Formula $G$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\deg\left(v\right)\in\bbn_{\text{even}}$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם למציאת מעגל אוילר
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר ולא מכוון עבורו לכל 
+\begin_inset Formula $u\in V$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\deg\left(u\right)\in\bbn_{\text{even}}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{EulerCircle}{EulerCircle}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+EulerCircle{$G, v$}}{     $
+\backslash
+sigma 
+\backslash
+gets 
+\backslash
+text{List}(E(G))$
+\backslash
+
+\backslash
+     $u 
+\backslash
+gets Neighbor(v)$
+\backslash
+
+\backslash
+     
+\backslash
+While{$u
+\backslash
+ne v$}{         $
+\backslash
+sigma .
+\backslash
+text{append}(
+\backslash
+{v, u
+\backslash
+})$
+\backslash
+
+\backslash
+         $G = G
+\backslash
+backslash 
+\backslash
+{
+\backslash
+{v, u
+\backslash
+}
+\backslash
+}$
+\backslash
+
+\backslash
+         $u 
+\backslash
+gets 
+\backslash
+text{Neighbor}(u)$
+\backslash
+
+\backslash
+     }     
+\backslash
+If{$length(
+\backslash
+sigma) = |E(G)|$}{         
+\backslash
+Return $
+\backslash
+sigma$     } 
+\backslash
+Else{         $w 
+\backslash
+gets 
+\backslash
+{x
+\backslash
+in V(G)
+\backslash
+mid (
+\backslash
+exists y
+\backslash
+in V(G).
+ (x, y)
+\backslash
+in
+\backslash
+sigma)
+\backslash
+land(
+\backslash
+deg(x)>0)
+\backslash
+}$
+\backslash
+
+\backslash
+         $
+\backslash
+sigma[w] = 
+\backslash
+EulerCircle{G, w}$     }     
+\backslash
+Return $
+\backslash
+sigma$ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר ולא מכוון עבורו לכל 
+\begin_inset Formula $u\in V$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\deg\left(u\right)\in\bbn_{\text{even}}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $v\in V\left(G\right)$
+\end_inset
+
+ אזי סיבוכיות זמן הריצה של 
+\begin_inset Formula $\text{EulerCircle}\left(G,v\right)$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\O\left(\left|E\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: באלגוריתם 
+\begin_inset Formula $\text{EulerCircle}$
+\end_inset
+
+ כל עוד לולאת ה־
+\begin_inset Formula $\text{while}$
+\end_inset
+
+ פעילה מתקיים 
+\begin_inset Formula $\left|\text{Neighbor}\left(u\right)\right|\ne\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר ולא מכוון עבורו לכל 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\deg\left(v\right)\in\bbn_{\text{even}}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{EulerCircle}\left(G\right)$
+\end_inset
+
+ הינו מעגל אוילר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר ולא מכוון אזי )יש מסלול אוילר שאינו מעגל ב־
+\begin_inset Formula $G$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\left|\left\{ v\in V\left(G\right)\mid\deg\left(v\right)\in\bbn_{\text{odd}}\right\} \right|=2$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם למציאת מסלול אוילר
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר ולא מכוון עבורו 
+\begin_inset Formula $\left|\left\{ v\in V\left(G\right)\mid\deg\left(v\right)\in\bbn_{\text{odd}}\right\} \right|=2$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{EulerPath}{EulerPath}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+EulerPath{$G$}}{     $
+\backslash
+{v, u
+\backslash
+}
+\backslash
+gets
+\backslash
+left
+\backslash
+{ v
+\backslash
+in V
+\backslash
+left(G
+\backslash
+right)
+\backslash
+mid
+\backslash
+deg
+\backslash
+left(v
+\backslash
+right)
+\backslash
+in
+\backslash
+mathbb{N}_{
+\backslash
+text{odd}}
+\backslash
+right
+\backslash
+}$
+\backslash
+
+\backslash
+     $G = G + 
+\backslash
+{
+\backslash
+{v, u
+\backslash
+}
+\backslash
+}$
+\backslash
+
+\backslash
+     $
+\backslash
+sigma = 
+\backslash
+text{EulerCircle}{(G, v)}$
+\backslash
+
+\backslash
+     
+\backslash
+Return $
+\backslash
+sigma
+\backslash
+backslash 
+\backslash
+{v, u
+\backslash
+}$ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף לא מכוון אזי )
+\begin_inset Formula $G$
+\end_inset
+
+ דו־צדדי(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לא קיים ב־
+\begin_inset Formula $G$
+\end_inset
+
+ מעגל באורך אי־זוגי(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 אלגוריתם זיהוי גרפים דו־צדדיים
 \series default
 : יהי 
@@ -793,13 +1245,6 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 טענה
@@ -826,17 +1271,264 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
-מסלול אוילר
+מסלול קצר ביותר בין קודקודים
 \series default
-:
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהיו 
+\begin_inset Formula $s,t\in V$
+\end_inset
+
+ אזי מסלול 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מ־
+\begin_inset Formula $s$
+\end_inset
+
+ ל־
+\begin_inset Formula $t$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left|\sigma\right|=\min\left\{ \left|\tau\right|\mid t\text{ ל־}s\text{ מסלול מ־}\tau\right\} $
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-מעגל אוילר
+גרף המסלולים הקצרים ביותר מקודקוד )גרף מק
+\begin_inset Quotes erd
+\end_inset
+
+ב(
 \series default
-:
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ נגדיר
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $E^{\prime}=\left\{ e\in E\mid s\text{ חלק ממסלול קצר ביותר היוצא מ־}e\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(V,E^{\prime}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם למציאת גרף המסלולים הקצרים ביותר מקודקוד
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{ShortestPathGraph}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$G, s$}}{     $
+\backslash
+left(d, 
+\backslash
+pi, 
+\backslash
+text{color}
+\backslash
+right)
+\backslash
+gets
+\backslash
+text{BFS}(G)$
+\backslash
+
+\backslash
+     $E^
+\backslash
+prime 
+\backslash
+gets E(G_
+\backslash
+pi)$
+\backslash
+
+\backslash
+     
+\backslash
+For{$(u, v)
+\backslash
+in E(G)$}{         
+\backslash
+If{$|
+\backslash
+text{height}_{G_
+\backslash
+pi}(u) - 
+\backslash
+text{height}_{G_
+\backslash
+pi(v)}| = 1$}{             $E^
+\backslash
+prime .
+\backslash
+text{append} ((u, v))$
+\backslash
+
+\backslash
+         }     }     
+\backslash
+Return $(V(G), E^
+\backslash
+prime)$ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $e\in E$
+\end_inset
+
+ אזי )
+\begin_inset Formula $e$
+\end_inset
+
+ מחברת בין רמות עוקבות ביער 
+\begin_inset Formula $\text{BFS}$
+\end_inset
+
+ 
+\begin_inset Formula $G_{\pi}$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $e$
+\end_inset
+
+ קשת במק
+\begin_inset Quotes erd
+\end_inset
+
+ב(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{ShortestPathGraph}\left(G,s\right)$
+\end_inset
+
+ הינו גרף מק
+\begin_inset Quotes erd
+\end_inset
+
+ב מ־
+\begin_inset Formula $s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+גרף המסלולים הקצרים ביותר בין קודקודים
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהיו 
+\begin_inset Formula $s,t\in V$
+\end_inset
+
+ נגדיר
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $E^{\prime}=\left\{ e\in E\mid t\text{ ל־}s\text{ חלק ממסלול קצר ביותר היוצא מ־}e\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(V,E^{\prime}\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -848,7 +1540,1209 @@ end{algorithm}
 \begin_inset Formula $G$
 \end_inset
 
- גרף קשיר ולא מכוון אזי )יש מעגל אוילר ב־
+ גרף מכוון ויהיו 
+\begin_inset Formula $s,t\in V$
+\end_inset
+
+ אזי קיים אלגוריתם לחישוב גרף המסלולים הקצרים ביותר מ־
+\begin_inset Formula $s$
+\end_inset
+
+ ל־
+\begin_inset Formula $t$
+\end_inset
+
+ בסיבוכיות 
+\begin_inset Formula $\O\left(\left|V\right|+\left|E\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+אלגוריתם 
+\begin_inset Formula $\text{DFS}$
+\end_inset
+
+
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{DFS}{DFS}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+DFS{$G, s$}}{     $
+\backslash
+left(k, 
+\backslash
+pi
+\backslash
+right)
+\backslash
+gets$ dict($V$)
+\backslash
+
+\backslash
+     $
+\backslash
+text{color}
+\backslash
+gets$ dict($E$)
+\backslash
+
+\backslash
+     $k[s] 
+\backslash
+gets 1$
+\backslash
+
+\backslash
+     $
+\backslash
+pi[s] 
+\backslash
+gets 
+\backslash
+text{Null}$
+\backslash
+
+\backslash
+     
+\backslash
+For{$u
+\backslash
+in V
+\backslash
+backslash{s}$}{         $k[u] 
+\backslash
+gets 0$
+\backslash
+
+\backslash
+         $
+\backslash
+pi[u] 
+\backslash
+gets 
+\backslash
+text{Null}$
+\backslash
+
+\backslash
+     }     
+\backslash
+For{$e
+\backslash
+in E$}{         $
+\backslash
+text{color}[e] 
+\backslash
+gets 
+\backslash
+text{White}$
+\backslash
+
+\backslash
+     }     $i
+\backslash
+gets 2$
+\backslash
+
+\backslash
+     $v
+\backslash
+gets s$
+\backslash
+
+\backslash
+     
+\backslash
+While{$
+\backslash
+left(
+\backslash
+exists u
+\backslash
+in Adj(v).
+ 
+\backslash
+text{color}[(v,u)] = 
+\backslash
+text{White}
+\backslash
+right) 
+\backslash
+lor 
+\backslash
+left(
+\backslash
+pi[v]
+\backslash
+ne
+\backslash
+text{Null}
+\backslash
+right)$}{         
+\backslash
+If{$
+\backslash
+{u
+\backslash
+in Adj(v)
+\backslash
+mid
+\backslash
+text{color}[(v,u)] = 
+\backslash
+text{White}
+\backslash
+}
+\backslash
+ne
+\backslash
+emptyset$}{             $w
+\backslash
+gets 
+\backslash
+{u
+\backslash
+in Adj(v)
+\backslash
+mid
+\backslash
+text{color}[(v,u)] = 
+\backslash
+text{White}
+\backslash
+}$
+\backslash
+
+\backslash
+             $
+\backslash
+text{color}[(v, w)]
+\backslash
+gets
+\backslash
+text{Black}$
+\backslash
+
+\backslash
+             
+\backslash
+If{$k[w] = 0$}{                 $k[w]
+\backslash
+gets i$
+\backslash
+
+\backslash
+                 $
+\backslash
+pi[w]
+\backslash
+gets v$
+\backslash
+
+\backslash
+                 $v
+\backslash
+gets w$
+\backslash
+
+\backslash
+                 $i
+\backslash
+gets i+1$
+\backslash
+
+\backslash
+             } 
+\backslash
+Else{             $v
+\backslash
+gets
+\backslash
+pi[v]$             }         }     }     
+\backslash
+Return $
+\backslash
+left(k, 
+\backslash
+pi
+\backslash
+right)$ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי סיבוכיות זמן הריצה של 
+\begin_inset Formula $\text{DFS}\left(G,s\right)$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\O\left(\left|V\right|+\left|E\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+זמן גילוי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $s\in V\left(G\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $k$
+\end_inset
+
+ בהרצת 
+\begin_inset Formula $\text{DFS}\left(G,s\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהיו 
+\begin_inset Formula $s,v\in V$
+\end_inset
+
+ באשר 
+\begin_inset Formula $v\in\left[s\right]_{\to}$
+\end_inset
+
+ אזי בהרצת 
+\begin_inset Formula $\text{DFS}\left(G,s\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $k\left[v\right]>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+עץ 
+\begin_inset Formula $\text{DFS}$
+\end_inset
+
+
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $V_{\pi}=\left\{ v\in V\mid\text{DFS}\left(G,s\right).\pi\left[v\right]\ne\text{Null}\right\} \cup\left\{ s\right\} $
+\end_inset
+
+ וכן 
+\begin_inset Formula $E_{\pi}=\left\{ \left(\pi\left[v\right],v\right)\mid v\in V_{\pi}\backslash\left\{ s\right\} \right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $G_{\pi}=\left(V_{\pi},E_{\pi}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: עץ 
+\begin_inset Formula $\text{DFS}$
+\end_inset
+
+ הינו עץ.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+קשתות ביחס לריצת 
+\begin_inset Formula $\text{DFS}$
+\end_inset
+
+
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $G_{\pi}$
+\end_inset
+
+ יער 
+\begin_inset Formula $\text{DFS}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+קשתות עץ: קשת 
+\begin_inset Formula $e\in E\left(G\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $e\in E\left(G_{\pi}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קשתות קדמיות: קשת 
+\begin_inset Formula $\left(u,v\right)\in E\left(G\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\left(u,v\right)\notin E\left(G_{\pi}\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $u$
+\end_inset
+
+ הינו אב של 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קשתות אחוריות: קשת 
+\begin_inset Formula $\left(u,v\right)\in E\left(G\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\left(u,v\right)\notin E\left(G_{\pi}\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $v$
+\end_inset
+
+ הינו אב של 
+\begin_inset Formula $u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קשתות חוצות: קשת 
+\begin_inset Formula $e\in E\left(G\right)$
+\end_inset
+
+ שאינה קשת עץ או קדמית או אחורית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף לא מכוון ותהא 
+\begin_inset Formula $\left(u,v\right)$
+\end_inset
+
+ קשת עץ אזי 
+\begin_inset Formula $u$
+\end_inset
+
+ צאצא של 
+\begin_inset Formula $v$
+\end_inset
+
+ בגרף 
+\begin_inset Formula $G_{\pi}$
+\end_inset
+
+ או 
+\begin_inset Formula $v$
+\end_inset
+
+ צאצא של 
+\begin_inset Formula $u$
+\end_inset
+
+ בגרף 
+\begin_inset Formula $G_{\pi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף לא מכוון אזי לא קיימות קשתות חוצות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+אלגוריתם 
+\begin_inset Formula $\text{DFS}$
+\end_inset
+
+ בעל זמני נסיגה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{DFS}{DFS}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+DFS{$G$}}{     $
+\backslash
+left(k, f, 
+\backslash
+pi
+\backslash
+right)
+\backslash
+gets$ dict($V$)
+\backslash
+
+\backslash
+     
+\backslash
+For{$u
+\backslash
+in V$}{         $k[u] 
+\backslash
+gets 0$
+\backslash
+
+\backslash
+         $
+\backslash
+pi[u] 
+\backslash
+gets 
+\backslash
+text{Null}$
+\backslash
+
+\backslash
+     }     $i 
+\backslash
+gets 0$     
+\backslash
+For{$s
+\backslash
+in V$}{         
+\backslash
+If{$k[s] = 0$}{             $
+\backslash
+text{DFS-VISIT}(s,k ,f ,
+\backslash
+pi, i)$
+\backslash
+
+\backslash
+         }     }     
+\backslash
+Return $
+\backslash
+left(k, f, 
+\backslash
+pi
+\backslash
+right)$ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{DFS-VISIT}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$v, k, f, 
+\backslash
+pi, i$}}{     $i
+\backslash
+gets i + 1$
+\backslash
+
+\backslash
+     $k[v]
+\backslash
+gets i$
+\backslash
+
+\backslash
+     
+\backslash
+For{$w
+\backslash
+in Adj(v)$}{         $
+\backslash
+pi[w]
+\backslash
+gets v$
+\backslash
+
+\backslash
+         
+\backslash
+name{$w, k, f, 
+\backslash
+pi, i$}
+\backslash
+
+\backslash
+     }     $i
+\backslash
+gets i +1$
+\backslash
+
+\backslash
+     $f[v] 
+\backslash
+gets i$
+\backslash
+
+\backslash
+ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+זמן נסיגה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $s\in V\left(G\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ בהרצת 
+\begin_inset Formula $\text{DFS}\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+ 
+\lang english
+
+\begin_inset Formula $\text{\textbf{Gray Path Lemma}}$
+\end_inset
+
+
+\color inherit
+\lang hebrew
+: יהיו 
+\begin_inset Formula $v,u\in V$
+\end_inset
+
+ אזי )
+\begin_inset Formula $v$
+\end_inset
+
+ צאצא של 
+\begin_inset Formula $u$
+\end_inset
+
+ ביער 
+\begin_inset Formula $G_{\pi}$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $k\left[u\right]<k\left[v\right]<f\left[u\right]$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $v,u\in V$
+\end_inset
+
+ אזי )
+\begin_inset Formula $\left(u,v\right)$
+\end_inset
+
+ קשת חוצה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $f\left[v\right]<k\left[u\right]$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט הסוגריים
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהיו 
+\begin_inset Formula $u,v\in V$
+\end_inset
+
+ אזי מתקיים בדיוק אחד מהבאים
+\end_layout
+
+\begin_layout Itemize
+מתקיים 
+\begin_inset Formula $\left[k\left(u\right),f\left(u\right)\right]\cap\left[k\left(v\right),f\left(v\right)\right]=\emptyset$
+\end_inset
+
+ וכן 
+\begin_inset Formula $u,v$
+\end_inset
+
+ אינם צאצא־אב ביער 
+\begin_inset Formula $G_{\pi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+מתקיים 
+\begin_inset Formula $\left[k\left(u\right),f\left(u\right)\right]\subset\left[k\left(v\right),f\left(v\right)\right]$
+\end_inset
+
+ וכן 
+\begin_inset Formula $u$
+\end_inset
+
+ צאצא של 
+\begin_inset Formula $v$
+\end_inset
+
+ ביער 
+\begin_inset Formula $G_{\pi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+מתקיים 
+\begin_inset Formula $\left[k\left(u\right),f\left(u\right)\right]\supset\left[k\left(v\right),f\left(v\right)\right]$
+\end_inset
+
+ וכן 
+\begin_inset Formula $v$
+\end_inset
+
+ צאצא של 
+\begin_inset Formula $u$
+\end_inset
+
+ ביער 
+\begin_inset Formula $G_{\pi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט המסלול הלבן
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהיו 
+\begin_inset Formula $u,v\in V$
+\end_inset
+
+ אזי )
+\begin_inset Formula $v$
+\end_inset
+
+ צאצא של 
+\begin_inset Formula $u$
+\end_inset
+
+ ביער 
+\begin_inset Formula $G_{\pi}$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)בזמן 
+\begin_inset Formula $k\left(u\right)$
+\end_inset
+
+ באלגוריתם 
+\begin_inset Formula $\text{DFS}\left(G\right)$
+\end_inset
+
+ יש מסלול לבן מ־
+\begin_inset Formula $u$
+\end_inset
+
+ ל־
+\begin_inset Formula $v$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+גרף מכוון אציקל
+\series default
+י
+\color inherit
+: גרף מכוון 
+\begin_inset Formula $G$
+\end_inset
+
+ בו לא קיים מעגל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מיון טופולוגי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אזי יחס סדר 
+\begin_inset Formula $\prec$
+\end_inset
+
+ על 
+\begin_inset Formula $V$
+\end_inset
+
+ המקיים לכל 
+\begin_inset Formula $u,v\in V$
+\end_inset
+
+ אם 
+\begin_inset Formula $\left(u,v\right)\in E$
+\end_inset
+
+ אזי 
+\begin_inset Formula $u\prec v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אזי )
+\begin_inset Formula $G$
+\end_inset
+
+ אציקלי(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיים מיון טופולוגי על 
+\begin_inset Formula $G$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה אלגוריתם קנות'
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אזי קיים אלגוריתם לבדיקת קיום מיון טופולוגי בסיבוכיות 
+\begin_inset Formula $\O\left(\left|V\right|+\left|E\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אזי )
+\begin_inset Formula $G$
+\end_inset
+
+ רציקלי(
+\begin_inset Formula $\iff$
+\end_inset
+
+)אין קשתות אחוריות ב־
+\begin_inset Formula $G$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אציקלי אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ המתקבלת מהרצת 
+\begin_inset Formula $\text{DFS}\left(G\right)$
+\end_inset
+
+ משרה מיון טופולוגי על 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+רכיב קשיר היטב )רק
+\begin_inset Quotes erd
+\end_inset
+
+ה(
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אזי קבוצה 
+\begin_inset Formula $C\subseteq V$
+\end_inset
+
+ מקסימלית בגודלה עבורה לכל 
+\begin_inset Formula $u,v\in C$
+\end_inset
+
+ קיים מסלול מ־
+\begin_inset Formula $u$
+\end_inset
+
+ ל־
+\begin_inset Formula $v$
+\end_inset
+
+ וכן מ־
+\begin_inset Formula $v$
+\end_inset
+
+ ל־
+\begin_inset Formula $u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+גרף הופכי/משוחלף
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון נגדיר 
+\begin_inset Formula $E^{\prime}=\left\{ \left(v,u\right)\mid\left(u,v\right)\in E\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $G^{T}=\left(V,E^{\prime}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון ותהא 
+\begin_inset Formula $C\subseteq V$
+\end_inset
+
+ אזי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+)
+\begin_inset Formula $C$
+\end_inset
+
+ רק
+\begin_inset Quotes erd
+\end_inset
+
+ה של 
 \begin_inset Formula $G$
 \end_inset
 
@@ -856,12 +2750,398 @@ end{algorithm}
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
-\begin_inset Formula $v\in V$
+(
+\begin_inset Formula $C$
 \end_inset
 
- מתקיים 
-\begin_inset Formula $\deg\left(v\right)\in\bbn_{\text{even}}$
+ רק
+\begin_inset Quotes erd
+\end_inset
+
+ה של 
+\begin_inset Formula $G^{T}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+אלגוריתם למציאת רכיבים קשירים היטב
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{SCC}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$G$}}{     $
+\backslash
+left(k, f, 
+\backslash
+pi
+\backslash
+right)
+\backslash
+gets 
+\backslash
+text{DFS}(G)$
+\backslash
+
+\backslash
+     
+\backslash
+tcc{In the next line, in the main loop of DFS we go through the vertices
+ in decreasing order of f[u]}     $
+\backslash
+left(k^
+\backslash
+prime, f^
+\backslash
+prime, 
+\backslash
+pi^
+\backslash
+prime
+\backslash
+right)
+\backslash
+gets 
+\backslash
+text{DFS}(G^T)$
+\backslash
+
+\backslash
+     $A 
+\backslash
+gets 
+\backslash
+text{set}(
+\backslash
+text{set}(V))$
+\backslash
+
+\backslash
+     
+\backslash
+For{$v
+\backslash
+in V$}{         $A .
+\backslash
+text{append}
+\backslash
+left([v]_{
+\backslash
+xrightarrow[G^T_{
+\backslash
+pi}]{}}
+\backslash
+right)$     }     
+\backslash
+Return $A$ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+גרף הרכיבים
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון נגדיר 
+\begin_inset Formula $E^{*}=\left\{ \left(A,B\right)\in\text{SCC}\left(G\right)^{2}\mid\exists u\in A.\exists v\in B.\left(u,v\right)\in E\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $G^{*}=\left(\text{SCC}\left(G\right),E^{*}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+אלגוריתם למציאת גרף הרכיבים
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{ComponentGraph}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$G$}}{     $V^* 
+\backslash
+gets 
+\backslash
+text{SCC}(G)$
+\backslash
+
+\backslash
+     $E^* 
+\backslash
+gets 
+\backslash
+text{set}((V^*)^2)$
+\backslash
+
+\backslash
+     
+\backslash
+For{$(u,v)
+\backslash
+in E$}{         
+\backslash
+If{$[v]_{
+\backslash
+xrightarrow[G^T_{
+\backslash
+pi}]{}} 
+\backslash
+ne [u]_{
+\backslash
+xrightarrow[G^T_{
+\backslash
+pi}]{}}$}{             $E^* .
+ 
+\backslash
+text{append}
+\backslash
+left(
+\backslash
+left([v]_{
+\backslash
+xrightarrow[G^T_{
+\backslash
+pi}]{}}, [u]_{
+\backslash
+xrightarrow[G^T_{
+\backslash
+pi}]{}}
+\backslash
+right)
+\backslash
+right)$         }     }     
+\backslash
+Return $(V^* , E^*)$ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+למה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אזי 
+\begin_inset Formula $G^{*}$
+\end_inset
+
+ אציקלי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הגדרה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ותהא 
+\begin_inset Formula $U\subseteq V$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+זמן גילוי: 
+\begin_inset Formula $k\left(U\right)=\min_{u\in U}\left(k\left[u\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+זמן נסיגה: 
+\begin_inset Formula $f\left(U\right)=\max_{u\in U}\left(f\left[u\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+למה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון יהיו 
+\begin_inset Formula $C_{1},C_{2}\subseteq V$
+\end_inset
+
+ רק
+\begin_inset Quotes erd
+\end_inset
+
+ה באשר 
+\begin_inset Formula $\left(C_{1},C_{2}\right)\in E\left(G^{*}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(C_{2}\right)<f\left(C_{1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון יהיו 
+\begin_inset Formula $C_{1},C_{2}\subseteq V$
+\end_inset
+
+ רק
+\begin_inset Quotes erd
+\end_inset
+
+ה באשר 
+\begin_inset Formula $\left(C_{1},C_{2}\right)\in E\left(\left(G^{T}\right)^{*}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(C_{2}\right)>f\left(C_{1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון ויהי 
+\begin_inset Formula $C\subseteq V$
+\end_inset
+
+ אזי )
+\begin_inset Formula $C$
+\end_inset
+
+ רק
+\begin_inset Quotes erd
+\end_inset
+
+ה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $C\in\text{SCC}\left(G\right)$
 \end_inset
 
 .)
