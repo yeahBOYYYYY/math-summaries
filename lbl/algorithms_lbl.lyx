@@ -28,6 +28,8 @@
 \newfontfamily\hebrewfont{David CLM}
 \newfontfamily\hebrewfontsf{David CLM}
 \newfontfamily\hebrewfonttt{David CLM}
+\newfontface\tempfont{Times New Roman}[Contextuals={WordInitial,WordFinal}]
+
 
 % it's here?
 \setlength{\tabcolsep}{1pt}
@@ -2134,7 +2136,11 @@ DFS{$G$}}{     $
 \backslash
 left(k, f, 
 \backslash
-pi
+pi, 
+\backslash
+text{color}, 
+\backslash
+text{low}
 \backslash
 right)
 \backslash
@@ -2162,6 +2168,26 @@ text{Null}$
 \backslash
 
 \backslash
+         $
+\backslash
+text{color} 
+\backslash
+gets 
+\backslash
+text{White}$
+\backslash
+
+\backslash
+         $
+\backslash
+text{low} 
+\backslash
+gets 
+\backslash
+infty$
+\backslash
+
+\backslash
      }     $i 
 \backslash
 gets 0$     
@@ -2184,7 +2210,9 @@ Return $
 \backslash
 left(k, f, 
 \backslash
-pi
+pi, 
+\backslash
+text{low}
 \backslash
 right)$ } 
 \backslash
@@ -2212,7 +2240,21 @@ Fn{
 \backslash
 name{$v, k, f, 
 \backslash
-pi, i$}}{     $i
+pi, 
+\backslash
+text{color}, 
+\backslash
+text{low}, i$}}{     $
+\backslash
+text{color}[u] 
+\backslash
+gets 
+\backslash
+text{Gray}$
+\backslash
+
+\backslash
+     $i
 \backslash
 gets i + 1$
 \backslash
@@ -2228,7 +2270,37 @@ gets i$
 \backslash
 For{$w
 \backslash
-in Adj(v)$}{         $
+in Adj(v)$}{         
+\backslash
+uIf{$(
+\backslash
+text{color}[v] = 
+\backslash
+text{Gray})
+\backslash
+land(v
+\backslash
+ne
+\backslash
+pi[u])$}{             $
+\backslash
+text{low} 
+\backslash
+gets 
+\backslash
+min(
+\backslash
+text{low}[u], k[v])$
+\backslash
+
+\backslash
+         } 
+\backslash
+uElseIf{$
+\backslash
+text{color}[v] = 
+\backslash
+text{White}$}{             $
 \backslash
 pi[w]
 \backslash
@@ -2236,15 +2308,43 @@ gets v$
 \backslash
 
 \backslash
-         
+             
 \backslash
 name{$w, k, f, 
 \backslash
-pi, i$}
+pi, 
+\backslash
+text{color}, 
+\backslash
+text{low}, i$}
 \backslash
 
 \backslash
-     }     $i
+             $
+\backslash
+text{low} 
+\backslash
+gets 
+\backslash
+min(
+\backslash
+text{low}[u], 
+\backslash
+text{low}[v])$
+\backslash
+
+\backslash
+         }     }     $
+\backslash
+text{color}[u] 
+\backslash
+gets 
+\backslash
+text{Black}$
+\backslash
+
+\backslash
+     $i
 \backslash
 gets i +1$
 \backslash
@@ -2632,6 +2732,234 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color blue
+קודקוד מנתק
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אזי 
+\begin_inset Formula $v\in V\left(G\right)$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left|\nicefrac{G}{\xrightarrow[G]{}}\right|\le\left|\nicefrac{G-\left\{ v\right\} }{\xrightarrow[G-\left\{ v\right\} ]{}}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+אב חורג
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון ויהי 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $w\in V$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left(w,v\right)$
+\end_inset
+
+ קשת אחורית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+זמן גילוי האב החורג המוקדם ביותר
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי 
+\begin_inset Formula $\text{low}$
+\end_inset
+
+ בהרצת 
+\begin_inset Formula $\text{DFS}\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+אלגוריתם למציאת כל הקודקודים המנתקים
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון וקשיר אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{DetachableVertices}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$G$}}{     $s 
+\backslash
+gets V$
+\backslash
+
+\backslash
+     $
+\backslash
+left(k, f, 
+\backslash
+pi, 
+\backslash
+text{low}
+\backslash
+right)
+\backslash
+gets 
+\backslash
+text{DFS}(G, s)$
+\backslash
+
+\backslash
+     $A 
+\backslash
+gets 
+\backslash
+text{set}(V)$
+\backslash
+
+\backslash
+     
+\backslash
+If{$|Adj_{G_
+\backslash
+pi}(s)| 
+\backslash
+ne 1$}{         $A.
+\backslash
+text{append}(s)$
+\backslash
+
+\backslash
+     }     
+\backslash
+For{$u
+\backslash
+in V
+\backslash
+backslash
+\backslash
+{s
+\backslash
+}$}{         
+\backslash
+If{$
+\backslash
+exists v
+\backslash
+in children(u).
+ low[v] 
+\backslash
+ge k[u]$}{             $A.
+\backslash
+text{append}(u)$
+\backslash
+
+\backslash
+         }     }     
+\backslash
+Return $A$ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון וקשיר אזי סיבוכיות 
+\begin_inset Formula $\text{DetachableVertices}\left(G\right)$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\O\left(\left|V\right|+\left|E\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון וקשיר אזי 
+\begin_inset Formula $\text{DetachableVertices}\left(G\right)$
+\end_inset
+
+ הינה קבוצת כל הקודקודים המנתקים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 \color red
 רכיב קשיר היטב )רק
 \begin_inset Quotes erd
@@ -3002,6 +3330,13 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color red
@@ -3145,6 +3480,1634 @@ end{algorithm}
 \end_inset
 
 .)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+קבוצת מוצא
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אזי 
+\begin_inset Formula $S\subseteq V$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\forall v\in V.\exists s\in S.s\to v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+אלגוריתם למציאת קבוצת מוצא מינימלית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{MinimalOriginSet}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$G$}}{     $A 
+\backslash
+gets 
+\backslash
+text{set}(V(G))$
+\backslash
+
+\backslash
+     $G^* 
+\backslash
+gets 
+\backslash
+text{ComponentGraph}(G)$
+\backslash
+
+\backslash
+     
+\backslash
+For{$C
+\backslash
+in V(G^*)$}{         $v
+\backslash
+gets 
+\backslash
+{u
+\backslash
+in C
+\backslash
+mid 
+\backslash
+nexists w
+\backslash
+in V(G)
+\backslash
+backslash C.
+ (w, u)
+\backslash
+in E(G)
+\backslash
+}$
+\backslash
+
+\backslash
+         $A.
+\backslash
+text{append}(v)$
+\backslash
+
+\backslash
+     }     
+\backslash
+Return $A$ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אזי 
+\begin_inset Formula $\text{MinimalOriginSet}\left(G\right)$
+\end_inset
+
+ קבוצת מוצא מינימלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון וקשיר אזי סיבוכיות 
+\begin_inset Formula $\text{MinimalOriginSet}\left(G\right)$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\O\left(\left|V\right|+\left|E\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון ותהא 
+\begin_inset Formula $S\subseteq V$
+\end_inset
+
+ אזי קיים אלגוריתם הבודק האם קיים הילוך 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ העובר על 
+\begin_inset Formula $S$
+\end_inset
+
+ בסיבוכיות 
+\begin_inset Formula $\O\left(\left|V\right|+\left|E\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+גרף ממושקל
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ותהא 
+\begin_inset Formula $w:E\to\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(G,w\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+עץ פורש
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון אזי תת־גרף 
+\begin_inset Formula $T\le G$
+\end_inset
+
+ באשר 
+\begin_inset Formula $T$
+\end_inset
+
+ עץ וכן 
+\begin_inset Formula $V\left(T\right)=V\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משקל עץ פורש
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון ויהי 
+\begin_inset Formula $T\le G$
+\end_inset
+
+ עץ פורש אזי 
+\begin_inset Formula $w\left(T\right)=\sum_{e\in E\left(T\right)}w\left(e\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+עץ פורש מינימלי )עפ
+\begin_inset Quotes erd
+\end_inset
+
+מ(
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון אזי עץ פורש 
+\begin_inset Formula $T\le G$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $w\left(T\right)=\min\left\{ w\left(S\right)\mid G\text{ עץ פורש של}S\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+חתך
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי 
+\begin_inset Formula $A,B\subseteq V\left(G\right)$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $A\uplus B=V\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+קשתות החתך
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $A,B\subseteq V\left(G\right)$
+\end_inset
+
+ חתך אזי 
+\begin_inset Formula $\left\{ \left(u,v\right)\in E\left(G\right)\mid\left(u\in A\right)\land\left(v\in B\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $T\le G$
+\end_inset
+
+ עץ פורש ותהא 
+\begin_inset Formula $e\in E\left(G\right)\backslash E\left(T\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $T+\left\{ e\right\} $
+\end_inset
+
+ בעל מעגל יחיד.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $T\le G$
+\end_inset
+
+ עץ פורש תהא 
+\begin_inset Formula $e_{1}\in E\left(G\right)\backslash E\left(T\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $e_{2}\in E\left(T+\left\{ e_{1}\right\} \right)$
+\end_inset
+
+ אשר הינה חלק ממעגל אזי 
+\begin_inset Formula $T+\left\{ e_{1}\right\} -\left\{ e_{2}\right\} $
+\end_inset
+
+ עץ פורש.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $T\le G$
+\end_inset
+
+ עץ פורש ותהא 
+\begin_inset Formula $e\in E\left(T\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $T-\left\{ e\right\} $
+\end_inset
+
+ הינו יער בעל שני עצים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $T\le G$
+\end_inset
+
+ עץ פורש תהא 
+\begin_inset Formula $e\in E\left(T\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $v\in V\left(G\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[v\right]_{\xrightarrow[T-\left\{ e\right\} ]{}},V\left(G\right)\backslash\left[v\right]_{\xrightarrow[T-\left\{ e\right\} ]{}}$
+\end_inset
+
+ חתך של 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+אלגוריתם גנרי למציאת עץ פורש מינימלי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{MST}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$G, w$}}{     $
+\backslash
+text{color}
+\backslash
+gets$ dict($E$)
+\backslash
+
+\backslash
+     
+\backslash
+For{$e
+\backslash
+in E$}{         $
+\backslash
+text{color}[e] = 
+\backslash
+text{White}$
+\backslash
+
+\backslash
+     }     
+\backslash
+While{$
+\backslash
+exists e
+\backslash
+in E.
+ color[e] = White$}{         $
+\backslash
+text{Blueless} 
+\backslash
+gets 
+\backslash
+{A
+\backslash
+subseteq V
+\backslash
+mid 
+\backslash
+forall e
+\backslash
+in (A^2 
+\backslash
+cap E).
+ 
+\backslash
+text{color}[e] 
+\backslash
+ne 
+\backslash
+text{Blue}
+\backslash
+}$
+\backslash
+
+\backslash
+         $
+\backslash
+text{Redless} 
+\backslash
+gets 
+\backslash
+{
+\backslash
+sigma 
+\backslash
+text{ circle in G}
+\backslash
+mid
+\backslash
+forall i
+\backslash
+in [
+\backslash
+text{len}(
+\backslash
+sigma)].
+ 
+\backslash
+text{color}[(
+\backslash
+sigma[i], 
+\backslash
+sigma[i + 1])] 
+\backslash
+ne 
+\backslash
+text{Red}
+\backslash
+}$
+\backslash
+
+\backslash
+         
+\backslash
+If{$Blueless 
+\backslash
+ne 
+\backslash
+emptyset$}{             $A 
+\backslash
+gets 
+\backslash
+text{Blueless}$
+\backslash
+
+\backslash
+             $f
+\backslash
+gets 
+\backslash
+text{argmin}_{e
+\backslash
+in A^2
+\backslash
+cap E}(w(e))$
+\backslash
+
+\backslash
+             $
+\backslash
+text{color}[f] = 
+\backslash
+text{Blue}$
+\backslash
+
+\backslash
+         }         
+\backslash
+If{$
+\backslash
+text{Redless} 
+\backslash
+ne 
+\backslash
+emptyset$}{             $
+\backslash
+sigma
+\backslash
+gets 
+\backslash
+text{Redless}$
+\backslash
+
+\backslash
+             $f
+\backslash
+gets 
+\backslash
+text{argmax}_{e
+\backslash
+in 
+\backslash
+sigma}(w(e))$
+\backslash
+
+\backslash
+             $
+\backslash
+text{color}[f] = 
+\backslash
+text{Red}$
+\backslash
+
+\backslash
+         }     }     
+\backslash
+Return $(V, 
+\backslash
+{e
+\backslash
+in E
+\backslash
+mid 
+\backslash
+text{color}[e] = 
+\backslash
+text{Blue}
+\backslash
+})$ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $a\in E$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\text{color}\left[a\right]=\text{White}$
+\end_inset
+
+ באיטרציה של 
+\begin_inset Formula $\text{MST}\left(G\right)$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $e\in E$
+\end_inset
+
+ אשר ניתנת לצביעה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{MST}\left(G\right)$
+\end_inset
+
+ צובעת 
+\begin_inset Formula $\left|E\right|$
+\end_inset
+
+ קשתות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ אזי בכל איטרציה של 
+\begin_inset Formula $\text{MST}\left(G\right)$
+\end_inset
+
+ קיים 
+\begin_inset Formula $T\le G$
+\end_inset
+
+ עפ
+\begin_inset Quotes erd
+\end_inset
+
+מ עבורו
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $e\in E$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\text{color}\left[e\right]=\text{Blue}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $e\in E\left(T\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $e\in E$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\text{color}\left[e\right]=\text{Red}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $e\notin E\left(T\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{MST}\left(G\right)$
+\end_inset
+
+ עפ
+\begin_inset Quotes erd
+\end_inset
+
+מ של 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+אלגוריתם פרים למציאת עץ פורש מינימלי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{Prim'sAlgorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$G$}}{     $
+\backslash
+text{color}
+\backslash
+gets 
+\backslash
+text{dict}(E)$
+\backslash
+
+\backslash
+     $U 
+\backslash
+gets 
+\backslash
+text{set}(V)$
+\backslash
+
+\backslash
+     
+\backslash
+For{$e
+\backslash
+in E$}{         $
+\backslash
+text{color}[e] = 
+\backslash
+text{White}$
+\backslash
+
+\backslash
+     }     $r 
+\backslash
+gets V$
+\backslash
+
+\backslash
+     $U.
+\backslash
+text{append}(r)$
+\backslash
+
+\backslash
+     
+\backslash
+While{$U
+\backslash
+ne V$}{         $(u, v) 
+\backslash
+gets 
+\backslash
+text{argmin}_{e
+\backslash
+in U
+\backslash
+times(V
+\backslash
+backslash U)}(w(e))$
+\backslash
+
+\backslash
+         $
+\backslash
+text{color}[(u, v)] = 
+\backslash
+text{Blue}$
+\backslash
+
+\backslash
+         $U.
+\backslash
+text{append}(v)$
+\backslash
+
+\backslash
+         
+\backslash
+For{$w
+\backslash
+in U$}{             
+\backslash
+If{$(w, v)
+\backslash
+in E$}{                 $
+\backslash
+text{color}[(w, v)] = 
+\backslash
+text{Red}$
+\backslash
+
+\backslash
+             }         }     }     
+\backslash
+Return $(V, 
+\backslash
+{e
+\backslash
+in E
+\backslash
+mid 
+\backslash
+text{color}[e] = 
+\backslash
+text{Blue}
+\backslash
+})$ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ אזי כל צביעת קשת באלגוריתם 
+\begin_inset Formula $\text{Prim'sAlgorithm}\left(G\right)$
+\end_inset
+
+ נעשית כמו באלגוריתם הגנרי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{Prim'sAlgorithm}\left(G\right)$
+\end_inset
+
+ עפ
+\begin_inset Quotes erd
+\end_inset
+
+מ של 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ אזי ניתן לממש את 
+\begin_inset Formula $\text{Prim'sAlgorithm}\left(G\right)$
+\end_inset
+
+ עם ערימת מינימום בסיבוכיות 
+\begin_inset Formula $\O\left(E\log\left(V\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+הערה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ אזי ניתן לממש את 
+\begin_inset Formula $\text{Prim'sAlgorithm}\left(G\right)$
+\end_inset
+
+ בסיבוכיות 
+\begin_inset Formula $\O\left(E+V\log\left(V\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+אלגוריתם קרוסקל למציאת עץ פורש מינימלי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{Kruskal'sAlgorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$G$}}{     $
+\backslash
+text{color}
+\backslash
+gets 
+\backslash
+text{dict}(E)$
+\backslash
+
+\backslash
+     $L 
+\backslash
+gets 
+\backslash
+text{sort}(E)$
+\backslash
+
+\backslash
+     
+\backslash
+For{$(u, v)
+\backslash
+in L$}{         
+\backslash
+If{$
+\backslash
+exists
+\backslash
+sigma 
+\backslash
+in 
+\backslash
+{u
+\backslash
+to v
+\backslash
+}.
+ 
+\backslash
+forall i
+\backslash
+in[n].
+ 
+\backslash
+text{color}(
+\backslash
+sigma(i)) = 
+\backslash
+text{Blue}$}{             $
+\backslash
+text{color}[e] = 
+\backslash
+text{Red}$
+\backslash
+
+\backslash
+         } 
+\backslash
+Else{             $
+\backslash
+text{color}[e] = 
+\backslash
+text{Blue}$
+\backslash
+
+\backslash
+         }     }     
+\backslash
+Return $(V, 
+\backslash
+{e
+\backslash
+in E
+\backslash
+mid 
+\backslash
+text{color}[e] = 
+\backslash
+text{Blue}
+\backslash
+})$ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ אזי כל צביעת קשת באלגוריתם 
+\begin_inset Formula $\text{Kruskal'sAlgorithm}\left(G\right)$
+\end_inset
+
+ נעשית כמו באלגוריתם הגנרי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{Kruskal'sAlgorithm}\left(G\right)$
+\end_inset
+
+ עפ
+\begin_inset Quotes erd
+\end_inset
+
+מ של 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ אזי ניתן לממש את 
+\begin_inset Formula $\text{Kruskal'sAlgorithm}\left(G\right)$
+\end_inset
+
+ עם 
+\begin_inset Formula $\text{Union-Find}$
+\end_inset
+
+ בסיבוכיות 
+\begin_inset Formula $\O\left(E\log\left(V\right)\right)$
+\end_inset
+
+ וכן סיבוכיות 
+\begin_inset Formula $\text{amortized}$
+\end_inset
+
+ 
+\begin_inset Formula $\O\left(E\log^{*}\left(V\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+אלגוריתם 
+\lang english
+
+\begin_inset Formula $\text{Borůvska}$
+\end_inset
+
+
+\lang hebrew
+ למציאת עץ פורש מינימלי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ באשר 
+\begin_inset Formula $w$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{Borůvska’sAlgorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$G$}}{     $
+\backslash
+text{Trees} 
+\backslash
+gets 
+\backslash
+text{set}(
+\backslash
+text{set}(G))$
+\backslash
+
+\backslash
+     
+\backslash
+For{$v
+\backslash
+in V$}{         $
+\backslash
+text{Trees}.
+\backslash
+text{append}(
+\backslash
+{v
+\backslash
+})$
+\backslash
+
+\backslash
+     }     
+\backslash
+While{$|Trees| 
+\backslash
+ne 1$}{         
+\backslash
+For{$T 
+\backslash
+in Tree$}{             $(u, v) 
+\backslash
+gets 
+\backslash
+text{argmin}_{(u, v)
+\backslash
+in V(T)
+\backslash
+times V(G)}(w((u, v)))$
+\backslash
+
+\backslash
+             $S 
+\backslash
+gets 
+\backslash
+{S
+\backslash
+in Tree
+\backslash
+mid u
+\backslash
+in V(S)
+\backslash
+}$
+\backslash
+
+\backslash
+             $S 
+\backslash
+gets S + T + 
+\backslash
+{(u, v)
+\backslash
+}$
+\backslash
+
+\backslash
+             $
+\backslash
+text{Trees}.
+\backslash
+text{Remove}(T)$
+\backslash
+
+\backslash
+         }     }     $A 
+\backslash
+gets 
+\backslash
+text{Trees}$
+\backslash
+
+\backslash
+     
+\backslash
+Return A } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ באשר 
+\begin_inset Formula $w$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע אזי סיבוכיות 
+\lang english
+
+\begin_inset Formula $\text{Borůvska’sAlgorithm}\left(G\right)$
+\end_inset
+
+
+\lang hebrew
+ הינה 
+\begin_inset Formula $\O\left(E\log\left(V\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ באשר 
+\begin_inset Formula $w$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע אזי קיים ויחיד 
+\begin_inset Formula $T\le G$
+\end_inset
+
+ עפ
+\begin_inset Quotes erd
+\end_inset
+
+מ.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ באשר 
+\begin_inset Formula $w$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע אזי 
+\lang english
+
+\begin_inset Formula $\text{Borůvska’sAlgorithm}\left(G\right)$
+\end_inset
+
+
+\lang hebrew
+ עפ
+\begin_inset Quotes erd
+\end_inset
+
+מ של 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ תהא 
+\begin_inset Formula $A\subseteq E$
+\end_inset
+
+ יהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל ותהא 
+\begin_inset Formula $e\in E$
+\end_inset
+
+ בעלת משקל מקסימלי אזי קיים עפ
+\begin_inset Quotes erd
+\end_inset
+
+מ 
+\begin_inset Formula $T\le G$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $A\subseteq E\left(T\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $e\notin E\left(T\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
