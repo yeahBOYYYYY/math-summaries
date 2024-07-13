@@ -4534,7 +4534,7 @@ end{algorithm}
 \end_inset
 
  עם ערימת מינימום בסיבוכיות 
-\begin_inset Formula $\O\left(E\log\left(V\right)\right)$
+\begin_inset Formula $\O\left(\left|E\right|\log\left|V\right|\right)$
 \end_inset
 
 .
@@ -4560,7 +4560,7 @@ end{algorithm}
 \end_inset
 
  בסיבוכיות 
-\begin_inset Formula $\O\left(E+V\log\left(V\right)\right)$
+\begin_inset Formula $\O\left(\left|E\right|+\left|V\right|\log\left|V\right|\right)$
 \end_inset
 
 .
@@ -4775,7 +4775,7 @@ end{algorithm}
 \end_inset
 
  בסיבוכיות 
-\begin_inset Formula $\O\left(E\log\left(V\right)\right)$
+\begin_inset Formula $\O\left(\left|E\right|\log\left|V\right|\right)$
 \end_inset
 
  וכן סיבוכיות 
@@ -4783,7 +4783,7 @@ end{algorithm}
 \end_inset
 
  
-\begin_inset Formula $\O\left(E\log^{*}\left(V\right)\right)$
+\begin_inset Formula $\O\left(\left|E\right|\cdot\a\left(\left|V\right|\right)\right)$
 \end_inset
 
 .
@@ -4982,7 +4982,7 @@ end{algorithm}
 
 \lang hebrew
  הינה 
-\begin_inset Formula $\O\left(E\log\left(V\right)\right)$
+\begin_inset Formula $\O\left(\left|E\right|\log\left|V\right|\right)$
 \end_inset
 
 .
@@ -5105,6 +5105,2357 @@ end{algorithm}
 
  וכן 
 \begin_inset Formula $e\notin E\left(T\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $T_{1},T_{2}\le G$
+\end_inset
+
+ עפ
+\begin_inset Quotes erd
+\end_inset
+
+מ ויהיו 
+\begin_inset Formula $\a_{1}\le\ldots\le\a_{n}$
+\end_inset
+
+ ו־
+\begin_inset Formula $\b_{1}\le\ldots\le\b_{m}$
+\end_inset
+
+ משקליי הקשתות כולל כפילויות אזי 
+\begin_inset Formula $n=m$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\a_{i}=\b_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+אלגוריתם למציאת עץ פורש מינימלי המכיל מספר מקסימלי של קשתות מקבוצה מסוימת
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר לא מכוון וממושקל 
+\begin_inset Formula $w$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F\subseteq E$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{PrioritizeMST}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$G, w, F$}}{     $
+\backslash
+varepsilon 
+\backslash
+gets 
+\backslash
+min(
+\backslash
+{w(e_1) - w(e_2) 
+\backslash
+mid (e_1,e_2
+\backslash
+in E)
+\backslash
+land(w(e_1)
+\backslash
+ne w(e_2))
+\backslash
+})/2$
+\backslash
+
+\backslash
+     
+\backslash
+For{$e
+\backslash
+in E$}{         
+\backslash
+If{$e
+\backslash
+in F$}{                       } 
+\backslash
+Else {             $w^
+\backslash
+prime(e) 
+\backslash
+gets w(e)$
+\backslash
+
+\backslash
+         }     }     
+\backslash
+Return $
+\backslash
+text{Kruskal'sAlgorithm}(G, w^
+\backslash
+prime)$
+\backslash
+
+\backslash
+ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\lang hebrew
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $F\subseteq E$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $T$
+\end_inset
+
+ עפ
+\begin_inset Quotes erd
+\end_inset
+
+מ ביחס ל־
+\begin_inset Formula $w^{\prime}$
+\end_inset
+
+ באלגוריתם 
+\begin_inset Formula $\text{PrioritizeMST}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $T$
+\end_inset
+
+ עפ
+\begin_inset Quotes erd
+\end_inset
+
+מ ביחס ל־
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $F\subseteq E$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{PrioritizeMST}\left(G,w\right)$
+\end_inset
+
+ עפ
+\begin_inset Quotes erd
+\end_inset
+
+מ ב־
+\begin_inset Formula $G$
+\end_inset
+
+ ביחס ל־
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+בעיית שיבוץ המשימות
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $s_{1}\ldots s_{n},f_{1}\ldots f_{n}\in\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $s_{i}<f_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\max\left\{ \left|A\right|\bmid\left(A\subseteq\left\{ \left[s_{1},f_{i}\right]\right\} _{i=1}^{n}\right)\land\left(\forall I,J\in A.I\cap J=\emptyset\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+אלגוריתם חמדן לבעיית שיבוץ המשימות
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $s_{1}\ldots s_{n},f_{1}\ldots f_{n}\in\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $s_{i}<f_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{ActivitySelectionProblem}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$s_1, 
+\backslash
+ldots, s_n, f_1, 
+\backslash
+ldots, f_n$}}{     $F 
+\backslash
+gets 
+\backslash
+text{list}([s_1, f_1], 
+\backslash
+ldots, [s_n ,f_n])$
+\backslash
+
+\backslash
+     
+\backslash
+tcc{In the next line, we put all the parameters in F and sort it based on
+ $f_i$}     $F 
+\backslash
+gets 
+\backslash
+text{sort}(
+\backslash
+{f_1, 
+\backslash
+ldots , f_n
+\backslash
+})$
+\backslash
+
+\backslash
+     $X 
+\backslash
+gets 
+\backslash
+text{list}([s_1, f_1], 
+\backslash
+ldots, [s_n ,f_n])$
+\backslash
+
+\backslash
+     $X 
+\backslash
+gets 
+\backslash
+emptyset$
+\backslash
+
+\backslash
+     
+\backslash
+For{$k
+\backslash
+in [1,
+\backslash
+ldots,n]$}{         
+\backslash
+uIf{$X = 
+\backslash
+emptyset$}{             $X.
+\backslash
+text{append}(L[k])$
+\backslash
+
+\backslash
+         } 
+\backslash
+uElseIf{$L[k]
+\backslash
+cap X.
+\backslash
+text{last} = 
+\backslash
+emptyset$}{             $X.
+\backslash
+text{append}(L[k])$
+\backslash
+
+\backslash
+         }     }     
+\backslash
+Return $X$ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $s_{1}\ldots s_{n},f_{1}\ldots f_{n}\in\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $s_{i}<f_{i}$
+\end_inset
+
+ אזי סיבוכיות 
+\begin_inset Formula $\text{ActivitySelectionProblem}$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\O\left(n\log\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+: לכל 
+\begin_inset Formula $k\in\left[n\right]$
+\end_inset
+
+ באיטרציה ה־
+\begin_inset Formula $k$
+\end_inset
+
+ בלולאה ב־
+\begin_inset Formula $\text{ActivitySelectionProblem}$
+\end_inset
+
+ קיים פתרון לבעיה 
+\begin_inset Formula $X^{*}$
+\end_inset
+
+ עבורו
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left(\left[s_{i},f_{i}\right]\in X^{*}\right)\iff\left(\left[s_{i},f_{i}\right]\in X\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $s_{1}\ldots s_{n},f_{1}\ldots f_{n}\in\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $s_{i}<f_{i}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{ActivitySelectionProblem}$
+\end_inset
+
+ פתרון לבעיית שיבוץ המשימות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הערה
+\series default
+\color inherit
+: כאשר משקל הגרף הוא 
+\begin_inset Formula $\ell$
+\end_inset
+
+ הכוונה היא 
+\begin_inset Quotes eld
+\end_inset
+
+אורך הקשת
+\begin_inset Quotes erd
+\end_inset
+
+ ובכך אנו 
+\begin_inset Quotes eld
+\end_inset
+
+מכלילים
+\begin_inset Quotes erd
+\end_inset
+
+ גרף ללא משקל בתור גרף עבורו 
+\begin_inset Formula $\ell=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מעגל שלילי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ מעגל ממושקל 
+\begin_inset Formula $\ell$
+\end_inset
+
+ אזי מעגל 
+\begin_inset Formula $C$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\ell\left(C\right)<0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסלול קצר ביותר בין קודקודים
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ממושקל 
+\begin_inset Formula $\ell$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $s,t\in V$
+\end_inset
+
+ אזי מסלול 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מ־
+\begin_inset Formula $s$
+\end_inset
+
+ ל־
+\begin_inset Formula $t$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\ell\left(\sigma\right)=\min\left\{ \ell\left(\tau\right)\mid\tau\in\left\{ s\to t\right\} \right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $s,t\in V$
+\end_inset
+
+ עבורם קיים מסלול מ־
+\begin_inset Formula $s$
+\end_inset
+
+ ל־
+\begin_inset Formula $t$
+\end_inset
+
+ וכן כל מסלול מ־
+\begin_inset Formula $s$
+\end_inset
+
+ ל־
+\begin_inset Formula $t$
+\end_inset
+
+ לא עובר דרך קשת השייכת למעגל שלילי אזי קיים מסלול פשוט קצר ביותר בין 
+\begin_inset Formula $s$
+\end_inset
+
+ ל־
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $s,t\in V$
+\end_inset
+
+ עבורם קיים מסלול מ־
+\begin_inset Formula $s$
+\end_inset
+
+ ל־
+\begin_inset Formula $t$
+\end_inset
+
+ וכן קיים מסלול מ־
+\begin_inset Formula $s$
+\end_inset
+
+ ל־
+\begin_inset Formula $t$
+\end_inset
+
+ העובר דרך קשת השייכת למעגל שלילי אזי לא קיים מסלול פשוט קצר ביותר בין 
+\begin_inset Formula $s$
+\end_inset
+
+ ל־
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $s,t\in V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\d\left(s,t\right)=\inf_{\sigma\in\left\{ s\to t\right\} }\ell\left(\sigma\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+בעיית המסלולים הקצרים מנקודת מוצא )
+\begin_inset Formula $\text{SSSP}$
+\end_inset
+
+(
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $T\le G$
+\end_inset
+
+ עץ פורש בו כל מסלול מ־
+\begin_inset Formula $s$
+\end_inset
+
+ ל־
+\begin_inset Formula $v$
+\end_inset
+
+ הינו מסלול קצר ביותר ב־
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה אי־שיוויון המשולש
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $u,v,w\in V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\d\left(u,v\right)\le\d\left(u,w\right)+\d\left(w,v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה תת־מסלול קצר ביותר
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מסלול קצר ביותר אזי 
+\begin_inset Formula $\left(\sigma\left[i\right],\ldots\sigma\left[i+k\right]\right)$
+\end_inset
+
+ מסלול קצר ביותר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+אלגוריתם בלמן־פורד למציאת מסלולים קצרים ביותר מנקודת מוצא
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ ממושקל 
+\begin_inset Formula $\ell$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{BellmanFord}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$G, 
+\backslash
+ell , s$}}{     $
+\backslash
+left(d, 
+\backslash
+pi
+\backslash
+right)
+\backslash
+gets$ dict($V$)
+\backslash
+
+\backslash
+     $d[s] 
+\backslash
+gets 0$
+\backslash
+
+\backslash
+     
+\backslash
+For{$u
+\backslash
+in V$}{         $d[u] 
+\backslash
+gets 
+\backslash
+infty$
+\backslash
+
+\backslash
+         $
+\backslash
+pi[u] 
+\backslash
+gets 
+\backslash
+text{None}$
+\backslash
+
+\backslash
+     }     $(c, i) 
+\backslash
+gets 1$
+\backslash
+
+\backslash
+     
+\backslash
+While{$(i 
+\backslash
+le |V|)
+\backslash
+land(c 
+\backslash
+ne 0)$}{         $c 
+\backslash
+gets 0$
+\backslash
+
+\backslash
+         
+\backslash
+For{$(u, v) 
+\backslash
+in E$}{             $c 
+\backslash
+gets 
+\backslash
+text{Relax}(
+\backslash
+ell, d, u, v)$
+\backslash
+
+\backslash
+         }     }     
+\backslash
+Return $c$ }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{Relax}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$
+\backslash
+ell, d, u, v$}}{     
+\backslash
+If{$d[v] > d[u] + 
+\backslash
+ell(u,v)$}{         $d[v] 
+\backslash
+gets d[u] + 
+\backslash
+ell(u,v)$
+\backslash
+
+\backslash
+         $
+\backslash
+pi[v] 
+\backslash
+gets u$
+\backslash
+
+\backslash
+         
+\backslash
+Return 1     }     
+\backslash
+Return 0 }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\lang hebrew
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $s,u,v\in V$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left(u,v\right)\in E$
+\end_inset
+
+ וכן בריצת 
+\begin_inset Formula $\text{BellmanFord}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\d\left(s,u\right)\le d\left[u\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\d\left(s,v\right)\le d\left[u\right]+\ell\left(\left(u,v\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $s,u,v\in V$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left(u,v\right)\in E$
+\end_inset
+
+ וכן בריצת 
+\begin_inset Formula $\text{BellmanFord}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\d\left(s,u\right)\le d\left[u\right]$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\d\left(s,v\right)\le d\left[v\right]$
+\end_inset
+
+ אזי לאחר הרצת 
+\begin_inset Formula $\text{Relax}\left(u,v\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\d\left(s,v\right)\le d\left[v\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ בריצת 
+\begin_inset Formula $\text{BellmanFord}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\d\left(s,v\right)\le d\left[v\right]$
+\end_inset
+
+ אזי לאחר כל רצף פעולות 
+\begin_inset Formula $\text{Relax}$
+\end_inset
+
+ נקבל כי לכל 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\d\left(s,v\right)\le d\left[v\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $s,v\in V$
+\end_inset
+
+ עבורם בריצת 
+\begin_inset Formula $\text{BellmanFord}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $d\left[v\right]=\infty$
+\end_inset
+
+ אזי לאחר כל רצף פעולות 
+\begin_inset Formula $\text{Relax}$
+\end_inset
+
+ נקבל כי 
+\begin_inset Formula $d\left[v\right]=\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $s,v\in V$
+\end_inset
+
+ עבורם בריצת 
+\begin_inset Formula $\text{BellmanFord}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $d\left[v\right]=\d\left(s,v\right)$
+\end_inset
+
+ אזי לאחר כל רצף פעולות 
+\begin_inset Formula $\text{Relax}$
+\end_inset
+
+ נקבל כי 
+\begin_inset Formula $d\left[v\right]=\d\left(s,v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $s,t\in V$
+\end_inset
+
+ עבורם בריצת 
+\begin_inset Formula $\text{BellmanFord}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $d\left[s\right]=0$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\sigma\in\left\{ s\to t\right\} $
+\end_inset
+
+ מסלול אזי לאחר הפעלת הרצף
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\text{Relax}\left(\sigma\left[0\right],\sigma\left[1\right]\right),\ldots,\text{Relax}\left(\sigma\left[n-1\right],\sigma\left[n\right]\right)$
+\end_inset
+
+ נקבל כי 
+\begin_inset Formula $d\left[t\right]\le\ell\left(\sigma\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ עבורו לא קיים מעגל שלילי אשר ניתן להגיע אליו מ־
+\begin_inset Formula $s$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{BellmanFord}$
+\end_inset
+
+ יוצא מהלולאה הראשית כאשר 
+\begin_inset Formula $i<\left|V\right|$
+\end_inset
+
+ וכן מחזיר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+וכן לכל 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $d\left[v\right]=\d\left(s,v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ עבורו קיים מעגל שלילי אשר ניתן להגיע אליו מ־
+\begin_inset Formula $s$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{BellmanFord}$
+\end_inset
+
+ יוצא מהלולאה הראשית כאשר 
+\begin_inset Formula $i=\left|V\right|$
+\end_inset
+
+ וכן מחזיר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+)
+\begin_inset Formula $\text{BellmanFord}$
+\end_inset
+
+ החזיר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיים מעגל שלילי אשר ניתן להגיע אליו מ־
+\begin_inset Formula $s$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Itemize
+)
+\begin_inset Formula $\text{BellmanFord}$
+\end_inset
+
+ החזיר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לא קיים מעגל שלילי אשר ניתן להגיע אליו מ־
+\begin_inset Formula $s$
+\end_inset
+
+ וכן לכל 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $d\left[v\right]=\d\left(s,v\right)$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל בעץ 
+\begin_inset Formula $\text{BellmanFord}$
+\end_inset
+
+ באיזשהו שלב של הרצת 
+\begin_inset Formula $\text{BellmanFord}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל שלילי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ עבורו לא קיים מעגל שלילי אשר ניתן להגיע אליו מ־
+\begin_inset Formula $s$
+\end_inset
+
+ אזי עץ 
+\begin_inset Formula $\text{BellmanFord}$
+\end_inset
+
+ הינו עץ 
+\begin_inset Formula $G_{\pi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ עבורו קיים מעגל שלילי אשר ניתן להגיע אליו מ־
+\begin_inset Formula $s$
+\end_inset
+
+ אזי עץ 
+\begin_inset Formula $\text{BellmanFord}$
+\end_inset
+
+ מכיל מעגל שלילי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{BellmanFord}$
+\end_inset
+
+ פתרון לבעיית 
+\begin_inset Formula $\text{SSSP}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי אלגוריתם 
+\begin_inset Formula $\text{BellmanFord}$
+\end_inset
+
+ רץ בסיבוכיות 
+\begin_inset Formula $\O\left(\left|E\right|\cdot\left|V\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הערה
+\series default
+\color inherit
+: נניח כי 
+\begin_inset Formula $\ell:E\to\bbz$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\ell\left(e\right)\ge-W$
+\end_inset
+
+ אזי קיים אלגוריתם לבעיית 
+\begin_inset Formula $\text{SSSP}$
+\end_inset
+
+ בסיבוכיות
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\O\left(\left|E\right|\log^{2}\left(\left|V\right|\right)\log\left(\left|V\right|\cdot W\right)\log\log\left(\left|V\right|\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+אלגוריתם לבדיקת קיום מעגל במשקל 0 בגרף מכוון חסר מעגלים שליליים
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון חסר מעגלים שליליים אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{IsZeroCircle}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$G, 
+\backslash
+ell$}}{     $s 
+\backslash
+not
+\backslash
+gets V$
+\backslash
+
+\backslash
+     $V 
+\backslash
+gets V 
+\backslash
+cup {s}$
+\backslash
+
+\backslash
+     
+\backslash
+For{$v
+\backslash
+in V
+\backslash
+backslash 
+\backslash
+{s
+\backslash
+}$}{         $E 
+\backslash
+gets E 
+\backslash
+cup 
+\backslash
+{(s, v)
+\backslash
+}$
+\backslash
+
+\backslash
+         $
+\backslash
+ell((s, v)) 
+\backslash
+gets 0$
+\backslash
+
+\backslash
+     }     $
+\backslash
+text{BellmanFord}(G, 
+\backslash
+ell, s)$
+\backslash
+
+\backslash
+     
+\backslash
+For{$e
+\backslash
+in E$}{         
+\backslash
+If{$
+\backslash
+delta(s, v) 
+\backslash
+ne 
+\backslash
+delta(s, u) + 
+\backslash
+ell(u,v)$}{             $E 
+\backslash
+gets E 
+\backslash
+backslash 
+\backslash
+{(s, v)
+\backslash
+}$
+\backslash
+
+\backslash
+         }     }     
+\backslash
+If{$
+\backslash
+exists 
+\backslash
+text{ circle } C 
+\backslash
+in G$}{         
+\backslash
+Return 
+\backslash
+text{true}
+\backslash
+
+\backslash
+     }     
+\backslash
+Return 
+\backslash
+text{false}
+\backslash
+
+\backslash
+ }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\lang hebrew
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: בריצת 
+\begin_inset Formula $\text{IsZeroCircle}$
+\end_inset
+
+ לאחר מחיקת כל הקשתות נקבל את גרף מק
+\begin_inset Quotes erd
+\end_inset
+
+ב מ־
+\begin_inset Formula $s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: אם בריצת 
+\begin_inset Formula $\text{IsZeroCircle}$
+\end_inset
+
+ לאחר מחיקת כל הקשתות קיים מעגל 
+\begin_inset Formula $C$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ell\left(C\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל עבורו 
+\begin_inset Formula $\ell\left(C\right)=0$
+\end_inset
+
+ אזי בריצת 
+\begin_inset Formula $\text{IsZeroCircle}$
+\end_inset
+
+ לאחר מחיקת כל הקשתות נקבל כי 
+\begin_inset Formula $C$
+\end_inset
+
+ בגרף.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון חסר מעגלים שליליים אזי )
+\begin_inset Formula $G$
+\end_inset
+
+ בעל מעגל ממשקל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\text{IsZeroCircle}$
+\end_inset
+
+ מחזיר 
+\begin_inset Formula $\text{true}$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון חסר מעגלים שליליים אזי סיבוכיות 
+\begin_inset Formula $\text{IsZeroCircle}$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\O\left(\left|V\right|\cdot\left|E\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+אלגוריתם למציאת מסלולים קצרים ביותר מנקודת מוצא בגרף מכוון אציקלי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ מכוון אציקלי ויהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{SSSP-DAG}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$G, 
+\backslash
+ell , s$}}{     $
+\backslash
+left(d, 
+\backslash
+pi
+\backslash
+right)
+\backslash
+gets$ dict($V$)
+\backslash
+
+\backslash
+     $d[s] 
+\backslash
+gets 0$
+\backslash
+
+\backslash
+     
+\backslash
+For{$u
+\backslash
+in V$}{         $d[u] 
+\backslash
+gets 
+\backslash
+infty$
+\backslash
+
+\backslash
+         $
+\backslash
+pi[u] 
+\backslash
+gets 
+\backslash
+text{None}$
+\backslash
+
+\backslash
+     }     
+\backslash
+tcc{Knuth’sAlgorithm is an algorithm to compute a topological sorting.} 
+    $f 
+\backslash
+gets 
+\backslash
+text{Knuth’sAlgorithm}(G)$
+\backslash
+
+\backslash
+     
+\backslash
+For{$i
+\backslash
+in [1,
+\backslash
+ldots,|V|]$}{         
+\backslash
+For{$v
+\backslash
+in 
+\backslash
+text{Adj}(f(i))$}{             $
+\backslash
+text{Relax}((f(i), v))$
+\backslash
+
+\backslash
+         }     }     
+\backslash
+Return $
+\backslash
+left(d, 
+\backslash
+pi
+\backslash
+right)$ }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ מכוון אציקלי ויהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{SSSP-DAG}\left(G\right)$
+\end_inset
+
+ פתרון לבעיית 
+\begin_inset Formula $\text{SSSP}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ מכוון אציקלי ויהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי סיבוכיות 
+\begin_inset Formula $\text{SSSP-DAG}\left(G\right)$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\O\left(\left|E\right|+\left|V\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+אלגוריתם דייקסטרה למציאת מסלולים קצרים ביותר מנקודת מוצא בגרף ללא משקלים
+ שליליים
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף עבורו 
+\begin_inset Formula $\ell\ge0$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{Dijkstra}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$G, 
+\backslash
+ell , s$}}{     $Q 
+\backslash
+gets 
+\backslash
+text{heap}((V, 
+\backslash
+text{int}))$
+\backslash
+
+\backslash
+     $
+\backslash
+left(d, 
+\backslash
+pi
+\backslash
+right)
+\backslash
+gets$ dict($V$)
+\backslash
+
+\backslash
+     $d[s] 
+\backslash
+gets 0$
+\backslash
+
+\backslash
+     
+\backslash
+For{$u
+\backslash
+in V$}{         $d[u] 
+\backslash
+gets 
+\backslash
+infty$
+\backslash
+
+\backslash
+         $
+\backslash
+pi[u] 
+\backslash
+gets 
+\backslash
+text{None}$
+\backslash
+
+\backslash
+     }     $Q.
+\backslash
+text{insert}((s, d[s]))$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+While{$Q
+\backslash
+ne 
+\backslash
+emptyset$}{         $u 
+\backslash
+gets Q.
+\backslash
+text{min}$
+\backslash
+
+\backslash
+         
+\backslash
+For{$v
+\backslash
+in 
+\backslash
+text{Adj}(u)$}{             
+\backslash
+uIf{$d[v] = 
+\backslash
+infty$}{                 $
+\backslash
+pi[v] 
+\backslash
+gets u$
+\backslash
+
+\backslash
+                 $d[v] 
+\backslash
+gets d[u] + 
+\backslash
+ell(u, v)$
+\backslash
+
+\backslash
+                 $Q.
+\backslash
+text{insert}((v, d[v]))$
+\backslash
+
+\backslash
+             } 
+\backslash
+uElseIf{$d[u] + 
+\backslash
+ell(u, v) < d[v]$}{                 $
+\backslash
+pi[v] 
+\backslash
+gets u$
+\backslash
+
+\backslash
+                 $d[v] 
+\backslash
+gets d[u] + 
+\backslash
+ell(u, v)$
+\backslash
+
+\backslash
+                 $Q.
+\backslash
+text{decrease-key}((v, d[v]))$
+\backslash
+
+\backslash
+             }         }     }          
+\backslash
+Return $
+\backslash
+left(d, 
+\backslash
+pi
+\backslash
+right)$ }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\lang hebrew
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+למה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $s,u\in V$
+\end_inset
+
+ עבורם בריצת 
+\begin_inset Formula $\text{Dijkstra}$
+\end_inset
+
+ הצומת 
+\begin_inset Formula $u$
+\end_inset
+
+ נמחקה מ־
+\begin_inset Formula $Q$
+\end_inset
+
+ אזי 
+\begin_inset Formula $d\left[u\right]=\d\left(s,u\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{Dijkstra}$
+\end_inset
+
+ פתרון לבעיית 
+\begin_inset Formula $\text{SSSP}$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $\ell\ge0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי ניתן לממש את 
+\begin_inset Formula $\text{Dijkstra}$
+\end_inset
+
+ עם 
+\lang english
+
+\begin_inset Formula $\text{Fibonacci heaps}$
+\end_inset
+
+
+\lang hebrew
+ בסיבוכיות 
+\begin_inset Formula $\O\left(\left|E\right|+\left|V\right|\cdot\log\left(\left|V\right|\right)\right)$
 \end_inset
 
 .
