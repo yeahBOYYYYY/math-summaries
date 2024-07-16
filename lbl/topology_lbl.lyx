@@ -244,7 +244,7 @@ filename "../../macros.lyx"
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
- מרחב טופולוגיה אזי 
+ מרחב טופולוגי אזי 
 \begin_inset Formula $U\subseteq X$
 \end_inset
 
@@ -264,7 +264,7 @@ filename "../../macros.lyx"
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
- מרחב טופולוגיה אזי 
+ מרחב טופולוגי אזי 
 \begin_inset Formula $E\subseteq X$
 \end_inset
 
@@ -354,6 +354,26 @@ filename "../../macros.lyx"
 
  מרחב מטרי אזי 
 \begin_inset Formula $\mathcal{T}\left(X,\rho\right)=\left\{ U\subseteq X\mid\forall x\in U.\exists r>0.B_{r}\left(x\right)\subseteq U\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טופולוגיה מטריזבילית
+\series default
+: מרחב טופולוגי 
+\begin_inset Formula $\left(X,\mathcal{T}_{X}\right)$
+\end_inset
+
+ עבורו קיים 
+\begin_inset Formula $\left(X,\rho\right)$
+\end_inset
+
+ מרחב מטרי המקיים 
+\begin_inset Formula $\mathcal{T}\left(X,\rho\right)=\mathcal{T}_{X}$
 \end_inset
 
 .
@@ -1236,15 +1256,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-ט תהא 
+ט ותהא 
 \begin_inset Formula $x\in X^{\bbn}$
 \end_inset
 
- ותהא 
+ אזי 
 \begin_inset Formula $y\in X$
 \end_inset
 
- עבורן לכל סביבה 
+ עבורו לכל סביבה 
 \begin_inset Formula $U$
 \end_inset
 
@@ -1254,10 +1274,6 @@ E^{\mathcal{C}}\in\mathcal{T}
 
  החל ממקום מסוים 
 \begin_inset Formula $x_{n}\in U$
-\end_inset
-
- אזי 
-\begin_inset Formula $\lim_{n\to\infty}x_{n}=y$
 \end_inset
 
 .
@@ -1283,7 +1299,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_inset
 
  אזי 
-\begin_inset Formula $A\subseteq\left\{ x\in X\mid\exists a\in A^{\bbn}.\lim_{n\to\infty}a_{n}=x\right\} \subseteq\overline{A}$
+\begin_inset Formula $A\subseteq\left\{ x\in X\mid x\text{ המתכנסת אל }a\in A^{\bbn}\text{קיימת }\right\} \subseteq\overline{A}$
 \end_inset
 
 .
@@ -1331,6 +1347,53 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_inset
 
 (.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+פונקציה רציפה בנקודה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left(X,\mathcal{T}\right),\left(Y,\mathcal{S}\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+טים ותהא 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $\mathcal{V}\subseteq Y$
+\end_inset
+
+ סביבה של 
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+ קיימת סביבה 
+\begin_inset Formula $\mathcal{U}\subseteq X$
+\end_inset
+
+ של 
+\begin_inset Formula $x$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $f\left(\mathcal{U}\right)\subseteq\mathcal{V}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1423,6 +1486,22 @@ E^{\mathcal{C}}\in\mathcal{T}
 
  מתקיים 
 \begin_inset Formula $f\left(\overline{A}\right)\subseteq\overline{f\left(A\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ הפונקציה 
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה ב־
+\begin_inset Formula $x$
 \end_inset
 
 .
@@ -2400,7 +2479,13 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_layout
 
 \begin_layout Standard
-מרחב המנה: יהי 
+
+\series bold
+\color brown
+מרחב המנה
+\series default
+\color inherit
+: יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2432,11 +2517,3564 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color brown
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ העתקת מנה ותהא 
+\begin_inset Formula $g:X\to Z$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $g_{\upharpoonright_{f^{-1}\left(\left\{ y\right\} \right)}}$
+\end_inset
+
+ קבועה לכל 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $h:Y\to Z$
+\end_inset
+
+ עבורה
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g=h\circ f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+)
+\begin_inset Formula $h$
+\end_inset
+
+ רציפה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $g$
+\end_inset
+
+ רציפה(.
+\end_layout
+
+\begin_layout Itemize
+)
+\begin_inset Formula $h$
+\end_inset
+
+ העתקת מנה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $g$
+\end_inset
+
+ העתקת מנה(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ העתקת מנה ותהא 
+\begin_inset Formula $g:X\to Z$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $g_{\upharpoonright_{f^{-1}\left(\left\{ y\right\} \right)}}$
+\end_inset
+
+ קבועה לכל 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+)
+\begin_inset Formula $g\circ f^{-1}$
+\end_inset
+
+ רציפה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $g$
+\end_inset
+
+ רציפה(.
+\end_layout
+
+\begin_layout Itemize
+)
+\begin_inset Formula $g\circ f^{-1}$
+\end_inset
+
+ העתקת מנה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $g$
+\end_inset
+
+ העתקת מנה(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $g:X\to Z$
+\end_inset
+
+ רציפה ועל ותהא 
+\begin_inset Formula $f:X\to\left\{ g^{-1}\left(\left\{ z\right\} \right)\mid z\in Z\right\} $
+\end_inset
+
+ העתקת מנה אזי )
+\begin_inset Formula $g\circ f^{-1}$
+\end_inset
+
+ הומיאומורפיזם(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $g$
+\end_inset
+
+ העתקת מנה(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+קבוצה רוויה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+ אם 
+\begin_inset Formula $A\cap f^{-1}\left(\left\{ y\right\} \right)\ne\emptyset$
+\end_inset
+
+ אז 
+\begin_inset Formula $f^{-1}\left(\left\{ y\right\} \right)\subseteq A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ רציפה אזי )
+\begin_inset Formula $f$
+\end_inset
+
+ העתקת מנה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $f$
+\end_inset
+
+ על ולכל 
+\begin_inset Formula $\mathcal{U}\in\mathcal{T}_{X}$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $f\left(\mathcal{U}\right)$
+\end_inset
+
+ פתוחה ורוויה(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+העתקה פתוחה
+\series default
+\color inherit
+: העתקה 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $\mathcal{U}\in\mathcal{T}_{X}$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $f\left(\mathcal{U}\right)$
+\end_inset
+
+ פתוחה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+העתקה סגורה
+\series default
+\color inherit
+: העתקה 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $E\subseteq X$
+\end_inset
+
+ סגורה מתקיים כי 
+\begin_inset Formula $f\left(E\right)$
+\end_inset
+
+ סגורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ רציפה פתוחה ועל אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ העתקת מנה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ רציפה סגורה ועל אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ העתקת מנה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\u}{\mathcal{U}}
+{\mathcal{U}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\v}{\mathcal{V}}
+{\mathcal{V}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\t}{\mathcal{T}}
+{\mathcal{T}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\s}{\mathcal{S}}
+{\mathcal{S}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מכפלה של קבוצות
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $\left\{ X_{\a}\right\} _{\a\in\Lambda}$
+\end_inset
+
+ קבוצות אזי 
+\begin_inset Formula $\prod_{\a\in\Lambda}X_{\a}=\left\{ f:\Lambda\to\bigcup_{\a\in\Lambda}X_{\a}\mid f\left(\a\right)\in X_{\a}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
+\end_inset
+
+מ
+\begin_inset Quotes erd
+\end_inset
+
+טים אזי 
+\begin_inset Formula $\mathcal{B}_{\text{box}}=\left\{ \prod_{\a\in\Lambda}\u_{\a}\mid\u_{\a}\in\t_{\a}\right\} $
+\end_inset
+
+ בסיס של 
+\begin_inset Formula $\prod_{\a\in\Lambda}X_{\a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טופולוגיית התיבה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
+\end_inset
+
+מ
+\begin_inset Quotes erd
+\end_inset
+
+טים אזי 
+\begin_inset Formula $\t_{\text{box}}=\t\left(\mathcal{B}_{\text{box}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+הטלה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $\left\{ X_{\a}\right\} _{\a\in\Lambda}$
+\end_inset
+
+ קבוצות אזי 
+\begin_inset Formula $\pi_{\b}:\prod_{\a\in\Lambda}X_{\a}\to X_{\b}$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\pi_{\b}\left(f\right)=f\left(\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
+\end_inset
+
+מ
+\begin_inset Quotes erd
+\end_inset
+
+טים אזי 
+\begin_inset Formula $\mathcal{S}_{\text{box}}=\bigcup_{\a\in\Lambda}\left\{ \pi_{\a}^{-1}\left(\u_{\a}\right)\mid\u_{\a}\in\t_{\a}\right\} $
+\end_inset
+
+ תת־בסיס של 
+\begin_inset Formula $\prod_{\a\in\Lambda}X_{\a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טופולוגיית המכפלה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
+\end_inset
+
+מ
+\begin_inset Quotes erd
+\end_inset
+
+טים אזי 
+\begin_inset Formula $\t_{\text{box}}=\t\left(\mathcal{S}_{\text{box}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
+\end_inset
+
+מ
+\begin_inset Quotes erd
+\end_inset
+
+טים באשר 
+\begin_inset Formula $\left|\Lambda\right|<\aleph_{0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\t_{\text{prod}}=\t_{\text{box}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
+\end_inset
+
+מ
+\begin_inset Quotes erd
+\end_inset
+
+טים באשר 
+\begin_inset Formula $\left|\Lambda\right|\ge\aleph_{0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\t_{\text{prod}}\subseteq\t_{\text{box}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f:Y\to\left(\prod_{\a}X_{\a},\t_{\text{prod}}\right)$
+\end_inset
+
+ אזי )
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\pi_{\a}\circ f$
+\end_inset
+
+ רציפה לכל 
+\begin_inset Formula $\a$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left|\Lambda\right|\ge\aleph_{0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\bbr^{\Lambda},\t_{\text{box}}\right)$
+\end_inset
+
+ אינה מטריזבילית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left|\Lambda\right|\ge\aleph_{0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\bbr^{\Lambda},\t_{\text{\ensuremath{\text{prod}}}}\right)$
+\end_inset
+
+ אינה מטריזבילית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+תכונה טופולוגית
+\series default
+\color inherit
+: תכונה 
+\begin_inset Formula $P$
+\end_inset
+
+ של מ
+\begin_inset Quotes erd
+\end_inset
+
+ט באשר לכל 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט עבורן קיים 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ הומיאומורפיזם מתקיים )
+\begin_inset Formula $X$
+\end_inset
+
+ מקיים 
+\begin_inset Formula $P$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $Y$
+\end_inset
+
+ מקיים 
+\begin_inset Formula $P$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: מטריזביליות הינה תכונה טופולוגית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+הפרדה של מרחב טופולוגי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\left(X,\t\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אזי 
+\begin_inset Formula $\left(\u,\v\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\u,\v\in\t$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\u\cap\v=\emptyset$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\u\cup\v=X$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\u,\v\ne\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מרחב טופולוגי קשיר
+\series default
+\color inherit
+: מרחב טופולוגי 
+\begin_inset Formula $\left(X,\t\right)$
+\end_inset
+
+ עבורו לא קיימת הפרדה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מרחב טופולוגי אי־קשיר
+\series default
+\color inherit
+: מרחב טופולוגי 
+\begin_inset Formula $\left(X,\t\right)$
+\end_inset
+
+ עבורו קיימת הפרדה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ הומיאומורפיזם אזי )
+\begin_inset Formula $X$
+\end_inset
+
+ קשיר(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $Y$
+\end_inset
+
+ קשיר(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: קשירות הינה תכונה טופולוגית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב מטרי התב
+\begin_inset Quotes erd
+\end_inset
+
+ש
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X$
+\end_inset
+
+ אי־קשיר.
+\end_layout
+
+\begin_layout Itemize
+קיימות 
+\begin_inset Formula $E,F\subseteq X$
+\end_inset
+
+ סגורות זרות לא ריקות עבורן 
+\begin_inset Formula $X=E\cup F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיימת 
+\begin_inset Formula $D\in\P\left(X\right)\backslash\left\{ X,\emptyset\right\} $
+\end_inset
+
+ סגורה ופתוחה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט קשיר ותהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ רציפה אזי 
+\begin_inset Formula $f\left(X\right)$
+\end_inset
+
+ קשירה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט ויהי 
+\begin_inset Formula $Y\subseteq X$
+\end_inset
+
+ תת־מרחב אזי )
+\begin_inset Formula $Y$
+\end_inset
+
+ אי־קשיר(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיימות 
+\begin_inset Formula $H,K\in\P\left(X\right)\backslash\left\{ X,\emptyset\right\} $
+\end_inset
+
+ עבורן 
+\begin_inset Formula $Y=H\cup K$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\overline{H}\cap K=H\cap\overline{K}=\emptyset$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left(\u,\v\right)$
+\end_inset
+
+ הפרדה של 
+\begin_inset Formula $X$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $Y\subseteq X$
+\end_inset
+
+ תת־מרחב קשיר אזי 
+\begin_inset Formula $\left(Y\subseteq U\right)\oplus\left(Y\subseteq\v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $A,B\subseteq X$
+\end_inset
+
+ באשר 
+\begin_inset Formula $A$
+\end_inset
+
+ קשירה וכן 
+\begin_inset Formula $A\subseteq B\subseteq\overline{A}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $B$
+\end_inset
+
+ קשירה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ קשירה אזי 
+\begin_inset Formula $\overline{A}$
+\end_inset
+
+ קשירה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\mathcal{A}\subseteq\P\left(X\right)$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $A\in\mathcal{A}$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $A$
+\end_inset
+
+ קשירה וכן 
+\begin_inset Formula $\bigcap\mathcal{A}\ne\emptyset$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\bigcup\mathcal{A}=X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $X$
+\end_inset
+
+ קשיר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $\left\{ X_{n}\right\} _{n=0}^{\infty}\subseteq\P\left(X\right)\backslash\left\{ \emptyset\right\} $
+\end_inset
+
+ באשר 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ קשיר וכן 
+\begin_inset Formula $X_{n}\cap X_{n+1}\ne\emptyset$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $X$
+\end_inset
+
+ קשיר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ עם הטופולוגיה הסטנדרטית קשיר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(-1,1\right)$
+\end_inset
+
+ עם הטופולוגיה המושרית מ־
+\begin_inset Formula $\bbr$
+\end_inset
+
+ סטנדרטי הינו קשיר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a<b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(a,b\right),\left[a,b\right],\left(a,b\right],\left[a,b\right)$
+\end_inset
+
+ קשירים עם הטופולוגיה המושרית מ־
+\begin_inset Formula $\bbr$
+\end_inset
+
+ סטנדרטי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $a\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(-\infty,a\right),\left(-\infty,a\right],\left(-\infty,\infty\right),\left[a,\infty\right),\left(a,\infty\right)$
+\end_inset
+
+ קשירים עם הטופולוגיה המושרית מ־
+\begin_inset Formula $\bbr$
+\end_inset
+
+ סטנדרטי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\prod_{\a\in\Lambda}X_{\a}$
+\end_inset
+
+ עם 
+\begin_inset Formula $\t_{\text{prod}}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $\prod_{\a\in\Lambda}X_{\a}$
+\end_inset
+
+ קשיר(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $\a\in\Lambda$
+\end_inset
+
+ המרחב 
+\begin_inset Formula $X_{\a}$
+\end_inset
+
+ קשיר(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbr^{n}$
+\end_inset
+
+ קשיר עם הטופולוגיה הסטנדרטית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסילה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט ויהיו 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\g:\left[0,1\right]\to X$
+\end_inset
+
+ רציפה עבורה 
+\begin_inset Formula $f\left(0\right)=x$
+\end_inset
+
+ וכן 
+\begin_inset Formula $f\left(1\right)=y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מרחב טופולוגי קשיר מסילתית
+\series default
+\color inherit
+: מרחב טופולוגי 
+\begin_inset Formula $\left(X,\t\right)$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+ קיימת מסילה מ־
+\begin_inset Formula $x$
+\end_inset
+
+ ל־
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט קשיר מסילתית אזי 
+\begin_inset Formula $X$
+\end_inset
+
+ קשיר.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט קשיר מסילתית ותהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ רציפה אזי 
+\begin_inset Formula $f\left(X\right)$
+\end_inset
+
+ קשיר מסילתית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: קשירות מסילתית הינה תכונה טופולוגית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $\bbc^{n}$
+\end_inset
+
+ עם הטופולוגיה הסטנדרטית על 
+\begin_inset Formula $\bbr^{2n}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p:\bbc^{n}\to\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbc^{n}\backslash\left\{ x\in\bbc^{n}\mid p\left(x\right)=0\right\} $
+\end_inset
+
+ קשירה מסילתית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: יהי 
+\begin_inset Formula $\M[n\times n][\bbc]$
+\end_inset
+
+ עם הטופולוגיה הסטנדרטית על 
+\begin_inset Formula $\bbc^{n^{2}}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{GL}_{n}\left(\bbc\right)$
+\end_inset
+
+ תת־מרחב קשיר מסילתית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט ויהיו 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+ אזי )
+\begin_inset Formula $x\sim_{\text{קשיר}}y$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיימת 
+\begin_inset Formula $D\subseteq X$
+\end_inset
+
+ קשירה עבורה 
+\begin_inset Formula $x,y\in D$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אזי 
+\begin_inset Formula $\sim_{\text{קשיר}}$
+\end_inset
+
+ יחס שקילות מעל 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רכיבי קשירות
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אזי 
+\begin_inset Formula $\nicefrac{X}{\sim_{\text{קשיר}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט ויהיו 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+ אזי )
+\begin_inset Formula $x\sim_{\text{קשיר מסילתית}}y$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיימת מסילה מ־
+\begin_inset Formula $x$
+\end_inset
+
+ ל־
+\begin_inset Formula $y$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אזי 
+\begin_inset Formula $\sim_{\text{קשיר מסילתית}}$
+\end_inset
+
+ יחס שקילות מעל 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רכיבי קשירות מסילתית
+\series default
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אזי 
+\begin_inset Formula $\nicefrac{X}{\sim_{\text{קשיר מסילתית}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: יהיו 
+\begin_inset Formula $\left\{ D_{\a}\right\} _{\a\in\Lambda}$
+\end_inset
+
+ רכיבי הקשירות של 
+\begin_inset Formula $X$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $\a\in\Lambda$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $D_{\a}$
+\end_inset
+
+ קשירה.
+\end_layout
+
+\begin_layout Itemize
+יהיו 
+\begin_inset Formula $\a,\b\in\Lambda$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\a\ne\b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $D_{\a}\cap D_{\b}=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+מתקיים 
+\begin_inset Formula $X=\bigcup_{\a\in\Lambda}D_{\a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $Y\subseteq X$
+\end_inset
+
+ תת־מרחב קשיר קיים ויחיד 
+\begin_inset Formula $\a\in\Lambda$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $Y\subseteq D_{\a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: יהיו 
+\begin_inset Formula $\left\{ D_{\a}\right\} _{\a\in\Lambda}$
+\end_inset
+
+ רכיבי הקשירות המסילתית של 
+\begin_inset Formula $X$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $\a\in\Lambda$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $D_{\a}$
+\end_inset
+
+ קשירה.
+\end_layout
+
+\begin_layout Itemize
+יהיו 
+\begin_inset Formula $\a,\b\in\Lambda$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\a\ne\b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $D_{\a}\cap D_{\b}=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+מתקיים 
+\begin_inset Formula $X=\bigcup_{\a\in\Lambda}D_{\a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $Y\subseteq X$
+\end_inset
+
+ תת־מרחב קשיר קיים ויחיד 
+\begin_inset Formula $\a\in\Lambda$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $Y\subseteq D_{\a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מרחב טופולוגי קשיר מקומית נקודתית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אזי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ המקיים לכל סביבה 
+\begin_inset Formula $\u\subseteq X$
+\end_inset
+
+ של 
+\begin_inset Formula $x$
+\end_inset
+
+ קיימת סביבה 
+\begin_inset Formula $\v\subseteq\u$
+\end_inset
+
+ קשירה עבורה 
+\begin_inset Formula $x\in\v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מרחב טופולוגי קשיר מקומית
+\series default
+\color inherit
+: מרחב טופולוגי 
+\begin_inset Formula $X$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $X$
+\end_inset
+
+ קשיר מקומית ב־
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: קשירות מקומית הינה תכונה טופולוגית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מרחב טופולוגי קשיר מסילתית מקומית נקודתית
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אזי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ המקיים לכל סביבה 
+\begin_inset Formula $\u\subseteq X$
+\end_inset
+
+ של 
+\begin_inset Formula $x$
+\end_inset
+
+ קיימת סביבה 
+\begin_inset Formula $\v\subseteq\u$
+\end_inset
+
+ קשירה מסילתית עבורה 
+\begin_inset Formula $x\in\v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מרחב טופולוגי קשיר מסילתית מקומית
+\series default
+\color inherit
+: מרחב טופולוגי 
+\begin_inset Formula $X$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $X$
+\end_inset
+
+ קשיר מסילתית מקומית ב־
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: קשירות מקומית מסילתית הינה תכונה טופולוגית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אזי )
+\begin_inset Formula $X$
+\end_inset
+
+ קשיר מקומית(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $\u\in\t$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $D$
+\end_inset
+
+ רכיב קשירות של 
+\begin_inset Formula $\u$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $D\in\t$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט קשיר וקשיר מסילתית מקומית אזי 
+\begin_inset Formula $X$
+\end_inset
+
+ קשיר מסילתית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+בסיס סביבות בן מנייה בנקודה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אזי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ עבורו קיימות 
+\begin_inset Formula $\left\{ \u_{n}\right\} _{n=0}^{\infty}$
+\end_inset
+
+ סביבות של 
+\begin_inset Formula $x$
+\end_inset
+
+ עבורן לכל סביבה 
+\begin_inset Formula $\v$
+\end_inset
+
+ של 
+\begin_inset Formula $x$
+\end_inset
+
+ קיים 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\u_{n}\subseteq\v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מרחב טופולוגי המקיים את אקסיומת המניה הראשונה
+\series default
+\color inherit
+: מרחב טופולוגי 
+\begin_inset Formula $X$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ קיים בסיס סביבות בן מנייה ב־
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט מושרה ממרחב מטרי אזי 
+\begin_inset Formula $X$
+\end_inset
+
+ מניה 
+\begin_inset Formula $\text{I}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט מניה 
+\begin_inset Formula $\text{I}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ תת־קבוצה אזי 
+\begin_inset Formula $\overline{A}=\left\{ x\in X\mid x\text{ המתכנסת אל }a\in A^{\bbn}\text{קיימת }\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+טים באשר 
+\begin_inset Formula $X$
+\end_inset
+
+ מניה 
+\begin_inset Formula $\text{I}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ אזי )
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $\left\{ x_{n}\right\} \subseteq X$
+\end_inset
+
+ המתכנסת ל־
+\begin_inset Formula $a$
+\end_inset
+
+ עבור 
+\begin_inset Formula $a\in X$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $\left\{ f\left(x_{n}\right)\right\} $
+\end_inset
+
+ מתכנסת ל־
+\begin_inset Formula $f\left(a\right)$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מרחב טופולוגי המקיים את אקסיומת המניה השנייה
+\series default
+\color inherit
+: מרחב טופולוגי 
+\begin_inset Formula $X$
+\end_inset
+
+ עבורו קיים בסיס לכל היותר בן מנייה היוצר את 
+\begin_inset Formula $\t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט מניה 
+\begin_inset Formula $\text{II}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $X$
+\end_inset
+
+ מניה 
+\begin_inset Formula $\text{I}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט מניה 
+\begin_inset Formula $\text{I}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ תת־מרחב אזי 
+\begin_inset Formula $A$
+\end_inset
+
+ מניה 
+\begin_inset Formula $\text{I}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט מניה 
+\begin_inset Formula $\text{II}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ תת־מרחב אזי 
+\begin_inset Formula $A$
+\end_inset
+
+ מניה 
+\begin_inset Formula $\text{II}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט מניה 
+\begin_inset Formula $\text{I}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ רציפה ופתוחה אזי 
+\begin_inset Formula $f\left(X\right)$
+\end_inset
+
+ מניה 
+\begin_inset Formula $\text{I}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: מניה 
+\begin_inset Formula $\text{I}$
+\end_inset
+
+ הינה תכונה טופולוגית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט מניה 
+\begin_inset Formula $\text{II}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ רציפה ופתוחה אזי 
+\begin_inset Formula $f\left(X\right)$
+\end_inset
+
+ מניה 
+\begin_inset Formula $\text{II}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+: מניה 
+\begin_inset Formula $\text{II}$
+\end_inset
+
+ הינה תכונה טופולוגית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מרחב טופולוגי ספרבילי
+\series default
+\color inherit
+: מרחב טופולוגי 
+\begin_inset Formula $X$
+\end_inset
+
+ עבורו קיימת 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ צפופה בת מנייה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מרחב טופולוגי לינדלוף
+\series default
+\color inherit
+: מרחב טופולוגי 
+\begin_inset Formula $X$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $\left\{ \u_{\a}\right\} _{\a\in\Lambda}\subseteq\t$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\bigcup\u_{\a}=X$
+\end_inset
+
+ קיימת 
+\begin_inset Formula $f:\bbn\to\Lambda$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\bigcup_{i=0}^{\infty}\u_{f\left(i\right)}=X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט מניה 
+\begin_inset Formula $\text{II}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $X$
+\end_inset
+
+ לינדלוף וספרבילי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+למה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ בסיס של 
+\begin_inset Formula $\left(X,\mathcal{T}\right)$
+\end_inset
+
+ אזי )
+\begin_inset Formula $X$
+\end_inset
+
+ לינדלוף(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $\left\{ \mathcal{B}_{\a}\right\} _{\a\in\Lambda}\subseteq\mathcal{B}$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\bigcup\mathcal{B}_{\a}=X$
+\end_inset
+
+ קיימת 
+\begin_inset Formula $f:\bbn\to\Lambda$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\bigcup_{i=0}^{\infty}\mathcal{B}_{f\left(i\right)}=X$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr_{\text{Sorg}}$
+\end_inset
+
+ לינדולף.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט ספרבילי ותהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ רציפה אזי 
+\begin_inset Formula $f\left(X\right)$
+\end_inset
+
+ ספרבילי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: ספרביליות הינה תכונה טופולוגית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט לינדלוף ותהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ רציפה אזי 
+\begin_inset Formula $f\left(X\right)$
+\end_inset
+
+ לינדלוף.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: לינדלוף הינה תכונה טופולוגית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט ספרבילי ותהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ פתוחה אזי 
+\begin_inset Formula $A$
+\end_inset
+
+ ספרבילי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט לינדלוף ותהא 
+\begin_inset Formula $E\subseteq X$
+\end_inset
+
+ סגורה אזי 
+\begin_inset Formula $E$
+\end_inset
+
+ לינדלוף.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ X_{\a}\right\} _{\a\in\Lambda}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+טים מניה 
+\begin_inset Formula $\text{I}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left|\Lambda\right|\le\aleph_{0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\prod X_{\a},\t_{\text{prod}}\right)$
+\end_inset
+
+ מניה 
+\begin_inset Formula $\text{I}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ X_{\a}\right\} _{\a\in\Lambda}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+טים מניה 
+\begin_inset Formula $\text{II}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left|\Lambda\right|\le\aleph_{0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\prod X_{\a},\t_{\text{prod}}\right)$
+\end_inset
+
+ מניה 
+\begin_inset Formula $\text{II}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ X_{\a}\right\} _{\a\in\Lambda}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+טים ספרבילים באשר 
+\begin_inset Formula $\left|\Lambda\right|\le\aleph_{0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\prod X_{\a},\t_{\text{prod}}\right)$
+\end_inset
+
+ ספרבילי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מרחב טופולוגי 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+
+\series default
+\color inherit
+: מרחב טופולוגי 
+\begin_inset Formula $X$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+ שונים קיימת סביבה 
+\begin_inset Formula $\u$
+\end_inset
+
+ של 
+\begin_inset Formula $x$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $y\notin\u$
+\end_inset
+
+ או קיימת סביבה 
+\begin_inset Formula $\v$
+\end_inset
+
+ של 
+\begin_inset Formula $y$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $x\notin\v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מרחב טופולוגי 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+
+\series default
+\color inherit
+: מרחב טופולוגי 
+\begin_inset Formula $X$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+ שונים קיימת סביבה 
+\begin_inset Formula $\u$
+\end_inset
+
+ של 
+\begin_inset Formula $x$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $y\notin\u$
+\end_inset
+
+ וגם קיימת סביבה 
+\begin_inset Formula $\v$
+\end_inset
+
+ של 
+\begin_inset Formula $y$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $x\notin\v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מרחב טופולוגי 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+/האוסדורף
+\series default
+\color inherit
+: מרחב טופולוגי 
+\begin_inset Formula $X$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+ שונים קיימת סביבה 
+\begin_inset Formula $\u$
+\end_inset
+
+ של 
+\begin_inset Formula $x$
+\end_inset
+
+ וכן סביבה 
+\begin_inset Formula $\v$
+\end_inset
+
+ של 
+\begin_inset Formula $y$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $\u\cap\v=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $T_{0},T_{1},T_{2}$
+\end_inset
+
+ הינן תכונות טופולוגיות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב טופולוגי 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב טופולוגי 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב טופולוגי 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב טופולוגי 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט מושרה ממרחב מטרי אזי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $\t,\s$
+\end_inset
+
+ טופולוגיות על 
+\begin_inset Formula $X$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\s$
+\end_inset
+
+ עדינה מ־
+\begin_inset Formula $\t$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left(X,\t\right)$
+\end_inset
+
+ מרחב 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(X,\s\right)$
+\end_inset
+
+ מרחב 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr_{\text{Sorg}}$
+\end_inset
+
+ האוסדורף.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ תת־מרחב אזי 
+\begin_inset Formula $A$
+\end_inset
+
+ מרחב 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ X_{\a}\right\} _{\a\in\Lambda}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+טים אזי )
+\begin_inset Formula $X_{\a}$
+\end_inset
+
+ מרחב 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\a\in\Lambda$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\left(\prod X_{\a},\t_{\text{prod}}\right)$
+\end_inset
+
+ מרחב 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הישר עם הראשית הכפולה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\bbr\times\left\{ 0,1\right\} $
+\end_inset
+
+ עם הטופולוגיה המושרית מ־
+\begin_inset Formula $\bbr^{2}$
+\end_inset
+
+ הסטנדרטית ויהי 
+\begin_inset Formula $\sim=\id\cup\left\{ \left(\left(\begin{smallmatrix}a\\
+0
+\end{smallmatrix}\right),\left(\begin{smallmatrix}a\\
+1
+\end{smallmatrix}\right)\right)\bmid a\ne0\right\} $
+\end_inset
+
+ יחס שקילות על 
+\begin_inset Formula $\bbr\times\left\{ 0,1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nicefrac{\bbr\times\left\{ 0,1\right\} }{\sim}$
+\end_inset
+
+ עם טופולוגיית המנה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\left(X,\t\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אזי )
+\begin_inset Formula $\t$
+\end_inset
+
+ הוא 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\left\{ x\right\} $
+\end_inset
+
+ קבוצה סגורה לכל 
+\begin_inset Formula $x\in X$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\left(X,\t\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אזי )
+\begin_inset Formula $\t$
+\end_inset
+
+ הוא 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $A=\bigcap_{\substack{A\subseteq\u\\
+\u\in\mathcal{T}
+}
+}\u$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט האוסדורף ותהא 
+\begin_inset Formula $\left\{ x_{n}\right\} \subseteq X$
+\end_inset
+
+ סדרה מתכנסת אזי קיים ויחיד 
+\begin_inset Formula $y\in X$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left\{ x_{n}\right\} $
+\end_inset
+
+ מתכנסת ל־
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ אזי )
+\begin_inset Formula $x$
+\end_inset
+
+ נקודת הצטברות של 
+\begin_inset Formula $A$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $\u$
+\end_inset
+
+ סביבה של 
+\begin_inset Formula $x$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|A\cap\u\right|\ge\aleph_{0}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אזי )
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב האוסדורף(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\left\{ \left(a,a\right)\mid a\in X\right\} $
+\end_inset
+
+ קבוצה סגורה(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מרחב טופולוגי רגולרי
+\series default
+\color inherit
+: מרחב טופולוגי 
+\begin_inset Formula $X$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $E\subseteq X$
+\end_inset
+
+ סגורה באשר 
+\begin_inset Formula $x\notin E$
+\end_inset
+
+ קיימות 
+\begin_inset Formula $\u,\v\in\t$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $x\in\u$
+\end_inset
+
+ וכן 
+\begin_inset Formula $E\subseteq\v$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\u\cap\v=\emptyset$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מרחב טופולוגי נורמלי
+\series default
+\color inherit
+: מרחב טופולוגי 
+\begin_inset Formula $X$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $E,F\subseteq X$
+\end_inset
+
+ סגורות באשר 
+\begin_inset Formula $E\cap F=\emptyset$
+\end_inset
+
+ קיימות 
+\begin_inset Formula $\u,\v\in\t$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $E\subseteq\u$
+\end_inset
+
+ וכן 
+\begin_inset Formula $F\subseteq\v$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\u\cap\v=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מרחב טופולוגי 
+\begin_inset Formula $T_{3}$
+\end_inset
+
+
+\series default
+\color inherit
+: מרחב טופולוגי 
+\begin_inset Formula $X$
+\end_inset
+
+ רגולרי וכן 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מרחב טופולוגי 
+\begin_inset Formula $T_{4}$
+\end_inset
+
+
+\series default
+\color inherit
+: מרחב טופולוגי 
+\begin_inset Formula $X$
+\end_inset
+
+ נורמלי וכן 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $T_{3},T_{4}$
+\end_inset
+
+ הינן תכונות טופולוגיות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב טופולוגי 
+\begin_inset Formula $T_{3}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב טופולוגי 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב טופולוגי 
+\begin_inset Formula $T_{4}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $X$
+\end_inset
+
+ מרחב טופולוגי 
+\begin_inset Formula $T_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr_{\text{Sorg}}$
+\end_inset
+
+ הינו 
+\begin_inset Formula $T_{4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+סימון
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $\u,\v\subseteq X$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $\v\subseteq\u$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\overline{\v}\subseteq\u$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\v\Subset\u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אזי )
+\begin_inset Formula $X$
+\end_inset
+
+ רגולרי(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\u\subseteq X$
+\end_inset
+
+ סביבה של 
+\begin_inset Formula $x$
+\end_inset
+
+ קיימת סביבה 
+\begin_inset Formula $\v$
+\end_inset
+
+ של 
+\begin_inset Formula $x$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\v\Subset\u$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אזי )
+\begin_inset Formula $X$
+\end_inset
+
+ נורמלי(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $E\subseteq X$
+\end_inset
+
+ סגורה ולכל 
+\begin_inset Formula $\u\subseteq X$
+\end_inset
+
+ פתוחה באשר 
+\begin_inset Formula $E\subseteq\u$
+\end_inset
+
+ קיימת 
+\begin_inset Formula $\v\subseteq X$
+\end_inset
+
+ פתוחה עבורה 
+\begin_inset Formula $E\subseteq\v\Subset\u$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט הלמה של אוריסון
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אזי )
+\begin_inset Formula $X$
+\end_inset
+
+ נורמלי(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $A,B\subseteq X$
+\end_inset
+
+ סגורות וזרות ולכל 
+\begin_inset Formula $\left[a,b\right]\subseteq\bbr$
+\end_inset
+
+ קיימת 
+\begin_inset Formula $f:X\to\left[a,b\right]$
+\end_inset
+
+ רציפה עבורה 
+\begin_inset Formula $f_{\upharpoonright_{A}}=a$
+\end_inset
+
+ וכן 
+\begin_inset Formula $f_{\upharpoonright_{B}}=a$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $17.06.2024$
+\begin_inset Formula $16.07.2024$
 \end_inset
 
  - הכל
