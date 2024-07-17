@@ -306,61 +306,41 @@ filename "../../macros.lyx"
 \begin_layout Standard
 
 \series bold
-הערה
+עקומה
 \series default
-: תהא 
+: יריעה 
 \begin_inset Formula $\mathcal{M}\subseteq\bbr^{n}$
 \end_inset
 
- יריעה 
-\begin_inset Formula $1$
-\end_inset
-
-־מימדית אזי 
-\begin_inset Formula $\mathcal{M}$
-\end_inset
-
- תיקרא עקומה.
+ שהינה חד־מימדית.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-הערה
+משטח
 \series default
-: תהא 
+: יריעה 
 \begin_inset Formula $\mathcal{M}\subseteq\bbr^{n}$
 \end_inset
 
- יריעה 
-\begin_inset Formula $2$
-\end_inset
-
-־מימדית אזי 
-\begin_inset Formula $\mathcal{M}$
-\end_inset
-
- תיקרא משטח.
+ שהינה דו־מימדית.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-הערה
+היפר־משטח/על־משטח
 \series default
-: תהא 
+: יריעה 
 \begin_inset Formula $\mathcal{M}\subseteq\bbr^{n}$
 \end_inset
 
- יריעה 
-\begin_inset Formula $\left(n-1\right)$
+ שהינה 
+\begin_inset Formula $n-1$
 \end_inset
 
-־מימדית אזי 
-\begin_inset Formula $\mathcal{M}$
-\end_inset
-
- תיקרא היפר־משטח.
+ מימדית.
 \end_layout
 
 \begin_layout Standard
@@ -372,11 +352,7 @@ filename "../../macros.lyx"
 \begin_inset Formula $\bbs^{n-1}\subseteq\bbr^{n}$
 \end_inset
 
- הינה יריעה חלקה 
-\begin_inset Formula $n-1$
-\end_inset
-
- מימדית.
+ הינה היפר־משפט חלק.
 \end_layout
 
 \begin_layout Standard
@@ -2134,6 +2110,22 @@ a_{1}b_{2}-a_{1}b_{1}
 \end_layout
 
 \begin_layout Standard
+מסקנה: תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה ותהא 
+\begin_inset Formula $p\in\m$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\dim\left(T_{p}\left(\m\right)\right)=\dim\left(\m\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 וקטור מהירות: תהא 
 \begin_inset Formula $\g:\left(a,b\right)\to\m$
 \end_inset
@@ -2143,7 +2135,7 @@ a_{1}b_{2}-a_{1}b_{1}
 \end_inset
 
  אזי 
-\begin_inset Formula $\dot{\g}\left(t\right)=\mathcal{D}_{\g}\left(t\right)$
+\begin_inset Formula $\dot{\g}=\frac{d\g}{dt}$
 \end_inset
 
 .
@@ -2211,14 +2203,18 @@ a_{1}b_{2}-a_{1}b_{1}
 \end_inset
 
  אזי 
-\begin_inset Formula $\mathcal{D}_{f\circ\g_{1}}\left(0\right)=\mathcal{D}_{f\circ\g_{2}}\left(0\right)$
+\begin_inset Formula $\left(\frac{d}{dt}\left(f\circ\g_{1}\right)\right)\left(0\right)=\left(\frac{d}{dt}\left(f\circ\g_{2}\right)\right)\left(0\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-נגזרת של פונקציה בין יריעות: תהיינה 
+
+\series bold
+נגזרת של פונקציה בין יריעות
+\series default
+: תהיינה 
 \begin_inset Formula $\m,\m^{\prime}$
 \end_inset
 
@@ -2235,7 +2231,7 @@ a_{1}b_{2}-a_{1}b_{1}
 \end_inset
 
  המוגדרת 
-\begin_inset Formula $\mathcal{D}_{p}f\left(v\right)=\mathcal{D}_{f\circ\g}\left(0\right)$
+\begin_inset Formula $\left(\mathcal{D}_{p}f\right)\left(v\right)=\left(\frac{d}{dt}\left(f\circ\g\right)\right)\left(0\right)$
 \end_inset
 
  עבור מסילה 
@@ -2271,6 +2267,660 @@ a_{1}b_{2}-a_{1}b_{1}
 \end_inset
 
  העתקה לינארית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+משפט כלל השרשרת: תהיינה 
+\begin_inset Formula $\m,\m^{\prime},\m^{\prime\prime}$
+\end_inset
+
+ יריעות תהא 
+\begin_inset Formula $f\in C^{\a}\left(\m,\m^{\prime}\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $g\in C^{\a}\left(\m^{\prime},\m^{\prime\prime}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{D}_{p}\left(g\circ f\right)=\mathcal{D}_{f\left(p\right)}\left(g\right)\cdot\mathcal{D}_{p}\left(f\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מסקנה: תהיינה 
+\begin_inset Formula $\m,\m^{\prime}$
+\end_inset
+
+ יריעות תהא 
+\begin_inset Formula $p\in\m$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f\in C^{1}\left(\m,\m^{\prime}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\mathcal{D}_{p}f\right)\left(v\right)=\mathcal{D}_{p}\left(f\right)\cdot v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה תהא 
+\begin_inset Formula $p\in\m$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left\{ F=0\right\} $
+\end_inset
+
+ הצגה סתומה רגולרית עבור סביבה של 
+\begin_inset Formula $p$
+\end_inset
+
+ אזי 
+\begin_inset Formula $T_{p}\left(\m\right)=\sp\left(\left\{ \nabla F_{1}\left(p\right),\ldots,\nabla F_{n-k}\left(p\right)\right\} ^{\perp}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה תהא 
+\begin_inset Formula $p\in\m$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ מפה באשר 
+\begin_inset Formula $\u$
+\end_inset
+
+ סביבה של 
+\begin_inset Formula $p$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ \mathcal{D}_{\varphi\left(p\right)}\varphi^{-1}\left(e_{1}\right),\ldots,\mathcal{D}_{\varphi\left(p\right)}\varphi^{-1}\left(e_{k}\right)\right\} $
+\end_inset
+
+ בסיס של 
+\begin_inset Formula $T_{p}\left(\m\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+הערה: נגדיר את 
+\begin_inset Formula $\left\{ \mathcal{D}_{\varphi\left(p\right)}\varphi^{-1}\left(e_{1}\right),\ldots,\mathcal{D}_{\varphi\left(p\right)}\varphi^{-1}\left(e_{k}\right)\right\} $
+\end_inset
+
+ להיות הבסיס הסטנדרטי של 
+\begin_inset Formula $T_{p}\left(\m\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: תהיינה 
+\begin_inset Formula $\m,\m^{\prime}$
+\end_inset
+
+ יריעות תהא 
+\begin_inset Formula $f\in C^{\a}\left(\m,\m^{\prime}\right)$
+\end_inset
+
+ תהא 
+\begin_inset Formula $p\in\m$
+\end_inset
+
+ תהא 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ מפה ב־
+\begin_inset Formula $\m$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\u$
+\end_inset
+
+ סביבה של 
+\begin_inset Formula $p$
+\end_inset
+
+ תהא 
+\begin_inset Formula $\left(\v,\psi\right)$
+\end_inset
+
+ מפה ב־
+\begin_inset Formula $\m^{\prime}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\v$
+\end_inset
+
+ סביבה של 
+\begin_inset Formula $f\left(p\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[\mathcal{D}_{p}f\right]_{i,j}=\frac{\partial\left(\psi\circ f\circ\varphi^{-1}\right)_{i}}{\partial x_{j}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה תהא 
+\begin_inset Formula $\m^{\prime}\subseteq\bbr^{m}$
+\end_inset
+
+ יריעה תהא 
+\begin_inset Formula $f:\m\to\m^{\prime}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $p\in\m$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $g\in C^{\a}\left(\u,\bbr^{m}\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\u\subseteq\bbr^{n}$
+\end_inset
+
+ סביבה של 
+\begin_inset Formula $p$
+\end_inset
+
+ וכן 
+\begin_inset Formula $g_{\upharpoonright_{\m\cap\u}}=f$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{D}_{p}f=\left(\mathcal{D}_{p}g\right)_{\upharpoonright_{T_{p}\left(\m\right)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נגזרת כיוונית: תהא 
+\begin_inset Formula $f\in C^{\a}\left(\m,\bbr^{m}\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $v\in T_{p}\left(\m\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $L_{v}f=\mathcal{D}_{p}f\left(v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: תהא 
+\begin_inset Formula $f\in C^{\a}\left(\m,\bbr^{m}\right)$
+\end_inset
+
+ תהא 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ מפה בסביבה של 
+\begin_inset Formula $p$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $v\in T_{p}\left(\m\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $L_{v}f=\sum_{i=1}^{k}v_{i}\cdot\frac{\partial\left(f\circ\varphi^{-1}\right)}{\partial x_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+וקטור נורמל: יהי 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ על־משטח ותהא 
+\begin_inset Formula $p\in\m$
+\end_inset
+
+ אזי 
+\begin_inset Formula $v\in\bbr^{n}\backslash\left\{ 0\right\} $
+\end_inset
+
+ עבורו 
+\begin_inset Formula $v\perp T_{p}\left(\m\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+וקטור נורמל יחידה: יהי 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ על־משטח ותהא 
+\begin_inset Formula $p\in\m$
+\end_inset
+
+ אזי וקטור נורמל 
+\begin_inset Formula $v\in\bbr^{n}\backslash\left\{ 0\right\} $
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\norm v=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהי 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ על־משטח תהא 
+\begin_inset Formula $p\in\m$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left\{ f=0\right\} $
+\end_inset
+
+ הצגה סתומה רגולרית בסביבה של 
+\begin_inset Formula $p$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\nabla f\left(p\right)}{\norm{\nabla f\left(p\right)}}$
+\end_inset
+
+ וקטור נורמל יחידה ל־
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהי 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ על־משטח תהא 
+\begin_inset Formula $p\in\m$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\Gamma_{f}$
+\end_inset
+
+ הצגה כגרף בסביבה של 
+\begin_inset Formula $p$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\left(\frac{\partial f}{\partial x_{1}},\ldots,\frac{\partial f}{\partial x_{n}},1\right)}{\sqrt{1+\norm{\nabla f\left(p\right)}^{2}}}$
+\end_inset
+
+ וקטור נורמל יחידה ל־
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מכפלה מצולבת: יהיו 
+\begin_inset Formula $v_{1}\ldots v_{n-1}\in\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $v_{1}\times\ldots\times v_{n-1}=\sum_{i=1}^{n}\left(-1\right)^{i+1}\det\left(\begin{smallmatrix}\left(v_{1}\right)_{1} & \dots & \left(v_{n-1}\right)_{1}\\
+\vdots &  & \vdots\\
+\left(v_{1}\right)_{i-1} & \dots & \left(v_{n-1}\right)_{i-1}\\
+\left(v_{1}\right)_{i+1} & \dots & \left(v_{n-1}\right)_{i+1}\\
+\vdots &  & \vdots\\
+\left(v_{1}\right)_{n} & \dots & \left(v_{n-1}\right)_{n}
+\end{smallmatrix}\right)e_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+הערה: יהיו 
+\begin_inset Formula $v_{1}\ldots v_{n-1}\in\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $v_{1}\times\ldots\times v_{n-1}=\det\left(\begin{smallmatrix}e_{1} & | &  & |\\
+\vdots & v_{1} & \dots & v_{n-1}\\
+e_{n} & | &  & |
+\end{smallmatrix}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהיו 
+\begin_inset Formula $v_{1}\ldots v_{n-1}\in\bbr^{n}$
+\end_inset
+
+ אזי מכפלה מצולבת העתקה לינארית אנטי־סימטרית.
+\end_layout
+
+\begin_layout Standard
+דטרמיננטת גראם: יהיו 
+\begin_inset Formula $v_{1}\ldots v_{m}\in\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Gamma\left(v_{1}\ldots v_{m}\right)=\det\left(\begin{smallmatrix}\left<v_{1},v_{1}\right> & \dots & \left<v_{1},v_{m}\right>\\
+\vdots &  & \vdots\\
+\left<v_{m},v_{1}\right> & \dots & \left<v_{m},v_{m}\right>
+\end{smallmatrix}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהיו 
+\begin_inset Formula $v_{1}\ldots v_{n-1}\in\bbr^{n}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $i\in\left[n-1\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $v_{1}\times\ldots\times v_{n-1}\perp v_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\norm{v_{1}\times\ldots\times v_{n-1}}=\sqrt{\Gamma\left(v_{1}\ldots v_{n-1}\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\det\left(v_{1}\times\ldots\times v_{n-1},v_{1},\ldots,v_{n-1}\right)\ge0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+טענה: יהי 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ על־משטח תהא 
+\begin_inset Formula $p\in\m$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $r$
+\end_inset
+
+ פרמטריזציה בסביבה של 
+\begin_inset Formula $p$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\partial r}{\partial x_{1}}\times\ldots\times\frac{\partial r}{\partial x_{n-1}}$
+\end_inset
+
+ וקטור נורמל ל־
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אופרטור דיפרנציאלי: תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה אזי 
+\begin_inset Formula $D:C^{\infty}\left(\m\right)\to C^{\infty}\left(\m\right)$
+\end_inset
+
+ לינארית עבורה לכל מפה 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ על 
+\begin_inset Formula $\m$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\overline{\u}$
+\end_inset
+
+ קומפקטית מתקיים 
+\begin_inset Formula $\mathcal{D}\left(f\circ\varphi^{-1}\right)\left(x\right)=\sum_{\substack{\a\in\bbn^{k}\\
+\left|\a\right|\le m
+}
+}a_{\a}\left(x\right)\cdot\frac{\partial^{\left|\a\right|}}{\partial x^{\a}}\left(f\circ\varphi^{-1}\right)\left(x\right)$
+\end_inset
+
+ עבור 
+\begin_inset Formula $m\in\bbn$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a_{\a}$
+\end_inset
+
+ חלקות.
+\end_layout
+
+\begin_layout Standard
+שדה וקטורי חלק: תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה אזי 
+\begin_inset Formula $v:\m\to\bigcup_{p\in\m}T_{p}\left(\m\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $v\left(p\right)\in T_{p}\left(\m\right)$
+\end_inset
+
+ וכן לכל מפה 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $a\in\varphi\left(\u\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\mathcal{D}_{\varphi^{-1}\left(x\right)}\left(\varphi\circ v\right)\left(\varphi^{-1}\left(a\right)\right)=\sum c_{i}\left(x\right)e_{i}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ חלקות.
+\end_layout
+
+\begin_layout Standard
+טענה: תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה ויהי 
+\begin_inset Formula $v$
+\end_inset
+
+ שדה וקטורי חלק אזי 
+\begin_inset Formula $L_{v}:C^{\infty}\left(\m\right)\to C^{\infty}\left(\m\right)$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $L_{v}\left(f\right)\left(x\right)=L_{v\left(x\right)}\left(f\right)$
+\end_inset
+
+ הינה אופרטור דיפרנציאלי.
+\end_layout
+
+\begin_layout Standard
+תומך: תהא 
+\begin_inset Formula $f\in C\left(\m\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\supp\left(f\right)=\overline{\left\{ x\in\m\mid f\left(x\right)\ne0\right\} }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+סימון: תהא 
+\begin_inset Formula $\m$
+\end_inset
+
+ יריעה ותהא 
+\begin_inset Formula $\u\subseteq\m$
+\end_inset
+
+ פתוחה אזי 
+\begin_inset Formula $C_{C}^{\infty}\left(\u\right)=\left\{ f\in C^{\infty}\left(\u\right)\mid\text{ קומפקטית}\supp\left(f\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אופרטור מקומי: תהא 
+\begin_inset Formula $\m$
+\end_inset
+
+ יריעה אזי 
+\begin_inset Formula $L:C^{\infty}\left(\m\right)\to C^{\infty}\left(\m\right)$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $\u\subseteq\m$
+\end_inset
+
+ פתוחה ולכל 
+\begin_inset Formula $f,g\in C_{C}^{\infty}$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $f_{\upharpoonright_{\u}}=g_{\upharpoonright_{\u}}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $L\left(f\right)_{\upharpoonright_{\u}}=L\left(g\right)_{\upharpoonright_{\u}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+משפט פיטרה: תהא 
+\begin_inset Formula $\m$
+\end_inset
+
+ יריעה ותהא 
+\begin_inset Formula $L:C^{\infty}\left(\m\right)\to C^{\infty}\left(\m\right)$
+\end_inset
+
+ לינארית התב
+\begin_inset Quotes erd
+\end_inset
+
+ש
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $L$
+\end_inset
+
+ אופרטור מקומי.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $f\in C^{\infty}\left(\m\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\supp\left(L\left(f\right)\right)\subseteq\supp\left(f\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $L$
+\end_inset
+
+ אופרטור דיפרנציאלי.
+\end_layout
+
+\begin_layout Standard
+חסרות טענות עזר וזה...
 \end_layout
 
 \begin_layout Standard
