@@ -1665,6 +1665,46 @@ a_{1}b_{2}-a_{1}b_{1}
 
 \series bold
 \color green
+המרחב הפרוייקיבי
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\ge2$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbr\bbp^{n}=\left\{ vv^{T}\mid v\in\bbs^{n}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n\ge2$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbr\bbp^{n}\subseteq\bbr^{\left(n+1\right)^{2}}$
+\end_inset
+
+ יריעה 
+\begin_inset Formula $n$
+\end_inset
+
+ מימדית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
 העתקת מעבר
 \series default
 \color inherit
@@ -3011,6 +3051,71 @@ e_{n} & | &  & |
 
 \series bold
 \color purple
+סימון
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f\in C^{\infty}\left(\m\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\a\in\bbn^{k}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\partial^{\a}f=\frac{\partial^{\left|\a\right|}}{\partial x^{\a}}\left(f\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+סימון
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $\a,\b\in\bbn^{k}$
+\end_inset
+
+ אזי 
+\begin_inset Formula ${\a \choose \b}=\prod_{i=1}^{k}{\a_{i} \choose \b_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה כלל לייבניץ
+\series default
+\color inherit
+: תהיינה 
+\begin_inset Formula $f,g\in C^{\infty}\left(\m\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\a\in\bbn^{k}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\partial^{\a}\left(f\cdot g\right)=\sum_{\substack{\b\in\bbn^{k}\\
+\left|\b\right|\le\left|\a\right|
+}
+}{\a \choose \b}\partial^{\b}\left(f\right)\partial^{\a-\b}\left(g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
 אופרטור דיפרנציאלי
 \series default
 \color inherit
@@ -3038,7 +3143,7 @@ e_{n} & | &  & |
 \begin_inset Formula $\mathcal{D}\left(f\circ\varphi^{-1}\right)\left(x\right)=\sum_{\substack{\a\in\bbn^{k}\\
 \left|\a\right|\le m
 }
-}a_{\a}\left(x\right)\cdot\frac{\partial^{\left|\a\right|}}{\partial x^{\a}}\left(f\circ\varphi^{-1}\right)\left(x\right)$
+}a_{\a}\left(x\right)\cdot\partial^{\a}\left(f\circ\varphi^{-1}\right)\left(x\right)$
 \end_inset
 
  עבור 
@@ -3055,7 +3160,7 @@ e_{n} & | &  & |
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 שדה וקטורי 
 \begin_inset Formula $C^{m}$
 \end_inset
@@ -3093,7 +3198,7 @@ e_{n} & | &  & |
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 טענה
 \series default
 \color inherit
@@ -3119,7 +3224,7 @@ e_{n} & | &  & |
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 תומך
 \series default
 \color inherit
@@ -3137,7 +3242,7 @@ e_{n} & | &  & |
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 סימון
 \series default
 \color inherit
@@ -3159,7 +3264,7 @@ e_{n} & | &  & |
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 אופרטור מקומי
 \series default
 \color inherit
@@ -3204,28 +3309,6 @@ e_{n} & | &  & |
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-סימון
-\series default
-\color inherit
-: תהא 
-\begin_inset Formula $f\in C^{\infty}\left(\m\right)$
-\end_inset
-
- ותהא 
-\begin_inset Formula $\a\in\bbn^{k}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\partial^{\a}f=\frac{\partial^{\left|\a\right|}}{\partial x^{\a}}\left(f\right)$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -5443,6 +5526,38 @@ e_{n} & | &  & |
 
  קומפקטית אזי 
 \begin_inset Formula $\intop_{\v}f=\intop_{\varphi\left(\v\right)}\intop_{\varphi^{-1}\left(t\right)}\frac{f\left(x\right)}{\sqrt{\det\left(\left(\mathcal{D}_{x}\varphi\right)\cdot\left(\mathcal{D}_{x}\varphi\right)^{T}\right)}}\text{d}\vol_{n-1}\left(x\right)\text{d}t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $r>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\vol_{n}\left(r\cdot\bbs^{n}\right)=r^{n}\cdot\vol_{n}\left(\bbs^{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה שטח פנים של ספרה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\vol_{n-1}\left(\bbs^{n-1}\right)=\frac{2\pi^{\frac{n}{2}}}{\Gamma\left(\frac{n}{2}\right)}$
 \end_inset
 
 .
