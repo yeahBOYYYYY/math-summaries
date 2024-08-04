@@ -161,6 +161,33 @@ filename "../../macros.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\u}{\mathcal{U}}
+{\mathcal{U}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\v}{\mathcal{V}}
+{\mathcal{V}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\t}{\mathcal{T}}
+{\mathcal{T}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\s}{\mathcal{S}}
+{\mathcal{S}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 טופולוגיה
@@ -817,6 +844,24 @@ filename "../../macros.lyx"
 
 \series bold
 \color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ מצוייד בטופולוגיית הסדר זהה ל־
+\begin_inset Formula $\bbr$
+\end_inset
+
+ מצוייד עם הטופולוגיה הסטנדרטית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
 תת בסיס
 \series default
 \color inherit
@@ -1039,6 +1084,68 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
+ט ותהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{int}\left(A\right)\subseteq A\subseteq\overline{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\left(X,\mathcal{T}\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט ותהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{int}\left(A\right)=\max_{\subseteq}\left\{ \u\in\t\mid\u\subseteq A\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\overline{A}=\min_{\subseteq}\left\{ E\mid\left(A\subseteq E\right)\land\left(E^{\mathcal{C}}\in\t\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\left(X,\mathcal{T}\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
 ט תהא 
 \begin_inset Formula $A\subseteq X$
 \end_inset
@@ -1198,6 +1305,28 @@ E^{\mathcal{C}}\in\mathcal{T}
 
  המקיימת 
 \begin_inset Formula $X=\overline{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טופולוגיית הנקודה הייחודית
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $p\in X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\t_{p}=\left\{ \u\subseteq X\mid p\in\u\right\} \cup\left\{ \emptyset\right\} $
 \end_inset
 
 .
@@ -1650,7 +1779,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_inset
 
  אזי 
-\begin_inset Formula $\mathcal{T}_{X}=\left\{ f^{-1}\left(U\right)\mid U\in\mathcal{S}\right\} $
+\begin_inset Formula $\mathcal{T}_{f}=\left\{ f^{-1}\left(U\right)\mid U\in\mathcal{S}\right\} $
 \end_inset
 
 .
@@ -1680,7 +1809,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(X,\mathcal{T}_{X}\right)$
+\begin_inset Formula $\left(X,\mathcal{T}_{f}\right)$
 \end_inset
 
  מ
@@ -1718,7 +1847,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_inset
 
  רציפה על 
-\begin_inset Formula $\left(X,\mathcal{T}_{X}\right),\left(Y,\mathcal{S}\right)$
+\begin_inset Formula $\left(X,\mathcal{T}_{f}\right),\left(Y,\mathcal{S}\right)$
 \end_inset
 
 .
@@ -2520,7 +2649,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 
 \series bold
 \color brown
-משפט
+משפט התכונה האוניברסילית
 \series default
 \color inherit
 : תהא 
@@ -2792,6 +2921,92 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $f:X\to Y$
 \end_inset
 
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל התב
+\begin_inset Quotes erd
+\end_inset
+
+ש
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+ פתוחה.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+ סגורה.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ רציפה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל התב
+\begin_inset Quotes erd
+\end_inset
+
+ש
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+ הומיאומורפיזם.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה ופתוחה.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ רציפה וסגורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
  רציפה פתוחה ועל אזי 
 \begin_inset Formula $f$
 \end_inset
@@ -2819,33 +3034,6 @@ E^{\mathcal{C}}\in\mathcal{T}
 
 \begin_layout Standard
 \begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\u}{\mathcal{U}}
-{\mathcal{U}}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\v}{\mathcal{V}}
-{\mathcal{V}}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\t}{\mathcal{T}}
-{\mathcal{T}}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\s}{\mathcal{S}}
-{\mathcal{S}}
 \end_inset
 
 
@@ -2998,7 +3186,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
 \end_inset
 
-מ
+ מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -3024,7 +3212,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
 \end_inset
 
-מ
+ מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -3034,6 +3222,62 @@ E^{\mathcal{C}}\in\mathcal{T}
 
  אזי 
 \begin_inset Formula $\t_{\text{prod}}\subseteq\t_{\text{box}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+טים ותהא 
+\begin_inset Formula $\left(\prod_{\a\in\Lambda}X_{\a},\t\right)$
+\end_inset
+
+ טופולוגיה עבורה 
+\begin_inset Formula $\pi_{\a}$
+\end_inset
+
+ רציפה לכל 
+\begin_inset Formula $\a\in\Lambda$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\t_{\text{prod}}\subseteq\t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+טים אזי 
+\begin_inset Formula $\t_{\text{prod}}=\left\{ \prod_{\a\in\Lambda}\u_{\a}\mid\left(\forall\a\in\Lambda.\u_{\a}\in\t_{\a}\right)\land\left(\left|\left\{ \a\in\Lambda\mid\pi_{\a}\left(\u_{\a}\right)=X_{\a}\right\} \right|\in\bbn\right)\right\} $
 \end_inset
 
 .
@@ -3608,31 +3852,59 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
-\begin_inset Formula $\prod_{\a\in\Lambda}X_{\a}$
+: 
+\begin_inset Formula $\bbr_{\text{Sorg}}$
 \end_inset
 
- עם 
-\begin_inset Formula $\t_{\text{prod}}$
+ איננה קשירה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: יהיו 
+\begin_inset Formula $\left\{ X_{\a}\right\} _{\a\in\Lambda}$
 \end_inset
 
- אזי )
-\begin_inset Formula $\prod_{\a\in\Lambda}X_{\a}$
+ מ
+\begin_inset Quotes erd
 \end_inset
 
- קשיר(
-\begin_inset Formula $\iff$
-\end_inset
-
-)לכל 
-\begin_inset Formula $\a\in\Lambda$
-\end_inset
-
- המרחב 
+טים אזי )
 \begin_inset Formula $X_{\a}$
 \end_inset
 
+ קשיר לכל 
+\begin_inset Formula $\a\in\Lambda$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\left(\prod X_{\a},\t_{\text{prod}}\right)$
+\end_inset
+
  קשיר(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(\prod_{i=1}^{\infty}\bbr,\t_{\text{box}}\right)$
+\end_inset
+
+ איננה קשירה.
 \end_layout
 
 \begin_layout Standard
@@ -3733,6 +4005,28 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_inset
 
  קשיר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $n>1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbr^{n}$
+\end_inset
+
+ איננו הומיאומורפי ל־
+\begin_inset Formula $\bbr$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -4115,6 +4409,26 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: יהי 
+\begin_inset Formula $D$
+\end_inset
+
+ רכיב קשירות של 
+\begin_inset Formula $X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $D$
+\end_inset
+
+ סגור.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
@@ -4276,6 +4590,20 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
+: 
+\begin_inset Formula $\bbr_{\text{Sorg}}$
+\end_inset
+
+ איננו קשיר מקומית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
 : יהי 
 \begin_inset Formula $X$
 \end_inset
@@ -4301,6 +4629,48 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_inset
 
  רכיב קשירות של 
+\begin_inset Formula $\u$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $D\in\t$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אזי )
+\begin_inset Formula $X$
+\end_inset
+
+ קשיר מסילתית מקומית(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $\u\in\t$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $D$
+\end_inset
+
+ רכיב קשירות מסילתית של 
 \begin_inset Formula $\u$
 \end_inset
 
@@ -4421,6 +4791,60 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_inset
 
  מניה 
+\begin_inset Formula $\text{I}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr_{\text{Sorg}}$
+\end_inset
+
+ מניה 
+\begin_inset Formula $\text{I}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $X$
+\end_inset
+
+ המצוייד עם הטופולוגיה הבדידה מניה 
+\begin_inset Formula $\text{I}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ המצוייד עם הטופולוגיה הקו־בת־מניה אינו מניה 
 \begin_inset Formula $\text{I}$
 \end_inset
 
@@ -4564,10 +4988,170 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr^{n}$
+\end_inset
+
+ מניה 
+\begin_inset Formula $\text{II}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סימון
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr^{\aleph_{0}}=\prod_{i=1}^{\infty}\bbr$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(\bbr^{\aleph_{0}},\t_{\text{prod}}\right)$
+\end_inset
+
+ מניה 
+\begin_inset Formula $\text{II}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr_{\text{Sorg}}$
+\end_inset
+
+ אינו מניה 
+\begin_inset Formula $\text{II}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ המצוייד עם הטופולוגיה הבדידה אזי )
+\begin_inset Formula $X$
+\end_inset
+
+ מניה 
+\begin_inset Formula $\text{II}$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\aleph_{0}\ge\left|X\right|$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $X$
+\end_inset
+
+ המצוייד עם הטופולוגיה הטריוואלית מניה 
+\begin_inset Formula $\text{II}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: נגדיר 
+\begin_inset Formula $d_{u}:\bbr^{\aleph_{0}}\times\bbr^{\aleph_{0}}\to\bbr$
+\end_inset
+
+ כך 
+\begin_inset Formula $d_{u}\left(\left(a_{k}\right)_{k=1}^{\infty},\left(b_{k}\right)_{k=1}^{\infty}\right)=\min\left\{ \sup_{k\in\bbn}\left|a_{k}-b_{k}\right|,1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $d_{u}$
+\end_inset
+
+ מטריקה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הטופולוגיה האחידה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\left(\bbr^{\aleph_{0}},\t\left(d_{u}\right)\right)$
+\end_inset
+
+ הינו מניה 
+\begin_inset Formula $\text{I}$
+\end_inset
+
+ וכן אינו מניה 
+\begin_inset Formula $\text{II}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -4783,6 +5367,78 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr_{\text{Sorg}}$
+\end_inset
+
+ ספרבילי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ המצוייד עם הטופולוגיה הבדידה אזי )
+\begin_inset Formula $X$
+\end_inset
+
+ ספרבילי(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\aleph_{0}\ge\left|X\right|$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ המצוייד עם הטופולוגיה הטריוואלית אזי 
+\begin_inset Formula $X$
+\end_inset
+
+ ספרבילי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ המצוייד בטופולוגיה הקו־בת־מנייה אינו ספרבילי.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
@@ -4813,6 +5469,24 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_inset
 
  לינדלוף וספרבילי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ המצוייד בטופולוגיה הקו־סופית אינו מניה 
+\begin_inset Formula $\text{I}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -5372,6 +6046,114 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbq$
+\end_inset
+
+ המצוייד בטופולוגיה הקו־סופית הינו 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ וכן אינו 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ המצוייד בטופולוגיה הקו־בת־מניה הינו 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ וכן אינו 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: יהי 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ מרחב מטרי אזי 
+\begin_inset Formula $\left(X,\t\left(d\right)\right)$
+\end_inset
+
+ הינו 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+: תהא 
+\begin_inset Formula $\left(X,\t\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left(Y,\s\right)$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט באשר 
+\begin_inset Formula $\t\subseteq\s$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(Y,S\right)$
+\end_inset
+
+ הינה 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
@@ -5891,6 +6673,64 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series default
 \color inherit
 : 
+\begin_inset Formula $\bbr_{K}$
+\end_inset
+
+ הינו 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ וכן אינו רגולרי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טופולוגיית הקרניים ההולכות לאינסוף
+\series default
+\color inherit
+: נגדיר 
+\begin_inset Formula $\t=\left\{ \left(a,\infty\right)\mid a\in\bbr\right\} \cup\left\{ \emptyset,\bbr\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\bbr,\t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ המצוייד עם טופולוגיית הקרניים ההולכות לאינסוף הינו 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ וכן אינו 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ וכן אינו רגולרי וכן הינו נורמלי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+: 
 \begin_inset Formula $\bbr_{\text{Sorg}}$
 \end_inset
 
@@ -6159,6 +6999,58 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_layout Standard
 
 \series bold
+מסקנה
+\series default
+: יהיו 
+\begin_inset Formula $\left\{ X_{\a}\right\} _{\a\in\Lambda}$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+טים אזי )
+\begin_inset Formula $X_{\a}$
+\end_inset
+
+ הינו 
+\begin_inset Formula $T_{3}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\a\in\Lambda$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\left(\prod X_{\a},\t_{\text{prod}}\right)$
+\end_inset
+
+ הינו 
+\begin_inset Formula $T_{3}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: 
+\begin_inset Formula $\bbr_{\text{Sorg}}^{2}$
+\end_inset
+
+ הינו רגולרי וכן אינו נורמלי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 טענה
 \series default
 : יהי 
@@ -6297,6 +7189,18 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_inset
 
  מטריזבילי(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: 
+\begin_inset Formula $\bbr^{\aleph_{0}}$
+\end_inset
+
+ מטריזבילי.
 \end_layout
 
 \begin_layout Standard

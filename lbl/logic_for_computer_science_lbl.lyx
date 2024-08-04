@@ -3120,25 +3120,32 @@ status open
 \end_layout
 
 \begin_layout Itemize
-אקסיומות: 
+אקסיומות:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
 \begin_inset Formula $A_{1}=\left(\a\implies\left(\b\implies\a\right)\right)$
 \end_inset
 
-, 
+.
+\end_layout
+
+\begin_layout Itemize
 \begin_inset Formula $A_{2}=\left(\left(\a\implies\left(\b\implies\g\right)\right)\implies\left(\left(\a\implies\b\right)\implies\left(\a\implies\g\right)\right)\right)$
 \end_inset
 
-,
-\begin_inset Newline newline
-\end_inset
+.
+\end_layout
 
-
+\begin_layout Itemize
 \begin_inset Formula $A_{3}=\left(\left(\left(\neg\a\right)\implies\left(\neg\b\right)\right)\implies\left(\b\implies\a\right)\right)$
 \end_inset
 
 .
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 כללי היסק: 
 \begin_inset Formula $F=\left\{ \text{MP}\right\} $
@@ -3390,7 +3397,7 @@ status open
 
 \series bold
 \color red
-משפט
+משפט הנאותות
 \series default
 \color inherit
 : 
@@ -3826,7 +3833,7 @@ status open
 
 \series bold
 \color green
-משפט
+משפט השלמות
 \series default
 \color inherit
 : 
@@ -8052,11 +8059,886 @@ d &  & \text{else}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+: ניתן להגדיר מילון ומבנה לא בני־מנייה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט לוונהיים־סקולם היורד
+\series default
+: יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון בן־מנייה ותהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ נוסחה מעל 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ אזי )
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ספיקה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיים מבנה בן־מנייה 
+\begin_inset Formula $M$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ בו 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ספיקה(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט לוונהיים־סקולם העולה
+\series default
+: יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון בן־מנייה יהי 
+\begin_inset Formula $M$
+\end_inset
+
+ מבנה בן־מנייה ותהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ נוסחה מעל 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ספיקה ב־
+\begin_inset Formula $M$
+\end_inset
+
+ אזי לכל עוצמה אינסופית 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ ולכל מבנה 
+\begin_inset Formula $M^{\prime}$
+\end_inset
+
+ מעוצמה 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ספיקה ב־
+\begin_inset Formula $M^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון בן־מנייה ותהא 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ עוצמה אינסופית אזי לא קיימת קבוצת נוסחאות 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left(\left|M\right|=\kappa\right)\iff\left(M\models\Gamma\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+: אקסיומות 
+\begin_inset Formula $\text{ZFC}$
+\end_inset
+
+ מנוסחות בלוגיקה מסדר ראשון.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: קיים מבנה בן־מנייה לתורת הקבוצות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט בדיקת תקפות
+\series default
+: קיים אלגוריתם המקבל נוסחה 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ המקיים )האלגוריתם מחזיר תשובה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\varphi$
+\end_inset
+
+ תקפה(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית הריצוף
+\series default
+: יהיו 
+\begin_inset Formula $R_{1}\ldots R_{n}$
+\end_inset
+
+ ריבועים בעלי צלע מאורך
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+וכן כל צלע שלהם צבועה בצבע אזי האם ניתן לרצף את 
+\begin_inset Formula $\bbr_{\ge0}^{2}$
+\end_inset
+
+ בעזרת הריבועים באשר כל שני ריבועים סמוכים חולקים צבע בצלע חיבורם.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: לא קיים אלגוריתם המכריע את בעיית הריצוף.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט צ'רץ'־טיורינג
+\series default
+: לא קיים אלגוריתם המקבל נוסחה 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ומכריע האם היא תקיפה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+יחס קונגרואנציה
+\series default
+: יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון אזי 
+\begin_inset Formula $E\in\sigma$
+\end_inset
+
+ סימן יחס דו־מקומי המקיים
+\end_layout
+
+\begin_layout Itemize
+רפלקסיבי: 
+\begin_inset Formula $\forall x\left(E\left(x,x\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סימטרי: 
+\begin_inset Formula $\forall x\forall y\left(E\left(x,y\right)\implies E\left(y,x\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+טרנזיטיבי: 
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(E\left(x,y\right)\land E\left(y,z\right)\right)\implies E\left(x,z\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $f\in\sigma$
+\end_inset
+
+ סימן פונקציה מתקיים 
+\begin_inset Formula $\forall x_{1}\ldots\forall x_{n}\forall y_{1}\ldots\forall y_{n}\left(\left(\bigwedge_{i=1}^{n}E\left(x_{i},y_{i}\right)\right)\implies E\left(f\left(x_{1}\ldots x_{n}\right),f\left(y_{1}\ldots y_{n}\right)\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $R\in\sigma$
+\end_inset
+
+ סימן יחס מתקיים 
+\begin_inset Formula $\forall x_{1}\ldots\forall x_{n}\forall y_{1}\ldots\forall y_{n}\left(\left(\bigwedge_{i=1}^{n}E\left(x_{i},y_{i}\right)\right)\implies\left(R\left(x_{1}\ldots x_{n}\right)\iff R\left(y_{1}\ldots y_{n}\right)\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+: בהינתן מילון עם שיוויון 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ ניתן לחשוב על השיוויון בתור קונגרואנציה ולכן נסמן 
+\begin_inset Formula $\sigma_{E}$
+\end_inset
+
+ את המילון עם קונגרואנציה במקום שיוויון.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מילון מחלקות קונגרואנציה
+\series default
+: יהי מילון 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ עם שיוויון ויהי 
+\begin_inset Formula $M$
+\end_inset
+
+ מבנה על 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ אזי מבנה 
+\begin_inset Formula $M_{E}$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\sigma_{E}$
+\end_inset
+
+ המקיים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D^{M^{\prime}}=\nicefrac{D^{M}}{E}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל סימן פונקציה 
+\begin_inset Formula $f\in\sigma$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $f^{M^{\prime}}\left(\left[a_{1}\right]_{E},\ldots,\left[a_{n}\right]_{E}\right)=\left[f^{M}\left(a_{1}\ldots a_{n}\right)\right]_{E}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל סימן יחס 
+\begin_inset Formula $R\in\sigma$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $R^{M^{\prime}}\left(\left[a_{1}\right]_{E},\ldots,\left[a_{n}\right]_{E}\right)\iff R^{M}\left(a_{1}\ldots a_{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+החלפת שיוויון ביחס קונגרואנציה
+\series default
+: תהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ נוסחה מעל מילון עם שיוויון 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ באשר 
+\begin_inset Formula $f_{1}\ldots f_{n}$
+\end_inset
+
+ סימני הפונקציות ב־
+\begin_inset Formula $\varphi$
+\end_inset
+
+ וכן 
+\begin_inset Formula $R_{1}\ldots R_{m}$
+\end_inset
+
+ סימני היחס ב־
+\begin_inset Formula $\varphi$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\varphi_{E}=\varphi\left[\nicefrac{E}{=}\right]\land\left(\text{ יחס שקילות}E\right)\land\left(\bigwedge_{i=1}^{n}\left(f_{i}\text{ יחס קונגרואנציה ביחס ל־}E\right)\right)\land\left(\bigwedge_{i=1}^{m}\left(E_{i}\text{ יחס קונגרואנציה ביחס ל־}E\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ נוסחה מעל מילון 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ עם שיוויון יהי 
+\begin_inset Formula $M$
+\end_inset
+
+ מבנה מעל 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $v$
+\end_inset
+
+ השמה נגדיר השמה 
+\begin_inset Formula $v_{E}:\left\{ x_{i}\right\} \to D^{M_{E}}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $v_{E}\left(x_{i}\right)=\left[v\left(x_{i}\right)\right]_{E}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(M_{E},v_{E}\models\varphi_{E}\right)\iff\left(M,v\models\varphi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: קיים אלגוריתם המקבל נוסחה 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ מעל מילון עם שיוויון 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ ומחזיר נוסחה חסרת שיוויון 
+\begin_inset Formula $\psi$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\psi$
+\end_inset
+
+ מעל מילון 
+\begin_inset Formula $\sigma^{\prime}$
+\end_inset
+
+ עבורו )
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ספיק(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\psi$
+\end_inset
+
+ ספיק(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: תהא 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ קבוצת נוסחאות מעל 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ עם שיוויון אזי )
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ ספיקה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\Gamma_{E}$
+\end_inset
+
+ ספיקה(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט הקומפקטיות
+\series default
+: יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון עם שיוויון תהא 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ קבוצת נוחסאות ותהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ נוסחה אזי )
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ ספיקה(
+\begin_inset Formula $\iff$
+\end_inset
+
+)לכל 
+\begin_inset Formula $\Delta\subseteq\Gamma$
+\end_inset
+
+ סופית 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ ספיקה(.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\hc}{\text{HC}}
+{\text{HC}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כלל ג'ן
+\series default
+: יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון ותהא 
+\begin_inset Formula $\a$
+\end_inset
+
+ נוסחה אזי 
+\begin_inset Formula $\text{Gen}:\frac{\a}{\forall x\a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מערכת ההוכחה של הילברט )
+\begin_inset Formula $\hc$
+\end_inset
+
+(
+\series default
+: יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון חסר שיוויון אזי
+\end_layout
+
+\begin_layout Itemize
+אלפבית: 
+\begin_inset Formula $\Sigma=\sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+נוסחאות: 
+\begin_inset Formula $N=X_{\left\{ t\mid\text{ שם עצם}t\right\} ,\left\{ \neg,\implies\right\} }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אקסיומות:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $A_{1}=\left(\a\implies\left(\b\implies\a\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{2}=\left(\left(\a\implies\left(\b\implies\g\right)\right)\implies\left(\left(\a\implies\b\right)\implies\left(\a\implies\g\right)\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{3}=\left(\left(\left(\neg\a\right)\implies\left(\neg\b\right)\right)\implies\left(\b\implies\a\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $t$
+\end_inset
+
+ שם עצם חופשי להצבה במקום 
+\begin_inset Formula $x$
+\end_inset
+
+ ב־
+\begin_inset Formula $\a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A_{4}=\left(\left(\forall x\a\right)\implies\a\left[\nicefrac{t}{x}\right]\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $x\notin\fv\left(\a\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A_{5}=\left(\left(\forall x\left(\a\implies\b\right)\right)\implies\left(\a\implies\left(\forall x\b\right)\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+כללי היסק: 
+\begin_inset Formula $F=\left\{ \text{MP},\text{Gen}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+: מערכת ההוכחה 
+\begin_inset Formula $\hc$
+\end_inset
+
+ הינה מערכת הוכחה מעל לוגיקה מסדר ראשון ולא תחשיב הפסוקים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט הנאותות
+\series default
+: יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון ללא שיוויון תהיינה 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ הנחות מעל 
+\begin_inset Formula $\hc$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\a$
+\end_inset
+
+ נוסחה מעל 
+\begin_inset Formula $\hc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\Gamma\underset{\hc}{\vdash}\a\right)\implies\left(\Gamma\vmodels\a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $\a\in\wff$
+\end_inset
+
+ פסוק באשר 
+\begin_inset Formula $\underset{\hpc}{\vdash}\a$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\var\left(\a\right)=\left\{ p_{1}\ldots p_{n}\right\} $
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\varphi_{1}\ldots\varphi_{n}$
+\end_inset
+
+ נוסחאות אזי 
+\begin_inset Formula $\underset{\hc}{\vdash}\a\left[\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט הדידוקציה
+\series default
+: תהיינה 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ הנחות מעל 
+\begin_inset Formula $\hc$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $\a,\b$
+\end_inset
+
+ נוחסאות מעל 
+\begin_inset Formula $\hc$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $\Gamma\cup\left\{ \a\right\} \underset{\hc}{\vdash}\b$
+\end_inset
+
+ וכן בהוכחה לא הופעל כלל 
+\begin_inset Formula $\text{Gen}$
+\end_inset
+
+ על משתנה חופשי ב־
+\begin_inset Formula $\a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Gamma\underset{\hc}{\vdash}\left(\a\implies\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט השלמות של גדל
+\series default
+: יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון ללא שיוויון תהיינה 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ הנחות מעל 
+\begin_inset Formula $\hc$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\a$
+\end_inset
+
+ נוסחה מעל 
+\begin_inset Formula $\hc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\Gamma\underset{\hc}{\vdash}\a\right)\impliedby\left(\Gamma\vmodels\a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $21.07.2024$
+\begin_inset Formula $28.07.2024$
 \end_inset
 
  - הכל
