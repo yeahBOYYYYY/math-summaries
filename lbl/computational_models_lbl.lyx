@@ -65,12 +65,6 @@
 \renewcommand{\iff}{\negthickspace\RonMikhelmanLoll\negthickspace}
 \let\RonMikhelmanLolll\impliedby
 \renewcommand{\impliedby}{\negthickspace\RonMikhelmanLolll\negthickspace}
-
-%for defnos
-\usepackage{multicol}
-\usepackage{color}
-\setlength{\columnseprule}{1pt}
-\def\columnseprulecolor{\color{black}}
 \end_preamble
 \options no-math
 \use_default_options true
@@ -153,7 +147,7 @@
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "../../macros.lyx"
+filename "E:/University/!Summaries/macros.lyx"
 
 \end_inset
 
@@ -494,10 +488,22 @@ filename "../../macros.lyx"
 מעגל בוליאני
 \series default
 : תהיינה 
+\begin_inset Formula $k_{1}\ldots k_{n}\in\bbn_{+}$
+\end_inset
+
+ תהיינה 
 \begin_inset Formula $f_{1}\ldots f_{n}$
 \end_inset
 
- פונקציות בוליאניות ותהיינה 
+ פונקציות בוליאניות באשר 
+\begin_inset Formula $f_{i}:\left\{ 0,1\right\} ^{k_{i}}\to\left\{ 0,1\right\} $
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ ותהיינה 
 \begin_inset Formula $x_{1}\ldots x_{m},y_{1}\ldots y_{k}\in\left\{ 0,1\right\} $
 \end_inset
 
@@ -505,11 +511,7 @@ filename "../../macros.lyx"
 \begin_inset Formula $G$
 \end_inset
 
- מעל
-\begin_inset Newline newline
-\end_inset
-
-
+ מעל 
 \begin_inset Formula $\left\{ f_{1}\ldots f_{n},x_{1}\ldots x_{m},y_{1}\ldots y_{k}\right\} $
 \end_inset
 
@@ -521,6 +523,30 @@ filename "../../macros.lyx"
 \end_inset
 
  חסר מעגלים מכוונים.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $i\in\left[m\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\deg^{-}\left(x_{i}\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\deg^{-}\left(f_{i}\right)=k_{i}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
@@ -539,18 +565,6 @@ filename "../../macros.lyx"
 .
 \end_layout
 
-\begin_layout Itemize
-לכל 
-\begin_inset Formula $i\in\left[m\right]$
-\end_inset
-
- מתקיים 
-\begin_inset Formula $\deg^{-}\left(x_{i}\right)=0$
-\end_inset
-
-.
-\end_layout
-
 \begin_layout Standard
 
 \series bold
@@ -561,14 +575,6 @@ filename "../../macros.lyx"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-הערה
-\series default
-: במעגל שער יכול להופיע במספר קודקודים שונים.
 \end_layout
 
 \begin_layout Standard
@@ -677,6 +683,30 @@ filename "../../macros.lyx"
 \begin_layout Standard
 
 \series bold
+מעגל מחשב פונקציה
+\series default
+: תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי מעגל בולינאני 
+\begin_inset Formula $C$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $v\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $C\left(v\right)=f\left(v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 משפט אוניברסליות דה־מורגן
 \series default
 : תהא 
@@ -687,15 +717,11 @@ filename "../../macros.lyx"
 \begin_inset Formula $C$
 \end_inset
 
- עבורו לכל 
+ מעל בסיס דה־מורגן עבורו לכל 
 \begin_inset Formula $v\in\left\{ 0,1\right\} ^{m}$
 \end_inset
 
- מתקיים
-\begin_inset Newline newline
-\end_inset
-
-
+ מתקיים 
 \begin_inset Formula $C\left(v\right)=f\left(v\right)$
 \end_inset
 
@@ -728,19 +754,23 @@ filename "../../macros.lyx"
 משפחה מכריעה שפה
 \series default
 : תהא 
-\begin_inset Formula $L\subseteq\Sigma^{*}$
+\begin_inset Formula $L\subseteq\left\{ 0,1\right\} ^{*}$
 \end_inset
 
  שפה אזי משפחה של מעגלים 
 \begin_inset Formula $\left\{ C_{n}\right\} _{n\in\bbn}$
 \end_inset
 
- עבורה 
-\begin_inset Formula $C_{n}$
+ עבורה לכל 
+\begin_inset Formula $n\in\bbn$
 \end_inset
 
- מכריעה את 
-\begin_inset Formula $\Sigma^{n}$
+ ולכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(C_{n}\left(x\right)\right)\iff\left(x\in L\right)$
 \end_inset
 
 .
@@ -888,9 +918,6 @@ filename "../../macros.lyx"
 \end_inset
 
 .
- 
-\color lightgray
-לא הוכח בקורס
 \end_layout
 
 \begin_layout Standard
@@ -915,6 +942,1718 @@ filename "../../macros.lyx"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אוטומט סופי דטרמיניסטי )אס
+\begin_inset Quotes erd
+\end_inset
+
+ד(
+\series default
+: תהא 
+\begin_inset Formula $Q\ne\emptyset$
+\end_inset
+
+ קבוצה סופית יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית תהא 
+\begin_inset Formula $\d:Q\times\Sigma\to Q$
+\end_inset
+
+ יהי 
+\begin_inset Formula $q\in Q$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F\subseteq Q$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(Q,\Sigma,\d,q,F\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מצבים באוטומט סופי דטרמיניסטי
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,q,F\right)$
+\end_inset
+
+ אס
+\begin_inset Quotes erd
+\end_inset
+
+ד אזי 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלפבית באוטומט סופי דטרמיניסטי
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,q,F\right)$
+\end_inset
+
+ אס
+\begin_inset Quotes erd
+\end_inset
+
+ד אזי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית מעברים באוטומט סופי דטרמיניסטי
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,q,F\right)$
+\end_inset
+
+ אס
+\begin_inset Quotes erd
+\end_inset
+
+ד אזי 
+\begin_inset Formula $\d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מצב התחלתי באוטומט סופי דטרמיניסטי
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,q,F\right)$
+\end_inset
+
+ אס
+\begin_inset Quotes erd
+\end_inset
+
+ד אזי 
+\begin_inset Formula $q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מצבים מקבלים באוטומט סופי דטרמיניסטי
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,q,F\right)$
+\end_inset
+
+ אס
+\begin_inset Quotes erd
+\end_inset
+
+ד אזי 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית המעברים המורחבת
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,q_{0},F\right)$
+\end_inset
+
+ אס
+\begin_inset Quotes erd
+\end_inset
+
+ד אזי 
+\begin_inset Formula $\hat{\d}:Q\times\Sigma^{*}\to Q$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $q\in Q$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\hat{\d}\left(q,\e\right)=q$
+\end_inset
+
+ וכן לכל 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\hat{\d}\left(q,x\right)=\d\left(\hat{\d}\left(q,x_{1}\ldots x_{n-1}\right),x_{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אוטומט סופי דטרמיניסטי מקבל מילה
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,q_{0},F\right)$
+\end_inset
+
+ אס
+\begin_inset Quotes erd
+\end_inset
+
+ד אזי 
+\begin_inset Formula $x\in\Sigma^{*}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\hat{\d}\left(q_{0},x\right)\in F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ אס
+\begin_inset Quotes erd
+\end_inset
+
+ד ויהי 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $A$
+\end_inset
+
+ מקבל את 
+\begin_inset Formula $x$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיימים 
+\begin_inset Formula $q_{1}\ldots q_{n}\in Q$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\d\left(q_{i-1},x_{i}\right)=q_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ וכן 
+\begin_inset Formula $q_{n}\in F$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה של אוטומט סופי דטרמיניסטי
+\series default
+: יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ אס
+\begin_inset Quotes erd
+\end_inset
+
+ד אזי 
+\begin_inset Formula $L\left(A\right)=\left\{ x\in\Sigma^{*}\mid x\text{ מקבל את }A\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה רגולרית
+\series default
+: יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית אזי שפה 
+\begin_inset Formula $\mathcal{L}\subseteq\Sigma^{*}$
+\end_inset
+
+ עבורה קיים אס
+\begin_inset Quotes erd
+\end_inset
+
+ד 
+\begin_inset Formula $A$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $L\left(A\right)=\mathcal{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ רגולרית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\left\{ \e\right\} $
+\end_inset
+
+ רגולרית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\left\{ x\mid\#_{1}\left(x\right)=1\mod2\right\} $
+\end_inset
+
+ רגולרית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\left\{ y\,1\,0^{2k}\mid\left(y\in\left\{ 0,1\right\} ^{*}\right)\land\left(k\in\bbn\right)\right\} $
+\end_inset
+
+ רגולרית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהיו 
+\begin_inset Formula $L_{1},L_{2},L_{3}\subseteq\Sigma^{*}$
+\end_inset
+
+ שפות אזי 
+\begin_inset Formula $L_{1}\left(L_{2}L_{3}\right)=\left(L_{1}L_{2}\right)L_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $L\subseteq\Sigma^{*}$
+\end_inset
+
+ שפה באשר 
+\begin_inset Formula $L\ne\emptyset$
+\end_inset
+
+ וכן 
+\begin_inset Formula $L\ne\left\{ \e\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $L^{*}$
+\end_inset
+
+ אינסופית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: תהיינה 
+\begin_inset Formula $L,\mathcal{L}\subseteq\Sigma^{*}$
+\end_inset
+
+ שפות רגולריות אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $L\cup\mathcal{L}$
+\end_inset
+
+ רגולרית.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $L\cap\mathcal{L}$
+\end_inset
+
+ רגולרית.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\overline{L}$
+\end_inset
+
+ רגולרית.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $L\|\mathcal{L}$
+\end_inset
+
+ רגולרית.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $L^{n}$
+\end_inset
+
+ רגולרית.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $L^{*}$
+\end_inset
+
+ רגולרית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: 
+\begin_inset Formula $\left\{ x\mid\#_{1}\left(x\right)=0\mod2\right\} $
+\end_inset
+
+ רגולרית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אוטומט סופי לא־דטרמיניסטי מינוס )אסלד
+\begin_inset Quotes erd
+\end_inset
+
+ם(
+\series default
+: תהא 
+\begin_inset Formula $Q\ne\emptyset$
+\end_inset
+
+ קבוצה סופית יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית תהא 
+\begin_inset Formula $\d:Q\times\Sigma\to\P\left(Q\right)$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $S,F\subseteq Q$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מצבים באוטומט סופי לא־דטרמיניסטי
+\series default
+ 
+\series bold
+מינוס
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
+\end_inset
+
+ אסלד
+\begin_inset Quotes erd
+\end_inset
+
+ם אזי 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלפבית באוטומט סופי לא־דטרמיניסטי
+\series default
+ 
+\series bold
+מינוס
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
+\end_inset
+
+ אסלד
+\begin_inset Quotes erd
+\end_inset
+
+ם אזי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית מעברים באוטומט סופי לא־דטרמיניסטי
+\series default
+ 
+\series bold
+מינוס
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
+\end_inset
+
+ אסלד
+\begin_inset Quotes erd
+\end_inset
+
+ם אזי 
+\begin_inset Formula $\d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מצבים התחלתיים באוטומט סופי לא־דטרמיניסטי
+\series default
+ 
+\series bold
+מינוס
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
+\end_inset
+
+ אסלד
+\begin_inset Quotes erd
+\end_inset
+
+ם אזי 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מצבים מקבלים באוטומט סופי לא־דטרמיניסטי
+\series default
+ 
+\series bold
+מינוס
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
+\end_inset
+
+ אסלד
+\begin_inset Quotes erd
+\end_inset
+
+ם אזי 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית המעברים המורחבת
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
+\end_inset
+
+ אסלד
+\begin_inset Quotes erd
+\end_inset
+
+ם אזי 
+\begin_inset Formula $\hat{\d}:\P\left(Q\right)\times\Sigma^{*}\to\P\left(Q\right)$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $T\subseteq Q$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\hat{\d}\left(T,\e\right)=T$
+\end_inset
+
+ וכן לכל 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\hat{\d}\left(q,x\right)=\bigcup_{q\in\hat{\d}\left(T,x_{1}\ldots x_{n-1}\right)}\d\left(q,x_{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אוטומט סופי לא־דטרמיניסטי מינוס מקבל מילה
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
+\end_inset
+
+ אסלד
+\begin_inset Quotes erd
+\end_inset
+
+ם אזי 
+\begin_inset Formula $x\in\Sigma^{*}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\hat{\d}\left(S,x\right)\cap F\ne\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $M$
+\end_inset
+
+ אסלד
+\begin_inset Quotes erd
+\end_inset
+
+ם ויהי 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $M$
+\end_inset
+
+ מקבל את 
+\begin_inset Formula $x$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיימים 
+\begin_inset Formula $q_{0}\ldots q_{n}\in Q$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $q_{0}\in S$
+\end_inset
+
+ וכן 
+\begin_inset Formula $q_{i}\in\d\left(q_{i-1},x_{i}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ וכן 
+\begin_inset Formula $q_{n}\in F$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה של אוטומט סופי לא־דטרמיניסטי מינוס
+\series default
+: יהי 
+\begin_inset Formula $M$
+\end_inset
+
+ אסלד
+\begin_inset Quotes erd
+\end_inset
+
+ם אזי 
+\begin_inset Formula $L\left(M\right)=\left\{ x\in\Sigma^{*}\mid x\text{ מקבל את }M\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אוטומט סופי דטרמיניסטי מינוס החזקה
+\series default
+: יהי 
+\begin_inset Formula $M=\left(Q,\Sigma,\d,S,F\right)$
+\end_inset
+
+ אסלד
+\begin_inset Quotes erd
+\end_inset
+
+ם אזי אס
+\begin_inset Quotes erd
+\end_inset
+
+ד 
+\begin_inset Formula $\left(Q^{\prime},\Sigma,\d^{\prime},q_{0},F^{\prime}\right)$
+\end_inset
+
+ באשר
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Q^{\prime}=\P\left(Q\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\d^{\prime}\left(T,x\right)=\bigcup_{q\in T}\d\left(q,x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $q_{0}=S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F^{\prime}=\left\{ T\subseteq Q\mid T\cap F\ne\emptyset\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+: יהי 
+\begin_inset Formula $M$
+\end_inset
+
+ אסלד
+\begin_inset Quotes erd
+\end_inset
+
+ם יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ אס
+\begin_inset Quotes erd
+\end_inset
+
+ד החזקה של 
+\begin_inset Formula $M$
+\end_inset
+
+ תהא 
+\begin_inset Formula $T\subseteq Q_{N}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\hat{\d_{A}}\left(T,x\right)=\hat{\d_{M}}\left(T,x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: יהי 
+\begin_inset Formula $M$
+\end_inset
+
+ אסלד
+\begin_inset Quotes erd
+\end_inset
+
+ם אזי קיים אס
+\begin_inset Quotes erd
+\end_inset
+
+ד 
+\begin_inset Formula $A$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $L\left(M\right)=L\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית אזי 
+\begin_inset Formula $\Sigma_{\e}=\Sigma\cup\left\{ \e\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אוטומט סופי לא־דטרמיניסטי )אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד(
+\series default
+: תהא 
+\begin_inset Formula $Q\ne\emptyset$
+\end_inset
+
+ קבוצה סופית יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית תהא 
+\begin_inset Formula $\d:Q\times\Sigma_{\e}\to\P\left(Q\right)$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $S,F\subseteq Q$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מצבים באוטומט סופי לא־דטרמיניסטי
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
+\end_inset
+
+ אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד אזי 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלפבית באוטומט סופי לא־דטרמיניסטי
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
+\end_inset
+
+ אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד אזי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית מעברים באוטומט סופי לא־דטרמיניסטי
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
+\end_inset
+
+ אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד אזי 
+\begin_inset Formula $\d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מצבים התחלתיים באוטומט סופי לא־דטרמיניסטי
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
+\end_inset
+
+ אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד אזי 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מצבים מקבלים באוטומט סופי לא־דטרמיניסטי
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
+\end_inset
+
+ אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד אזי 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סביבת 
+\begin_inset Formula $\e$
+\end_inset
+
+
+\series default
+: יהי 
+\begin_inset Formula $N$
+\end_inset
+
+ אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד ויהי 
+\begin_inset Formula $q\in Q$
+\end_inset
+
+ אזי 
+\begin_inset Formula $E\left(q\right)=\left\{ q^{\prime}\in Q\mid\exists a\in Q^{k+1}.\left(a_{0}=q\right)\land\left(\forall i\in\left[k\right].a_{i}\in\d\left(a_{i-1},\e\right)\right)\land\left(a_{k}=q^{\prime}\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סביבת 
+\begin_inset Formula $\e$
+\end_inset
+
+
+\series default
+: יהי 
+\begin_inset Formula $N$
+\end_inset
+
+ אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד ויהי 
+\begin_inset Formula $T\subseteq Q$
+\end_inset
+
+ אזי 
+\begin_inset Formula $E\left(T\right)=\bigcup_{q\in T}E\left(q\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית המעברים המורחבת
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
+\end_inset
+
+ אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד אזי 
+\begin_inset Formula $\hat{\d}:\P\left(Q\right)\times\Sigma^{*}\to\P\left(Q\right)$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $T\subseteq Q$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\hat{\d}\left(T,\e\right)=E\left(T\right)$
+\end_inset
+
+ וכן לכל 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\hat{\d}\left(q,x\right)=R\left(\bigcup_{q\in\hat{\d}\left(T,x_{1}\ldots x_{n-1}\right)}\d\left(q,x_{n}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אוטומט סופי לא־דטרמיניסטי מקבל מילה
+\series default
+: יהי 
+\begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
+\end_inset
+
+ אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד אזי 
+\begin_inset Formula $x\in\Sigma^{*}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\hat{\d}\left(S,x\right)\cap F\ne\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $x\in\Sigma^{*}$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $\sigma_{1}\ldots\sigma_{n}\in\Sigma\backslash\left\{ \e\right\} $
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $k_{0}\ldots k_{n}\in\bbn$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $x=\e^{k_{0}}\sigma_{0}\e^{k_{1}}\sigma_{1}\e^{k_{2}}\ldots\sigma_{n}\e^{k_{n}}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $x^{\cancel{\e}}=\sigma_{1}\ldots\sigma_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד ויהי 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ אזי )
+\begin_inset Formula $A$
+\end_inset
+
+ מקבל את 
+\begin_inset Formula $x$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיימים 
+\begin_inset Formula $q_{0}\ldots q_{n}\in Q$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $q_{0}\in S$
+\end_inset
+
+ וכן 
+\begin_inset Formula $q_{i}\in\d\left(q_{i-1},x_{i}^{\cancel{\e}}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ וכן 
+\begin_inset Formula $q_{n}\in F$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה של אוטומט סופי לא־דטרמיניסטי
+\series default
+: יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד אזי 
+\begin_inset Formula $L\left(A\right)=\left\{ x\in\Sigma^{*}\mid x\text{ מקבל את }A\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: יהי 
+\begin_inset Formula $N$
+\end_inset
+
+ אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד אזי קיים אסלד
+\begin_inset Quotes erd
+\end_inset
+
+ם 
+\begin_inset Formula $M$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $L\left(N\right)=L\left(M\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: יהי 
+\begin_inset Formula $N$
+\end_inset
+
+ אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד אזי קיים אס
+\begin_inset Quotes erd
+\end_inset
+
+ד 
+\begin_inset Formula $A$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $L\left(A\right)=L\left(M\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ותהא
+\begin_inset Formula $\mathcal{L}\subseteq\Sigma^{*}$
+\end_inset
+
+ שפה אזי )
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ רגולרית(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיים אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד 
+\begin_inset Formula $N$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $L\left(N\right)=\mathcal{L}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ביטוי רגולרי )ב
+\begin_inset Quotes erd
+\end_inset
+
+ר(
+\series default
+: יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $a\in\Sigma_{\e}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהיו 
+\begin_inset Formula $R_{1},R_{2}$
+\end_inset
+
+ ביטויים רגולרים אזי 
+\begin_inset Formula $R_{1}\cup R_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהיו 
+\begin_inset Formula $R_{1},R_{2}$
+\end_inset
+
+ ביטויים רגולרים אזי 
+\begin_inset Formula $R_{1}R_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ ביטוי רגולרי אזי 
+\begin_inset Formula $R^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה נוצרת מביטוי רגולרי
+\series default
+: יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $L\left(\emptyset\right)=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $a\in\Sigma_{\e}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $L\left(a\right)=\left\{ a\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהיו 
+\begin_inset Formula $R_{1},R_{2}$
+\end_inset
+
+ ביטויים רגולרים אזי 
+\begin_inset Formula $L\left(R_{1}\cup R_{2}\right)=L\left(R_{1}\right)\cup L\left(R_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהיו 
+\begin_inset Formula $R_{1},R_{2}$
+\end_inset
+
+ ביטויים רגולרים אזי 
+\begin_inset Formula $L\left(R_{1}R_{2}\right)=L\left(R_{1}\right)L\left(R_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ ביטוי רגולרי אזי 
+\begin_inset Formula $L\left(R^{*}\right)=L\left(R\right)^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית אזי 
+\begin_inset Formula $R\left(\Sigma\right)=\left\{ r\in\Sigma^{*}\mid\text{ ביטוי רגולרי}r\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+: קיים סדר פעולות לביטויים רגולריים
+\end_layout
+
+\begin_layout Itemize
+סגור קליני.
+\end_layout
+
+\begin_layout Itemize
+שרשור.
+\end_layout
+
+\begin_layout Itemize
+איחוד.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\l}{\mathcal{L}}
+{\mathcal{L}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ותהא 
+\begin_inset Formula $\l\subseteq\Sigma^{*}$
+\end_inset
+
+ שפה אזי )
+\begin_inset Formula $\l$
+\end_inset
+
+ רגולרית(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיים 
+\begin_inset Formula $r\in R\left(\Sigma\right)$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $L\left(r\right)=\l$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה ניתנת לניפוח
+\series default
+: שפה 
+\begin_inset Formula $\l$
+\end_inset
+
+ וקבוע 
+\begin_inset Formula $\ell>0$
+\end_inset
+
+ עבורם לכל 
+\begin_inset Formula $w\in\l$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\ell\le\left|w\right|$
+\end_inset
+
+ קיימים 
+\begin_inset Formula $x,y,z\in\Sigma^{*}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left|y\right|>0$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left|xy\right|\le\ell$
+\end_inset
+
+ וכן 
+\begin_inset Formula $w=xyz$
+\end_inset
+
+ וכן לכל 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $xy^{k}z\in L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה למת הניפוח
+\series default
+: תהא 
+\begin_inset Formula $\l$
+\end_inset
+
+ שפה רגולרית אזי קיים 
+\begin_inset Formula $\ell>0$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\l$
+\end_inset
+
+ ניתנת לניפוח 
+\begin_inset Formula $\ell$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קבוע הניפוח
+\series default
+: תהא 
+\begin_inset Formula $\l$
+\end_inset
+
+ שפה רגולרית אזי 
+\begin_inset Formula $\min\left\{ \ell\in\bbn_{+}\mid\ell\text{ ניתנת לניפוח }\l\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\left\{ x\in\left\{ 0,1\right\} ^{*}\mid\#_{0}\left(x\right)=\#_{1}\left(x\right)\right\} $
+\end_inset
+
+ אינה רגולרית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\left\{ 0^{i}1^{j}\mid i>j\right\} $
+\end_inset
+
+ אינה רגולרית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\left\{ a^{p}\mid a\in\Sigma,\text{ ראשוני}p\right\} $
+\end_inset
+
+ אינה רגולרית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: השפה 
+\begin_inset Formula $\left\{ a^{i}b^{n}c^{n}\mid n\in\bbn,i\in\bbn_{+}\right\} \cup\left\{ b^{n}c^{n}\mid n,m\in\bbn\right\} $
+\end_inset
+
+ ניתנת לניפוח
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+ וכן אינה רגולרית.
 \end_layout
 
 \begin_layout Standard
