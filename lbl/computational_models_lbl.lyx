@@ -153,8 +153,17 @@
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "E:/University/!Summaries/macros.lyx"
+filename "C:/Users/user/OneDrive/Documents/summaries/macros.lyx"
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\l}{\mathcal{L}}
+{\mathcal{L}}
 \end_inset
 
 
@@ -465,12 +474,28 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 פונקציה בולאנית
 \series default
-: תהא 
-\begin_inset Formula $X$
+: תהיינה 
+\begin_inset Formula $n,m\in\bbn$
 \end_inset
 
- קבוצה אזי 
-\begin_inset Formula $f:X\to\left\{ 0,1\right\} $
+ אזי 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בסיס פונקציות בוליאניות
+\series default
+: תהיינה 
+\begin_inset Formula $f_{1}\ldots f_{n}$
+\end_inset
+
+ פונקציות בוליאניות אזי 
+\begin_inset Formula $\left\{ f_{1}\ldots f_{n}\right\} $
 \end_inset
 
 .
@@ -493,15 +518,19 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 מעגל בוליאני
 \series default
-: תהיינה 
+: יהי 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ בסיס פונקציות בוליאניות תהיינה 
 \begin_inset Formula $k_{1}\ldots k_{n}\in\bbn_{+}$
 \end_inset
 
  תהיינה 
-\begin_inset Formula $f_{1}\ldots f_{n}$
+\begin_inset Formula $f_{1}\ldots f_{n}\in\mathcal{B}$
 \end_inset
 
- פונקציות בוליאניות באשר 
+ באשר 
 \begin_inset Formula $f_{i}:\left\{ 0,1\right\} ^{k_{i}}\to\left\{ 0,1\right\} $
 \end_inset
 
@@ -689,6 +718,42 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_layout Standard
 
 \series bold
+מעגל מקבל מילה
+\series default
+: יהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל בעל פלט יחיד אזי 
+\begin_inset Formula $w\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $C\left(w\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה של מעגל
+\series default
+: יהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל בעל פלט יחיד אזי 
+\begin_inset Formula $L\left(C\right)=\left\{ x\in\left\{ 0,1\right\} ^{n}\mid x\text{ מקבל את }C\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 מעגל מחשב פונקציה
 \series default
 : תהא 
@@ -737,9 +802,17 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_layout Standard
 
 \series bold
+הערה
+\series default
+: מכאן והלאה כל המעגלים הם בוליאניים ומעל בסיס דה־מורגן.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 משפחה של מעגלים
 \series default
-: מעגלים בוליאניים 
+: מעגלים 
 \begin_inset Formula $\left\{ C_{n}\right\} _{n\in\bbn}$
 \end_inset
 
@@ -757,26 +830,34 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_layout Standard
 
 \series bold
+שפה של משפחת מעגלים
+\series default
+: תהא 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ משפחה של מעגלים אזי 
+\begin_inset Formula $L\left(\mathcal{C}\right)=\left\{ x\in\left\{ 0,1\right\} ^{*}\mid x\in L\left(\mathcal{C}_{\left|x\right|}\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 משפחה מכריעה שפה
 \series default
 : תהא 
-\begin_inset Formula $L\subseteq\left\{ 0,1\right\} ^{*}$
+\begin_inset Formula $\l\subseteq\left\{ 0,1\right\} ^{*}$
 \end_inset
 
  שפה אזי משפחה של מעגלים 
-\begin_inset Formula $\left\{ C_{n}\right\} _{n\in\bbn}$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
- עבורה לכל 
-\begin_inset Formula $n\in\bbn$
-\end_inset
-
- ולכל 
-\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
-\end_inset
-
- מתקיים 
-\begin_inset Formula $\left(C_{n}\left(x\right)\right)\iff\left(x\in L\right)$
+ עבורה 
+\begin_inset Formula $L\left(\mathcal{C}\right)=\l$
 \end_inset
 
 .
@@ -788,7 +869,7 @@ filename "E:/University/!Summaries/macros.lyx"
 מודל לא יוניפורמי
 \series default
 : משפחה של מעגלים 
-\begin_inset Formula $\left\{ C_{n}\right\} _{n\in\bbn}$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
  עבורה לכל 
@@ -804,7 +885,7 @@ filename "E:/University/!Summaries/macros.lyx"
 מודל יוניפורמי
 \series default
 : משפחה של מעגלים 
-\begin_inset Formula $\left\{ C_{n}\right\} _{n\in\bbn}$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
  עבורה לכל 
@@ -840,7 +921,7 @@ filename "E:/University/!Summaries/macros.lyx"
 חסם עליון לגודל משפחת מעגלים
 \series default
 : תהא 
-\begin_inset Formula $\left\{ C_{n}\right\} _{n\in\bbn}$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
  משפחה של מעגלים אזי 
@@ -848,7 +929,7 @@ filename "E:/University/!Summaries/macros.lyx"
 \end_inset
 
  עבורה 
-\begin_inset Formula $\left|C_{n}\right|\le S\left(n\right)$
+\begin_inset Formula $\left|\mathcal{C}_{n}\right|\le S\left(n\right)$
 \end_inset
 
 .
@@ -881,6 +962,30 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_layout Standard
 
 \series bold
+מסקנה
+\series default
+: תהא 
+\begin_inset Formula $\l\subseteq\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ אזי קיים מעגל 
+\begin_inset Formula $C$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $L\left(C\right)=\l$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left|C\right|=\O\left(n\cdot2^{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 טענה
 \series default
 : תהא 
@@ -897,6 +1002,30 @@ filename "E:/University/!Summaries/macros.lyx"
 
  בגודל 
 \begin_inset Formula $\O\left(2^{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: תהא 
+\begin_inset Formula $\l\subseteq\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ אזי קיים מעגל 
+\begin_inset Formula $C$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $L\left(C\right)=\l$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left|C\right|=\O\left(2^{n}\right)$
 \end_inset
 
 .
@@ -2533,15 +2662,6 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \begin_layout Itemize
 איחוד.
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\l}{\mathcal{L}}
-{\mathcal{L}}
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -5542,8 +5662,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הערה
 \series default
 \color inherit
-: יש דבר כזה רדוקציה כללית שמכלילה את רדוקציית המיפוי, לא עברנו על זה פורמלית
- אבל כמובן שהמרצה הראה טענות בנושא, מסומן 
+: יש דבר כזה רדוקציה כללית שמכלילה את רדוקציית המיפוי, לא עברנו על זה פורמלית,
+ מסומן 
 \begin_inset Formula $\le$
 \end_inset
 
@@ -5847,7 +5967,13 @@ filename "E:/University/!Summaries/macros.lyx"
 \end_layout
 
 \begin_layout Standard
-הגדרה: תהא 
+
+\series bold
+\color brown
+הגדרה
+\series default
+\color inherit
+: תהא 
 \begin_inset Formula $\mathcal{C}$
 \end_inset
 
@@ -6264,7 +6390,7 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \series bold
 \color orange
-משפט
+משפט מכונת טיורינג אוניברסלית עם טיימר
 \series default
 \color inherit
 : קיימת מ
@@ -6662,7 +6788,11 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \series bold
 \color orange
-הגדרה
+שפה 
+\begin_inset Formula $\P$
+\end_inset
+
+
 \series default
 \color inherit
 : 
@@ -6730,13 +6860,23 @@ filename "E:/University/!Summaries/macros.lyx"
 \end_inset
 
 
+\begin_inset FormulaMacro
+\newcommand{\conp}{\text{co}\mathcal{NP}}
+{\text{co}\mathcal{NP}}
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 
 \series bold
 \color orange
-הגדרה
+שפה 
+\begin_inset Formula $\np$
+\end_inset
+
+
 \series default
 \color inherit
 : 
@@ -6755,6 +6895,38 @@ filename "E:/University/!Summaries/macros.lyx"
 \color inherit
 : 
 \begin_inset Formula $\P\subseteq\np$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+שפה 
+\begin_inset Formula $\conp$
+\end_inset
+
+
+\series default
+\color inherit
+: 
+\begin_inset Formula $\conp=\left\{ L\mid\overline{L}\in\np\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\P\subseteq\np\cap\conp$
 \end_inset
 
 .
@@ -6798,9 +6970,1011 @@ filename "E:/University/!Summaries/macros.lyx"
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ex}{\mathcal{EXP}}
+{\mathcal{EXP}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\nex}{\mathcal{NEXP}}
+{\mathcal{NEXP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+שפה 
+\begin_inset Formula $\ex$
+\end_inset
+
+
+\series default
+\color inherit
+: 
+\begin_inset Formula $\ex=\bigcup_{k\in\bbn}\dtime\left(2^{n^{k}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+שפה 
+\begin_inset Formula $\nex$
+\end_inset
+
+
+\series default
+\color inherit
+: 
+\begin_inset Formula $\nex=\bigcup_{k\in\bbn}\ntime\left(2^{n^{k}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\ex\subseteq\nex$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\P\subseteq\np\subseteq\ex\subseteq\nex$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\P\subsetneq\ex$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+: 
+\begin_inset Formula $\np\subsetneq\nex$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: תהא 
+\begin_inset Formula $M$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט ויהי 
+\begin_inset Formula $x\in\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $M\left(x\right)$
+\end_inset
+
+ הינו ריצת 
+\begin_inset Formula $M$
+\end_inset
+
+ על 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מוודא לשפה
+\series default
+: תהא 
+\begin_inset Formula $\l\subseteq\Sigma^{*}$
+\end_inset
+
+ שפה אזי מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $V$
+\end_inset
+
+ מעל אלפבית 
+\begin_inset Formula $\Sigma\cup\left\{ ","\right\} $
+\end_inset
+
+ המקיים
+\end_layout
+
+\begin_layout Itemize
+שלמות: יהי 
+\begin_inset Formula $x\in\l$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $w\in\Sigma^{*}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $V\left(x,w\right)$
+\end_inset
+
+ מקבלת.
+\end_layout
+
+\begin_layout Itemize
+נאותות: יהי 
+\begin_inset Formula $x\notin\l$
+\end_inset
+
+ אזי לכל 
+\begin_inset Formula $w\in\Sigma^{*}$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $V\left(x,w\right)$
+\end_inset
+
+ דוחה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $\l\subseteq\Sigma^{*}$
+\end_inset
+
+ שפה אזי )
+\begin_inset Formula $\l\in\re$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיים מוודא ל־
+\begin_inset Formula $\l$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מדווא פולינומי לשפה
+\series default
+: תהא 
+\begin_inset Formula $\l\subseteq\Sigma^{*}$
+\end_inset
+
+ שפה אזי מוודא 
+\begin_inset Formula $V$
+\end_inset
+
+ ל־
+\begin_inset Formula $\l$
+\end_inset
+
+ עבורו קיים 
+\begin_inset Formula $p\in\bbn\left[x\right]$
+\end_inset
+
+ המקיים כי לכל 
+\begin_inset Formula $x,w\in\Sigma^{*}$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $V\left(x,w\right)$
+\end_inset
+
+ עוצרת לכל היותר אחרי 
+\begin_inset Formula $p\left(\left|x\right|\right)$
+\end_inset
+
+ צעדים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\clique}{\text{CLIQUE}}
+{\text{CLIQUE}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: 
+\begin_inset Formula $\clique=\left\{ \left<G,k\right>\mid k\text{ גרף לא מכוון בעל קליקה מגודל }G\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: קיים מוודא פולינומי ל־
+\begin_inset Formula $\clique$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\is}{\text{IS}}
+{\text{IS}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: 
+\begin_inset Formula $\is=\left\{ \left<G,k\right>\mid k\text{ גרף לא מכוון בעל קבוצה בת"ל מגודל }G\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: קיים מוודא פולינומי ל־
+\begin_inset Formula $\is$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\factor}{\text{FACTOR}}
+{\text{FACTOR}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: 
+\begin_inset Formula $\factor=\left\{ \left<N,k\right>\mid\exists d\in\left[k\right].\left(d|N\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: קיים מוודא פולינומי ל־
+\begin_inset Formula $\factor$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\subsetsum}{\text{SUBSETSUM}}
+{\text{SUBSETSUM}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: 
+\begin_inset Formula $\subsetsum=\left\{ \left<S,k\right>\mid\left(S\subseteq\bbn\right)\land\left(\exists T\subseteq S.\sum_{i\in T}i=t\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: קיים מוודא פולינומי ל־
+\begin_inset Formula $\subsetsum$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: תהא 
+\begin_inset Formula $\l\subseteq\Sigma^{*}$
+\end_inset
+
+ שפה אזי )
+\begin_inset Formula $\l\in\np$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)קיים מוודא פולינומי ל־
+\begin_inset Formula $\l$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: 
+\begin_inset Formula $\clique,\is,\factor,\subsetsum\in\np$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציה חשיבה פולינומית
+\series default
+: תהא 
+\begin_inset Formula $D\subseteq\Sigma$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f:D\to\left(\Gamma\backslash\left\{ \spc\right\} \right)^{*}$
+\end_inset
+
+ עבורה קיימת מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $M$
+\end_inset
+
+ המחשבת את 
+\begin_inset Formula $f$
+\end_inset
+
+ וכן קיים 
+\begin_inset Formula $p\in\bbn\left[x\right]$
+\end_inset
+
+ המקיים כי לכל 
+\begin_inset Formula $x\in\Sigma^{*}$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $M\left(x\right)$
+\end_inset
+
+ עוצרת לכל היותר אחרי 
+\begin_inset Formula $p\left(\left|x\right|\right)$
+\end_inset
+
+ צעדים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רדוקציית מיפוי פולינומית
+\series default
+: יהיו 
+\begin_inset Formula $\Sigma,\Delta$
+\end_inset
+
+ אלפבייתים באשר 
+\begin_inset Formula $\Sigma\subseteq\Delta$
+\end_inset
+
+ תהא 
+\begin_inset Formula $A\subseteq\Sigma^{*}$
+\end_inset
+
+ שפה ותהא 
+\begin_inset Formula $B\subseteq\Delta^{*}$
+\end_inset
+
+ שפה אזי רדוקציית מיפוי 
+\begin_inset Formula $f$
+\end_inset
+
+ מ־
+\begin_inset Formula $A$
+\end_inset
+
+ ל־
+\begin_inset Formula $B$
+\end_inset
+
+ חשיבה פולינומית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהיו 
+\begin_inset Formula $\Sigma,\Delta$
+\end_inset
+
+ אלפבייתים באשר 
+\begin_inset Formula $\Sigma\subseteq\Delta$
+\end_inset
+
+ תהא 
+\begin_inset Formula $A\subseteq\Sigma^{*}$
+\end_inset
+
+ שפה תהא 
+\begin_inset Formula $B\subseteq\Delta^{*}$
+\end_inset
+
+ שפה ותהא 
+\begin_inset Formula $f:\Sigma^{*}\to\Delta^{*}$
+\end_inset
+
+ רדוקציית מיפוי פולינומית אזי 
+\begin_inset Formula $A\le_{p}B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\clique\le_{p}\is$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ שפות באשר 
+\begin_inset Formula $B\in\P$
+\end_inset
+
+ וכן 
+\begin_inset Formula $A\le_{p}B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\in\P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\nph}{\mathcal{NPH}}
+{\mathcal{NPH}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה 
+\begin_inset Formula $\np$
+\end_inset
+
+־קשה
+\series default
+: 
+\begin_inset Formula $\nph=\left\{ \l\mid\forall L\in\np\left(L\le_{p}\l\right)\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\npc}{\mathcal{NPC}}
+{\mathcal{NPC}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה 
+\begin_inset Formula $\np$
+\end_inset
+
+־שלמה
+\series default
+: 
+\begin_inset Formula $\npc=\np\cap\nph$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $\l\in\npc$
+\end_inset
+
+ אזי )
+\begin_inset Formula $\l\in\P$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\P=\np$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: 
+\begin_inset Formula $\acc_{\np}=\left\{ \left<M,x,1^{t}\right>\mid\text{ צעדים}t\text{ מקבלת לכל היותר אחרי }M\left(x,w\right)\text{ עבורו }w\text{קיים }\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\acc_{\np}\in\npc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהיינה 
+\begin_inset Formula $A,B\in\np$
+\end_inset
+
+ שפות באשר 
+\begin_inset Formula $A\in\npc$
+\end_inset
+
+ וכן 
+\begin_inset Formula $A\le_{p}B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $B\in\npc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מעגל ספיק
+\series default
+: מעגל 
+\begin_inset Formula $C$
+\end_inset
+
+ עבורו קיים 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $C\left(x\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פסוק 
+\begin_inset Formula $k\cnf$
+\end_inset
+
+
+\series default
+: פסוק 
+\begin_inset Formula $\varphi\in\cnf$
+\end_inset
+
+ עבורה קיים 
+\begin_inset Formula $m\in\bbn$
+\end_inset
+
+ וקיימת 
+\begin_inset Formula $A\in\M[m\times k][\left\{ p_{i}\right\} \cup\left\{ \neg p_{i}\right\} ]$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\varphi=\bigwedge_{i=1}^{m}\bigvee_{j=1}^{k}\left(A\right)_{i,k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\sat}{\text{SAT}}
+{\text{SAT}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $k\sat=\left\{ \left<\varphi\right>\mid\left(\varphi\in k\cnf\right)\land\left(\text{ ספיקה}\varphi\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $k\sat\in\np$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $2\sat\in\P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט קוק־לוין
+\series default
+: 
+\begin_inset Formula $3\sat\in\npc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהיו 
+\begin_inset Formula $k,\ell\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $k\le\ell$
+\end_inset
+
+ אזי 
+\begin_inset Formula $k\sat\le_{p}\ell\sat$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: יהי 
+\begin_inset Formula $k\in\bbn\backslash\left\{ 0,1,2\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $k\sat\in\npc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: 
+\begin_inset Formula $3\sat\le_{p}\clique$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: 
+\begin_inset Formula $\clique,\is\in\npc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: תהא 
+\begin_inset Formula $A\in\M[m\times k][\left\{ p_{i}\right\} \cup\left\{ \neg p_{i}\right\} ]$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $v$
+\end_inset
+
+ השמה אזי 
+\begin_inset Formula $N\left(\bigwedge_{i=1}^{m}\bigvee_{j=1}^{k}\left(A\right)_{i,k},v\right)=\left|\left\{ i\in\left[m\right]\bmid\overline{v}\left(\bigvee_{j=1}^{k}\left(A\right)_{i,k}\right)=\text{True}\right\} \right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: 
+\begin_inset Formula $C\cnf=\left\{ \left<\varphi,k\right>\mid\left(\varphi\in\cnf\right)\land\left(\exists v\left(N\left(\varphi,v\right)=k\right)\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $C\cnf\in\npc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: 
+\begin_inset Formula $\dnf\cnf=\left\{ \left<\varphi\right>\mid\left(\varphi\in\dnf\right)\land\left(\text{ ספיקה}\varphi\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\dnf\cnf\in\P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כיסוי קודקודים
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף לא מכוון אזי 
+\begin_inset Formula $C\subseteq V$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $\left\{ u,v\right\} \in E$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(u\in C\right)\lor\left(v\in C\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vc}{\text{VC}}
+{\text{VC}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+: 
+\begin_inset Formula $\vc=\left\{ \left<G,k\right>\mid k\text{ גרף לא מכוון בעל כיסוי קודקודים מגודל }G\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: 
+\begin_inset Formula $\vc\in\npc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
