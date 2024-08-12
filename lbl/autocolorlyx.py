@@ -31,8 +31,8 @@ def main(path: str, color: str, from_line: int, to_line: int) -> None:
 
 if __name__ == "__main__":
     path = 'computational_models_lbl.lyx'
-    color = 'teal'
-    from_line = 7079
-    to_line = 7971
+    color = 'blue'
+    from_line = 8784
+    to_line = 9811
 
     main(path, color, from_line, to_line)
