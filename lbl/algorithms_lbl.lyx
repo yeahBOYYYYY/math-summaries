@@ -5783,10 +5783,18 @@ end{algorithm}
 \begin_inset Formula $\text{SSSP}$
 \end_inset
 
-(
+)
 \series default
 \color inherit
 : יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון ממושקל 
+\begin_inset Formula $\ell$
+\end_inset
+
+ ויהי 
 \begin_inset Formula $s\in V$
 \end_inset
 
@@ -5856,7 +5864,7 @@ end{algorithm}
 \begin_inset Formula $G$
 \end_inset
 
- ממושקל 
+ גרף מכוון וממושקל 
 \begin_inset Formula $\ell$
 \end_inset
 
@@ -7175,7 +7183,7 @@ end{algorithm}
 \begin_inset Formula $G$
 \end_inset
 
- גרף עבורו 
+ גרף מכוון עבורו 
 \begin_inset Formula $\ell\ge0$
 \end_inset
 
@@ -7459,6 +7467,1754 @@ end{algorithm}
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית כל המסלולים הקצרים )
+\begin_inset Formula $\text{APSP}$
+\end_inset
+
+)
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון וממושקל 
+\begin_inset Formula $\ell$
+\end_inset
+
+ אזי 
+\begin_inset Formula $D\in\M[\left|V\right|][\bbr]$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $u,v\in V$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $D_{u,v}=\d\left(u,v\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\Pi\in\M[\left|V\right|][V]$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $u,v\in V$
+\end_inset
+
+ קיים מסלול קצר ביותר 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מ־
+\begin_inset Formula $u$
+\end_inset
+
+ ל־
+\begin_inset Formula $v$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\left(\Pi_{u,v},v\right)\in\sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית פוטנציאל
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי 
+\begin_inset Formula $p:V\to\bbr$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית משקל מותאמת
+\series default
+: תהא 
+\begin_inset Formula $p$
+\end_inset
+
+ פונקציית פוטנציאל אזי פונקציית משקל 
+\begin_inset Formula $\ell_{p}$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $u,v\in V$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\left(u,v\right)\in E$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\ell_{p}\left(\left(u,v\right)\right)=\ell\left(\left(u,v\right)\right)+p\left(u\right)-p\left(v\right)$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: תהא 
+\begin_inset Formula $p$
+\end_inset
+
+ פונקציית פוטנציאל יהיו 
+\begin_inset Formula $s,t\in V$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מסלול מ־
+\begin_inset Formula $s$
+\end_inset
+
+ ל־
+\begin_inset Formula $t$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ell_{p}\left(\sigma\right)=\ell\left(\sigma\right)+p\left(s\right)-p\left(t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: תהא 
+\begin_inset Formula $p$
+\end_inset
+
+ פונקציית פוטנציאל יהיו 
+\begin_inset Formula $s,t\in V$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מסלול מ־
+\begin_inset Formula $s$
+\end_inset
+
+ ל־
+\begin_inset Formula $t$
+\end_inset
+
+ אזי )
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מסלול קצר ביותר ביחס ל־
+\begin_inset Formula $\ell$
+\end_inset
+
+(
+\begin_inset Formula $\iff$
+\end_inset
+
+)מסלול קצר ביותר ביחס ל־
+\begin_inset Formula $\ell_{p}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: תהא 
+\begin_inset Formula $p$
+\end_inset
+
+ פונקציית פוטנציאל ויהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מעגל אזי 
+\begin_inset Formula $\ell_{p}\left(\sigma\right)=\ell\left(\sigma\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: תהא 
+\begin_inset Formula $p$
+\end_inset
+
+ פונקציית פוטנציאל ויהיו 
+\begin_inset Formula $s,t\in V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\d_{\ell}\left(s,t\right)=\d_{\ell_{p}}\left(s,t\right)-p\left(s\right)+p\left(t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית פוטנציאל פיזבילית
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון וממושקל 
+\begin_inset Formula $\ell$
+\end_inset
+
+ אזי פונקציית פוטנציאל 
+\begin_inset Formula $p$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\ell_{p}\ge0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון וממושקל 
+\begin_inset Formula $\ell$
+\end_inset
+
+ אזי )קיימת פונקציית פוטנציאל פיזבילית(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $G$
+\end_inset
+
+ מצוייד עם 
+\begin_inset Formula $\ell$
+\end_inset
+
+ חסר מעגלים שליליים(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם למציאת פונקציית פוטנאציל פיזבילית
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון וממושקל 
+\begin_inset Formula $\ell$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{FeasiblePotential}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$G, 
+\backslash
+ell$}}{     $G^
+\backslash
+prime 
+\backslash
+gets G
+\backslash
+uplus 
+\backslash
+{s
+\backslash
+}$
+\backslash
+
+\backslash
+     
+\backslash
+For{$v
+\backslash
+in V(G)$}{         $E(G^
+\backslash
+prime) 
+\backslash
+gets E(G^
+\backslash
+prime) 
+\backslash
+cup 
+\backslash
+{(s, v)
+\backslash
+}$
+\backslash
+
+\backslash
+         $
+\backslash
+ell((s, v)) 
+\backslash
+gets 0$
+\backslash
+
+\backslash
+     }     $c
+\backslash
+gets 
+\backslash
+text{BelmanForm} (G^
+\backslash
+prime ,
+\backslash
+ell, s)$
+\backslash
+
+\backslash
+     
+\backslash
+If{$c = 1$}{         
+\backslash
+Return None     } 
+\backslash
+Else{         $p
+\backslash
+gets (V(G)
+\backslash
+to 
+\backslash
+mathbb{R})$
+\backslash
+
+\backslash
+         
+\backslash
+For{$v
+\backslash
+in V(G)$}{             $p(v) 
+\backslash
+gets 
+\backslash
+delta (s, v)$
+\backslash
+
+\backslash
+         }         
+\backslash
+Return $p$     } } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון וממושקל 
+\begin_inset Formula $\ell$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+)
+\begin_inset Formula $G$
+\end_inset
+
+ מצוייד עם 
+\begin_inset Formula $\ell$
+\end_inset
+
+ בעל מעגל שלילי(
+\begin_inset Formula $\iff$
+\end_inset
+
+)
+\begin_inset Formula $\text{FeasiblePotential}\left(G,\ell\right)$
+\end_inset
+
+ מחזיר 
+\begin_inset Formula $\text{None}$
+\end_inset
+
+.)
+\end_layout
+
+\begin_layout Itemize
+(
+\begin_inset Formula $G$
+\end_inset
+
+ מצוייד עם 
+\begin_inset Formula $\ell$
+\end_inset
+
+ בעל פונקציית פוטנציאל פיזבילית(
+\begin_inset Formula $\iff$
+\end_inset
+
+
+\begin_inset Formula $\text{FeasiblePotential}\left(G,\ell\right)$
+\end_inset
+
+ מחזיר פונקציית פוטנציאל פיזבילית(.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם ג'ונסון לבעיית כל המסלולים הקצרים
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון וממושקל 
+\begin_inset Formula $\ell$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{Johnson}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$G, 
+\backslash
+ell$}}{     $p
+\backslash
+gets 
+\backslash
+text{FeasiblePotential}(G, 
+\backslash
+ell)$
+\backslash
+
+\backslash
+     
+\backslash
+If{$p = 
+\backslash
+text{None}$}{         
+\backslash
+Return None     }     $
+\backslash
+ell_p 
+\backslash
+gets (E 
+\backslash
+to 
+\backslash
+mathbb{R})$
+\backslash
+
+\backslash
+     
+\backslash
+For{$(u,v)
+\backslash
+in E$}{         $
+\backslash
+ell_p ((u, v)) = 
+\backslash
+ell ((u,v)) + p(u) - p(v)$
+\backslash
+
+\backslash
+     }     $D_{
+\backslash
+ell_p}, D_
+\backslash
+ell 
+\backslash
+gets M_{
+\backslash
+left|V
+\backslash
+right|}{(
+\backslash
+mathbb{R})}$
+\backslash
+
+\backslash
+     $
+\backslash
+Pi 
+\backslash
+gets M_{
+\backslash
+left|V
+\backslash
+right|}{(E)}$
+\backslash
+
+\backslash
+     
+\backslash
+For{$v
+\backslash
+in V$}{         $(d, 
+\backslash
+pi) 
+\backslash
+gets 
+\backslash
+text{Dijkstra}(G,
+\backslash
+ell_p, v)$
+\backslash
+
+\backslash
+         
+\backslash
+tcc{Here $D$ and $
+\backslash
+Pi$ will be simplified, to get a solution to APSP as needed we can modify
+ a bit Dijkstra's algorithm to calculate $D$ and $
+\backslash
+Pi$ on the way to get constant time for this assignment.}         $D_v 
+\backslash
+gets d$
+\backslash
+
+\backslash
+         $
+\backslash
+Pi_v 
+\backslash
+gets 
+\backslash
+pi$
+\backslash
+
+\backslash
+     }     
+\backslash
+For{$(u,v)
+\backslash
+in E$}{         $D_{
+\backslash
+ell} ((u, v)) = D_{
+\backslash
+ell_p} ((u,v)) - p(u) + p(v)$
+\backslash
+
+\backslash
+     }     
+\backslash
+Return $(D, 
+\backslash
+Pi)$ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון וממושקל 
+\begin_inset Formula $\ell$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{Johnson}\left(G,\ell\right)$
+\end_inset
+
+ פתרון לבעיית 
+\begin_inset Formula $\text{APSP}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון וממושקל 
+\begin_inset Formula $\ell$
+\end_inset
+
+ אזי סיבוכיות הריצה של 
+\begin_inset Formula $\text{Johnson}\left(G,\ell\right)$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\O\left(\left|E\right|\left|V\right|+\left|V\right|^{2}\log\left(\left|V\right|\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מכפלת 
+\lang english
+
+\begin_inset Formula $\text{Min Plus}$
+\end_inset
+
+
+\series default
+\lang hebrew
+: תהא 
+\begin_inset Formula $A\in\M$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $B\in\M[n\times k]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A*B\in\M[m\times k]$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left(A*B\right)_{i,j}=\min_{k=1}^{n}\left(A_{i,k}+B_{k,j}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהיינה 
+\begin_inset Formula $A,B\in\M[n]$
+\end_inset
+
+ אזי סיבוכיות הריצה של 
+\begin_inset Formula $A*B$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\O\left(n^{3}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהיינה 
+\begin_inset Formula $A,B,C\in\M[n]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(A*B\right)*C=\left(A*B\right)*C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהיו 
+\begin_inset Formula $s,v\in V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\d_{k}\left(s,v\right)=\min\left\{ \ell\left(\sigma\right)\mid\left(\sigma\in\left\{ s\to v\right\} \right)\land\left(\left|\sigma\right|\le k\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהיו 
+\begin_inset Formula $s,v\in V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\d_{k}\left(s,v\right)=\min_{u\in V}\left(\d_{k-1}\left(s,v\right)+\ell\left(u,v\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\d_{k}\left(s\right)\in\M[1\times\left|V\right|][\bbr]$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left(\d_{k}\left(s\right)\right)_{v}=\d_{k}\left(s,v\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $v\in V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מטריצת המשקל
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון וממושקל 
+\begin_inset Formula $\ell$
+\end_inset
+
+ אזי 
+\begin_inset Formula $L\in\M[\left|V\right|][\bbr]$
+\end_inset
+
+ באשר לכל 
+\begin_inset Formula $u,v\in V$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $L_{u,v}=\left\{ \begin{smallmatrix}0 &  & u=v\\
+\ell\left(\left(u,v\right)\right) &  & \left(u\ne v\right)\land\left(\left(u,v\right)\in E\right)\\
+\infty &  & \left(u\ne v\right)\land\left(\left(u,v\right)\notin E\right)
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: יהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $L\in\M[\left|V\right|][\bbr]$
+\end_inset
+
+ מטריצת המשקל אזי 
+\begin_inset Formula $\d_{k}\left(s\right)=\d_{k-1}\left(s\right)*L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $D^{\left(k\right)}\in\M[\left|V\right|][\bbr]$
+\end_inset
+
+ באשר לכל 
+\begin_inset Formula $u,v\in V$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $D_{u,v}^{\left(k\right)}=\d_{k}\left(u,v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: תהא 
+\begin_inset Formula $L\in\M[\left|V\right|][\bbr]$
+\end_inset
+
+ מטריצת המשקל אזי 
+\begin_inset Formula $D^{\left(k\right)}=D^{\left(k-1\right)}*L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $L\in\M[\left|V\right|][\bbr]$
+\end_inset
+
+ מטריצת המשקל אזי 
+\begin_inset Formula $D^{\left(k\right)}=L^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+: 
+\begin_inset Formula $L^{k}=L*\ldots*L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון וממושקל 
+\begin_inset Formula $\ell$
+\end_inset
+
+ וחסר מעגלים שליליים ויהיו 
+\begin_inset Formula $k,m\ge\left|V\right|-1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $D^{\left(k\right)}=D^{\left(m\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון וממושקל 
+\begin_inset Formula $\ell$
+\end_inset
+
+ בעל מעגל שלילי ויהי 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ המופיע במעגל שלילי אזי 
+\begin_inset Formula $D_{v,v}^{\left(\left|V\right|\right)}<0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: תהא 
+\begin_inset Formula $L\in\M[\left|V\right|][\bbr]$
+\end_inset
+
+ מטריצת המשקל אזי 
+\begin_inset Formula $L^{n}$
+\end_inset
+
+ פתרון לבעיית 
+\begin_inset Formula $\text{APSP}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם חזקה איטרטיבית
+\series default
+: תהא 
+\begin_inset Formula $A\in\M[n][\bbr]$
+\end_inset
+
+ תהא 
+\begin_inset Formula $\star$
+\end_inset
+
+ פעולה אסוציאטיבית אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{RepeatedSquaring}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$A, 
+\backslash
+star$}}{     $a_k 
+\backslash
+ldots a_0 
+\backslash
+gets (n)_2$
+\backslash
+
+\backslash
+     $B 
+\backslash
+gets M_n (
+\backslash
+mathbb{R})$
+\backslash
+
+\backslash
+     
+\backslash
+For{$i 
+\backslash
+in [k]$}{         
+\backslash
+If{$a_i = 1$}{             $B = B
+\backslash
+star A$
+\backslash
+
+\backslash
+         }         $A = A
+\backslash
+star A$
+\backslash
+
+\backslash
+     }     
+\backslash
+Return $B$ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $L\in\M[\left|V\right|][\bbr]$
+\end_inset
+
+ מטריצת המשקל אזי 
+\begin_inset Formula $\text{RepeatedSquaring}\left(L,*\right)$
+\end_inset
+
+ פתרון לבעיית 
+\begin_inset Formula $\text{APSP}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $L\in\M[\left|V\right|][\bbr]$
+\end_inset
+
+ מטריצת המשקל אזי סיבוכיות הריצה של 
+\begin_inset Formula $\text{RepeatedSquaring}\left(L,*\right)$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\O\left(\left|V\right|^{3}\log\left(\left|V\right|\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $\left(\left[n\right],E\right)$
+\end_inset
+
+ גרף מכוון ויהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $F^{\left(k\right)}\in\M[n][\bbr]$
+\end_inset
+
+ באשר לכל 
+\begin_inset Formula $u,v\in V$
+\end_inset
+
+ מתקיים
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $F_{u,v}^{\left(k\right)}=\min\left\{ \ell\left(\sigma\right)\mid\left(\sigma\in\left\{ u\to v\right\} \right)\land\left(\text{ למעט בהתחלה ובסוף}\left[k\right]\text{ עוברת דרך הצמתים }\sigma\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $\left(\left[n\right],E\right)$
+\end_inset
+
+ גרף מכוון ותהא 
+\begin_inset Formula $L\in\M[n][\bbr]$
+\end_inset
+
+ מטריצת המשקל אזי 
+\begin_inset Formula $F^{\left(0\right)}\in\M[n][\bbr]$
+\end_inset
+
+ באשר לכל 
+\begin_inset Formula $u,v\in V$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $F_{u,v}^{\left(0\right)}=L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $\left(\left[n\right],E\right)$
+\end_inset
+
+ גרף מכוון ויהיו 
+\begin_inset Formula $u,v\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $F_{u,v}^{\left(k\right)}=\min\left\{ F_{u,v}^{\left(k-1\right)},F_{u,k}^{\left(k-1\right)}+F_{k,v}^{\left(k-1\right)}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם פלויד־וורשאל
+\series default
+: יהי 
+\begin_inset Formula $\left(\left[n\right],E\right)$
+\end_inset
+
+ גרף מכוון ותהא 
+\begin_inset Formula $L\in\M[n][\bbr]$
+\end_inset
+
+ מטריצת המשקל אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm} 
+\backslash
+SetAlgoLined 
+\backslash
+SetKwFunction{name}{FloydWarshall}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{} 
+\backslash
+Fn{
+\backslash
+name{$n, L$}}{     $
+\backslash
+Pi 
+\backslash
+gets M_n ([n])$
+\backslash
+
+\backslash
+     
+\backslash
+For{$u
+\backslash
+in [n]$}{         
+\backslash
+For{$v
+\backslash
+in [n]$}{             
+\backslash
+uIf{$(u
+\backslash
+ne v)
+\backslash
+land (L_{u,v} < 
+\backslash
+infty)$}{                 $
+\backslash
+Pi_{u,v} 
+\backslash
+gets u$
+\backslash
+
+\backslash
+             } 
+\backslash
+uElse{                 $
+\backslash
+Pi_{u,v} 
+\backslash
+gets 
+\backslash
+text{None}$
+\backslash
+
+\backslash
+             }         }     }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $F 
+\backslash
+gets L$
+\backslash
+
+\backslash
+     
+\backslash
+For{$k
+\backslash
+in [n]$}{         
+\backslash
+For{$u
+\backslash
+in [n]$}{             
+\backslash
+For{$v
+\backslash
+in [n]$}{                 
+\backslash
+uIf{$F_{u,k} + F_{k,v} < F_{u,v}$}{                     $F_{u,v} 
+\backslash
+gets F_{u,k} + F_{k,v}$
+\backslash
+
+\backslash
+                     $
+\backslash
+Pi_{u,v} 
+\backslash
+gets 
+\backslash
+Pi_{k,v}$
+\backslash
+
+\backslash
+                 }             }         }     }     
+\backslash
+Return $(F, 
+\backslash
+Pi)$ } 
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $\left(\left[n\right],E\right)$
+\end_inset
+
+ גרף מכוון ותהא 
+\begin_inset Formula $L\in\M[n][\bbr]$
+\end_inset
+
+ מטריצת המשקל אזי 
+\begin_inset Formula $\text{FloydWarshall}\left(n,L\right)$
+\end_inset
+
+ פתרון לבעיית 
+\begin_inset Formula $\text{APSP}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $\left(\left[n\right],E\right)$
+\end_inset
+
+ גרף מכוון ותהא 
+\begin_inset Formula $L\in\M[n][\bbr]$
+\end_inset
+
+ מטריצת המשקל אזי סיבוכיות הריצה של 
+\begin_inset Formula $\text{FloydWarshall}\left(n,L\right)$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\O\left(n^{3}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קבוצה בלתי תלויה
+\series default
+: יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי 
+\begin_inset Formula $I\subseteq V$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $u,v\in I$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(u,v\right)\notin E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\mis}{\text{mis}}
+{\text{mis}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $\left(\left[n\right],E\right)$
+\end_inset
+
+ גרף שרוך ויהי 
+\begin_inset Formula $w:\left[n\right]\to\bbr_{\ge0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mis\left(i\right)=\max\left\{ w\left(I\right)\mid\left(I\subseteq\left[i\right]\right)\land\left(\text{ בלתי תלויה }I\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: יהי 
+\begin_inset Formula $\left(\left[n\right],E\right)$
+\end_inset
+
+ גרף שרוך ויהי 
+\begin_inset Formula $w:\left[n\right]\to\bbr_{\ge0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mis\left(0\right)=0$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\mis\left(1\right)=w\left(1\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\mis\left(i\right)=\max\left\{ w\left(i\right)+\mis\left(i-2\right),\mis\left(i-1\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: יהי 
+\begin_inset Formula $\left(\left[n\right],E\right)$
+\end_inset
+
+ גרף שרוך ויהי 
+\begin_inset Formula $w:\left[n\right]\to\bbr_{\ge0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mis\left(n\right)$
+\end_inset
+
+ בעל סיבוכיות זמן 
+\begin_inset Formula $\O\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תת־סדרה
+\series default
+: יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ותהא 
+\begin_inset Formula $A\in\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $B\in\Sigma^{*}$
+\end_inset
+
+ עבורה קיימת 
+\begin_inset Formula $f:\left[\left|B\right|\right]\to\left[\left|A\right|\right]$
+\end_inset
+
+ עולה ממש וחח
+\begin_inset Quotes erd
+\end_inset
+
+ע המקיימת 
+\begin_inset Formula $A_{f\left(i\right)}=B_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[\left|B\right|\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית תהא 
+\begin_inset Formula $A\in\Sigma^{*}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $B\in\Sigma^{*}$
+\end_inset
+
+ תת־סדרה אזי 
+\begin_inset Formula $B\lhd A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית תת־סדרה משותפת ארוכה ביותר )
+\begin_inset Formula $\text{LCS}$
+\end_inset
+
+(
+\series default
+: יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ותהיינה 
+\begin_inset Formula $A,B\in\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\max\left\{ \left|C\right|\mid\left(C\in\Sigma^{*}\right)\land\left(C\lhd A\right)\land\left(C\lhd B\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\lcs}{\text{lcs}}
+{\text{lcs}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+: תהיינה 
+\begin_inset Formula $A,B\in\Sigma^{*}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $k\le\left|A\right|$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\ell\le\left|B\right|$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lcs\left(k,\ell\right)=\max\left\{ \left|C\right|\mid\left(C\lhd\left(A_{1},\ldots,A_{k}\right)\right)\land\left(C\lhd\left(B_{1},\ldots,B_{\ell}\right)\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהיינה 
+\begin_inset Formula $A,B\in\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lcs\left(k,\ell\right)=\left\{ \begin{smallmatrix}0 &  & \left(k=0\right)\lor\left(\ell=0\right)\\
+\lcs\left(k-1,\ell-1\right)+1 &  & \left(k,\ell>0\right)\land\left(A_{k}=B_{\ell}\right)\\
+\max\left\{ \lcs\left(k-1,\ell\right),\lcs\left(k,\ell-1\right)\right\}  &  & \left(k,\ell>0\right)\land\left(A_{k}\ne B_{\ell}\right)
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+: תהיינה 
+\begin_inset Formula $A,B\in\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lcs\left(\left|A\right|,\left|B\right|\right)$
+\end_inset
+
+ בעל סיבוכיות זמן 
+\begin_inset Formula $\O\left(\left|A\right|\cdot\left|B\right|\right)$
+\end_inset
+
+ וסיבוכיות מקום 
+\begin_inset Formula $\O\left(\left|A\right|\cdot\left|B\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית תת־סדרה עולה ארוכה ביותר )
+\begin_inset Formula $\text{LIS}$
+\end_inset
+
+(
+\series default
+: יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית בעל סדר 
+\begin_inset Formula $\prec$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $A\in\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\max\left\{ \left|C\right|\mid\left(C\lhd A\right)\land\left(\forall i.C_{i-1}\prec C_{i}\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+: תהא 
+\begin_inset Formula $A\in\Sigma^{*}$
+\end_inset
+
+ אזי בעיית 
+\begin_inset Formula $\text{LIS}$
+\end_inset
+
+ של 
+\begin_inset Formula $A$
+\end_inset
+
+ הינה בעיית 
+\begin_inset Formula $\text{LCS}$
+\end_inset
+
+ של 
+\begin_inset Formula $\left(A,\text{sort}\left(A\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\lis}{\text{lcs}}
+{\text{lcs}}
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
