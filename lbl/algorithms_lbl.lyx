@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -89,15 +89,15 @@
 \begin_modules
 algorithm2e
 \end_modules
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \begin_local_layout
 Format 66
 PackageOptions algorithm2e vlined
 \end_local_layout
 \language hebrew
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding utf8
+\fontencoding auto
 \font_roman "lmodern" "default"
 \font_sans "avant" "default"
 \font_typewriter "courier" "default"
@@ -105,7 +105,9 @@ PackageOptions algorithm2e vlined
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -116,10 +118,11 @@ PackageOptions algorithm2e vlined
 \bibtex_command default
 \index_command default
 \float_placement H
+\float_alignment class
 \paperfontsize default
 \spacing onehalf
 \use_hyperref false
-\papersize letterpaper
+\papersize letter
 \use_geometry true
 \use_package amsmath 2
 \use_package amssymb 2
@@ -140,7 +143,9 @@ PackageOptions algorithm2e vlined
 \suppress_date true
 \justification false
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -160,11 +165,16 @@ PackageOptions algorithm2e vlined
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -173,6 +183,7 @@ PackageOptions algorithm2e vlined
 \begin_inset CommandInset include
 LatexCommand include
 filename "../../macros.lyx"
+literal "true"
 
 \end_inset
 
@@ -184,7 +195,8 @@ filename "../../macros.lyx"
 \series bold
 גרף מכוון קשיר
 \series default
-: גרף מכוון 
+:
+ גרף מכוון 
 \begin_inset Formula $G$
 \end_inset
 
@@ -216,7 +228,8 @@ filename "../../macros.lyx"
 \series bold
 גרף מכוון קשיר חזק
 \series default
-: גרף מכוון 
+:
+ גרף מכוון 
 \begin_inset Formula $G$
 \end_inset
 
@@ -244,7 +257,8 @@ filename "../../macros.lyx"
 
 
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -280,11 +294,14 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-BFS{$G, s$}}{     $
+BFS{$G,
+ s$}}{     $
 \backslash
-left(d, 
+left(d,
+ 
 \backslash
-pi, 
+pi,
+ 
 \backslash
 text{color}
 \backslash
@@ -416,9 +433,11 @@ gets$ Black
 \backslash
 Return $
 \backslash
-left(d, 
+left(d,
+ 
 \backslash
-pi, 
+pi,
+ 
 \backslash
 text{color}
 \backslash
@@ -437,7 +456,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -461,7 +481,8 @@ end{algorithm}
 \series bold
 משפט
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -481,7 +502,8 @@ end{algorithm}
 \series bold
 סימון
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -501,7 +523,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -525,7 +548,8 @@ end{algorithm}
 \series bold
 למה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -549,7 +573,8 @@ end{algorithm}
 \series bold
 למה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -577,7 +602,8 @@ end{algorithm}
 \series bold
 משפט נכונות מרחקים
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -601,7 +627,8 @@ end{algorithm}
 
 
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -629,7 +656,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -720,7 +748,8 @@ end{algorithm}
 \series bold
 מסלול אוילר
 \series default
-: מסלול העובר על כל הקשתות בגרף.
+:
+ מסלול העובר על כל הקשתות בגרף.
 \end_layout
 
 \begin_layout Standard
@@ -728,7 +757,8 @@ end{algorithm}
 \series bold
 מעגל אוילר
 \series default
-: מסלול אוילר שהינו מעגל.
+:
+ מסלול אוילר שהינו מעגל.
 \end_layout
 
 \begin_layout Standard
@@ -736,19 +766,20 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף קשיר ולא מכוון אזי )יש מעגל אוילר ב־
+ גרף קשיר ולא מכוון אזי (יש מעגל אוילר ב־
 \begin_inset Formula $G$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $v\in V$
 \end_inset
 
@@ -756,7 +787,7 @@ end{algorithm}
 \begin_inset Formula $\deg\left(v\right)\in\bbn_{\text{even}}$
 \end_inset
 
-.)
+.(
 \end_layout
 
 \begin_layout Standard
@@ -764,7 +795,8 @@ end{algorithm}
 \series bold
 אלגוריתם למציאת מעגל אוילר
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -804,7 +836,8 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-EulerCircle{$G, v$}}{     $
+EulerCircle{$G,
+ v$}}{     $
 \backslash
 sigma 
 \backslash
@@ -830,7 +863,8 @@ sigma .
 \backslash
 text{append}(
 \backslash
-{v, u
+{v,
+ u
 \backslash
 })$
 \backslash
@@ -842,7 +876,8 @@ backslash
 \backslash
 {
 \backslash
-{v, u
+{v,
+ u
 \backslash
 }
 \backslash
@@ -881,7 +916,8 @@ mid (
 exists y
 \backslash
 in V(G).
- (x, y)
+ (x,
+ y)
 \backslash
 in
 \backslash
@@ -899,7 +935,8 @@ deg(x)>0)
 \backslash
 sigma[w] = 
 \backslash
-EulerCircle{G, w}$     }     
+EulerCircle{G,
+ w}$     }     
 \backslash
 Return $
 \backslash
@@ -925,7 +962,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -957,7 +995,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: באלגוריתם 
+:
+ באלגוריתם 
 \begin_inset Formula $\text{EulerCircle}$
 \end_inset
 
@@ -977,7 +1016,8 @@ end{algorithm}
 \series bold
 משפט
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1001,23 +1041,24 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף קשיר ולא מכוון אזי )יש מסלול אוילר שאינו מעגל ב־
+ גרף קשיר ולא מכוון אזי (יש מסלול אוילר שאינו מעגל ב־
 \begin_inset Formula $G$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-(
+)
 \begin_inset Formula $\left|\left\{ v\in V\left(G\right)\mid\deg\left(v\right)\in\bbn_{\text{odd}}\right\} \right|=2$
 \end_inset
 
-.)
+.(
 \end_layout
 
 \begin_layout Standard
@@ -1025,7 +1066,8 @@ end{algorithm}
 \series bold
 אלגוריתם למציאת מסלול אוילר
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1063,7 +1105,8 @@ Fn{
 \backslash
 EulerPath{$G$}}{     $
 \backslash
-{v, u
+{v,
+ u
 \backslash
 }
 \backslash
@@ -1103,7 +1146,8 @@ right
 \backslash
 {
 \backslash
-{v, u
+{v,
+ u
 \backslash
 }
 \backslash
@@ -1115,7 +1159,8 @@ right
 \backslash
 sigma = 
 \backslash
-text{EulerCircle}{(G, v)}$
+text{EulerCircle}{(G,
+ v)}$
 \backslash
 
 \backslash
@@ -1127,7 +1172,8 @@ sigma
 \backslash
 backslash 
 \backslash
-{v, u
+{v,
+ u
 \backslash
 }$ } 
 \backslash
@@ -1144,23 +1190,24 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף לא מכוון אזי )
+ גרף לא מכוון אזי (
 \begin_inset Formula $G$
 \end_inset
 
- דו־צדדי(
+ דו־צדדי)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לא קיים ב־
+(לא קיים ב־
 \begin_inset Formula $G$
 \end_inset
 
- מעגל באורך אי־זוגי(.
+ מעגל באורך אי־זוגי).
 \end_layout
 
 \begin_layout Standard
@@ -1168,7 +1215,8 @@ end{algorithm}
 \series bold
 אלגוריתם זיהוי גרפים דו־צדדיים
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1202,9 +1250,11 @@ Fn{
 \backslash
 IsBipartite{$G$}}{     $
 \backslash
-left(d, 
+left(d,
+ 
 \backslash
-pi, 
+pi,
+ 
 \backslash
 text{color}
 \backslash
@@ -1251,23 +1301,24 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף לא מכוון ופשוט אזי )
+ גרף לא מכוון ופשוט אזי (
 \begin_inset Formula $G$
 \end_inset
 
- דו צדדי(
+ דו צדדי)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\text{IsBipartite}\left(G\right)=\text{true}$
 \end_inset
 
-.)
+.(
 \end_layout
 
 \begin_layout Standard
@@ -1275,7 +1326,8 @@ end{algorithm}
 \series bold
 מסלול קצר ביותר בין קודקודים
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1305,13 +1357,14 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
-גרף המסלולים הקצרים ביותר מקודקוד )גרף מק
+גרף המסלולים הקצרים ביותר מקודקוד (גרף מק
 \begin_inset Quotes erd
 \end_inset
 
-ב(
+ב)
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1339,7 +1392,8 @@ end{algorithm}
 \series bold
 אלגוריתם למציאת גרף המסלולים הקצרים ביותר מקודקוד
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1379,11 +1433,14 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$G, s$}}{     $
+name{$G,
+ s$}}{     $
 \backslash
-left(d, 
+left(d,
+ 
 \backslash
-pi, 
+pi,
+ 
 \backslash
 text{color}
 \backslash
@@ -1407,7 +1464,8 @@ pi)$
 \backslash
      
 \backslash
-For{$(u, v)
+For{$(u,
+ v)
 \backslash
 in E(G)$}{         
 \backslash
@@ -1423,13 +1481,15 @@ pi(v)}| = 1$}{             $E^
 \backslash
 prime .
 \backslash
-text{append} ((u, v))$
+text{append} ((u,
+ v))$
 \backslash
 
 \backslash
          }     }     
 \backslash
-Return $(V(G), E^
+Return $(V(G),
+ E^
 \backslash
 prime)$ } 
 \backslash
@@ -1446,11 +1506,12 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $e\in E$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $e$
 \end_inset
 
@@ -1462,11 +1523,11 @@ end{algorithm}
 \begin_inset Formula $G_{\pi}$
 \end_inset
 
-)
+(
 \begin_inset Formula $\iff$
 \end_inset
 
-(
+)
 \begin_inset Formula $e$
 \end_inset
 
@@ -1474,7 +1535,7 @@ end{algorithm}
 \begin_inset Quotes erd
 \end_inset
 
-ב(.
+ב).
 \end_layout
 
 \begin_layout Standard
@@ -1482,7 +1543,8 @@ end{algorithm}
 \series bold
 מסקנה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1510,7 +1572,8 @@ end{algorithm}
 \series bold
 גרף המסלולים הקצרים ביותר בין קודקודים
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1538,7 +1601,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1572,7 +1636,8 @@ end{algorithm}
 
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1608,9 +1673,11 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-DFS{$G, s$}}{     $
+DFS{$G,
+ s$}}{     $
 \backslash
-left(k, 
+left(k,
+ 
 \backslash
 pi
 \backslash
@@ -1757,7 +1824,8 @@ text{White}
 \backslash
              $
 \backslash
-text{color}[(v, w)]
+text{color}[(v,
+ w)]
 \backslash
 gets
 \backslash
@@ -1803,7 +1871,8 @@ pi[v]$             }         }     }
 \backslash
 Return $
 \backslash
-left(k, 
+left(k,
+ 
 \backslash
 pi
 \backslash
@@ -1824,7 +1893,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1850,7 +1920,8 @@ end{algorithm}
 זמן גילוי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1876,7 +1947,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1910,7 +1982,8 @@ end{algorithm}
 
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1940,7 +2013,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: עץ 
+:
+ עץ 
 \begin_inset Formula $\text{DFS}$
 \end_inset
 
@@ -1958,7 +2032,8 @@ end{algorithm}
 
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1974,7 +2049,8 @@ end{algorithm}
 \end_layout
 
 \begin_layout Itemize
-קשתות עץ: קשת 
+קשתות עץ:
+ קשת 
 \begin_inset Formula $e\in E\left(G\right)$
 \end_inset
 
@@ -1986,7 +2062,8 @@ end{algorithm}
 \end_layout
 
 \begin_layout Itemize
-קשתות קדמיות: קשת 
+קשתות קדמיות:
+ קשת 
 \begin_inset Formula $\left(u,v\right)\in E\left(G\right)$
 \end_inset
 
@@ -2006,7 +2083,8 @@ end{algorithm}
 \end_layout
 
 \begin_layout Itemize
-קשתות אחוריות: קשת 
+קשתות אחוריות:
+ קשת 
 \begin_inset Formula $\left(u,v\right)\in E\left(G\right)$
 \end_inset
 
@@ -2026,7 +2104,8 @@ end{algorithm}
 \end_layout
 
 \begin_layout Itemize
-קשתות חוצות: קשת 
+קשתות חוצות:
+ קשת 
 \begin_inset Formula $e\in E\left(G\right)$
 \end_inset
 
@@ -2040,7 +2119,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2082,7 +2162,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2100,7 +2181,8 @@ end{algorithm}
  בעל זמני נסיגה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2134,11 +2216,15 @@ Fn{
 \backslash
 DFS{$G$}}{     $
 \backslash
-left(k, f, 
+left(k,
+ f,
+ 
 \backslash
-pi, 
+pi,
+ 
 \backslash
-text{color}, 
+text{color},
+ 
 \backslash
 text{low}
 \backslash
@@ -2190,7 +2276,11 @@ infty$
 \backslash
      }     $i 
 \backslash
-gets 0$     
+gets 0$
+\backslash
+
+\backslash
+     
 \backslash
 For{$s
 \backslash
@@ -2200,7 +2290,8 @@ If{$k[s] = 0$}{             $
 \backslash
 text{DFS-VISIT}(s,k ,f ,
 \backslash
-pi, i)$
+pi,
+ i)$
 \backslash
 
 \backslash
@@ -2208,9 +2299,12 @@ pi, i)$
 \backslash
 Return $
 \backslash
-left(k, f, 
+left(k,
+ f,
+ 
 \backslash
-pi, 
+pi,
+ 
 \backslash
 text{low}
 \backslash
@@ -2238,13 +2332,19 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$v, k, f, 
+name{$v,
+ k,
+ f,
+ 
 \backslash
-pi, 
+pi,
+ 
 \backslash
-text{color}, 
+text{color},
+ 
 \backslash
-text{low}, i$}}{     $
+text{low},
+ i$}}{     $
 \backslash
 text{color}[u] 
 \backslash
@@ -2290,7 +2390,8 @@ gets
 \backslash
 min(
 \backslash
-text{low}[u], k[v])$
+text{low}[u],
+ k[v])$
 \backslash
 
 \backslash
@@ -2310,13 +2411,19 @@ gets v$
 \backslash
              
 \backslash
-name{$w, k, f, 
+name{$w,
+ k,
+ f,
+ 
 \backslash
-pi, 
+pi,
+ 
 \backslash
-text{color}, 
+text{color},
+ 
 \backslash
-text{low}, i$}
+text{low},
+ i$}
 \backslash
 
 \backslash
@@ -2328,7 +2435,8 @@ gets
 \backslash
 min(
 \backslash
-text{low}[u], 
+text{low}[u],
+ 
 \backslash
 text{low}[v])$
 \backslash
@@ -2373,7 +2481,8 @@ end{algorithm}
 זמן נסיגה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2407,11 +2516,12 @@ end{algorithm}
 
 \color inherit
 \lang hebrew
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $v,u\in V$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $v$
 \end_inset
 
@@ -2423,15 +2533,15 @@ end{algorithm}
 \begin_inset Formula $G_{\pi}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-(
+)
 \begin_inset Formula $k\left[u\right]<k\left[v\right]<f\left[u\right]$
 \end_inset
 
-.)
+.(
 \end_layout
 
 \begin_layout Standard
@@ -2441,23 +2551,24 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $v,u\in V$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\left(u,v\right)$
 \end_inset
 
- קשת חוצה(
+ קשת חוצה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $f\left[v\right]<k\left[u\right]$
 \end_inset
 
-.)
+.(
 \end_layout
 
 \begin_layout Standard
@@ -2467,7 +2578,8 @@ end{algorithm}
 משפט הסוגריים
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2541,7 +2653,8 @@ end{algorithm}
 משפט המסלול הלבן
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2549,7 +2662,7 @@ end{algorithm}
 \begin_inset Formula $u,v\in V$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $v$
 \end_inset
 
@@ -2561,11 +2674,11 @@ end{algorithm}
 \begin_inset Formula $G_{\pi}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)בזמן 
+(בזמן 
 \begin_inset Formula $k\left(u\right)$
 \end_inset
 
@@ -2581,7 +2694,7 @@ end{algorithm}
 \begin_inset Formula $v$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -2592,7 +2705,8 @@ end{algorithm}
 \series default
 י
 \color inherit
-: גרף מכוון 
+:
+ גרף מכוון 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2606,7 +2720,8 @@ end{algorithm}
 מיון טופולוגי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2640,23 +2755,24 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף מכוון אזי )
+ גרף מכוון אזי (
 \begin_inset Formula $G$
 \end_inset
 
- אציקלי(
+ אציקלי)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיים מיון טופולוגי על 
+(קיים מיון טופולוגי על 
 \begin_inset Formula $G$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -2666,7 +2782,8 @@ end{algorithm}
 טענה אלגוריתם קנות'
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2684,23 +2801,24 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף מכוון אזי )
+ גרף מכוון אזי (
 \begin_inset Formula $G$
 \end_inset
 
- רציקלי(
+ רציקלי)
 \begin_inset Formula $\iff$
 \end_inset
 
-)אין קשתות אחוריות ב־
+(אין קשתות אחוריות ב־
 \begin_inset Formula $G$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -2710,7 +2828,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2736,7 +2855,8 @@ end{algorithm}
 קודקוד מנתק
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2758,7 +2878,8 @@ end{algorithm}
 אב חורג
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2784,7 +2905,8 @@ end{algorithm}
 זמן גילוי האב החורג המוקדם ביותר
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2806,7 +2928,8 @@ end{algorithm}
 אלגוריתם למציאת כל הקודקודים המנתקים
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2846,9 +2969,12 @@ gets V$
 \backslash
      $
 \backslash
-left(k, f, 
+left(k,
+ f,
+ 
 \backslash
-pi, 
+pi,
+ 
 \backslash
 text{low}
 \backslash
@@ -2856,7 +2982,8 @@ right)
 \backslash
 gets 
 \backslash
-text{DFS}(G, s)$
+text{DFS}(G,
+ s)$
 \backslash
 
 \backslash
@@ -2924,7 +3051,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2946,7 +3074,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2961,14 +3090,15 @@ end{algorithm}
 
 \series bold
 \color red
-רכיב קשיר היטב )רק
+רכיב קשיר היטב (רק
 \begin_inset Quotes erd
 \end_inset
 
-ה(
+ה)
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3006,7 +3136,8 @@ end{algorithm}
 גרף הופכי/משוחלף
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3028,7 +3159,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3062,7 +3194,7 @@ end{algorithm}
 \uwave default
 \noun default
 \color inherit
-)
+(
 \begin_inset Formula $C$
 \end_inset
 
@@ -3074,11 +3206,11 @@ end{algorithm}
 \begin_inset Formula $G$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-(
+)
 \begin_inset Formula $C$
 \end_inset
 
@@ -3090,7 +3222,7 @@ end{algorithm}
 \begin_inset Formula $G^{T}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -3100,7 +3232,8 @@ end{algorithm}
 אלגוריתם למציאת רכיבים קשירים היטב
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3134,7 +3267,9 @@ Fn{
 \backslash
 name{$G$}}{     $
 \backslash
-left(k, f, 
+left(k,
+ f,
+ 
 \backslash
 pi
 \backslash
@@ -3148,14 +3283,16 @@ text{DFS}(G)$
 \backslash
      
 \backslash
-tcc{In the next line, in the main loop of DFS we go through the vertices
- in decreasing order of f[u]}     $
+tcc{In the next line,
+ in the main loop of DFS we go through the vertices in decreasing order of f[u]}     $
 \backslash
 left(k^
 \backslash
-prime, f^
+prime,
+ f^
 \backslash
-prime, 
+prime,
+ 
 \backslash
 pi^
 \backslash
@@ -3212,7 +3349,8 @@ end{algorithm}
 גרף הרכיבים
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3234,7 +3372,8 @@ end{algorithm}
 אלגוריתם למציאת גרף הרכיבים
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3309,7 +3448,8 @@ left([v]_{
 \backslash
 xrightarrow[G^T_{
 \backslash
-pi}]{}}, [u]_{
+pi}]{}},
+ [u]_{
 \backslash
 xrightarrow[G^T_{
 \backslash
@@ -3319,7 +3459,8 @@ right)
 \backslash
 right)$         }     }     
 \backslash
-Return $(V^* , E^*)$ } 
+Return $(V^* ,
+ E^*)$ } 
 \backslash
 end{algorithm}
 \end_layout
@@ -3343,7 +3484,8 @@ end{algorithm}
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3361,7 +3503,8 @@ end{algorithm}
 הגדרה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3373,7 +3516,8 @@ end{algorithm}
 \end_layout
 
 \begin_layout Itemize
-זמן גילוי: 
+זמן גילוי:
+ 
 \begin_inset Formula $k\left(U\right)=\min_{u\in U}\left(k\left[u\right]\right)$
 \end_inset
 
@@ -3381,7 +3525,8 @@ end{algorithm}
 \end_layout
 
 \begin_layout Itemize
-זמן נסיגה: 
+זמן נסיגה:
+ 
 \begin_inset Formula $f\left(U\right)=\max_{u\in U}\left(f\left[u\right]\right)$
 \end_inset
 
@@ -3395,7 +3540,8 @@ end{algorithm}
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3425,7 +3571,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3455,7 +3602,8 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3463,7 +3611,7 @@ end{algorithm}
 \begin_inset Formula $C\subseteq V$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $C$
 \end_inset
 
@@ -3471,15 +3619,15 @@ end{algorithm}
 \begin_inset Quotes erd
 \end_inset
 
-ה(
+ה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $C\in\text{SCC}\left(G\right)$
 \end_inset
 
-.)
+.(
 \end_layout
 
 \begin_layout Standard
@@ -3489,7 +3637,8 @@ end{algorithm}
 קבוצת מוצא
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3511,7 +3660,8 @@ end{algorithm}
 אלגוריתם למציאת קבוצת מוצא מינימלית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3578,7 +3728,8 @@ nexists w
 in V(G)
 \backslash
 backslash C.
- (w, u)
+ (w,
+ u)
 \backslash
 in E(G)
 \backslash
@@ -3611,7 +3762,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3629,7 +3781,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3651,7 +3804,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3681,7 +3835,8 @@ end{algorithm}
 גרף ממושקל
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3703,7 +3858,8 @@ end{algorithm}
 עץ פורש
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3729,7 +3885,8 @@ end{algorithm}
 משקל עץ פורש
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3748,14 +3905,15 @@ end{algorithm}
 
 \series bold
 \color red
-עץ פורש מינימלי )עפ
+עץ פורש מינימלי (עפ
 \begin_inset Quotes erd
 \end_inset
 
-מ(
+מ)
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3777,7 +3935,8 @@ end{algorithm}
 חתך
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3796,10 +3955,11 @@ end{algorithm}
 
 \series bold
 \color red
-קשתות החתך
+קשתות החתך/חוצות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3821,7 +3981,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $T\le G$
 \end_inset
 
@@ -3843,7 +4004,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $T\le G$
 \end_inset
 
@@ -3869,7 +4031,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $T\le G$
 \end_inset
 
@@ -3891,7 +4054,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $T\le G$
 \end_inset
 
@@ -3921,7 +4085,8 @@ end{algorithm}
 אלגוריתם גנרי למציאת עץ פורש מינימלי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3957,7 +4122,8 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$G, w$}}{     $
+name{$G,
+ w$}}{     $
 \backslash
 text{color}
 \backslash
@@ -4038,7 +4204,8 @@ sigma)].
 \backslash
 text{color}[(
 \backslash
-sigma[i], 
+sigma[i],
+ 
 \backslash
 sigma[i + 1])] 
 \backslash
@@ -4124,7 +4291,8 @@ text{Red}$
 \backslash
          }     }     
 \backslash
-Return $(V, 
+Return $(V,
+ 
 \backslash
 {e
 \backslash
@@ -4160,7 +4328,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4194,7 +4363,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4220,7 +4390,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4282,7 +4453,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4312,7 +4484,8 @@ end{algorithm}
 אלגוריתם פרים למציאת עץ פורש מינימלי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4394,7 +4567,8 @@ text{append}(r)$
 \backslash
 While{$U
 \backslash
-ne V$}{         $(u, v) 
+ne V$}{         $(u,
+ v) 
 \backslash
 gets 
 \backslash
@@ -4410,7 +4584,8 @@ backslash U)}(w(e))$
 \backslash
          $
 \backslash
-text{color}[(u, v)] = 
+text{color}[(u,
+ v)] = 
 \backslash
 text{Blue}$
 \backslash
@@ -4428,11 +4603,13 @@ For{$w
 \backslash
 in U$}{             
 \backslash
-If{$(w, v)
+If{$(w,
+ v)
 \backslash
 in E$}{                 $
 \backslash
-text{color}[(w, v)] = 
+text{color}[(w,
+ v)] = 
 \backslash
 text{Red}$
 \backslash
@@ -4440,7 +4617,8 @@ text{Red}$
 \backslash
              }         }     }     
 \backslash
-Return $(V, 
+Return $(V,
+ 
 \backslash
 {e
 \backslash
@@ -4469,7 +4647,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4491,7 +4670,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4521,7 +4701,8 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4547,7 +4728,8 @@ end{algorithm}
 הערה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4573,7 +4755,8 @@ end{algorithm}
 אלגוריתם קרוסקל למציאת עץ פורש מינימלי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4629,7 +4812,8 @@ text{sort}(E)$
 \backslash
      
 \backslash
-For{$(u, v)
+For{$(u,
+ v)
 \backslash
 in L$}{         
 \backslash
@@ -4677,7 +4861,8 @@ text{Blue}$
 \backslash
          }     }     
 \backslash
-Return $(V, 
+Return $(V,
+ 
 \backslash
 {e
 \backslash
@@ -4706,7 +4891,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4728,7 +4914,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4758,7 +4945,8 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4804,7 +4992,8 @@ end{algorithm}
  למציאת עץ פורש מינימלי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4884,15 +5073,18 @@ ne 1$}{
 \backslash
 For{$T 
 \backslash
-in Tree$}{             $(u, v) 
+in Tree$}{             $(u,
+ v) 
 \backslash
 gets 
 \backslash
-text{argmin}_{(u, v)
+text{argmin}_{(u,
+ v)
 \backslash
 in V(T)
 \backslash
-times V(G)}(w((u, v)))$
+times V(G)}(w((u,
+ v)))$
 \backslash
 
 \backslash
@@ -4916,7 +5108,8 @@ in V(S)
 \backslash
 gets S + T + 
 \backslash
-{(u, v)
+{(u,
+ v)
 \backslash
 }$
 \backslash
@@ -4957,7 +5150,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4995,7 +5189,8 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -5029,7 +5224,8 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -5071,7 +5267,8 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -5117,7 +5314,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $T_{1},T_{2}\le G$
 \end_inset
 
@@ -5155,7 +5353,8 @@ end{algorithm}
 אלגוריתם למציאת עץ פורש מינימלי המכיל מספר מקסימלי של קשתות מקבוצה מסוימת
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -5195,7 +5394,9 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$G, w, F$}}{     $
+name{$G,
+ w,
+ F$}}{     $
 \backslash
 varepsilon 
 \backslash
@@ -5239,7 +5440,8 @@ gets w(e)$
 \backslash
 Return $
 \backslash
-text{Kruskal'sAlgorithm}(G, w^
+text{Kruskal'sAlgorithm}(G,
+ w^
 \backslash
 prime)$
 \backslash
@@ -5268,7 +5470,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $F\subseteq E$
 \end_inset
 
@@ -5310,7 +5513,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $F\subseteq E$
 \end_inset
 
@@ -5340,7 +5544,8 @@ end{algorithm}
 בעיית שיבוץ המשימות
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $s_{1}\ldots s_{n},f_{1}\ldots f_{n}\in\bbr$
 \end_inset
 
@@ -5370,7 +5575,8 @@ end{algorithm}
 אלגוריתם חמדן לבעיית שיבוץ המשימות
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $s_{1}\ldots s_{n},f_{1}\ldots f_{n}\in\bbr$
 \end_inset
 
@@ -5410,32 +5616,42 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$s_1, 
+name{$s_1,
+ 
 \backslash
-ldots, s_n, f_1, 
+ldots,
+ s_n,
+ f_1,
+ 
 \backslash
-ldots, f_n$}}{     $F 
+ldots,
+ f_n$}}{     $F 
 \backslash
 gets 
 \backslash
-text{list}([s_1, f_1], 
+text{list}([s_1,
+ f_1],
+ 
 \backslash
-ldots, [s_n ,f_n])$
+ldots,
+ [s_n ,f_n])$
 \backslash
 
 \backslash
      
 \backslash
-tcc{In the next line, we put all the parameters in F and sort it based on
- $f_i$}     $F 
+tcc{In the next line,
+ we put all the parameters in F and sort it based on $f_i$}     $F 
 \backslash
 gets 
 \backslash
 text{sort}(
 \backslash
-{f_1, 
+{f_1,
+ 
 \backslash
-ldots , f_n
+ldots ,
+ f_n
 \backslash
 })$
 \backslash
@@ -5445,9 +5661,12 @@ ldots , f_n
 \backslash
 gets 
 \backslash
-text{list}([s_1, f_1], 
+text{list}([s_1,
+ f_1],
+ 
 \backslash
-ldots, [s_n ,f_n])$
+ldots,
+ [s_n ,f_n])$
 \backslash
 
 \backslash
@@ -5508,7 +5727,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $s_{1}\ldots s_{n},f_{1}\ldots f_{n}\in\bbr$
 \end_inset
 
@@ -5534,7 +5754,8 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: לכל 
+:
+ לכל 
 \begin_inset Formula $k\in\left[n\right]$
 \end_inset
 
@@ -5568,7 +5789,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $s_{1}\ldots s_{n},f_{1}\ldots f_{n}\in\bbr$
 \end_inset
 
@@ -5590,7 +5812,8 @@ end{algorithm}
 הערה
 \series default
 \color inherit
-: כאשר משקל הגרף הוא 
+:
+ כאשר משקל הגרף הוא 
 \begin_inset Formula $\ell$
 \end_inset
 
@@ -5624,7 +5847,8 @@ end{algorithm}
 מעגל שלילי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -5650,7 +5874,8 @@ end{algorithm}
 מסלול קצר ביותר בין קודקודים
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -5688,7 +5913,8 @@ end{algorithm}
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $s,t\in V$
 \end_inset
 
@@ -5726,7 +5952,8 @@ end{algorithm}
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $s,t\in V$
 \end_inset
 
@@ -5764,7 +5991,8 @@ end{algorithm}
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $s,t\in V$
 \end_inset
 
@@ -5779,14 +6007,15 @@ end{algorithm}
 
 \series bold
 \color magenta
-בעיית המסלולים הקצרים מנקודת מוצא )
+בעיית המסלולים הקצרים מנקודת מוצא (
 \begin_inset Formula $\text{SSSP}$
 \end_inset
 
-)
+(
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -5824,7 +6053,8 @@ end{algorithm}
 למה אי־שיוויון המשולש
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $u,v,w\in V$
 \end_inset
 
@@ -5842,7 +6072,8 @@ end{algorithm}
 למה תת־מסלול קצר ביותר
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5860,7 +6091,8 @@ end{algorithm}
 אלגוריתם בלמן־פורד למציאת מסלולים קצרים ביותר מנקודת מוצא
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -5900,11 +6132,14 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$G, 
+name{$G,
+ 
 \backslash
-ell , s$}}{     $
+ell ,
+ s$}}{     $
 \backslash
-left(d, 
+left(d,
+ 
 \backslash
 pi
 \backslash
@@ -5942,7 +6177,8 @@ text{None}$
 \backslash
 
 \backslash
-     }     $(c, i) 
+     }     $(c,
+ i) 
 \backslash
 gets 1$
 \backslash
@@ -5964,7 +6200,8 @@ gets 0$
 \backslash
          
 \backslash
-For{$(u, v) 
+For{$(u,
+ v) 
 \backslash
 in E$}{             $c 
 \backslash
@@ -5972,7 +6209,10 @@ gets
 \backslash
 text{Relax}(
 \backslash
-ell, d, u, v)$
+ell,
+ d,
+ u,
+ v)$
 \backslash
 
 \backslash
@@ -6009,7 +6249,10 @@ Fn{
 \backslash
 name{$
 \backslash
-ell, d, u, v$}}{     
+ell,
+ d,
+ u,
+ v$}}{     
 \backslash
 If{$d[v] > d[u] + 
 \backslash
@@ -6061,7 +6304,8 @@ end{algorithm}
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $s,u,v\in V$
 \end_inset
 
@@ -6091,7 +6335,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $s,u,v\in V$
 \end_inset
 
@@ -6129,7 +6374,8 @@ end{algorithm}
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $s\in V$
 \end_inset
 
@@ -6167,7 +6413,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $s,v\in V$
 \end_inset
 
@@ -6197,7 +6444,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $s,v\in V$
 \end_inset
 
@@ -6227,7 +6475,8 @@ end{algorithm}
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $s,t\in V$
 \end_inset
 
@@ -6265,7 +6514,8 @@ end{algorithm}
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $s\in V$
 \end_inset
 
@@ -6353,7 +6603,8 @@ end{algorithm}
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $s\in V$
 \end_inset
 
@@ -6408,11 +6659,57 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $s\in V$
 \end_inset
 
  אזי
+\end_layout
+
+\begin_layout Itemize
+(
+\begin_inset Formula $\text{BellmanFord}$
+\end_inset
+
+ החזיר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיים מעגל שלילי אשר ניתן להגיע אליו מ־
+\begin_inset Formula $s$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Itemize
@@ -6447,58 +6744,13 @@ end{algorithm}
 \uwave default
 \noun default
 \color inherit
-1
-\numeric off
-(
-\begin_inset Formula $\iff$
-\end_inset
-
-)קיים מעגל שלילי אשר ניתן להגיע אליו מ־
-\begin_inset Formula $s$
-\end_inset
-
-(.
-\end_layout
-
-\begin_layout Itemize
-(
-\begin_inset Formula $\text{BellmanFord}$
-\end_inset
-
- החזיר
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
 0
 \numeric off
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לא קיים מעגל שלילי אשר ניתן להגיע אליו מ־
+(לא קיים מעגל שלילי אשר ניתן להגיע אליו מ־
 \begin_inset Formula $s$
 \end_inset
 
@@ -6510,7 +6762,7 @@ end{algorithm}
 \begin_inset Formula $d\left[v\right]=\d\left(s,v\right)$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -6520,7 +6772,8 @@ end{algorithm}
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $s\in V$
 \end_inset
 
@@ -6550,7 +6803,8 @@ end{algorithm}
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $s\in V$
 \end_inset
 
@@ -6576,7 +6830,8 @@ end{algorithm}
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $s\in V$
 \end_inset
 
@@ -6598,7 +6853,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $s\in V$
 \end_inset
 
@@ -6620,7 +6876,8 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $s\in V$
 \end_inset
 
@@ -6642,7 +6899,8 @@ end{algorithm}
 הערה
 \series default
 \color inherit
-: נניח כי 
+:
+ נניח כי 
 \begin_inset Formula $\ell:E\to\bbz$
 \end_inset
 
@@ -6672,7 +6930,8 @@ end{algorithm}
 אלגוריתם לבדיקת קיום מעגל במשקל 0 בגרף מכוון חסר מעגלים שליליים
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -6704,7 +6963,8 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$G, 
+name{$G,
+ 
 \backslash
 ell$}}{     $s 
 \backslash
@@ -6738,7 +6998,8 @@ gets E
 \backslash
 cup 
 \backslash
-{(s, v)
+{(s,
+ v)
 \backslash
 }$
 \backslash
@@ -6746,7 +7007,8 @@ cup
 \backslash
          $
 \backslash
-ell((s, v)) 
+ell((s,
+ v)) 
 \backslash
 gets 0$
 \backslash
@@ -6754,9 +7016,11 @@ gets 0$
 \backslash
      }     $
 \backslash
-text{BellmanFord}(G, 
+text{BellmanFord}(G,
+ 
 \backslash
-ell, s)$
+ell,
+ s)$
 \backslash
 
 \backslash
@@ -6768,11 +7032,13 @@ in E$}{
 \backslash
 If{$
 \backslash
-delta(s, v) 
+delta(s,
+ v) 
 \backslash
 ne 
 \backslash
-delta(s, u) + 
+delta(s,
+ u) + 
 \backslash
 ell(u,v)$}{             $E 
 \backslash
@@ -6780,7 +7046,8 @@ gets E
 \backslash
 backslash 
 \backslash
-{(s, v)
+{(s,
+ v)
 \backslash
 }$
 \backslash
@@ -6838,7 +7105,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: בריצת 
+:
+ בריצת 
 \begin_inset Formula $\text{IsZeroCircle}$
 \end_inset
 
@@ -6860,7 +7128,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: אם בריצת 
+:
+ אם בריצת 
 \begin_inset Formula $\text{IsZeroCircle}$
 \end_inset
 
@@ -6882,7 +7151,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $C$
 \end_inset
 
@@ -6908,11 +7178,12 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף מכוון חסר מעגלים שליליים אזי )
+ גרף מכוון חסר מעגלים שליליים אזי (
 \begin_inset Formula $G$
 \end_inset
 
@@ -6945,11 +7216,11 @@ end{algorithm}
 \color inherit
 0
 \numeric off
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-(
+)
 \begin_inset Formula $\text{IsZeroCircle}$
 \end_inset
 
@@ -6957,7 +7228,7 @@ end{algorithm}
 \begin_inset Formula $\text{true}$
 \end_inset
 
-.)
+.(
 \end_layout
 
 \begin_layout Standard
@@ -6967,7 +7238,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -6989,7 +7261,8 @@ end{algorithm}
 אלגוריתם למציאת מסלולים קצרים ביותר מנקודת מוצא בגרף מכוון אציקלי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -7025,11 +7298,14 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$G, 
+name{$G,
+ 
 \backslash
-ell , s$}}{     $
+ell ,
+ s$}}{     $
 \backslash
-left(d, 
+left(d,
+ 
 \backslash
 pi
 \backslash
@@ -7069,8 +7345,7 @@ text{None}$
 \backslash
      }     
 \backslash
-tcc{Knuth’sAlgorithm is an algorithm to compute a topological sorting.} 
-    $f 
+tcc{Knuth’sAlgorithm is an algorithm to compute a topological sorting.}     $f 
 \backslash
 gets 
 \backslash
@@ -7082,9 +7357,7 @@ text{Knuth’sAlgorithm}(G)$
 \backslash
 For{$i
 \backslash
-in [1,
-\backslash
-ldots,|V|]$}{         
+in [|V|]$}{         
 \backslash
 For{$v
 \backslash
@@ -7092,7 +7365,8 @@ in
 \backslash
 text{Adj}(f(i))$}{             $
 \backslash
-text{Relax}((f(i), v))$
+text{Relax}((f(i),
+ v))$
 \backslash
 
 \backslash
@@ -7100,7 +7374,8 @@ text{Relax}((f(i), v))$
 \backslash
 Return $
 \backslash
-left(d, 
+left(d,
+ 
 \backslash
 pi
 \backslash
@@ -7126,7 +7401,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -7152,7 +7428,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -7175,11 +7452,11 @@ end{algorithm}
 
 \series bold
 \color magenta
-אלגוריתם דייקסטרה למציאת מסלולים קצרים ביותר מנקודת מוצא בגרף ללא משקלים
- שליליים
+אלגוריתם דייקסטרה למציאת מסלולים קצרים ביותר מנקודת מוצא בגרף ללא משקלים שליליים
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -7219,13 +7496,16 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$G, 
+name{$G,
+ 
 \backslash
-ell , s$}}{     $Q 
+ell ,
+ s$}}{     $Q 
 \backslash
 gets 
 \backslash
-text{heap}((V, 
+text{heap}((V,
+ 
 \backslash
 text{int}))$
 \backslash
@@ -7233,7 +7513,8 @@ text{int}))$
 \backslash
      $
 \backslash
-left(d, 
+left(d,
+ 
 \backslash
 pi
 \backslash
@@ -7273,7 +7554,8 @@ text{None}$
 \backslash
      }     $Q.
 \backslash
-text{insert}((s, d[s]))$
+text{insert}((s,
+ d[s]))$
 \backslash
 
 \backslash
@@ -7318,13 +7600,15 @@ gets u$
 \backslash
 gets d[u] + 
 \backslash
-ell(u, v)$
+ell(u,
+ v)$
 \backslash
 
 \backslash
                  $Q.
 \backslash
-text{insert}((v, d[v]))$
+text{insert}((v,
+ d[v]))$
 \backslash
 
 \backslash
@@ -7332,7 +7616,8 @@ text{insert}((v, d[v]))$
 \backslash
 uElseIf{$d[u] + 
 \backslash
-ell(u, v) < d[v]$}{                 $
+ell(u,
+ v) < d[v]$}{                 $
 \backslash
 pi[v] 
 \backslash
@@ -7344,13 +7629,15 @@ gets u$
 \backslash
 gets d[u] + 
 \backslash
-ell(u, v)$
+ell(u,
+ v)$
 \backslash
 
 \backslash
                  $Q.
 \backslash
-text{decrease-key}((v, d[v]))$
+text{decrease-key}((v,
+ d[v]))$
 \backslash
 
 \backslash
@@ -7358,7 +7645,8 @@ text{decrease-key}((v, d[v]))$
 \backslash
 Return $
 \backslash
-left(d, 
+left(d,
+ 
 \backslash
 pi
 \backslash
@@ -7390,7 +7678,8 @@ end{algorithm}
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $s,u\in V$
 \end_inset
 
@@ -7420,7 +7709,8 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $s\in V$
 \end_inset
 
@@ -7446,7 +7736,8 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $s\in V$
 \end_inset
 
@@ -7479,13 +7770,14 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
-בעיית כל המסלולים הקצרים )
+בעיית כל המסלולים הקצרים (
 \begin_inset Formula $\text{APSP}$
 \end_inset
 
-)
+(
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -7537,7 +7829,8 @@ end{algorithm}
 \series bold
 פונקציית פוטנציאל
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -7553,7 +7846,8 @@ end{algorithm}
 \series bold
 פונקציית משקל מותאמת
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $p$
 \end_inset
 
@@ -7581,7 +7875,8 @@ end{algorithm}
 \series bold
 משפט
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $p$
 \end_inset
 
@@ -7613,7 +7908,8 @@ end{algorithm}
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $p$
 \end_inset
 
@@ -7633,7 +7929,7 @@ end{algorithm}
 \begin_inset Formula $t$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -7641,15 +7937,15 @@ end{algorithm}
 \begin_inset Formula $\ell$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)מסלול קצר ביותר ביחס ל־
+(מסלול קצר ביותר ביחס ל־
 \begin_inset Formula $\ell_{p}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -7657,7 +7953,8 @@ end{algorithm}
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $p$
 \end_inset
 
@@ -7677,7 +7974,8 @@ end{algorithm}
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $p$
 \end_inset
 
@@ -7697,7 +7995,8 @@ end{algorithm}
 \series bold
 פונקציית פוטנציאל פיזבילית
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -7721,7 +8020,8 @@ end{algorithm}
 \series bold
 משפט
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -7729,11 +8029,11 @@ end{algorithm}
 \begin_inset Formula $\ell$
 \end_inset
 
- אזי )קיימת פונקציית פוטנציאל פיזבילית(
+ אזי (קיימת פונקציית פוטנציאל פיזבילית)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $G$
 \end_inset
 
@@ -7741,7 +8041,7 @@ end{algorithm}
 \begin_inset Formula $\ell$
 \end_inset
 
- חסר מעגלים שליליים(.
+ חסר מעגלים שליליים).
 \end_layout
 
 \begin_layout Standard
@@ -7749,7 +8049,8 @@ end{algorithm}
 \series bold
 אלגוריתם למציאת פונקציית פוטנאציל פיזבילית
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -7785,7 +8086,8 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$G, 
+name{$G,
+ 
 \backslash
 ell$}}{     $G^
 \backslash
@@ -7815,7 +8117,8 @@ prime)
 \backslash
 cup 
 \backslash
-{(s, v)
+{(s,
+ v)
 \backslash
 }$
 \backslash
@@ -7823,7 +8126,8 @@ cup
 \backslash
          $
 \backslash
-ell((s, v)) 
+ell((s,
+ v)) 
 \backslash
 gets 0$
 \backslash
@@ -7837,7 +8141,8 @@ text{BelmanForm} (G^
 \backslash
 prime ,
 \backslash
-ell, s)$
+ell,
+ s)$
 \backslash
 
 \backslash
@@ -7865,7 +8170,8 @@ in V(G)$}{             $p(v)
 \backslash
 gets 
 \backslash
-delta (s, v)$
+delta (s,
+ v)$
 \backslash
 
 \backslash
@@ -7890,7 +8196,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -7902,30 +8209,6 @@ end{algorithm}
 \end_layout
 
 \begin_layout Itemize
-)
-\begin_inset Formula $G$
-\end_inset
-
- מצוייד עם 
-\begin_inset Formula $\ell$
-\end_inset
-
- בעל מעגל שלילי(
-\begin_inset Formula $\iff$
-\end_inset
-
-)
-\begin_inset Formula $\text{FeasiblePotential}\left(G,\ell\right)$
-\end_inset
-
- מחזיר 
-\begin_inset Formula $\text{None}$
-\end_inset
-
-.)
-\end_layout
-
-\begin_layout Itemize
 (
 \begin_inset Formula $G$
 \end_inset
@@ -7934,7 +8217,31 @@ end{algorithm}
 \begin_inset Formula $\ell$
 \end_inset
 
- בעל פונקציית פוטנציאל פיזבילית(
+ בעל מעגל שלילי)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\text{FeasiblePotential}\left(G,\ell\right)$
+\end_inset
+
+ מחזיר 
+\begin_inset Formula $\text{None}$
+\end_inset
+
+.(
+\end_layout
+
+\begin_layout Itemize
+)
+\begin_inset Formula $G$
+\end_inset
+
+ מצוייד עם 
+\begin_inset Formula $\ell$
+\end_inset
+
+ בעל פונקציית פוטנציאל פיזבילית)
 \begin_inset Formula $\iff$
 \end_inset
 
@@ -7942,7 +8249,7 @@ end{algorithm}
 \begin_inset Formula $\text{FeasiblePotential}\left(G,\ell\right)$
 \end_inset
 
- מחזיר פונקציית פוטנציאל פיזבילית(.
+ מחזיר פונקציית פוטנציאל פיזבילית).
 \end_layout
 
 \begin_layout Standard
@@ -7950,7 +8257,8 @@ end{algorithm}
 \series bold
 אלגוריתם ג'ונסון לבעיית כל המסלולים הקצרים
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -7986,13 +8294,15 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$G, 
+name{$G,
+ 
 \backslash
 ell$}}{     $p
 \backslash
 gets 
 \backslash
-text{FeasiblePotential}(G, 
+text{FeasiblePotential}(G,
+ 
 \backslash
 ell)$
 \backslash
@@ -8022,7 +8332,8 @@ For{$(u,v)
 \backslash
 in E$}{         $
 \backslash
-ell_p ((u, v)) = 
+ell_p ((u,
+ v)) = 
 \backslash
 ell ((u,v)) + p(u) - p(v)$
 \backslash
@@ -8030,7 +8341,8 @@ ell ((u,v)) + p(u) - p(v)$
 \backslash
      }     $D_{
 \backslash
-ell_p}, D_
+ell_p},
+ D_
 \backslash
 ell 
 \backslash
@@ -8060,7 +8372,8 @@ right|}{(E)}$
 \backslash
 For{$v
 \backslash
-in V$}{         $(d, 
+in V$}{         $(d,
+ 
 \backslash
 pi) 
 \backslash
@@ -8068,7 +8381,8 @@ gets
 \backslash
 text{Dijkstra}(G,
 \backslash
-ell_p, v)$
+ell_p,
+ v)$
 \backslash
 
 \backslash
@@ -8076,8 +8390,8 @@ ell_p, v)$
 \backslash
 tcc{Here $D$ and $
 \backslash
-Pi$ will be simplified, to get a solution to APSP as needed we can modify
- a bit Dijkstra's algorithm to calculate $D$ and $
+Pi$ will be simplified,
+ to get a solution to APSP as needed we can modify a bit Dijkstra's algorithm to calculate $D$ and $
 \backslash
 Pi$ on the way to get constant time for this assignment.}         $D_v 
 \backslash
@@ -8101,7 +8415,8 @@ For{$(u,v)
 \backslash
 in E$}{         $D_{
 \backslash
-ell} ((u, v)) = D_{
+ell} ((u,
+ v)) = D_{
 \backslash
 ell_p} ((u,v)) - p(u) + p(v)$
 \backslash
@@ -8109,7 +8424,8 @@ ell_p} ((u,v)) - p(u) + p(v)$
 \backslash
      }     
 \backslash
-Return $(D, 
+Return $(D,
+ 
 \backslash
 Pi)$ } 
 \backslash
@@ -8126,7 +8442,8 @@ end{algorithm}
 \series bold
 משפט
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -8150,7 +8467,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -8181,7 +8499,8 @@ end{algorithm}
 
 \series default
 \lang hebrew
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in\M$
 \end_inset
 
@@ -8205,7 +8524,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A,B\in\M[n]$
 \end_inset
 
@@ -8225,7 +8545,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A,B,C\in\M[n]$
 \end_inset
 
@@ -8241,7 +8562,8 @@ end{algorithm}
 \series bold
 סימון
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $s,v\in V$
 \end_inset
 
@@ -8257,7 +8579,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $s,v\in V$
 \end_inset
 
@@ -8273,7 +8596,8 @@ end{algorithm}
 \series bold
 סימון
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $s\in V$
 \end_inset
 
@@ -8297,7 +8621,8 @@ end{algorithm}
 \series bold
 מטריצת המשקל
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -8328,7 +8653,8 @@ end{algorithm}
 \series bold
 מסקנה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $s\in V$
 \end_inset
 
@@ -8348,7 +8674,8 @@ end{algorithm}
 \series bold
 סימון
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $k\in\bbn$
 \end_inset
 
@@ -8372,7 +8699,8 @@ end{algorithm}
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\in\M[\left|V\right|][\bbr]$
 \end_inset
 
@@ -8388,7 +8716,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\in\M[\left|V\right|][\bbr]$
 \end_inset
 
@@ -8404,7 +8733,8 @@ end{algorithm}
 \series bold
 הערה
 \series default
-: 
+:
+ 
 \begin_inset Formula $L^{k}=L*\ldots*L$
 \end_inset
 
@@ -8416,7 +8746,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -8440,7 +8771,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -8464,7 +8796,8 @@ end{algorithm}
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\in\M[\left|V\right|][\bbr]$
 \end_inset
 
@@ -8484,7 +8817,8 @@ end{algorithm}
 \series bold
 אלגוריתם חזקה איטרטיבית
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in\M[n][\bbr]$
 \end_inset
 
@@ -8520,7 +8854,8 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$A, 
+name{$A,
+ 
 \backslash
 star$}}{     $a_k 
 \backslash
@@ -8573,7 +8908,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\in\M[\left|V\right|][\bbr]$
 \end_inset
 
@@ -8593,7 +8929,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\in\M[\left|V\right|][\bbr]$
 \end_inset
 
@@ -8613,7 +8950,8 @@ end{algorithm}
 \series bold
 סימון
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(\left[n\right],E\right)$
 \end_inset
 
@@ -8645,7 +8983,8 @@ end{algorithm}
 \series bold
 סימון
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(\left[n\right],E\right)$
 \end_inset
 
@@ -8673,7 +9012,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(\left[n\right],E\right)$
 \end_inset
 
@@ -8693,7 +9033,8 @@ end{algorithm}
 \series bold
 אלגוריתם פלויד־וורשאל
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(\left[n\right],E\right)$
 \end_inset
 
@@ -8729,7 +9070,8 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$n, L$}}{     $
+name{$n,
+ L$}}{     $
 \backslash
 Pi 
 \backslash
@@ -8816,7 +9158,8 @@ Pi_{k,v}$
 \backslash
                  }             }         }     }     
 \backslash
-Return $(F, 
+Return $(F,
+ 
 \backslash
 Pi)$ } 
 \backslash
@@ -8837,7 +9180,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(\left[n\right],E\right)$
 \end_inset
 
@@ -8861,7 +9205,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(\left[n\right],E\right)$
 \end_inset
 
@@ -8892,7 +9237,8 @@ end{algorithm}
 \series bold
 קבוצה בלתי תלויה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -8925,7 +9271,8 @@ end{algorithm}
 \series bold
 סימון
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(\left[n\right],E\right)$
 \end_inset
 
@@ -8945,7 +9292,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(\left[n\right],E\right)$
 \end_inset
 
@@ -8961,7 +9309,11 @@ end{algorithm}
 \begin_inset Formula $\mis\left(1\right)=w\left(1\right)$
 \end_inset
 
- וכן 
+ וכן
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\mis\left(i\right)=\max\left\{ w\left(i\right)+\mis\left(i-2\right),\mis\left(i-1\right)\right\} $
 \end_inset
 
@@ -8973,7 +9325,8 @@ end{algorithm}
 \series bold
 מסקנה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(\left[n\right],E\right)$
 \end_inset
 
@@ -8997,7 +9350,8 @@ end{algorithm}
 \series bold
 תת־סדרה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -9033,7 +9387,8 @@ end{algorithm}
 \series bold
 סימון
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -9055,13 +9410,14 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
-בעיית תת־סדרה משותפת ארוכה ביותר )
+בעיית תת־סדרה משותפת ארוכה ביותר (
 \begin_inset Formula $\text{LCS}$
 \end_inset
 
 (
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -9070,9 +9426,13 @@ end{algorithm}
 \end_inset
 
  אזי 
+\size small
+
 \begin_inset Formula $\max\left\{ \left|C\right|\mid\left(C\in\Sigma^{*}\right)\land\left(C\lhd A\right)\land\left(C\lhd B\right)\right\} $
 \end_inset
 
+
+\size default
 .
 \end_layout
 
@@ -9090,7 +9450,8 @@ end{algorithm}
 \series bold
 סימון
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A,B\in\Sigma^{*}$
 \end_inset
 
@@ -9103,9 +9464,13 @@ end{algorithm}
 \end_inset
 
  אזי 
+\size small
+
 \begin_inset Formula $\lcs\left(k,\ell\right)=\max\left\{ \left|C\right|\mid\left(C\lhd\left(A_{1},\ldots,A_{k}\right)\right)\land\left(C\lhd\left(B_{1},\ldots,B_{\ell}\right)\right)\right\} $
 \end_inset
 
+
+\size default
 .
 \end_layout
 
@@ -9114,7 +9479,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A,B\in\Sigma^{*}$
 \end_inset
 
@@ -9133,7 +9499,8 @@ end{algorithm}
 \series bold
 מסקנה
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A,B\in\Sigma^{*}$
 \end_inset
 
@@ -9153,15 +9520,25 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\lis}{\text{lis}}
+{\text{lis}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
-בעיית תת־סדרה עולה ארוכה ביותר )
+בעיית תת־סדרה עולה ארוכה ביותר (
 \begin_inset Formula $\text{LIS}$
 \end_inset
 
-(
+)
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -9185,7 +9562,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in\Sigma^{*}$
 \end_inset
 
@@ -9210,8 +9588,8 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\lis}{\text{lcs}}
-{\text{lcs}}
+\newcommand{\len}{\text{len}}
+{\text{len}}
 \end_inset
 
 
@@ -9219,6 +9597,2563 @@ end{algorithm}
 
 \begin_layout Standard
 
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\len\lis\left(k\right)=\max\left\{ \left|X\right|\mid\left(\left(A_{1},\ldots,A_{k}\right)\text{ של }\lis\text{ הינו }X\right)\land\left(A_{k}\text{ מסתיים עם }X\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\len\lis\left(1\right)=1$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\len\lis\left(k\right)=\max_{i\in\left[k-1\right]}\left\{ \len\lis\left(i\right)\mid A_{i}\prec A_{k}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\pi\lis\left(1\right)=\text{None}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\pi\lis\left(k\right)=\arg\max\left\{ \len\lis\left(i\right)\mid A_{i}\prec A_{k}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in\Sigma^{*}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $k=\arg\max\left\{ \len\lis\left(1\right),\ldots,\len\lis\left(\left|A\right|\right)\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(x_{\pi\lis^{\left(\ell\right)}\left(k\right)},\ldots,x_{\pi\lis^{\left(2\right)}\left(k\right)},x_{\pi\lis\left(k\right)},x_{k}\right)$
+\end_inset
+
+ פתרון של 
+\begin_inset Formula $\text{LIS}$
+\end_inset
+
+ בעל סיבוכיות 
+\begin_inset Formula $\O\left(\left|A\right|^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\min\lis\left(m\right)=\min\left\{ x_{k}\mid\len\lis\left(k\right)=m\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\min\lis$
+\end_inset
+
+ עולה ממש.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\min\lis\left(1\right),\ldots,\min\lis\left(\ell\right)\right)$
+\end_inset
+
+ פתרון של 
+\begin_inset Formula $\text{LIS}$
+\end_inset
+
+ בעל סיבוכיות ריצה 
+\begin_inset Formula $\O\left(\left|A\right|\cdot\log\left(\left|A\right|\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\depth}{\text{depth}}
+{\text{depth}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\cost}{\text{costp}}
+{\text{costp}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהיו 
+\begin_inset Formula $p_{1}\ldots p_{n}\in\left(0,1\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $T$
+\end_inset
+
+ עץ חיפוש בינארי מעל 
+\begin_inset Formula $\left\{ x_{1}\ldots x_{n}\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\cost\left(T\right)=\sum_{i=1}^{n}\left(p_{i}\cdot\depth_{T}\left(x_{i}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית עץ חיפוש בינארי סטטי אופטימלי
+\series default
+:
+ יהיו 
+\begin_inset Formula $p_{1}\ldots p_{n}\in\left(0,1\right]$
+\end_inset
+
+ אזי עץ חיפוש בינארי 
+\begin_inset Formula $T$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\cost\left(T\right)$
+\end_inset
+
+ מינימלי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $p_{1}\ldots p_{n}\in\left(0,1\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $T$
+\end_inset
+
+ עץ חיפוש בינארי אזי 
+\begin_inset Formula $\cost\left(T\right)=\left(\sum_{i=1}^{n}p_{i}\right)+\cost\left(T.\text{left}\right)+\cost\left(T.\text{right}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $p_{1}\ldots p_{n}\in\left(0,1\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $T$
+\end_inset
+
+ פתרון לבעיית עץ חיפוש בינארי סטטי אופטימלי אזי 
+\begin_inset Formula $T.\text{left},T.\text{right}$
+\end_inset
+
+ הינם פתרונות לבעיית עץ חיפוש בינארי סטטי אופטימלי.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\pp}{\text{pp}}
+{\text{pp}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\cp}{\text{cp}}
+{\text{cp}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהיו 
+\begin_inset Formula $p_{1}\ldots p_{n}\in\left(0,1\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\pp\left(i,j\right)=\sum_{k=i}^{j}p_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהיו 
+\begin_inset Formula $p_{1}\ldots p_{n}\in\left(0,1\right]$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $x_{1}\ldots x_{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\cp\left(i,j\right)=\min\left\{ \cost\left(T\right)\mid\left\{ x_{i}\ldots x_{j}\right\} \text{ עץ חיפוש בינארי מעל }T\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $p_{1}\ldots p_{n}\in\left(0,1\right]$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $x_{1}\ldots x_{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\cp\left(i,i-1\right)=0$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\cp\left(i,i\right)=p_{i}$
+\end_inset
+
+ וכן
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\cp\left(i,j\right)=\pp\left(i,j\right)+\min_{i\le k\le j}\left(\cp\left(i,k-1\right)+\cp\left(k+1,j\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה אלגוריתם לבעיית עץ חיפוש בינארי סטטי אופטימלי
+\series default
+:
+ יהיו 
+\begin_inset Formula $p_{1}\ldots p_{n}\in\left(0,1\right]$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $x_{1}\ldots x_{n}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{OSBST}{OSBST}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+OSBST{pp}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $C 
+\backslash
+gets 
+\backslash
+text{List}([n]^2)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$i 
+\backslash
+gets [n + 1]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $C(i,
+ i-1) 
+\backslash
+gets 0$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$d 
+\backslash
+gets 
+\backslash
+{0,
+\backslash
+ldots ,
+ n-1
+\backslash
+}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+For{$i 
+\backslash
+gets [n-d]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $C(i,
+ i + d)
+\backslash
+gets 
+\backslash
+infty$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+For{$k
+\backslash
+gets 
+\backslash
+{i,
+\backslash
+ldots ,
+ i+d
+\backslash
+}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+                $t
+\backslash
+gets 
+\backslash
+text{pp}(i,j) + C(i,
+ k-1) + C(k+1,
+ j)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                
+\backslash
+If{$t < C(i,j)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+                    $C(i,j) 
+\backslash
+gets t$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                    $K(i,j) 
+\backslash
+gets k$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                }
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $p_{1}\ldots p_{n}\in\left(0,1\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{OSBST}\left(\pp\right).K$
+\end_inset
+
+ משרה פתרון לבעיית עץ חיפוש בינארי סטטי אופטימלי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $p_{1}\ldots p_{n}\in\left(0,1\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{OSBST}\left(\pp\right)$
+\end_inset
+
+ בעל סיבוכיות ריצה 
+\begin_inset Formula $\O\left(n^{3}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ קיים אלגוריתם קנות' לבעיית עץ חיפוש בינארי סטטי אופטימלי בסיבוכיות 
+\begin_inset Formula $\O\left(n^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית 
+\numeric on
+0/1
+\numeric off
+ תרמיל הגב
+\series default
+:
+ יהיו 
+\begin_inset Formula $W,w_{1}\ldots w_{n},v_{1}\ldots v_{n}\ge0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S\subseteq\left[n\right]$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\sum_{i\in S}v_{i}$
+\end_inset
+
+ מקסימלית וכן 
+\begin_inset Formula $\sum_{i\in S}w_{i}\le W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית שבר תרמיל הגב
+\series default
+:
+ יהיו 
+\begin_inset Formula $W,w_{1}\ldots w_{n},v_{1}\ldots v_{n}\ge0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f:\left[n\right]\to\left[0,1\right]$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\sum_{i\in\left[n\right]}f\left(i\right)v_{i}$
+\end_inset
+
+ מקסימלית וכן 
+\begin_inset Formula $\sum_{i\in\left[n\right]}f\left(i\right)w_{i}\le W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אלגוריתם חסמן לבעיית שבר תרמיל הגב:
+ יהיו 
+\begin_inset Formula $W,w_{1}\ldots w_{n}>0$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $v_{1}\ldots v_{n}\ge0$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{func}{FractionalKnapsack}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+func{$W,
+ w_1,
+ 
+\backslash
+ldots ,
+ w_n,
+ v_1,
+ 
+\backslash
+ldots ,
+ v_n$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $f
+\backslash
+gets ([n] 
+\backslash
+to [0,
+ 1])$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $P 
+\backslash
+gets 
+\backslash
+text{List}([n]
+\backslash
+times 
+\backslash
+mathbb{R})$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$i
+\backslash
+gets [n]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $P(i) 
+\backslash
+gets (i,
+ 
+\backslash
+frac{v_i}{w_i})$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $f(i) 
+\backslash
+gets 0$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $P 
+\backslash
+gets 
+\backslash
+text{sort}(P)$ 
+\backslash
+tcp{Sort from high to low based on second coordinate.}
+\end_layout
+
+\begin_layout Plain Layout
+
+    $t 
+\backslash
+gets 0$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $i 
+\backslash
+gets 1$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+While {$(t < W)
+\backslash
+land (i 
+\backslash
+le n)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $j 
+\backslash
+gets P(i)[0]$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+If{$t + w_{j} 
+\backslash
+le W$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $f(j) 
+\backslash
+gets 1$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            $t 
+\backslash
+gets t + w_{j}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+Else{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $f(j) 
+\backslash
+gets 
+\backslash
+frac{W - t}{w_{j}}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            $t 
+\backslash
+gets W$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $f$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\bknap}{\text{bknap}}
+{\text{bknap}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהיו 
+\begin_inset Formula $W,w_{1}\ldots w_{n},v_{1}\ldots v_{n}\ge0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bknap\left(k,W\right)=\max\left\{ \sum_{i\in S}v_{i}\mid\left(S\subseteq\left[k\right]\right)\land\left(\sum_{i\in S}w_{i}\le W\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $w_{1}\ldots w_{n},v_{1}\ldots v_{n}\ge0$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $m\ge0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bknap\left(0,m\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bknap\left(i,0\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $m\ge0$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bknap\left(i,m\right)=\left\{ \begin{smallmatrix}\bknap\left(i-1,m\right) &  & w_{i}>m\\
+\max\left\{ \bknap\left(i-1,m\right),\bknap\left(i-1,m-w_{i}\right)+v_{i}\right\}  &  & w_{i}\le m
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $W,w_{1}\ldots w_{n},v_{1}\ldots v_{n}\ge0$
+\end_inset
+
+ אזי חישוב 
+\begin_inset Formula $\bknap\left(n,W\right)$
+\end_inset
+
+ בעל סיבוכיות ריצה 
+\begin_inset Formula $\O\left(nW\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה אלגוריתם לבעיית 
+\numeric on
+0/1
+\numeric off
+ תרמיל הגב
+\series default
+:
+ יהיו 
+\begin_inset Formula $W,w_{1}\ldots w_{n},v_{1}\ldots v_{n}\ge0$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{func}{ZeroOneKnapsack}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+func{$W,
+ w_1,
+ 
+\backslash
+ldots ,
+ w_n,
+ v_1,
+ 
+\backslash
+ldots ,
+ v_n$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $k 
+\backslash
+gets n$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $w
+\backslash
+gets W$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $S
+\backslash
+gets 
+\backslash
+text{Set}([n])$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $S
+\backslash
+gets 
+\backslash
+emptyset$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+While{$(k>0)
+\backslash
+land (w > 0)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+uIf{$
+\backslash
+text{bknap}(k,
+ w) 
+\backslash
+ne 
+\backslash
+text{bknap}(k - 1,
+ w)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $S
+\backslash
+gets S
+\backslash
+cup 
+\backslash
+{k
+\backslash
+}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            $k
+\backslash
+gets k-1$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            $w
+\backslash
+gets w - w_k$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\backslash
+uElse{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $k
+\backslash
+gets k-1$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $W,w_{1}\ldots w_{n},v_{1}\ldots v_{n}\ge0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{ZeroOneKnapsack}\left(W,w_{1}\ldots w_{n},v_{1}\ldots v_{n}\right)$
+\end_inset
+
+ פתרון לבעיית
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0/1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תרמיל הגב.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רשת זרימה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון וממושקל 
+\begin_inset Formula $c\ge0$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $s,t\in V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(V,E,c,s,t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית קיבולת
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(V,E,c,s,t\right)$
+\end_inset
+
+ רשת זרימה אזי 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קודקוד מקור
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(V,E,c,s,t\right)$
+\end_inset
+
+ רשת זרימה אזי 
+\begin_inset Formula $s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קודקוד בור
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(V,E,c,s,t\right)$
+\end_inset
+
+ רשת זרימה אזי 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית זרימה
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(V,E,c,s,t\right)$
+\end_inset
+
+ רשת זרימה אזי 
+\begin_inset Formula $f:E\to\bbr_{\ge0}$
+\end_inset
+
+ עבורה
+\end_layout
+
+\begin_layout Itemize
+חסם קיבולת:
+ 
+\begin_inset Formula $f\le c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+שימור זרם:
+ לכל 
+\begin_inset Formula $v\in V\backslash\left\{ s,t\right\} $
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\sum_{\substack{u\in V\\
+\left(u,v\right)\in E
+}
+}f\left(\left(u,v\right)\right)=\sum_{\substack{u\in V\\
+\left(v,u\right)\in E
+}
+}f\left(\left(v,u\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית הזרימה המקסימלית
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(V,E,c,s,t\right)$
+\end_inset
+
+ רשת זרימה אזי פונקציית זרימה 
+\begin_inset Formula $f$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\sum_{\substack{u\in V\\
+\left(u,t\right)\in E
+}
+}f\left(\left(u,t\right)\right)-\sum_{\substack{u\in V\\
+\left(t,u\right)\in E
+}
+}f\left(\left(t,u\right)\right)$
+\end_inset
+
+ מקסימלית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\hst}{\text{s-t}\text{חתך }}
+{\text{s-t}\text{ ךתח}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\st}{\text{s-t}}
+{\text{s-t}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula $\hst$
+\end_inset
+
+
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(V,E,c,s,t\right)$
+\end_inset
+
+ רשת זרימה אזי 
+\begin_inset Formula $\left(S,T\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $S,T\subseteq V$
+\end_inset
+
+ וכן 
+\begin_inset Formula $S\uplus T=V$
+\end_inset
+
+ וכן 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ וכן 
+\begin_inset Formula $t\in T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קשתות חוצות
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ רשת זרימה ויהי 
+\begin_inset Formula $\left(S,T\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\hst$
+\end_inset
+
+ אזי 
+\begin_inset Formula $E\left(S,T\right)=\left\{ \left(u,v\right)\in E\mid\left(u\in S\right)\land\left(v\in T\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קשתות אחוריות
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ רשת זרימה ויהי 
+\begin_inset Formula $\left(S,T\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\hst$
+\end_inset
+
+ אזי 
+\begin_inset Formula $E\left(T,S\right)=\left\{ \left(u,v\right)\in E\mid\left(u\in T\right)\land\left(v\in S\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קיבולת של חתך
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(S,T\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\hst$
+\end_inset
+
+ אזי 
+\begin_inset Formula $c\left(S,T\right)=\sum_{e\in E\left(S,T\right)}c\left(e\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+זרימה על פני חתך
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(S,T\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\hst$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(S,T\right)=\sum_{e\in E\left(S,T\right)}f\left(e\right)-\sum_{e\in E\left(T,S\right)}f\left(e\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ערך/גודל של זרימה
+\series default
+:
+ תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה אזי 
+\begin_inset Formula $\left|f\right|=f\left(V\backslash\left\{ t\right\} ,\left\{ t\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה ויהי 
+\begin_inset Formula $\left(S,T\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\hst$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|f\right|=f\left(S,T\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה אזי 
+\begin_inset Formula $\left|f\right|=f\left(\left\{ s\right\} ,V\backslash\left\{ s\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה ויהי 
+\begin_inset Formula $\left(S,T\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\hst$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(S,T\right)\le c\left(S,T\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula $\hst$
+\end_inset
+
+ מינימלי
+\series default
+:
+ תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה אזי 
+\begin_inset Formula $\left(S,T\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\hst$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $f\left(S,T\right)=c\left(S,T\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה ויהי 
+\begin_inset Formula $\left(S,T\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\hst$
+\end_inset
+
+ מינימלי אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה מקסימלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסלול ניתן להגדלה 
+\begin_inset Formula $\st$
+\end_inset
+
+
+\series default
+:
+ תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה אזי 
+\begin_inset Formula $P\in\left\{ s\to t\right\} $
+\end_inset
+
+ באשר 
+\begin_inset Formula $f\left(e\right)<c\left(e\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $e\in P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה הגדלת מסלול
+\series default
+:
+ תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה ויהי 
+\begin_inset Formula $P\in\left\{ s\to t\right\} $
+\end_inset
+
+ מסלול ניתן להגדלה 
+\begin_inset Formula $\st$
+\end_inset
+
+ אזי קיימת פונקציית זרימה 
+\begin_inset Formula $g$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $g_{\upharpoonright_{E\backslash P}}=f_{\upharpoonright_{E\backslash P}}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left|f\right|<\left|g\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+זרימה חוסמת
+\series default
+:
+ פונקציית זרימה 
+\begin_inset Formula $f$
+\end_inset
+
+ עבורה לא קיים מסלול ניתן להגדלה 
+\begin_inset Formula $\st$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קשת אנטי־מקבילה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון ותהא 
+\begin_inset Formula $e\in E$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $e^{-1}\in E$
+\end_inset
+
+ אזי 
+\begin_inset Formula $e^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רשת זרימה השיורית
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(V,E,c,s,t\right)$
+\end_inset
+
+ רשת זרימה חסרת קשתות אנטי־מקבילות ותהא 
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה אזי 
+\begin_inset Formula $\left(V,E_{f},c_{f},s,t\right)$
+\end_inset
+
+ באשר
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E_{f}=\left\{ e\in E\mid c\left(e\right)>f\left(e\right)\right\} \cup E^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+פונקציית שיוריות הקיבולת:
+ תהא 
+\begin_inset Formula $e\in E_{f}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $c_{f}\left(e\right)=\left\{ \begin{smallmatrix}c\left(e\right)-f\left(e\right) &  & e\in E\\
+f\left(e^{-1}\right) &  & e\in E^{-1}
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסלול ניתן לשיפור 
+\begin_inset Formula $\st$
+\end_inset
+
+
+\series default
+:
+ תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה אזי מסלול 
+\begin_inset Formula $P\in\left\{ s\to t\right\} $
+\end_inset
+
+ בגרף 
+\begin_inset Formula $G_{f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מחסום/שיורית הקיבולת של מסלול
+\series default
+:
+ תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה ויהי 
+\begin_inset Formula $P$
+\end_inset
+
+ מסלול ניתן לשיפור 
+\begin_inset Formula $\st$
+\end_inset
+
+ אזי 
+\begin_inset Formula $c_{f}\left(P\right)=\min\left\{ c_{f}\left(e\right)\mid e\in P\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+זרימה משופרת
+\series default
+:
+ תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה ויהי 
+\begin_inset Formula $P$
+\end_inset
+
+ מסלול ניתן לשיפור 
+\begin_inset Formula $\st$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f_{P}\left(e\right)=\left\{ \begin{smallmatrix}f\left(e\right)+c_{f}\left(P\right) &  & e\in P\\
+f\left(e\right)-c_{f}\left(P\right) &  & e^{-1}\in P\\
+f\left(e\right) &  & \text{else}
+\end{smallmatrix}\right.$
+\end_inset
+
+ לכל 
+\begin_inset Formula $e\in E\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה ויהי 
+\begin_inset Formula $P$
+\end_inset
+
+ מסלול ניתן לשיפור 
+\begin_inset Formula $\st$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f_{P}$
+\end_inset
+
+ זרימה של 
+\begin_inset Formula $G$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left|f_{P}\right|=\left|f\right|+c_{f}\left(P\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה התב
+\begin_inset Quotes erd
+\end_inset
+
+ש
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה מקסימלית ב־
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל מסלול 
+\begin_inset Formula $P\in\left\{ s\to t\right\} $
+\end_inset
+
+ בגרף 
+\begin_inset Formula $G_{f}$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $P$
+\end_inset
+
+ אינו מסלול ניתן לשיפור 
+\begin_inset Formula $\st$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיים 
+\begin_inset Formula $\left(S,T\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\hst$
+\end_inset
+
+ מינימלי ל־
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם פורד־פלקרסון
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(V,E,c,s,t\right)$
+\end_inset
+
+ רשת זרימה אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{func}{FordFulkerson}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+func{$V,E,c,s,t$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $f
+\backslash
+gets (E
+\backslash
+to 
+\backslash
+mathbb{R})$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $f 
+\backslash
+gets 0$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+While{True}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $G_f 
+\backslash
+gets 
+\backslash
+text{ResidualNetwork}(G,
+ c,s,t,
+ f)$ 
+\backslash
+tcp{Construct it like any graph.}
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
+\backslash
+pi_{G_f} 
+\backslash
+gets 
+\backslash
+text{BFS}(G,
+ s)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+uIf{$
+\backslash
+{s 
+\backslash
+to t
+\backslash
+}
+\backslash
+cap
+\backslash
+pi_{G_f} = 
+\backslash
+emptyset$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+Return $f$
+\end_layout
+
+\begin_layout Plain Layout
+
+        } 
+\backslash
+uElse{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $P 
+\backslash
+gets 
+\backslash
+{s 
+\backslash
+to t
+\backslash
+}
+\backslash
+cap
+\backslash
+pi_{G_f}$ 
+\backslash
+tcp{The path is taken from $
+\backslash
+pi_{G_f}$.}
+\end_layout
+
+\begin_layout Plain Layout
+
+            $f 
+\backslash
+gets f_P$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }    
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(V,E,c,s,t\right)$
+\end_inset
+
+ רשת זרימה אזי 
+\begin_inset Formula $\text{FF}=\text{FordFulkerson}\left(V,E,c,s,t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(V,E,c,s,t\right)$
+\end_inset
+
+ רשת זרימה באשר 
+\begin_inset Formula $c\left(E\right)\subseteq\bbn$
+\end_inset
+
+ אזי קיימת זרימה מקסימלית 
+\begin_inset Formula $f$
+\end_inset
+
+ באשר 
+\begin_inset Formula $f\left(E\right)\subseteq\bbn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(V,E,c,s,t\right)$
+\end_inset
+
+ רשת זרימה באשר 
+\begin_inset Formula $c\left(E\right)\subseteq\bbn$
+\end_inset
+
+ אזי בכל איטרציה של 
+\begin_inset Formula $\text{FF}$
+\end_inset
+
+ מתקיים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה של 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f\left(E\right)\subseteq\bbn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $c_{f}\left(P\right)\ge1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(V,E,c,s,t\right)$
+\end_inset
+
+ רשת זרימה באשר 
+\begin_inset Formula $c\left(E\right)\subseteq\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה מקסימלית באשר 
+\begin_inset Formula $f\left(E\right)\subseteq\bbn$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{FF}$
+\end_inset
+
+ פתרון לבעיית הזרימה המקסימלית לכל בחירת מסלולים באלגוריתם.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{FF}$
+\end_inset
+
+ עושה לכל היותר 
+\begin_inset Formula $\left|f\right|$
+\end_inset
+
+ שיפורי מסלול.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{FF}\left(E\right)\subseteq\bbn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(V,E,c,s,t\right)$
+\end_inset
+
+ רשת זרימה באשר 
+\begin_inset Formula $c\left(E\right)\subseteq\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f$
+\end_inset
+
+ זרימה מקסימלית באשר 
+\begin_inset Formula $f\left(E\right)\subseteq\bbn$
+\end_inset
+
+ אזי סיבוכיות זמן הריצה של 
+\begin_inset Formula $\text{FF}$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\O\left(\left|E\right|\left|f\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט זרימה מקסימלית קיבולת מינימלית
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ רשת זרימה אזי 
+\size small
+
+\begin_inset Formula $\max\left\{ \left|f\right|\mid\text{ זרימה}f\right\} =\min\left\{ c\left(S,T\right)\mid\text{ מינימלי}\st\text{חתך }\left(S,T\right)\right\} $
+\end_inset
+
+
+\size default
+.
 \end_layout
 
 \end_body

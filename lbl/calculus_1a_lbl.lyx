@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -68,11 +68,11 @@
 \end_preamble
 \options no-math
 \use_default_options true
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language hebrew
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "David CLM"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -80,7 +80,9 @@
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -94,7 +96,7 @@
 \paperfontsize default
 \spacing onehalf
 \use_hyperref false
-\papersize letterpaper
+\papersize letter
 \use_geometry true
 \use_package amsmath 2
 \use_package amssymb 2
@@ -115,7 +117,9 @@
 \suppress_date true
 \justification false
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -135,11 +139,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -148,6 +157,7 @@
 \begin_inset CommandInset include
 LatexCommand include
 filename "E:/University/macros.lyx"
+literal "true"
 
 \end_inset
 
@@ -159,7 +169,8 @@ filename "E:/University/macros.lyx"
 \series bold
 קטע/אינטרוול
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbr$
 \end_inset
 
@@ -234,7 +245,8 @@ filename "E:/University/macros.lyx"
 \series bold
 שדה סדור
 \series default
-: שדה 
+:
+ שדה 
 \begin_inset Formula $\bbf$
 \end_inset
 
@@ -250,7 +262,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-טריכוטומיה/לינאריות: 
+טריכוטומיה/לינאריות:
+ 
 \begin_inset Formula $\forall x,y\in\bbf.\left(x<y\right)\lor\left(x>y\right)\lor\left(x=y\right)$
 \end_inset
 
@@ -258,7 +271,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-קומפטביליות עם חיבור: 
+קומפטביליות עם חיבור:
+ 
 \begin_inset Formula $\forall x,y,z\in\bbf.x<y\implies x+z<y+z$
 \end_inset
 
@@ -266,7 +280,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-קומפטביליות עם כפל: 
+קומפטביליות עם כפל:
+ 
 \begin_inset Formula $\forall x,y\in\bbf.\forall z>0_{\bbf}.x<y\implies x\cdot z<y\cdot z$
 \end_inset
 
@@ -278,7 +293,8 @@ filename "E:/University/macros.lyx"
 \series bold
 תכונת ארכימדס
 \series default
-: 
+:
+ 
 \begin_inset Formula $\forall x\in\bbf.\exists n\in\bbn.x<\sum_{i=0}^{n}1$
 \end_inset
 
@@ -290,7 +306,8 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\bbr$
 \end_inset
 
@@ -302,7 +319,8 @@ filename "E:/University/macros.lyx"
 \series bold
 הערך השלם/ערך שלם תחתון
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x\in\bbr$
 \end_inset
 
@@ -318,7 +336,8 @@ filename "E:/University/macros.lyx"
 \series bold
 הערך השברי
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x\in\bbr$
 \end_inset
 
@@ -334,7 +353,8 @@ filename "E:/University/macros.lyx"
 \series bold
 ערך שלם עליון
 \series default
-: 
+:
+ 
 \begin_inset Formula $\ceil x=\min\left(n\in\bbz\mid x\le n\right)$
 \end_inset
 
@@ -346,7 +366,8 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\nexists q\in\bbq.q^{2}=2$
 \end_inset
 
@@ -358,7 +379,8 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\nexists x\in\bbq.\forall a\in\left\{ y\in\bbq.y^{2}\le2\right\} .\forall b\in\left\{ y\in\bbq_{+}\mid y^{2}\ge2\right\} .a\le x\le b$
 \end_inset
 
@@ -372,7 +394,8 @@ filename "E:/University/macros.lyx"
 חסם מלעיל
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $x\in\bbr$
 \end_inset
 
@@ -390,7 +413,8 @@ filename "E:/University/macros.lyx"
 קבוצת החסמים מלעיל
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
@@ -408,7 +432,8 @@ filename "E:/University/macros.lyx"
 קבוצה חסומה מלעיל
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
@@ -426,7 +451,8 @@ filename "E:/University/macros.lyx"
 חסם מלרע
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $x\in\bbr$
 \end_inset
 
@@ -444,7 +470,8 @@ filename "E:/University/macros.lyx"
 קבוצת החסמים מלרע
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
@@ -462,7 +489,8 @@ filename "E:/University/macros.lyx"
 קבוצה חסומה מלרע
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
@@ -480,15 +508,16 @@ filename "E:/University/macros.lyx"
 קבוצה חסומה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
- המקיימת )חסומה מלעיל(
+ המקיימת (חסומה מלעיל)
 \begin_inset Formula $\land$
 \end_inset
 
-)חסומה מלרע(.
+(חסומה מלרע).
 \end_layout
 
 \begin_layout Standard
@@ -498,7 +527,8 @@ filename "E:/University/macros.lyx"
 מקסימום
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $x\in A\subseteq\bbr$
 \end_inset
 
@@ -516,7 +546,8 @@ filename "E:/University/macros.lyx"
 סימון
 \series default
 \color inherit
-: המקסימום של 
+:
+ המקסימום של 
 \begin_inset Formula $A$
 \end_inset
 
@@ -534,7 +565,8 @@ filename "E:/University/macros.lyx"
 מינימום
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $x\in A\subseteq\bbr$
 \end_inset
 
@@ -552,7 +584,8 @@ filename "E:/University/macros.lyx"
 סימון
 \series default
 \color inherit
-: המינימום של 
+:
+ המינימום של 
 \begin_inset Formula $A$
 \end_inset
 
@@ -570,7 +603,8 @@ filename "E:/University/macros.lyx"
 אקסיומת השלמות
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\emptyset\ne X,Y\subseteq\bbr$
 \end_inset
 
@@ -588,7 +622,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall A\in\P\left(\bbr\right)\backslash\left\{ \emptyset\right\} .\left(\overline{B}_{A}\ne\emptyset\right)\implies\exists\min\left(\overline{B}_{A}\right)$
 \end_inset
 
@@ -602,7 +637,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall A\in\P\left(\bbr\right)\backslash\left\{ \emptyset\right\} .\left(\underline{B}_{A}\ne\emptyset\right)\implies\exists\max\left(\underline{B}_{A}\right)$
 \end_inset
 
@@ -616,7 +652,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr$
 \end_inset
 
@@ -634,7 +671,8 @@ filename "E:/University/macros.lyx"
 סופרמום/חסם עליון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
@@ -652,7 +690,8 @@ filename "E:/University/macros.lyx"
 אינפימום/חסם תחתון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
@@ -670,7 +709,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
@@ -688,7 +728,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a<b\in\bbr$
 \end_inset
 
@@ -706,7 +747,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
@@ -753,7 +795,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\emptyset\ne A\subseteq\bbr$
 \end_inset
 
@@ -771,7 +814,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\emptyset\ne A\subseteq\bbr$
 \end_inset
 
@@ -789,7 +833,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\emptyset\ne A,B\subseteq\bbr$
 \end_inset
 
@@ -824,7 +869,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall c\in\bbr_{+}.\exists b\in\bbr_{+}.b^{2}=c$
 \end_inset
 
@@ -838,7 +884,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall c\in\bbr_{+}.\forall n\in\bbn.\exists b\in\bbr_{+}.b^{n}=c$
 \end_inset
 
@@ -852,7 +899,8 @@ filename "E:/University/macros.lyx"
 קבוצה צפופה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $B\subseteq\bbr$
 \end_inset
 
@@ -874,11 +922,12 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $S\subseteq\bbr$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $S$
 \end_inset
 
@@ -886,15 +935,15 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $\bbr$
 \end_inset
 
-( 
+) 
 \begin_inset Formula $\iff$
 \end_inset
 
- )
+ (
 \begin_inset Formula $\forall a,b\in\bbr.a<b\implies\left(a,b\right)\cap S\ne\emptyset$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -904,7 +953,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall a,b\in\bbq.a<b\implies\left|\left(a,b\right)\cap\bbq\right|=\aleph_{0}$
 \end_inset
 
@@ -918,7 +968,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall a,b\in\bbq.a<b\implies\exists r\in\bbr\backslash\bbq.a<r<b$
 \end_inset
 
@@ -932,7 +983,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall x,y\in\bbr.x<y\implies\exists q\in\bbq.x<q<y$
 \end_inset
 
@@ -946,7 +998,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: )
+:
+ (
 \begin_inset Formula $\bbq$
 \end_inset
 
@@ -954,11 +1007,11 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $\bbr$
 \end_inset
 
-(
+)
 \begin_inset Formula $\land$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $a<b$
 \end_inset
 
@@ -970,7 +1023,7 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $\left[a,b\right]$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -980,7 +1033,8 @@ filename "E:/University/macros.lyx"
 עצרת
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -1001,7 +1055,8 @@ filename "E:/University/macros.lyx"
 בחר
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $n,k\in\bbn$
 \end_inset
 
@@ -1019,7 +1074,8 @@ filename "E:/University/macros.lyx"
 זהות פסקל
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n,k\in\bbn_{+}$
 \end_inset
 
@@ -1037,7 +1093,8 @@ filename "E:/University/macros.lyx"
 נוסחת הבינום של ניוטון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbr$
 \end_inset
 
@@ -1059,7 +1116,8 @@ filename "E:/University/macros.lyx"
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{1}\ldots a_{n}\ge0$
 \end_inset
 
@@ -1081,7 +1139,8 @@ filename "E:/University/macros.lyx"
 אי־שיוויון הממוצעים
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{1}\ldots a_{n}>0$
 \end_inset
 
@@ -1099,7 +1158,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\frac{\sum_{i=1}^{n}a_{i}}{n}=\sqrt[n]{\prod_{i=1}^{n}a_{i}}=\frac{n}{\sum_{i=1}^{n}\frac{1}{a_{i}}}\right)\iff\left(a_{1}=\ldots=a_{n}\right)$
 \end_inset
 
@@ -1113,7 +1173,8 @@ filename "E:/University/macros.lyx"
 אי־שיוויון ברנולי
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall x>-1.\forall n\in\bbn.\left(1+x\right)^{n}\ge1+nx$
 \end_inset
 
@@ -1127,7 +1188,8 @@ filename "E:/University/macros.lyx"
 אי־שיוויון ברנולי המוכלל
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall n\in\bbn.\forall x\in\bbr^{n}.\left|\sum_{i=1}^{n}x_{i}\right|\le\sum_{i=1}^{n}\left|x_{i}\right|$
 \end_inset
 
@@ -1141,7 +1203,8 @@ filename "E:/University/macros.lyx"
 הערך המוחלט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left|x\right|=\begin{cases}
 x & x\ge0\\
 -x & x<0
@@ -1158,7 +1221,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\left|a\right|\le b\iff-b\le a\le b\right)\land\left(\left|a\right|\ge b\iff\left(b\le a\right)\lor\left(a\le-b\right)\right)$
 \end_inset
 
@@ -1169,14 +1233,15 @@ x & x\ge0\\
 
 \series bold
 \color green
-אי־שיוויון המשולש )אש
+אי־שיוויון המשולש (אש
 \begin_inset Quotes erd
 \end_inset
 
-מ(
+מ)
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbr$
 \end_inset
 
@@ -1194,7 +1259,8 @@ x & x\ge0\\
 אי־שיוויון המשולש המוכלל
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x_{1}\ldots x_{n}\in\bbr$
 \end_inset
 
@@ -1212,7 +1278,8 @@ x & x\ge0\\
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbr$
 \end_inset
 
@@ -1230,7 +1297,8 @@ x & x\ge0\\
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x,y,z\in\bbr$
 \end_inset
 
@@ -1248,7 +1316,8 @@ x & x\ge0\\
 אי־שיוויון המשולש ההפוך
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbr$
 \end_inset
 
@@ -1266,7 +1335,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall a,b\in\bbr.\left(\forall\e>0.\left|a-b\right|<\e\right)\implies a=b$
 \end_inset
 
@@ -1280,7 +1350,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $r\in\bbr$
 \end_inset
 
@@ -1302,7 +1373,8 @@ x & x\ge0\\
 סדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $a\in\bbn\to\bbr$
 \end_inset
 
@@ -1316,7 +1388,8 @@ x & x\ge0\\
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -1324,7 +1397,8 @@ x & x\ge0\\
 \begin_inset Formula $a_{n}=a\left(n\right)$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $a=\left(a_{n}\right)_{n=0}^{\infty}$
 \end_inset
 
@@ -1338,7 +1412,8 @@ x & x\ge0\\
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a_{n}$
 \end_inset
 
@@ -1346,7 +1421,8 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-סדרה חיובית: 
+סדרה חיובית:
+ 
 \begin_inset Formula $\forall n\in\bbn.a_{n}>0$
 \end_inset
 
@@ -1354,7 +1430,8 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-סדרה אי שלילית: 
+סדרה אי שלילית:
+ 
 \begin_inset Formula $\forall n\in\bbn.a_{n}\ge0$
 \end_inset
 
@@ -1362,7 +1439,8 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-סדרה שלילית: 
+סדרה שלילית:
+ 
 \begin_inset Formula $\forall n\in\bbn.a_{n}<0$
 \end_inset
 
@@ -1370,7 +1448,8 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-סדרה אי חיובית: 
+סדרה אי חיובית:
+ 
 \begin_inset Formula $\forall n\in\bbn.a_{n}\le0$
 \end_inset
 
@@ -1384,7 +1463,8 @@ x & x\ge0\\
 סדרה מונוטונית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -1392,7 +1472,8 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-עולה ממש: 
+עולה ממש:
+ 
 \begin_inset Formula $\forall n,m\in\bbn.n<m\implies a_{n}<a_{m}$
 \end_inset
 
@@ -1400,7 +1481,8 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-עולה: 
+עולה:
+ 
 \begin_inset Formula $\forall n,m\in\bbn.n<m\implies a_{n}\le a_{m}$
 \end_inset
 
@@ -1408,7 +1490,8 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-יורדת ממש: 
+יורדת ממש:
+ 
 \begin_inset Formula $\forall n,m\in\bbn.n<m\implies a_{n}>a_{m}$
 \end_inset
 
@@ -1416,7 +1499,8 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-יורדת: 
+יורדת:
+ 
 \begin_inset Formula $\forall n,m\in\bbn.n<m\implies a_{n}\ge a_{m}$
 \end_inset
 
@@ -1430,7 +1514,8 @@ x & x\ge0\\
 סדרה חסומה מלעיל
 \series default
 \color inherit
-: סדרה 
+:
+ סדרה 
 \begin_inset Formula $a$
 \end_inset
 
@@ -1448,7 +1533,8 @@ x & x\ge0\\
 סדרה חסומה מלרע
 \series default
 \color inherit
-: סדרה 
+:
+ סדרה 
 \begin_inset Formula $a$
 \end_inset
 
@@ -1466,11 +1552,12 @@ x & x\ge0\\
 סדרה חסומה
 \series default
 \color inherit
-: )חסומה מלרע(
+:
+ (חסומה מלרע)
 \begin_inset Formula $\land$
 \end_inset
 
-)חסומה מלעיל(.
+(חסומה מלעיל).
 \end_layout
 
 \begin_layout Standard
@@ -1480,7 +1567,8 @@ x & x\ge0\\
 סדרה מתכנסת/גבול סופי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -1498,7 +1586,8 @@ x & x\ge0\\
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -1516,7 +1605,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\forall r\in\bbr.\lim_{n\to\infty}r=r\right)\land\left(\lim_{n\to\infty}\frac{1}{n}=0\right)$
 \end_inset
 
@@ -1530,7 +1620,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\forall\a\in\bbq_{+}.\frac{1}{n^{\a}}\to0\right)\land\left(\sqrt[n]{n}\to1\right)\land\left(\forall c>0.\sqrt[n]{c}\to1\right)\land\left(\forall q\in\left(0,1\right).q^{n}\to0\right)$
 \end_inset
 
@@ -1544,7 +1635,8 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -1562,7 +1654,8 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -1580,7 +1673,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -1598,7 +1692,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $a,b$
 \end_inset
 
@@ -1620,7 +1715,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -1642,7 +1738,8 @@ x & x\ge0\\
 סדרה מתבדרת לאינסוף/גבול אינסופי/גבול במובן הרחב
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -1670,7 +1767,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\lim_{n\to\infty}n=\infty\right)\land\left(\forall a>1.\lim_{n\to\infty}a^{n}=\infty\right)$
 \end_inset
 
@@ -1684,7 +1782,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -1706,7 +1805,8 @@ x & x\ge0\\
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -1728,7 +1828,8 @@ x & x\ge0\\
 מסקנה
 \series default
 \color inherit
-: סדרה לא חסומה איננה מתכנסת.
+:
+ סדרה לא חסומה איננה מתכנסת.
 \end_layout
 
 \begin_layout Standard
@@ -1738,7 +1839,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -1756,7 +1858,8 @@ x & x\ge0\\
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -1778,7 +1881,8 @@ x & x\ge0\\
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -1836,7 +1940,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x\in\bbr$
 \end_inset
 
@@ -1858,7 +1963,8 @@ x & x\ge0\\
 ייצוג עשרוני
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x\in\bbr$
 \end_inset
 
@@ -1880,7 +1986,8 @@ x & x\ge0\\
 פיתוח מחזורי אינסופי
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $d_{1}\ldots d_{n}$
 \end_inset
 
@@ -1898,7 +2005,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $q\in\bbr$
 \end_inset
 
@@ -1916,7 +2024,8 @@ x & x\ge0\\
 משפט אוקלידס
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbp$
 \end_inset
 
@@ -1930,7 +2039,8 @@ x & x\ge0\\
 סדרות אוקלידס־מולין
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p_{1}\in\bbp$
 \end_inset
 
@@ -1948,7 +2058,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: עבור 
+:
+ עבור 
 \begin_inset Formula $p_{1}=2$
 \end_inset
 
@@ -1970,7 +2081,8 @@ x & x\ge0\\
 משפט דריכלה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall\theta\in\bbr\backslash\bbq.\left|\left\{ \left\langle p,q\right\rangle \in\bbq\times\bbn\mid\left|\theta-\frac{p}{q}\right|<\frac{1}{q^{2}}\right\} \right|\ge\aleph_{0}$
 \end_inset
 
@@ -1984,7 +2096,8 @@ x & x\ge0\\
 מספר מקורב רע
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $a\in\bbr$
 \end_inset
 
@@ -2002,7 +2115,8 @@ x & x\ge0\\
 חשבון גבולות
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbr$
 \end_inset
 
@@ -2045,7 +2159,8 @@ x & x\ge0\\
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $d_{n}$
 \end_inset
 
@@ -2067,7 +2182,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a_{n}$
 \end_inset
 
@@ -2093,7 +2209,8 @@ x & x\ge0\\
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{n},b_{n}$
 \end_inset
 
@@ -2121,7 +2238,8 @@ x & x\ge0\\
 מונוטוניות גבולות
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $a_{n},b_{n}$
 \end_inset
 
@@ -2139,7 +2257,8 @@ x & x\ge0\\
 משפט הסנדוויץ'
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $a_{n},b_{n},c_{n}$
 \end_inset
 
@@ -2161,7 +2280,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a_{n}$
 \end_inset
 
@@ -2187,7 +2307,8 @@ x & x\ge0\\
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a_{n}$
 \end_inset
 
@@ -2205,7 +2326,8 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $B\subseteq\bbr$
 \end_inset
 
@@ -2223,7 +2345,8 @@ x & x\ge0\\
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $B\subseteq\bbr$
 \end_inset
 
@@ -2241,7 +2364,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $a_{n},b_{n}$
 \end_inset
 
@@ -2269,7 +2393,8 @@ x & x\ge0\\
 מבחן השורש
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a_{n}$
 \end_inset
 
@@ -2287,7 +2412,8 @@ x & x\ge0\\
 מבחן השורש הגבולי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbr$
 \end_inset
 
@@ -2323,7 +2449,8 @@ x & x\ge0\\
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a_{n}$
 \end_inset
 
@@ -2341,7 +2468,8 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a_{n}$
 \end_inset
 
@@ -2403,7 +2531,8 @@ x & x\ge0\\
 מבחן המנה הגבולי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2435,7 +2564,8 @@ x & x\ge0\\
 התכנסות צ'זארו
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a_{n}$
 \end_inset
 
@@ -2453,7 +2583,8 @@ x & x\ge0\\
 משפט צ'זארו/התכנסות ממוצע חשבוני
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a_{n}$
 \end_inset
 
@@ -2475,7 +2606,8 @@ x & x\ge0\\
 משפט התכנסות ממוצע הנדסי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a_{n}$
 \end_inset
 
@@ -2497,7 +2629,8 @@ x & x\ge0\\
 משפט ד'אלאמבר
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2519,7 +2652,8 @@ x & x\ge0\\
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2549,7 +2683,8 @@ x & x\ge0\\
 משפט שטולץ
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2575,7 +2710,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(1+\frac{1}{n}\right)^{n}$
 \end_inset
 
@@ -2589,7 +2725,8 @@ x & x\ge0\\
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $e=\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^{n}\in\left(2,3\right]$
 \end_inset
 
@@ -2603,7 +2740,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a\in\bbn^{\bbn}$
 \end_inset
 
@@ -2622,14 +2760,15 @@ x & x\ge0\\
 
 \series bold
 \color teal
-תת סדרה/סדרה חלקית )ת
+תת סדרה/סדרה חלקית (ת
 \begin_inset Quotes erd
 \end_inset
 
-ס(
+ס)
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2651,7 +2790,8 @@ x & x\ge0\\
 משפט הירושה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2721,7 +2861,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2739,7 +2880,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2753,7 +2895,8 @@ x & x\ge0\\
 הלמה של קנטור על קטעים מקוננים
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $a,b$
 \end_inset
 
@@ -2782,7 +2925,8 @@ x & x\ge0\\
 קבוצת קנטור
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula ${\cal C}=\left[0,1\right]\backslash\bigcup_{n=0}^{\infty}\bigcup_{k=0}^{3^{n}-1}\left(\frac{3k+1}{3^{n+1}},\frac{3k+2}{3^{n+1}}\right)$
 \end_inset
 
@@ -2796,7 +2940,8 @@ x & x\ge0\\
 משפט בולצאנו ויירשטראס
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2810,7 +2955,8 @@ x & x\ge0\\
 משפט בולצאנו ויירשטראס המוכלל
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2824,7 +2970,8 @@ x & x\ge0\\
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr_{\infty}=\bbr\cup\left\{ \infty,-\infty\right\} $
 \end_inset
 
@@ -2838,7 +2985,8 @@ x & x\ge0\\
 גבול חלקי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2864,7 +3012,8 @@ x & x\ge0\\
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2872,7 +3021,8 @@ x & x\ge0\\
 \begin_inset Formula $\mathcal{P}\left(a\right)=\left\{ L\in\bbr\mid a\text{ גבול חלקי של }L\right\} $
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\widehat{{\cal P}}\left(a\right)=\left\{ L\in\bbr_{\infty}\mid a\text{ גבול חלקי של }L\right\} $
 \end_inset
 
@@ -2886,7 +3036,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2930,7 +3081,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2948,7 +3100,8 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2966,7 +3119,8 @@ x & x\ge0\\
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2984,7 +3138,8 @@ x & x\ge0\\
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2992,7 +3147,8 @@ x & x\ge0\\
 \begin_inset Formula $\lim\left(\sup\left(a\right)\right)=\overline{\lim}\left(a\right)=\sup\left({\cal P}\right)$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\lim\left(\inf\left(a\right)\right)=\underline{\lim}\left(a\right)=\sup\left({\cal P}\right)$
 \end_inset
 
@@ -3006,15 +3162,16 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
- סדרה אזי )
+ סדרה אזי (
 \begin_inset Formula $a$
 \end_inset
 
- מתכנסת( 
+ מתכנסת) 
 \begin_inset Formula $\left(\widehat{\P}=\P\right)\land\left(\left|\widehat{\P}\right|=1\right)\iff$
 \end_inset
 
@@ -3028,7 +3185,8 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -3046,7 +3204,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $b_{1}\ldots b_{m}\in\bbn^{\bbn}$
 \end_inset
 
@@ -3070,7 +3229,8 @@ x & x\ge0\\
 \series bold
 קבוצה פתוחה
 \series default
-: 
+:
+ 
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
@@ -3086,23 +3246,24 @@ x & x\ge0\\
 \series bold
 טענה
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A_{1},A_{2},\ldots$
 \end_inset
 
- סדרת קבוצות פתוחות אזי )
+ סדרת קבוצות פתוחות אזי (
 \begin_inset Formula $\bigcup_{i=1}^{\infty}A_{i}$
 \end_inset
 
- פתוחה(
+ פתוחה)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $\bigcap_{i=1}^{n}A_{i}$
 \end_inset
 
- פתוחה(.
+ פתוחה).
 \end_layout
 
 \begin_layout Standard
@@ -3110,7 +3271,8 @@ x & x\ge0\\
 \series bold
 קבוצה סגורה
 \series default
-: 
+:
+ 
 \begin_inset Formula $B\subseteq\bbr$
 \end_inset
 
@@ -3126,23 +3288,24 @@ x & x\ge0\\
 \series bold
 טענה
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $B_{1},B_{2},\ldots$
 \end_inset
 
- סדרת קבוצות סגורות אזי )
+ סדרת קבוצות סגורות אזי (
 \begin_inset Formula $\bigcup_{i=1}^{n}B_{i}$
 \end_inset
 
- סגורה(
+ סגורה)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $\bigcap_{i=1}^{\infty}B_{i}$
 \end_inset
 
- סגורה(.
+ סגורה).
 \end_layout
 
 \begin_layout Standard
@@ -3150,7 +3313,8 @@ x & x\ge0\\
 \series bold
 נקודת הצטברות
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $S\subseteq\bbr$
 \end_inset
 
@@ -3170,7 +3334,8 @@ x & x\ge0\\
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $B\subseteq\bbr$
 \end_inset
 
@@ -3207,7 +3372,8 @@ x & x\ge0\\
 \series bold
 משפט
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -3223,7 +3389,8 @@ x & x\ge0\\
 \series bold
 כמעט תמיד
 \series default
-: פרידקט 
+:
+ פרידקט 
 \begin_inset Formula $P\left(n\right)$
 \end_inset
 
@@ -3239,7 +3406,8 @@ x & x\ge0\\
 \series bold
 שכיח
 \series default
-: פרידקט 
+:
+ פרידקט 
 \begin_inset Formula $P\left(n\right)$
 \end_inset
 
@@ -3255,15 +3423,16 @@ x & x\ge0\\
 \series bold
 משפט
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
- סדרה אזי )
+ סדרה אזי (
 \begin_inset Formula $a$
 \end_inset
 
- מתכנסת(
+ מתכנסת)
 \begin_inset Formula $\left(\lim\sup a=\lim\inf a\right)\iff$
 \end_inset
 
@@ -3275,7 +3444,8 @@ x & x\ge0\\
 \series bold
 משפט
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -3319,7 +3489,8 @@ x & x\ge0\\
 \series bold
 משפט
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -3353,7 +3524,8 @@ x & x\ge0\\
 \series bold
 משפט
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $a,b$
 \end_inset
 
@@ -3373,7 +3545,8 @@ x & x\ge0\\
 \series bold
 סדרת קושי
 \series default
-: סדרה 
+:
+ סדרה 
 \begin_inset Formula $a$
 \end_inset
 
@@ -3389,7 +3562,8 @@ x & x\ge0\\
 \series bold
 למה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -3405,23 +3579,24 @@ x & x\ge0\\
 \series bold
 משפט
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
- סדרה אזי )
+ סדרה אזי (
 \begin_inset Formula $a$
 \end_inset
 
- מתכנסת(
+ מתכנסת)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $a$
 \end_inset
 
- סדרת קושי(.
+ סדרת קושי).
 \end_layout
 
 \begin_layout Standard
@@ -3435,7 +3610,8 @@ x & x\ge0\\
 אינסופי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $k\in\bbz$
 \end_inset
 
@@ -3453,7 +3629,8 @@ x & x\ge0\\
 טור
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -3471,7 +3648,8 @@ x & x\ge0\\
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum_{n=0}^{\infty}a_{n}$
 \end_inset
 
@@ -3489,7 +3667,8 @@ x & x\ge0\\
 סדרת הסכומים החלקיים
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -3511,7 +3690,8 @@ x & x\ge0\\
 מתכנס
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -3533,7 +3713,8 @@ x & x\ge0\\
 גאומטרי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\ne0$
 \end_inset
 
@@ -3555,15 +3736,16 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $r\in\bbr$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\sum_{n=0}^{\infty}ar^{n}$
 \end_inset
 
- מתכנס(
+ מתכנס)
 \begin_inset Formula $\left(\left|r\right|<1\right)\iff$
 \end_inset
 
@@ -3577,7 +3759,8 @@ x & x\ge0\\
 הטור ההרמוני
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{n}$
 \end_inset
 
@@ -3591,7 +3774,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{n}\to\infty$
 \end_inset
 
@@ -3605,15 +3789,16 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
- סדרה אזי )
+ סדרה אזי (
 \begin_inset Formula $\sum_{i=0}^{\infty}a_{n}$
 \end_inset
 
- מתכנס(
+ מתכנס)
 \begin_inset Formula $\left(a_{n}\to0\right)\impliedby$
 \end_inset
 
@@ -3631,15 +3816,16 @@ x & x\ge0\\
 קושי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula ${\displaystyle \sum a_{n}}$
 \end_inset
 
- טור אזי )
+ טור אזי (
 \begin_inset Formula ${\displaystyle \sum a_{n}}$
 \end_inset
 
- מתכנס(
+ מתכנס)
 \begin_inset Formula $\left(\forall\e>0.\exists N\in\bbn.\forall m>N.\forall k\in\bbn.\left|\sum_{n=m}^{m+k}a_{n}\right|<\e\right)\iff$
 \end_inset
 
@@ -3653,7 +3839,8 @@ x & x\ge0\\
 חשבון טורים
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\sum_{n=0}^{\infty}a_{n},\sum_{n=0}^{\infty}b_{n}$
 \end_inset
 
@@ -3701,7 +3888,8 @@ x & x\ge0\\
 הגדרה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum_{n=0}^{\infty}a_{n}$
 \end_inset
 
@@ -3709,7 +3897,8 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-טור חיובי: 
+טור חיובי:
+ 
 \begin_inset Formula $\forall n\in\bbn.a_{n}>0$
 \end_inset
 
@@ -3717,7 +3906,8 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-טור אי שלילי: 
+טור אי שלילי:
+ 
 \begin_inset Formula $\forall n\in\bbn.a_{n}\ge0$
 \end_inset
 
@@ -3725,7 +3915,8 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-טור שלילי: 
+טור שלילי:
+ 
 \begin_inset Formula $\forall n\in\bbn.a_{n}<0$
 \end_inset
 
@@ -3733,7 +3924,8 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-טור אי חיובי: 
+טור אי חיובי:
+ 
 \begin_inset Formula $\forall n\in\bbn.a_{n}\le0$
 \end_inset
 
@@ -3755,7 +3947,8 @@ x & x\ge0\\
 בהחלט
 \series default
 \color inherit
-: טור 
+:
+ טור 
 \begin_inset Formula $\sum_{n=0}^{\infty}a_{n}$
 \end_inset
 
@@ -3773,7 +3966,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum_{n=0}^{\infty}a_{n}$
 \end_inset
 
@@ -3791,7 +3985,8 @@ x & x\ge0\\
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\sum a_{n},\sum b_{n}$
 \end_inset
 
@@ -3817,7 +4012,8 @@ x & x\ge0\\
 ההשוואה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\sum a_{n},\sum b_{n}$
 \end_inset
 
@@ -3829,35 +4025,35 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $\sum_{n=0}^{\infty}b_{n}$
 \end_inset
 
- מתכנס(
+ מתכנס)
 \begin_inset Formula $\impliedby$
 \end_inset
 
-)
+(
 \begin_inset Formula $\sum_{n=0}^{\infty}a_{n}$
 \end_inset
 
- מתכנס(.
+ מתכנס).
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $\sum_{n=0}^{\infty}a_{n}$
 \end_inset
 
- מתבדר(
+ מתבדר)
 \begin_inset Formula $\impliedby$
 \end_inset
 
-)
+(
 \begin_inset Formula $\sum_{n=0}^{\infty}a_{n}$
 \end_inset
 
- מתבדר(.
+ מתבדר).
 \end_layout
 
 \begin_layout Standard
@@ -3867,7 +4063,8 @@ x & x\ge0\\
 מבחן ההשוואה הגבולי
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{n},b_{n}$
 \end_inset
 
@@ -3906,11 +4103,12 @@ x & x\ge0\\
 מבחן השורש
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
- טור אי שלילי )קיים 
+ טור אי שלילי (קיים 
 \begin_inset Formula $q\in\left(0,1\right)$
 \end_inset
 
@@ -3918,15 +4116,15 @@ x & x\ge0\\
 \begin_inset Formula $a_{n}^{\frac{1}{n}}<q$
 \end_inset
 
-(
+)
 \begin_inset Formula $\impliedby$
 \end_inset
 
-)
+(
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
- מתכנס(.
+ מתכנס).
 \end_layout
 
 \begin_layout Standard
@@ -3936,7 +4134,8 @@ x & x\ge0\\
 מבחן השורש הגבולי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
@@ -3944,11 +4143,11 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
- מתכנס(
+ מתכנס)
 \begin_inset Formula $\left(\lim\left(\sup\left(a_{n}^{\frac{1}{n}}\right)\right)<1\right)\implies$
 \end_inset
 
@@ -3956,11 +4155,11 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
- מתבדר(
+ מתבדר)
 \begin_inset Formula $\left(\lim\left(\sup\left(a_{n}^{\frac{1}{n}}\right)\right)>1\right)\implies$
 \end_inset
 
@@ -3974,7 +4173,8 @@ x & x\ge0\\
 מבחן המנה לטורים חיוביים
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
@@ -3982,7 +4182,7 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-)קיים 
+(קיים 
 \begin_inset Formula $q\in\left(0,1\right)$
 \end_inset
 
@@ -3990,31 +4190,31 @@ x & x\ge0\\
 \begin_inset Formula $\frac{a_{n+1}}{a_{n}}<q$
 \end_inset
 
-(
+)
 \begin_inset Formula $\impliedby$
 \end_inset
 
-)
+(
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
- מתכנס(.
+ מתכנס).
 \end_layout
 
 \begin_layout Itemize
-)כמעט תמיד 
+(כמעט תמיד 
 \begin_inset Formula $\frac{a_{n+1}}{a_{n}}\ge1$
 \end_inset
 
-(
+)
 \begin_inset Formula $\impliedby$
 \end_inset
 
-)
+(
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
- מתבדר(.
+ מתבדר).
 \end_layout
 
 \begin_layout Standard
@@ -4024,7 +4224,8 @@ x & x\ge0\\
 מבחן המנה הגבולי לטורים חיוביים
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
@@ -4032,11 +4233,11 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
- מתכנס(
+ מתכנס)
 \begin_inset Formula $\left(\lim\left(\sup\left(\frac{a_{n+1}}{a_{n}}\right)\right)<1\right)\implies$
 \end_inset
 
@@ -4044,11 +4245,11 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
- מתבדר(
+ מתבדר)
 \begin_inset Formula $\left(\lim\left(\inf\left(\frac{a_{n+1}}{a_{n}}\right)\right)>1\right)\implies$
 \end_inset
 
@@ -4062,23 +4263,24 @@ x & x\ge0\\
 משפט העיבוי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a_{n}$
 \end_inset
 
- סדרה אי שלילית יורדת אזי )
+ סדרה אי שלילית יורדת אזי (
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
- מתכנס(
+ מתכנס)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\sum2^{n}a_{2^{n}}$
 \end_inset
 
- מתכנס(.
+ מתכנס).
 \end_layout
 
 \begin_layout Standard
@@ -4088,7 +4290,8 @@ x & x\ge0\\
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $m\ge2$
 \end_inset
 
@@ -4096,19 +4299,19 @@ x & x\ge0\\
 \begin_inset Formula $a_{n}$
 \end_inset
 
- סדרה אי שלילית יורדת אזי )
+ סדרה אי שלילית יורדת אזי (
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
- מתכנס(
+ מתכנס)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\sum m^{n}a_{m^{n}}$
 \end_inset
 
- מתכנס(.
+ מתכנס).
 \end_layout
 
 \begin_layout Standard
@@ -4118,15 +4321,16 @@ x & x\ge0\\
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x\in\bbr$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\sum\frac{1}{n^{x}}$
 \end_inset
 
- מתכנס(
+ מתכנס)
 \begin_inset Formula $\left(x>1\right)\iff$
 \end_inset
 
@@ -4140,7 +4344,8 @@ x & x\ge0\\
 משפט לייבניץ
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a_{n}\searrow0$
 \end_inset
 
@@ -4158,7 +4363,8 @@ x & x\ge0\\
 טור מתכנס בתנאי
 \series default
 \color inherit
-: טור 
+:
+ טור 
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
@@ -4176,7 +4382,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $a,b$
 \end_inset
 
@@ -4194,7 +4401,8 @@ x & x\ge0\\
 התמרת אבל
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $a,b$
 \end_inset
 
@@ -4212,7 +4420,8 @@ x & x\ge0\\
 קריטריון דריכלה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $b\to0$
 \end_inset
 
@@ -4238,7 +4447,8 @@ x & x\ge0\\
 קריטריון אבל
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
@@ -4260,7 +4470,8 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sum_{p\in\bbp}\frac{1}{p}=\infty$
 \end_inset
 
@@ -4274,7 +4485,8 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum a_{n}=L$
 \end_inset
 
@@ -4296,7 +4508,8 @@ x & x\ge0\\
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -4330,7 +4543,8 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
@@ -4352,7 +4566,8 @@ x & x\ge0\\
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a_{n}$
 \end_inset
 
@@ -4370,31 +4585,32 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a_{n}$
 \end_inset
 
- סדרה אזי )
+ סדרה אזי (
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
- מתכנס בהחלט(
+ מתכנס בהחלט)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\sum a_{n}^{+}$
 \end_inset
 
- מתכנס(
+ מתכנס)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $\sum a_{n}^{-}$
 \end_inset
 
- מתכנס(.
+ מתכנס).
 \end_layout
 
 \begin_layout Standard
@@ -4404,7 +4620,8 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
@@ -4426,15 +4643,16 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a_{n}$
 \end_inset
 
- סדרה אזי )
+ סדרה אזי (
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
- מתכנס בתנאי(
+ מתכנס בתנאי)
 \begin_inset Formula $\left(\sum a_{n}^{+}=\infty=\sum a_{n}^{-}\right)\impliedby$
 \end_inset
 
@@ -4448,7 +4666,8 @@ x & x\ge0\\
 משפט רימן
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
@@ -4466,7 +4685,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
@@ -4488,7 +4708,8 @@ x & x\ge0\\
 משפט קושי
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $p,q\in\bbn^{\bbn}$
 \end_inset
 
@@ -4510,7 +4731,8 @@ x & x\ge0\\
 טור חזקות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a_{n}$
 \end_inset
 
@@ -4532,7 +4754,8 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum a_{k}x^{k}$
 \end_inset
 
@@ -4558,7 +4781,8 @@ x & x\ge0\\
 משפט אבל
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum a_{k}x^{k}$
 \end_inset
 
@@ -4587,7 +4811,8 @@ x & x\ge0\\
 רדיוס ההתכנסות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum a_{k}x^{k}$
 \end_inset
 
@@ -4605,7 +4830,8 @@ x & x\ge0\\
 משפט קושי הדמרד
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum a_{n}x^{n}$
 \end_inset
 
@@ -4623,7 +4849,8 @@ x & x\ge0\\
 הערה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum a_{n}x^{n}$
 \end_inset
 
@@ -4641,7 +4868,8 @@ x & x\ge0\\
 מכפלת קושי
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\sum a_{n}x^{n},\sum b_{n}x^{n}$
 \end_inset
 
@@ -4659,7 +4887,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\sum a_{n}x^{n},\sum b_{n}x^{n}$
 \end_inset
 
@@ -4685,7 +4914,8 @@ x & x\ge0\\
 התכנסות צ'זארו
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
@@ -4703,7 +4933,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum a_{n}$
 \end_inset
 
@@ -4721,7 +4952,8 @@ x & x\ge0\\
 פונקציה מונוטונית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{\bbr}$
 \end_inset
 
@@ -4729,7 +4961,8 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-עולה ממש: 
+עולה ממש:
+ 
 \begin_inset Formula $\forall x,y\in\bbr.x<y\implies f\left(x\right)<f\left(y\right)$
 \end_inset
 
@@ -4737,7 +4970,8 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-עולה: 
+עולה:
+ 
 \begin_inset Formula $\forall x,y\in\bbr.x<y\implies f\left(x\right)\le f\left(y\right)$
 \end_inset
 
@@ -4745,7 +4979,8 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-יורדת ממש: 
+יורדת ממש:
+ 
 \begin_inset Formula $\forall x,y\in\bbr.x<y\implies f\left(x\right)>f\left(y\right)$
 \end_inset
 
@@ -4753,7 +4988,8 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-יורדת: 
+יורדת:
+ 
 \begin_inset Formula $\forall x,y\in\bbr.x<y\implies f\left(x\right)\ge f\left(y\right)$
 \end_inset
 
@@ -4767,7 +5003,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -4789,7 +5026,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -4807,7 +5045,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $n,m,k,\ell\in\bbn$
 \end_inset
 
@@ -4829,7 +5068,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $c\in\bbr$
 \end_inset
 
@@ -4855,7 +5095,8 @@ x & x\ge0\\
 הגדרה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $n,m\in\bbn$
 \end_inset
 
@@ -4902,7 +5143,8 @@ x & x\ge0\\
 פונקציית החזקה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $0<\a$
 \end_inset
 
@@ -4924,7 +5166,8 @@ x & x\ge0\\
 פונקציית החזקה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $0>\a$
 \end_inset
 
@@ -4946,7 +5189,8 @@ x & x\ge0\\
 הגדרה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -4964,7 +5208,8 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbr$
 \end_inset
 
@@ -4982,7 +5227,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x>1$
 \end_inset
 
@@ -5004,7 +5250,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $0<x<1$
 \end_inset
 
@@ -5026,7 +5273,8 @@ x & x\ge0\\
 הפונקציה המעריכית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $0<\a\ne1$
 \end_inset
 
@@ -5048,7 +5296,8 @@ x & x\ge0\\
 סינוס
 \series default
 \color inherit
-: נגדיר 
+:
+ נגדיר 
 \begin_inset Formula $\sin:\left[0,2\pi\right]\to\left[-1,1\right]$
 \end_inset
 
@@ -5062,7 +5311,8 @@ x & x\ge0\\
 סינוס
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall k\in\bbn.\sin\left(x+2\pi k\right)=\sin\left(x\right)$
 \end_inset
 
@@ -5076,7 +5326,8 @@ x & x\ge0\\
 קוסינוס
 \series default
 \color inherit
-: נגדיר 
+:
+ נגדיר 
 \begin_inset Formula $\cos:\left[0,2\pi\right]\to\left[-1,1\right]$
 \end_inset
 
@@ -5090,7 +5341,8 @@ x & x\ge0\\
 קוסינוס
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall k\in\bbn.\cos\left(x+2\pi k\right)=\cos\left(x\right)$
 \end_inset
 
@@ -5104,7 +5356,8 @@ x & x\ge0\\
 טנגנס
 \series default
 \color inherit
-: נגדיר 
+:
+ נגדיר 
 \begin_inset Formula $\tan:\bbr\backslash\left\{ \frac{\pi}{2}+\pi k\mid k\in\bbz\right\} \to\bbr$
 \end_inset
 
@@ -5122,7 +5375,8 @@ x & x\ge0\\
 קוטנגנס
 \series default
 \color inherit
-: נגדיר 
+:
+ נגדיר 
 \begin_inset Formula $\cot:\bbr\backslash\left\{ \pi k\mid k\in\bbz\right\} \to\bbr$
 \end_inset
 
@@ -5140,7 +5394,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset CommandInset href
 LatexCommand href
 name "זהויות טריגנומטריות"
@@ -5159,7 +5414,8 @@ literal "false"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\arcsin=\sin^{-1}\right)\land\left(\arccos=\cos^{-1}\right)\land\left(\arctan=\tan^{-1}\right)\land\left(\text{arccot}=\cot^{-1}\right)$
 \end_inset
 
@@ -5173,7 +5429,8 @@ literal "false"
 לוגריתם
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a>0$
 \end_inset
 
@@ -5192,10 +5449,11 @@ literal "false"
 
 \series bold
 \color magenta
-סימון )הלוגריתם הטבעי(
+סימון (הלוגריתם הטבעי)
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\ln=\log_{e}$
 \end_inset
 
@@ -5209,7 +5467,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset CommandInset href
 LatexCommand href
 name "זהויות לוגרתמיות"
@@ -5228,7 +5487,8 @@ literal "false"
 פונקציה מחזורית
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $f\in\bbr^{\bbr}$
 \end_inset
 
@@ -5246,7 +5506,8 @@ literal "false"
 פונקציה זוגית
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $f\in\bbr^{\bbr}$
 \end_inset
 
@@ -5264,7 +5525,8 @@ literal "false"
 פונקציה אי־זוגית
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $f\in\bbr^{\bbr}$
 \end_inset
 
@@ -5282,7 +5544,8 @@ literal "false"
 קטע מנוקב/סביבה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\d>0$
 \end_inset
 
@@ -5304,7 +5567,8 @@ literal "false"
 פונקציה מתכנסת/גבול סופי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x_{0}\in\bbr$
 \end_inset
 
@@ -5324,7 +5588,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-בנקודה: 
+בנקודה:
+ 
 \begin_inset Formula $A=I_{x_{0}}$
 \end_inset
 
@@ -5333,7 +5598,8 @@ literal "false"
 
 \begin_deeper
 \begin_layout Itemize
-קושי: 
+קושי:
+ 
 \begin_inset Formula $\left(\lim_{x\to x_{0}}f\left(x\right)=L\right)\iff\left(\forall\e>0.\exists\d>0.\forall x\in I_{x_{0}}.\left|f\left(x\right)-L\right|<\e\right)$
 \end_inset
 
@@ -5341,7 +5607,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-היינה: 
+היינה:
+ 
 \begin_inset Formula $\left(\lim_{x\to x_{0}}f\left(x\right)=L\right)\iff\left(\forall y\in A^{\bbn}.\left(y_{n}\to x_{0}\right)\implies\left(f\left(y_{n}\right)\to L\right)\right)$
 \end_inset
 
@@ -5350,7 +5617,8 @@ literal "false"
 
 \end_deeper
 \begin_layout Itemize
-חד צדדי מימין: 
+חד צדדי מימין:
+ 
 \begin_inset Formula $A=\left(x_{0},b\right)$
 \end_inset
 
@@ -5359,7 +5627,8 @@ literal "false"
 
 \begin_deeper
 \begin_layout Itemize
-קושי: 
+קושי:
+ 
 \begin_inset Formula $\left(\lim_{x\to x_{0}^{+}}f\left(x\right)=L\right)\iff\left(\forall\e>0.\exists\d>0.x\in\left(x_{0},\min\left\{ x_{0}+\d,b\right\} \right).\left|f\left(x\right)-L\right|<\e\right)$
 \end_inset
 
@@ -5367,7 +5636,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-היינה: 
+היינה:
+ 
 \begin_inset Formula $\left(\lim_{x\to x_{0}^{+}}f\left(x\right)=L\right)\iff\left(\forall y\in A^{\bbn}.\left(y_{n}\downarrow x_{0}\right)\implies\left(f\left(y_{n}\right)\to L\right)\right)$
 \end_inset
 
@@ -5376,7 +5646,8 @@ literal "false"
 
 \end_deeper
 \begin_layout Itemize
-חד צדדי משמאל: 
+חד צדדי משמאל:
+ 
 \begin_inset Formula $A=\left(a,x_{0}\right)$
 \end_inset
 
@@ -5385,7 +5656,8 @@ literal "false"
 
 \begin_deeper
 \begin_layout Itemize
-קושי: 
+קושי:
+ 
 \begin_inset Formula $\left(\lim_{x\to x_{0}^{-}}f\left(x\right)=L\right)\iff\left(\forall\e>0.\exists\d>0.x\in\left(\max\left\{ x_{0}-\d,a\right\} ,x_{0}\right).\left|f\left(x\right)-L\right|<\e\right)$
 \end_inset
 
@@ -5393,7 +5665,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-היינה: 
+היינה:
+ 
 \begin_inset Formula $\left(\lim_{x\to x_{0}^{-}}f\left(x\right)=L\right)\iff\left(\forall y\in A^{\bbn}.\left(y_{n}\uparrow x_{0}\right)\implies\left(f\left(y_{n}\right)\to L\right)\right)$
 \end_inset
 
@@ -5402,7 +5675,8 @@ literal "false"
 
 \end_deeper
 \begin_layout Itemize
-באינסוף: 
+באינסוף:
+ 
 \begin_inset Formula $A=\left(a,\infty\right)$
 \end_inset
 
@@ -5411,7 +5685,8 @@ literal "false"
 
 \begin_deeper
 \begin_layout Itemize
-קושי: 
+קושי:
+ 
 \begin_inset Formula $\left(\lim_{x\to\infty}f\left(x\right)=L\right)\iff\left(\forall\e>0.\exists M\in\bbr.\forall x\ge M.\left|f\left(x\right)-L\right|<\e\right)$
 \end_inset
 
@@ -5419,7 +5694,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-היינה: 
+היינה:
+ 
 \begin_inset Formula $\left(\lim_{x\to\infty}f\left(x\right)=L\right)\iff\left(\forall y\in A^{\bbn}.\left(y_{n}\to\infty\right)\implies\left(f\left(y_{n}\right)\to\infty\right)\right)$
 \end_inset
 
@@ -5428,7 +5704,8 @@ literal "false"
 
 \end_deeper
 \begin_layout Itemize
-במינוס אינסוף: 
+במינוס אינסוף:
+ 
 \begin_inset Formula $A=\left(-\infty,b\right)$
 \end_inset
 
@@ -5437,7 +5714,8 @@ literal "false"
 
 \begin_deeper
 \begin_layout Itemize
-קושי: 
+קושי:
+ 
 \begin_inset Formula $\left(\lim_{x\to-\infty}f\left(x\right)=L\right)\iff\left(\forall\e>0.\exists M\in\bbr.\forall x\le M.\left|f\left(x\right)-L\right|<\e\right)$
 \end_inset
 
@@ -5445,7 +5723,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-היינה: 
+היינה:
+ 
 \begin_inset Formula $\left(\lim_{x\to\infty}f\left(x\right)=L\right)\iff\left(\forall y\in A^{\bbn}.\left(y_{n}\to-\infty\right)\implies\left(f\left(y_{n}\right)\to-\infty\right)\right)$
 \end_inset
 
@@ -5460,7 +5739,8 @@ literal "false"
 פונקציה מתבדרת לאינסוף/גבול אינסופי/גבול במובן הרחב
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x_{0}\in\bbr$
 \end_inset
 
@@ -5476,7 +5756,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-בנקודה: תהא 
+בנקודה:
+ תהא 
 \begin_inset Formula $f:I_{x_{0}}\to\bbr$
 \end_inset
 
@@ -5500,7 +5781,8 @@ literal "false"
 
 \end_deeper
 \begin_layout Itemize
-חד צדדי מימין: תהא 
+חד צדדי מימין:
+ תהא 
 \begin_inset Formula $f:\left(x_{0},b\right)\to\bbr$
 \end_inset
 
@@ -5524,7 +5806,8 @@ literal "false"
 
 \end_deeper
 \begin_layout Itemize
-חד צדדי משמאל: תהא 
+חד צדדי משמאל:
+ תהא 
 \begin_inset Formula $f:\left(a,x_{0}\right)\to\bbr$
 \end_inset
 
@@ -5548,7 +5831,8 @@ literal "false"
 
 \end_deeper
 \begin_layout Itemize
-באינסוף: תהא 
+באינסוף:
+ תהא 
 \begin_inset Formula $f:\left(a,\infty\right)\to\bbr$
 \end_inset
 
@@ -5572,7 +5856,8 @@ literal "false"
 
 \end_deeper
 \begin_layout Itemize
-במינוס אינסוף: תהא 
+במינוס אינסוף:
+ תהא 
 \begin_inset Formula $f:\left(-\infty,b\right)\to\bbr$
 \end_inset
 
@@ -5602,7 +5887,8 @@ literal "false"
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
@@ -5620,7 +5906,8 @@ literal "false"
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x_{0}\in\bbr_{\infty}^{\pm}$
 \end_inset
 
@@ -5642,7 +5929,8 @@ literal "false"
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x_{0}\in\bbr$
 \end_inset
 
@@ -5660,7 +5948,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x_{0}\in\bbr$
 \end_inset
 
@@ -5682,7 +5971,8 @@ literal "false"
 דריכלה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $D\left(x\right)=\begin{cases}
 0 & x\in\bbq\\
 1 & x\notin\bbq
@@ -5699,7 +5989,8 @@ literal "false"
 חשבון גבולות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x_{0}\in\bbr_{\infty}^{\pm}$
 \end_inset
 
@@ -5731,7 +6022,8 @@ literal "false"
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x_{0}\in\bbr_{\infty}^{\pm}$
 \end_inset
 
@@ -5749,7 +6041,8 @@ literal "false"
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x_{0}\in\bbr^{\pm}$
 \end_inset
 
@@ -5771,7 +6064,8 @@ literal "false"
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x_{0},y_{0}\in\bbr_{\infty}^{\pm}$
 \end_inset
 
@@ -5801,7 +6095,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x_{0},y_{0}\in\bbr_{\infty}^{\pm}$
 \end_inset
 
@@ -5827,7 +6122,8 @@ literal "false"
 פונקציה אלמנטרית
 \series default
 \color inherit
-: הרכבה/סכום/כפל/הופכית של 
+:
+ הרכבה/סכום/כפל/הופכית של 
 \begin_inset Formula $\left(\bigcup\left\{ \left\{ \log_{a}\left(x\right),a^{x}\right\} \mid a>0\right\} \right)\cup\bbr\left[x\right]\cup\left\{ \sin,\cos\right\} \cup\left\{ x^{a}\mid a\in\bbr\right\} $
 \end_inset
 
@@ -5841,7 +6137,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f$
 \end_inset
 
@@ -5859,7 +6156,8 @@ literal "false"
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x\in\bbr$
 \end_inset
 
@@ -5877,7 +6175,8 @@ literal "false"
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x_{0}\in\bbr^{\pm}$
 \end_inset
 
@@ -5895,7 +6194,8 @@ literal "false"
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x_{0}\in\bbr^{\pm}$
 \end_inset
 
@@ -5913,7 +6213,8 @@ literal "false"
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g:I\to\bbr$
 \end_inset
 
@@ -5935,7 +6236,8 @@ literal "false"
 מונוטוניות גבולות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x_{0}\in\bbr_{\infty}^{\pm}$
 \end_inset
 
@@ -5961,7 +6263,8 @@ literal "false"
 כלל הסנדוויץ'
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x_{0}\in\bbr_{\infty}^{\pm}$
 \end_inset
 
@@ -5990,7 +6293,8 @@ literal "false"
 למה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\lim_{x\to0}\frac{\sin\left(x\right)}{x}=1$
 \end_inset
 
@@ -6004,7 +6308,8 @@ literal "false"
 רציפות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
@@ -6012,7 +6317,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-רציפות בנקודה: 
+רציפות בנקודה:
+ 
 \begin_inset Formula $x_{0}\in I$
 \end_inset
 
@@ -6024,7 +6330,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-רציפה חד צדדית מימין בנקודה: 
+רציפה חד צדדית מימין בנקודה:
+ 
 \begin_inset Formula $x_{0}\in I$
 \end_inset
 
@@ -6036,7 +6343,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-רציפה חד צדדית משמאל בנקודה: 
+רציפה חד צדדית משמאל בנקודה:
+ 
 \begin_inset Formula $x_{0}\in I$
 \end_inset
 
@@ -6054,7 +6362,8 @@ literal "false"
 פונקציה רציפה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
@@ -6062,7 +6371,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-קושי: 
+קושי:
+ 
 \begin_inset Formula $\forall x_{0}\in I.\lim_{x\to x_{0}}f\left(x\right)=f\left(x_{0}\right)$
 \end_inset
 
@@ -6070,7 +6380,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-היינה: 
+היינה:
+ 
 \begin_inset Formula $\forall x_{0}\in I.\forall y\in I^{\bbn}.\left(y_{n}\to x_{0}\right)\implies\left(\lim_{n\to\infty}f\left(y_{n}\right)=f\left(x_{0}\right)\right)$
 \end_inset
 
@@ -6084,7 +6395,8 @@ literal "false"
 פתוחה יחסית
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
@@ -6106,11 +6418,12 @@ literal "false"
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $f$
 \end_inset
 
@@ -6118,11 +6431,11 @@ literal "false"
 \begin_inset Formula $I$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $B\subseteq\bbr$
 \end_inset
 
@@ -6134,7 +6447,7 @@ literal "false"
 \begin_inset Formula $I$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -6144,7 +6457,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left(a,b\right)\to\bbr$
 \end_inset
 
@@ -6152,7 +6466,7 @@ literal "false"
 \begin_inset Formula $c\in\left(a,b\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $f$
 \end_inset
 
@@ -6160,11 +6474,11 @@ literal "false"
 \begin_inset Formula $a$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $f_{\upharpoonright_{\left(a,c\right]}}$
 \end_inset
 
@@ -6172,11 +6486,11 @@ literal "false"
 \begin_inset Formula $c$
 \end_inset
 
-(
+)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $f_{\upharpoonright_{\left[c,b\right)}}$
 \end_inset
 
@@ -6184,7 +6498,7 @@ literal "false"
 \begin_inset Formula $c$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -6194,7 +6508,8 @@ literal "false"
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $I\subseteq\bbr$
 \end_inset
 
@@ -6212,7 +6527,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left(a,b\right)\right)$
 \end_inset
 
@@ -6220,11 +6536,11 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $f\left[\left(a,b\right)\right]$
 \end_inset
 
- חסומה מלעיל(
+ חסומה מלעיל)
 \begin_inset Formula $\left(\lim_{x\to b^{-}}f\left(x\right)=\sup f\left[\left(a,b\right)\right]\right)\impliedby$
 \end_inset
 
@@ -6232,11 +6548,11 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $f\left[\left(a,b\right)\right]$
 \end_inset
 
- אינה חסומה מלעיל(
+ אינה חסומה מלעיל)
 \begin_inset Formula $\left(\lim_{x\to b^{-}}f\left(x\right)=\infty\right)\impliedby$
 \end_inset
 
@@ -6244,11 +6560,11 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $f\left[\left(a,b\right)\right]$
 \end_inset
 
- חסומה מלרע(
+ חסומה מלרע)
 \begin_inset Formula $\left(\lim_{x\to b^{-}}f\left(x\right)=\inf f\left[\left(a,b\right)\right]\right)\impliedby$
 \end_inset
 
@@ -6256,11 +6572,11 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $f\left[\left(a,b\right)\right]$
 \end_inset
 
- חסומה אינה מלרע(
+ חסומה אינה מלרע)
 \begin_inset Formula $\left(\lim_{x\to b^{-}}f\left(x\right)=-\infty\right)\impliedby$
 \end_inset
 
@@ -6274,7 +6590,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{\bbr}$
 \end_inset
 
@@ -6308,7 +6625,8 @@ literal "false"
 מסקנה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $f,g\in\bbr^{\bbr}$
 \end_inset
 
@@ -6342,7 +6660,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g\in C\left(\bbr\right)$
 \end_inset
 
@@ -6360,7 +6679,8 @@ literal "false"
 נקודת אי־רציפות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
@@ -6372,7 +6692,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-סליקה: 
+סליקה:
+ 
 \begin_inset Formula $\lim_{x\to x_{0}}f\left(x\right)\ne f\left(x_{0}\right)$
 \end_inset
 
@@ -6380,7 +6701,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-סוג ראשון/קפיצה: 
+סוג ראשון/קפיצה:
+ 
 \begin_inset Formula $\lim_{x\to x_{0}^{-}}f\left(x\right)\ne\lim_{x\to x_{0}^{+}}f\left(x\right)$
 \end_inset
 
@@ -6388,7 +6710,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-סוג שני: 
+סוג שני:
+ 
 \begin_inset Formula $\left(\nexists\lim_{x\to x_{0}^{-}}f\left(x\right)\right)\lor\left(\nexists\lim_{x\to x_{0}^{+}}f\left(x\right)\right)$
 \end_inset
 
@@ -6402,7 +6725,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
@@ -6416,11 +6740,12 @@ literal "false"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $f$
 \end_inset
 
@@ -6428,7 +6753,7 @@ literal "false"
 \begin_inset Formula $x_{0}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\left(\forall y\in\bbn^{I}.\left(y_{n}\to x_{0}\right)\implies\left(\lim f\left(y_{n}\right)\in\bbr\right)\right)\iff$
 \end_inset
 
@@ -6442,7 +6767,8 @@ literal "false"
 פונקציית רימן
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $R\left(x\right)=\begin{cases}
 \frac{1}{q} & \exists p,q\in\bbz.\left(\gcd\left(p,q\right)=1\right)\land\left(x=\frac{p}{q}\right)\\
 0 & else
@@ -6459,7 +6785,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\forall x_{0}\in\bbr.\lim_{x\to x_{0}}R\left(x\right)=0\right)\land\left(\forall x\in\bbr.R\left(x\right)=R\left(x+1\right)\right)$
 \end_inset
 
@@ -6473,7 +6800,8 @@ literal "false"
 חשבון רציפות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x_{0}\in\bbr^{\pm}$
 \end_inset
 
@@ -6503,7 +6831,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:A\to B$
 \end_inset
 
@@ -6537,7 +6866,8 @@ literal "false"
 מסקנה
 \series default
 \color inherit
-: כל פונקציה אלמנטרית רציפה.
+:
+ כל פונקציה אלמנטרית רציפה.
 \end_layout
 
 \begin_layout Standard
@@ -6547,7 +6877,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{\bbr}$
 \end_inset
 
@@ -6569,7 +6900,8 @@ literal "false"
 פונקציה רציונאלית
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $p,q\in\bbr\left[x\right]$
 \end_inset
 
@@ -6587,7 +6919,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{\bbr}$
 \end_inset
 
@@ -6605,7 +6938,8 @@ literal "false"
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{\bbr}$
 \end_inset
 
@@ -6623,7 +6957,8 @@ literal "false"
 משפט ויירשטראס הראשון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -6641,7 +6976,8 @@ literal "false"
 משפט ויירשטראס השני
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -6659,7 +6995,8 @@ literal "false"
 משפט ערך הביניים
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -6677,7 +7014,8 @@ literal "false"
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -6699,7 +7037,8 @@ literal "false"
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -6717,7 +7056,8 @@ literal "false"
 קטע מוכלל
 \series default
 \color inherit
-: קבוצה 
+:
+ קבוצה 
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
@@ -6735,7 +7075,8 @@ literal "false"
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $I$
 \end_inset
 
@@ -6761,7 +7102,8 @@ literal "false"
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $I$
 \end_inset
 
@@ -6769,11 +7111,11 @@ literal "false"
 \begin_inset Formula $f\in C\left(I\right)$
 \end_inset
 
- מונוטונית ממש אזי )
+ מונוטונית ממש אזי (
 \begin_inset Formula $f\left(I\right)$
 \end_inset
 
- קטע מוכלל(
+ קטע מוכלל)
 \begin_inset Formula $\left(f^{-1}\in C\left(f\left(I\right)\right)\right)\land$
 \end_inset
 
@@ -6787,7 +7129,8 @@ literal "false"
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $I$
 \end_inset
 
@@ -6795,11 +7138,11 @@ literal "false"
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
- מונוטונית ממש אזי )
+ מונוטונית ממש אזי (
 \begin_inset Formula $f\left(I\right)$
 \end_inset
 
- קטע מוכלל(
+ קטע מוכלל)
 \begin_inset Formula $\left(f\in C\left(I\right)\right)\iff$
 \end_inset
 
@@ -6813,7 +7156,8 @@ literal "false"
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a>0$
 \end_inset
 
@@ -6831,7 +7175,8 @@ literal "false"
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a_{n}\to a>0$
 \end_inset
 
@@ -6853,7 +7198,8 @@ literal "false"
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{odd}$
 \end_inset
 
@@ -6875,7 +7221,8 @@ literal "false"
 קבוצה קומפקטית
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
@@ -6901,7 +7248,8 @@ literal "false"
 הלמה של היינה־בורל
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a<b$
 \end_inset
 
@@ -6916,14 +7264,15 @@ literal "false"
 
 \series bold
 \color orange
-פונקציה רציפה במידה שווה )במ
+פונקציה רציפה במידה שווה (במ
 \begin_inset Quotes erd
 \end_inset
 
-ש(
+ש)
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $f\in\bbr^{A}$
 \end_inset
 
@@ -6941,7 +7290,8 @@ literal "false"
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{A}$
 \end_inset
 
@@ -6963,7 +7313,8 @@ literal "false"
 תנאי ליפשיץ
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{A}$
 \end_inset
 
@@ -6989,7 +7340,8 @@ literal "false"
 משפט קנטור
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -7015,7 +7367,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{A}$
 \end_inset
 
@@ -7049,7 +7402,8 @@ literal "false"
 פרה־קומפקטיות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $D\subseteq\bbr$
 \end_inset
 
@@ -7075,11 +7429,12 @@ literal "false"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left(a,b\right]\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $f$
 \end_inset
 
@@ -7087,7 +7442,7 @@ literal "false"
 \begin_inset Quotes erd
 \end_inset
 
-ש(
+ש)
 \begin_inset Formula $\left(\lim_{x\to a^{+}}f\left(x\right)\in\bbr\right)\iff$
 \end_inset
 
@@ -7101,11 +7456,12 @@ literal "false"
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left(a,b\right)\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $f$
 \end_inset
 
@@ -7113,7 +7469,7 @@ literal "false"
 \begin_inset Quotes erd
 \end_inset
 
-ש(
+ש)
 \begin_inset Formula $\left(\lim_{x\to a^{+}}f\left(x\right),\lim_{x\to b^{-}}f\left(x\right)\in\bbr\right)\iff$
 \end_inset
 
@@ -7127,7 +7483,8 @@ literal "false"
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[a,\infty\right)\right)$
 \end_inset
 
@@ -7157,7 +7514,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{\left(a,b\right)}$
 \end_inset
 
@@ -7179,7 +7537,8 @@ literal "false"
 מודולוס הרציפות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -7197,7 +7556,8 @@ literal "false"
 גזירות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
@@ -7205,7 +7565,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-נגזרת בנקודה: תהא 
+נגזרת בנקודה:
+ תהא 
 \begin_inset Formula $x_{0}\in I$
 \end_inset
 
@@ -7217,7 +7578,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-נגזרת חד צדדית מימין בנקודה: תהא 
+נגזרת חד צדדית מימין בנקודה:
+ תהא 
 \begin_inset Formula $x_{0}\in I$
 \end_inset
 
@@ -7229,7 +7591,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-נגזרת חד צדדית משמאל בנקודה: תהא 
+נגזרת חד צדדית משמאל בנקודה:
+ תהא 
 \begin_inset Formula $x_{0}\in I$
 \end_inset
 
@@ -7247,7 +7610,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
@@ -7269,7 +7633,8 @@ literal "false"
 נגזרת
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
@@ -7287,7 +7652,8 @@ literal "false"
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -7305,7 +7671,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: יהי חלקיק ותהיינה 
+:
+ יהי חלקיק ותהיינה 
 \begin_inset Formula $x,v\in\bbr^{\bbr}$
 \end_inset
 
@@ -7323,7 +7690,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -7331,7 +7699,7 @@ literal "false"
 \begin_inset Formula $x_{0}\in I^{\pm}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $f$
 \end_inset
 
@@ -7339,11 +7707,11 @@ literal "false"
 \begin_inset Formula $x_{0}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\impliedby$
 \end_inset
 
-)
+(
 \begin_inset Formula $f$
 \end_inset
 
@@ -7351,7 +7719,7 @@ literal "false"
 \begin_inset Formula $x_{0}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -7361,7 +7729,8 @@ literal "false"
 קירוב בנקודה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -7387,7 +7756,8 @@ literal "false"
 סדר הקירוב
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -7413,7 +7783,8 @@ literal "false"
 דיפרנציאבילית בנקודה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -7421,7 +7792,7 @@ literal "false"
 \begin_inset Formula $x_{0}\in I$
 \end_inset
 
- עבורה )
+ עבורה (
 \begin_inset Formula $f$
 \end_inset
 
@@ -7429,11 +7800,11 @@ literal "false"
 \begin_inset Formula $x_{0}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\land$
 \end_inset
 
-)קיים קירוב מסדר ראשון של 
+(קיים קירוב מסדר ראשון של 
 \begin_inset Formula $f$
 \end_inset
 
@@ -7441,7 +7812,7 @@ literal "false"
 \begin_inset Formula $x_{0}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -7451,7 +7822,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -7459,7 +7831,7 @@ literal "false"
 \begin_inset Formula $x_{0}\in I$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $f$
 \end_inset
 
@@ -7467,11 +7839,11 @@ literal "false"
 \begin_inset Formula $x_{0}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $f$
 \end_inset
 
@@ -7479,7 +7851,7 @@ literal "false"
 \begin_inset Formula $x_{0}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -7489,7 +7861,8 @@ literal "false"
 חשבון גזירות
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $f,g\in\bbr^{I}$
 \end_inset
 
@@ -7528,7 +7901,8 @@ literal "false"
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $x_{0}\in I$
 \end_inset
 
@@ -7554,19 +7928,23 @@ literal "false"
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\tan'=\frac{1}{\cos^{2}}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\left(e^{x}\right)'=e^{x}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\left(x^{r}\right)'=rx^{r-1}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\arctan'=\frac{1}{1+x^{2}}$
 \end_inset
 
@@ -7580,7 +7958,8 @@ literal "false"
 כלל השרשרת
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $x_{0}\in I$
 \end_inset
 
@@ -7614,7 +7993,8 @@ literal "false"
 נגזרת מסדר גבוה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -7632,7 +8012,8 @@ literal "false"
 הפרש דיסקרטי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{\bbr}$
 \end_inset
 
@@ -7650,7 +8031,8 @@ literal "false"
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{\bbr}$
 \end_inset
 
@@ -7668,7 +8050,8 @@ literal "false"
 פונקציה גזירה ברציפות
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -7686,7 +8069,8 @@ literal "false"
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $I\subseteq\bbr$
 \end_inset
 
@@ -7704,7 +8088,8 @@ literal "false"
 פונקציה חלקה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $I\subseteq\bbr$
 \end_inset
 
@@ -7722,7 +8107,8 @@ literal "false"
 כלל לייבניץ
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $f,g\in\bbr^{I}$
 \end_inset
 
@@ -7738,7 +8124,8 @@ literal "false"
 \series bold
 נקודת קיצון מקומית/אקסטרמום
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -7746,7 +8133,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-מקסימום: 
+מקסימום:
+ 
 \begin_inset Formula $x_{0}\in I$
 \end_inset
 
@@ -7758,7 +8146,8 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-מינימום: 
+מינימום:
+ 
 \begin_inset Formula $x_{0}\in I$
 \end_inset
 
@@ -7774,7 +8163,8 @@ literal "false"
 \series bold
 משפט פרמה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -7798,7 +8188,8 @@ literal "false"
 \series bold
 משפט רול
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -7822,7 +8213,8 @@ literal "false"
 \series bold
 משפט לגרנז'
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -7842,19 +8234,20 @@ literal "false"
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
- גזירה אזי )
+ גזירה אזי (
 \begin_inset Formula $f'$
 \end_inset
 
- חסומה(
+ חסומה)
 \begin_inset Formula $\impliedby$
 \end_inset
 
-)
+(
 \begin_inset Formula $f$
 \end_inset
 
@@ -7862,7 +8255,7 @@ literal "false"
 \begin_inset Quotes erd
 \end_inset
 
-ש(.
+ש).
 \end_layout
 
 \begin_layout Standard
@@ -7870,7 +8263,8 @@ literal "false"
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\forall x>0.e^{x}>1+x$
 \end_inset
 
@@ -7882,7 +8276,8 @@ literal "false"
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\forall x,y\in\bbr.\left|\sin\left(x\right)-\sin\left(y\right)\right|\le\left|x-y\right|$
 \end_inset
 
@@ -7894,7 +8289,8 @@ literal "false"
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\bbr\right)$
 \end_inset
 
@@ -7914,7 +8310,8 @@ literal "false"
 \series bold
 מסקנה
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $g,h\in\bbr^{I}$
 \end_inset
 
@@ -7934,7 +8331,8 @@ literal "false"
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\bbr\right)$
 \end_inset
 
@@ -7954,7 +8352,8 @@ literal "false"
 \series bold
 משפט הערך הממוצע של קושי
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $f,g\in C\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -7974,7 +8373,8 @@ literal "false"
 \series bold
 משפט
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -8018,7 +8418,8 @@ literal "false"
 \series bold
 משפט
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -8070,7 +8471,8 @@ literal "false"
 \series bold
 משפט
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[a,b\right)\right)$
 \end_inset
 
@@ -8094,7 +8496,8 @@ literal "false"
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
 \end_inset
 
@@ -8110,11 +8513,12 @@ literal "false"
 \series bold
 למה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
 \end_inset
 
- גזירה אזי )
+ גזירה אזי (
 \begin_inset Formula $f'_{+}\left(a\right)<0$
 \end_inset
 
@@ -8122,11 +8526,11 @@ literal "false"
 \begin_inset Formula $a$
 \end_inset
 
- לא מינימום מקומי(
+ לא מינימום מקומי)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $f'_{-}\left(b\right)>0$
 \end_inset
 
@@ -8134,7 +8538,7 @@ literal "false"
 \begin_inset Formula $b$
 \end_inset
 
- לא מקסימום מקומי(.
+ לא מקסימום מקומי).
 \end_layout
 
 \begin_layout Standard
@@ -8142,7 +8546,8 @@ literal "false"
 \series bold
 משפט דרבו
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{\left[a,b\right]}$
 \end_inset
 
@@ -8158,7 +8563,8 @@ literal "false"
 \series bold
 כלל לופיטל
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $f,g\in\bbr^{I}$
 \end_inset
 
@@ -8192,7 +8598,8 @@ literal "false"
 \series bold
 אי־שיוויון יאנג
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x,y>0$
 \end_inset
 
@@ -8216,7 +8623,8 @@ literal "false"
 \series bold
 אי־שיוויון הולדר
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x,y\in\bbr^{n}$
 \end_inset
 
@@ -8240,7 +8648,8 @@ literal "false"
 \series bold
 אי־שיוויון מינקובסקי
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x,y\in\bbr^{n}$
 \end_inset
 
@@ -8270,7 +8679,8 @@ literal "false"
 מחלקות שקילות אסימפטוטית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f,g\in\bbr^{I}$
 \end_inset
 
@@ -8372,7 +8782,8 @@ literal "false"
 למה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $f,g\in\bbr^{I}$
 \end_inset
 
@@ -8394,7 +8805,8 @@ literal "false"
 מזדהה עד סדר
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $f,g\in\bbr^{I}$
 \end_inset
 
@@ -8420,7 +8832,8 @@ literal "false"
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $f,g\in\bbr^{\left(a,b\right)}$
 \end_inset
 
@@ -8446,7 +8859,8 @@ literal "false"
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $h\in\bbr^{I}$
 \end_inset
 
@@ -8458,7 +8872,7 @@ literal "false"
 \begin_inset Formula $h\in o\left(\left(x-x_{0}\right)^{n}\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $h$
 \end_inset
 
@@ -8470,15 +8884,15 @@ literal "false"
 \begin_inset Formula $x_{0}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $h^{\left(k\right)}\left(x_{0}\right)=0$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -8488,7 +8902,8 @@ literal "false"
 פולינום טיילור
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -8526,7 +8941,8 @@ literal "false"
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $k\in\bbn$
 \end_inset
 
@@ -8551,7 +8967,8 @@ j! & j=k\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -8585,7 +9002,8 @@ j! & j=k\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -8611,7 +9029,8 @@ j! & j=k\\
 שארית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -8637,7 +9056,8 @@ j! & j=k\\
 משפט פאנו
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -8663,7 +9083,8 @@ j! & j=k\\
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $g\in\bbr^{\left(a,b\right)}$
 \end_inset
 
@@ -8693,7 +9114,8 @@ j! & j=k\\
 משפט השארית של לגרנז'
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{\left(a,b\right)}$
 \end_inset
 
@@ -8719,7 +9141,8 @@ j! & j=k\\
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{\infty}\left(\left(a,b\right)\right)$
 \end_inset
 
@@ -8737,7 +9160,8 @@ j! & j=k\\
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{\infty}\left(\left(a,b\right)\right)$
 \end_inset
 
@@ -8759,7 +9183,8 @@ j! & j=k\\
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{\infty}\left(\left(a,b\right)\right)$
 \end_inset
 
@@ -8789,7 +9214,8 @@ j! & j=k\\
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\cos\left(x\right)=\sum_{n=0}^{\infty}\left(-1\right)^{n}\frac{x^{2n}}{\left(2n\right)!}\right)\land\left(\sin\left(x\right)=\sum_{n=0}^{\infty}\left(-1\right)^{n}\frac{x^{2n+1}}{\left(2n+1\right)!}\right)\land\left(e^{x}=\sum_{n=0}^{\infty}\frac{x^{n}}{n!}\right)$
 \end_inset
 
@@ -8803,7 +9229,8 @@ j! & j=k\\
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $e\notin\bbq$
 \end_inset
 
@@ -8817,7 +9244,8 @@ j! & j=k\\
 משפט השארית של קושי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{\left(a,b\right)}$
 \end_inset
 
@@ -8843,7 +9271,8 @@ j! & j=k\\
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left|x\right|<1$
 \end_inset
 
@@ -8861,7 +9290,8 @@ j! & j=k\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{n+1}\left(\left(a,b\right)\right)$
 \end_inset
 
@@ -8937,7 +9367,8 @@ j! & j=k\\
 פונקציה קמורה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -8955,7 +9386,8 @@ j! & j=k\\
 פונקציה קעורה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -8973,7 +9405,8 @@ j! & j=k\\
 נקודת פיתול
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -8981,19 +9414,19 @@ j! & j=k\\
 \begin_inset Formula $x_{0}$
 \end_inset
 
- המקיימת )
+ המקיימת (
 \begin_inset Formula $f$
 \end_inset
 
- קעורה מאחד מצדדיה(
+ קעורה מאחד מצדדיה)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $f$
 \end_inset
 
- קמורה מאחד מצדדיה(.
+ קמורה מאחד מצדדיה).
 \end_layout
 
 \begin_layout Standard
@@ -9003,7 +9436,8 @@ j! & j=k\\
 משפט שלושת המיתרים
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -9011,10 +9445,7 @@ j! & j=k\\
 \begin_inset Formula $x_{1}<x_{2}<x_{3}$
 \end_inset
 
- מתקיים
-\end_layout
-
-\begin_layout Standard
+ מתקיים 
 \begin_inset Formula $\frac{f\left(x_{2}\right)-f\left(x_{1}\right)}{x_{2}-x_{1}}\le\frac{f\left(x_{3}\right)-f\left(x_{1}\right)}{x_{3}-x_{1}}\le\frac{f\left(x_{3}\right)-f\left(x_{2}\right)}{x_{3}-x_{2}}$
 \end_inset
 
@@ -9028,7 +9459,8 @@ j! & j=k\\
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{I}$
 \end_inset
 
@@ -9074,7 +9506,8 @@ j! & j=k\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\bbr^{\left(a,b\right)}$
 \end_inset
 

@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -74,11 +74,11 @@
 \end_preamble
 \options no-math
 \use_default_options true
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language hebrew
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "David CLM"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -86,7 +86,9 @@
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -97,10 +99,11 @@
 \bibtex_command default
 \index_command default
 \float_placement H
+\float_alignment class
 \paperfontsize default
 \spacing onehalf
 \use_hyperref false
-\papersize letterpaper
+\papersize letter
 \use_geometry true
 \use_package amsmath 2
 \use_package amssymb 2
@@ -121,7 +124,9 @@
 \suppress_date true
 \justification false
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -141,11 +146,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -154,6 +164,7 @@
 \begin_inset CommandInset include
 LatexCommand include
 filename "../../macros.lyx"
+literal "true"
 
 \end_inset
 
@@ -192,7 +203,8 @@ filename "../../macros.lyx"
 \series bold
 טופולוגיה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -237,13 +249,14 @@ filename "../../macros.lyx"
 \begin_layout Standard
 
 \series bold
-מרחב טופולוגי )מ
+מרחב טופולוגי (מ
 \begin_inset Quotes erd
 \end_inset
 
-ט(
+ט)
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -267,7 +280,8 @@ filename "../../macros.lyx"
 \series bold
 קבוצה פתוחה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -287,7 +301,8 @@ filename "../../macros.lyx"
 \series bold
 קבוצה סגורה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -307,7 +322,8 @@ filename "../../macros.lyx"
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{T}\subseteq\P\left(X\right)$
 \end_inset
 
@@ -319,15 +335,15 @@ filename "../../macros.lyx"
 \begin_inset Formula $\forall\mathcal{U}\subseteq\mathcal{T}.\left(\bigcup\mathcal{U}\in\mathcal{T}\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\mathcal{T}$
 \end_inset
 
- טופולוגיה(
+ טופולוגיה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $U,V\in\mathcal{T}$
 \end_inset
 
@@ -335,7 +351,7 @@ filename "../../macros.lyx"
 \begin_inset Formula $U\cap V\in\mathcal{T}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -343,7 +359,8 @@ filename "../../macros.lyx"
 \series bold
 הטופולוגיה הטריוואלית
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -359,7 +376,8 @@ filename "../../macros.lyx"
 \series bold
 הטופולוגיה הבדידה/הדיסקרטית
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -375,7 +393,8 @@ filename "../../macros.lyx"
 \series bold
 הטופולוגיה המושרית ממרחב מטרי
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\rho\right)$
 \end_inset
 
@@ -391,7 +410,8 @@ filename "../../macros.lyx"
 \series bold
 טופולוגיה מטריזבילית
 \series default
-: מרחב טופולוגי 
+:
+ מרחב טופולוגי 
 \begin_inset Formula $\left(X,\mathcal{T}_{X}\right)$
 \end_inset
 
@@ -411,7 +431,8 @@ filename "../../macros.lyx"
 \series bold
 הטופולוגיה הקו־סופית
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -427,7 +448,8 @@ filename "../../macros.lyx"
 \series bold
 משפט
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -478,7 +500,8 @@ filename "../../macros.lyx"
 \series bold
 בסיס לטופולוגיה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -531,7 +554,8 @@ filename "../../macros.lyx"
 הטופולוגיה הנוצרת מבסיס
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -557,7 +581,8 @@ filename "../../macros.lyx"
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -583,7 +608,8 @@ filename "../../macros.lyx"
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\mathcal{B}_{E}=\left\{ \left(a,b\right)\mid a<b\right\} $
 \end_inset
 
@@ -605,7 +631,8 @@ filename "../../macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\mathcal{B}_{E},\mathcal{B}_{\text{Sorg}},\mathcal{B}_{K}$
 \end_inset
 
@@ -623,7 +650,8 @@ filename "../../macros.lyx"
 הטופולוגיה האוקלידית/הסטנדרטית
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr=\left(\bbr,\mathcal{T}\left(\mathcal{B}_{E}\right)\right)$
 \end_inset
 
@@ -637,7 +665,8 @@ filename "../../macros.lyx"
 הישר של זורגנפריי
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr_{\text{Sorg}}=\left(\bbr,\mathcal{T}\left(\mathcal{B}_{\text{Sorg}}\right)\right)$
 \end_inset
 
@@ -655,7 +684,8 @@ filename "../../macros.lyx"
 
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr_{K}=\left(\bbr,\mathcal{T}\left(\mathcal{B}_{K}\right)\right)$
 \end_inset
 
@@ -669,7 +699,8 @@ filename "../../macros.lyx"
 משפט אפיון שקול לטופולוגיה נוצרת
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\mathcal{B}\subseteq\P\left(X\right)$
 \end_inset
 
@@ -687,7 +718,8 @@ filename "../../macros.lyx"
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\mathcal{B}_{1},\mathcal{B}_{2}\subseteq\P\left(X\right)$
 \end_inset
 
@@ -713,7 +745,8 @@ filename "../../macros.lyx"
 טופולוגיה עדינה לטופולוגיה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -743,7 +776,8 @@ filename "../../macros.lyx"
 טופולוגיה גסה לטופולוגיה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -773,7 +807,8 @@ filename "../../macros.lyx"
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -807,7 +842,8 @@ filename "../../macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -825,7 +861,8 @@ filename "../../macros.lyx"
 טופולוגיית הסדר
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -847,7 +884,8 @@ filename "../../macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr$
 \end_inset
 
@@ -865,7 +903,8 @@ filename "../../macros.lyx"
 תת בסיס
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -886,7 +925,8 @@ filename "../../macros.lyx"
 \color blue
 הטופולוגיה הנוצרת מתת־בסיס
 \color inherit
-: 
+:
+ 
 \series default
 תהא 
 \begin_inset Formula $X$
@@ -914,7 +954,8 @@ filename "../../macros.lyx"
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -940,7 +981,8 @@ filename "../../macros.lyx"
 טופולוגיית זריצקי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\bbf$
 \end_inset
 
@@ -962,7 +1004,8 @@ filename "../../macros.lyx"
 סביבה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -992,7 +1035,8 @@ filename "../../macros.lyx"
 פנים של קבוצה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -1021,7 +1065,8 @@ U\in\mathcal{T}
 סגור של קבוצה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -1050,7 +1095,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 שפה של קבוצה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -1076,7 +1122,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -1102,7 +1149,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -1138,7 +1186,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -1215,7 +1264,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -1241,7 +1291,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -1257,15 +1308,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $x\in X$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $x\in\partial A$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $U\in\mathcal{T}$
 \end_inset
 
@@ -1281,7 +1332,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $U\cap A^{\mathcal{C}}\ne\emptyset$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -1291,7 +1342,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 קבוצה צפופה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -1317,7 +1369,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טופולוגיית הנקודה הייחודית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -1339,7 +1392,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 נקודת הצטברות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -1377,7 +1431,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 גבול
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -1415,7 +1470,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -1441,7 +1497,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq X$
 \end_inset
 
@@ -1459,23 +1516,24 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq X$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $A$
 \end_inset
 
- סגורה(
+ סגורה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left\{ x\in X\mid A\text{ נקודת הצטברות של }x\right\} \subseteq A$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -1485,7 +1543,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 פונקציה רציפה בנקודה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left(X,\mathcal{T}\right),\left(Y,\mathcal{S}\right)$
 \end_inset
 
@@ -1532,7 +1591,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 פונקציה רציפה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left(X,\mathcal{T}\right),\left(Y,\mathcal{S}\right)$
 \end_inset
 
@@ -1558,7 +1618,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left(X,\mathcal{T}\right),\left(Y,\mathcal{S}\right)$
 \end_inset
 
@@ -1643,7 +1704,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 הומיאומורפיזם
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left(X,\mathcal{T}\right),\left(Y,\mathcal{S}\right)$
 \end_inset
 
@@ -1673,7 +1735,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left(X,\mathcal{T}\right),\left(Y,\mathcal{S}\right)$
 \end_inset
 
@@ -1708,19 +1771,19 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $U\subseteq Y$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $U$
 \end_inset
 
- פתוחה(
+ פתוחה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $f^{-1}\left(U\right)$
 \end_inset
 
- פתוחה(.
+ פתוחה).
 \end_layout
 
 \begin_layout Itemize
@@ -1728,19 +1791,19 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $E\subseteq Y$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $E$
 \end_inset
 
- סגורה(
+ סגורה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $f^{-1}\left(E\right)$
 \end_inset
 
- סגורה(.
+ סגורה).
 \end_layout
 
 \begin_layout Itemize
@@ -1762,7 +1825,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 הטופולוגיה המושרית על קבוצה מפונקציה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -1792,7 +1856,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -1826,7 +1891,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -1857,14 +1923,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 
 \series bold
 \color green
-תת מרחב טופולוגי )ת
+תת מרחב טופולוגי (ת
 \begin_inset Quotes erd
 \end_inset
 
-מ(
+מ)
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -1890,7 +1957,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -1920,7 +1988,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -1946,7 +2015,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
@@ -1980,7 +2050,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A\subseteq X$
 \end_inset
 
@@ -1992,7 +2063,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $U\subseteq A$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $U$
 \end_inset
 
@@ -2000,11 +2071,11 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\mathcal{T}_{A}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימת 
+(קיימת 
 \begin_inset Formula $V$
 \end_inset
 
@@ -2016,7 +2087,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $V\cap A=U$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Itemize
@@ -2024,7 +2095,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $E\subseteq A$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $E$
 \end_inset
 
@@ -2032,11 +2103,11 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\mathcal{T}_{A}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימת 
+(קיימת 
 \begin_inset Formula $F$
 \end_inset
 
@@ -2048,7 +2119,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $F\cap A=E$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Itemize
@@ -2082,7 +2153,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\mathcal{T}_{X}\right)$
 \end_inset
 
@@ -2110,7 +2182,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $X$
 \end_inset
 
-, תהא 
+,
+ תהא 
 \begin_inset Formula $A\subseteq Y$
 \end_inset
 
@@ -2138,7 +2211,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $X$
 \end_inset
 
-, תהא 
+,
+ תהא 
 \begin_inset Formula $A\subseteq Y$
 \end_inset
 
@@ -2164,7 +2238,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Z$
 \end_inset
 
@@ -2198,7 +2273,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -2232,7 +2308,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Z$
 \end_inset
 
@@ -2270,7 +2347,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Z$
 \end_inset
 
@@ -2282,15 +2360,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $f:X\to Y$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $f$
 \end_inset
 
- רציפה(
+ רציפה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימות 
+(קיימות 
 \begin_inset Formula $\left\{ U_{\a}\right\} _{\a\in\Lambda}\subseteq\P\left(X\right)$
 \end_inset
 
@@ -2306,7 +2384,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\a\in\Lambda$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -2316,7 +2394,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y,Z$
 \end_inset
 
@@ -2346,7 +2425,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 משפט למת ההדבקה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -2392,7 +2472,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -2426,7 +2507,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 שיכון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -2456,7 +2538,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 העתקת מנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -2482,7 +2565,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 הערה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -2508,7 +2592,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y,Z$
 \end_inset
 
@@ -2538,7 +2623,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2576,7 +2662,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טופולוגיית המנה המושרית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2614,7 +2701,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 העתקת נסג
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2648,7 +2736,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מרחב המנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2686,7 +2775,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 משפט התכונה האוניברסילית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:X\to Y$
 \end_inset
 
@@ -2717,35 +2807,35 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $h$
 \end_inset
 
- רציפה(
+ רציפה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $g$
 \end_inset
 
- רציפה(.
+ רציפה).
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $h$
 \end_inset
 
- העתקת מנה(
+ העתקת מנה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $g$
 \end_inset
 
- העתקת מנה(.
+ העתקת מנה).
 \end_layout
 
 \begin_layout Standard
@@ -2755,7 +2845,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:X\to Y$
 \end_inset
 
@@ -2775,35 +2866,35 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $g\circ f^{-1}$
 \end_inset
 
- רציפה(
+ רציפה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $g$
 \end_inset
 
- רציפה(.
+ רציפה).
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $g\circ f^{-1}$
 \end_inset
 
- העתקת מנה(
+ העתקת מנה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $g$
 \end_inset
 
- העתקת מנה(.
+ העתקת מנה).
 \end_layout
 
 \begin_layout Standard
@@ -2813,7 +2904,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $g:X\to Z$
 \end_inset
 
@@ -2821,19 +2913,19 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $f:X\to\left\{ g^{-1}\left(\left\{ z\right\} \right)\mid z\in Z\right\} $
 \end_inset
 
- העתקת מנה אזי )
+ העתקת מנה אזי (
 \begin_inset Formula $g\circ f^{-1}$
 \end_inset
 
- הומיאומורפיזם(
+ הומיאומורפיזם)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $g$
 \end_inset
 
- העתקת מנה(.
+ העתקת מנה).
 \end_layout
 
 \begin_layout Standard
@@ -2843,7 +2935,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 קבוצה רוויה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:X\to Y$
 \end_inset
 
@@ -2873,19 +2966,20 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:X\to Y$
 \end_inset
 
- רציפה אזי )
+ רציפה אזי (
 \begin_inset Formula $f$
 \end_inset
 
- העתקת מנה(
+ העתקת מנה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $f$
 \end_inset
 
@@ -2897,7 +2991,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $f\left(\mathcal{U}\right)$
 \end_inset
 
- פתוחה ורוויה(.
+ פתוחה ורוויה).
 \end_layout
 
 \begin_layout Standard
@@ -2907,7 +3001,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 העתקה פתוחה
 \series default
 \color inherit
-: העתקה 
+:
+ העתקה 
 \begin_inset Formula $f:X\to Y$
 \end_inset
 
@@ -2929,7 +3024,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 העתקה סגורה
 \series default
 \color inherit
-: העתקה 
+:
+ העתקה 
 \begin_inset Formula $f:X\to Y$
 \end_inset
 
@@ -2951,7 +3047,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:X\to Y$
 \end_inset
 
@@ -2994,7 +3091,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:X\to Y$
 \end_inset
 
@@ -3037,7 +3135,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:X\to Y$
 \end_inset
 
@@ -3055,7 +3154,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:X\to Y$
 \end_inset
 
@@ -3073,7 +3173,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 המרחב הפרויקטיבי הממשי
 \series default
 \color inherit
-: נגדיר 
+:
+ נגדיר 
 \begin_inset Formula $\sim=\left\{ \left(x,y\right)\in\left(\bbr^{n+1}\backslash\left\{ 0\right\} \right)^{2}\bmid\exists\lambda\in\bbr\left(x=\lambda y\right)\right\} $
 \end_inset
 
@@ -3098,7 +3199,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מכפלה של קבוצות
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\left\{ X_{\a}\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -3116,7 +3218,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -3142,7 +3245,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טופולוגיית התיבה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -3164,7 +3268,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 הטלה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\left\{ X_{\a}\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -3186,7 +3291,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -3212,7 +3318,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טופולוגיית המכפלה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -3234,7 +3341,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -3260,7 +3368,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -3286,7 +3395,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -3320,7 +3430,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -3342,19 +3453,20 @@ E^{\mathcal{C}}\in\mathcal{T}
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:Y\to\left(\prod_{\a}X_{\a},\t_{\text{prod}}\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $f$
 \end_inset
 
- רציפה(
+ רציפה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\pi_{\a}\circ f$
 \end_inset
 
@@ -3362,7 +3474,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\a$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -3372,7 +3484,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left|\Lambda\right|\ge\aleph_{0}$
 \end_inset
 
@@ -3390,7 +3503,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left|\Lambda\right|\ge\aleph_{0}$
 \end_inset
 
@@ -3408,7 +3522,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 תכונה טופולוגית
 \series default
 \color inherit
-: תכונה 
+:
+ תכונה 
 \begin_inset Formula $P$
 \end_inset
 
@@ -3428,7 +3543,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $f:X\to Y$
 \end_inset
 
- הומיאומורפיזם מתקיים )
+ הומיאומורפיזם מתקיים (
 \begin_inset Formula $X$
 \end_inset
 
@@ -3436,11 +3551,11 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $P$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $Y$
 \end_inset
 
@@ -3448,7 +3563,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $P$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -3458,7 +3573,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: מטריזביליות הינה תכונה טופולוגית.
+:
+ מטריזביליות הינה תכונה טופולוגית.
 \end_layout
 
 \begin_layout Standard
@@ -3468,7 +3584,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 הפרדה של מרחב טופולוגי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\t\right)$
 \end_inset
 
@@ -3506,7 +3623,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מרחב טופולוגי קשיר
 \series default
 \color inherit
-: מרחב טופולוגי 
+:
+ מרחב טופולוגי 
 \begin_inset Formula $\left(X,\t\right)$
 \end_inset
 
@@ -3520,7 +3638,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מרחב טופולוגי אי־קשיר
 \series default
 \color inherit
-: מרחב טופולוגי 
+:
+ מרחב טופולוגי 
 \begin_inset Formula $\left(X,\t\right)$
 \end_inset
 
@@ -3541,23 +3660,24 @@ E^{\mathcal{C}}\in\mathcal{T}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f:X\to Y$
 \end_inset
 
- הומיאומורפיזם אזי )
+ הומיאומורפיזם אזי (
 \begin_inset Formula $X$
 \end_inset
 
- קשיר(
+ קשיר)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $Y$
 \end_inset
 
- קשיר(.
+ קשיר).
 \end_layout
 
 \begin_layout Standard
@@ -3567,7 +3687,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: קשירות הינה תכונה טופולוגית.
+:
+ קשירות הינה תכונה טופולוגית.
 \end_layout
 
 \begin_layout Standard
@@ -3577,7 +3698,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -3622,7 +3744,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -3648,7 +3771,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -3660,15 +3784,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $Y\subseteq X$
 \end_inset
 
- תת־מרחב אזי )
+ תת־מרחב אזי (
 \begin_inset Formula $Y$
 \end_inset
 
- אי־קשיר(
+ אי־קשיר)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימות 
+(קיימות 
 \begin_inset Formula $H,K\in\P\left(X\right)\backslash\left\{ X,\emptyset\right\} $
 \end_inset
 
@@ -3680,7 +3804,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\overline{H}\cap K=H\cap\overline{K}=\emptyset$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -3690,7 +3814,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(\u,\v\right)$
 \end_inset
 
@@ -3716,7 +3841,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A,B\subseteq X$
 \end_inset
 
@@ -3742,7 +3868,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq X$
 \end_inset
 
@@ -3760,7 +3887,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{A}\subseteq\P\left(X\right)$
 \end_inset
 
@@ -3794,7 +3922,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\left\{ X_{n}\right\} _{n=0}^{\infty}\subseteq\P\left(X\right)\backslash\left\{ \emptyset\right\} $
 \end_inset
 
@@ -3824,7 +3953,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr$
 \end_inset
 
@@ -3838,7 +3968,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(-1,1\right)$
 \end_inset
 
@@ -3856,7 +3987,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbr$
 \end_inset
 
@@ -3882,7 +4014,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbr$
 \end_inset
 
@@ -3904,7 +4037,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr_{\text{Sorg}}$
 \end_inset
 
@@ -3918,7 +4052,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ X_{\a}\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -3926,7 +4061,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-טים אזי )
+טים אזי (
 \begin_inset Formula $X_{\a}$
 \end_inset
 
@@ -3934,15 +4069,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\a\in\Lambda$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left(\prod X_{\a},\t_{\text{prod}}\right)$
 \end_inset
 
- קשיר(.
+ קשיר).
 \end_layout
 
 \begin_layout Standard
@@ -3952,7 +4087,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\prod_{i=1}^{\infty}\bbr,\t_{\text{box}}\right)$
 \end_inset
 
@@ -3966,7 +4102,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -3984,7 +4121,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסילה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4018,7 +4156,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מרחב טופולוגי קשיר מסילתית
 \series default
 \color inherit
-: מרחב טופולוגי 
+:
+ מרחב טופולוגי 
 \begin_inset Formula $\left(X,\t\right)$
 \end_inset
 
@@ -4044,7 +4183,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4066,7 +4206,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n>1$
 \end_inset
 
@@ -4093,7 +4234,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 למה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4117,7 +4259,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 מסקנה
 \series default
-: קשירות מסילתית הינה תכונה טופולוגית.
+:
+ קשירות מסילתית הינה תכונה טופולוגית.
 \end_layout
 
 \begin_layout Standard
@@ -4125,7 +4268,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\bbc^{n}$
 \end_inset
 
@@ -4149,7 +4293,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 מסקנה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\M[n\times n][\bbc]$
 \end_inset
 
@@ -4169,7 +4314,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 סימון
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4181,15 +4327,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $x,y\in X$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $x\sim_{\text{קשיר}}y$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימת 
+(קיימת 
 \begin_inset Formula $D\subseteq X$
 \end_inset
 
@@ -4197,7 +4343,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $x,y\in D$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -4205,7 +4351,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4229,7 +4376,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 רכיבי קשירות
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4249,7 +4397,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 סימון
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4261,15 +4410,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $x,y\in X$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $x\sim_{\text{קשיר מסילתית}}y$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימת מסילה מ־
+(קיימת מסילה מ־
 \begin_inset Formula $x$
 \end_inset
 
@@ -4277,7 +4426,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $y$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -4285,7 +4434,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4309,7 +4459,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 רכיבי קשירות מסילתית
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4329,7 +4480,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 משפט
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ D_{\a}\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -4397,7 +4549,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 משפט
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ D_{\a}\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -4465,7 +4618,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 מסקנה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $D$
 \end_inset
 
@@ -4494,7 +4648,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מרחב טופולוגי קשיר מקומית נקודתית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4532,7 +4687,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מרחב טופולוגי קשיר מקומית
 \series default
 \color inherit
-: מרחב טופולוגי 
+:
+ מרחב טופולוגי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4558,7 +4714,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: קשירות מקומית הינה תכונה טופולוגית.
+:
+ קשירות מקומית הינה תכונה טופולוגית.
 \end_layout
 
 \begin_layout Standard
@@ -4568,7 +4725,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מרחב טופולוגי קשיר מסילתית מקומית נקודתית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4606,7 +4764,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מרחב טופולוגי קשיר מסילתית מקומית
 \series default
 \color inherit
-: מרחב טופולוגי 
+:
+ מרחב טופולוגי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4632,7 +4791,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: קשירות מקומית מסילתית הינה תכונה טופולוגית.
+:
+ קשירות מקומית מסילתית הינה תכונה טופולוגית.
 \end_layout
 
 \begin_layout Standard
@@ -4642,7 +4802,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr_{\text{Sorg}}$
 \end_inset
 
@@ -4656,7 +4817,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4664,15 +4826,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-ט אזי )
+ט אזי (
 \begin_inset Formula $X$
 \end_inset
 
- קשיר מקומית(
+ קשיר מקומית)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $\u\in\t$
 \end_inset
 
@@ -4688,7 +4850,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $D\in\t$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -4698,7 +4860,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4706,15 +4869,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-ט אזי )
+ט אזי (
 \begin_inset Formula $X$
 \end_inset
 
- קשיר מסילתית מקומית(
+ קשיר מסילתית מקומית)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $\u\in\t$
 \end_inset
 
@@ -4730,7 +4893,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $D\in\t$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -4740,7 +4903,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4762,7 +4926,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 בסיס סביבות בן מנייה בנקודה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4808,7 +4973,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מרחב טופולוגי המקיים את אקסיומת המניה הראשונה
 \series default
 \color inherit
-: מרחב טופולוגי 
+:
+ מרחב טופולוגי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4830,7 +4996,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4856,7 +5023,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr_{\text{Sorg}}$
 \end_inset
 
@@ -4874,7 +5042,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4892,7 +5061,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr$
 \end_inset
 
@@ -4910,7 +5080,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4940,7 +5111,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -4960,15 +5132,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $f:X\to Y$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $f$
 \end_inset
 
- רציפה(
+ רציפה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $\left\{ x_{n}\right\} \subseteq X$
 \end_inset
 
@@ -4988,7 +5160,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $f\left(a\right)$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -4998,7 +5170,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מרחב טופולוגי המקיים את אקסיומת המניה השנייה
 \series default
 \color inherit
-: מרחב טופולוגי 
+:
+ מרחב טופולוגי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5016,7 +5189,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5046,7 +5220,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr^{n}$
 \end_inset
 
@@ -5064,7 +5239,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr^{\aleph_{0}}=\prod_{i=1}^{\infty}\bbr$
 \end_inset
 
@@ -5078,7 +5254,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\bbr^{\aleph_{0}},\t_{\text{prod}}\right)$
 \end_inset
 
@@ -5096,7 +5273,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\bbr^{\aleph_{0}},\t_{\text{box}}\right)$
 \end_inset
 
@@ -5114,7 +5292,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr_{\text{Sorg}}$
 \end_inset
 
@@ -5132,11 +5311,12 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
- המצוייד עם הטופולוגיה הבדידה אזי )
+ המצוייד עם הטופולוגיה הבדידה אזי (
 \begin_inset Formula $X$
 \end_inset
 
@@ -5144,15 +5324,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\text{II}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\aleph_{0}\ge\left|X\right|$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -5162,7 +5342,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5187,7 +5368,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: נגדיר 
+:
+ נגדיר 
 \begin_inset Formula $d_{u}:\bbr^{\aleph_{0}}\times\bbr^{\aleph_{0}}\to\bbr$
 \end_inset
 
@@ -5209,7 +5391,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 הטופולוגיה האחידה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\bbr^{\aleph_{0}},\t\left(d_{u}\right)\right)$
 \end_inset
 
@@ -5231,7 +5414,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5265,7 +5449,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5299,7 +5484,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5333,7 +5519,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: מניה 
+:
+ מניה 
 \begin_inset Formula $\text{I}$
 \end_inset
 
@@ -5347,7 +5534,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5381,7 +5569,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: מניה 
+:
+ מניה 
 \begin_inset Formula $\text{II}$
 \end_inset
 
@@ -5395,7 +5584,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מרחב טופולוגי ספרבילי
 \series default
 \color inherit
-: מרחב טופולוגי 
+:
+ מרחב טופולוגי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5413,7 +5603,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מרחב טופולוגי לינדלוף
 \series default
 \color inherit
-: מרחב טופולוגי 
+:
+ מרחב טופולוגי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5443,7 +5634,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr_{\text{Sorg}}$
 \end_inset
 
@@ -5457,23 +5649,24 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
- המצוייד עם הטופולוגיה הבדידה אזי )
+ המצוייד עם הטופולוגיה הבדידה אזי (
 \begin_inset Formula $X$
 \end_inset
 
- ספרבילי(
+ ספרבילי)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\aleph_{0}\ge\left|X\right|$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -5483,7 +5676,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5501,7 +5695,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr$
 \end_inset
 
@@ -5522,7 +5717,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5548,7 +5744,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr$
 \end_inset
 
@@ -5566,7 +5763,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\mathcal{B}$
 \end_inset
 
@@ -5574,15 +5772,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $X$
 \end_inset
 
- לינדלוף(
+ לינדלוף)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $\left\{ \mathcal{B}_{\a}\right\} _{\a\in\Lambda}\subseteq\mathcal{B}$
 \end_inset
 
@@ -5598,7 +5796,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\bigcup_{i=0}^{\infty}\mathcal{B}_{f\left(i\right)}=X$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -5608,7 +5806,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr_{\text{Sorg}}$
 \end_inset
 
@@ -5622,7 +5821,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5648,7 +5848,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: ספרביליות הינה תכונה טופולוגית.
+:
+ ספרביליות הינה תכונה טופולוגית.
 \end_layout
 
 \begin_layout Standard
@@ -5658,7 +5859,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5684,7 +5886,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: לינדלוף הינה תכונה טופולוגית.
+:
+ לינדלוף הינה תכונה טופולוגית.
 \end_layout
 
 \begin_layout Standard
@@ -5694,7 +5897,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5720,7 +5924,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5746,7 +5951,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ X_{\a}\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -5780,7 +5986,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ X_{\a}\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -5814,7 +6021,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ X_{\a}\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -5840,7 +6048,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5887,7 +6096,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 
 \series default
 \color inherit
-: מרחב טופולוגי 
+:
+ מרחב טופולוגי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5933,7 +6143,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 
 \series default
 \color inherit
-: מרחב טופולוגי 
+:
+ מרחב טופולוגי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5979,7 +6190,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 /האוסדורף
 \series default
 \color inherit
-: מרחב טופולוגי 
+:
+ מרחב טופולוגי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6017,7 +6229,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $T_{0},T_{1},T_{2}$
 \end_inset
 
@@ -6031,7 +6244,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6057,7 +6271,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6083,7 +6298,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6109,7 +6325,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\t,\s$
 \end_inset
 
@@ -6151,7 +6368,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr_{\text{Sorg}}$
 \end_inset
 
@@ -6165,7 +6383,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbq$
 \end_inset
 
@@ -6187,7 +6406,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr$
 \end_inset
 
@@ -6209,7 +6429,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,d\right)$
 \end_inset
 
@@ -6231,7 +6452,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(X,\t\right)$
 \end_inset
 
@@ -6280,7 +6502,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6314,7 +6537,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ X_{\a}\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -6322,7 +6546,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-טים אזי )
+טים אזי (
 \begin_inset Formula $X_{\a}$
 \end_inset
 
@@ -6334,11 +6558,11 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\a\in\Lambda$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left(\prod X_{\a},\t_{\text{prod}}\right)$
 \end_inset
 
@@ -6346,7 +6570,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $T_{i}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -6356,7 +6580,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 הישר עם הראשית הכפולה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\bbr\times\left\{ 0,1\right\} $
 \end_inset
 
@@ -6390,7 +6615,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\t\right)$
 \end_inset
 
@@ -6398,7 +6624,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-ט אזי )
+ט אזי (
 \begin_inset Formula $\t$
 \end_inset
 
@@ -6406,11 +6632,11 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $T_{1}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left\{ x\right\} $
 \end_inset
 
@@ -6418,7 +6644,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $x\in X$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -6428,7 +6654,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\t\right)$
 \end_inset
 
@@ -6436,7 +6663,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-ט אזי )
+ט אזי (
 \begin_inset Formula $\t$
 \end_inset
 
@@ -6444,11 +6671,11 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $T_{1}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $A\subseteq X$
 \end_inset
 
@@ -6459,7 +6686,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 }\u$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -6469,7 +6696,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6507,7 +6735,8 @@ E^{\mathcal{C}}\in\mathcal{T}
  מקומית
 \series default
 \color inherit
-: מ
+:
+ מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -6545,7 +6774,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6575,7 +6805,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6605,7 +6836,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: הישר עם הראשית הכפולה הינו 
+:
+ הישר עם הראשית הכפולה הינו 
 \begin_inset Formula $T_{2}$
 \end_inset
 
@@ -6627,7 +6859,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6657,7 +6890,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6702,7 +6936,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6722,7 +6957,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $x\in X$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $x$
 \end_inset
 
@@ -6730,11 +6965,11 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $A$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $\u$
 \end_inset
 
@@ -6746,7 +6981,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\left|A\cap\u\right|\ge\aleph_{0}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -6756,7 +6991,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6764,19 +7000,19 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-ט אזי )
+ט אזי (
 \begin_inset Formula $X$
 \end_inset
 
- מרחב האוסדורף(
+ מרחב האוסדורף)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left\{ \left(a,a\right)\mid a\in X\right\} $
 \end_inset
 
- קבוצה סגורה(.
+ קבוצה סגורה).
 \end_layout
 
 \begin_layout Standard
@@ -6786,7 +7022,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מרחב טופולוגי רגולרי
 \series default
 \color inherit
-: מרחב טופולוגי 
+:
+ מרחב טופולוגי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6829,7 +7066,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מרחב טופולוגי נורמלי
 \series default
 \color inherit
-: מרחב טופולוגי 
+:
+ מרחב טופולוגי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6871,7 +7109,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 
 \series default
 \color inherit
-: מרחב טופולוגי 
+:
+ מרחב טופולוגי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6893,7 +7132,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 
 \series default
 \color inherit
-: מרחב טופולוגי 
+:
+ מרחב טופולוגי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6911,7 +7151,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $T_{3},T_{4}$
 \end_inset
 
@@ -6925,7 +7166,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6951,7 +7193,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6977,7 +7220,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr_{K}$
 \end_inset
 
@@ -6995,7 +7239,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טופולוגיית הקרניים ההולכות לאינסוף
 \series default
 \color inherit
-: נגדיר 
+:
+ נגדיר 
 \begin_inset Formula $\t=\left\{ \left(a,\infty\right)\mid a\in\bbr\right\} \cup\left\{ \emptyset,\bbr\right\} $
 \end_inset
 
@@ -7013,7 +7258,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr$
 \end_inset
 
@@ -7035,7 +7281,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr_{\text{Sorg}}$
 \end_inset
 
@@ -7053,7 +7300,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 סימון
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\u,\v\subseteq X$
 \end_inset
 
@@ -7079,7 +7327,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -7087,15 +7336,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-ט אזי )
+ט אזי (
 \begin_inset Formula $X$
 \end_inset
 
- רגולרי(
+ רגולרי)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $x\in X$
 \end_inset
 
@@ -7119,7 +7368,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\v\Subset\u$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -7129,7 +7378,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -7137,15 +7387,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-ט אזי )
+ט אזי (
 \begin_inset Formula $X$
 \end_inset
 
- נורמלי(
+ נורמלי)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $E\subseteq X$
 \end_inset
 
@@ -7165,7 +7415,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $E\subseteq\v\Subset\u$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -7175,7 +7425,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 משפט הלמה של אוריסון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -7183,15 +7434,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-ט אזי )
+ט אזי (
 \begin_inset Formula $X$
 \end_inset
 
- נורמלי(
+ נורמלי)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $A,B\subseteq X$
 \end_inset
 
@@ -7211,7 +7462,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $f_{\upharpoonright_{B}}=a$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -7228,7 +7479,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -7254,7 +7506,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -7280,7 +7533,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ X_{\a}\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -7288,7 +7542,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-טים אזי )
+טים אזי (
 \begin_inset Formula $X_{\a}$
 \end_inset
 
@@ -7296,15 +7550,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\a\in\Lambda$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left(\prod X_{\a},\t_{\text{prod}}\right)$
 \end_inset
 
- רגולרי(.
+ רגולרי).
 \end_layout
 
 \begin_layout Standard
@@ -7314,7 +7568,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ X_{\a}\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -7322,7 +7577,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-טים אזי )
+טים אזי (
 \begin_inset Formula $X_{\a}$
 \end_inset
 
@@ -7334,11 +7589,11 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\a\in\Lambda$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left(\prod X_{\a},\t_{\text{prod}}\right)$
 \end_inset
 
@@ -7346,7 +7601,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $T_{3}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -7356,7 +7611,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr_{\text{Sorg}}^{2}$
 \end_inset
 
@@ -7370,7 +7626,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -7392,7 +7649,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,\prec\right)$
 \end_inset
 
@@ -7410,7 +7668,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מרחב טופולוגי נורמלי לחלוטין
 \series default
 \color inherit
-: מ
+:
+ מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -7436,7 +7695,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 קבוצות מופרדות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -7466,7 +7726,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -7474,15 +7735,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-ט אזי )
+ט אזי (
 \begin_inset Formula $X$
 \end_inset
 
- נורמלי לחלוטין(
+ נורמלי לחלוטין)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $A,B\subseteq X$
 \end_inset
 
@@ -7498,7 +7759,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $B\subseteq\v$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -7508,7 +7769,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\mathcal{B}_{\text{moore},1}=\left\{ B_{r}\left(p\right)\mid\left(p\in\bbr\times\bbr_{\ge0}\right)\land\left(p_{2}>r>0\right)\right\} $
 \end_inset
 
@@ -7522,7 +7784,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\mathcal{B}_{\text{moore},2}=\left\{ B_{r}\left(p\right)\cup\left\{ \left(p_{1},0\right)\right\} \mid\left(p\in\bbr\times\bbr_{\ge0}\right)\land\left(p_{2}=r>0\right)\right\} $
 \end_inset
 
@@ -7536,7 +7799,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 המישור של מור
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr\times\bbr_{\ge0}$
 \end_inset
 
@@ -7554,7 +7818,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: המישור של מור הינו קשיר האוסדורף רגולרי וכן אינו נורמלי.
+:
+ המישור של מור הינו קשיר האוסדורף רגולרי וכן אינו נורמלי.
 \end_layout
 
 \begin_layout Standard
@@ -7571,7 +7836,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -7597,7 +7863,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -7619,7 +7886,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -7665,7 +7933,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ X_{n}\right\} _{n=0}^{\infty}$
 \end_inset
 
@@ -7673,7 +7942,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-טים אזי )
+טים אזי (
 \begin_inset Formula $X_{n}$
 \end_inset
 
@@ -7681,15 +7950,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left(\prod X_{n},\t_{\text{prod}}\right)$
 \end_inset
 
- מטריזבילי(.
+ מטריזבילי).
 \end_layout
 
 \begin_layout Standard
@@ -7699,7 +7968,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr^{\aleph_{0}}$
 \end_inset
 
@@ -7713,7 +7983,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 משפט המטריזציה של אוריסון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -7743,7 +8014,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מרחב טופולוגי מטריזבילי מקומית
 \series default
 \color inherit
-: מ
+:
+ מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -7777,7 +8049,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -7803,7 +8076,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מרחב טופולוגי קומפקטי
 \series default
 \color inherit
-: מרחב טופולוגי 
+:
+ מרחב טופולוגי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -7837,7 +8111,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\mathcal{B}$
 \end_inset
 
@@ -7845,15 +8120,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\left(X,\mathcal{T}\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $X$
 \end_inset
 
- קומפקטי(
+ קומפקטי)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $\left\{ \mathcal{B}_{\a}\right\} _{\a\in\Lambda}\subseteq\mathcal{B}$
 \end_inset
 
@@ -7873,7 +8148,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\bigcup_{i=0}^{n}\mathcal{B}_{f\left(i\right)}=X$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -7883,7 +8158,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $X$
 \end_inset
 
@@ -7897,23 +8173,24 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
- המצוייד עם הטופולוגיה הבדידה אזי )
+ המצוייד עם הטופולוגיה הבדידה אזי (
 \begin_inset Formula $X$
 \end_inset
 
- קומפקטי(
+ קומפקטי)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $X$
 \end_inset
 
- סופי(.
+ סופי).
 \end_layout
 
 \begin_layout Standard
@@ -7923,7 +8200,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -7949,7 +8227,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr$
 \end_inset
 
@@ -7963,7 +8242,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr$
 \end_inset
 
@@ -7977,7 +8257,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbr$
 \end_inset
 
@@ -7995,7 +8276,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbr$
 \end_inset
 
@@ -8020,7 +8302,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -8032,15 +8315,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $Y\subseteq X$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $Y$
 \end_inset
 
- קומפקטי(
+ קומפקטי)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $\left\{ \u_{\a}\right\} _{\a\in\Lambda}\subseteq\t_{X}$
 \end_inset
 
@@ -8060,7 +8343,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $Y\subseteq\bigcup_{i=0}^{n}\u_{f\left(i\right)}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -8070,7 +8353,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -8096,7 +8380,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -8134,7 +8419,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -8156,7 +8442,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -8174,7 +8461,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -8192,7 +8480,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -8214,7 +8503,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: קומפקטיות הינה תכונה טופולוגית.
+:
+ קומפקטיות הינה תכונה טופולוגית.
 \end_layout
 
 \begin_layout Standard
@@ -8224,7 +8514,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -8250,7 +8541,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -8280,6 +8572,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 תכונת החיתוך הסופי
 \series default
 :
+
 \color inherit
  יהי 
 \begin_inset Formula $X$
@@ -8315,7 +8608,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -8323,15 +8617,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-ט אזי )
+ט אזי (
 \begin_inset Formula $X$
 \end_inset
 
- קומקפטי(
+ קומקפטי)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $\mathcal{A}\subseteq\P\left(X\right)$
 \end_inset
 
@@ -8339,7 +8633,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\bigcap\mathcal{A}=\emptyset$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -8354,7 +8648,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 למה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -8402,7 +8697,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 למה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Z$
 \end_inset
 
@@ -8474,7 +8770,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 טענה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{n}$
 \end_inset
 
@@ -8482,7 +8779,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-טים אזי )
+טים אזי (
 \begin_inset Formula $X_{i}$
 \end_inset
 
@@ -8490,15 +8787,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $i\in\left[n\right]$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left(\prod_{i=1}^{n}X_{i},\t_{\text{prod}}\right)$
 \end_inset
 
- קומפקטי(.
+ קומפקטי).
 \end_layout
 
 \begin_layout Standard
@@ -8506,7 +8803,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 טענה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
 \end_inset
 
@@ -8514,7 +8812,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-טים אזי )
+טים אזי (
 \begin_inset Formula $X_{i}$
 \end_inset
 
@@ -8522,15 +8820,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $i\in\bbn$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left(\prod_{i=1}^{\infty}X_{i},\t_{\text{prod}}\right)$
 \end_inset
 
- קומפקטי(.
+ קומפקטי).
 \end_layout
 
 \begin_layout Standard
@@ -8538,11 +8836,12 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 טענה
 \series default
-: )אקסיומת הבחירה(
+:
+ (אקסיומת הבחירה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $\left|\Lambda\right|>\aleph_{0}$
 \end_inset
 
@@ -8554,7 +8853,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-טים מתקיים )
+טים מתקיים (
 \begin_inset Formula $X_{\a}$
 \end_inset
 
@@ -8562,15 +8861,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\a\in\Lambda$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left(\prod X_{\a},\t_{\text{prod}}\right)$
 \end_inset
 
- קומפקטי((.
+ קומפקטי)).
 \end_layout
 
 \begin_layout Standard
@@ -8578,7 +8877,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 מסקנה משפט טיכונוב
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ X_{\a}\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -8586,7 +8886,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Quotes erd
 \end_inset
 
-טים אזי )
+טים אזי (
 \begin_inset Formula $X_{\a}$
 \end_inset
 
@@ -8594,15 +8894,15 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\a\in\Lambda$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left(\prod X_{\a},\t_{\text{prod}}\right)$
 \end_inset
 
- קומפקטי(.
+ קומפקטי).
 \end_layout
 
 \begin_layout Standard
@@ -8610,7 +8910,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left\{ 0,1\right\} $
 \end_inset
 
@@ -8630,7 +8931,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -8670,7 +8972,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 מספר לבג
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -8710,7 +9013,8 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
