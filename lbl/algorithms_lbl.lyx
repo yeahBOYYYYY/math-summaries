@@ -1652,29 +1652,53 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{DFS}{DFS}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{DFS}{DFS}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
 DFS{$G,
- s$}}{     $
+ s$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 left(k,
  
@@ -1687,7 +1711,12 @@ gets$ dict($V$)
 \backslash
 
 \backslash
-     $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 text{color}
 \backslash
@@ -1695,13 +1724,23 @@ gets$ dict($E$)
 \backslash
 
 \backslash
-     $k[s] 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $k[s] 
 \backslash
 gets 1$
 \backslash
 
 \backslash
-     $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 pi[s] 
 \backslash
@@ -1711,19 +1750,34 @@ text{Null}$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$u
 \backslash
 in V
 \backslash
-backslash{s}$}{         $k[u] 
+backslash{s}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $k[u] 
 \backslash
 gets 0$
 \backslash
 
 \backslash
-         $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 pi[u] 
 \backslash
@@ -1733,11 +1787,26 @@ text{Null}$
 \backslash
 
 \backslash
-     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$e
 \backslash
-in E$}{         $
+in E$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 text{color}[e] 
 \backslash
@@ -1747,19 +1816,39 @@ text{White}$
 \backslash
 
 \backslash
-     }     $i
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $i
 \backslash
 gets 2$
 \backslash
 
 \backslash
-     $v
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $v
 \backslash
 gets s$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 While{$
 \backslash
@@ -1786,9 +1875,14 @@ ne
 \backslash
 text{Null}
 \backslash
-right)$}{         
+right)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
-If{$
+uIf{$
 \backslash
 {u
 \backslash
@@ -1804,7 +1898,12 @@ text{White}
 \backslash
 ne
 \backslash
-emptyset$}{             $w
+emptyset$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $w
 \backslash
 gets 
 \backslash
@@ -1822,7 +1921,12 @@ text{White}
 \backslash
 
 \backslash
-             $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            $
 \backslash
 text{color}[(v,
  w)]
@@ -1833,15 +1937,30 @@ text{Black}$
 \backslash
 
 \backslash
-             
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            
 \backslash
-If{$k[w] = 0$}{                 $k[w]
+uIf{$k[w] = 0$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+                $k[w]
 \backslash
 gets i$
 \backslash
 
 \backslash
-                 $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                $
 \backslash
 pi[w]
 \backslash
@@ -1849,25 +1968,65 @@ gets v$
 \backslash
 
 \backslash
-                 $v
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                $v
 \backslash
 gets w$
 \backslash
 
 \backslash
-                 $i
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                $i
 \backslash
 gets i+1$
 \backslash
 
 \backslash
-             } 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        } 
 \backslash
-Else{             $v
+uElse{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $v
 \backslash
 gets
 \backslash
-pi[v]$             }         }     }     
+pi[v]$
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 Return $
 \backslash
@@ -1876,7 +2035,17 @@ left(k,
 \backslash
 pi
 \backslash
-right)$ } 
+right)$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -3229,7 +3398,7 @@ end{algorithm}
 
 \series bold
 \color red
-אלגוריתם למציאת רכיבים קשירים היטב
+אלגוריתם קוסראג'ו־שריר למציאת רכיבים קשירים היטב
 \series default
 \color inherit
 :
@@ -3390,22 +3559,46 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{ComponentGraph}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{KosarajuSharir}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
-name{$G$}}{     $V^* 
+name{$G$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $V^* 
 \backslash
 gets 
 \backslash
@@ -3413,7 +3606,12 @@ text{SCC}(G)$
 \backslash
 
 \backslash
-     $E^* 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $E^* 
 \backslash
 gets 
 \backslash
@@ -3421,11 +3619,21 @@ text{set}((V^*)^2)$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$(u,v)
 \backslash
-in E$}{         
+in E$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
 If{$[v]_{
 \backslash
@@ -3437,7 +3645,12 @@ ne [u]_{
 \backslash
 xrightarrow[G^T_{
 \backslash
-pi}]{}}$}{             $E^* .
+pi}]{}}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $E^* .
  
 \backslash
 text{append}
@@ -3457,10 +3670,35 @@ pi}]{}}
 \backslash
 right)
 \backslash
-right)$         }     }     
+right)$
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 Return $(V^* ,
- E^*)$ } 
+ E^*)$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -3628,6 +3866,25 @@ end{algorithm}
 \end_inset
 
 .(
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אזי 
+\begin_inset Formula $G^{*}=\text{KosarajuSharir}\left(G\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -8071,25 +8328,49 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{FeasiblePotential}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{FeasiblePotential}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
 name{$G,
  
 \backslash
-ell$}}{     $G^
+ell$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $G^
 \backslash
 prime 
 \backslash
@@ -8103,11 +8384,21 @@ uplus
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$v
 \backslash
-in V(G)$}{         $E(G^
+in V(G)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $E(G^
 \backslash
 prime) 
 \backslash
@@ -8124,7 +8415,12 @@ cup
 \backslash
 
 \backslash
-         $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 ell((s,
  v)) 
@@ -8133,11 +8429,21 @@ gets 0$
 \backslash
 
 \backslash
-     }     $c
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $c
 \backslash
 gets 
 \backslash
-text{BelmanForm} (G^
+text{BelmanFord} (G^
 \backslash
 prime ,
 \backslash
@@ -8146,13 +8452,33 @@ ell,
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
-If{$c = 1$}{         
+If{$c = 1$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
-Return None     } 
+Return None
+\end_layout
+
+\begin_layout Plain Layout
+
+    } 
 \backslash
-Else{         $p
+Else{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $p
 \backslash
 gets (V(G)
 \backslash
@@ -8162,11 +8488,21 @@ mathbb{R})$
 \backslash
 
 \backslash
-         
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
 For{$v
 \backslash
-in V(G)$}{             $p(v) 
+in V(G)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $p(v) 
 \backslash
 gets 
 \backslash
@@ -8175,9 +8511,34 @@ delta (s,
 \backslash
 
 \backslash
-         }         
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
-Return $p$     } } 
+Return $p$
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
