@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -74,11 +74,11 @@
 \end_preamble
 \options no-math
 \use_default_options true
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language hebrew
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "David CLM"
 \font_sans "default" "Keter YG"
 \font_typewriter "default" "Miriam Mono CLM"
@@ -86,7 +86,9 @@
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -100,7 +102,7 @@
 \paperfontsize default
 \spacing onehalf
 \use_hyperref false
-\papersize letterpaper
+\papersize letter
 \use_geometry true
 \use_package amsmath 2
 \use_package amssymb 2
@@ -121,7 +123,9 @@
 \suppress_date true
 \justification false
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -141,11 +145,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -154,6 +163,7 @@
 \begin_inset CommandInset include
 LatexCommand include
 filename "E:/University/!Summaries/macros.lyx"
+literal "true"
 
 \end_inset
 
@@ -342,7 +352,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 אלפבית
 \series default
-: קבוצה 
+:
+ קבוצה 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -358,7 +369,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 מילים
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -374,7 +386,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 אורך של מילה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -394,7 +407,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 המילה הריקה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -414,7 +428,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 היפוך מילה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left<w_{1}\ldots w_{n}\right>\in\Sigma^{*}$
 \end_inset
 
@@ -430,7 +445,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 שרשור מילים
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\left<w_{1}\ldots w_{n}\right>,\left<\omega_{1}\ldots\omega_{m}\right>\in\Sigma^{*}$
 \end_inset
 
@@ -446,7 +462,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 חזקה של מילה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left<w_{1}\ldots w_{n}\right>\in\Sigma^{*}$
 \end_inset
 
@@ -466,7 +483,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 מספר המופעים של אות במילה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $w\in\Sigma^{n}$
 \end_inset
 
@@ -486,7 +504,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 שפה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -502,7 +521,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 היפוך שפה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\subseteq\Sigma^{*}$
 \end_inset
 
@@ -518,7 +538,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 שרשור שפות
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $L_{1},L_{2}\subseteq\Sigma^{*}$
 \end_inset
 
@@ -534,7 +555,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 חזקה של שפה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\subseteq\Sigma^{*}$
 \end_inset
 
@@ -554,7 +576,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 סגור קליני של שפה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\subseteq\Sigma^{*}$
 \end_inset
 
@@ -570,7 +593,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 שפת הרישא
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\subseteq\Sigma^{*}$
 \end_inset
 
@@ -586,7 +610,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 שפת הסיפא
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\subseteq\Sigma^{*}$
 \end_inset
 
@@ -602,7 +627,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 אלגוריתם מכריע שפה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\subseteq\Sigma^{*}$
 \end_inset
 
@@ -614,7 +640,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-מקבל: לכל 
+מקבל:
+ לכל 
 \begin_inset Formula $x\in L$
 \end_inset
 
@@ -626,7 +653,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-דוחה: לכל 
+דוחה:
+ לכל 
 \begin_inset Formula $x\notin L$
 \end_inset
 
@@ -642,7 +670,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 פונקציה בולאנית
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $n,m\in\bbn$
 \end_inset
 
@@ -658,7 +687,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 בסיס פונקציות בוליאניות
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $f_{1}\ldots f_{n}$
 \end_inset
 
@@ -674,7 +704,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 בסיס דה־מורגן
 \series default
-: 
+:
+ 
 \begin_inset Formula $\mathcal{B}=\left\{ \land,\lor,\neg\right\} $
 \end_inset
 
@@ -686,7 +717,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 הערה
 \series default
-: תמיד נוסיף לבסיס את הפונקציות הקבועות.
+:
+ תמיד נוסיף לבסיס את הפונקציות הקבועות.
 \end_layout
 
 \begin_layout Standard
@@ -694,7 +726,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 מעגל בוליאני
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\mathcal{B}$
 \end_inset
 
@@ -781,7 +814,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 שער
 \series default
-: יהי מעגל בוליאני אזי 
+:
+ יהי מעגל בוליאני אזי 
 \begin_inset Formula $f_{1}\ldots f_{n}$
 \end_inset
 
@@ -793,7 +827,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 חוטים
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $C$
 \end_inset
 
@@ -812,7 +847,8 @@ filename "E:/University/!Summaries/macros.lyx"
 
 
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $C$
 \end_inset
 
@@ -828,7 +864,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 נוחסאות
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $C$
 \end_inset
 
@@ -844,7 +881,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 שערוך מעגל בולינארי על קלט
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $C$
 \end_inset
 
@@ -868,7 +906,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 סימון
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $C$
 \end_inset
 
@@ -896,7 +935,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 מעגל מקבל מילה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $C$
 \end_inset
 
@@ -916,7 +956,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 שפה של מעגל
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $C$
 \end_inset
 
@@ -932,7 +973,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 מעגל מחשב פונקציה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
 \end_inset
 
@@ -956,7 +998,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 משפט אוניברסליות דה־מורגן
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left\{ 0,1\right\} ^{m}\to\left\{ 0,1\right\} ^{k}$
 \end_inset
 
@@ -980,7 +1023,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 הערה
 \series default
-: מכאן והלאה כל המעגלים הם בוליאניים ומעל בסיס דה־מורגן.
+:
+ מכאן והלאה כל המעגלים הם בוליאניים ומעל בסיס דה־מורגן.
 \end_layout
 
 \begin_layout Standard
@@ -988,7 +1032,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 משפחה של מעגלים
 \series default
-: מעגלים 
+:
+ מעגלים 
 \begin_inset Formula $\left\{ C_{n}\right\} _{n\in\bbn}$
 \end_inset
 
@@ -1008,7 +1053,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 שפה של משפחת מעגלים
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{C}$
 \end_inset
 
@@ -1024,7 +1070,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 משפחה מכריעה שפה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\l\subseteq\left\{ 0,1\right\} ^{*}$
 \end_inset
 
@@ -1044,7 +1091,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 מודל לא יוניפורמי
 \series default
-: משפחה של מעגלים 
+:
+ משפחה של מעגלים 
 \begin_inset Formula $\mathcal{C}$
 \end_inset
 
@@ -1060,7 +1108,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 מודל יוניפורמי
 \series default
-: משפחה של מעגלים 
+:
+ משפחה של מעגלים 
 \begin_inset Formula $\mathcal{C}$
 \end_inset
 
@@ -1076,7 +1125,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 גודל מעגל
 \series default
-: יהי מעגל בוליאני 
+:
+ יהי מעגל בוליאני 
 \begin_inset Formula $C$
 \end_inset
 
@@ -1096,7 +1146,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 חסם עליון לגודל משפחת מעגלים
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{C}$
 \end_inset
 
@@ -1116,7 +1167,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
 \end_inset
 
@@ -1140,7 +1192,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\l\subseteq\left\{ 0,1\right\} ^{n}$
 \end_inset
 
@@ -1164,7 +1217,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
 \end_inset
 
@@ -1188,7 +1242,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\l\subseteq\left\{ 0,1\right\} ^{n}$
 \end_inset
 
@@ -1212,7 +1267,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 משפט לופיאנוב
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
 \end_inset
 
@@ -1236,7 +1292,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 טענה שאנון
 \series default
-: קיים 
+:
+ קיים 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -1266,14 +1323,15 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \series bold
 \color blue
-אוטומט סופי דטרמיניסטי )אס
+אוטומט סופי דטרמיניסטי (אס
 \begin_inset Quotes erd
 \end_inset
 
-ד(
+ד)
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $Q\ne\emptyset$
 \end_inset
 
@@ -1307,7 +1365,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מצבים באוטומט סופי דטרמיניסטי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,q,F\right)$
 \end_inset
 
@@ -1329,7 +1388,8 @@ filename "E:/University/!Summaries/macros.lyx"
 אלפבית באוטומט סופי דטרמיניסטי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,q,F\right)$
 \end_inset
 
@@ -1351,7 +1411,8 @@ filename "E:/University/!Summaries/macros.lyx"
 פונקציית מעברים באוטומט סופי דטרמיניסטי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,q,F\right)$
 \end_inset
 
@@ -1373,7 +1434,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מצב התחלתי באוטומט סופי דטרמיניסטי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,q,F\right)$
 \end_inset
 
@@ -1395,7 +1457,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מצבים מקבלים באוטומט סופי דטרמיניסטי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,q,F\right)$
 \end_inset
 
@@ -1417,7 +1480,8 @@ filename "E:/University/!Summaries/macros.lyx"
 פונקציית המעברים המורחבת
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,q_{0},F\right)$
 \end_inset
 
@@ -1455,7 +1519,8 @@ filename "E:/University/!Summaries/macros.lyx"
 אוטומט סופי דטרמיניסטי מקבל מילה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,q_{0},F\right)$
 \end_inset
 
@@ -1481,7 +1546,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A$
 \end_inset
 
@@ -1493,7 +1559,7 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $x\in\Sigma^{n}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $A$
 \end_inset
 
@@ -1501,11 +1567,11 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $x$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימים 
+(קיימים 
 \begin_inset Formula $q_{1}\ldots q_{n}\in Q$
 \end_inset
 
@@ -1521,7 +1587,7 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $q_{n}\in F$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -1531,7 +1597,8 @@ filename "E:/University/!Summaries/macros.lyx"
 שפה של אוטומט סופי דטרמיניסטי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A$
 \end_inset
 
@@ -1553,7 +1620,8 @@ filename "E:/University/!Summaries/macros.lyx"
 שפה רגולרית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -1583,7 +1651,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\emptyset$
 \end_inset
 
@@ -1597,7 +1666,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left\{ \e\right\} $
 \end_inset
 
@@ -1611,8 +1681,9 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
-\begin_inset Formula $\left\{ x\mid\#_{1}\left(x\right)=1\mod2\right\} $
+:
+ 
+\begin_inset Formula $\left\{ x\mid\#_{1}\left(x\right)=1\mod 2\right\} $
 \end_inset
 
  רגולרית.
@@ -1625,7 +1696,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left\{ y\,1\,0^{2k}\mid\left(y\in\left\{ 0,1\right\} ^{*}\right)\land\left(k\in\bbn\right)\right\} $
 \end_inset
 
@@ -1639,7 +1711,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $L_{1},L_{2},L_{3}\subseteq\Sigma^{*}$
 \end_inset
 
@@ -1657,7 +1730,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\subseteq\Sigma^{*}$
 \end_inset
 
@@ -1683,7 +1757,8 @@ filename "E:/University/!Summaries/macros.lyx"
 משפט
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $L,\mathcal{L}\subseteq\Sigma^{*}$
 \end_inset
 
@@ -1744,8 +1819,9 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: 
-\begin_inset Formula $\left\{ x\mid\#_{1}\left(x\right)=0\mod2\right\} $
+:
+ 
+\begin_inset Formula $\left\{ x\mid\#_{1}\left(x\right)=0\mod 2\right\} $
 \end_inset
 
  רגולרית.
@@ -1755,14 +1831,15 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \series bold
 \color blue
-אוטומט סופי לא־דטרמיניסטי מינוס )אסלד
+אוטומט סופי לא־דטרמיניסטי מינוס (אסלד
 \begin_inset Quotes erd
 \end_inset
 
-ם(
+ם)
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $Q\ne\emptyset$
 \end_inset
 
@@ -1792,7 +1869,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מצבים באוטומט סופי לא־דטרמיניסטי מינוס
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
 \end_inset
 
@@ -1814,7 +1892,8 @@ filename "E:/University/!Summaries/macros.lyx"
 אלפבית באוטומט סופי לא־דטרמיניסטי מינוס
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
 \end_inset
 
@@ -1836,7 +1915,8 @@ filename "E:/University/!Summaries/macros.lyx"
 פונקציית מעברים באוטומט סופי לא־דטרמיניסטי מינוס
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
 \end_inset
 
@@ -1858,7 +1938,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מצבים התחלתיים באוטומט סופי לא־דטרמיניסטי מינוס
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
 \end_inset
 
@@ -1880,7 +1961,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מצבים מקבלים באוטומט סופי לא־דטרמיניסטי מינוס
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
 \end_inset
 
@@ -1909,7 +1991,8 @@ filename "E:/University/!Summaries/macros.lyx"
 פונקציית המעברים המורחבת
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
 \end_inset
 
@@ -1947,7 +2030,8 @@ filename "E:/University/!Summaries/macros.lyx"
 אוטומט סופי לא־דטרמיניסטי מינוס מקבל מילה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
 \end_inset
 
@@ -1973,7 +2057,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M$
 \end_inset
 
@@ -1985,7 +2070,7 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $x\in\Sigma^{n}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $M$
 \end_inset
 
@@ -1993,11 +2078,11 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $x$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימים 
+(קיימים 
 \begin_inset Formula $q_{0}\ldots q_{n}\in Q$
 \end_inset
 
@@ -2017,7 +2102,7 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $q_{n}\in F$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -2027,7 +2112,8 @@ filename "E:/University/!Summaries/macros.lyx"
 שפה של אוטומט סופי לא־דטרמיניסטי מינוס
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M$
 \end_inset
 
@@ -2049,7 +2135,8 @@ filename "E:/University/!Summaries/macros.lyx"
 אוטומט סופי דטרמיניסטי מינוס החזקה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M=\left(Q,\Sigma,\d,S,F\right)$
 \end_inset
 
@@ -2103,7 +2190,8 @@ filename "E:/University/!Summaries/macros.lyx"
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M$
 \end_inset
 
@@ -2145,7 +2233,8 @@ filename "E:/University/!Summaries/macros.lyx"
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M$
 \end_inset
 
@@ -2175,7 +2264,8 @@ filename "E:/University/!Summaries/macros.lyx"
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -2190,14 +2280,15 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \series bold
 \color red
-אוטומט סופי לא־דטרמיניסטי )אסל
+אוטומט סופי לא־דטרמיניסטי (אסל
 \begin_inset Quotes erd
 \end_inset
 
-ד(
+ד)
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $Q\ne\emptyset$
 \end_inset
 
@@ -2227,7 +2318,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מצבים באוטומט סופי לא־דטרמיניסטי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
 \end_inset
 
@@ -2249,7 +2341,8 @@ filename "E:/University/!Summaries/macros.lyx"
 אלפבית באוטומט סופי לא־דטרמיניסטי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
 \end_inset
 
@@ -2271,7 +2364,8 @@ filename "E:/University/!Summaries/macros.lyx"
 פונקציית מעברים באוטומט סופי לא־דטרמיניסטי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
 \end_inset
 
@@ -2293,7 +2387,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מצבים התחלתיים באוטומט סופי לא־דטרמיניסטי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
 \end_inset
 
@@ -2315,7 +2410,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מצבים מקבלים באוטומט סופי לא־דטרמיניסטי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
 \end_inset
 
@@ -2341,7 +2437,8 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $N$
 \end_inset
 
@@ -2371,7 +2468,8 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $N$
 \end_inset
 
@@ -2397,7 +2495,8 @@ filename "E:/University/!Summaries/macros.lyx"
 פונקציית המעברים המורחבת
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
 \end_inset
 
@@ -2439,7 +2538,8 @@ filename "E:/University/!Summaries/macros.lyx"
 אוטומט סופי לא־דטרמיניסטי מקבל מילה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(Q,\Sigma,\d,S,F\right)$
 \end_inset
 
@@ -2465,7 +2565,8 @@ filename "E:/University/!Summaries/macros.lyx"
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x\in\Sigma^{*}$
 \end_inset
 
@@ -2495,7 +2596,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A$
 \end_inset
 
@@ -2507,7 +2609,7 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $x\in\Sigma^{n}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $A$
 \end_inset
 
@@ -2515,11 +2617,11 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $x$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימים 
+(קיימים 
 \begin_inset Formula $q_{0}\ldots q_{n}\in Q$
 \end_inset
 
@@ -2539,7 +2641,7 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $q_{n}\in F$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -2549,7 +2651,8 @@ filename "E:/University/!Summaries/macros.lyx"
 שפה של אוטומט סופי לא־דטרמיניסטי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A$
 \end_inset
 
@@ -2571,7 +2674,8 @@ filename "E:/University/!Summaries/macros.lyx"
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $N$
 \end_inset
 
@@ -2601,7 +2705,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $N$
 \end_inset
 
@@ -2631,7 +2736,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -2639,15 +2745,15 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $\mathcal{L}\subseteq\Sigma^{*}$
 \end_inset
 
- שפה אזי )
+ שפה אזי (
 \begin_inset Formula $\mathcal{L}$
 \end_inset
 
- רגולרית(
+ רגולרית)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיים אסל
+(קיים אסל
 \begin_inset Quotes erd
 \end_inset
 
@@ -2659,21 +2765,22 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $L\left(N\right)=\mathcal{L}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
 
 \series bold
 \color red
-ביטוי רגולרי )ב
+ביטוי רגולרי (ב
 \begin_inset Quotes erd
 \end_inset
 
-ר(
+ר)
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -2742,7 +2849,8 @@ filename "E:/University/!Summaries/macros.lyx"
 שפה נוצרת מביטוי רגולרי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -2811,7 +2919,8 @@ filename "E:/University/!Summaries/macros.lyx"
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -2829,7 +2938,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הערה
 \series default
 \color inherit
-: קיים סדר פעולות לביטויים רגולריים
+:
+ קיים סדר פעולות לביטויים רגולריים
 \end_layout
 
 \begin_layout Itemize
@@ -2851,7 +2961,8 @@ filename "E:/University/!Summaries/macros.lyx"
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -2859,15 +2970,15 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $\l\subseteq\Sigma^{*}$
 \end_inset
 
- שפה אזי )
+ שפה אזי (
 \begin_inset Formula $\l$
 \end_inset
 
- רגולרית(
+ רגולרית)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיים 
+(קיים 
 \begin_inset Formula $r\in R\left(\Sigma\right)$
 \end_inset
 
@@ -2875,7 +2986,7 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $L\left(r\right)=\l$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -2892,7 +3003,8 @@ filename "E:/University/!Summaries/macros.lyx"
 שפה ניתנת לניפוח
 \series default
 \color inherit
-: שפה 
+:
+ שפה 
 \begin_inset Formula $\l$
 \end_inset
 
@@ -2942,7 +3054,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה למת הניפוח
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\l$
 \end_inset
 
@@ -2968,7 +3081,8 @@ filename "E:/University/!Summaries/macros.lyx"
 קבוע הניפוח
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\l$
 \end_inset
 
@@ -2986,7 +3100,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left\{ x\in\left\{ 0,1\right\} ^{*}\mid\#_{0}\left(x\right)=\#_{1}\left(x\right)\right\} $
 \end_inset
 
@@ -3000,7 +3115,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left\{ 0^{i}1^{j}\mid i>j\right\} $
 \end_inset
 
@@ -3014,7 +3130,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left\{ a^{p}\mid a\in\Sigma,\text{ ראשוני}p\right\} $
 \end_inset
 
@@ -3028,7 +3145,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: השפה 
+:
+ השפה 
 \begin_inset Formula $\left\{ a^{i}b^{n}c^{n}\mid n\in\bbn,i\in\bbn_{+}\right\} \cup\left\{ b^{n}c^{n}\mid n,m\in\bbn\right\} $
 \end_inset
 
@@ -3071,7 +3189,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\subseteq\Sigma^{*}$
 \end_inset
 
@@ -3089,7 +3208,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\subseteq\Sigma^{*}$
 \end_inset
 
@@ -3107,7 +3227,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A$
 \end_inset
 
@@ -3129,7 +3250,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A$
 \end_inset
 
@@ -3159,7 +3281,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A$
 \end_inset
 
@@ -3181,7 +3304,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\subseteq\Sigma^{*}$
 \end_inset
 
@@ -3199,23 +3323,24 @@ filename "E:/University/!Summaries/macros.lyx"
 משפט מייהיל־נרוד
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\subseteq\Sigma^{*}$
 \end_inset
 
- שפה אזי )
+ שפה אזי (
 \begin_inset Formula $L$
 \end_inset
 
- רגולרית(
+ רגולרית)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\nicefrac{\Sigma^{*}}{\sim_{L}}$
 \end_inset
 
- סופית(.
+ סופית).
 \end_layout
 
 \begin_layout Standard
@@ -3234,7 +3359,8 @@ filename "E:/University/!Summaries/macros.lyx"
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\subseteq\Sigma^{*}$
 \end_inset
 
@@ -3272,7 +3398,8 @@ filename "E:/University/!Summaries/macros.lyx"
 אוטומט סופי דטרמיניסטי המחלקות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\subseteq\Sigma^{*}$
 \end_inset
 
@@ -3334,7 +3461,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L\subseteq\Sigma^{*}$
 \end_inset
 
@@ -3380,7 +3508,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -3414,7 +3543,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -3445,14 +3575,15 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \series bold
 \color green
-מכונת טיורינג )מ
+מכונת טיורינג (מ
 \begin_inset Quotes erd
 \end_inset
 
-ט(
+ט)
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $Q\ne\emptyset$
 \end_inset
 
@@ -3498,7 +3629,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מצבים במכונת טיורינג
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(Q,\Sigma,\Gamma,\d,q_{0},q_{a},q_{r}\right)$
 \end_inset
 
@@ -3520,7 +3652,8 @@ filename "E:/University/!Summaries/macros.lyx"
 אלפבית במכונת טיורינג
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(Q,\Sigma,\Gamma,\d,q_{0},q_{a},q_{r}\right)$
 \end_inset
 
@@ -3542,7 +3675,8 @@ filename "E:/University/!Summaries/macros.lyx"
 אלפבית סרט במכונת טיורינג
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(Q,\Sigma,\Gamma,\d,q_{0},q_{a},q_{r}\right)$
 \end_inset
 
@@ -3564,7 +3698,8 @@ filename "E:/University/!Summaries/macros.lyx"
 פונקציית מעברים במכונת טיורינג
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(Q,\Sigma,\Gamma,\d,q_{0},q_{a},q_{r}\right)$
 \end_inset
 
@@ -3586,7 +3721,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מצב התחלתי במכונת טיורינג
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(Q,\Sigma,\Gamma,\d,q_{0},q_{a},q_{r}\right)$
 \end_inset
 
@@ -3608,7 +3744,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מצב מקבל במכונת טיורינג
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(Q,\Sigma,\Gamma,\d,q_{0},q_{a},q_{r}\right)$
 \end_inset
 
@@ -3630,7 +3767,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מצב דוחה במכונת טיורינג
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(Q,\Sigma,\Gamma,\d,q_{0},q_{a},q_{r}\right)$
 \end_inset
 
@@ -3659,7 +3797,8 @@ filename "E:/University/!Summaries/macros.lyx"
 קונפיגורציה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -3681,7 +3820,8 @@ filename "E:/University/!Summaries/macros.lyx"
 קונפיגורציה התחלתית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -3711,7 +3851,8 @@ filename "E:/University/!Summaries/macros.lyx"
 קונפיגורציה מקבלת
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -3741,7 +3882,8 @@ filename "E:/University/!Summaries/macros.lyx"
 קונפיגורציה דוחה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -3771,7 +3913,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הערה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -3801,7 +3944,8 @@ filename "E:/University/!Summaries/macros.lyx"
 קונפיגורציה עוברת/צעד
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -3911,7 +4055,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מכונת טיוריגנ מקבלת מילה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -3957,7 +4102,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מכונת טיוריגנ דוחה מילה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -4003,7 +4149,8 @@ filename "E:/University/!Summaries/macros.lyx"
 שפה של מכונת טיוריגנ
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -4025,7 +4172,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מכונת טיורינג לא עוצרת על קלט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -4055,7 +4203,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מודלים שקולים
 \series default
 \color inherit
-: מודלים 
+:
+ מודלים 
 \begin_inset Formula $M,M^{\prime}$
 \end_inset
 
@@ -4117,11 +4266,13 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: אס
+:
+ אס
 \begin_inset Quotes erd
 \end_inset
 
-ד, אסל
+ד,
+ אסל
 \begin_inset Quotes erd
 \end_inset
 
@@ -4139,7 +4290,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מכונת טיוריגנ נחה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $Q\ne\emptyset$
 \end_inset
 
@@ -4185,7 +4337,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הערה
 \series default
 \color inherit
-: את כל הפעולות ממכונת טיורינג נכליל בצורה הטבעית עבור מכונת טיורינג נחה.
+:
+ את כל הפעולות ממכונת טיורינג נכליל בצורה הטבעית עבור מכונת טיורינג נחה.
 \end_layout
 
 \begin_layout Standard
@@ -4195,7 +4348,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: מכונת טיורינג ומכונת טיורינג נחה הינן מודלים שקולים.
+:
+ מכונת טיורינג ומכונת טיורינג נחה הינן מודלים שקולים.
 \end_layout
 
 \begin_layout Standard
@@ -4205,7 +4359,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מכונת טיורינג רב־סרטית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $k\in\bbn_{+}$
 \end_inset
 
@@ -4255,7 +4410,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הערה
 \series default
 \color inherit
-: את כל הפעולות ממכונת טיורינג נכליל בצורה הטבעית עבור מכונת טיורינג רב־סרטית.
+:
+ את כל הפעולות ממכונת טיורינג נכליל בצורה הטבעית עבור מכונת טיורינג רב־סרטית.
 \end_layout
 
 \begin_layout Standard
@@ -4265,7 +4421,8 @@ filename "E:/University/!Summaries/macros.lyx"
 קונפיגורציה במכונת טיורינג רב־סרטית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -4295,7 +4452,8 @@ filename "E:/University/!Summaries/macros.lyx"
 במכונת טיורינג רב־סרטית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -4325,7 +4483,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $k\in\bbn_{+}$
 \end_inset
 
@@ -4343,7 +4502,8 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $k\in\bbn$
 \end_inset
 
@@ -4369,7 +4529,8 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(k,\Pi\right)$
 \end_inset
 
@@ -4395,7 +4556,8 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(k,\Pi\right)$
 \end_inset
 
@@ -4421,7 +4583,8 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(k,\Pi\right)$
 \end_inset
 
@@ -4451,7 +4614,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מונה התוכנית בקונפיגורציה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(k,\Pi\right)$
 \end_inset
 
@@ -4477,7 +4641,8 @@ filename "E:/University/!Summaries/macros.lyx"
 רגיסטרים בקונפיגורציה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(k,\Pi\right)$
 \end_inset
 
@@ -4503,7 +4668,8 @@ filename "E:/University/!Summaries/macros.lyx"
 זיכרון בקונפיגורציה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(k,\Pi\right)$
 \end_inset
 
@@ -4529,7 +4695,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הערה
 \series default
 \color inherit
-: ריצת מודל 
+:
+ ריצת מודל 
 \begin_inset Formula $\text{RAM}$
 \end_inset
 
@@ -4547,7 +4714,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: מכונת טיורינג ומודל 
+:
+ מכונת טיורינג ומודל 
 \begin_inset Formula $\text{RAM}$
 \end_inset
 
@@ -4558,14 +4726,15 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \series bold
 \color magenta
-מכונת טיוריגנ לא־דטרמיניסטית )מטל
+מכונת טיוריגנ לא־דטרמיניסטית (מטל
 \begin_inset Quotes erd
 \end_inset
 
-ד(
+ד)
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $Q\ne\emptyset$
 \end_inset
 
@@ -4611,7 +4780,8 @@ filename "E:/University/!Summaries/macros.lyx"
 קונפיגורציה עוברת
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $N$
 \end_inset
 
@@ -4669,7 +4839,8 @@ filename "E:/University/!Summaries/macros.lyx"
 עץ חישוב
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $N$
 \end_inset
 
@@ -4693,7 +4864,7 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $c,c^{\prime}$
 \end_inset
 
- קונפיגורציות מתקיים )
+ קונפיגורציות מתקיים (
 \begin_inset Formula $c$
 \end_inset
 
@@ -4701,11 +4872,11 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $c^{\prime}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $c^{\prime}$
 \end_inset
 
@@ -4713,7 +4884,7 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $c$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -4723,7 +4894,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מכונת טיוריגנ לא־דטרמיניסטית מקבלת מילה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $N$
 \end_inset
 
@@ -4749,7 +4921,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מכונת טיוריגנ לא־דטרמיניסטית דוחה מילה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $N$
 \end_inset
 
@@ -4787,7 +4960,8 @@ filename "E:/University/!Summaries/macros.lyx"
 לא־דטרמיניסטית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $N$
 \end_inset
 
@@ -4809,7 +4983,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מכונת טיורינג לא־דטרמיניסטית לא עוצרת על קלט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $N$
 \end_inset
 
@@ -4839,7 +5014,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: מכונת טיורינג ומכונת טיורינג לא־דטרמיניסטית הינן מודלים שקולים.
+:
+ מכונת טיורינג ומכונת טיורינג לא־דטרמיניסטית הינן מודלים שקולים.
 \end_layout
 
 \begin_layout Standard
@@ -4849,7 +5025,8 @@ filename "E:/University/!Summaries/macros.lyx"
 שפות כריעות למחצה/שפות ניתנות למניה רקורסיבית/שפות ניתנות לקבלה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -4871,7 +5048,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מכונת טיורינג מכריע שפה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\l\subseteq\Sigma^{*}$
 \end_inset
 
@@ -4909,7 +5087,8 @@ filename "E:/University/!Summaries/macros.lyx"
 שפות כריעות/שפות רקורסיביות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -4927,7 +5106,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\r\subseteq\re$
 \end_inset
 
@@ -4941,7 +5121,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מונה עבור שפה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\l\subseteq\Sigma^{*}$
 \end_inset
 
@@ -5021,23 +5202,24 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\l\subseteq\Sigma^{*}$
 \end_inset
 
- שפה אזי )
+ שפה אזי (
 \begin_inset Formula $\l\in\re$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיים ל־
+(קיים ל־
 \begin_inset Formula $\l$
 \end_inset
 
- מונה(.
+ מונה).
 \end_layout
 
 \begin_layout Standard
@@ -5047,7 +5229,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מונה לקסיקוגרפי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\l\subseteq\Sigma^{*}$
 \end_inset
 
@@ -5085,23 +5268,24 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\l\subseteq\Sigma^{*}$
 \end_inset
 
- שפה אזי )
+ שפה אזי (
 \begin_inset Formula $\l\in\r$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיים ל־
+(קיים ל־
 \begin_inset Formula $\l$
 \end_inset
 
- מונה לקסיקוגרפי(.
+ מונה לקסיקוגרפי).
 \end_layout
 
 \begin_layout Standard
@@ -5111,7 +5295,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -5129,7 +5314,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\r=\re\cap\core$
 \end_inset
 
@@ -5143,7 +5329,8 @@ filename "E:/University/!Summaries/macros.lyx"
 קידוד בינארי של מכונת טיורינג
 \series default
 \color inherit
-: פונקציה 
+:
+ פונקציה 
 \begin_inset Formula $f:\left\{ M\mid\text{ מ"ט}M\right\} \to\left\{ 0,1\right\} ^{*}$
 \end_inset
 
@@ -5161,7 +5348,8 @@ filename "E:/University/!Summaries/macros.lyx"
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5187,7 +5375,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הערה
 \series default
 \color inherit
-: נשתמש בסימון 
+:
+ נשתמש בסימון 
 \begin_inset Formula $\left<\cdot\right>$
 \end_inset
 
@@ -5201,7 +5390,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הערה
 \series default
 \color inherit
-: נניח כי קידוד ופענוח הן פעולות פשוטות ובדיקת נכונות קידוד היא 
+:
+ נניח כי קידוד ופענוח הן פעולות פשוטות ובדיקת נכונות קידוד היא 
 \begin_inset Formula $\r$
 \end_inset
 
@@ -5215,7 +5405,8 @@ filename "E:/University/!Summaries/macros.lyx"
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5249,7 +5440,8 @@ filename "E:/University/!Summaries/macros.lyx"
 משפט מכונת טיורינג אוניברסלית
 \series default
 \color inherit
-: קיימת מ
+:
+ קיימת מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -5281,7 +5473,7 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $M$
 \end_inset
 
- מתקיים )
+ מתקיים (
 \begin_inset Formula $U$
 \end_inset
 
@@ -5289,11 +5481,11 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $\left<M,x\right>$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $M$
 \end_inset
 
@@ -5301,7 +5493,7 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $x$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Itemize
@@ -5321,7 +5513,7 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $M$
 \end_inset
 
- מתקיים )
+ מתקיים (
 \begin_inset Formula $U$
 \end_inset
 
@@ -5329,11 +5521,11 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $\left<M,x\right>$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $M$
 \end_inset
 
@@ -5341,7 +5533,7 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $x$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Itemize
@@ -5361,7 +5553,7 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $M$
 \end_inset
 
- מתקיים )
+ מתקיים (
 \begin_inset Formula $U$
 \end_inset
 
@@ -5369,11 +5561,11 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $\left<M,x\right>$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $M$
 \end_inset
 
@@ -5381,7 +5573,7 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $x$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Itemize
@@ -5411,7 +5603,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: קיימת 
+:
+ קיימת 
 \begin_inset Formula $L\subseteq\left\{ 0,1\right\} ^{*}$
 \end_inset
 
@@ -5429,7 +5622,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\acc=\left\{ \left<M,x\right>\mid\left(\text{ מ"ט}M\right)\land\left(\text{ מילה}x\right)\land\left(x\text{ מקבלת את }M\right)\right\} $
 \end_inset
 
@@ -5443,7 +5637,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\acc\in\re$
 \end_inset
 
@@ -5457,7 +5652,8 @@ filename "E:/University/!Summaries/macros.lyx"
 למה
 \series default
 \color inherit
-: לא קיימת מ
+:
+ לא קיימת מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -5483,7 +5679,8 @@ filename "E:/University/!Summaries/macros.lyx"
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5517,7 +5714,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\acc\notin\r$
 \end_inset
 
@@ -5531,7 +5729,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\halt=\left\{ \left<M,x\right>\mid\left<M,x\right>\mid\left(\text{ מ"ט}M\right)\land\left(\text{ מילה}x\right)\land\left(x\text{ עוצרת על }M\right)\right\} $
 \end_inset
 
@@ -5545,7 +5744,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\halt\in\re\backslash\r$
 \end_inset
 
@@ -5559,7 +5759,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\emp=\left\{ \left<M\right>\mid\left(\text{ מ"ט}M\right)\land\left(L\left(M\right)=\emptyset\right)\right\} $
 \end_inset
 
@@ -5573,7 +5774,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\emp\notin\r$
 \end_inset
 
@@ -5594,7 +5796,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מכונת טיורינג מחשבת פונקציה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5636,7 +5839,8 @@ filename "E:/University/!Summaries/macros.lyx"
 פונקציה חשיבה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $D\subseteq\Sigma$
 \end_inset
 
@@ -5666,7 +5870,8 @@ filename "E:/University/!Summaries/macros.lyx"
 רדוקציית מיפוי
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\Sigma,\Delta$
 \end_inset
 
@@ -5704,7 +5909,8 @@ filename "E:/University/!Summaries/macros.lyx"
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\Sigma,\Delta$
 \end_inset
 
@@ -5738,7 +5944,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\emp\in\core$
 \end_inset
 
@@ -5752,7 +5959,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A,B$
 \end_inset
 
@@ -5778,7 +5986,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A,B$
 \end_inset
 
@@ -5804,7 +6013,9 @@ filename "E:/University/!Summaries/macros.lyx"
 הערה
 \series default
 \color inherit
-: יש דבר כזה רדוקציה כללית שמכלילה את רדוקציית המיפוי, לא עברנו על זה פורמלית,
+:
+ יש דבר כזה רדוקציה כללית שמכלילה את רדוקציית המיפוי,
+ לא עברנו על זה פורמלית,
  מסומן 
 \begin_inset Formula $\le$
 \end_inset
@@ -5819,7 +6030,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left\{ \left<M\right>\mid\left<M\right>\notin L\left(M\right)\right\} \le\acc$
 \end_inset
 
@@ -5833,7 +6045,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\acc\le_{m}\halt$
 \end_inset
 
@@ -5847,7 +6060,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\acc\le\emp$
 \end_inset
 
@@ -5861,7 +6075,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\reg=\left\{ \left<M\right>\mid\text{ רגולרית}L\left(M\right)\right\} $
 \end_inset
 
@@ -5875,7 +6090,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\reg\notin\r$
 \end_inset
 
@@ -5889,7 +6105,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\eq=\left\{ \left<M_{1},M_{2}\right>\mid L\left(M_{1}\right)=L\left(M_{2}\right)\right\} $
 \end_inset
 
@@ -5903,7 +6120,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\eq\notin\r$
 \end_inset
 
@@ -5917,7 +6135,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\halt_{\e}=\left\{ \left<M\right>\mid\e\text{ עוצר על }M\right\} $
 \end_inset
 
@@ -5931,7 +6150,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\halt\le_{m}\halt_{\e}$
 \end_inset
 
@@ -5945,7 +6165,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in\r$
 \end_inset
 
@@ -5967,7 +6188,8 @@ filename "E:/University/!Summaries/macros.lyx"
 למה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A,B$
 \end_inset
 
@@ -6005,7 +6227,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A,B$
 \end_inset
 
@@ -6047,7 +6270,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\acc\le_{m}\eq$
 \end_inset
 
@@ -6065,7 +6289,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\eq\notin\re\cup\core$
 \end_inset
 
@@ -6079,7 +6304,8 @@ filename "E:/University/!Summaries/macros.lyx"
 תכונה סמנטית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -6097,7 +6323,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{C}$
 \end_inset
 
@@ -6115,7 +6342,8 @@ filename "E:/University/!Summaries/macros.lyx"
 משפט רייס
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{C}\in\P\left(\re\right)\backslash\left\{ \re,\emptyset\right\} $
 \end_inset
 
@@ -6133,7 +6361,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{C}\in\left\{ \re,\emptyset\right\} $
 \end_inset
 
@@ -6151,7 +6380,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\primes=\left\{ \left(p\right)_{2}\mid p\in\bbp\right\} $
 \end_inset
 
@@ -6165,7 +6395,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הערה
 \series default
 \color inherit
-: קידוד מספרים תמיד יעשה בבסיס
+:
+ קידוד מספרים תמיד יעשה בבסיס
 \family roman
 \series medium
 \shape up
@@ -6204,7 +6435,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\eqprime=\left\{ \left<M\right>\mid L\left(M\right)=\primes\right\} $
 \end_inset
 
@@ -6218,7 +6450,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\eqprime\notin\r$
 \end_inset
 
@@ -6232,7 +6465,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה משפט רייס הרחבה ראשונה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{C}\in\P\left(\re\backslash\left\{ \emptyset\right\} \right)\backslash\left\{ \emptyset\right\} $
 \end_inset
 
@@ -6250,7 +6484,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה משפט רייס הרחבה שנייה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{C}\in\P\left(\re\right)\backslash\left\{ \re\right\} $
 \end_inset
 
@@ -6272,7 +6507,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\reg\notin\re$
 \end_inset
 
@@ -6286,7 +6522,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\all=\left\{ \left<M\right>\mid L\left(M\right)=\Sigma^{*}\right\} $
 \end_inset
 
@@ -6300,7 +6537,8 @@ filename "E:/University/!Summaries/macros.lyx"
 למה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\overline{\halt}\le_{m}\all$
 \end_inset
 
@@ -6314,7 +6552,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\all\notin\re\cup\core$
 \end_inset
 
@@ -6335,7 +6574,8 @@ filename "E:/University/!Summaries/macros.lyx"
 חסם עליון לזמן ריצה של מכונת טיורינג
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -6377,7 +6617,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $T:\bbn\to\bbn$
 \end_inset
 
@@ -6395,7 +6636,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left\{ 0^{k}1^{k}\mid k\ge0\right\} \in\dtime\left(n^{2}\right)$
 \end_inset
 
@@ -6409,7 +6651,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left\{ 0^{k}1^{k}\mid k\ge0\right\} \in\dtime\left(n\log\left(n\right)\right)$
 \end_inset
 
@@ -6423,7 +6666,8 @@ filename "E:/University/!Summaries/macros.lyx"
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $t\left(n\right)=o\left(n\log\left(n\right)\right)$
 \end_inset
 
@@ -6445,7 +6689,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $t\left(n\right)=o\left(n\log\left(n\right)\right)$
 \end_inset
 
@@ -6463,7 +6708,8 @@ filename "E:/University/!Summaries/macros.lyx"
 פונקציה חשיבה בזמן
 \series default
 \color inherit
-: פונקציה 
+:
+ פונקציה 
 \begin_inset Formula $T:\bbn\to\bbn$
 \end_inset
 
@@ -6505,7 +6751,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $T:\bbn\to\bbn$
 \end_inset
 
@@ -6523,7 +6770,8 @@ filename "E:/University/!Summaries/macros.lyx"
 משפט מכונת טיורינג אוניברסלית עם טיימר
 \series default
 \color inherit
-: קיימת מ
+:
+ קיימת מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -6581,7 +6829,8 @@ filename "E:/University/!Summaries/macros.lyx"
 משפט
 \series default
 \color inherit
-: קיימת מ
+:
+ קיימת מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -6678,7 +6927,8 @@ filename "E:/University/!Summaries/macros.lyx"
 משפט היררכיית הזמן
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $T:\bbn\to\bbn$
 \end_inset
 
@@ -6700,7 +6950,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $1\le c<d$
 \end_inset
 
@@ -6718,7 +6969,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $T:\bbn\to\bbn$
 \end_inset
 
@@ -6764,7 +7016,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $T:\bbn\to\bbn$
 \end_inset
 
@@ -6810,7 +7063,8 @@ filename "E:/University/!Summaries/macros.lyx"
 חסם עליון לזמן ריצה של מכונת טיורינג לא־דטרמיניסטית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $N$
 \end_inset
 
@@ -6848,7 +7102,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $T:\bbn\to\bbn$
 \end_inset
 
@@ -6866,7 +7121,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $T:\bbn\to\bbn$
 \end_inset
 
@@ -6916,7 +7172,8 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\P=\bigcup_{c\in\bbn}\dtime\left(n^{c}\right)$
 \end_inset
 
@@ -6930,7 +7187,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\pth=\left\{ \left<G,s,t\right>\mid t\text{ ל־}s\text{ גרף מכוון עם מסלול מ־}G\right\} $
 \end_inset
 
@@ -6944,7 +7202,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\pth\in\P$
 \end_inset
 
@@ -6958,7 +7217,8 @@ filename "E:/University/!Summaries/macros.lyx"
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\primes\in\P$
 \end_inset
 
@@ -6976,7 +7236,8 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\np=\bigcup_{c\in\bbn}\ntime\left(n^{c}\right)$
 \end_inset
 
@@ -6990,7 +7251,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\P\subseteq\np$
 \end_inset
 
@@ -7004,7 +7266,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\hampth=\left\{ \left<G,s,t\right>\mid t\text{ ל־}s\text{ גרף מכוון עם מסלול המילטוני מ־}G\right\} $
 \end_inset
 
@@ -7018,7 +7281,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\hampth\in\np$
 \end_inset
 
@@ -7032,7 +7296,8 @@ filename "E:/University/!Summaries/macros.lyx"
 השערה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\hampth\notin\P$
 \end_inset
 
@@ -7053,7 +7318,8 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\ex=\bigcup_{k\in\bbn}\dtime\left(2^{n^{k}}\right)$
 \end_inset
 
@@ -7071,7 +7337,8 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\nex=\bigcup_{k\in\bbn}\ntime\left(2^{n^{k}}\right)$
 \end_inset
 
@@ -7085,7 +7352,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\ex\subseteq\nex$
 \end_inset
 
@@ -7099,7 +7367,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\P\subseteq\np\subseteq\ex\subseteq\nex$
 \end_inset
 
@@ -7113,7 +7382,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\P\subsetneq\ex$
 \end_inset
 
@@ -7127,7 +7397,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\np\subsetneq\nex$
 \end_inset
 
@@ -7148,7 +7419,8 @@ filename "E:/University/!Summaries/macros.lyx"
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -7182,7 +7454,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מוודא לשפה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\l\subseteq\Sigma^{*}$
 \end_inset
 
@@ -7202,7 +7475,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-שלמות: יהי 
+שלמות:
+ יהי 
 \begin_inset Formula $x\in\l$
 \end_inset
 
@@ -7218,7 +7492,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-נאותות: יהי 
+נאותות:
+ יהי 
 \begin_inset Formula $x\notin\l$
 \end_inset
 
@@ -7240,23 +7515,24 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\l\subseteq\Sigma^{*}$
 \end_inset
 
- שפה אזי )
+ שפה אזי (
 \begin_inset Formula $\l\in\re$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיים מוודא ל־
+(קיים מוודא ל־
 \begin_inset Formula $\l$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -7266,7 +7542,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מדווא פולינומי לשפה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\l\subseteq\Sigma^{*}$
 \end_inset
 
@@ -7304,7 +7581,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\clique=\left\{ \left<G,k\right>\mid k\text{ גרף לא מכוון בעל קליקה מגודל }G\right\} $
 \end_inset
 
@@ -7318,7 +7596,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: קיים מוודא פולינומי ל־
+:
+ קיים מוודא פולינומי ל־
 \begin_inset Formula $\clique$
 \end_inset
 
@@ -7332,7 +7611,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\is=\left\{ \left<G,k\right>\mid k\text{ גרף לא מכוון בעל קבוצה בת"ל מגודל }G\right\} $
 \end_inset
 
@@ -7346,7 +7626,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: קיים מוודא פולינומי ל־
+:
+ קיים מוודא פולינומי ל־
 \begin_inset Formula $\is$
 \end_inset
 
@@ -7360,7 +7641,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\factor=\left\{ \left<N,k\right>\mid\exists d\in\left[k\right].\left(d|N\right)\right\} $
 \end_inset
 
@@ -7374,7 +7656,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: קיים מוודא פולינומי ל־
+:
+ קיים מוודא פולינומי ל־
 \begin_inset Formula $\factor$
 \end_inset
 
@@ -7388,8 +7671,9 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
-\begin_inset Formula $\subsetsum=\left\{ \left<S,k\right>\mid\left(S\subseteq\bbn\right)\land\left(\exists T\subseteq S.\sum_{i\in T}i=t\right)\right\} $
+:
+ 
+\begin_inset Formula $\subsetsum=\left\{ \left<S,t\right>\mid\left(S\subseteq\bbn\right)\land\left(\exists T\subseteq S.\sum_{i\in T}i=t\right)\right\} $
 \end_inset
 
 .
@@ -7402,7 +7686,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: קיים מוודא פולינומי ל־
+:
+ קיים מוודא פולינומי ל־
 \begin_inset Formula $\subsetsum$
 \end_inset
 
@@ -7416,23 +7701,24 @@ filename "E:/University/!Summaries/macros.lyx"
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\l\subseteq\Sigma^{*}$
 \end_inset
 
- שפה אזי )
+ שפה אזי (
 \begin_inset Formula $\l\in\np$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיים מוודא פולינומי ל־
+(קיים מוודא פולינומי ל־
 \begin_inset Formula $\l$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -7442,7 +7728,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\clique,\is,\factor,\subsetsum\in\np$
 \end_inset
 
@@ -7456,7 +7743,8 @@ filename "E:/University/!Summaries/macros.lyx"
 השערה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\P\ne\np$
 \end_inset
 
@@ -7473,7 +7761,8 @@ filename "E:/University/!Summaries/macros.lyx"
 פונקציה חשיבה פולינומית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $D\subseteq\Sigma$
 \end_inset
 
@@ -7519,7 +7808,8 @@ filename "E:/University/!Summaries/macros.lyx"
 רדוקציית מיפוי פולינומית
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\Sigma,\Delta$
 \end_inset
 
@@ -7557,7 +7847,8 @@ filename "E:/University/!Summaries/macros.lyx"
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\Sigma,\Delta$
 \end_inset
 
@@ -7591,7 +7882,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\clique\le_{p}\is$
 \end_inset
 
@@ -7605,7 +7897,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A,B$
 \end_inset
 
@@ -7635,7 +7928,8 @@ filename "E:/University/!Summaries/macros.lyx"
 ־קשה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\nph=\left\{ \l\mid\forall L\in\np\left(L\le_{p}\l\right)\right\} $
 \end_inset
 
@@ -7653,7 +7947,8 @@ filename "E:/University/!Summaries/macros.lyx"
 ־שלמה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\npc=\np\cap\nph$
 \end_inset
 
@@ -7667,7 +7962,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\l\in\npc$
 \end_inset
 
@@ -7685,7 +7981,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\acc_{\np}=\left\{ \left<M,x,1^{t}\right>\mid\text{ צעדים}t\text{ מקבלת לכל היותר אחרי }M\left(x,w\right)\text{ עבורו }w\text{קיים }\right\} $
 \end_inset
 
@@ -7699,7 +7996,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\acc_{\np}\in\npc$
 \end_inset
 
@@ -7713,7 +8011,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A,B\in\np$
 \end_inset
 
@@ -7739,7 +8038,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מעגל ספיק
 \series default
 \color inherit
-: מעגל 
+:
+ מעגל 
 \begin_inset Formula $C$
 \end_inset
 
@@ -7765,7 +8065,8 @@ filename "E:/University/!Summaries/macros.lyx"
 
 \series default
 \color inherit
-: פסוק 
+:
+ פסוק 
 \begin_inset Formula $\varphi\in\cnf$
 \end_inset
 
@@ -7791,7 +8092,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $k\in\bbn_{+}$
 \end_inset
 
@@ -7809,7 +8111,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $k\in\bbn_{+}$
 \end_inset
 
@@ -7827,7 +8130,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $2\sat\in\P$
 \end_inset
 
@@ -7841,7 +8145,8 @@ filename "E:/University/!Summaries/macros.lyx"
 משפט קוק־לוין
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $3\sat\in\npc$
 \end_inset
 
@@ -7855,7 +8160,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $k,\ell\in\bbn_{+}$
 \end_inset
 
@@ -7877,7 +8183,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $k\in\bbn\backslash\left\{ 0,1,2\right\} $
 \end_inset
 
@@ -7895,7 +8202,8 @@ filename "E:/University/!Summaries/macros.lyx"
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $3\sat\le_{p}\clique$
 \end_inset
 
@@ -7909,7 +8217,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\clique,\is\in\npc$
 \end_inset
 
@@ -7923,7 +8232,8 @@ filename "E:/University/!Summaries/macros.lyx"
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in\M[m\times k][\left\{ p_{i}\right\} \cup\left\{ \neg p_{i}\right\} ]$
 \end_inset
 
@@ -7949,7 +8259,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $C\cnf=\left\{ \left<\varphi,k\right>\mid\left(\varphi\in\cnf\right)\land\left(\exists v\left(N\left(\varphi,v\right)=k\right)\right)\right\} $
 \end_inset
 
@@ -7963,7 +8274,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $C\cnf\in\npc$
 \end_inset
 
@@ -7977,7 +8289,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\dnf\cnf=\left\{ \left<\varphi\right>\mid\left(\varphi\in\dnf\right)\land\left(\text{ ספיקה}\varphi\right)\right\} $
 \end_inset
 
@@ -7991,7 +8304,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\dnf\cnf\in\P$
 \end_inset
 
@@ -8005,7 +8319,8 @@ filename "E:/University/!Summaries/macros.lyx"
 כיסוי קודקודים
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -8031,7 +8346,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\vc=\left\{ \left<G,k\right>\mid k\text{ גרף לא מכוון בעל כיסוי קודקודים מגודל }G\right\} $
 \end_inset
 
@@ -8045,7 +8361,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\vc\in\npc$
 \end_inset
 
@@ -8073,7 +8390,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 בסיס פונקציות
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -8089,7 +8407,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 מעגל
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -8184,7 +8503,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 הערה
 \series default
-: נשמור על הטרמינולוגיה ממעגל בוליאני כהכללה טבעית.
+:
+ נשמור על הטרמינולוגיה ממעגל בוליאני כהכללה טבעית.
 \end_layout
 
 \begin_layout Standard
@@ -8192,7 +8512,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 מטריצת הקונפיגורציות/טאבלו
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $T:\bbn\to\bbn$
 \end_inset
 
@@ -8240,7 +8561,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 הערה
 \series default
-: במטריצת הקונפיגורציות נניח כי 
+:
+ במטריצת הקונפיגורציות נניח כי 
 \begin_inset Formula $\d\left(q_{a},\sigma\right)=\left(q_{a},\sigma,R\right)$
 \end_inset
 
@@ -8256,7 +8578,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 הגדרה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\cirsat=\left\{ \left<C,x\right>\mid\left(\text{ מעגל בוליאני }C\right)\land\left(\exists w\in\left\{ 0,1\right\} ^{*}\left(C\left(x,w\right)=1\right)\right)\right\} $
 \end_inset
 
@@ -8268,7 +8591,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 הגדרה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $T:\bbn\to\bbn$
 \end_inset
 
@@ -8352,7 +8676,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $T:\bbn\to\bbn$
 \end_inset
 
@@ -8396,7 +8721,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $T:\bbn\to\bbn$
 \end_inset
 
@@ -8432,7 +8758,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Pi$
 \end_inset
 
@@ -8468,7 +8795,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 למה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $T:\bbn\to\bbn$
 \end_inset
 
@@ -8512,19 +8840,19 @@ filename "E:/University/!Summaries/macros.lyx"
 \begin_inset Formula $z\in\left\{ 0,1\right\} ^{n}$
 \end_inset
 
- מתקיים )
+ מתקיים (
 \begin_inset Formula $M\left(z\right)$
 \end_inset
 
- מקבלת(
+ מקבלת)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $C_{M,n}\left(z\right)=1$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -8532,7 +8860,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\cirsat\in\npc$
 \end_inset
 
@@ -8544,7 +8873,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $T:\bbn\to\bbn$
 \end_inset
 
@@ -8580,7 +8910,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\cirsat\le_{p}3\sat$
 \end_inset
 
@@ -8592,7 +8923,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $3\sat\le_{p}\subsetsum$
 \end_inset
 
@@ -8604,7 +8936,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 מסקנה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\subsetsum\in\npc$
 \end_inset
 
@@ -8616,7 +8949,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $3\sat\le_{p}\hampth$
 \end_inset
 
@@ -8628,7 +8962,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 מסקנה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\hampth\in\npc$
 \end_inset
 
@@ -8644,7 +8979,8 @@ filename "E:/University/!Summaries/macros.lyx"
 
 
 \series default
-: 
+:
+ 
 \begin_inset Formula $\conp=\left\{ L\mid\overline{L}\in\np\right\} $
 \end_inset
 
@@ -8656,7 +8992,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 השערה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\conp\ne\np$
 \end_inset
 
@@ -8671,7 +9008,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 טענה
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A,B$
 \end_inset
 
@@ -8711,7 +9049,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\l\in\npc$
 \end_inset
 
@@ -8727,7 +9066,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\P\subseteq\np\cap\conp$
 \end_inset
 
@@ -8739,7 +9079,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 השערה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\P\ne\np\cap\conp$
 \end_inset
 
@@ -8754,7 +9095,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\factor\in\np\cap\conp$
 \end_inset
 
@@ -8766,7 +9108,8 @@ filename "E:/University/!Summaries/macros.lyx"
 \series bold
 השערה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\P\ne\np\cap\conp$
 \end_inset
 
@@ -8799,7 +9142,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\matmult=\left\{ \left<A,B,C\right>\mid\left(A,B,C\in\M[n][\bbz]\right)\land\left(A\cdot B=C\right)\right\} $
 \end_inset
 
@@ -8813,7 +9157,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $D\in\M[n][\bbz]$
 \end_inset
 
@@ -8835,7 +9180,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: קיימת מ
+:
+ קיימת מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -8921,7 +9267,8 @@ filename "E:/University/!Summaries/macros.lyx"
 נוסחה אריתמטית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\bbf$
 \end_inset
 
@@ -8951,7 +9298,8 @@ filename "E:/University/!Summaries/macros.lyx"
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -8990,7 +9338,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\ze_{\bbf}=\left\{ \left<\varphi\right>\mid\varphi\equiv0\text{ עבורה }\bbf\text{ נוסחה אריתמטית מעל }\varphi\right\} $
 \end_inset
 
@@ -9004,7 +9353,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\overline{\ze_{\bbz_{2}}}\in\npc$
 \end_inset
 
@@ -9018,7 +9368,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -9048,7 +9399,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -9078,7 +9430,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\bbf$
 \end_inset
 
@@ -9096,7 +9449,8 @@ filename "E:/University/!Summaries/macros.lyx"
 למה שוורץ־זיפל
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f\in\bbf\left[x_{1},\ldots,x_{n}\right]$
 \end_inset
 
@@ -9122,7 +9476,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: קיימת מ
+:
+ קיימת מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -9216,7 +9571,8 @@ filename "E:/University/!Summaries/macros.lyx"
 מכונת טיורינג אקראית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $T\left(n\right)$
 \end_inset
 
@@ -9246,7 +9602,8 @@ filename "E:/University/!Summaries/macros.lyx"
 זמן ריצה של מכונת טיורינג אקראית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $T\left(n\right)$
 \end_inset
 
@@ -9268,7 +9625,8 @@ filename "E:/University/!Summaries/macros.lyx"
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -9302,7 +9660,8 @@ filename "E:/University/!Summaries/macros.lyx"
 קלט של מכונת טיורינג אקראית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -9336,7 +9695,8 @@ filename "E:/University/!Summaries/macros.lyx"
 אקראיות של מכונת טיורינג אקראית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -9370,7 +9730,8 @@ filename "E:/University/!Summaries/macros.lyx"
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $M$
 \end_inset
 
@@ -9417,7 +9778,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\a:\bbn\to\left[0,1\right]$
 \end_inset
 
@@ -9483,7 +9845,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\a,\b:\bbn\to\left[0,1\right]$
 \end_inset
 
@@ -9505,7 +9868,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\rp\left(1\right)=\P$
 \end_inset
 
@@ -9519,7 +9883,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\a:\bbn\to\left[0,1\right]$
 \end_inset
 
@@ -9550,7 +9915,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\a:\bbn\to\left[0,1\right]$
 \end_inset
 
@@ -9568,7 +9934,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\a:\bbn\to\left[0,1\right]$
 \end_inset
 
@@ -9634,7 +10001,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\ze_{\bbr}\in\corp\left(0.99\right)$
 \end_inset
 
@@ -9648,7 +10016,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $c,d\in\bbn$
 \end_inset
 
@@ -9666,7 +10035,8 @@ filename "E:/University/!Summaries/macros.lyx"
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\rp=\rp\left(0.5\right)$
 \end_inset
 
@@ -9680,7 +10050,8 @@ filename "E:/University/!Summaries/macros.lyx"
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\corp=\corp\left(0.5\right)$
 \end_inset
 
@@ -9703,7 +10074,8 @@ filename "E:/University/!Summaries/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\a,\b:\bbn\to\left[0,1\right]$
 \end_inset
 
@@ -9769,7 +10141,8 @@ filename "E:/University/!Summaries/macros.lyx"
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bpp=\bpp\left(\frac{1}{3},\frac{2}{3}\right)$
 \end_inset
 
@@ -9783,7 +10156,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\a:\bbn\to\left[0,1\right]$
 \end_inset
 
@@ -9801,7 +10175,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\a:\bbn\to\left[0,1\right]$
 \end_inset
 
@@ -9819,7 +10194,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\a,\b,\g,\d:\bbn\to\left[0,1\right]$
 \end_inset
 
@@ -9841,7 +10217,8 @@ filename "E:/University/!Summaries/macros.lyx"
 משפט צ'רנוף־הופדינג
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\d>0$
 \end_inset
 
@@ -9867,7 +10244,8 @@ filename "E:/University/!Summaries/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $c,d\in\bbn$
 \end_inset
 
