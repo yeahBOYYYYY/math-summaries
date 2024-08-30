@@ -4068,7 +4068,7 @@ literal "true"
 \begin_inset Formula $x\in\Sigma^{*}$
 \end_inset
 
- עבורו קיימים 
+ עבורו קיימות 
 \begin_inset Formula $c_{0}\ldots c_{n}$
 \end_inset
 
@@ -4115,7 +4115,7 @@ literal "true"
 \begin_inset Formula $x\in\Sigma^{*}$
 \end_inset
 
- עבורו קיימים 
+ עבורו קיימות 
 \begin_inset Formula $c_{0}\ldots c_{n}$
 \end_inset
 
@@ -9446,6 +9446,48 @@ literal "true"
 
 \series bold
 \color blue
+דרגה טוטאלית של מונום
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $d_{1}\ldots d_{n}\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\deg\left(\prod_{i=1}^{n}x_{i}^{d_{i}}\right)=\sum_{i=1}^{n}d_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+דרגה טוטאלית של
+\series default
+ 
+\series bold
+פולינום
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $d\in M_{k\times n}\left(\bbn\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\deg\left(\sum_{i=1}^{k}\prod_{j=1}^{n}x_{j}^{d_{i,j}}\right)=\max\left\{ \deg\left(\prod_{j=1}^{n}x_{j}^{d_{i,j}}\right)\bmid i\in\left[k\right]\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
 למה שוורץ־זיפל
 \series default
 \color inherit
@@ -9584,6 +9626,10 @@ literal "true"
 \begin_inset Formula $M$
 \end_inset
 
+ בעלת זמן ריצה 
+\begin_inset Formula $T$
+\end_inset
+
  עם קונפיגורציה התחלתית 
 \begin_inset Formula $x\$r$
 \end_inset
@@ -9599,7 +9645,7 @@ literal "true"
 
 \series bold
 \color blue
-זמן ריצה של מכונת טיורינג אקראית
+חסם עליון לזמן ריצה של מכונת טיורינג אקראית
 \series default
 \color inherit
 :
@@ -10032,7 +10078,11 @@ literal "true"
 
 \series bold
 \color blue
-סימון
+שפה 
+\begin_inset Formula $\rp$
+\end_inset
+
+
 \series default
 \color inherit
 :
@@ -10047,7 +10097,11 @@ literal "true"
 
 \series bold
 \color blue
-סימון
+שפה 
+\begin_inset Formula $\corp$
+\end_inset
+
+
 \series default
 \color inherit
 :
@@ -10138,7 +10192,11 @@ literal "true"
 
 \series bold
 \color blue
-סימון
+שפה 
+\begin_inset Formula $\bpp$
+\end_inset
+
+
 \series default
 \color inherit
 :
@@ -10262,6 +10320,596 @@ literal "true"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $M$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $k$
+\end_inset
+
+־סרטית ותהא 
+\begin_inset Formula $c_{1}\$c_{2}\$\ldots\$c_{k}$
+\end_inset
+
+ קונפיגורציה אזי 
+\begin_inset Formula $\left(c_{1}\$c_{2}\$\ldots\$c_{k}\right)^{i}=c_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $x\in\Sigma^{*}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $A\subseteq\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $x\backslash A$
+\end_inset
+
+ הינה המחרוזת 
+\begin_inset Formula $x$
+\end_inset
+
+ ללא אברי 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מכונת טיורינג בעלת סיבוכיות מקום
+\series default
+:
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ אזי מ
+\begin_inset Quotes erd
+\end_inset
+
+ט תלת־סרטית 
+\begin_inset Formula $M$
+\end_inset
+
+ עבורה לכל קונפיגורציות 
+\begin_inset Formula $c_{0}\ldots c_{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $c_{0}=q_{0}x$
+\end_inset
+
+ וכן 
+\begin_inset Formula $c_{i-1}$
+\end_inset
+
+ עוברת ל־
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים
+\end_layout
+
+\begin_layout Itemize
+סרט לקריאה בלבד:
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $c_{i}^{1}=x\backslash Q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סרט חסום במקום:
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|c_{i-1}^{2}\right|\le S\left(n\right)+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סרט לכתיבה חד־פעמית:
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $j\in\left[\left|c_{i-1}^{3}\right|\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(c_{i-1}^{3}\backslash Q\right)_{j}=\left(c_{i}^{3}\backslash Q\right)_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חסם עליון למקום ריצה של מכונת טיורינג
+\series default
+:
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $M$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט בעלת סיבוכיות מקום 
+\begin_inset Formula $S$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ נקרא למכונת טיורינג בעלת סיבוכיות מקום מכונט טיורינג.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\dspace}{\text{DSpace}}
+{\text{DSpace}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+הגדרה:
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\dspace\left(S\left(n\right)\right)=\left\{ L\left(M\right)\mid\O\left(S\left(n\right)\right)\text{ מ"ט שרצה במקום }M\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\pspace}{\mathcal{PSPACE}}
+{\text{PSPACE}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה 
+\begin_inset Formula $\pspace$
+\end_inset
+
+
+\series default
+:
+ 
+\begin_inset Formula $\pspace=\bigcup_{c\in\bbn}\dspace\left(n^{c}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\logspace}{\mathcal{LOGSPACE}}
+{\text{LOGSPACE}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה 
+\begin_inset Formula $\logspace$
+\end_inset
+
+
+\series default
+:
+ 
+\begin_inset Formula $\logspace=\dspace\left(\log\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ 
+\begin_inset Formula $\logspace=\text{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\dspace\left(1\right)=\dspace\left(\log\left(\log\left(n\right)\right)\right)=\left\{ L\mid\text{ רגולרית}L\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $T$
+\end_inset
+
+ חשיבה בזמן אזי 
+\begin_inset Formula $\dtime\left(T\left(n\right)\right)\subseteq\dspace\left(T\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\np\subseteq\pspace$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $S\ge\log$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\dspace\left(S\left(n\right)\right)\subseteq\dtime\left(2^{\O\left(S\left(n\right)\right)}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ 
+\begin_inset Formula $\logspace\subseteq\P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ 
+\begin_inset Formula $\pspace\subseteq\ex$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציה חשיבה במקום
+\series default
+:
+ פונקציה 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ עבורה קיימת מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $M$
+\end_inset
+
+ המקיימת לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ כי 
+\begin_inset Formula $M$
+\end_inset
+
+ על הקלט 
+\begin_inset Formula $1^{n}$
+\end_inset
+
+ מחשבת את 
+\begin_inset Formula $\left(S\left(n\right)\right)_{2}$
+\end_inset
+
+ במקום 
+\begin_inset Formula $\O\left(S\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט היררכיית המקום
+\series default
+:
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ חשיבה במקום ותהא 
+\begin_inset Formula $t\left(n\right)=o\left(S\left(n\right)\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\dspace\left(t\left(n\right)\right)\subsetneq\dspace\left(T\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ 
+\begin_inset Formula $\logspace\subsetneq\pspace$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ לפחות אחד מהבאים נכון
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\logspace\subsetneq\P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\P\subsetneq\pspace$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציה חשיבה במקום לוגריתמי
+\series default
+:
+ תהא 
+\begin_inset Formula $D\subseteq\Sigma$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f:D\to\left(\Gamma\backslash\left\{ \spc\right\} \right)^{*}$
+\end_inset
+
+ עבורה קיימת מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $M$
+\end_inset
+
+ בעלת סיבוכיות מקום 
+\begin_inset Formula $\log\left(n\right)$
+\end_inset
+
+ המחשבת את 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רדוקציית מיפוי במקום לוגריתמי
+\series default
+:
+ יהיו 
+\begin_inset Formula $\Sigma,\Delta$
+\end_inset
+
+ אלפבייתים באשר 
+\begin_inset Formula $\Sigma\subseteq\Delta$
+\end_inset
+
+ תהא 
+\begin_inset Formula $A\subseteq\Sigma^{*}$
+\end_inset
+
+ שפה ותהא 
+\begin_inset Formula $B\subseteq\Delta^{*}$
+\end_inset
+
+ שפה אזי רדוקציית מיפוי 
+\begin_inset Formula $f$
+\end_inset
+
+ מ־
+\begin_inset Formula $A$
+\end_inset
+
+ ל־
+\begin_inset Formula $B$
+\end_inset
+
+ חשיבה במקום לוגריתמי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהיו 
+\begin_inset Formula $\Sigma,\Delta$
+\end_inset
+
+ אלפבייתים באשר 
+\begin_inset Formula $\Sigma\subseteq\Delta$
+\end_inset
+
+ תהא 
+\begin_inset Formula $A\subseteq\Sigma^{*}$
+\end_inset
+
+ שפה תהא 
+\begin_inset Formula $B\subseteq\Delta^{*}$
+\end_inset
+
+ שפה ותהא 
+\begin_inset Formula $f:\Sigma^{*}\to\Delta^{*}$
+\end_inset
+
+ רדוקציית מיפוי במקום לוגריתמי אזי 
+\begin_inset Formula $A\le_{L}B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ שפות עבורן 
+\begin_inset Formula $A\le_{L}B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\le_{p}B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body
