@@ -7410,6 +7410,21 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\left(\P=\np\right)\implies\left(\ex=\nex\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
@@ -8265,7 +8280,7 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $C\cnf=\left\{ \left<\varphi,k\right>\mid\left(\varphi\in\cnf\right)\land\left(\exists v\left(N\left(\varphi,v\right)=k\right)\right)\right\} $
+\begin_inset Formula $C-\cnf=\left\{ \left<\varphi,k\right>\mid\left(\varphi\in\cnf\right)\land\left(\exists v\left(N\left(\varphi,v\right)=k\right)\right)\right\} $
 \end_inset
 
 .
@@ -8280,7 +8295,7 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $C\cnf\in\npc$
+\begin_inset Formula $C-\cnf\in\npc$
 \end_inset
 
 .
@@ -8295,7 +8310,7 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $\dnf\cnf=\left\{ \left<\varphi\right>\mid\left(\varphi\in\dnf\right)\land\left(\text{ ספיקה}\varphi\right)\right\} $
+\begin_inset Formula $\dnf\sat=\left\{ \left<\varphi\right>\mid\left(\varphi\in\dnf\right)\land\left(\text{ ספיקה}\varphi\right)\right\} $
 \end_inset
 
 .
@@ -8310,7 +8325,91 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $\dnf\cnf\in\P$
+\begin_inset Formula $\dnf\sat\in\P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+הגדרה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $C-\dnf=\left\{ \left<\varphi,k\right>\mid\left(\varphi\in\dnf\right)\land\left(\exists v\left(N\left(\varphi,v\right)=k\right)\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $C-\cnf\le_{p}C-\dnf$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $C-\dnf\in\npc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\partition}{\text{PARTITION}}
+{\text{PARTITION}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+הגדרה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\partition=\left\{ S\subseteq\bbn\mid\left(\text{ מולטי קבוצה}S\right)\land\left(\exists T\subseteq S\left(\sum_{i\in T}i=\sum_{i\in S\backslash T}i\right)\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\partition\in\npc$
 \end_inset
 
 .
