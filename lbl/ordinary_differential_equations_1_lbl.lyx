@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -74,11 +74,11 @@
 \end_preamble
 \options no-math
 \use_default_options true
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language british
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "David CLM"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -86,7 +86,9 @@
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -97,10 +99,11 @@
 \bibtex_command default
 \index_command default
 \float_placement H
+\float_alignment class
 \paperfontsize default
 \spacing onehalf
 \use_hyperref false
-\papersize letterpaper
+\papersize letter
 \use_geometry true
 \use_package amsmath 2
 \use_package amssymb 2
@@ -121,7 +124,9 @@
 \suppress_date true
 \justification false
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -141,11 +146,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -155,7 +165,8 @@
 \lang hebrew
 \begin_inset CommandInset include
 LatexCommand include
-filename "../../macros.lyx"
+filename "E:/University/!Summaries/macros.lyx"
+literal "true"
 
 \end_inset
 
@@ -167,8 +178,9 @@ filename "../../macros.lyx"
 \series bold
 Claim
 \series default
-: 
-\begin_inset Formula $\sols\left\{ y\left(x\right)=y^{\prime}\left(x\right)\right\} =\left\{ Ce^{x}\mid C\in\bbr\right\} $
+:
+ 
+\begin_inset Formula $\sols\left(y=y^{\prime}\right)=\left\{ Ce^{x}\mid C\in\bbr\right\} $
 \end_inset
 
 .
@@ -179,7 +191,8 @@ Claim
 \series bold
 Curves that foliate a domain
 \series default
-: Let 
+:
+ Let 
 \begin_inset Formula $\Omega\subseteq\bbr^{2}$
 \end_inset
 
@@ -203,7 +216,8 @@ Curves that foliate a domain
 \series bold
 Claim
 \series default
-: The solutions of the ODE 
+:
+ The solutions of the ODE 
 \begin_inset Formula $y\left(x\right)=y^{\prime}\left(x\right)$
 \end_inset
 
@@ -215,7 +229,8 @@ Claim
 \series bold
 Theorem of existence and uniqueness of ODEs
 \series default
-: Let 
+:
+ Let 
 \begin_inset Formula $f\in C^{1}\left(\bbr^{2},\bbr\right)$
 \end_inset
 
@@ -245,7 +260,8 @@ y\left(a_{1}\right)=a_{2}
 \series bold
 Claim
 \series default
-: Let 
+:
+ Let 
 \begin_inset Formula $\Omega\subseteq\bbr^{2}$
 \end_inset
 
@@ -269,7 +285,8 @@ Claim
 \series bold
 Theorem Peano
 \series default
-: Let 
+:
+ Let 
 \begin_inset Formula $\Omega\subseteq\bbr^{2}$
 \end_inset
 
@@ -289,7 +306,8 @@ Theorem Peano
 \series bold
 Vector field in the plane
 \series default
-: Let 
+:
+ Let 
 \begin_inset Formula $\Omega\subseteq\bbr^{2}$
 \end_inset
 
@@ -305,7 +323,8 @@ Vector field in the plane
 \series bold
 Notation
 \series default
-: Let 
+:
+ Let 
 \begin_inset Formula $\g:\bbr\to X$
 \end_inset
 
@@ -321,7 +340,8 @@ Notation
 \series bold
 Integral curve
 \series default
-: Let 
+:
+ Let 
 \begin_inset Formula $\nu:\Omega\to\bbr^{2}$
 \end_inset
 
@@ -341,7 +361,8 @@ Integral curve
 \series bold
 Claim
 \series default
-: Let 
+:
+ Let 
 \begin_inset Formula $\nu\in C^{1}\left(\Omega,\bbr^{2}\right)$
 \end_inset
 
@@ -361,7 +382,8 @@ Claim
 \series bold
 Theorem Peano
 \series default
-: Let 
+:
+ Let 
 \begin_inset Formula $\nu\in C\left(\Omega,\bbr^{2}\right)$
 \end_inset
 
@@ -381,7 +403,8 @@ Theorem Peano
 \series bold
 Theorem
 \series default
-: Let 
+:
+ Let 
 \begin_inset Formula $\Omega\subseteq\bbr^{2}$
 \end_inset
 
@@ -397,7 +420,8 @@ Theorem
 \end_layout
 
 \begin_layout Standard
-Logistic equation: Let 
+Logistic equation:
+ Let 
 \begin_inset Formula $L>0$
 \end_inset
 
@@ -406,22 +430,6 @@ Logistic equation: Let
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $29.05.2024$
-\end_inset
-
- - everything
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_body

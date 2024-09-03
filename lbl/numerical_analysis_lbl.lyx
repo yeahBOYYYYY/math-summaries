@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -19,16 +19,6 @@
 \usepackage{polynom}
 \usepackage{booktabs}
 \usepackage{fancyhdr}
-\usepackage{color}
-\usepackage{xcolor}
-
-
-% heb font
-\newfontfamily\hebrewfont{David CLM}
-\newfontfamily\hebrewfontsf{David CLM}
-\newfontfamily\hebrewfonttt{David CLM}
-\newfontface\tempfont{Times New Roman}[Contextuals={WordInitial,WordFinal}]
-
 
 % it's here?
 \setlength{\tabcolsep}{1pt}
@@ -59,6 +49,7 @@
 \definecolor{stringcolor}{RGB}{0,168,0}
 \definecolor{remarkcolor}{RGB}{150,145,91} % 255,225,88
 
+% algorithms
 \newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{gray}{#1}}
 \SetCommentSty{mycommfont}
 
@@ -80,6 +71,8 @@
 \renewcommand{\impliedby}{\negthickspace\RonMikhelmanLolll\negthickspace}
 
 %for defnos
+\usepackage{multicol}
+\usepackage{color}
 \setlength{\columnseprule}{1pt}
 \def\columnseprulecolor{\color{black}}
 \end_preamble
@@ -88,11 +81,11 @@
 \begin_modules
 algorithm2e
 \end_modules
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language hebrew
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "David CLM"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -100,7 +93,9 @@ algorithm2e
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -111,10 +106,11 @@ algorithm2e
 \bibtex_command default
 \index_command default
 \float_placement H
+\float_alignment class
 \paperfontsize default
 \spacing onehalf
 \use_hyperref false
-\papersize letterpaper
+\papersize letter
 \use_geometry true
 \use_package amsmath 2
 \use_package amssymb 2
@@ -135,7 +131,9 @@ algorithm2e
 \suppress_date true
 \justification false
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -155,11 +153,16 @@ algorithm2e
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -167,7 +170,8 @@ algorithm2e
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "../../macros.lyx"
+filename "E:/University/!Summaries/macros.lyx"
+literal "true"
 
 \end_inset
 
@@ -179,7 +183,8 @@ filename "../../macros.lyx"
 \series bold
 נקודה צפה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\b\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -219,7 +224,8 @@ filename "../../macros.lyx"
 \series bold
 סימן
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\b\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -247,7 +253,8 @@ filename "../../macros.lyx"
 \series bold
 מנטיסה/ספרות משמעותיות
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\b\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -275,7 +282,8 @@ filename "../../macros.lyx"
 \series bold
 הגבלה על החזקה בנקודה צפה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\b\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -299,7 +307,8 @@ filename "../../macros.lyx"
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\b\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -327,7 +336,8 @@ filename "../../macros.lyx"
 \series bold
 גלישה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\b\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -346,7 +356,8 @@ filename "../../macros.lyx"
 \begin_inset Formula $\text{overflow}$
 \end_inset
 
-: 
+:
+ 
 \begin_inset Formula $\left|x\right|\ge\b^{U}$
 \end_inset
 
@@ -357,7 +368,8 @@ filename "../../macros.lyx"
 \begin_inset Formula $\text{underflow}$
 \end_inset
 
-: 
+:
+ 
 \begin_inset Formula $\left|x\right|\le\b^{L-1}$
 \end_inset
 
@@ -369,7 +381,8 @@ filename "../../macros.lyx"
 \series bold
 קיצוץ נקודה צפה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\b\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -401,7 +414,8 @@ filename "../../macros.lyx"
 \series bold
 עיגול נקודה צפה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\b\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -435,7 +449,8 @@ filename "../../macros.lyx"
 \series bold
 סימון
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\b\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -459,7 +474,8 @@ filename "../../macros.lyx"
 \series bold
 שגיאה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x\in\bbr$
 \end_inset
 
@@ -475,7 +491,8 @@ filename "../../macros.lyx"
 \series bold
 שגיאה מוחלטת
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x\in\bbr$
 \end_inset
 
@@ -491,7 +508,8 @@ filename "../../macros.lyx"
 \series bold
 שגיאה יחסית
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x\in\bbr$
 \end_inset
 
@@ -507,7 +525,8 @@ filename "../../macros.lyx"
 \series bold
 מסקנה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x\in\bbr$
 \end_inset
 
@@ -523,7 +542,8 @@ filename "../../macros.lyx"
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\b\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -547,7 +567,8 @@ filename "../../macros.lyx"
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\b\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -571,7 +592,8 @@ filename "../../macros.lyx"
 \series bold
 טענה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x,y\in\bbr$
 \end_inset
 
@@ -587,7 +609,8 @@ filename "../../macros.lyx"
 \series bold
 מסקנה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x,y\in\bbr$
 \end_inset
 
@@ -603,7 +626,8 @@ filename "../../macros.lyx"
 \series bold
 טענה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x,y\in\bbr$
 \end_inset
 
@@ -619,7 +643,8 @@ filename "../../macros.lyx"
 \series bold
 טענה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x,y\in\bbr$
 \end_inset
 
@@ -635,7 +660,8 @@ filename "../../macros.lyx"
 \series bold
 טענה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x,y\in\bbr$
 \end_inset
 
@@ -651,7 +677,8 @@ filename "../../macros.lyx"
 \series bold
 טענה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x,y\in\bbr$
 \end_inset
 
@@ -667,7 +694,8 @@ filename "../../macros.lyx"
 \series bold
 טענה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x,y\in\bbr$
 \end_inset
 
@@ -685,7 +713,8 @@ filename "../../macros.lyx"
 אלגוריתם שיטת החצייה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\e$
 \end_inset
 
@@ -729,7 +758,9 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$a_0, b_0, 
+name{$a_0,
+ b_0,
+ 
 \backslash
 varepsilon$}}{     $n
 \backslash
@@ -842,7 +873,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\e$
 \end_inset
 
@@ -880,7 +912,8 @@ end{algorithm}
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left\{ x_{n}\right\} \subseteq\bbr$
 \end_inset
 
@@ -902,7 +935,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left[a,b\right]\to\bbr$
 \end_inset
 
@@ -928,7 +962,8 @@ end{algorithm}
 סדר התכנסות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left\{ x_{n}\right\} \subseteq\bbr$
 \end_inset
 
@@ -954,7 +989,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: סדר ההתכנסות של שיטת החצייה היא לינארית.
+:
+ סדר ההתכנסות של שיטת החצייה היא לינארית.
 \end_layout
 
 \begin_layout Standard
@@ -964,7 +1000,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f$
 \end_inset
 
@@ -990,7 +1027,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\e_{M}$
 \end_inset
 
@@ -1024,7 +1062,8 @@ end{algorithm}
 מספר המצב
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f$
 \end_inset
 
@@ -1046,7 +1085,8 @@ end{algorithm}
 שיטת ניוטון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{1}\left(\left[a,b\right],\bbr\backslash\left\{ 0\right\} \right)$
 \end_inset
 
@@ -1068,7 +1108,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{1}\left(\left[a,b\right],\bbr\backslash\left\{ 0\right\} \right)$
 \end_inset
 
@@ -1090,7 +1131,8 @@ end{algorithm}
 שיטת המיתרים
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[a,b\right],\bbr\backslash\left\{ 0\right\} \right)$
 \end_inset
 
@@ -1119,7 +1161,8 @@ end{algorithm}
 \series default
 \color inherit
 \lang hebrew
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\e$
 \end_inset
 
@@ -1163,7 +1206,9 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$a_0, b_0, 
+name{$a_0,
+ b_0,
+ 
 \backslash
 varepsilon$}}{     $n
 \backslash
@@ -1288,7 +1333,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[a,b\right],\bbr\backslash\left\{ 0\right\} \right)$
 \end_inset
 
@@ -1314,7 +1360,8 @@ end{algorithm}
 שיטת איטרציה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $g:I\to\bbr$
 \end_inset
 
@@ -1336,7 +1383,8 @@ end{algorithm}
 איטרציה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $g:I\to\bbr$
 \end_inset
 
@@ -1358,7 +1406,8 @@ end{algorithm}
 התכנסות שיטת איטרציה
 \series default
 \color inherit
-: שיטת איטרציה 
+:
+ שיטת איטרציה 
 \begin_inset Formula $g:I\to\bbr$
 \end_inset
 
@@ -1376,7 +1425,8 @@ end{algorithm}
 נקודת שבת
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $g:I\to\bbr$
 \end_inset
 
@@ -1398,7 +1448,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $g\in C\left(I,\bbr\right)$
 \end_inset
 
@@ -1420,7 +1471,8 @@ end{algorithm}
 קונסיסטנטיות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
@@ -1442,7 +1494,8 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $g\in C\left(\left[a,b\right],\left[a,b\right]\right)$
 \end_inset
 
@@ -1464,7 +1517,8 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $g\in C^{1}\left(\left[a,b\right],\left[a,b\right]\right)$
 \end_inset
 
@@ -1494,7 +1548,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $g\in C^{1}\left(\left[a,b\right],\left[a,b\right]\right)$
 \end_inset
 
@@ -1520,7 +1575,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $g\in C^{1}\left(\left[a,b\right],\left[a,b\right]\right)$
 \end_inset
 
@@ -1546,7 +1602,8 @@ end{algorithm}
 תנאי ליפשיץ
 \series default
 \color inherit
-: פונקציה 
+:
+ פונקציה 
 \begin_inset Formula $g:\bbr\to\bbr$
 \end_inset
 
@@ -1568,7 +1625,8 @@ end{algorithm}
 תנאי כיווץ
 \series default
 \color inherit
-: פונקציה 
+:
+ פונקציה 
 \begin_inset Formula $g:\bbr\to\bbr$
 \end_inset
 
@@ -1594,7 +1652,8 @@ end{algorithm}
 תנאי מתיחה
 \series default
 \color inherit
-: פונקציה 
+:
+ פונקציה 
 \begin_inset Formula $g\in C^{1}\left(\bbr\right)$
 \end_inset
 
@@ -1620,7 +1679,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -1658,7 +1718,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -1692,7 +1753,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -1726,7 +1788,8 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $g\in C^{1}\left(I,\bbr\right)$
 \end_inset
 
@@ -1764,7 +1827,8 @@ end{algorithm}
 נקודה מושכת
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $g\in C^{1}\left(I,\bbr\right)$
 \end_inset
 
@@ -1786,7 +1850,8 @@ end{algorithm}
 נקודה דוחה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $g\in C^{1}\left(I,\bbr\right)$
 \end_inset
 
@@ -1823,7 +1888,8 @@ end{algorithm}
 נקודה דו־פרצופית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $g\in C^{1}\left(I,\bbr\right)$
 \end_inset
 
@@ -1857,7 +1923,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{1}\left(\left[a,b\right],\bbr\backslash\left\{ 0\right\} \right)$
 \end_inset
 
@@ -1883,7 +1950,8 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $g\in C^{1}\left(I,\bbr\right)$
 \end_inset
 
@@ -1921,7 +1989,8 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p>1$
 \end_inset
 
@@ -1982,7 +2051,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{2}\left(\left[a,b\right],\bbr\backslash\left\{ 0\right\} \right)$
 \end_inset
 
@@ -2012,7 +2082,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{2}\left(\left[a,b\right],\bbr\backslash\left\{ 0\right\} \right)$
 \end_inset
 
@@ -2046,7 +2117,8 @@ end{algorithm}
 שיטת ניוטון המתוקנת
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{1}\left(\left[a,b\right],\bbr\backslash\left\{ 0\right\} \right)$
 \end_inset
 
@@ -2068,7 +2140,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{\eta}\left(\left[a,b\right],\bbr\backslash\left\{ 0\right\} \right)$
 \end_inset
 
@@ -2102,7 +2175,8 @@ end{algorithm}
 שיטת סטפנסן
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{1}\left(\bbr\right)$
 \end_inset
 
@@ -2120,7 +2194,8 @@ end{algorithm}
 תחום ההתכנסות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $g:I\to\bbr$
 \end_inset
 
@@ -2188,7 +2263,8 @@ end{algorithm}
 תחום כיווץ
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $g\in C^{1}\left(I,\bbr\right)$
 \end_inset
 
@@ -2226,7 +2302,8 @@ end{algorithm}
 שיטת ניוטון־רפסון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{1}\left(\bbr^{n},\bbr^{n}\right)$
 \end_inset
 
@@ -2244,7 +2321,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{1}\left(\bbr^{n},\bbr^{n}\right)$
 \end_inset
 
@@ -2270,7 +2348,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[a,b\right],\bbr\right)$
 \end_inset
 
@@ -2303,7 +2382,8 @@ end{algorithm}
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -2321,7 +2401,8 @@ end{algorithm}
 פולינום טריגונומטרי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -2343,7 +2424,8 @@ end{algorithm}
 פולינום אקספוננטי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -2362,14 +2444,15 @@ end{algorithm}
 
 \series bold
 \color magenta
-פולינום אינטרפולציה )פ
+פולינום אינטרפולציה (פ
 \begin_inset Quotes erd
 \end_inset
 
-א(
+א)
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -2381,7 +2464,7 @@ end{algorithm}
 \begin_inset Formula $p\in\Pi_{n}$
 \end_inset
 
-עבורו 
+ עבורו 
 \begin_inset Formula $p\left(x_{i}\right)=f\left(x_{i}\right)$
 \end_inset
 
@@ -2399,7 +2482,8 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -2421,7 +2505,8 @@ end{algorithm}
 פולינום לגראנז'
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $x_{0}\ldots x_{n}\in\bbr$
 \end_inset
 
@@ -2439,7 +2524,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $x_{0}\ldots x_{n}\in\bbr$
 \end_inset
 
@@ -2457,7 +2543,8 @@ end{algorithm}
 טענה בסיס לגראנז'
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $x_{0}\ldots x_{n}\in\bbr$
 \end_inset
 
@@ -2479,7 +2566,8 @@ end{algorithm}
 מסקנה צורת לגראנז'
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -2508,7 +2596,8 @@ end{algorithm}
 טענה בסיס ניוטון
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $x_{0}\ldots x_{n-1}\in\bbr$
 \end_inset
 
@@ -2530,7 +2619,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -2546,8 +2636,8 @@ end{algorithm}
 \begin_inset Formula $f$
 \end_inset
 
- ב־
-\begin_inset Formula $\left\{ x_{0},\ldots,x_{n+1}\right\} $
+ בנקודות 
+\begin_inset Formula $x_{0}\ldots x_{n+1}$
 \end_inset
 
  אזי 
@@ -2572,7 +2662,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -2588,8 +2679,8 @@ end{algorithm}
 \begin_inset Formula $f$
 \end_inset
 
- ב־
-\begin_inset Formula $\left\{ x_{0},\ldots,x_{n+1}\right\} $
+ בנקודות 
+\begin_inset Formula $x_{0}\ldots x_{n+1}$
 \end_inset
 
  אזי 
@@ -2614,7 +2705,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -2630,8 +2722,8 @@ end{algorithm}
 \begin_inset Formula $f$
 \end_inset
 
- ב־
-\begin_inset Formula $\left\{ x_{0},\ldots,x_{n+1}\right\} $
+ בנקודות 
+\begin_inset Formula $x_{0}\ldots x_{n+1}$
 \end_inset
 
  ויהי 
@@ -2664,7 +2756,8 @@ end{algorithm}
 הפרש מחולק
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -2698,7 +2791,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -2724,7 +2818,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -2754,7 +2849,8 @@ end{algorithm}
 טענה נוסחה רקורסיבית להפרשים המחולקים
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -2766,7 +2862,11 @@ end{algorithm}
 \begin_inset Formula $x_{0}\ne x_{k}$
 \end_inset
 
- אזי 
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $f\left[x_{0}\ldots x_{k}\right]=\frac{f\left[x_{1}\ldots x_{k}\right]-f\left[x_{0}\ldots x_{k-1}\right]}{x_{k}-x_{0}}$
 \end_inset
 
@@ -2780,7 +2880,8 @@ end{algorithm}
 השגיאה באינטרפולציה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -2810,7 +2911,8 @@ end{algorithm}
 משפט ביטוי לשגיאה באינטרפולציה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -2826,7 +2928,11 @@ end{algorithm}
 \begin_inset Quotes erd
 \end_inset
 
-א אזי 
+א אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $e\left(x\right)=f\left[x_{0}\ldots x_{n},x\right]\prod_{i=0}^{n}\left(x-x_{i}\right)$
 \end_inset
 
@@ -2840,7 +2946,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -2870,7 +2977,8 @@ end{algorithm}
 מסקנה נוסחת השגיאה בפולינום האינטרפולציה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -2908,7 +3016,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -2946,7 +3055,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -2988,7 +3098,8 @@ end{algorithm}
 פונקציית ספליין
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbr$
 \end_inset
 
@@ -3026,7 +3137,8 @@ end{algorithm}
 הערה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbr$
 \end_inset
 
@@ -3060,7 +3172,8 @@ end{algorithm}
 אינטרפולנט ליניארי למקוטעין
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbr$
 \end_inset
 
@@ -3093,7 +3206,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbr$
 \end_inset
 
@@ -3115,7 +3229,8 @@ end{algorithm}
 הפרש מחולק עם חזרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{1}\left(\bbr\right)$
 \end_inset
 
@@ -3133,7 +3248,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{1}\left(\bbr\right)$
 \end_inset
 
@@ -3151,7 +3267,8 @@ end{algorithm}
 הפרש מחולק עם חזרות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{n}\left(\bbr\right)$
 \end_inset
 
@@ -3175,7 +3292,8 @@ end{algorithm}
 פולינום אינטרפולציית הרמיט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -3217,7 +3335,8 @@ end{algorithm}
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -3247,12 +3366,13 @@ end{algorithm}
 פונקציית ספליין הרמיט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbr$
 \end_inset
 
  תהא 
-\begin_inset Formula $\left\{ x_{0}\ldots x_{n}\right\} $
+\begin_inset Formula $x_{0}\ldots x_{n}$
 \end_inset
 
  חלוקה של 
@@ -3306,7 +3426,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -3328,7 +3449,8 @@ end{algorithm}
 פולינום ברשטיין
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -3354,7 +3476,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -3376,7 +3499,8 @@ end{algorithm}
 הגדרה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -3398,7 +3522,8 @@ end{algorithm}
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -3484,7 +3609,8 @@ end{algorithm}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left[0,1\right]\to\bbr$
 \end_inset
 
@@ -3506,7 +3632,8 @@ end{algorithm}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left[0,1\right]\to\bbr$
 \end_inset
 
@@ -3533,7 +3660,8 @@ end{algorithm}
 \series bold
 חצי־מכפלה פנימית
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $V$
 \end_inset
 
@@ -3553,7 +3681,8 @@ end{algorithm}
 \end_layout
 
 \begin_layout Itemize
-הרמיטיות: 
+הרמיטיות:
+ 
 \begin_inset Formula $\forall a,b\in V.H\left(a,b\right)=\overline{H\left(b,a\right)}$
 \end_inset
 
@@ -3561,7 +3690,8 @@ end{algorithm}
 \end_layout
 
 \begin_layout Itemize
-לינאריות: 
+לינאריות:
+ 
 \begin_inset Formula $\forall a,b,c\in V.\forall\a,\b\in\bbr.H\left(\a a+\b b,c\right)=\a H\left(a,c\right)+\b H\left(b,c\right)$
 \end_inset
 
@@ -3569,7 +3699,8 @@ end{algorithm}
 \end_layout
 
 \begin_layout Itemize
-חיוביות: 
+חיוביות:
+ 
 \begin_inset Formula $\forall a\in V.H\left(a,a\right)\in\bbr_{+}$
 \end_inset
 
@@ -3581,7 +3712,8 @@ end{algorithm}
 \series bold
 חצי־נורמה מושרית
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $V$
 \end_inset
 
@@ -3613,7 +3745,8 @@ end{algorithm}
 \series bold
 קירוב ריבועים מינימליים
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $V$
 \end_inset
 
@@ -3665,7 +3798,8 @@ end{algorithm}
 \series bold
 משפט
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $V$
 \end_inset
 
@@ -3709,7 +3843,7 @@ end{algorithm}
 \begin_inset Formula $c_{0}\ldots c_{n}\in\bbr$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\sum_{i=0}^{n}c_{i}v_{i}$
 \end_inset
 
@@ -3717,11 +3851,11 @@ end{algorithm}
 \begin_inset Formula $u$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $k\in\left\{ 0\ldots n\right\} $
 \end_inset
 
@@ -3729,7 +3863,7 @@ end{algorithm}
 \begin_inset Formula $\sum_{i=0}^{n}c_{i}\left(v_{i},v_{k}\right)=\left(u,v_{k}\right)$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -3737,7 +3871,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $V$
 \end_inset
 
@@ -3793,7 +3928,8 @@ end{algorithm}
 \series bold
 מערכת משוואות נורמלית
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $V$
 \end_inset
 
@@ -3849,7 +3985,8 @@ end{algorithm}
 \series bold
 מסקנה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $V$
 \end_inset
 
@@ -3901,7 +4038,8 @@ end{algorithm}
 \series bold
 מכפלה פנימית ממושקלת
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $w\in C^{1}\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -3910,6 +4048,10 @@ end{algorithm}
 \end_inset
 
  כך 
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $H\left(f,g\right)=\intop_{a}^{b}\left(f\cdot g\cdot w\right)$
 \end_inset
 
@@ -3921,7 +4063,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $w\in C^{1}\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -3941,7 +4084,8 @@ end{algorithm}
 \series bold
 סדרה אורתוגונלית של פולינומים
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $H$
 \end_inset
 
@@ -3973,7 +4117,8 @@ end{algorithm}
 \series bold
 פולינומי לג'נדר
 \series default
-: 
+:
+ 
 \begin_inset Formula $P_{0}\left(x\right)=1$
 \end_inset
 
@@ -3993,7 +4138,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהא מכפלה פנימית ממושקלת 
+:
+ תהא מכפלה פנימית ממושקלת 
 \begin_inset Formula $1$
 \end_inset
 
@@ -4009,7 +4155,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -4025,7 +4172,8 @@ end{algorithm}
 \series bold
 פולינומי צ'בישב
 \series default
-: 
+:
+ 
 \begin_inset Formula $T_{n}\left(x\right)=\cos\left(n\cdot\arccos\left(x\right)\right)$
 \end_inset
 
@@ -4037,7 +4185,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהא מכפלה פנימית ממושקלת 
+:
+ תהא מכפלה פנימית ממושקלת 
 \begin_inset Formula $\frac{1}{\sqrt{1-x^{2}}}$
 \end_inset
 
@@ -4053,7 +4202,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $T_{0}\left(x\right)=1$
 \end_inset
 
@@ -4073,7 +4223,8 @@ end{algorithm}
 \series bold
 פולינומי לגר
 \series default
-: 
+:
+ 
 \begin_inset Formula $L_{0}\left(x\right)=1$
 \end_inset
 
@@ -4093,7 +4244,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהא מכפלה פנימית ממושקלת 
+:
+ תהא מכפלה פנימית ממושקלת 
 \begin_inset Formula $e^{-x}$
 \end_inset
 
@@ -4109,7 +4261,8 @@ end{algorithm}
 \series bold
 פולינומי הרמיט
 \series default
-: 
+:
+ 
 \begin_inset Formula $H_{0}\left(x\right)=1$
 \end_inset
 
@@ -4129,7 +4282,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהא מכפלה פנימית ממושקלת 
+:
+ תהא מכפלה פנימית ממושקלת 
 \begin_inset Formula $e^{-x^{2}}$
 \end_inset
 
@@ -4145,7 +4299,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbn^{2}\to\bbr$
 \end_inset
 
@@ -4180,7 +4335,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in\M$
 \end_inset
 
@@ -4231,7 +4387,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{1}\left(\bbr\right)$
 \end_inset
 
@@ -4263,7 +4420,8 @@ end{algorithm}
 \series bold
 שגיאה בנגזרת
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{1}\left(\bbr\right)$
 \end_inset
 
@@ -4295,7 +4453,8 @@ end{algorithm}
 \series bold
 סדר נקודות חוקי
 \series default
-: נקודות 
+:
+ נקודות 
 \begin_inset Formula $x_{0}\ldots x_{n}\in\bbr$
 \end_inset
 
@@ -4315,7 +4474,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -4327,7 +4487,11 @@ end{algorithm}
 \begin_inset Formula $\sigma\in S_{n+1}$
 \end_inset
 
- תמורה בסדר חוקי אזי 
+ תמורה בסדר חוקי אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $f\left[x_{0}\ldots x_{n}\right]=f\left[x_{\sigma\left(0\right)}\ldots x_{\sigma\left(n\right)}\right]$
 \end_inset
 
@@ -4339,7 +4503,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -4359,7 +4524,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -4379,7 +4545,8 @@ end{algorithm}
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{1}\left(\bbr\right)$
 \end_inset
 
@@ -4387,7 +4554,11 @@ end{algorithm}
 \begin_inset Formula $x_{0}\ldots x_{n}\in\bbr$
 \end_inset
 
- אזי 
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $e_{f^{\prime}}\left(x\right)=f\left[x_{0}\ldots x_{n},x,x\right]\prod_{i=0}^{n}\left(x-x_{i}\right)+f\left[x_{0}\ldots x_{n},x\right]\frac{\text{d}}{\text{d}x}\left(\prod_{i=0}^{n}\left(x-x_{i}\right)\right)$
 \end_inset
 
@@ -4399,7 +4570,8 @@ end{algorithm}
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{1}\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -4423,7 +4595,11 @@ end{algorithm}
 \begin_inset Formula $\zeta,\xi\in\left(a,b\right)$
 \end_inset
 
- עבורם 
+ עבורם
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $f^{\prime}\left(x\right)=p^{\prime}\left(x\right)+\frac{f^{\left(n+2\right)}\left(\zeta\right)}{\left(n+2\right)!}\cdot\prod_{i=0}^{n}\left(x-x_{i}\right)+\frac{f^{\left(n+1\right)}\left(\xi\right)}{\left(n+1\right)!}\cdot\frac{\text{d}}{\text{d}x}\left(\prod_{i=0}^{n}\left(x-x_{i}\right)\right)$
 \end_inset
 
@@ -4435,7 +4611,8 @@ end{algorithm}
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left[a,b\right]\to\bbr$
 \end_inset
 
@@ -4475,7 +4652,8 @@ end{algorithm}
 \series bold
 סדר הקירוב
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{1}\left(\bbr\right)$
 \end_inset
 
@@ -4491,7 +4669,11 @@ end{algorithm}
 \begin_inset Formula $C\in\bbr$
 \end_inset
 
- וקיים 
+ וקיים
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $h\in\left[\min_{i\ne j}\left|x_{i}-x_{j}\right|,\max\left|x_{i}-x_{j}\right|\right]$
 \end_inset
 
@@ -4507,7 +4689,8 @@ end{algorithm}
 \series bold
 הערה
 \series default
-: תהא שיטת קירוב מעל הנקודות 
+:
+ תהא שיטת קירוב מעל הנקודות 
 \begin_inset Formula $x_{1}\ldots x_{n}$
 \end_inset
 
@@ -4535,7 +4718,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{1}\left(\bbr\right)$
 \end_inset
 
@@ -4567,7 +4751,8 @@ end{algorithm}
 \series bold
 סדר דיוק אלגברי
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -4595,7 +4780,8 @@ end{algorithm}
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{m}\left(\bbr\right)$
 \end_inset
 
@@ -4644,7 +4830,8 @@ status collapsed
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{m}\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -4683,7 +4870,8 @@ status collapsed
 status collapsed
 
 \begin_layout Plain Layout
-מסקנה: תהא 
+מסקנה:
+ תהא 
 \begin_inset Formula $f\in C^{2}\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -4722,9 +4910,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
-הפרש קדמי
+כלל הפרש קדמי לקירוב נגזרת
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{2}\left(\bbr\right)$
 \end_inset
 
@@ -4748,7 +4937,8 @@ status collapsed
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{2}\left(\bbr\right)$
 \end_inset
 
@@ -4778,9 +4968,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
-הפרש מרכזי
+כלל הפרש מרכזי לקירוב נגזרת
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{2}\left(\bbr\right)$
 \end_inset
 
@@ -4804,7 +4995,8 @@ status collapsed
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{2}\left(\bbr\right)$
 \end_inset
 
@@ -4844,7 +5036,8 @@ status collapsed
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{3}\left(\bbr\right)$
 \end_inset
 
@@ -4876,7 +5069,8 @@ status collapsed
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{3}\left(\bbr\right)$
 \end_inset
 
@@ -4933,7 +5127,8 @@ status collapsed
 \series bold
 משפט ריצ'רדסון
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{1}\left(\bbr\right)$
 \end_inset
 
@@ -4973,7 +5168,8 @@ status collapsed
 \series bold
 מסקנה קירוב ריצ'רדסון
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{1}\left(\bbr\right)$
 \end_inset
 
@@ -5020,7 +5216,8 @@ status collapsed
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
 \end_inset
 
@@ -5045,6 +5242,1446 @@ status collapsed
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שגיאה באינטגרל
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $x_{0}\ldots x_{n}\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $E\left(\intop_{a}^{b}f\right)=\intop_{a}^{b}e_{f}\left(x\right)\text{d}x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C^{n+1}\left(\left[a,b\right]\right)$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $x_{0}\ldots x_{n},k\in\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\max_{i\in\left[n\right]}\max_{x\in\left[a,b\right]}\left|x-x_{i}\right|\le k\left(b-a\right)$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left|E\left(\intop_{a}^{b}f\right)\right|\le\max_{x\in\left[a,b\right]}\frac{\left|f^{\left(n+1\right)}\left(x\right)\right|}{\left(n+1\right)!}\left(b-a\right)\left(k\left(b-a\right)\right)^{n+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C^{n+1}\left(\left[a,b\right]\right)$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $x_{0}\ldots x_{n},k\in\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\max_{i\in\left[n\right]}\max_{x\in\left[a,b\right]}\left|x-x_{i}\right|\le k\left(b-a\right)$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left|E\left(\intop_{a}^{b}f\right)\right|=\O\left(\left(b-a\right)^{n+2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C^{n+1}\left(\left[a,b\right]\right)$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $x_{0}\ldots x_{n}\in\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\prod_{i=0}^{n}\left(x-x_{i}\right)$
+\end_inset
+
+ בעלת סימן קבוע בקטע 
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $\xi\in\left(a,b\right)$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left|E\left(\intop_{a}^{b}f\right)\right|=\frac{f^{\left(n+1\right)}\left(\xi\right)}{\left(n+1\right)!}\intop_{a}^{b}\prod_{i=0}^{n}\left(x-x_{i}\right)\text{d}x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C^{n+1}\left(\left[a,b\right]\right)$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $x_{0}\ldots x_{n}\in\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\prod_{i=0}^{n}\left(x-x_{i}\right)$
+\end_inset
+
+ בעלת סימן קבוע בקטע 
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left|E\left(\intop_{a}^{b}f\right)\right|=\O\left(\left(b-a\right)^{n+2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כלל המלבן לקירוב אינטגרל
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C^{1}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(b-a\right)f\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C^{1}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $\xi\in\left(a,b\right)$
+\end_inset
+
+ עבורו שגיאת כלל המלבן הינה 
+\begin_inset Formula $E\left(\intop_{a}^{b}f\right)=\frac{\left(b-a\right)^{2}}{2}f^{\prime}\left(\xi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כלל הטרפז לקירוב אינטגרל
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C^{2}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{b-a}{2}\left(f\left(a\right)+f\left(b\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C^{2}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $\xi\in\left(a,b\right)$
+\end_inset
+
+ עבורו שגיאת כלל הטרפז הינה 
+\begin_inset Formula $E\left(\intop_{a}^{b}f\right)=-\frac{\left(b-a\right)^{3}}{12}f^{\prime\prime}\left(\xi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C^{n+2}\left(\left[a,b\right]\right)$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $x_{0}\ldots x_{n+1}\in\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\intop_{a}^{b}\prod_{i=0}^{n}\left(x-x_{i}\right)\text{d}x=0$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\prod_{i=0}^{n+1}\left(x-x_{i}\right)$
+\end_inset
+
+ בעלת סימן קבוע בקטע 
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $\xi\in\left(a,b\right)$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $E\left(\intop_{a}^{b}f\right)=\frac{f^{\left(n+2\right)}\left(\xi\right)}{\left(n+2\right)!}\intop_{a}^{b}\prod_{i=0}^{n+1}\left(x-x_{i}\right)\text{d}x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C^{n+2}\left(\left[a,b\right]\right)$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $x_{0}\ldots x_{n+1}\in\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\intop_{a}^{b}\prod_{i=0}^{n}\left(x-x_{i}\right)\text{d}x=0$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\prod_{i=0}^{n+1}\left(x-x_{i}\right)$
+\end_inset
+
+ בעלת סימן קבוע בקטע 
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|E\left(\intop_{a}^{b}f\right)\right|=\O\left(\left(b-a\right)^{n+3}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כלל נקודת האמצע לקירוב אינטגרל
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C^{2}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(b-a\right)f\left(\frac{a+b}{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C^{2}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $\xi\in\left(a,b\right)$
+\end_inset
+
+ עבורו שגיאת כלל נקודת האמצע הינה 
+\begin_inset Formula $E\left(\intop_{a}^{b}f\right)=\frac{\left(b-a\right)^{3}}{24}f^{\prime\prime}\left(\xi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ תהיינה 
+\begin_inset Formula $A_{0}\ldots A_{n}\in\bbr$
+\end_inset
+
+ תהיינה 
+\begin_inset Formula $x_{0}\ldots x_{n}\in\left[a,b\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p$
+\end_inset
+
+ פ
+\begin_inset Quotes erd
+\end_inset
+
+א של 
+\begin_inset Formula $f$
+\end_inset
+
+ אזי (הכלל 
+\begin_inset Formula $\sum_{i=0}^{n}A_{i}f\left(x_{i}\right)$
+\end_inset
+
+ לקירוב אינטגרל בעל סדר דיוק אלגברי של לפחות 
+\begin_inset Formula $n$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\intop_{a}^{b}p\left(x\right)\text{d}x=\sum_{i=0}^{n}A_{i}p\left(x_{i}\right)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $f,w\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $w\ge0$
+\end_inset
+
+ תהיינה 
+\begin_inset Formula $A_{0}\ldots A_{n}\in\bbr$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $x_{0}\ldots x_{n}\in\left[a,b\right]$
+\end_inset
+
+ אזי (הכלל 
+\begin_inset Formula $\sum_{i=0}^{n}A_{i}f\left(x_{i}\right)$
+\end_inset
+
+ לקירוב 
+\begin_inset Formula $\intop_{a}^{b}f\left(x\right)w\left(x\right)\text{d}x$
+\end_inset
+
+ בעל סדר דיוק אלגברי של לפחות 
+\begin_inset Formula $n$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(לכל 
+\begin_inset Formula $i\in\left\{ 0\ldots n\right\} $
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $A_{i}=\intop_{a}^{b}\ell_{i}\left(x\right)w\left(x\right)\text{d}x$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כלל סימפסון לקירוב אינטגרל
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{b-a}{6}\left(f\left(a\right)+4f\left(\frac{a+b}{2}\right)+f\left(b\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי כלל סימפסון בעל סדר דיוק אלגברי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C^{4}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $\xi\in\left(a,b\right)$
+\end_inset
+
+ עבורו שגיאת כלל סימפסון הינה 
+\begin_inset Formula $E\left(\intop_{a}^{b}f\right)=-\left(\frac{b-a}{2}\right)^{5}\cdot\frac{f^{\left(4\right)}\left(\xi\right)}{90}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כלל הטרפז המורכב לקירוב אינטגרל
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C^{2}\left(\left[a,b\right]\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $x_{0}\ldots x_{n}$
+\end_inset
+
+ חלוקה בעלת הפרש קבוע 
+\begin_inset Formula $h$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $T_{h}\left(f\right)=\sum_{i=0}^{n-1}\frac{h}{2}\left(f\left(x_{i}\right)+f\left(x_{i+1}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C^{2}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $\xi\in\left(a,b\right)$
+\end_inset
+
+ עבורו שגיאת כלל הטרפז המורכב הינה 
+\begin_inset Formula $E\left(\intop_{a}^{b}f\right)=-\frac{\left(b-a\right)h^{2}}{12}f^{\prime\prime}\left(\xi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ גזירה פעמיים באשר 
+\begin_inset Formula $\left|f^{\left(2\right)}\right|\le M$
+\end_inset
+
+ אזי שגיאת כלל הטרפז המורכב הינה 
+\begin_inset Formula $\left|E\left(\intop_{a}^{b}f\right)\right|\le\frac{\left(b-a\right)h^{2}}{12}M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כלל סימפסון המורכב לקירוב אינטגרל
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $x_{0}\ldots x_{2M}$
+\end_inset
+
+ חלוקה בעלת הפרש קבוע 
+\begin_inset Formula $h$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $S_{h}\left(f\right)=\frac{h}{3}\left(f\left(x_{0}\right)+f\left(x_{2M}\right)+2\sum_{i=1}^{M-1}f\left(x_{2i}\right)+4\sum_{i=1}^{M-1}f\left(x_{2i-1}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C^{4}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $\xi\in\left(a,b\right)$
+\end_inset
+
+ עבורו שגיאת כלל סימפסון המורכב הינה 
+\begin_inset Formula $E\left(\intop_{a}^{b}f\right)=-\frac{\left(b-a\right)h^{4}}{180}f^{\left(4\right)}\left(\xi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $x_{0}\ldots x_{n}$
+\end_inset
+
+ חלוקה בעלת הפרש קבוע 
+\begin_inset Formula $h$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S_{h}\left(f\right)=\frac{4T_{h}\left(f\right)-T_{2h}\left(f\right)}{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כלל הטרפז המורכב עם שגיאה לקירוב אינטגרל
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C^{2}\left(\left[a,b\right]\right)$
+\end_inset
+
+ תהא 
+\begin_inset Formula $x_{0}\ldots x_{n}$
+\end_inset
+
+ חלוקה בעלת הפרש קבוע 
+\begin_inset Formula $h$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\e\in\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum_{i=0}^{n-1}\frac{h}{2}\left(f\left(x_{i}\right)+\e_{i}+f\left(x_{i+1}\right)+\e_{i+1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C^{2}\left(\left[a,b\right]\right)$
+\end_inset
+
+ תהא 
+\begin_inset Formula $x_{0}\ldots x_{n}$
+\end_inset
+
+ חלוקה בעלת הפרש קבוע 
+\begin_inset Formula $h$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\e\in\bbr^{n}$
+\end_inset
+
+ אזי שגיאת כלל הטרפז המורכב עם שגיאה הינה 
+\begin_inset Formula $\left|E\left(\intop_{a}^{b}f\right)\right|\le\frac{\left(b-a\right)h^{2}}{12}\left|f^{\prime\prime}\left(\xi\right)\right|+\left(b-a\right)\cdot\max_{i\in\left[n\right]}\left(\e_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי המקדם הראשי של 
+\begin_inset Formula $T_{n}\left(x\right)$
+\end_inset
+
+ הינו 
+\begin_inset Formula $2^{n-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ T_{n}=0\right\} =\left\{ \cos\left(\frac{2k+1}{n}\cdot\frac{\pi}{2}\right)\bmid k\in\left\{ 0,\ldots,n-1\right\} \right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\left\{ T_{n}=0\right\} \right|=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $-1\le T_{n}\le1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי נקודות הקיצון של 
+\begin_inset Formula $T_{n}$
+\end_inset
+
+ בקטע 
+\begin_inset Formula $\left(-1,1\right)$
+\end_inset
+
+ הינן 
+\begin_inset Formula $\left\{ \cos\left(\frac{k\pi}{n}\right)\mid k\in\left\{ 0,\ldots,n\right\} \right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כלל גאוס לקירוב אינטגרל
+\series default
+:
+ תהיינה 
+\begin_inset Formula $f,w\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $w\ge0$
+\end_inset
+
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ תהא 
+\begin_inset Formula $\left\{ q_{i}\right\} _{i=0}^{\infty}$
+\end_inset
+
+ סדרה אורתוגונלית של פולינומים באשר 
+\begin_inset Formula $\sols\left(q_{n+1}\right)=\left\{ x_{0}\ldots x_{n}\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum_{i=0}^{n}\left(\left(\intop_{a}^{b}\ell_{i}\left(x\right)w\left(x\right)\text{d}x\right)\cdot f\left(x_{i}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $w\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $w\ge0$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f\in C^{2n+2}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $\xi\in\left(a,b\right)$
+\end_inset
+
+ עבורו שגיאת כלל גאוס הינה 
+\begin_inset Formula $E\left(\intop_{a}^{b}f\right)=\frac{f^{\left(2n+2\right)}\left(\xi\right)}{\left(2n+2\right)!}\cdot\intop_{a}^{b}\left(\prod_{i=0}^{n}\left(x-x_{i}\right)\right)^{2}w\left(x\right)\text{d}x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $w\in R\left(\left[a,b\right]\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $w\ge0$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f\in C^{2n+2}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי כלל גאוס בעל סדר דיוק אלגברי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $2n+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $f\in C^{n+1}\left(\left[a,b\right]\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p$
+\end_inset
+
+ פ
+\begin_inset Quotes erd
+\end_inset
+
+א של 
+\begin_inset Formula $f$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $c\in\left(a,b\right)$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\norm{e\left(x\right)}_{\infty}=\left|\frac{f^{\left(n+1\right)}\left(c\right)}{\left(n+1\right)!}\right|\cdot\norm{\prod_{i=0}^{n}\left(x-x_{i}\right)}_{\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פולינום צ'בישב מתוקן
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\widehat{T}_{n}\left(x\right)=\frac{1}{2^{n-1}}T_{n}\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פולינום המינימקס
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $p\in\Pi_{n}$
+\end_inset
+
+ מתוקן עבורו לכל 
+\begin_inset Formula $q\in\Pi_{n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\norm{f\left(x\right)-p\left(x\right)}_{\infty}\le\norm{f\left(x\right)-q\left(x\right)}_{\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט המינימקס לפולינומים
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\Pi_{n}$
+\end_inset
+
+ מתוקן בקטע 
+\begin_inset Formula $\left[-1,1\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\norm{\widehat{T}_{n}}_{\infty}\le\norm p_{\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ פולינום המינימקס ממעלה 
+\begin_inset Formula $n$
+\end_inset
+
+ של 
+\begin_inset Formula $x^{n+1}$
+\end_inset
+
+ בקטע 
+\begin_inset Formula $\left[-1,1\right]$
+\end_inset
+
+ הינו 
+\begin_inset Formula $x^{n+1}-\widehat{T}_{n+1}\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $f\in R\left(\left[-1,1\right]\right)$
+\end_inset
+
+ פולינום מדרגה 
+\begin_inset Formula $n+1$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p\in\Pi_{n}$
+\end_inset
+
+ פולינום המינימקס של 
+\begin_inset Formula $f$
+\end_inset
+
+ אזי 
+\begin_inset Formula $p$
+\end_inset
+
+ פ
+\begin_inset Quotes erd
+\end_inset
+
+א של 
+\begin_inset Formula $f$
+\end_inset
+
+ בשורשי 
+\begin_inset Formula $\widehat{T}_{n+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט איפיון כללי לפולינום המינימקס
+\series default
+:
+ תהא 
+\begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p\in\Pi_{n}$
+\end_inset
+
+ מתוקן אזי (
+\begin_inset Formula $p$
+\end_inset
+
+ פולינום המינימקס של 
+\begin_inset Formula $f$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיימים 
+\begin_inset Formula $t_{0}\ldots t_{n+1}\in\left[a,b\right]$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $f\left(t_{i}\right)-p\left(t_{i}\right)=\sign\left(e\left(t_{0}\right)\right)\cdot\left(-1\right)^{i}\cdot\norm{f-p}_{\infty}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left\{ 0,\ldots,n+1\right\} $
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נורמה מושרית על מרחב המטריצות
+\series default
+:
+ תהא 
+\begin_inset Formula $\nu:\bbr^{n}\to\bbr$
+\end_inset
+
+ נורמה אזי 
+\begin_inset Formula $\nu_{\text{M}}:M_{n}\left(\bbr\right)\to\bbr$
+\end_inset
+
+ המוגדרת
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\nu_{\text{M}}\left(A\right)=\max_{x\in\bbr^{n}\backslash\left\{ 0\right\} }\left\{ \frac{\nu\left(Ax\right)}{\nu\left(x\right)}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ תהא 
+\begin_inset Formula $\nu:\bbr^{n}\to\bbr$
+\end_inset
+
+ נורמה אזי נסמן 
+\begin_inset Formula $\nu=\nu_{\text{M}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\nu:\bbr^{n}\to\bbr$
+\end_inset
+
+ נורמה אזי 
+\begin_inset Formula $\nu$
+\end_inset
+
+ נורמה מעל 
+\begin_inset Formula $M_{n}\left(\bbr\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\nu:\bbr^{n}\to\bbr$
+\end_inset
+
+ נורמה ותהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nu\left(A\right)=\max_{v\in\bbs^{n-1}}\left\{ \nu\left(Av\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $\nu:\bbr^{n}\to\bbr$
+\end_inset
+
+ נורמה תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $x\in\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nu\left(Ax\right)\le\nu\left(A\right)\cdot\nu\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\nu:\bbr^{n}\to\bbr$
+\end_inset
+
+ נורמה ותהיינה 
+\begin_inset Formula $A,B\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nu\left(A\cdot B\right)\le\nu\left(A\right)\cdot\nu\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\norm A_{\infty}=\max_{i\in\left[n\right]}\sum_{j=1}^{n}\left|a_{i,j}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\norm A_{1}=\max_{j\in\left[n\right]}\sum_{i=1}^{n}\left|a_{i,j}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $\nu,\eta:\bbr^{n}\to\bbr$
+\end_inset
+
+ נורמות אזי קיימים 
+\begin_inset Formula $m,M>0$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $m\cdot\eta\left(A\right)\le\nu\left(A\right)\le M\cdot\eta\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רדיוס ספקטראלי
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left\{ \lambda_{1}\ldots\lambda_{n}\right\} $
+\end_inset
+
+ ע
+\begin_inset Quotes erd
+\end_inset
+
+ע של 
+\begin_inset Formula $A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\rho\left(A\right)=\max_{i\in\left[n\right]}\left|\lambda_{i}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $\nu:\bbr^{n}\to\bbr$
+\end_inset
+
+ נורמה ותהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\rho\left(A\right)\le\nu\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\nu:\bbr^{n}\to\bbr$
+\end_inset
+
+ נורמה אזי 
+\begin_inset Formula $\nu\left(I\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ הפונקציה 
+\begin_inset Formula $f:M_{n}\left(\bbr\right)\to\bbr$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $f\left(A\right)=\sum_{i=1}^{n}\sum_{j=1}^{n}\left|a_{i,j}\right|$
+\end_inset
+
+ אינה נורמה מושרית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ אזי קיימת נורמה 
+\begin_inset Formula $\nu:\bbr^{n}\to\bbr$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\nu\left(A\right)\le\rho\left(A\right)+\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body
