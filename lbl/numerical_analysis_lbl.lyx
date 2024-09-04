@@ -84,7 +84,7 @@ algorithm2e
 \maintain_unincluded_children no
 \language hebrew
 \language_package default
-\inputencoding auto-legacy
+\inputencoding utf8
 \fontencoding auto
 \font_roman "default" "David CLM"
 \font_sans "default" "default"
@@ -3658,8 +3658,11 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color orange
 חצי־מכפלה פנימית
 \series default
+\color inherit
+
 :
  יהי 
 \begin_inset Formula $V$
@@ -3710,8 +3713,11 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color orange
 חצי־נורמה מושרית
 \series default
+\color inherit
+
 :
  יהי 
 \begin_inset Formula $V$
@@ -3743,8 +3749,11 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color orange
 קירוב ריבועים מינימליים
 \series default
+\color inherit
+
 :
  יהי 
 \begin_inset Formula $V$
@@ -3796,8 +3805,11 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color orange
 משפט
 \series default
+\color inherit
+
 :
  יהי 
 \begin_inset Formula $V$
@@ -3869,8 +3881,11 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color orange
 טענה
 \series default
+\color inherit
+
 :
  יהי 
 \begin_inset Formula $V$
@@ -3926,8 +3941,11 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color orange
 מערכת משוואות נורמלית
 \series default
+\color inherit
+
 :
  יהי 
 \begin_inset Formula $V$
@@ -3983,8 +4001,11 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color orange
 מסקנה
 \series default
+\color inherit
+
 :
  יהי 
 \begin_inset Formula $V$
@@ -4036,8 +4057,11 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color orange
 מכפלה פנימית ממושקלת
 \series default
+\color inherit
+
 :
  תהא 
 \begin_inset Formula $w\in C^{1}\left(\left[a,b\right]\right)$
@@ -4061,8 +4085,11 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color orange
 טענה
 \series default
+\color inherit
+
 :
  תהא 
 \begin_inset Formula $w\in C^{1}\left(\left[a,b\right]\right)$
@@ -4082,8 +4109,11 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color orange
 סדרה אורתוגונלית של פולינומים
 \series default
+\color inherit
+
 :
  תהא 
 \begin_inset Formula $H$
@@ -4115,8 +4145,11 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color orange
 פולינומי לג'נדר
 \series default
+\color inherit
+
 :
  
 \begin_inset Formula $P_{0}\left(x\right)=1$
@@ -4136,8 +4169,11 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color orange
 טענה
 \series default
+\color inherit
+
 :
  תהא מכפלה פנימית ממושקלת 
 \begin_inset Formula $1$
@@ -4153,8 +4189,11 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color orange
 טענה
 \series default
+\color inherit
+
 :
  יהי 
 \begin_inset Formula $n\in\bbn\backslash\left\{ 0,1\right\} $
@@ -4165,6 +4204,13 @@ end{algorithm}
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4776,6 +4822,13 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 טענה
@@ -4806,15 +4859,19 @@ end{algorithm}
 \end_inset
 
 
-\begin_inset Formula $f^{\prime\prime}\left(x\right)=p^{\prime\prime}\left(x\right)+\sum_{i=0}^{m}f\left[x_{0}\ldots x_{n},\underbrace{x\ldots x}_{m+1-i}\right]\frac{\text{d}^{i}}{\text{d}x^{i}}\left(\prod_{i=0}^{n}\left(x-x_{i}\right)\right)$
+\size small
+
+\begin_inset Formula $f^{\prime\prime}\left(x\right)=p^{\prime\prime}\left(x\right)+f\left[x_{0}\ldots x_{n},x,x,x\right]\prod_{i=0}^{n}\left(x-x_{i}\right)+2f\left[x_{0}\ldots x_{n},x,x\right]\frac{\text{d}}{\text{d}x}\left(\prod_{i=0}^{n}\left(x-x_{i}\right)\right)+f\left[x_{0}\ldots x_{n},x\right]\frac{\text{d}^{2}}{\text{d}x^{2}}\left(\prod_{i=0}^{n}\left(x-x_{i}\right)\right)$
 \end_inset
 
+
+\size default
 .
 \begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
-\begin_inset Formula $f^{\prime\prime}\left(x\right)=p^{\prime\prime}\left(x\right)+f\left[x_{0}\ldots x_{n},x,x,x\right]\prod_{i=0}^{n}\left(x-x_{i}\right)+2f\left[x_{0}\ldots x_{n},x,x\right]\frac{\text{d}}{\text{d}x}\left(\prod_{i=0}^{n}\left(x-x_{i}\right)\right)+f\left[x_{0}\ldots x_{n},x\right]\frac{\text{d}^{2}}{\text{d}x^{2}}\left(\prod_{i=0}^{n}\left(x-x_{i}\right)\right)$
+\begin_inset Formula $f^{\prime\prime}\left(x\right)=p^{\prime\prime}\left(x\right)+\sum_{i=0}^{m}f\left[x_{0}\ldots x_{n},\underbrace{x\ldots x}_{m+1-i}\right]\frac{\text{d}^{i}}{\text{d}x^{i}}\left(\prod_{i=0}^{n}\left(x-x_{i}\right)\right)$
 \end_inset
 
 
@@ -4831,6 +4888,46 @@ status collapsed
 מסקנה
 \series default
 :
+ תהא 
+\begin_inset Formula $f\in C^{2}\left(\left[a,b\right]\right)$
+\end_inset
+
+ תהיינה 
+\begin_inset Formula $x_{0}\ldots x_{n}\in\left[a,b\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p$
+\end_inset
+
+ פ
+\begin_inset Quotes erd
+\end_inset
+
+א של 
+\begin_inset Formula $f$
+\end_inset
+
+ אזי קיימים 
+\begin_inset Formula $\zeta,\xi,\chi\in\left(a,b\right)$
+\end_inset
+
+ עבורם
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $f^{\prime\prime}\left(x\right)=p^{\prime\prime}\left(x\right)+\frac{f^{\left(n+3\right)}\left(\zeta\right)}{\left(n+3\right)!}\cdot\prod_{i=0}^{n}\left(x-x_{i}\right)+\frac{f^{\left(n+2\right)}\left(\xi\right)}{\left(n+2\right)!}\cdot\frac{\text{d}}{\text{d}x}\left(\prod_{i=0}^{n}\left(x-x_{i}\right)\right)++\frac{f^{\left(n+1\right)}\left(\chi\right)}{\left(n+1\right)!}\cdot\frac{\text{d}^{2}}{\text{d}x^{2}}\left(\prod_{i=0}^{n}\left(x-x_{i}\right)\right)$
+\end_inset
+
+.
+\series bold
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+מסקנה:
  תהא 
 \begin_inset Formula $f\in C^{m}\left(\left[a,b\right]\right)$
 \end_inset
@@ -4861,42 +4958,6 @@ status collapsed
 
 
 \begin_inset Formula $f^{\prime}\left(x\right)=p^{\prime}\left(x\right)+\sum_{i=0}^{m}\frac{f^{\left(n+m+1-i\right)}\left(c_{i}\right)}{\left(n+m+1-i\right)!}\cdot\frac{\text{d}^{i}}{\text{d}x^{i}}\prod_{i=0}^{n}\left(x-x_{i}\right)$
-\end_inset
-
-.
-\series bold
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-מסקנה:
- תהא 
-\begin_inset Formula $f\in C^{2}\left(\left[a,b\right]\right)$
-\end_inset
-
- תהיינה 
-\begin_inset Formula $x_{0}\ldots x_{n}\in\left[a,b\right]$
-\end_inset
-
- ויהי 
-\begin_inset Formula $p$
-\end_inset
-
- פ
-\begin_inset Quotes erd
-\end_inset
-
-א של 
-\begin_inset Formula $f$
-\end_inset
-
- אזי קיימים 
-\begin_inset Formula $\zeta,\xi,\chi\in\left(a,b\right)$
-\end_inset
-
- עבורם 
-\begin_inset Formula $f^{\prime}\left(x\right)=p^{\prime}\left(x\right)+\frac{f^{\left(n+3\right)}\left(\zeta\right)}{\left(n+3\right)!}\cdot\prod_{i=0}^{n}\left(x-x_{i}\right)+\frac{f^{\left(n+2\right)}\left(\xi\right)}{\left(n+2\right)!}\cdot\frac{\text{d}}{\text{d}x}\left(\prod_{i=0}^{n}\left(x-x_{i}\right)\right)++\frac{f^{\left(n+1\right)}\left(\chi\right)}{\left(n+1\right)!}\cdot\frac{\text{d}^{2}}{\text{d}x^{2}}\left(\prod_{i=0}^{n}\left(x-x_{i}\right)\right)$
 \end_inset
 
 .
@@ -5754,6 +5815,13 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 כלל הטרפז המורכב לקירוב אינטגרל
@@ -6572,6 +6640,32 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\spec}{\text{spec}}
+{\text{spec}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ספקטורם של מטריצה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\spec\left(A\right)=\left\{ \lambda\in\bbr\mid A\text{ ע"ע של }\lambda\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 רדיוס ספקטראלי
@@ -6581,20 +6675,8 @@ status collapsed
 \begin_inset Formula $A\in M_{n}\left(\bbr\right)$
 \end_inset
 
- באשר 
-\begin_inset Formula $\left\{ \lambda_{1}\ldots\lambda_{n}\right\} $
-\end_inset
-
- ע
-\begin_inset Quotes erd
-\end_inset
-
-ע של 
-\begin_inset Formula $A$
-\end_inset
-
  אזי 
-\begin_inset Formula $\rho\left(A\right)=\max_{i\in\left[n\right]}\left|\lambda_{i}\right|$
+\begin_inset Formula $\rho\left(A\right)=\max_{\lambda\in\spec\left(A\right)}\left|\lambda\right|$
 \end_inset
 
 .
@@ -6681,7 +6763,1492 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שגיאה של מערכת משוואות
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $b,r,x,\tilde{x}\in\bbr^{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $A\tilde{x}=b+r$
+\end_inset
+
+ אזי 
+\begin_inset Formula $e=\tilde{x}-x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $b,r,x,\tilde{x}\in\bbr^{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $A\tilde{x}=b+r$
+\end_inset
+
+ אזי 
+\begin_inset Formula $Ae=r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $\norm{\cdot}$
+\end_inset
+
+ נורמה מושרית תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ הפיכה ותהיינה 
+\begin_inset Formula $b,r,x,\tilde{x}\in\bbr^{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $A\tilde{x}=b+r$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\norm b\le\norm A\norm x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\norm x\le\norm{A^{-1}}\norm b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\norm r\le\norm A\norm e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\norm e\le\norm{A^{-1}}\norm r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\norm{\cdot}$
+\end_inset
+
+ נורמה מושרית תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ הפיכה ותהיינה 
+\begin_inset Formula $b,r,x,\tilde{x}\in\bbr^{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $A\tilde{x}=b+r$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{1}{\norm A}\le\frac{\norm e}{\norm r}\le\norm{A^{-1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{1}{\norm{A^{-1}}}\le\frac{\norm b}{\norm x}\le\norm A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $\norm{\cdot}$
+\end_inset
+
+ נורמה מושרית תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ הפיכה ותהיינה 
+\begin_inset Formula $b,r,x,\tilde{x}\in\bbr^{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $A\tilde{x}=b+r$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{1}{\norm A\norm{A^{-1}}}\le\frac{\norm e}{\norm r}\cdot\frac{\norm b}{\norm x}\le\norm A\norm{A^{-1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\cond}{\text{cond}}
+{\text{cond}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מספר המצב של מטריצה
+\series default
+:
+ תהא 
+\begin_inset Formula $\norm{\cdot}$
+\end_inset
+
+ נורמה מושרית ותהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\cond\left(A\right)=\norm A\norm{A^{-1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שגיאה יחסית של מערכת משוואות
+\series default
+:
+ תהא 
+\begin_inset Formula $\norm{\cdot}$
+\end_inset
+
+ נורמה מושרית תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ הפיכה ותהיינה 
+\begin_inset Formula $b,r,x,\tilde{x}\in\bbr^{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $A\tilde{x}=b+r$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\d\left(x\right)=\frac{\norm e}{\norm x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\d\left(b\right)=\frac{\norm r}{\norm b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\norm{\cdot}$
+\end_inset
+
+ נורמה מושרית תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ הפיכה ותהיינה 
+\begin_inset Formula $b,r,x,\tilde{x}\in\bbr^{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $A\tilde{x}=b+r$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\d\left(x\right)\in\left[\frac{\d\left(b\right)}{\cond\left(A\right)},\cond\left(A\right)\d\left(b\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\norm{\cdot}$
+\end_inset
+
+ נורמה מושרית ותהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ הפיכה אזי 
+\begin_inset Formula $\cond\left(A\right)\ge\left|\frac{\max\spec\left(A\right)}{\min\spec\left(A\right)}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $\norm{\cdot}$
+\end_inset
+
+ נורמה מושרית ותהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\cond\left(A\right)\ge1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\norm{\cdot}$
+\end_inset
+
+ נורמה מושרית ותהיינה 
+\begin_inset Formula $A,B\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $B$
+\end_inset
+
+ אינה הפיכה וכן 
+\begin_inset Formula $A\ne B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\cond\left(A\right)\ge\frac{\norm A}{\norm{A-B}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\norm{\cdot}$
+\end_inset
+
+ נורמה מושרית ותהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\cond\left(A\right)=\max\left\{ \frac{\norm A}{\norm{A-B}}\bmid\det\left(B\right)=0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $\norm{\cdot}$
+\end_inset
+
+ נורמה מושרית ותהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\cond\left(A\right)=\frac{\norm A}{\min\left\{ \norm{A-B}\bmid\det\left(B\right)=0\right\} }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\norm{\cdot}$
+\end_inset
+
+ נורמה מושרית תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ הפיכה ותהיינה 
+\begin_inset Formula $b,r,x,\tilde{x}\in\bbr^{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $A\tilde{x}=b+r$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b$
+\end_inset
+
+ ו
+\begin_inset Quotes erd
+\end_inset
+
+ע של 
+\begin_inset Formula $\max\spec\left(A\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $r$
+\end_inset
+
+ ו
+\begin_inset Quotes erd
+\end_inset
+
+ע של 
+\begin_inset Formula $\min\spec\left(A\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\d\left(x\right)=\left|\frac{\max\spec\left(A\right)}{\min\spec\left(A\right)}\right|\cdot\d\left(b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\norm{\cdot}$
+\end_inset
+
+ נורמה מושרית ותהיינה 
+\begin_inset Formula $A,B\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\cond\left(AB\right)\le\cond\left(A\right)\cdot\cond\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שגיאה של מערכת משוואות
+\series default
+:
+ תהיינה 
+\begin_inset Formula $A,R\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $b,x,\tilde{x}\in\bbr^{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left(A+R\right)\tilde{x}=b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $e=\tilde{x}-x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $A,R\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $b,x,\tilde{x}\in\bbr^{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left(A+R\right)\tilde{x}=b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $Ae=-R\tilde{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $\norm{\cdot}$
+\end_inset
+
+ נורמה מושרית תהיינה 
+\begin_inset Formula $A,R\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $A$
+\end_inset
+
+ הפיכה ותהיינה 
+\begin_inset Formula $b,x,\tilde{x}\in\bbr^{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left(A+R\right)\tilde{x}=b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\norm e\le\norm{A^{-1}}\norm R\norm{\tilde{x}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $\norm{\cdot}$
+\end_inset
+
+ נורמה מושרית תהיינה 
+\begin_inset Formula $A,R\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $A$
+\end_inset
+
+ הפיכה ותהיינה 
+\begin_inset Formula $b,x,\tilde{x}\in\bbr^{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left(A+R\right)\tilde{x}=b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\norm e}{\norm B}\cdot\frac{\norm A}{\norm{\tilde{x}}}\le\cond\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שגיאה של מערכת משוואות
+\series default
+:
+ תהיינה 
+\begin_inset Formula $A,R\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $b,r,x,\tilde{x}\in\bbr^{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left(A+R\right)\tilde{x}=b+r$
+\end_inset
+
+ אזי 
+\begin_inset Formula $e=\tilde{x}-x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $\norm{\cdot}$
+\end_inset
+
+ נורמה מושרית תהיינה 
+\begin_inset Formula $A,R\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $A$
+\end_inset
+
+ הפיכה ותהיינה 
+\begin_inset Formula $b,r,x,\tilde{x}\in\bbr^{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left(A+R\right)\tilde{x}=b+r$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\norm B\le\frac{1}{\norm{A^{-1}}}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\norm e}{\norm x}\le\frac{\cond\left(A\right)}{1-\cond\left(A\right)\left(\frac{\norm B}{\norm A}\right)}\left(\frac{\norm B}{\norm A}+\frac{\norm r}{\norm b}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ משולשית עליונה והפיכה אזי אלגוריתם גאוס לדירוג בעל סיבוכיות זמן 
+\begin_inset Formula $\O\left(n^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ הפיכה אזי אלגוריתם גאוס לדירוג בעל סיבוכיות זמן 
+\begin_inset Formula $\O\left(n^{3}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט פירוק 
+\begin_inset Formula $\text{LU}$
+\end_inset
+
+
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ הפיכה אזי קיימות 
+\begin_inset Formula $L,U\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $U$
+\end_inset
+
+ משולשית עליונה וכן 
+\begin_inset Formula $L$
+\end_inset
+
+ משולשית תחתונה עם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+על האלכסון הראשי עבורן 
+\begin_inset Formula $A=LU$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ הפיכה אזי 
+\begin_inset Formula $U_{A}\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ המטריצה המשולשית העליונה הראשונה המתקבלת באלגוריתם גאוס.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ הפיכה אזי 
+\begin_inset Formula $L_{A}\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\left(L_{A}\right)_{i,j}=\frac{\left(U_{A}\right)_{i,j}}{\left(U_{A}\right)_{j,j}}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $i>j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ הפיכה אזי 
+\begin_inset Formula $L_{A},U_{A}$
+\end_inset
+
+ פירוק 
+\begin_inset Formula $\text{LU}$
+\end_inset
+
+ של 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם גאוס עם הצרה חלקית
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ הפיכה ...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט פירוק 
+\begin_inset Formula $\text{QR}$
+\end_inset
+
+
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ הפיכה אזי קיימות 
+\begin_inset Formula $Q,R\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $Q$
+\end_inset
+
+ אורתוגונלית וכן 
+\begin_inset Formula $R$
+\end_inset
+
+ משולשית עליונה עבורן 
+\begin_inset Formula $A=QR$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ הפיכה ותהא 
+\begin_inset Formula $v_{1}\ldots v_{n}\in\bbr^{n}$
+\end_inset
+
+ תוצאת גרם־שמידט על 
+\begin_inset Formula $C_{1}\left(A\right),\ldots,C_{n}\left(A\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $Q_{A}=\left(\begin{smallmatrix}| &  & |\\
+v_{1} & \dots & v_{n}\\
+| &  & |
+\end{smallmatrix}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ הפיכה אזי 
+\begin_inset Formula $R_{A}\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\left(R_{A}\right)_{i,j}=\left<C_{j}\left(A\right),C_{i}\left(Q_{A}\right)\right>$
+\end_inset
+
+ באשר 
+\begin_inset Formula $i\le j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ הפיכה אזי 
+\begin_inset Formula $Q_{A},R_{A}$
+\end_inset
+
+ פירוק 
+\begin_inset Formula $\text{QR}$
+\end_inset
+
+ של 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $Q\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ אורתוגונלית אזי 
+\begin_inset Formula $\cond\left(Q\right)=1$
+\end_inset
+
+ בנורמה המושרית הסטנדרטית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $r_{i}=\sum_{j\in\left[n\right]\backslash\left\{ i\right\} }\left|\left(A\right)_{i,j}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט העיגולים של גרשגורין
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ אזי לכל 
+\begin_inset Formula $\lambda\in\spec\left(A\right)$
+\end_inset
+
+ קיים 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left|\lambda-\left(A\right)_{i,i}\right|\le r_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\lambda\in\spec\left(A\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\min_{i\in\left[n\right]}\left(\left|\left(A\right)_{i,i}-r_{i}\right|\right)\le\left|\lambda\right|\le\rho\left(A\right)\le\max_{i\in\left[n\right]}\left(\left|\left(A\right)_{i,i}-r_{i}\right|\right)=\norm A_{\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מטריצה בעלת אלכסון דומיננטי בשורות
+\series default
+:
+ מטריצה 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|\left(A\right)_{i,i}\right|>r_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ בעלת אלכסון דומיננטי בשורות אזי 
+\begin_inset Formula $A$
+\end_inset
+
+ הפיכה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\rho\left(A\right)<1$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $c\in\bbr\backslash\left\{ 0\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $c\left(A-I\right)$
+\end_inset
+
+ הפיכה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מנת רליי
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sigma:\bbr^{n}\backslash\left\{ 0\right\} \to\bbr$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\sigma\left(x\right)=\frac{x^{T}Ax}{x^{T}x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\lambda\in\spec\left(A\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $v\in\bbr^{n}\backslash\left\{ 0\right\} $
+\end_inset
+
+ ו
+\begin_inset Quotes erd
+\end_inset
+
+ע של 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sigma\left(v\right)=\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $v\in\bbs^{n-1}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sigma\left(v\right)=v^{T}Av$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט שיטת החזקה
+\series default
+:
+ יהיו 
+\begin_inset Formula $\lambda_{2},\ldots,\lambda_{m}\in\bbc$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left|\lambda_{i}\right|\ge\left|\lambda_{j}\right|$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i<j$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\lambda_{1}\in\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left|\lambda_{1}\right|>\left|\lambda_{2}\right|$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $v_{1}\ldots v_{m}\in\bbr^{n}$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $C_{1}\ldots C_{m}\in\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $C_{1}\ne0$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $v_{1}\ldots v_{m}$
+\end_inset
+
+ קבוצת ו
+\begin_inset Quotes erd
+\end_inset
+
+ע בת
+\begin_inset Quotes erd
+\end_inset
+
+ל מקסימלית וכן 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ ו
+\begin_inset Quotes erd
+\end_inset
+
+ע של 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[m\right]$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim_{k\to\infty}\sigma\left(A^{k}\cdot\left(\sum_{i=1}^{m}C_{i}v_{i}\right)\right)=\lambda_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיים 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left|\sigma\left(A^{k}\cdot\left(\sum_{i=1}^{m}C_{i}v_{i}\right)\right)-\lambda_{1}\right|\le\a\cdot\left|\frac{\lambda_{2}}{\lambda_{1}}\right|^{k}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $A$
+\end_inset
+
+ סימטרית אזי קיים 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left|\sigma\left(A^{k}\cdot\left(\sum_{i=1}^{m}C_{i}v_{i}\right)\right)-\lambda_{1}\right|\le\a\cdot\left|\frac{\lambda_{2}}{\lambda_{1}}\right|^{2k}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim_{k\to\infty}\frac{A^{k}\cdot\left(\sum_{i=1}^{m}C_{i}v_{i}\right)}{\lambda_{1}^{k}}=C_{1}v_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $\lambda_{2},\ldots,\lambda_{m}\in\bbc$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left|\lambda_{i}\right|\ge\left|\lambda_{j}\right|$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i<j$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\lambda_{1}\in\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left|\lambda_{1}\right|>\left|\lambda_{2}\right|$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $v_{1}\ldots v_{m}\in\bbr^{n}$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $C_{1}\ldots C_{m}\in\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $C_{1}\ne0$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $v_{1}\ldots v_{m}$
+\end_inset
+
+ קבוצת ו
+\begin_inset Quotes erd
+\end_inset
+
+ע בת
+\begin_inset Quotes erd
+\end_inset
+
+ל מקסימלית וכן 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ ו
+\begin_inset Quotes erd
+\end_inset
+
+ע של 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[m\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lim_{k\to\infty}\frac{\norm{A^{k+1}\cdot\left(\sum_{i=1}^{m}C_{i}v_{i}\right)}_{2}}{\norm{A^{k}\cdot\left(\sum_{i=1}^{m}C_{i}v_{i}\right)}_{2}}=\left|\lambda_{1}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט שיטת החזקה ההפוכה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\mu\in\bbr\backslash\spec\left(A\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\lambda\in\spec\left(A\right)$
+\end_inset
+
+ עם ו
+\begin_inset Quotes erd
+\end_inset
+
+ע 
+\begin_inset Formula $v\in\bbr\backslash\left\{ 0\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(A-\mu I\right)^{-1}v=\frac{1}{\lambda-\mu}v$
+\end_inset
+
+.
 \end_layout
 
 \end_body
