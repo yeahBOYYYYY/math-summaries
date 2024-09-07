@@ -4,7 +4,16 @@ title Git Auto Push
 
 :: Get the current date and time in a format suitable for git commit messages
 for /f "tokens=2 delims==" %%i in ('wmic os get localdatetime /value') do set dt=%%i
-set commit_message=Commit - %dt:~0,4%-%dt:~4,2%-%dt:~6,2% %dt:~8,2%:%dt:~10,2%:%dt:~12,2%
+set year=%dt:~0,4%
+set month=%dt:~4,2%
+set day=%dt:~6,2%
+set hour=%dt:~8,2%
+set minute=%dt:~10,2%
+set second=%dt:~12,2%
+
+:: Format the date to DD/MM/YYYY
+set commit_message=Commit - %day%/%month%/%year% %hour%:%minute%:%second%
+
 
 :: Add changes
 git add .
