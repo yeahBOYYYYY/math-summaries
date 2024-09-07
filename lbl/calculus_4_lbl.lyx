@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -19,6 +19,7 @@
 \usepackage{polynom}
 \usepackage{booktabs}
 \usepackage{fancyhdr}
+
 
 % it's here?
 \setlength{\tabcolsep}{1pt}
@@ -74,11 +75,11 @@
 \end_preamble
 \options no-math
 \use_default_options true
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language hebrew
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "David CLM"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -86,7 +87,9 @@
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -97,10 +100,11 @@
 \bibtex_command default
 \index_command default
 \float_placement H
+\float_alignment class
 \paperfontsize default
 \spacing onehalf
 \use_hyperref false
-\papersize letterpaper
+\papersize letter
 \use_geometry true
 \use_package amsmath 2
 \use_package amssymb 2
@@ -121,7 +125,9 @@
 \suppress_date true
 \justification false
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -141,11 +147,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -154,6 +165,7 @@
 \begin_inset CommandInset include
 LatexCommand include
 filename "../../macros.lyx"
+literal "true"
 
 \end_inset
 
@@ -172,7 +184,8 @@ filename "../../macros.lyx"
 
 ־מימדית
 \series default
-: קבוצה 
+:
+ קבוצה 
 \begin_inset Formula $\mathcal{M}\subseteq\bbr^{n}$
 \end_inset
 
@@ -212,7 +225,8 @@ filename "../../macros.lyx"
 
 ־מימדית
 \series default
-: קבוצה 
+:
+ קבוצה 
 \begin_inset Formula $\mathcal{M}\subseteq\bbr^{n}$
 \end_inset
 
@@ -248,7 +262,8 @@ filename "../../macros.lyx"
 \series bold
 סימון
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A,B$
 \end_inset
 
@@ -268,7 +283,8 @@ filename "../../macros.lyx"
 
 ־מימדית
 \series default
-: קבוצה 
+:
+ קבוצה 
 \begin_inset Formula $\mathcal{M}\subseteq\bbr^{n}$
 \end_inset
 
@@ -308,7 +324,8 @@ filename "../../macros.lyx"
 \series bold
 עקומה
 \series default
-: יריעה 
+:
+ יריעה 
 \begin_inset Formula $\mathcal{M}\subseteq\bbr^{n}$
 \end_inset
 
@@ -320,7 +337,8 @@ filename "../../macros.lyx"
 \series bold
 משטח
 \series default
-: יריעה 
+:
+ יריעה 
 \begin_inset Formula $\mathcal{M}\subseteq\bbr^{n}$
 \end_inset
 
@@ -332,7 +350,8 @@ filename "../../macros.lyx"
 \series bold
 היפר־משטח/על־משטח
 \series default
-: יריעה 
+:
+ יריעה 
 \begin_inset Formula $\mathcal{M}\subseteq\bbr^{n}$
 \end_inset
 
@@ -348,7 +367,8 @@ filename "../../macros.lyx"
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\bbs^{n-1}\subseteq\bbr^{n}$
 \end_inset
 
@@ -360,7 +380,8 @@ filename "../../macros.lyx"
 \series bold
 הערה
 \series default
-: בקורס זה המונח יריעה אומר יריעה חלקה.
+:
+ בקורס זה המונח יריעה אומר יריעה חלקה.
 \end_layout
 
 \begin_layout Standard
@@ -368,19 +389,20 @@ filename "../../macros.lyx"
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{M}\subseteq\bbr^{n}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\mathcal{M}$
 \end_inset
 
- יריעה(
+ יריעה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימות 
+(קיימות 
 \begin_inset Formula $\left\{ \mathcal{U}_{\a}\right\} _{\a\in\Lambda}\subseteq\P\left(\bbr^{n}\right)$
 \end_inset
 
@@ -396,7 +418,7 @@ filename "../../macros.lyx"
 \begin_inset Formula $\a\in\Lambda$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -404,19 +426,20 @@ filename "../../macros.lyx"
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{M}\subseteq\bbr^{n}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\mathcal{M}$
 \end_inset
 
- יריעה(
+ יריעה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $x\in\mathcal{M}$
 \end_inset
 
@@ -428,7 +451,7 @@ filename "../../macros.lyx"
 \begin_inset Formula $\mathcal{M}\cap\mathcal{U}$
 \end_inset
 
- יריעה(.
+ יריעה).
 \end_layout
 
 \begin_layout Standard
@@ -436,7 +459,8 @@ filename "../../macros.lyx"
 \series bold
 הצגה פרמטרית/פרמטריזציה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{M}\subseteq\bbr^{n}$
 \end_inset
 
@@ -472,7 +496,8 @@ filename "../../macros.lyx"
 \series bold
 פרמטריזציה רגולרית
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G\subseteq\bbr^{k}$
 \end_inset
 
@@ -496,7 +521,8 @@ filename "../../macros.lyx"
 \series bold
 הומאומורפיזם
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq\bbr^{n}$
 \end_inset
 
@@ -520,7 +546,8 @@ filename "../../macros.lyx"
 \series bold
 פרמטריזציה טובה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq\bbr^{n}$
 \end_inset
 
@@ -540,19 +567,20 @@ filename "../../macros.lyx"
 \series bold
 משפט
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{M}\subseteq\bbr^{n}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\mathcal{M}$
 \end_inset
 
- יריעה(
+ יריעה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימות 
+(קיימות 
 \begin_inset Formula $\left\{ \mathcal{U}_{\a}\right\} \subseteq\P\left(\bbr^{n}\right)$
 \end_inset
 
@@ -576,7 +604,7 @@ filename "../../macros.lyx"
 \begin_inset Formula $r_{\a}\left(G_{\a}\right)=\mathcal{U}_{\a}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -584,19 +612,20 @@ filename "../../macros.lyx"
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{M}\subseteq\bbr^{n}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\mathcal{M}$
 \end_inset
 
- יריעה(
+ יריעה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $x\in\mathcal{M}$
 \end_inset
 
@@ -608,7 +637,7 @@ filename "../../macros.lyx"
 \begin_inset Formula $\mathcal{M}\cap\mathcal{U}$
 \end_inset
 
- בעלת פרמטריזציה טובה(.
+ בעלת פרמטריזציה טובה).
 \end_layout
 
 \begin_layout Standard
@@ -616,7 +645,8 @@ filename "../../macros.lyx"
 \series bold
 מערכת משוואות רגולרית
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
 \end_inset
 
@@ -648,7 +678,8 @@ filename "../../macros.lyx"
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{U}\subseteq\bbr^{n}$
 \end_inset
 
@@ -656,15 +687,15 @@ filename "../../macros.lyx"
 \begin_inset Formula $f_{1}\ldots f_{n-k}\subseteq\mathcal{U}\to\bbr$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\left\{ f_{1}\ldots f_{n-k}\right\} $
 \end_inset
 
- מערכת משוואות רגולרית(
+ מערכת משוואות רגולרית)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $x\in\mathcal{U}$
 \end_inset
 
@@ -676,7 +707,7 @@ filename "../../macros.lyx"
 \begin_inset Formula $\rank\left(\mathcal{D}_{\left(f_{1}\ldots f_{n-k}\right)}\left(x\right)\right)=n-k$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -684,7 +715,8 @@ filename "../../macros.lyx"
 \series bold
 הצגה סתומה רגולרית
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{M}\subseteq\bbr^{n}$
 \end_inset
 
@@ -720,19 +752,20 @@ filename "../../macros.lyx"
 \series bold
 משפט
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{M}\subseteq\bbr^{n}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\mathcal{M}$
 \end_inset
 
- יריעה(
+ יריעה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $x\in\mathcal{M}$
 \end_inset
 
@@ -744,7 +777,7 @@ filename "../../macros.lyx"
 \begin_inset Formula $\mathcal{M}\cap\mathcal{U}$
 \end_inset
 
- בעלת הצגה סתומה רגולרית(.
+ בעלת הצגה סתומה רגולרית).
 \end_layout
 
 \begin_layout Standard
@@ -754,7 +787,8 @@ filename "../../macros.lyx"
 אליפסואיד
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b,c\in\bbr$
 \end_inset
 
@@ -772,7 +806,8 @@ filename "../../macros.lyx"
 טענה
 \series default
 \color inherit
-: אליפסואיד הינו יריעה דו־מימדית בעלת הצגה סתומה רגולרית.
+:
+ אליפסואיד הינו יריעה דו־מימדית בעלת הצגה סתומה רגולרית.
 \end_layout
 
 \begin_layout Standard
@@ -782,7 +817,8 @@ filename "../../macros.lyx"
 היפרבולואיד חד־יריעתי
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b,c\in\bbr$
 \end_inset
 
@@ -800,7 +836,8 @@ filename "../../macros.lyx"
 טענה
 \series default
 \color inherit
-: היפרבולואיד חד־יריעתי הינו יריעה דו־מימדית בעלת הצגה סתומה רגולרית.
+:
+ היפרבולואיד חד־יריעתי הינו יריעה דו־מימדית בעלת הצגה סתומה רגולרית.
 \end_layout
 
 \begin_layout Standard
@@ -810,7 +847,8 @@ filename "../../macros.lyx"
 היפרבולואיד דו־יריעתי
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b,c\in\bbr$
 \end_inset
 
@@ -828,7 +866,8 @@ filename "../../macros.lyx"
 טענה
 \series default
 \color inherit
-: היפרבולואיד דו־יריעתי הינו יריעה דו־מימדית בעלת הצגה סתומה רגולרית.
+:
+ היפרבולואיד דו־יריעתי הינו יריעה דו־מימדית בעלת הצגה סתומה רגולרית.
 \end_layout
 
 \begin_layout Standard
@@ -838,7 +877,8 @@ filename "../../macros.lyx"
 קונוס
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b,c\in\bbr$
 \end_inset
 
@@ -856,7 +896,8 @@ filename "../../macros.lyx"
 טענה
 \series default
 \color inherit
-: קונוס הינו יריעה דו־מימדית בעלת הצגה סתומה רגולרית ללא הנקודה 
+:
+ קונוס הינו יריעה דו־מימדית בעלת הצגה סתומה רגולרית ללא הנקודה 
 \begin_inset Formula $\left(0,0,0\right)$
 \end_inset
 
@@ -870,7 +911,8 @@ filename "../../macros.lyx"
 גליל/צילינדר
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b,c\in\bbr$
 \end_inset
 
@@ -888,7 +930,8 @@ filename "../../macros.lyx"
 טענה
 \series default
 \color inherit
-: גליל הינו יריעה דו־מימדית בעלת הצגה סתומה רגולרית.
+:
+ גליל הינו יריעה דו־מימדית בעלת הצגה סתומה רגולרית.
 \end_layout
 
 \begin_layout Standard
@@ -898,7 +941,8 @@ filename "../../macros.lyx"
 משטח סיבוב
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\g:I\to\left(0,\infty\right)\times\bbr$
 \end_inset
 
@@ -923,7 +967,8 @@ filename "../../macros.lyx"
 טענה משטחי סיבוב
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\g:I\to\left(0,\infty\right)\times\bbr$
 \end_inset
 
@@ -957,7 +1002,8 @@ filename "../../macros.lyx"
 הטלה סטריאוגרפית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -979,7 +1025,8 @@ filename "../../macros.lyx"
 טורוס
 \series default
 \color inherit
-: משטח הסיבוב של 
+:
+ משטח הסיבוב של 
 \begin_inset Formula $\bbs^{1}$
 \end_inset
 
@@ -993,7 +1040,8 @@ filename "../../macros.lyx"
 סימון
 \series default
 \color inherit
-: נסמן טורוס בעזרת 
+:
+ נסמן טורוס בעזרת 
 \begin_inset Formula $\bbt^{2}$
 \end_inset
 
@@ -1004,14 +1052,15 @@ filename "../../macros.lyx"
 
 \series bold
 \color red
-משטח אוריינטבילי
+קו־אוריינטציה של יריעה
 \series default
 \color inherit
-: משטח 
+:
+ יהי 
 \begin_inset Formula $\mathcal{M}\subseteq\bbr^{n}$
 \end_inset
 
- עבורו קיימת 
+ על־משטח אזי 
 \begin_inset Formula $N\in C\left(\bbr^{n},\bbr^{n}\right)$
 \end_inset
 
@@ -1029,7 +1078,8 @@ filename "../../macros.lyx"
 למה
 \series default
 \color inherit
-: טבעת מוביוס אינו משטח אוריינטבילי.
+:
+ טבעת מוביוס אינו משטח קו־אוריינטבילי.
 \end_layout
 
 \begin_layout Standard
@@ -1039,7 +1089,8 @@ filename "../../macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{M}$
 \end_inset
 
@@ -1057,7 +1108,8 @@ filename "../../macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{M}$
 \end_inset
 
@@ -1075,7 +1127,8 @@ filename "../../macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{M}$
 \end_inset
 
@@ -1093,7 +1146,8 @@ filename "../../macros.lyx"
 מכפלה וקטורית
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbr^{3}$
 \end_inset
 
@@ -1114,7 +1168,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $u,v\in\bbr^{3}$
 \end_inset
 
@@ -1136,7 +1191,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $u,v\in\bbr^{3}$
 \end_inset
 
@@ -1154,7 +1210,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $u,v\in\bbr^{3}$
 \end_inset
 
@@ -1172,7 +1229,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $u,v\in\bbr^{3}$
 \end_inset
 
@@ -1194,7 +1252,8 @@ a_{1}b_{2}-a_{1}b_{1}
 
 \series default
 \color inherit
-: קבוצה 
+:
+ קבוצה 
 \begin_inset Formula $A\subseteq\bbr^{n}$
 \end_inset
 
@@ -1224,7 +1283,8 @@ a_{1}b_{2}-a_{1}b_{1}
 תכונה מתקיימת מקומית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq\bbr^{n}$
 \end_inset
 
@@ -1258,7 +1318,8 @@ a_{1}b_{2}-a_{1}b_{1}
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mathcal{M}\subseteq\bbr^{n}$
 \end_inset
 
@@ -1335,7 +1396,8 @@ a_{1}b_{2}-a_{1}b_{1}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $r:G\to\bbr^{n}$
 \end_inset
 
@@ -1390,7 +1452,8 @@ a_{1}b_{2}-a_{1}b_{1}
 הערה
 \series default
 \color inherit
-: יריעה 
+:
+ יריעה 
 \begin_inset Formula $0$
 \end_inset
 
@@ -1404,7 +1467,8 @@ a_{1}b_{2}-a_{1}b_{1}
 קבוצה פתוחה יחסית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq\bbr^{d}$
 \end_inset
 
@@ -1430,7 +1494,8 @@ a_{1}b_{2}-a_{1}b_{1}
 קבוצה סגורה יחסית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq\bbr^{d}$
 \end_inset
 
@@ -1456,7 +1521,8 @@ a_{1}b_{2}-a_{1}b_{1}
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq\bbr^{d}$
 \end_inset
 
@@ -1464,7 +1530,7 @@ a_{1}b_{2}-a_{1}b_{1}
 \begin_inset Formula $\mathcal{U}\subseteq A$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\mathcal{U}$
 \end_inset
 
@@ -1472,15 +1538,15 @@ a_{1}b_{2}-a_{1}b_{1}
 \begin_inset Formula $A$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\forall x\in\mathcal{U}.\exists r>0.B_{r}\left(x\right)\cap A\subseteq\mathcal{U}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -1490,7 +1556,8 @@ a_{1}b_{2}-a_{1}b_{1}
 קבוצה קשירה
 \series default
 \color inherit
-: קבוצה 
+:
+ קבוצה 
 \begin_inset Formula $A\subseteq\bbr^{d}$
 \end_inset
 
@@ -1516,19 +1583,20 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq\bbr^{d}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $A$
 \end_inset
 
- קשירה(
+ קשירה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לא קיימות 
+(לא קיימות 
 \begin_inset Formula $\mathcal{U},\mathcal{V}\subset A$
 \end_inset
 
@@ -1540,7 +1608,7 @@ a_{1}b_{2}-a_{1}b_{1}
 \begin_inset Formula $A\in\left\{ \mathcal{U}\cap\mathcal{V},\mathcal{U}\cup\mathcal{V}\right\} $
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -1550,7 +1618,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A,B\subseteq\bbr^{d}$
 \end_inset
 
@@ -1558,15 +1627,15 @@ a_{1}b_{2}-a_{1}b_{1}
 \begin_inset Formula $f:A\to B$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $f$
 \end_inset
 
- רציפה(
+ רציפה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $\mathcal{U}\subseteq B$
 \end_inset
 
@@ -1582,7 +1651,7 @@ a_{1}b_{2}-a_{1}b_{1}
 \begin_inset Formula $A$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -1592,7 +1661,8 @@ a_{1}b_{2}-a_{1}b_{1}
 מפה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -1630,7 +1700,8 @@ a_{1}b_{2}-a_{1}b_{1}
 אטלס
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -1656,7 +1727,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -1690,7 +1762,8 @@ a_{1}b_{2}-a_{1}b_{1}
 המרחב הפרוייקיבי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\ge2$
 \end_inset
 
@@ -1708,7 +1781,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\ge2$
 \end_inset
 
@@ -1730,7 +1804,8 @@ a_{1}b_{2}-a_{1}b_{1}
 העתקת מעבר
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\left(\u_{1},\varphi_{1}\right),\left(\u_{2},\varphi_{2}\right)$
 \end_inset
 
@@ -1752,7 +1827,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\left(\u_{1},\varphi_{1}\right),\left(\u_{2},\varphi_{2}\right)$
 \end_inset
 
@@ -1785,7 +1861,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\left(\u_{1},\varphi_{1}\right),\left(\u_{2},\varphi_{2}\right)$
 \end_inset
 
@@ -1811,7 +1888,8 @@ a_{1}b_{2}-a_{1}b_{1}
  מיריעה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -1845,7 +1923,8 @@ a_{1}b_{2}-a_{1}b_{1}
 הערה
 \series default
 \color inherit
-: נניח כי 
+:
+ נניח כי 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -1871,7 +1950,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -1883,7 +1963,7 @@ a_{1}b_{2}-a_{1}b_{1}
 \begin_inset Formula $f:\m\to\bbr^{m}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $f$
 \end_inset
 
@@ -1891,11 +1971,11 @@ a_{1}b_{2}-a_{1}b_{1}
 \begin_inset Formula $C^{\a}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיים אטלס 
+(קיים אטלס 
 \begin_inset Formula $\left\{ \left(\u_{\a},\varphi_{\a}\right)\right\} _{\a\in\Lambda}$
 \end_inset
 
@@ -1915,7 +1995,7 @@ a_{1}b_{2}-a_{1}b_{1}
 \begin_inset Formula $\a\in\Lambda$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -1925,7 +2005,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -1947,7 +2028,8 @@ a_{1}b_{2}-a_{1}b_{1}
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -1973,7 +2055,8 @@ a_{1}b_{2}-a_{1}b_{1}
  בין יריעות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -2011,7 +2094,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\m,\m^{\prime},\m^{\prime\prime}$
 \end_inset
 
@@ -2037,7 +2121,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -2045,7 +2130,7 @@ a_{1}b_{2}-a_{1}b_{1}
 \begin_inset Formula $f:\m\to\bbr^{m}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $f$
 \end_inset
 
@@ -2053,11 +2138,11 @@ a_{1}b_{2}-a_{1}b_{1}
 \begin_inset Formula $C^{\a}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $p\in\m$
 \end_inset
 
@@ -2077,7 +2162,7 @@ a_{1}b_{2}-a_{1}b_{1}
 \begin_inset Formula $g_{\upharpoonright_{\m\cap\u}}=f$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -2087,7 +2172,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\m,\m^{\prime}$
 \end_inset
 
@@ -2095,7 +2181,7 @@ a_{1}b_{2}-a_{1}b_{1}
 \begin_inset Formula $f:\m\to\m^{\prime}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $f$
 \end_inset
 
@@ -2103,11 +2189,11 @@ a_{1}b_{2}-a_{1}b_{1}
 \begin_inset Formula $C^{\a}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל מפה 
+(לכל מפה 
 \begin_inset Formula $\left(\u,\varphi\right)$
 \end_inset
 
@@ -2131,7 +2217,7 @@ a_{1}b_{2}-a_{1}b_{1}
 \begin_inset Formula $C^{\a}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -2145,7 +2231,8 @@ a_{1}b_{2}-a_{1}b_{1}
 
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\m,\m^{\prime}$
 \end_inset
 
@@ -2171,7 +2258,8 @@ a_{1}b_{2}-a_{1}b_{1}
 מסקנה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\m,\m^{\prime}$
 \end_inset
 
@@ -2189,7 +2277,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -2231,7 +2320,8 @@ a_{1}b_{2}-a_{1}b_{1}
 המרחב המשיק
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -2260,7 +2350,34 @@ a_{1}b_{2}-a_{1}b_{1}
 \end_inset
 
 
-\begin_inset Formula $T_{p}\left(\m\right)=\im\left(\mathcal{D}_{\varphi^{-1}}\left(\varphi\left(p\right)\right)\right)$
+\begin_inset Formula $T_{p}\left(\m\right)=\im\left(\mathcal{D}_{\varphi\left(p\right)}\left(\varphi^{-1}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הערה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה 
+\begin_inset Formula $k$
+\end_inset
+
+־מימדית ותהא 
+\begin_inset Formula $p\in\m$
+\end_inset
+
+ אזי 
+\begin_inset Formula $T_{p}\left(\m\right)\subseteq\bbr^{n}$
 \end_inset
 
 .
@@ -2273,7 +2390,8 @@ a_{1}b_{2}-a_{1}b_{1}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -2295,7 +2413,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -2320,7 +2439,7 @@ a_{1}b_{2}-a_{1}b_{1}
 \end_inset
 
 
-\begin_inset Formula $T_{p}\left(\m\right)=\ker\left(\mathcal{D}_{f}\left(p\right)\right)$
+\begin_inset Formula $T_{p}\left(\m\right)=\ker\left(\mathcal{D}_{p}\left(f\right)\right)$
 \end_inset
 
 .
@@ -2333,7 +2452,8 @@ a_{1}b_{2}-a_{1}b_{1}
 וקטור מהירות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\g:\left(a,b\right)\to\m$
 \end_inset
 
@@ -2355,7 +2475,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\g:\left(a,b\right)\to\m$
 \end_inset
 
@@ -2377,7 +2498,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -2403,7 +2525,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\m,\m^{\prime}$
 \end_inset
 
@@ -2441,7 +2564,8 @@ a_{1}b_{2}-a_{1}b_{1}
 נגזרת של פונקציה בין יריעות
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\m,\m^{\prime}$
 \end_inset
 
@@ -2483,7 +2607,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\m,\m^{\prime}$
 \end_inset
 
@@ -2516,7 +2641,8 @@ a_{1}b_{2}-a_{1}b_{1}
 משפט כלל השרשרת
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\m,\m^{\prime},\m^{\prime\prime}$
 \end_inset
 
@@ -2546,7 +2672,8 @@ a_{1}b_{2}-a_{1}b_{1}
 מסקנה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\m,\m^{\prime}$
 \end_inset
 
@@ -2572,7 +2699,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -2606,7 +2734,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -2644,7 +2773,8 @@ a_{1}b_{2}-a_{1}b_{1}
 הערה
 \series default
 \color inherit
-: נגדיר את 
+:
+ נגדיר את 
 \begin_inset Formula $\left\{ \mathcal{D}_{\varphi\left(p\right)}\varphi^{-1}\left(e_{1}\right),\ldots,\mathcal{D}_{\varphi\left(p\right)}\varphi^{-1}\left(e_{k}\right)\right\} $
 \end_inset
 
@@ -2662,7 +2792,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\m,\m^{\prime}$
 \end_inset
 
@@ -2720,7 +2851,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -2766,7 +2898,8 @@ a_{1}b_{2}-a_{1}b_{1}
 נגזרת כיוונית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{\a}\left(\m,\bbr^{m}\right)$
 \end_inset
 
@@ -2788,7 +2921,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{\a}\left(\m,\bbr^{m}\right)$
 \end_inset
 
@@ -2818,7 +2952,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{\a}\left(\m,\bbr^{m}\right)$
 \end_inset
 
@@ -2840,7 +2975,8 @@ a_{1}b_{2}-a_{1}b_{1}
 וקטור נורמל
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -2866,7 +3002,8 @@ a_{1}b_{2}-a_{1}b_{1}
 וקטור נורמל יחידה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -2892,7 +3029,8 @@ a_{1}b_{2}-a_{1}b_{1}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -2923,10 +3061,42 @@ a_{1}b_{2}-a_{1}b_{1}
 
 \series bold
 \color purple
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ על־משטח ותהא 
+\begin_inset Formula $\left\{ f=0\right\} $
+\end_inset
+
+ הצגה סתומה רגולרית של 
+\begin_inset Formula $\m$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\nabla f}{\norm{\nabla f}}$
+\end_inset
+
+ קו־אוריינטציה של 
+\begin_inset Formula $\m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -2943,7 +3113,7 @@ a_{1}b_{2}-a_{1}b_{1}
 \end_inset
 
  אזי 
-\begin_inset Formula $\frac{\left(\frac{\partial f}{\partial x_{1}},\ldots,\frac{\partial f}{\partial x_{n}},1\right)}{\sqrt{1+\norm{\nabla f\left(p\right)}^{2}}}$
+\begin_inset Formula $\frac{\left(\frac{\partial f}{\partial x_{1}}\left(p\right),\ldots,\frac{\partial f}{\partial x_{n-1}}\left(p\right),-1\right)}{\sqrt{1+\norm{\nabla f\left(p\right)}^{2}}}$
 \end_inset
 
  וקטור נורמל יחידה ל־
@@ -2957,10 +3127,42 @@ a_{1}b_{2}-a_{1}b_{1}
 
 \series bold
 \color purple
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ על־משטח ותהא 
+\begin_inset Formula $\Gamma_{f}$
+\end_inset
+
+ הצגה כגרף של 
+\begin_inset Formula $\m$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\left(\frac{\partial f}{\partial x_{1}},\ldots,\frac{\partial f}{\partial x_{n-1}},-1\right)}{\sqrt{1+\norm{\nabla f}^{2}}}$
+\end_inset
+
+ קו־אוריינטציה של 
+\begin_inset Formula $\m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
 מכפלה מצולבת
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $v_{1}\ldots v_{n-1}\in\bbr^{n}$
 \end_inset
 
@@ -2984,7 +3186,8 @@ a_{1}b_{2}-a_{1}b_{1}
 הערה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $v_{1}\ldots v_{n-1}\in\bbr^{n}$
 \end_inset
 
@@ -3005,7 +3208,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $v_{1}\ldots v_{n-1}\in\bbr^{n}$
 \end_inset
 
@@ -3019,7 +3223,8 @@ e_{n} & | &  & |
 דטרמיננטת גראם
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $v_{1}\ldots v_{m}\in\bbr^{n}$
 \end_inset
 
@@ -3040,7 +3245,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $v_{1}\ldots v_{n-1}\in\bbr^{n}$
 \end_inset
 
@@ -3080,7 +3286,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -3092,12 +3299,12 @@ e_{n} & | &  & |
 \begin_inset Formula $r$
 \end_inset
 
- פרמטריזציה בסביבה של 
+ פרמטריזציה טובה בסביבה של 
 \begin_inset Formula $p$
 \end_inset
 
  אזי 
-\begin_inset Formula $\frac{\partial r}{\partial x_{1}}\times\ldots\times\frac{\partial r}{\partial x_{n-1}}$
+\begin_inset Formula $\frac{\partial r}{\partial x_{1}}\left(p\right)\times\ldots\times\frac{\partial r}{\partial x_{n-1}}\left(p\right)$
 \end_inset
 
  וקטור נורמל ל־
@@ -3111,10 +3318,42 @@ e_{n} & | &  & |
 
 \series bold
 \color purple
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ על־משטח ותהא 
+\begin_inset Formula $r$
+\end_inset
+
+ פרמטריזציה טובה של 
+\begin_inset Formula $\m$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\partial r}{\partial x_{1}}\times\ldots\times\frac{\partial r}{\partial x_{n-1}}$
+\end_inset
+
+ קו־אוריינטציה של 
+\begin_inset Formula $\m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{\infty}\left(\m\right)$
 \end_inset
 
@@ -3136,7 +3375,8 @@ e_{n} & | &  & |
 סימון
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\a,\b\in\bbn^{k}$
 \end_inset
 
@@ -3154,7 +3394,8 @@ e_{n} & | &  & |
 טענה כלל לייבניץ
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $f,g\in C^{\infty}\left(\m\right)$
 \end_inset
 
@@ -3166,7 +3407,7 @@ e_{n} & | &  & |
 \begin_inset Formula $\partial^{\a}\left(f\cdot g\right)=\sum_{\substack{\b\in\bbn^{k}\\
 \left|\b\right|\le\left|\a\right|
 }
-}{\a \choose \b}\partial^{\b}\left(f\right)\partial^{\a-\b}\left(g\right)$
+}{\a \choose \b}\partial^{\b}\left)f\right(\partial^{\a-\b}\left)g\right($
 \end_inset
 
 .
@@ -3179,7 +3420,8 @@ e_{n} & | &  & |
 אופרטור דיפרנציאלי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{d}$
 \end_inset
 
@@ -3191,7 +3433,7 @@ e_{n} & | &  & |
 \begin_inset Formula $\mathcal{D}\left(f\right)\left(x\right)=\sum_{\substack{\a\in\bbn^{k}\\
 \left|\a\right|\le m
 }
-}a_{\a}\left(x\right)\cdot\partial^{\a}\left(f\right)\left(x\right)$
+}a_{\a}\left)x\right(\cdot\partial^{\a}\left)f\right(\left)x\right($
 \end_inset
 
  עבור 
@@ -3212,7 +3454,8 @@ e_{n} & | &  & |
 אופרטור דיפרנציאלי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -3236,7 +3479,7 @@ e_{n} & | &  & |
 \begin_inset Formula $\mathcal{D}\left(f\circ\varphi^{-1}\right)\left(x\right)=\sum_{\substack{\a\in\bbn^{k}\\
 \left|\a\right|\le m
 }
-}a_{\a}\left(x\right)\cdot\partial^{\a}\left(f\circ\varphi^{-1}\right)\left(x\right)$
+}a_{\a}\left)x\right(\cdot\partial^{\a}\left)f\circ\varphi^{-1}\right(\left)x\right($
 \end_inset
 
  עבור 
@@ -3261,16 +3504,21 @@ e_{n} & | &  & |
 
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
  יריעה אזי 
-\begin_inset Formula $v:\m\to\bigcup_{p\in\m}T_{p}\left(\m\right)$
+\begin_inset Formula $v:\m\to\bbr^{n}$
 \end_inset
 
  עבורה 
 \begin_inset Formula $v\left(p\right)\in T_{p}\left(\m\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $p\in\m$
 \end_inset
 
  וכן לכל מפה 
@@ -3295,7 +3543,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -3321,7 +3570,8 @@ e_{n} & | &  & |
 תומך
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\m\right)$
 \end_inset
 
@@ -3339,7 +3589,8 @@ e_{n} & | &  & |
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -3361,7 +3612,8 @@ e_{n} & | &  & |
 אופרטור מקומי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -3411,7 +3663,8 @@ e_{n} & | &  & |
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\w\subseteq\bbr^{k}$
 \end_inset
 
@@ -3427,7 +3680,7 @@ e_{n} & | &  & |
 \begin_inset Formula $\norm f_{W,n}=\sup_{\substack{x\in w\\
 \left|\a\right|\le n
 }
-}\norm{\left(\partial^{\a}f\right)\left(x\right)}$
+}\norm{\left)\partial^{\a}f\right(\left)x\right(}$
 \end_inset
 
 .
@@ -3440,7 +3693,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\w\subseteq\bbr^{k}$
 \end_inset
 
@@ -3503,7 +3757,8 @@ e_{n} & | &  & |
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\a,\b\in\bbn^{k}$
 \end_inset
 
@@ -3521,7 +3776,8 @@ e_{n} & | &  & |
 משפט פיטרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -3576,7 +3832,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\v\subseteq\bbr^{k}$
 \end_inset
 
@@ -3626,7 +3883,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\v\subseteq\bbr^{k}$
 \end_inset
 
@@ -3672,7 +3930,8 @@ e_{n} & | &  & |
 משפט פירוק יחידה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X\subseteq\bbr^{n}$
 \end_inset
 
@@ -3761,7 +4020,8 @@ e_{n} & | &  & |
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\v\subseteq\bbr^{k}$
 \end_inset
 
@@ -3790,7 +4050,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -3880,7 +4141,8 @@ e_{n} & | &  & |
 מקבילון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $v_{1}\ldots v_{k}\in\bbr^{n}$
 \end_inset
 
@@ -3898,7 +4160,8 @@ e_{n} & | &  & |
 נפח מקבילון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $v_{1}\ldots v_{k}\in\bbr^{n}$
 \end_inset
 
@@ -3916,7 +4179,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $v_{1}\ldots v_{k}\in\bbr^{k}$
 \end_inset
 
@@ -3953,7 +4217,8 @@ e_{n} & | &  & |
 קבוצה זניחה ביחס ליריעה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -3987,7 +4252,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -4007,7 +4273,7 @@ e_{n} & | &  & |
 \begin_inset Formula $E\subseteq\m$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $E$
 \end_inset
 
@@ -4015,11 +4281,11 @@ e_{n} & | &  & |
 \begin_inset Formula $\m$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $\a\in\Lambda$
 \end_inset
 
@@ -4031,7 +4297,7 @@ e_{n} & | &  & |
 \begin_inset Formula $\bbr^{k}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -4041,7 +4307,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -4071,7 +4338,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -4089,7 +4357,8 @@ e_{n} & | &  & |
 קבוצת נקודות האי־רציפות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -4111,7 +4380,8 @@ e_{n} & | &  & |
 פונקציה אינטגרבילית רימן
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -4154,7 +4424,8 @@ e_{n} & | &  & |
 קבוצה מדידה ז'ורדן על יריעה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -4180,7 +4451,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -4200,7 +4472,7 @@ e_{n} & | &  & |
 \begin_inset Formula $\overline{E}\subseteq\u$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $E$
 \end_inset
 
@@ -4208,11 +4480,11 @@ e_{n} & | &  & |
 \begin_inset Formula $\m$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\varphi\left(E\right)$
 \end_inset
 
@@ -4220,7 +4492,7 @@ e_{n} & | &  & |
 \begin_inset Formula $\bbr^{k}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -4230,7 +4502,8 @@ e_{n} & | &  & |
 פונקציה נוחה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -4260,7 +4533,8 @@ e_{n} & | &  & |
 קבוצה נוחה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -4282,7 +4556,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -4312,7 +4587,8 @@ e_{n} & | &  & |
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -4345,7 +4621,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -4387,7 +4664,8 @@ e_{n} & | &  & |
 אינטגרל
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -4421,7 +4699,8 @@ e_{n} & | &  & |
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -4455,7 +4734,8 @@ e_{n} & | &  & |
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -4477,7 +4757,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -4499,7 +4780,8 @@ e_{n} & | &  & |
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -4521,7 +4803,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -4555,7 +4838,8 @@ e_{n} & | &  & |
 אינטגרל
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -4585,7 +4869,8 @@ e_{n} & | &  & |
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -4603,7 +4888,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -4621,7 +4907,8 @@ e_{n} & | &  & |
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -4644,7 +4931,8 @@ e_{n} & | &  & |
 \series bold
 סימון
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -4653,7 +4941,7 @@ e_{n} & | &  & |
 \end_inset
 
  אזי 
-\begin_inset Formula $\intop_{\m}f=\intop_{\m}\text{d}\vol_{k}$
+\begin_inset Formula $\intop_{\m}f=\intop_{\m}f\text{d}\vol_{k}$
 \end_inset
 
 .
@@ -4664,7 +4952,8 @@ e_{n} & | &  & |
 \series bold
 מיצוי ז'ורדן של יריעה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -4684,7 +4973,8 @@ e_{n} & | &  & |
 \series bold
 אינטגרל לא אמיתי
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -4724,7 +5014,8 @@ e_{n} & | &  & |
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -4756,7 +5047,8 @@ e_{n} & | &  & |
 \series bold
 נפח של יריעה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -4776,7 +5068,8 @@ e_{n} & | &  & |
 \series bold
 מפות זרות
 \series default
-: מפות 
+:
+ מפות 
 \begin_inset Formula $\left(\u,\varphi\right),\left(\v,\psi\right)$
 \end_inset
 
@@ -4792,7 +5085,8 @@ e_{n} & | &  & |
 \series bold
 טענה
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\left\{ \left(\u_{i},\varphi_{i}\right)\right\} _{i=1}^{n}$
 \end_inset
 
@@ -4837,9 +5131,31 @@ e_{n} & | &  & |
 \begin_layout Standard
 
 \series bold
+אינטגרל קווי מסוג ראשון
+\series default
+:
+ תהא 
+\begin_inset Formula $\g:\left[a,b\right]\to\bbr^{n}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\im\left(\g\right)\to\bbr$
+\end_inset
+
+ אינטגרבילית אזי 
+\begin_inset Formula $\intop_{\g}f\text{d}\vol_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 סימון
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\g\in C\left(\left[a,b\right],\bbr^{n}\right)$
 \end_inset
 
@@ -4855,7 +5171,8 @@ e_{n} & | &  & |
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\g\in C^{1}\left(\left[a,b\right],\bbr^{n}\right)$
 \end_inset
 
@@ -4871,7 +5188,8 @@ e_{n} & | &  & |
 \series bold
 סימון
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -4887,7 +5205,8 @@ e_{n} & | &  & |
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -4907,7 +5226,8 @@ e_{n} & | &  & |
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr$
 \end_inset
 
@@ -4927,7 +5247,8 @@ e_{n} & | &  & |
 \series bold
 מסקנה
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $r,\theta\in C^{1}\left(\bbr\right)$
 \end_inset
 
@@ -4951,7 +5272,8 @@ e_{n} & | &  & |
 \series bold
 סימון
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -4967,7 +5289,8 @@ e_{n} & | &  & |
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{3}$
 \end_inset
 
@@ -4995,7 +5318,8 @@ e_{n} & | &  & |
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{2}$
 \end_inset
 
@@ -5015,7 +5339,8 @@ e_{n} & | &  & |
 \series bold
 טענה
 \series default
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $u,v\in\bbr^{n}$
 \end_inset
 
@@ -5031,7 +5356,8 @@ e_{n} & | &  & |
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{k}$
 \end_inset
 
@@ -5051,7 +5377,8 @@ e_{n} & | &  & |
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{k}$
 \end_inset
 
@@ -5091,7 +5418,8 @@ e_{n} & | &  & |
 \series bold
 משפט ארכימדס
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $P_{1},P_{2}$
 \end_inset
 
@@ -5131,7 +5459,8 @@ e_{n} & | &  & |
 \series bold
 מסקנה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $P_{1},P_{2}$
 \end_inset
 
@@ -5180,11 +5509,12 @@ e_{n} & | &  & |
 \series bold
 קורה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $H_{1},H_{2}\subseteq\bbr^{n}$
 \end_inset
 
- היפר־משטחים מקבילים אזי 
+ על־משטחים מקבילים אזי 
 \begin_inset Formula $P_{H_{1},H_{2}}=\left\{ x\in\bbr^{n}\mid\max\left\{ d\left(x,H_{1}\right),d\left(x,H_{2}\right)\right\} \le d\left(H_{1},H_{2}\right)\right\} $
 \end_inset
 
@@ -5196,11 +5526,12 @@ e_{n} & | &  & |
 \series bold
 רוחב קורה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $H_{1},H_{2}\subseteq\bbr^{n}$
 \end_inset
 
- היפר־משטחים אזי 
+ על־משטחים אזי 
 \begin_inset Formula $\wid\left(P_{H_{1},H_{2}}\right)=d\left(H_{1},H_{2}\right)$
 \end_inset
 
@@ -5212,7 +5543,8 @@ e_{n} & | &  & |
 \series bold
 רוחב גוף
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $K\subseteq\bbr^{n}$
 \end_inset
 
@@ -5228,7 +5560,8 @@ e_{n} & | &  & |
 \series bold
 משפט באנג לבעיית הקורה של טרסקי
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $K\subseteq\bbr^{n}$
 \end_inset
 
@@ -5252,7 +5585,8 @@ e_{n} & | &  & |
 \series bold
 רוחב יחסי של קורה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $K\subseteq\bbr^{n}$
 \end_inset
 
@@ -5276,7 +5610,8 @@ e_{n} & | &  & |
 \series bold
 השערת באנג
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $K\subseteq\bbr^{n}$
 \end_inset
 
@@ -5303,7 +5638,8 @@ e_{n} & | &  & |
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $K\subseteq\bbr^{n}$
 \end_inset
 
@@ -5340,7 +5676,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\v\subseteq\bbr^{n}$
 \end_inset
 
@@ -5356,7 +5693,7 @@ e_{n} & | &  & |
 \begin_inset Formula $\varphi^{-1}\left(t\right)$
 \end_inset
 
- היפר־משטח.
+ על־משטח.
 \end_layout
 
 \begin_layout Standard
@@ -5366,7 +5703,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\v\subseteq\bbr^{n}$
 \end_inset
 
@@ -5412,7 +5750,8 @@ e_{n} & | &  & |
 משפט נוחסאת קו־שטח
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\v\subseteq\bbr^{n}$
 \end_inset
 
@@ -5457,7 +5796,8 @@ e_{n} & | &  & |
 גרדיאנט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -5491,7 +5831,8 @@ e_{n} & | &  & |
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -5525,7 +5866,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -5563,7 +5905,8 @@ e_{n} & | &  & |
 משפט נוחסאת קו־שטח ביריעה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -5597,7 +5940,8 @@ e_{n} & | &  & |
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\v\subseteq\bbr^{n}$
 \end_inset
 
@@ -5631,7 +5975,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbs^{n}\to\bbr$
 \end_inset
 
@@ -5653,7 +5998,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $r>0$
 \end_inset
 
@@ -5671,7 +6017,8 @@ e_{n} & | &  & |
 טענה שטח פנים של ספירה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -5689,7 +6036,8 @@ e_{n} & | &  & |
 טענה נפח של ספירה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -5716,7 +6064,8 @@ e_{n} & | &  & |
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -5734,7 +6083,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -5760,11 +6110,12 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $v\in\x\left(\m\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $v$
 \end_inset
 
@@ -5772,11 +6123,11 @@ e_{n} & | &  & |
 \begin_inset Formula $C^{\a}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל מפה 
+(לכל מפה 
 \begin_inset Formula $\left(\u,\varphi\right)$
 \end_inset
 
@@ -5792,7 +6143,7 @@ e_{n} & | &  & |
 \begin_inset Formula $C^{\a}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -5802,7 +6153,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $v$
 \end_inset
 
@@ -5810,7 +6162,7 @@ e_{n} & | &  & |
 \begin_inset Formula $\m$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $v$
 \end_inset
 
@@ -5818,11 +6170,11 @@ e_{n} & | &  & |
 \begin_inset Formula $C^{\a}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $v:\m\to\bbr^{k}$
 \end_inset
 
@@ -5830,7 +6182,7 @@ e_{n} & | &  & |
 \begin_inset Formula $C^{\a}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -5844,7 +6196,8 @@ e_{n} & | &  & |
  מעל תת־קבוצה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq\m$
 \end_inset
 
@@ -5882,7 +6235,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -5894,7 +6248,7 @@ e_{n} & | &  & |
 \begin_inset Formula $v:A\to\bbr^{k}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $v$
 \end_inset
 
@@ -5906,11 +6260,11 @@ e_{n} & | &  & |
 \begin_inset Formula $A$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימת 
+(קיימת 
 \begin_inset Formula $A\subseteq\u$
 \end_inset
 
@@ -5926,7 +6280,7 @@ e_{n} & | &  & |
 \begin_inset Formula $u_{\upharpoonright_{\u}}=v$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -5936,7 +6290,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -5958,11 +6313,12 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\m$
 \end_inset
 
- על־משטח קשיר אזי )
+ על־משטח קשיר אזי (
 \begin_inset Formula $\m$
 \end_inset
 
@@ -5995,11 +6351,11 @@ e_{n} & | &  & |
 \color inherit
 0
 \numeric off
- אוריינטציות(
+ קו־אוריינטציות)
 \begin_inset Formula $\lor$
 \end_inset
 
-)
+(
 \begin_inset Formula $\m$
 \end_inset
 
@@ -6032,7 +6388,7 @@ e_{n} & | &  & |
 \color inherit
 2
 \numeric off
- אוריינטציות(.
+ קו־אוריינטציות).
 \end_layout
 
 \begin_layout Standard
@@ -6051,7 +6407,8 @@ e_{n} & | &  & |
 שטף
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -6059,7 +6416,7 @@ e_{n} & | &  & |
 \begin_inset Formula $N$
 \end_inset
 
- אוריינטציה של 
+ קו־אוריינטציה של 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -6093,7 +6450,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -6101,7 +6459,7 @@ e_{n} & | &  & |
 \begin_inset Formula $N$
 \end_inset
 
- אוריינטציה של 
+ קו־אוריינטציה של 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -6131,11 +6489,12 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\m_{1},\m_{2}\subseteq\bbr^{n}$
 \end_inset
 
- על־משטחים זרים עד כדי קבוצה זניחה בעלי אוריינטציה 
+ על־משטחים זרים עד כדי קבוצה זניחה בעלי קו־אוריינטציה 
 \begin_inset Formula $N_{1},N_{2}$
 \end_inset
 
@@ -6165,11 +6524,12 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
- על־משטח בעל אוריינטציה 
+ על־משטח בעל קו־אוריינטציה 
 \begin_inset Formula $N$
 \end_inset
 
@@ -6212,7 +6572,8 @@ e_{n} & | &  & |
 דיברגנץ
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6234,7 +6595,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6264,7 +6626,8 @@ e_{n} & | &  & |
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6290,7 +6653,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6316,7 +6680,8 @@ e_{n} & | &  & |
 לפלסיאן
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6338,7 +6703,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6360,7 +6726,8 @@ e_{n} & | &  & |
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $x\in\bbr^{n}$
 \end_inset
 
@@ -6378,7 +6745,8 @@ e_{n} & | &  & |
 הערה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $x\in\bbr^{n}$
 \end_inset
 
@@ -6412,7 +6780,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6444,7 +6813,8 @@ e_{n} & | &  & |
 נקודת שפה חלקה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6486,7 +6856,8 @@ e_{n} & | &  & |
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6504,7 +6875,8 @@ e_{n} & | &  & |
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6550,7 +6922,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6580,7 +6953,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6602,7 +6976,8 @@ e_{n} & | &  & |
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6620,7 +6995,8 @@ e_{n} & | &  & |
 קבוצה חלקה
 \series default
 \color inherit
-: קבוצה פתוחה 
+:
+ קבוצה פתוחה 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6638,7 +7014,8 @@ e_{n} & | &  & |
 קבוצה בעלת שפה כמעט חלקה
 \series default
 \color inherit
-: קבוצה פתוחה 
+:
+ קבוצה פתוחה 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6656,7 +7033,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6679,10 +7057,11 @@ e_{n} & | &  & |
 
 \series bold
 \color green
-אוריינטציה חיצונית קנונית לשפה חלקה
+קו־אוריינטציה חיצונית קנונית לשפה חלקה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6716,7 +7095,8 @@ e_{n} & | &  & |
 שטף
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6750,7 +7130,8 @@ e_{n} & | &  & |
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -6758,7 +7139,7 @@ e_{n} & | &  & |
 \begin_inset Formula $N$
 \end_inset
 
- אוריינטציה של 
+ קו־אוריינטציה של 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -6792,7 +7173,8 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a\in\bbr^{n}$
 \end_inset
 
@@ -6834,11 +7216,12 @@ e_{n} & | &  & |
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
- חסומה ופתוחה עם שפה כמעט חלקה עבורה 
+ חסומה פתוחה עם שפה כמעט חלקה עבורה 
 \begin_inset Formula $\vol_{n-1}\left(\partial^{\text{sm}}\u\right)<\infty$
 \end_inset
 
@@ -6880,7 +7263,8 @@ e_{n} & | &  & |
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -6914,7 +7298,8 @@ e_{n} & | &  & |
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X\subseteq\bbr^{n}$
 \end_inset
 
@@ -6936,7 +7321,8 @@ e_{n} & | &  & |
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X\subseteq\bbr^{n}$
 \end_inset
 
@@ -6995,11 +7381,12 @@ e_{n} & | &  & |
 משפט הדיברגנץ
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
- חסומה ופתוחה עם שפה כמעט חלקה עבורה 
+ חסומה פתוחה עם שפה כמעט חלקה עבורה 
 \begin_inset Formula $\vol_{n-1}\left(\partial^{\text{sm}}\u\right)<\infty$
 \end_inset
 
@@ -7036,11 +7423,12 @@ e_{n} & | &  & |
 טענה נוסחת גאוס לנפח
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
- חסומה ופתוחה עם שפה כמעט חלקה עבורה 
+ חסומה פתוחה עם שפה כמעט חלקה עבורה 
 \begin_inset Formula $\vol_{n-1}\left(\partial^{\text{sm}}\u\right)<\infty$
 \end_inset
 
@@ -7066,11 +7454,12 @@ e_{n} & | &  & |
 טענה אינטגרציה בחלקים
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
- חסומה ופתוחה עם שפה כמעט חלקה עבורה 
+ חסומה פתוחה עם שפה כמעט חלקה עבורה 
 \begin_inset Formula $\vol_{n-1}\left(\partial^{\text{sm}}\u\right)<\infty$
 \end_inset
 
@@ -7104,11 +7493,12 @@ e_{n} & | &  & |
 טענה נוסחאות גרין
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G\subseteq\bbr^{n}$
 \end_inset
 
- חסומה ופתוחה עם שפה כמעט חלקה עבורה 
+ חסומה פתוחה עם שפה כמעט חלקה עבורה 
 \begin_inset Formula $\vol_{n-1}\left(\partial^{\text{sm}}G\right)<\infty$
 \end_inset
 
@@ -7198,11 +7588,12 @@ e_{n} & | &  & |
 אנרגיית דיריכלה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G\subseteq\bbr^{n}$
 \end_inset
 
- חסומה ופתוחה עם שפה כמעט חלקה עבורה 
+ חסומה פתוחה עם שפה כמעט חלקה עבורה 
 \begin_inset Formula $\vol_{n-1}\left(\partial^{\text{sm}}G\right)<\infty$
 \end_inset
 
@@ -7240,11 +7631,12 @@ e_{n} & | &  & |
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G\subseteq\bbr^{n}$
 \end_inset
 
- חסומה ופתוחה עם שפה כמעט חלקה עבורה 
+ חסומה פתוחה עם שפה כמעט חלקה עבורה 
 \begin_inset Formula $\vol_{n-1}\left(\partial^{\text{sm}}G\right)<\infty$
 \end_inset
 
@@ -7282,7 +7674,8 @@ e_{n} & | &  & |
 פונקציה הרמונית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G\subseteq\bbr^{n}$
 \end_inset
 
@@ -7304,11 +7697,12 @@ e_{n} & | &  & |
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G\subseteq\bbr^{n}$
 \end_inset
 
- חסומה ופתוחה עם שפה כמעט חלקה עבורה 
+ חסומה פתוחה עם שפה כמעט חלקה עבורה 
 \begin_inset Formula $\vol_{n-1}\left(\partial^{\text{sm}}G\right)<\infty$
 \end_inset
 
@@ -7382,7 +7776,8 @@ e_{n} & | &  & |
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\u\subseteq\bbr^{n}$
 \end_inset
 
@@ -7404,7 +7799,8 @@ e_{n} & | &  & |
 משפט תכונת הערך הממוצע
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a\in\bbr^{n}$
 \end_inset
 
@@ -7438,7 +7834,8 @@ e_{n} & | &  & |
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a\in\bbr^{n}$
 \end_inset
 
@@ -7475,9 +7872,12 @@ e_{n} & | &  & |
 \begin_layout Standard
 
 \series bold
+\color purple
 טענה
 \series default
-: תהא 
+\color inherit
+:
+ תהא 
 \begin_inset Formula $f\in C^{2}\left(\bbr^{n},\bbr\right)$
 \end_inset
 
@@ -7495,9 +7895,12 @@ e_{n} & | &  & |
 \begin_layout Standard
 
 \series bold
+\color purple
 מסקנה עקרון המקסימום
 \series default
-: יהי 
+\color inherit
+:
+ יהי 
 \begin_inset Formula $G\subseteq\bbr^{n}$
 \end_inset
 
@@ -7527,9 +7930,12 @@ e_{n} & | &  & |
 \begin_layout Standard
 
 \series bold
+\color purple
 מסקנה עקרון המינמום
 \series default
-: יהי 
+\color inherit
+:
+ יהי 
 \begin_inset Formula $G\subseteq\bbr^{n}$
 \end_inset
 
@@ -7559,9 +7965,12 @@ e_{n} & | &  & |
 \begin_layout Standard
 
 \series bold
+\color purple
 משפט ליוביל
 \series default
-: תהא 
+\color inherit
+:
+ תהא 
 \begin_inset Formula $u:\bbr^{n}\to\bbr$
 \end_inset
 
@@ -7575,9 +7984,12 @@ e_{n} & | &  & |
 \begin_layout Standard
 
 \series bold
+\color purple
 מסקנה
 \series default
-: תהא 
+\color inherit
+:
+ תהא 
 \begin_inset Formula $u:\bbr^{n}\to\bbr$
 \end_inset
 
@@ -7591,9 +8003,12 @@ e_{n} & | &  & |
 \begin_layout Standard
 
 \series bold
+\color purple
 טענה אינטגרל פואסון
 \series default
-: יהי 
+\color inherit
+:
+ יהי 
 \begin_inset Formula $n\ge3$
 \end_inset
 
@@ -7623,9 +8038,12 @@ e_{n} & | &  & |
 \begin_layout Standard
 
 \series bold
+\color purple
 משפט גרעין פואסון
 \series default
-: תהא 
+\color inherit
+:
+ תהא 
 \begin_inset Formula $u:\overline{B_{1}^{n}\left(0\right)}\to\bbr$
 \end_inset
 
@@ -7651,9 +8069,12 @@ e_{n} & | &  & |
 \begin_layout Standard
 
 \series bold
+\color purple
 מסקנה
 \series default
-: תהא 
+\color inherit
+:
+ תהא 
 \begin_inset Formula $f\in C^{2}\left(\bbs^{n-1},\bbr\right)$
 \end_inset
 
@@ -7680,7 +8101,14 @@ e_{n} & | &  & |
 \end_layout
 
 \begin_layout Standard
-המרחב הדואלי: יהי 
+
+\series bold
+\color brown
+המרחב הדואלי
+\series default
+\color inherit
+:
+ יהי 
 \begin_inset Formula $V$
 \end_inset
 
@@ -7696,7 +8124,88 @@ e_{n} & | &  & |
 \end_layout
 
 \begin_layout Standard
-המרחב הקו־משיק: תהא 
+
+\series bold
+\color brown
+סימון
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו ממשי יהי 
+\begin_inset Formula $\left\{ e_{1}\ldots e_{n}\right\} $
+\end_inset
+
+ בסיס של 
+\begin_inset Formula $V$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $e_{i}^{*}:V\to\bbr$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $e_{i}^{*}\left(e_{j}\right)=\d_{i,j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו ממשי ויהי 
+\begin_inset Formula $\left\{ e_{1}\ldots e_{n}\right\} $
+\end_inset
+
+ בסיס של 
+\begin_inset Formula $V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ e_{1}^{*}\ldots e_{n}^{*}\right\} $
+\end_inset
+
+ בסיס של 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+המרחב הקו־משיק
+\series default
+\color inherit
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -7712,7 +8221,14 @@ e_{n} & | &  & |
 \end_layout
 
 \begin_layout Standard
-סימון: תהא 
+
+\series bold
+\color brown
+סימון
+\series default
+\color inherit
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -7728,7 +8244,14 @@ e_{n} & | &  & |
 \end_layout
 
 \begin_layout Standard
-קו־וקטורים: תהא 
+
+\series bold
+\color brown
+קו־וקטורים
+\series default
+\color inherit
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
@@ -7745,15 +8268,21 @@ e_{n} & | &  & |
 
 \begin_layout Standard
 
+\series bold
 \numeric on
+\color brown
 1
 \numeric off
-־תבנית דיפרנציאלית: תהא 
+־תבנית דיפרנציאלית
+\series default
+\color inherit
+:
+ תהא 
 \begin_inset Formula $\m\subseteq\bbr^{n}$
 \end_inset
 
  יריעה אזי 
-\begin_inset Formula $\omega:\m\to\Hom\left(\bbr^{n},\bbr\right)$
+\begin_inset Formula $\omega:\m\to\left(\bbr^{n}\right)^{*}$
 \end_inset
 
  המקיימת 
@@ -7764,12 +8293,81 @@ e_{n} & | &  & |
 \end_layout
 
 \begin_layout Standard
-טענה: יהי 
+
+\series bold
+\color brown
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה תהא 
+\begin_inset Formula $\omega$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+־תבית דיפרנציאלית על 
+\begin_inset Formula $\m$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $x\in\m$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\omega_{x}=\omega\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ יהי 
 \begin_inset Formula $v\in\x\left(\m\right)$
 \end_inset
 
  אזי 
-\begin_inset Formula $\omega\left(x\right)\left(u\right)=\left<v\left(x\right),u\right>$
+\begin_inset Formula $\omega_{x}\left(u\right)=\left<v\left(x\right),u\right>$
 \end_inset
 
 
@@ -7801,16 +8399,46 @@ e_{n} & | &  & |
 \color inherit
 1
 \numeric off
-־תבנית.
+־תבנית דיפרנציאלית.
 \end_layout
 
 \begin_layout Standard
-טענה: תהא 
+
+\series bold
+\color brown
+סימון
+\series default
+\color inherit
+:
+ תהא 
 \begin_inset Formula $f\in C^{1}\left(\m,\bbr\right)$
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(\text{d}f\right)\left(x\right)\left(u\right)=\frac{\partial f}{\partial u}\left(x\right)$
+\begin_inset Formula $\text{d}f:\m\to\left(\bbr^{n}\right)^{*}$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\left(\text{d}f\right)_{x}\left(v\right)=\frac{\partial f}{\partial v}\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $f\in C^{1}\left(\m,\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{d}f$
 \end_inset
 
 
@@ -7842,11 +8470,18 @@ e_{n} & | &  & |
 \color inherit
 1
 \numeric off
-־תבנית.
+־תבנית דיפרנציאלית.
 \end_layout
 
 \begin_layout Standard
-טענה כלל לייבניץ': תהיינה 
+
+\series bold
+\color brown
+טענה כלל לייבניץ'
+\series default
+\color inherit
+:
+ תהיינה 
 \begin_inset Formula $f,g\in C^{1}\left(\m,\bbr\right)$
 \end_inset
 
@@ -7855,6 +8490,1745 @@ e_{n} & | &  & |
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הטלה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $q_{i}:\bbr^{n}\to\bbr$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $q_{i}\left(u\right)=u_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ מפה על 
+\begin_inset Formula $\m$
+\end_inset
+
+ אזי 
+\begin_inset Formula $x_{i}:\bbr^{n}\to\bbr$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $x_{i}=q_{i}\circ\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מערכת קואורדינטות מקומיות על יריעה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ מפה על 
+\begin_inset Formula $\m$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ x_{1}\ldots x_{k}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ מפה על 
+\begin_inset Formula $\m$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:\u\to\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\partial f}{\partial x_{i}}=\frac{\partial\left(f\circ\varphi^{-1}\right)}{\partial q_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הערה
+\series default
+\color inherit
+:
+ מטרת הסימונים מלעיל הינה לאפשר קואורדינטות 
+\begin_inset Formula $x_{1}\ldots x_{k}$
+\end_inset
+
+ על 
+\begin_inset Formula $\m$
+\end_inset
+
+ כמו ב־
+\begin_inset Formula $\bbr^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ מפה על 
+\begin_inset Formula $\m$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{d}x_{i}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+־תבנית דיפרנציאלית ב־
+\begin_inset Formula $\u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ מפה על 
+\begin_inset Formula $\m$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\partial}{\partial x_{i}}=\frac{\partial\varphi^{-1}}{\partial q_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ מפה על 
+\begin_inset Formula $\m$
+\end_inset
+
+ יהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p\in\u$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{d}x_{i}|_{p}=\text{d}x_{i}\left(p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ מפה על 
+\begin_inset Formula $\m$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in\u$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ \text{d}x_{1}|_{x},\ldots,\text{d}x_{k}|_{x}\right\} $
+\end_inset
+
+ בסיס של 
+\begin_inset Formula $T_{x}^{*}\left(\m\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ מפה על 
+\begin_inset Formula $\m$
+\end_inset
+
+ יהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in\u$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{d}x_{1}|_{x}=\left(\frac{\partial}{\partial x_{i}}\right)^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\numeric on
+\color brown
+1
+\numeric off
+־תבנית דיפרנציאלית 
+\begin_inset Formula $C^{m}$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה אזי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+־תבנית דיפרנציאלית 
+\begin_inset Formula $\omega$
+\end_inset
+
+ עבורה לכל מפה 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ של 
+\begin_inset Formula $\m$
+\end_inset
+
+ ולכל
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $f_{1}\ldots f_{k}\in\u\to\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\omega=\sum_{i=1}^{k}f_{i}\cdot\text{d}x_{i}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $f_{1}\ldots f_{k}\in C^{m}\left(\u\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה ותהא 
+\begin_inset Formula $\omega$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+־תבנית דיפרנציאלית אזי (
+\begin_inset Formula $\omega\in C^{m}$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיים אטלס 
+\begin_inset Formula $\left\{ \left(\u_{\a},\varphi_{\a}\right)\right\} _{\a\in\Lambda}$
+\end_inset
+
+ של 
+\begin_inset Formula $\m$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $\a\in\Lambda$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $f_{1}\ldots f_{k}\in\u_{\a}\to\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\omega=\sum_{i=1}^{k}f_{i}\cdot\text{d}x_{i}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $f_{1}\ldots f_{k}\in C^{m}\left(\u_{\a}\right)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה אזי 
+\begin_inset Formula $\Omega^{1}\left(\m\right)=\left\{ \omega\mid\m\text{ על }C^{\infty}\text{ 1־תבנית דיפרנציאלית }\omega\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $f\in C^{m+1}\left(\m\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ מפה על 
+\begin_inset Formula $\m$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{d}f=\sum_{i=1}^{k}\frac{\text{d}f}{\text{d}x_{i}}\cdot\text{d}x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $f\in C^{m+1}\left(\m\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{d}f$
+\end_inset
+
+ הינה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+־תבנית דיפרנציאלית 
+\begin_inset Formula $C^{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+משיכה לאחור (
+\begin_inset Formula $\text{back pull}$
+\end_inset
+
+)
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $M\subseteq\bbr^{m}$
+\end_inset
+
+ יריעה תהא 
+\begin_inset Formula $N\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה ותהא 
+\begin_inset Formula $F\in C^{1}\left(M,N\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $F^{*}:\Omega^{1}\left(N\right)\to\Omega^{1}\left(M\right)$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $F^{*}\left(\omega,x,v\right)=\omega_{F\left(x\right)}\left(\mathcal{D}_{x}\left(F\right)\cdot v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $M\subseteq\bbr^{m}$
+\end_inset
+
+ יריעה תהא 
+\begin_inset Formula $N\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה ותהא 
+\begin_inset Formula $F\in C^{1}\left(M,N\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(F_{\omega}^{*}\right)_{x}\left(v\right)=F^{*}\left(\omega,x,v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+אינטגרל קווי מסוג שני
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\g:\left[a,b\right]\to\m$
+\end_inset
+
+ מסילה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין ותהא 
+\begin_inset Formula $\omega\in\Omega^{1}\left(\m\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{\g}\omega=\intop_{a}^{b}\omega_{\g\left(t\right)}\left(\g^{\prime}\left(t\right)\right)\text{d}t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\g:\left[a,b\right]\to\m$
+\end_inset
+
+ מסילה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין אזי 
+\begin_inset Formula $\intop_{\gamma}:\Omega^{1}\left(\m\right)\to\bbr$
+\end_inset
+
+ הינו פונקציונל לינארי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה אי־תלות בבחירת פרמטריזציה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\g:\left[a,b\right]\to\m$
+\end_inset
+
+ מסילה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין תהא 
+\begin_inset Formula $\psi:\left[\a,\b\right]\to\left[a,b\right]$
+\end_inset
+
+ מסילה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין ותהא 
+\begin_inset Formula $\omega\in\Omega^{1}\left(\m\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{\g}\omega=\intop_{\g\circ\psi}\omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+העתקה לינארית שומרת אוריינטציה
+\series default
+\color inherit
+:
+ העתקה 
+\begin_inset Formula $\varphi\in\Hom\left(\bbr^{n}\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\det\left(\left[\varphi\right]_{\text{st}}\right)>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+דיפאומורפיזם שומר אוריינטציה
+\series default
+\color inherit
+:
+ תהיינה 
+\begin_inset Formula $\u,\v\subseteq\bbr^{n}$
+\end_inset
+
+ אזי דיפאומורפיזם 
+\begin_inset Formula $f:\u\to\v$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\mathcal{D}_{x}\left(f\right)$
+\end_inset
+
+ שומרת אוריינטרציה לכל 
+\begin_inset Formula $x\in\u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+אוריינטציה של יריעה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה אזי 
+\begin_inset Formula $O:\m\to\P\left(\bbr^{n}\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $O\left(x\right)$
+\end_inset
+
+ בסיס של 
+\begin_inset Formula $T_{x}\left(\m\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\m$
+\end_inset
+
+ וכן 
+\begin_inset Formula $O_{1}\ldots O_{k}$
+\end_inset
+
+ רציפות למקוטעין.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+האוריינטציה הסטנדרטית של מסילה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\g:\left[a,b\right]\to\m$
+\end_inset
+
+ מסילה פשוטה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין אזי 
+\begin_inset Formula $O:\im\left(\g\right)\to\P\left(\bbr^{n}\right)$
+\end_inset
+
+ המוגדרת
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $O\left(x\right)=\dot{\g}\left(\g^{-1}\left(x\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+הערה
+\series default
+\color inherit
+:
+ אם המסילה לא פשוטה נפרק אותה מספר מסילות פשוטות ונחבר בסוף.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\g:\left[a,b\right]\to\m$
+\end_inset
+
+ מסילה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין אזי האוריינטציה הסטנדרטית של 
+\begin_inset Formula $\g$
+\end_inset
+
+ הינה אוריינטציה של 
+\begin_inset Formula $\im\left(\g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+היפוך אוריינטציה של מסילה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\g:\left[a,b\right]\to\m$
+\end_inset
+
+ מסילה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין אזי 
+\begin_inset Formula $\overline{\g}:\left[a,b\right]\to\m$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\overline{\g}\left(t\right)=\g\left(a+b-t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\g:\left[a,b\right]\to\m$
+\end_inset
+
+ מסילה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין אזי 
+\begin_inset Formula $O:\im\left(\g\right)\to\P\left(\bbr^{n}\right)$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $O\left(x\right)=\dot{\overline{\g}}\left(\overline{\g}^{-1}\left(x\right)\right)$
+\end_inset
+
+ הינה אוריינטציה של 
+\begin_inset Formula $\im\left(\g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\g:\left[a,b\right]\to\m$
+\end_inset
+
+ מסילה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין אזי 
+\begin_inset Formula $\intop_{\overline{\g}}\omega=-\intop_{\g}\omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\omega\in\Omega^{1}\left(\left[a,b\right]\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{a}^{b}\omega=-\intop_{b}^{a}\omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+שרשור מסילות
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\g_{1}:\left[a,b\right]\to\m$
+\end_inset
+
+ מסילה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין ותהא 
+\begin_inset Formula $\g_{2}:\left[b,c\right]\to\m$
+\end_inset
+
+ מסילה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left(\g_{1}\cup\g_{2}\right)\left(t\right)=\left\{ \begin{smallmatrix}\g_{1}\left(t\right) &  & t\in\left[a,b\right]\\
+\g_{2}\left(t\right) &  & t\in\left(b,c\right]
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\g_{1}:\left[a,b\right]\to\m$
+\end_inset
+
+ מסילה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין תהא 
+\begin_inset Formula $\g_{2}:\left[b,c\right]\to\m$
+\end_inset
+
+ מסילה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין ותהא 
+\begin_inset Formula $\omega\in\Omega^{1}\left(\m\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{\g_{1}\cup\g_{2}}\omega=\intop_{\g_{1}}\omega+\intop_{\g_{2}}\omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\g:\left[a,b\right]\to\m$
+\end_inset
+
+ מסילה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין ותהא 
+\begin_inset Formula $f:\m\to\bbr$
+\end_inset
+
+ באשר לכל 
+\begin_inset Formula $t\in\left[a,b\right]$
+\end_inset
+
+ קיימת 
+\begin_inset Formula $\u$
+\end_inset
+
+ סביבה של 
+\begin_inset Formula $\g\left(t\right)$
+\end_inset
+
+ בה 
+\begin_inset Formula $f$
+\end_inset
+
+ הינה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{\g}\text{d}f=f\left(\g\left(b\right)\right)-f\left(\g\left(a\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\omega\in\Omega^{1}\left(\m\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $x\in\m$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\norm{\omega_{x}}_{\infty}=\max\left\{ \omega_{x}\left(v\right)\mid\left(v\in T_{x}\left(\m\right)\right)\land\left(\norm v=1\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\g:\left[a,b\right]\to\m$
+\end_inset
+
+ מסילה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין ותהא 
+\begin_inset Formula $\omega\in\Omega^{1}\left(\m\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{\g}\omega\le\len\left(\g\right)\cdot\max_{t\in\left[a,b\right]}\norm{\omega_{\g\left(t\right)}}_{\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+טענה
+\series default
+:
+ נזהה את 
+\begin_inset Formula $T_{x}^{*}\left(\m\right)$
+\end_inset
+
+ כמרחב מכפלה פנימית ממשפט ההצגה של ריס אזי הנורמה המוגדרת הינה אותה נורמה כמו על
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+־תבנית דיפרנציאלית.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+הערה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $G\subseteq\bbr^{n}$
+\end_inset
+
+ חסומה פתוחה עם שפה כמעט חלקה עבורה 
+\begin_inset Formula $\vol_{n-1}\left(\partial^{\text{sm}}G\right)<\infty$
+\end_inset
+
+ אזי ניתן לחשוב על 
+\begin_inset Formula $\partial G$
+\end_inset
+
+ בתור איחוד סופי זר של מסילות סגורות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+אוריינטציית רגל שמאל
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $G\subseteq\bbr^{2}$
+\end_inset
+
+ חסומה פתוחה עם שפה כמעט חלקה עבורה 
+\begin_inset Formula $\vol_{n-1}\left(\partial^{\text{sm}}G\right)<\infty$
+\end_inset
+
+ תהא 
+\begin_inset Formula $N$
+\end_inset
+
+ קו־אוריינטציה חיצונית של 
+\begin_inset Formula $\partial G$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $\g_{1}\ldots\g_{m}$
+\end_inset
+
+ מסילות זרות וסגורות עבורן 
+\begin_inset Formula $\bigcup\g_{i}=\partial G$
+\end_inset
+
+ אזי אוריינטציה 
+\begin_inset Formula $O:\partial G\to\bbr^{2}$
+\end_inset
+
+ עבורה
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left(\begin{smallmatrix}0 & -1\\
+1 & 0
+\end{smallmatrix}\right)\cdot O\left(x\right)=-N\left(x\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\partial G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה פרמטריזציה נורמלית
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $G\subseteq\bbr^{2}$
+\end_inset
+
+ חסומה פתוחה עם שפה כמעט חלקה עבורה 
+\begin_inset Formula $\vol_{n-1}\left(\partial^{\text{sm}}G\right)<\infty$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\partial G$
+\end_inset
+
+ הינה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ אזי קיימות 
+\begin_inset Formula $\g_{1}\ldots\g_{m}$
+\end_inset
+
+ מסילות זרות וסגורות עבורן 
+\begin_inset Formula $\bigcup\g_{i}=\partial G$
+\end_inset
+
+ וכן לכל 
+\begin_inset Formula $i\in\left[m\right]$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $t\in\dom\left(\g_{i}\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\norm{\g_{i}^{\prime}\left(t\right)}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט גרין
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $G\subseteq\bbr^{2}$
+\end_inset
+
+ חסומה פתוחה עם שפה כמעט חלקה עבורה 
+\begin_inset Formula $\vol_{n-1}\left(\partial^{\text{sm}}G\right)<\infty$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\partial G$
+\end_inset
+
+ הינה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין תהא
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\w\subseteq\bbr^{n}$
+\end_inset
+
+ פתוחה באשר 
+\begin_inset Formula $\overline{G}\subseteq\w$
+\end_inset
+
+ יהי 
+\begin_inset Formula $N$
+\end_inset
+
+ נורמל חיצוני ל־
+\begin_inset Formula $G$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $P,Q\in C^{1}\left(\w\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{\partial G}\left(P\text{d}x+Q\text{d}y\right)=\intop_{G}\left(\frac{\text{d}Q}{\text{d}x}-\frac{\text{d}P}{\text{d}y}\right)\text{d}x\text{d}y$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\partial G$
+\end_inset
+
+ עם אוריינטציית רגל שמאל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה נוסחת גאוס
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $G\subseteq\bbr^{2}$
+\end_inset
+
+ חסומה פתוחה עם שפה כמעט חלקה עבורה 
+\begin_inset Formula $\vol_{n-1}\left(\partial^{\text{sm}}G\right)<\infty$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\partial G$
+\end_inset
+
+ הינה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין אזי 
+\begin_inset Formula $\area\left(G\right)=\frac{1}{2}\intop_{\partial G}\left(x\text{d}y-y\text{d}x\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\partial G$
+\end_inset
+
+ עם אוריינטציית רגל שמאל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+העתקה לינארית אנטי סימטרית
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו מעל 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $T\in\Hom\left(V^{k},\bbr\right)$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $u_{1}\ldots u_{k}\in V$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $i,j\in\left[k\right]$
+\end_inset
+
+ שונים מתקיים כי 
+\begin_inset Formula $T\left(\left(\begin{smallmatrix}u_{1}\\
+\vdots\\
+u_{k}
+\end{smallmatrix}\right)\right)=-T\left(R_{i\leftrightarrow j}\cdot\left(\begin{smallmatrix}u_{1}\\
+\vdots\\
+u_{k}
+\end{smallmatrix}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+הערה
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $i,j\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R_{i\leftrightarrow j}\in M_{n}\left(A\right)$
+\end_inset
+
+ הינה מטריצת החלפת שורות בין השורות 
+\begin_inset Formula $i,j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+סימון
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו מעל 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bigwedge^{0}V^{*}=\bbr$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\bigwedge^{k}V^{*}=\left\{ \omega\in\Hom\left(V^{k},\bbr\right)\mid\text{ אנטי סימטרית}\omega\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו מעל 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\dim\left(V\right)=n$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\det\in\bigwedge^{n}V^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו מעל 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $u_{1}\ldots u_{k}\in V$
+\end_inset
+
+ תלויים לינארית ותהא 
+\begin_inset Formula $\omega\in\bigwedge^{k}V^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\omega\left(u_{1}\ldots u_{k}\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מכפלת וודג'/מכפלת יתד
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $\varphi_{1}\ldots\varphi_{k}\in V^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\varphi_{1}\wedge\ldots\wedge\varphi_{k}\in\bigwedge^{k}V^{*}$
+\end_inset
+
+ באשר
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left(\varphi_{1}\wedge\ldots\wedge\varphi_{k}\right)\left(u_{1}\ldots u_{k}\right)=\det\left(\left(\varphi_{i}\left(u_{j}\right)\right)_{i,j\in\left[k\right]}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו מעל 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ יהי 
+\begin_inset Formula $e_{1}\ldots e_{n}$
+\end_inset
+
+ בסיס של 
+\begin_inset Formula $V$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $k\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ e_{a_{1}}^{*}\wedge\ldots\wedge e_{a_{k}}^{*}\bmid1\le a_{1}<\ldots<a_{k}\le n\right\} $
+\end_inset
+
+ בסיס של 
+\begin_inset Formula $\bigwedge^{k}V^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו מעל 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\dim\left(V\right)=n$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bigwedge^{n}V^{*}=\sp\left\{ \det\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו מעל 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $k,\ell\in\bbn$
+\end_inset
+
+ אזי קיימת ויחידה 
+\begin_inset Formula $\wedge:\bigwedge^{k}V^{*}\times\bigwedge^{\ell}V^{*}\to\bigwedge^{k+\ell}V^{*}$
+\end_inset
+
+ עבורה
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left(\varphi_{1}\wedge\ldots\wedge\varphi_{k}\right)\wedge\left(\psi_{1}\wedge\ldots\wedge\psi_{k}\right)=\varphi_{1}\wedge\ldots\wedge\varphi_{k}\wedge\psi_{1}\wedge\ldots\wedge\psi_{k}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\varphi_{1}\ldots\varphi_{k},\psi_{1}\ldots\psi_{\ell}\in V^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \end_body

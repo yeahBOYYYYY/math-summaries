@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -74,11 +74,11 @@
 \end_preamble
 \options no-math
 \use_default_options true
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language hebrew
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "David CLM"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -86,7 +86,9 @@
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -100,7 +102,7 @@
 \paperfontsize default
 \spacing onehalf
 \use_hyperref false
-\papersize letterpaper
+\papersize letter
 \use_geometry true
 \use_package amsmath 2
 \use_package amssymb 2
@@ -121,7 +123,9 @@
 \suppress_date true
 \justification false
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -141,11 +145,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -154,6 +163,7 @@
 \begin_inset CommandInset include
 LatexCommand include
 filename "E:/University/macros.lyx"
+literal "true"
 
 \end_inset
 
@@ -174,7 +184,8 @@ filename "E:/University/macros.lyx"
 \series bold
 פולינום
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\bbf$
 \end_inset
 
@@ -198,7 +209,8 @@ filename "E:/University/macros.lyx"
 \series bold
 פולינומים
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f\left(x\right)=\sum a_{i}x^{i},g\left(x\right)=\sum b_{i}x^{i}$
 \end_inset
 
@@ -218,7 +230,8 @@ filename "E:/University/macros.lyx"
 \series bold
 פולינומים
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f\left(x\right)=\sum a_{i}x^{i},g\left(x\right)=\sum b_{i}x^{i}$
 \end_inset
 
@@ -238,7 +251,8 @@ filename "E:/University/macros.lyx"
 \series bold
 פולינומים
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f\left(x\right)=\sum a_{i}x^{i},g\left(x\right)=\sum b_{i}x^{i}$
 \end_inset
 
@@ -254,7 +268,8 @@ filename "E:/University/macros.lyx"
 \series bold
 הגדרה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\bbf$
 \end_inset
 
@@ -270,15 +285,16 @@ filename "E:/University/macros.lyx"
 \series bold
 משפט
 \series default
-: )
+:
+ (
 \begin_inset Formula $\bbf\left[x\right]$
 \end_inset
 
- חוג(
+ חוג)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $\bbf\left[x\right]$
 \end_inset
 
@@ -290,7 +306,7 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $\bbf$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -298,7 +314,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מחלק
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f\in\bbf\left[x\right]$
 \end_inset
 
@@ -318,7 +335,8 @@ filename "E:/University/macros.lyx"
 \series bold
 סימון
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f\in\bbf\left[x\right]$
 \end_inset
 
@@ -338,7 +356,8 @@ filename "E:/University/macros.lyx"
 \series bold
 דרגה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sum_{i=0}^{n}a_{i}x^{i}$
 \end_inset
 
@@ -357,7 +376,8 @@ filename "E:/University/macros.lyx"
 \series bold
 למה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g\in\bbf\left[x\right]$
 \end_inset
 
@@ -373,7 +393,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מסקנה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g\in\bbf\left[x\right]\backslash\left\{ 0\right\} $
 \end_inset
 
@@ -389,7 +410,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מסקנה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f\in\bbf\left[x\right]$
 \end_inset
 
@@ -409,7 +431,8 @@ filename "E:/University/macros.lyx"
 \series bold
 שלמות
 \series default
-: חוג קומוטטיבי 
+:
+ חוג קומוטטיבי 
 \begin_inset Formula $R$
 \end_inset
 
@@ -425,7 +448,8 @@ filename "E:/University/macros.lyx"
 \series bold
 משפט
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\bbf$
 \end_inset
 
@@ -441,7 +465,8 @@ filename "E:/University/macros.lyx"
 \series bold
 משפט
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g\in\bbf\left[x\right]$
 \end_inset
 
@@ -461,7 +486,8 @@ filename "E:/University/macros.lyx"
 \series bold
 שארית
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g\in\bbf\left[x\right]$
 \end_inset
 
@@ -485,7 +511,8 @@ filename "E:/University/macros.lyx"
 \series bold
 חלקית
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g\in\bbf\left[x\right]$
 \end_inset
 
@@ -505,7 +532,8 @@ filename "E:/University/macros.lyx"
 \series bold
 הערה
 \series default
-: אם 
+:
+ אם 
 \begin_inset Formula $r=0$
 \end_inset
 
@@ -517,7 +545,8 @@ filename "E:/University/macros.lyx"
 \series bold
 אידיאל
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $R$
 \end_inset
 
@@ -541,7 +570,8 @@ filename "E:/University/macros.lyx"
 \series bold
 הנוצר
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f_{1}\ldots f_{n}\in R$
 \end_inset
 
@@ -557,7 +587,8 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $R$
 \end_inset
 
@@ -577,7 +608,8 @@ filename "E:/University/macros.lyx"
 \series bold
 למה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f_{1}\ldots f_{n}\in R$
 \end_inset
 
@@ -605,7 +637,8 @@ filename "E:/University/macros.lyx"
 \series bold
 ראשי
 \series default
-: אידיאל 
+:
+ אידיאל 
 \begin_inset Formula $I\subseteq R$
 \end_inset
 
@@ -621,7 +654,8 @@ filename "E:/University/macros.lyx"
 \series bold
 תחום ראשי
 \series default
-: תחום שלמות 
+:
+ תחום שלמות 
 \begin_inset Formula $R$
 \end_inset
 
@@ -633,7 +667,8 @@ filename "E:/University/macros.lyx"
 \series bold
 משפט
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $I\subseteq\bbf\left[x\right]$
 \end_inset
 
@@ -653,7 +688,8 @@ filename "E:/University/macros.lyx"
 \series bold
 משותף
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f_{1}\ldots f_{n}\in\bbf\left[x\right]$
 \end_inset
 
@@ -681,7 +717,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מקסימלי
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f_{1}\ldots f_{n}\in\bbf\left[x\right]$
 \end_inset
 
@@ -697,7 +734,8 @@ filename "E:/University/macros.lyx"
 \series bold
 משפט
 \series default
-: מחלק משותף מקסימלי קיים ויחיד עד כדי כפילה בסקלר.
+:
+ מחלק משותף מקסימלי קיים ויחיד עד כדי כפילה בסקלר.
 \end_layout
 
 \begin_layout Standard
@@ -705,7 +743,8 @@ filename "E:/University/macros.lyx"
 \series bold
 סימון
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f_{1}\ldots f_{n}\in\bbf\left[x\right]$
 \end_inset
 
@@ -721,7 +760,8 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f_{1}\ldots f_{n}\in\bbf\left[x\right]$
 \end_inset
 
@@ -741,7 +781,8 @@ filename "E:/University/macros.lyx"
 \series bold
 משפט
 \series default
-: היו 
+:
+ היו 
 \begin_inset Formula $f_{1}\ldots f_{n}\in\bbf\left[x\right]$
 \end_inset
 
@@ -761,7 +802,8 @@ filename "E:/University/macros.lyx"
 \series bold
 אוקלידס
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g\in\bbf\left[x\right]$
 \end_inset
 
@@ -789,7 +831,8 @@ filename "E:/University/macros.lyx"
 \series bold
 זרים
 \series default
-: 
+:
+ 
 \begin_inset Formula $f,g\in\bbf\left[x\right]$
 \end_inset
 
@@ -805,7 +848,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מסקנה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g,h\in\bbf\left[x\right]$
 \end_inset
 
@@ -821,7 +865,8 @@ filename "E:/University/macros.lyx"
 \series bold
 הפיך
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $R$
 \end_inset
 
@@ -841,7 +886,8 @@ filename "E:/University/macros.lyx"
 \series bold
 הגדרה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $R$
 \end_inset
 
@@ -855,13 +901,14 @@ filename "E:/University/macros.lyx"
 \begin_layout Standard
 
 \series bold
-אי־פריק )א
+אי־פריק (א
 \begin_inset Quotes erd
 \end_inset
 
-פ(
+פ)
 \series default
-: 
+:
+ 
 \begin_inset Formula $p\in R\backslash R^{*}$
 \end_inset
 
@@ -877,7 +924,8 @@ filename "E:/University/macros.lyx"
 \series bold
 ראשוני
 \series default
-: 
+:
+ 
 \begin_inset Formula $p\in R\backslash\left\{ 0\right\} $
 \end_inset
 
@@ -893,7 +941,8 @@ filename "E:/University/macros.lyx"
 \series bold
 למה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbf\left[x\right]$
 \end_inset
 
@@ -913,7 +962,8 @@ filename "E:/University/macros.lyx"
 \series bold
 חברים/שקולים
 \series default
-: 
+:
+ 
 \begin_inset Formula $f,g\in R$
 \end_inset
 
@@ -929,23 +979,24 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g\in R$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $f,g$
 \end_inset
 
- חברים(
+ חברים)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left(f\mid g\right)\land\left(g\mid f\right)$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -953,7 +1004,8 @@ filename "E:/University/macros.lyx"
 \series bold
 משפט
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f\in\bbf\left[x\right]$
 \end_inset
 
@@ -981,7 +1033,8 @@ filename "E:/University/macros.lyx"
 \series bold
 משותפת
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f_{1}\ldots f_{n}\in\bbf\left[x\right]$
 \end_inset
 
@@ -1009,7 +1062,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מינימלית
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f_{1}\ldots f_{n}\in\bbf\left[x\right]$
 \end_inset
 
@@ -1025,7 +1079,8 @@ filename "E:/University/macros.lyx"
 \series bold
 משפט
 \series default
-: כפולה משותפת מינימלית קיימת ויחידה עד כדי כפילה בסקלר.
+:
+ כפולה משותפת מינימלית קיימת ויחידה עד כדי כפילה בסקלר.
 \end_layout
 
 \begin_layout Standard
@@ -1033,7 +1088,8 @@ filename "E:/University/macros.lyx"
 \series bold
 סימון
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f_{1}\ldots f_{n}\in\bbf\left[x\right]$
 \end_inset
 
@@ -1049,7 +1105,8 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f_{1}\ldots f_{n}\in\bbf\left[x\right]$
 \end_inset
 
@@ -1069,7 +1126,8 @@ filename "E:/University/macros.lyx"
 \series bold
 שורש
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\bbf$
 \end_inset
 
@@ -1097,7 +1155,8 @@ filename "E:/University/macros.lyx"
 \series bold
 בז'ו
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f\in\bbf\left[x\right]$
 \end_inset
 
@@ -1121,7 +1180,7 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $\a$
 \end_inset
 
@@ -1129,15 +1188,15 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $f$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left(x-\a\right)\mid f$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -1149,7 +1208,8 @@ filename "E:/University/macros.lyx"
 \series bold
 שורש
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f\in\bbf\left[x\right]$
 \end_inset
 
@@ -1169,7 +1229,8 @@ filename "E:/University/macros.lyx"
 \series bold
 משפט
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f\in\bbf\left[x\right]\backslash\left\{ 0\right\} $
 \end_inset
 
@@ -1189,7 +1250,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מסקנה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\bbf$
 \end_inset
 
@@ -1211,7 +1273,8 @@ filename "E:/University/macros.lyx"
 שדה סגור אלגברית
 \series default
 \color inherit
-: שדה 
+:
+ שדה 
 \begin_inset Formula $\bbf$
 \end_inset
 
@@ -1241,7 +1304,8 @@ filename "E:/University/macros.lyx"
 האלגברה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbc$
 \end_inset
 
@@ -1255,7 +1319,8 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f\in\bbr\left[x\right]$
 \end_inset
 
@@ -1277,7 +1342,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f\in\bbr\left[x\right]$
 \end_inset
 
@@ -1303,7 +1369,8 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f=\sum a_{i}x^{i}\in\bbz\left[x\right]$
 \end_inset
 
@@ -1358,7 +1425,8 @@ filename "E:/University/macros.lyx"
 אייזנשטיין
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f=\sum a_{i}x^{i}\in\bbz\left[x\right]$
 \end_inset
 
@@ -1400,7 +1468,8 @@ filename "E:/University/macros.lyx"
 נגזרת
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f=\sum_{i=0}^{n}a_{i}x^{i}\in\bbf\left[x\right]$
 \end_inset
 
@@ -1418,7 +1487,8 @@ filename "E:/University/macros.lyx"
 סימון
 \series default
 \color inherit
-: נגדיר 
+:
+ נגדיר 
 \begin_inset Formula ${\cal D}:\bbf\left[x\right]\to\bbf\left[x\right]$
 \end_inset
 
@@ -1436,7 +1506,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: )
+:
+ (
 \begin_inset Formula ${\cal D}$
 \end_inset
 
@@ -1444,7 +1515,7 @@ filename "E:/University/macros.lyx"
 \begin_inset Quotes erd
 \end_inset
 
-ל(
+ל)
 \begin_inset Formula $\left({\cal D}\left(fg\right)=g{\cal D}\left(f\right)+f{\cal D}\left(g\right)\right)\land$
 \end_inset
 
@@ -1462,7 +1533,8 @@ filename "E:/University/macros.lyx"
 פשוט
 \series default
 \color inherit
-: שורש שהריבוי שלו 
+:
+ שורש שהריבוי שלו 
 \begin_inset Formula $1$
 \end_inset
 
@@ -1480,7 +1552,8 @@ filename "E:/University/macros.lyx"
 מרובה
 \series default
 \color inherit
-: שורש שהריבוי שלו גדול מ־
+:
+ שורש שהריבוי שלו גדול מ־
 \begin_inset Formula $1$
 \end_inset
 
@@ -1494,7 +1567,8 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f\in\bbf\left[x\right]$
 \end_inset
 
@@ -1502,15 +1576,15 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $\a\in\bbf$
 \end_inset
 
- שורש אזי )
+ שורש אזי (
 \begin_inset Formula $\a$
 \end_inset
 
- שורש מרובה(
+ שורש מרובה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\a$
 \end_inset
 
@@ -1518,7 +1592,7 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $f'$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -1532,7 +1606,8 @@ filename "E:/University/macros.lyx"
 שדה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\bbf$
 \end_inset
 
@@ -1554,7 +1629,8 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\bbf$
 \end_inset
 
@@ -1562,7 +1638,7 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $\char\left(\bbf\right)=0$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\a$
 \end_inset
 
@@ -1574,11 +1650,11 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $f$
 \end_inset
 
-(
+)
 \begin_inset Formula $\impliedby$
 \end_inset
 
-)
+(
 \begin_inset Formula $\a$
 \end_inset
 
@@ -1590,7 +1666,7 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $f'$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -1600,7 +1676,8 @@ filename "E:/University/macros.lyx"
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -1622,7 +1699,8 @@ filename "E:/University/macros.lyx"
 
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -1639,7 +1717,8 @@ filename "E:/University/macros.lyx"
 
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\varphi\in\Hom\left({\cal L},{\cal M}\right)$
 \end_inset
 
@@ -1653,7 +1732,8 @@ filename "E:/University/macros.lyx"
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\text{GL}\left(n,\bbf\right)=\left\{ A\in M_{n}\left(\bbf\right)\mid\left|A\right|\ne0\right\} $
 \end_inset
 
@@ -1671,7 +1751,8 @@ filename "E:/University/macros.lyx"
 דומות
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $A,B\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -1686,14 +1767,15 @@ filename "E:/University/macros.lyx"
 
 \series bold
 \color red
-ערך עצמי )ע
+ערך עצמי (ע
 \begin_inset Quotes erd
 \end_inset
 
-ׂע(
+ׂע)
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -1715,7 +1797,8 @@ filename "E:/University/macros.lyx"
 הספקטרום
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -1730,14 +1813,15 @@ filename "E:/University/macros.lyx"
 
 \series bold
 \color red
-וקטור עצמי )ו
+וקטור עצמי (ו
 \begin_inset Quotes erd
 \end_inset
 
-ע(
+ע)
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -1756,14 +1840,15 @@ filename "E:/University/macros.lyx"
 
 \series bold
 \color red
-תת מרחב עצמי )מ
+תת מרחב עצמי (מ
 \begin_inset Quotes erd
 \end_inset
 
-ע(
+ע)
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -1789,7 +1874,8 @@ filename "E:/University/macros.lyx"
 למה
 \series default
 \color inherit
-: )
+:
+ (
 \begin_inset Formula $L_{\lambda}\subseteq L$
 \end_inset
 
@@ -1797,7 +1883,7 @@ filename "E:/University/macros.lyx"
 \begin_inset Quotes erd
 \end_inset
 
-ו(
+ו)
 \begin_inset Formula $\left(L_{\lambda}=\ker\left(\varphi-\lambda I\right)\right)\land$
 \end_inset
 
@@ -1811,7 +1897,8 @@ filename "E:/University/macros.lyx"
 בסיס עצמי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -1833,7 +1920,8 @@ filename "E:/University/macros.lyx"
 העתקה לכסינה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -1855,7 +1943,8 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -1871,19 +1960,19 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\varphi$
 \end_inset
 
- ניתן ללכסון(
+ ניתן ללכסון)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיים בסיס עצמי ל־
+(קיים בסיס עצמי ל־
 \begin_inset Formula $L$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -1893,7 +1982,8 @@ filename "E:/University/macros.lyx"
 הערה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -1911,7 +2001,8 @@ filename "E:/University/macros.lyx"
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\lambda_{1},\ldots,\lambda_{n}$
 \end_inset
 
@@ -1929,7 +2020,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -1959,7 +2051,8 @@ filename "E:/University/macros.lyx"
 אופייני
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -1977,7 +2070,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -1995,7 +2089,8 @@ filename "E:/University/macros.lyx"
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -2021,7 +2116,8 @@ filename "E:/University/macros.lyx"
 אופייני
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -2047,7 +2143,8 @@ filename "E:/University/macros.lyx"
 מתוקן
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sum_{i=0}^{n}a_{i}x^{i}\in\bbf\left[x\right]$
 \end_inset
 
@@ -2065,15 +2162,16 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $p_{\varphi}$
 \end_inset
 
- פולינום מתוקן(
+ פולינום מתוקן)
 \begin_inset Formula $\left(\deg\left(p_{\varphi}\right)=\dim\left(L\right)\right)\land$
 \end_inset
 
@@ -2087,7 +2185,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -2119,7 +2218,8 @@ filename "E:/University/macros.lyx"
 למה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A,B\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -2137,7 +2237,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $A,B\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -2155,7 +2256,8 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -2177,7 +2279,8 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -2189,7 +2292,7 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $\lambda\in\bbf$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $x$
 \end_inset
 
@@ -2205,7 +2308,7 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $\lambda$
 \end_inset
 
-(
+)
 \begin_inset Formula $\left(x\in\ker\left(\lambda I-A\right)\right)\iff$
 \end_inset
 
@@ -2223,7 +2326,8 @@ filename "E:/University/macros.lyx"
 מרוכב
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -2257,7 +2361,8 @@ filename "E:/University/macros.lyx"
 מרוכב
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -2287,7 +2392,8 @@ filename "E:/University/macros.lyx"
 מירכוב
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -2313,7 +2419,8 @@ filename "E:/University/macros.lyx"
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left<a,b\right>\in L_{\bbc}$
 \end_inset
 
@@ -2331,7 +2438,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -2365,7 +2473,8 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbr\right)$
 \end_inset
 
@@ -2399,7 +2508,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbr\right)$
 \end_inset
 
@@ -2436,7 +2546,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -2474,7 +2585,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 גאומטרי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -2504,7 +2616,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 אלגברי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -2530,7 +2643,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -2556,11 +2670,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -2568,19 +2683,19 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $\bbf$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $p_{\varphi}\left(x\right)$
 \end_inset
 
- מתפרק לגורמים לינאריים(
+ מתפרק לגורמים לינאריים)
 \begin_inset Formula $\land$
 \end_inset
 
-)לכל ע
+(לכל ע
 \begin_inset Quotes erd
 \end_inset
 
@@ -2588,7 +2703,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $r_{g}\left(\lambda\right)=r_{a}\left(\lambda\right)$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -2598,7 +2713,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -2628,7 +2744,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -2642,7 +2759,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 הגדרה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\left(x\right)=\sum_{i=0}^{n}a_{i}x^{i}$
 \end_inset
 
@@ -2664,7 +2782,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula ${\cal B}$
 \end_inset
 
@@ -2694,7 +2813,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מינימלי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -2712,7 +2832,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 הערה
 \series default
 \color inherit
-: הפולינום המינימלי הינו מתוקן.
+:
+ הפולינום המינימלי הינו מתוקן.
 \end_layout
 
 \begin_layout Standard
@@ -2722,7 +2843,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -2740,7 +2862,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -2766,7 +2889,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -2788,7 +2912,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -2814,7 +2939,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 המילטון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -2832,7 +2958,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -2850,7 +2977,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -2876,7 +3004,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -2894,7 +3023,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט הפירוק הפרימרי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -2920,7 +3050,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -2942,7 +3073,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in\M[n]$
 \end_inset
 
@@ -2954,19 +3086,19 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Quotes erd
 \end_inset
 
-ע אזי )
+ע אזי (
 \begin_inset Formula $A$
 \end_inset
 
- לכסינה( 
+ לכסינה) 
 \begin_inset Formula $\iff$
 \end_inset
 
- )
+ (
 \begin_inset Formula $m_{A}\left(x\right)=\prod_{i=1}^{k}\left(x-\lambda_{i}\right)$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -2976,7 +3108,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -3002,7 +3135,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G\left(x\right)$
 \end_inset
 
@@ -3028,7 +3162,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G\left(x\right)$
 \end_inset
 
@@ -3092,7 +3227,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 סימולטני
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\varphi,\psi\in\Hom\left(L\right)$
 \end_inset
 
@@ -3114,7 +3250,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A$
 \end_inset
 
@@ -3128,15 +3265,16 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\varphi,\psi\in\Hom\left(L\right)$
 \end_inset
 
- לכסינות אזי )
+ לכסינות אזי (
 \begin_inset Formula $\varphi,\psi$
 \end_inset
 
- לכסינות סימולטנית(
+ לכסינות סימולטנית)
 \begin_inset Formula $\left(\varphi\psi=\psi\varphi\right)\iff$
 \end_inset
 
@@ -3150,7 +3288,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 תת מרחב אינווריאנטי/שמור
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -3176,7 +3315,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -3202,7 +3342,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -3220,7 +3361,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -3246,7 +3388,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -3274,7 +3417,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $L=\bigoplus_{i=1}^{k}L_{i}$
 \end_inset
 
@@ -3296,7 +3440,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מטריצה דו אלכסונית
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -3318,7 +3463,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 תיבת/בלוק ג'ורדן
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\lambda\in\bbf$
 \end_inset
 
@@ -3344,7 +3490,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 ג'ורדן
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\lambda_{1}\ldots\lambda_{n}\in\bbf$
 \end_inset
 
@@ -3370,7 +3517,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 ג'ורדן
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -3396,7 +3544,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 טענה
 \series default
 \color inherit
-: צורת ג'ורדן מוגדרת באופן יחיד עדי כדי תמורת תיבות ג'ורדן.
+:
+ צורת ג'ורדן מוגדרת באופן יחיד עדי כדי תמורת תיבות ג'ורדן.
 \end_layout
 
 \begin_layout Standard
@@ -3406,7 +3555,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 הערה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -3424,23 +3574,24 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $A,B\in M_{n}\left(\bbf\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $A,B$
 \end_inset
 
- דומות(
+ דומות)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $A_{\text{can}}=B_{\text{can}}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -3450,7 +3601,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -3472,7 +3624,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 דרגת נילפוטנטיות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -3490,23 +3643,24 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\ge2$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $J_{n}\left(\lambda\right)$
 \end_inset
 
- אינה לכסינה(
+ אינה לכסינה)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $\eta\left(J_{n}\left(\lambda\right)\right)=n$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -3516,7 +3670,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\ge2$
 \end_inset
 
@@ -3534,7 +3689,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מרחב עצמי מוכלל
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -3560,7 +3716,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $L_{\mu}=L_{\mu}^{\left(1\right)}\subseteq\ldots\subseteq L_{\mu}^{\left(r_{g}\left(\lambda\right)\right)}=L$
 \end_inset
 
@@ -3574,7 +3731,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $L_{\mu}^{\left(i\right)}$
 \end_inset
 
@@ -3592,7 +3750,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $k\in\bbn_{+}$
 \end_inset
 
@@ -3610,7 +3769,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: נניח כי 
+:
+ נניח כי 
 \begin_inset Formula $p_{\varphi}\left(x\right)=\prod_{i=1}^{n}\left(x-\lambda_{i}\right)^{k_{i}}$
 \end_inset
 
@@ -3632,7 +3792,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 בלתי תלוייה ביחס לתת מרחב
 \series default
 \color inherit
-: יהי תמ
+:
+ יהי תמ
 \begin_inset Quotes erd
 \end_inset
 
@@ -3658,7 +3819,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 קו־בסיס
 \series default
 \color inherit
-: יהי תמ
+:
+ יהי תמ
 \begin_inset Quotes erd
 \end_inset
 
@@ -3680,7 +3842,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 טענה
 \series default
 \color inherit
-: יהי תמ
+:
+ יהי תמ
 \begin_inset Quotes erd
 \end_inset
 
@@ -3710,7 +3873,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -3766,7 +3930,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -3837,7 +4002,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -3851,13 +4017,13 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end{smallmatrix}\right) & \left(\begin{smallmatrix}1 & 0\\
 0 & 1
 \end{smallmatrix}\right)\\
- & \left(\begin{smallmatrix}a & b\\
+ & \left)\begin{smallmatrix}a & b\\
 -b & a
 \end{smallmatrix}\right) & \ddots\\
- &  & \ddots & \left(\begin{smallmatrix}1 & 0\\
+ &  & \ddots & \left)\begin{smallmatrix}1 & 0\\
 0 & 1
 \end{smallmatrix}\right)\\
- &  &  & \left(\begin{smallmatrix}a & b\\
+ &  &  & \left)\begin{smallmatrix}a & b\\
 -b & a
 \end{smallmatrix}\right)
 \end{smallmatrix}\right)_{2k\times2k}$
@@ -3873,7 +4039,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $n,m\in\bbn$
 \end_inset
 
@@ -3900,7 +4067,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -3927,7 +4095,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -3951,14 +4120,15 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 
 \series bold
 \color teal
-מכפלה פנימית ממשית )מ
+מכפלה פנימית ממשית (מ
 \begin_inset Quotes erd
 \end_inset
 
-פ(
+פ)
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -3978,7 +4148,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-סימטריות: 
+סימטריות:
+ 
 \begin_inset Formula $\forall a,b\in L.\left(a,b\right)=\left(b,a\right)$
 \end_inset
 
@@ -3986,7 +4157,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-דו־לינאריות: 
+דו־לינאריות:
+ 
 \begin_inset Formula $\forall a,b,c\in L.\forall\a,\b\in\bbr.\left(\a a+\b b,c\right)=\a\left(a,c\right)+\b\left(b,c\right)$
 \end_inset
 
@@ -3994,7 +4166,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-חיוביות: 
+חיוביות:
+ 
 \begin_inset Formula $\forall a\in L.\left(a,a\right)\ge0$
 \end_inset
 
@@ -4002,7 +4175,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-חיוביות ממש: 
+חיוביות ממש:
+ 
 \begin_inset Formula $\forall a\in L.\left(\left(a,a\right)=0\right)\iff\left(a=0\right)$
 \end_inset
 
@@ -4013,14 +4187,15 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 
 \series bold
 \color teal
-מכפלה פנימית מרוכבת )מ
+מכפלה פנימית מרוכבת (מ
 \begin_inset Quotes erd
 \end_inset
 
-פ(
+פ)
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4040,7 +4215,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-הרמיטיות: 
+הרמיטיות:
+ 
 \begin_inset Formula $\forall a,b\in L.\left(a,b\right)=\overline{\left(b,a\right)}$
 \end_inset
 
@@ -4048,7 +4224,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-לינאריות: 
+לינאריות:
+ 
 \begin_inset Formula $\forall a,b,c\in L.\forall\a,\b\in\bbr.\left(\a a+\b b,c\right)=\a\left(a,c\right)+\b\left(b,c\right)$
 \end_inset
 
@@ -4056,7 +4233,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-חיוביות: 
+חיוביות:
+ 
 \begin_inset Formula $\forall a\in L.\left(a,a\right)\in\bbr_{+}$
 \end_inset
 
@@ -4064,7 +4242,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-חיוביות ממש: 
+חיוביות ממש:
+ 
 \begin_inset Formula $\forall a\in L.\left(\left(a,a\right)=0\right)\iff\left(a=0\right)$
 \end_inset
 
@@ -4078,11 +4257,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מרחב אוקלידי
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(L,+,*,\left(\cdot,\cdot\right)\right)$
 \end_inset
 
- באשר )
+ באשר (
 \begin_inset Formula $\left(L,+,*\right)$
 \end_inset
 
@@ -4094,15 +4274,15 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $\bbr$
 \end_inset
 
-(
+)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left(\cdot,\cdot\right)$
 \end_inset
 
- מכפלה פנימית ממשית(.
+ מכפלה פנימית ממשית).
 \end_layout
 
 \begin_layout Standard
@@ -4112,11 +4292,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מרחב אוניטרי
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(L,+,*,\left(\cdot,\cdot\right)\right)$
 \end_inset
 
- באשר )
+ באשר (
 \begin_inset Formula $\left(L,+,*\right)$
 \end_inset
 
@@ -4128,33 +4309,34 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $\bbc$
 \end_inset
 
-(
+)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left(\cdot,\cdot\right)$
 \end_inset
 
- מכפלה פנימית מרוכבת(.
+ מכפלה פנימית מרוכבת).
 \end_layout
 
 \begin_layout Standard
 
 \series bold
 \color teal
-מרחב מכפלה פנימית )ממ
+מרחב מכפלה פנימית (ממ
 \begin_inset Quotes erd
 \end_inset
 
-פ(
+פ)
 \series default
 \color inherit
-: )מרחב אוניטרי(
+:
+ (מרחב אוניטרי)
 \begin_inset Formula $\lor$
 \end_inset
 
-)מרחב אוקלידי(.
+(מרחב אוקלידי).
 \end_layout
 
 \begin_layout Standard
@@ -4164,7 +4346,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מימוש
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left<L,+,\cdot\right>$
 \end_inset
 
@@ -4182,11 +4365,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
- מרחב אוניטרי אזי )
+ מרחב אוניטרי אזי (
 \begin_inset Formula $L_{\bbr}$
 \end_inset
 
@@ -4194,11 +4378,11 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Quotes erd
 \end_inset
 
-ו(
+ו)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left(a,b\right)_{\bbr}=\re\left(a,b\right)$
 \end_inset
 
@@ -4210,7 +4394,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $L_{\bbr}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -4220,7 +4404,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4238,7 +4423,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 הגדרה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbc^{n}$
 \end_inset
 
@@ -4256,7 +4442,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 הגדרה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $A,B\in M_{m\times n}\left(\bbc\right)$
 \end_inset
 
@@ -4274,7 +4461,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 הגדרה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g\in C_{\bbc}\left(\left[\a,\b\right]\right)$
 \end_inset
 
@@ -4292,7 +4480,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט קושי שוורץ
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4318,7 +4507,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in L$
 \end_inset
 
@@ -4336,7 +4526,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 נורמה/אורך
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in L$
 \end_inset
 
@@ -4354,7 +4545,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 זווית
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in L\backslash\left\{ 0\right\} $
 \end_inset
 
@@ -4376,7 +4568,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in L\backslash\left\{ 0\right\} $
 \end_inset
 
@@ -4398,7 +4591,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מרחק
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in L$
 \end_inset
 
@@ -4416,7 +4610,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4450,11 +4645,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-אי שיוויון המשולש )אש
+אי שיוויון המשולש (אש
 \begin_inset Quotes erd
 \end_inset
 
-מ(: 
+מ):
+ 
 \begin_inset Formula $\left|\norm a-\norm b\right|\le\norm{a+b}\le\norm a+\norm b$
 \end_inset
 
@@ -4468,7 +4664,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4508,14 +4705,15 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 
 \series bold
 \color teal
-וקטורים ניצבים/אורתוגונליים )א
+וקטורים ניצבים/אורתוגונליים (א
 \begin_inset Quotes erd
 \end_inset
 
-ג(
+ג)
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $a,b\in L$
 \end_inset
 
@@ -4533,7 +4731,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b$
 \end_inset
 
@@ -4551,7 +4750,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט פיתגורס
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in L$
 \end_inset
 
@@ -4567,7 +4767,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 למה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4583,7 +4784,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-סימטריות: 
+סימטריות:
+ 
 \begin_inset Formula $\dist\left(a,b\right)=\dist\left(b,a\right)$
 \end_inset
 
@@ -4591,7 +4793,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-חיוביות: 
+חיוביות:
+ 
 \begin_inset Formula $\dist\left(a,b\right)\ge0$
 \end_inset
 
@@ -4599,7 +4802,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-חיוביות ממש: 
+חיוביות ממש:
+ 
 \begin_inset Formula $\left(\dist\left(a,b\right)=0\right)\iff\left(a=b\right)$
 \end_inset
 
@@ -4607,11 +4811,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-אי שיוויון המשולש )אש
+אי שיוויון המשולש (אש
 \begin_inset Quotes erd
 \end_inset
 
-מ(: 
+מ):
+ 
 \begin_inset Formula $\dist\left(a,b\right)\le\dist\left(a,c\right)+\dist\left(c,b\right)$
 \end_inset
 
@@ -4635,7 +4840,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 מנורמה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4685,7 +4891,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 נורמה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4719,11 +4926,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-אי שיוויון המשולש )אש
+אי שיוויון המשולש (אש
 \begin_inset Quotes erd
 \end_inset
 
-מ(: 
+מ):
+ 
 \begin_inset Formula $\upsilon\left(a+b\right)\le\upsilon\left(a\right)+\upsilon\left(b\right)$
 \end_inset
 
@@ -4735,7 +4943,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4759,7 +4968,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 המקבילית
 \series default
-: נורמה 
+:
+ נורמה 
 \begin_inset Formula $\upsilon$
 \end_inset
 
@@ -4775,7 +4985,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 משפט
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4783,19 +4994,19 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $\upsilon$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\upsilon$
 \end_inset
 
- מקיימת שיוויון המקבילית(
+ מקיימת שיוויון המקבילית)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\upsilon$
 \end_inset
 
- משרה מכפלה פנימית(.
+ משרה מכפלה פנימית).
 \end_layout
 
 \begin_layout Standard
@@ -4803,7 +5014,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 טענה
 \series default
-: מעל 
+:
+ מעל 
 \begin_inset Formula $C\left(\left[\a,\b\right]\right)$
 \end_inset
 
@@ -4823,7 +5035,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 גראם
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4851,7 +5064,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 מטריצה הרמיטית
 \series default
-: 
+:
+ 
 \begin_inset Formula $A\in M_{n}\left(\bbc\right)$
 \end_inset
 
@@ -4867,7 +5081,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4891,7 +5106,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 מסקנה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4911,11 +5127,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 משפט
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{1}\ldots a_{k}\in L$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $a_{1}\ldots a_{k}$
 \end_inset
 
@@ -4923,7 +5140,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Quotes erd
 \end_inset
 
-ל(
+ל)
 \begin_inset Formula $\left(\det\left(G\left(a_{1}\ldots a_{k}\right)\right)\ne0\right)\iff$
 \end_inset
 
@@ -4935,7 +5152,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 מסקנה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula ${\cal B}\subseteq L$
 \end_inset
 
@@ -4953,13 +5171,14 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series default
  
 \series bold
-אורתונורמלים )א
+אורתונורמלים (א
 \begin_inset Quotes erd
 \end_inset
 
-נ(
+נ)
 \series default
-: 
+:
+ 
 \begin_inset Formula $a_{1}\ldots a_{n}\in L$
 \end_inset
 
@@ -4975,7 +5194,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 מסקנה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{1}\ldots a_{n}\in L$
 \end_inset
 
@@ -4991,7 +5211,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 מסקנה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{1}\ldots a_{n}\in L$
 \end_inset
 
@@ -5011,7 +5232,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 משפט
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula ${\cal B}$
 \end_inset
 
@@ -5031,7 +5253,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 מסקנה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula ${\cal B}$
 \end_inset
 
@@ -5051,7 +5274,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 משפט
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula ${\cal B},{\cal D}$
 \end_inset
 
@@ -5075,7 +5299,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 חופפות
 \series default
-: 
+:
+ 
 \begin_inset Formula $A,B\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -5091,7 +5316,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 מסקנה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula ${\cal B},{\cal D}$
 \end_inset
 
@@ -5111,7 +5337,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 דואלי
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula ${\cal B}$
 \end_inset
 
@@ -5131,7 +5358,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 סימון
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula ${\cal B}$
 \end_inset
 
@@ -5147,7 +5375,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 משפט
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula ${\cal B}$
 \end_inset
 
@@ -5186,7 +5415,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{1}\ldots a_{k}\in L$
 \end_inset
 
@@ -5208,7 +5438,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 אורתונורמליזציית גראם שמידט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{1}\ldots a_{k}\in L$
 \end_inset
 
@@ -5261,7 +5492,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{1}\ldots a_{k}\in L$
 \end_inset
 
@@ -5269,11 +5501,11 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Quotes erd
 \end_inset
 
-ל אזי )
+ל אזי (
 \begin_inset Formula $\text{GS}\left(a_{1}\ldots a_{k}\right)$
 \end_inset
 
- אורתונורמליים(
+ אורתונורמליים)
 \begin_inset Formula $\left(\sp\left\{ \text{GS}\left(a_{1}\ldots a_{k}\right)\right\} =\sp\left\{ a_{1}\ldots a_{k}\right\} \right)\land$
 \end_inset
 
@@ -5287,7 +5519,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -5309,7 +5542,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -5370,7 +5604,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{1}\ldots a_{k}\in L$
 \end_inset
 
@@ -5388,7 +5623,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{1}\ldots a_{k}\in L$
 \end_inset
 
@@ -5410,7 +5646,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מקבילון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -5436,7 +5673,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 נפח מקבילון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{1}\ldots a_{k}\in L$
 \end_inset
 
@@ -5458,7 +5696,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{1}\ldots a_{k}\in L$
 \end_inset
 
@@ -5476,7 +5715,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula ${\cal B}$
 \end_inset
 
@@ -5499,10 +5739,11 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 
 \series bold
 \color blue
-אורנטצייה
+אוריינטציה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula ${\cal B},{\cal D}$
 \end_inset
 
@@ -5524,7 +5765,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מטריצה אורתוגונלית
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula ${\cal B},{\cal D}$
 \end_inset
 
@@ -5542,7 +5784,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מטריצה אוניטרית
 \series default
 \color inherit
-: היו 
+:
+ היו 
 \begin_inset Formula ${\cal B},{\cal D}$
 \end_inset
 
@@ -5560,15 +5803,16 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $C\in M_{n}\left(\bbr\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $C$
 \end_inset
 
- אורתוגונלית(
+ אורתוגונלית)
 \begin_inset Formula $\left(C^{t}C=I\right)\iff$
 \end_inset
 
@@ -5582,15 +5826,16 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $C\in M_{n}\left(\bbc\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $C$
 \end_inset
 
- אוניטרית(
+ אוניטרית)
 \begin_inset Formula $\left(C^{t}\overline{C}=I\right)\iff$
 \end_inset
 
@@ -5604,7 +5849,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $O\left(n\right)=\left\{ A\in M_{n}\left(\bbr\right)\mid A^{t}A=I\right\} $
 \end_inset
 
@@ -5618,7 +5864,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $U\left(n\right)=\left\{ A\in M_{n}\left(\bbc\right)\mid A^{t}\overline{A}=I\right\} $
 \end_inset
 
@@ -5632,7 +5879,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $C\in O\left(n\right)\cup U\left(n\right)$
 \end_inset
 
@@ -5650,11 +5898,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $C\in M_{n}\left(\bbr\right)$
 \end_inset
 
- אזי )עמודות 
+ אזי (עמודות 
 \begin_inset Formula $C$
 \end_inset
 
@@ -5662,7 +5911,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $\bbr^{n}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\left(C\in O\left(n\right)\right)\iff$
 \end_inset
 
@@ -5676,11 +5925,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $C\in M_{n}\left(\bbc\right)$
 \end_inset
 
- אזי )עמודות 
+ אזי (עמודות 
 \begin_inset Formula $C$
 \end_inset
 
@@ -5688,7 +5938,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $\bbc^{n}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\left(C\in U\left(n\right)\right)\iff$
 \end_inset
 
@@ -5702,7 +5952,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מטריצות אורתוגונליות מיוחדות
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $SO\left(n\right)=\left\{ A\in O\left(n\right)\mid\det\left(A\right)=1\right\} $
 \end_inset
 
@@ -5716,7 +5967,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מטריצות אוניטריות מיוחדות
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $SU\left(n\right)=\left\{ A\in U\left(n\right)\mid\det\left(A\right)=1\right\} $
 \end_inset
 
@@ -5730,35 +5982,36 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: )
+:
+ (
 \begin_inset Formula $\left<O\left(n\right),\cdot\right>$
 \end_inset
 
- חבורה(
+ חבורה)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left<SO\left(n\right),\cdot\right>$
 \end_inset
 
- חבורה(
+ חבורה)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left<U\left(n\right),\cdot\right>$
 \end_inset
 
- חבורה(
+ חבורה)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left<SU\left(n\right),\cdot\right>$
 \end_inset
 
- חבורה(.
+ חבורה).
 \end_layout
 
 \begin_layout Standard
@@ -5768,7 +6021,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משלים ניצב
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M\subseteq L$
 \end_inset
 
@@ -5790,7 +6044,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M\subseteq L$
 \end_inset
 
@@ -5798,7 +6053,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Quotes erd
 \end_inset
 
-ו אזי )
+ו אזי (
 \begin_inset Formula $M^{\perp}$
 \end_inset
 
@@ -5806,7 +6061,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Quotes erd
 \end_inset
 
-ו(
+ו)
 \begin_inset Formula $\left(M\oplus M^{\perp}=L\right)\land$
 \end_inset
 
@@ -5820,7 +6075,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M\subseteq L$
 \end_inset
 
@@ -5866,7 +6122,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מרחק
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M\subseteq L$
 \end_inset
 
@@ -5892,7 +6149,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in L$
 \end_inset
 
@@ -5900,7 +6158,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $a_{M}\in M$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $a_{\perp}\in M^{\perp}$
 \end_inset
 
@@ -5918,7 +6177,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 הטלה אורתוגונלית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M\subseteq L$
 \end_inset
 
@@ -5944,7 +6204,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M\subseteq L$
 \end_inset
 
@@ -5994,7 +6255,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M\subseteq L$
 \end_inset
 
@@ -6020,7 +6282,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -6038,7 +6301,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -6060,7 +6324,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט אויילר־פורייה־פרסבל
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{n^{2}}=\frac{\pi^{2}}{6}$
 \end_inset
 
@@ -6074,7 +6339,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 פונקציונל ליניארי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $V$
 \end_inset
 
@@ -6104,7 +6370,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 הדואלי
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $V^{*}=\Hom\left(V,\bbf\right)$
 \end_inset
 
@@ -6118,7 +6385,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 הגדרה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -6152,7 +6420,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -6178,7 +6447,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -6212,7 +6482,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -6238,7 +6509,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 איזומטריה
 \series default
 \color inherit
-: איזומורפיזם 
+:
+ איזומורפיזם 
 \begin_inset Formula $\varphi\in\Hom\left(L_{1},L_{2}\right)$
 \end_inset
 
@@ -6256,7 +6528,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\varphi,\phi\in\Hom\left(L_{1},L_{2}\right)$
 \end_inset
 
@@ -6276,19 +6549,19 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $\varphi\circ\phi$
 \end_inset
 
- איזומטריה(
+ איזומטריה)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $\varphi^{-1}$
 \end_inset
 
- איזומטריה(.
+ איזומטריה).
 \end_layout
 
 \begin_layout Itemize
@@ -6319,7 +6592,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -6349,19 +6623,20 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\varphi$
 \end_inset
 
- איזומטריה(
+ איזומטריה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיים בסיס א
+(קיים בסיס א
 \begin_inset Quotes erd
 \end_inset
 
@@ -6373,7 +6648,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $\left[\varphi\right]_{{\cal B}}\cdot\overline{\left[\varphi\right]_{{\cal B}}}^{t}=I$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -6383,7 +6658,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -6435,7 +6711,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 העתקה קונפורמית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -6457,19 +6734,20 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\varphi$
 \end_inset
 
- העתקה קונפורמית(
+ העתקה קונפורמית)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיים בסיס א
+(קיים בסיס א
 \begin_inset Quotes erd
 \end_inset
 
@@ -6481,7 +6759,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $\exists\lambda\in\bbr\backslash\left\{ 0\right\} .\left[\varphi\right]_{{\cal B}}\in O\left(n\right)$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -6491,7 +6769,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 דטרמיננטה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L_{1},L_{2}\right)$
 \end_inset
 
@@ -6517,7 +6796,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L_{1},L_{2}\right)$
 \end_inset
 
@@ -6535,7 +6815,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L_{1},L_{2}\right)$
 \end_inset
 
@@ -6561,7 +6842,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 העתקה שומרת נפח
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $L_{1},L_{2}$
 \end_inset
 
@@ -6591,15 +6873,16 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L_{1},L_{2}\right)$
 \end_inset
 
- איזומורפיזם אזי )
+ איזומורפיזם אזי (
 \begin_inset Formula $\varphi$
 \end_inset
 
- שומרת על נפח(
+ שומרת על נפח)
 \begin_inset Formula $\left(\det\left(\varphi\right)=1\right)\iff$
 \end_inset
 
@@ -6613,7 +6896,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 העתקה צמודה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -6643,7 +6927,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -6665,7 +6950,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -6695,7 +6981,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -6764,7 +7051,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -6786,7 +7074,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\ker\left(\varphi\right)=\left(\im\left(\varphi^{*}\right)\right)^{\perp}\right)\land\left(\im\left(\varphi\right)=\left(\ker\left(\varphi^{*}\right)\right)^{\perp}\right)$
 \end_inset
 
@@ -6800,15 +7089,16 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\varphi$
 \end_inset
 
- איזומטריה(
+ איזומטריה)
 \begin_inset Formula $\left(\varphi\varphi^{*}=I\right)\iff$
 \end_inset
 
@@ -6822,7 +7112,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 העתקה צמודה לעצמה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -6848,7 +7139,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula ${\cal B}$
 \end_inset
 
@@ -6870,7 +7162,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -6892,7 +7185,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -6918,7 +7212,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -6944,7 +7239,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 העתקה נורמלית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -6970,11 +7266,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
- נורמלית אזי )
+ נורמלית אזי (
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -6994,11 +7291,11 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $a$
 \end_inset
 
-(
+)
 \begin_inset Formula $\impliedby$
 \end_inset
 
-)
+(
 \begin_inset Formula $\overline{\lambda}$
 \end_inset
 
@@ -7018,7 +7315,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $a$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -7028,7 +7325,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -7050,11 +7348,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
- נורמלית אזי )
+ נורמלית אזי (
 \begin_inset Formula $M$
 \end_inset
 
@@ -7066,11 +7365,11 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $\varphi$
 \end_inset
 
- שמור(
+ שמור)
 \begin_inset Formula $\impliedby$
 \end_inset
 
-)
+(
 \begin_inset Formula $M^{\perp}$
 \end_inset
 
@@ -7082,7 +7381,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $\varphi$
 \end_inset
 
- שמור(.
+ שמור).
 \end_layout
 
 \begin_layout Standard
@@ -7092,7 +7391,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט הפירוק הספקטרלי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -7100,7 +7400,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -7108,7 +7408,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Quotes erd
 \end_inset
 
-נ(
+נ)
 \begin_inset Formula $\left(\varphi\varphi^{*}=\varphi^{*}\varphi\right)\iff$
 \end_inset
 
@@ -7122,7 +7422,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט שור
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -7152,7 +7453,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -7160,7 +7462,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -7168,7 +7470,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Quotes erd
 \end_inset
 
-נ(
+נ)
 \begin_inset Formula $\left(\varphi=\varphi^{t}\right)\iff$
 \end_inset
 
@@ -7182,7 +7484,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbc\right)$
 \end_inset
 
@@ -7204,7 +7507,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbc\right)$
 \end_inset
 
@@ -7230,7 +7534,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -7242,11 +7547,11 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
- נורמלי אזי )
+ נורמלי אזי (
 \begin_inset Formula $\varphi$
 \end_inset
 
- איזומטריה(
+ איזומטריה)
 \begin_inset Formula $\left(\forall\lambda\in\spec\left(\varphi\right).\norm{\lambda}=1\right)\iff$
 \end_inset
 
@@ -7260,7 +7565,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -7298,7 +7604,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi\in\Hom\left(L\right)$
 \end_inset
 
@@ -7309,11 +7616,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $L=\bbr$
 \end_inset
 
-, אזי )
+,
+ אזי (
 \begin_inset Formula $\varphi$
 \end_inset
 
- שיקוף ביחס לראשית(
+ שיקוף ביחס לראשית)
 \begin_inset Formula $\left(\varphi=I\right)\lor$
 \end_inset
 
@@ -7324,38 +7632,40 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $L=\bbr^{2}$
 \end_inset
 
-, אזי )
+,
+ אזי (
 \begin_inset Formula $\varphi$
 \end_inset
 
- שיקוף ביחס לקו ישר שעובר דרך הראשית(
+ שיקוף ביחס לקו ישר שעובר דרך הראשית)
 \begin_inset Formula $\lor$
 \end_inset
 
-)
+(
 \begin_inset Formula $\varphi$
 \end_inset
 
- סיבוב סביב הראשית(.
+ סיבוב סביב הראשית).
 \end_layout
 
 \begin_layout Itemize
 \begin_inset Formula $L=\bbr^{3}$
 \end_inset
 
-, אזי )
+,
+ אזי (
 \begin_inset Formula $\varphi$
 \end_inset
 
- שיקוף ביחס למישור שעובר דרך הראשית(
+ שיקוף ביחס למישור שעובר דרך הראשית)
 \begin_inset Formula $\lor$
 \end_inset
 
- )
+ (
 \begin_inset Formula $\varphi$
 \end_inset
 
- שיקוף ביחס לקו ישר שעובר דרך הראשית(
+ שיקוף ביחס לקו ישר שעובר דרך הראשית)
 \begin_inset Newline newline
 \end_inset
 
@@ -7363,26 +7673,26 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $\lor$
 \end_inset
 
-)
+(
 \begin_inset Formula $\varphi$
 \end_inset
 
- שיקוף ביחס למישור שעובר דרך הראשית ושיקוף ביחס לקו ישר שאנך למישור ועובר
- דרך הראשית(.
+ שיקוף ביחס למישור שעובר דרך הראשית ושיקוף ביחס לקו ישר שאנך למישור ועובר דרך הראשית).
 \end_layout
 
 \begin_layout Standard
 
 \series bold
 \color brown
-תבנית בילינארית )ת
+תבנית בילינארית (ת
 \begin_inset Quotes erd
 \end_inset
 
-ב(
+ב)
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $L,M$
 \end_inset
 
@@ -7406,7 +7716,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-לינאריות ברכיב ראשון: יהיו 
+לינאריות ברכיב ראשון:
+ יהיו 
 \begin_inset Formula $v,u\in L$
 \end_inset
 
@@ -7422,7 +7733,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-לינאריות ברכיב שני: יהי 
+לינאריות ברכיב שני:
+ יהי 
 \begin_inset Formula $v\in L$
 \end_inset
 
@@ -7444,7 +7756,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $L,M$
 \end_inset
 
@@ -7470,7 +7783,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -7496,7 +7810,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מטריצה מייצגת
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Phi\in B\left(L,M\right)$
 \end_inset
 
@@ -7518,7 +7833,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Phi\in B\left(L,M\right)$
 \end_inset
 
@@ -7548,7 +7864,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: )
+:
+ (
 \begin_inset Formula $B\left(L,M\right)$
 \end_inset
 
@@ -7560,7 +7877,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $\bbf$
 \end_inset
 
-(
+)
 \begin_inset Formula $\left(\dim\left(B\left(L,M\right)\right)=\dim\left(L\right)\dim\left(M\right)\right)\land$
 \end_inset
 
@@ -7574,7 +7891,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Phi\in B\left(L,M\right)$
 \end_inset
 
@@ -7596,7 +7914,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 דרגה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Phi\in B\left(L,M\right)$
 \end_inset
 
@@ -7614,7 +7933,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Phi\in B\left(L,M\right)$
 \end_inset
 
@@ -7632,7 +7952,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Phi\in B\left(L,M\right)$
 \end_inset
 
@@ -7654,7 +7975,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Phi\in B\left(L,M\right)$
 \end_inset
 
@@ -7676,7 +7998,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Phi\in B\left(L,M\right)$
 \end_inset
 
@@ -7694,7 +8017,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 תבנית אי־מנוונת
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\Phi\in B\left(L,M\right)$
 \end_inset
 
@@ -7712,7 +8036,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Phi\in B\left(L,M\right)$
 \end_inset
 
@@ -7751,15 +8076,16 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Phi\in B\left(L\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\Phi$
 \end_inset
 
- אי־מנוונת(
+ אי־מנוונת)
 \begin_inset Formula $\left(\forall a\in L\backslash\left\{ 0\right\} .\exists b\in L.\Phi\left(a,b\right)\ne0\right)\iff$
 \end_inset
 
@@ -7773,7 +8099,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $M\ne L$
 \end_inset
 
@@ -7799,7 +8126,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $M\ne L$
 \end_inset
 
@@ -7833,7 +8161,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\varphi_{1}\ldots\varphi_{r},\psi_{1}\ldots\psi_{r}\in L^{*}$
 \end_inset
 
@@ -7851,7 +8180,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Phi\in B\left(L\right)$
 \end_inset
 
@@ -7877,7 +8207,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 תבנית ריבועית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Phi\in B\left(L\right)$
 \end_inset
 
@@ -7899,7 +8230,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $Q:L\to\bbf$
 \end_inset
 
@@ -7961,7 +8293,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\char\left(\bbf\right)\ne2$
 \end_inset
 
@@ -7983,7 +8316,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\char\left(\bbf\right)\ne2$
 \end_inset
 
@@ -8005,7 +8339,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 הגדרה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula ${\cal B}$
 \end_inset
 
@@ -8027,7 +8362,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $Q:L\to\bbf$
 \end_inset
 
@@ -8045,7 +8381,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\char\left(\bbf\right)\ne2$
 \end_inset
 
@@ -8067,7 +8404,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $Q:L\to\bbf$
 \end_inset
 
@@ -8089,7 +8427,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מטריצות חופפות
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $A,B\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -8107,7 +8446,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט לגראנז'
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\char\left(\bbf\right)\ne2$
 \end_inset
 
@@ -8133,7 +8473,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $Q:L\to\bbc$
 \end_inset
 
@@ -8155,7 +8496,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbc\right)$
 \end_inset
 
@@ -8177,7 +8519,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $Q:L\to\bbr$
 \end_inset
 
@@ -8199,7 +8542,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbc\right)$
 \end_inset
 
@@ -8221,7 +8565,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 סיגנטורה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbc\right)$
 \end_inset
 
@@ -8243,7 +8588,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 ציון/אינדקס ההתמדה החיובי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbc\right)$
 \end_inset
 
@@ -8265,7 +8611,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 ציון/אינדקס ההתמדה השלילי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbc\right)$
 \end_inset
 
@@ -8287,7 +8634,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט ההתמדה של סילבסטר
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $Q:L\to\bbr$
 \end_inset
 
@@ -8311,7 +8659,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 מינור ראשי
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -8337,13 +8686,14 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_layout Standard
 
 \series bold
-מטריצה יחידה משולשית עליונה )
+מטריצה יחידה משולשית עליונה (
 \begin_inset Formula $\text{upper unitriangular}$
 \end_inset
 
-(
+)
 \series default
-: 
+:
+ 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -8362,7 +8712,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -8382,7 +8733,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 משפט
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\char\left(\bbf\right)\ne2$
 \end_inset
 
@@ -8414,7 +8766,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 הגדרה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $Q:L\to\bbr$
 \end_inset
 
@@ -8422,11 +8775,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-תבנית חיובית לחלוטין )תחל
+תבנית חיובית לחלוטין (תחל
 \begin_inset Quotes erd
 \end_inset
 
-ח(: 
+ח):
+ 
 \begin_inset Formula $\forall v\in L\backslash\left\{ 0\right\} .Q\left(v\right)>0$
 \end_inset
 
@@ -8434,7 +8788,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-תבנית אי־שלילית: 
+תבנית אי־שלילית:
+ 
 \begin_inset Formula $\forall v\in L\backslash\left\{ 0\right\} .Q\left(v\right)\ge0$
 \end_inset
 
@@ -8442,7 +8797,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-תבנית אי־חיובית: 
+תבנית אי־חיובית:
+ 
 \begin_inset Formula $\forall v\in L\backslash\left\{ 0\right\} .Q\left(v\right)\le0$
 \end_inset
 
@@ -8450,7 +8806,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-תבנית שלילית לחלוטין: 
+תבנית שלילית לחלוטין:
+ 
 \begin_inset Formula $\forall v\in L\backslash\left\{ 0\right\} .Q\left(v\right)<0$
 \end_inset
 
@@ -8462,7 +8819,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 הגדרה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbr\right)$
 \end_inset
 
@@ -8470,11 +8828,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-חיובית לחלוטין )חל
+חיובית לחלוטין (חל
 \begin_inset Quotes erd
 \end_inset
 
-ח(: 
+ח):
+ 
 \begin_inset Formula $\forall x\in\bbr^{n}\backslash\left\{ 0\right\} .x^{t}Ax>0$
 \end_inset
 
@@ -8482,7 +8841,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-אי־שלילית: 
+אי־שלילית:
+ 
 \begin_inset Formula $\forall x\in\bbr^{n}\backslash\left\{ 0\right\} .x^{t}Ax\ge0$
 \end_inset
 
@@ -8490,7 +8850,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-אי־חיובית: 
+אי־חיובית:
+ 
 \begin_inset Formula $\forall x\in\bbr^{n}\backslash\left\{ 0\right\} .x^{t}Ax\le0$
 \end_inset
 
@@ -8498,7 +8859,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-שלילית לחלוטין: 
+שלילית לחלוטין:
+ 
 \begin_inset Formula $\forall x\in\bbr^{n}\backslash\left\{ 0\right\} .x^{t}Ax<0$
 \end_inset
 
@@ -8510,11 +8872,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 משפט סילבסטר
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbr\right)$
 \end_inset
 
- סימטרית אזי )
+ סימטרית אזי (
 \begin_inset Formula $A$
 \end_inset
 
@@ -8522,7 +8885,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Quotes erd
 \end_inset
 
-ח(
+ח)
 \begin_inset Formula $\left(\forall i\in\left[n\right].\Delta_{i}>0\right)\iff$
 \end_inset
 
@@ -8534,15 +8897,16 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbr\right)$
 \end_inset
 
- סימטרית אזי )
+ סימטרית אזי (
 \begin_inset Formula $A$
 \end_inset
 
- שלילית לחלוטין(
+ שלילית לחלוטין)
 \begin_inset Formula $\left(\forall i\in\left[n\right].\left(-1\right)^{i}\Delta_{i}>0\right)\iff$
 \end_inset
 
@@ -8556,11 +8920,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbr\right)$
 \end_inset
 
- סימטרית אזי )
+ סימטרית אזי (
 \begin_inset Formula $A$
 \end_inset
 
@@ -8568,11 +8933,11 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Quotes erd
 \end_inset
 
-ח(
+ח)
 \begin_inset Formula $\iff$
 \end_inset
 
-)כל הע
+(כל הע
 \begin_inset Quotes erd
 \end_inset
 
@@ -8580,7 +8945,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Formula $A$
 \end_inset
 
- חיוביים(.
+ חיוביים).
 \end_layout
 
 \begin_layout Standard
@@ -8590,7 +8955,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbr\right)$
 \end_inset
 
@@ -8612,7 +8978,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 פירוק פולרי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $D\in\text{GL}\left(n,\bbr\right)$
 \end_inset
 
@@ -8642,7 +9009,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbr\right)$
 \end_inset
 
@@ -8664,7 +9032,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $Q_{1}:L\to\bbr$
 \end_inset
 
@@ -8694,7 +9063,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 תבנית אחד־וחצי־לינארית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $L$
 \end_inset
 
@@ -8718,7 +9088,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-לינאריות ברכיב ראשון: יהיו 
+לינאריות ברכיב ראשון:
+ יהיו 
 \begin_inset Formula $v,u,w\in L$
 \end_inset
 
@@ -8748,7 +9119,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מטריצה מייצגת
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Psi$
 \end_inset
 
@@ -8770,7 +9142,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Psi$
 \end_inset
 
@@ -8800,7 +9173,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Psi$
 \end_inset
 
@@ -8822,7 +9196,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 דרגה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Psi$
 \end_inset
 
@@ -8840,7 +9215,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Psi$
 \end_inset
 
@@ -8858,7 +9234,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 תבנית אחד־וחצי־לינארית הרמיטית
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\Psi$
 \end_inset
 
@@ -8876,23 +9253,24 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Psi$
 \end_inset
 
- תבנית אחד־וחצי־לינארית אזי )
+ תבנית אחד־וחצי־לינארית אזי (
 \begin_inset Formula $\Psi$
 \end_inset
 
- הרמיטית(
+ הרמיטית)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left[\Psi\right]$
 \end_inset
 
- הרמיטית(.
+ הרמיטית).
 \end_layout
 
 \begin_layout Standard
@@ -8902,7 +9280,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Psi$
 \end_inset
 
@@ -8924,7 +9303,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 ציון/אינדקס ההתמדה החיובי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Psi$
 \end_inset
 
@@ -8946,7 +9326,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 ציון/אינדקס ההתמדה השלילי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Psi$
 \end_inset
 
@@ -8968,7 +9349,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט ההתמדה של סילבסטר
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Psi$
 \end_inset
 
@@ -8998,7 +9380,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbc\right)$
 \end_inset
 
@@ -9016,7 +9399,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbc\right)$
 \end_inset
 
@@ -9046,7 +9430,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Psi$
 \end_inset
 
@@ -9054,11 +9439,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-חיובית לחלוטין )חל
+חיובית לחלוטין (חל
 \begin_inset Quotes erd
 \end_inset
 
-ח(: 
+ח):
+ 
 \begin_inset Formula $\forall v\in L\backslash\left\{ 0\right\} .\Psi\left(v,v\right)>0$
 \end_inset
 
@@ -9066,7 +9452,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-אי־שלילית: 
+אי־שלילית:
+ 
 \begin_inset Formula $\forall v\in L\backslash\left\{ 0\right\} .\Psi\left(v,v\right)\ge0$
 \end_inset
 
@@ -9074,7 +9461,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-אי־חיובית: 
+אי־חיובית:
+ 
 \begin_inset Formula $\forall v\in L\backslash\left\{ 0\right\} .\Psi\left(v,v\right)\le0$
 \end_inset
 
@@ -9082,7 +9470,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-שלילית לחלוטין: 
+שלילית לחלוטין:
+ 
 \begin_inset Formula $\forall v\in L\backslash\left\{ 0\right\} .\Psi\left(v,v\right)<0$
 \end_inset
 
@@ -9096,11 +9485,12 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Psi$
 \end_inset
 
- תבנית אחד־וחצי־לינארית הרמיטית אזי )
+ תבנית אחד־וחצי־לינארית הרמיטית אזי (
 \begin_inset Formula $\Psi$
 \end_inset
 
@@ -9108,7 +9498,7 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \begin_inset Quotes erd
 \end_inset
 
-ח(
+ח)
 \begin_inset Formula $\left(\forall i\in\left[n\right].\Delta_{i}>0\right)\iff$
 \end_inset
 
@@ -9122,7 +9512,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: תהנא 
+:
+ תהנא 
 \begin_inset Formula $\Psi_{1},\Psi_{2}$
 \end_inset
 
@@ -9152,7 +9543,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 תבנית אנטי סימטרית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\char\left(\bbf\right)\ne2$
 \end_inset
 
@@ -9174,7 +9566,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Phi$
 \end_inset
 
@@ -9192,7 +9585,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Phi$
 \end_inset
 
@@ -9210,7 +9604,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Phi$
 \end_inset
 
@@ -9236,7 +9631,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -9258,7 +9654,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -9280,7 +9677,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -9298,7 +9696,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr_{2}\left[x,y\right]=\left\{ f\in\bbr\left[x,y\right]\mid\deg\left(f\right)=2\right\} $
 \end_inset
 
@@ -9312,7 +9711,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 הגדרה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $p,q\in\bbr_{2}\left[x,y\right]$
 \end_inset
 
@@ -9334,7 +9734,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $C_{2}\left(\bbr\right)=\nicefrac{\bbr_{2}\left[x,y\right]}{\sim}$
 \end_inset
 
@@ -9352,7 +9753,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbr_{2}\left[x,y\right]$
 \end_inset
 
@@ -9370,7 +9772,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: עקומה אלגברית מישורית ממעלה 
+:
+ עקומה אלגברית מישורית ממעלה 
 \begin_inset Formula $2$
 \end_inset
 
@@ -9392,7 +9795,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $Q\in O\left(2\right)$
 \end_inset
 
@@ -9418,7 +9822,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f$
 \end_inset
 
@@ -9440,7 +9845,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $p\in\bbr_{2}\left[x,y\right]$
 \end_inset
 
@@ -9452,7 +9858,8 @@ A_{\text{can}}^{\bbr}=\diag\left(\lambda_{1}\ldots\lambda_{m},\left(\begin{small
 \end_layout
 
 \begin_layout Itemize
-המטריצה המצומצמת: 
+המטריצה המצומצמת:
+ 
 \begin_inset Formula $A_{p}=\left(\begin{smallmatrix}a & b\\
 b & c
 \end{smallmatrix}\right)$
@@ -9462,7 +9869,8 @@ b & c
 \end_layout
 
 \begin_layout Itemize
-המטריצה המורחבת: 
+המטריצה המורחבת:
+ 
 \begin_inset Formula $\widehat{A_{p}}=\left(\begin{smallmatrix}a & b & d\\
 b & c & e\\
 d & e & f
@@ -9479,7 +9887,8 @@ d & e & f
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $p\in\bbr_{2}\left[x,y\right]$
 \end_inset
 
@@ -9505,7 +9914,8 @@ d & e & f
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $p\in\bbr_{2}\left[x,y\right]$
 \end_inset
 
@@ -9531,7 +9941,8 @@ d & e & f
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $p,q\in\bbr_{2}\left[x,y\right]$
 \end_inset
 
@@ -9573,7 +9984,8 @@ d & e & f
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $C\in C_{2}\left(\bbr\right)$
 \end_inset
 
@@ -9593,7 +10005,8 @@ d & e & f
 \end_layout
 
 \begin_layout Itemize
-קבוצה ריקה: 
+קבוצה ריקה:
+ 
 \begin_inset Formula $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=-1$
 \end_inset
 
@@ -9601,7 +10014,8 @@ d & e & f
 \end_layout
 
 \begin_layout Itemize
-אליפסה: 
+אליפסה:
+ 
 \begin_inset Formula $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1$
 \end_inset
 
@@ -9609,7 +10023,8 @@ d & e & f
 \end_layout
 
 \begin_layout Itemize
-היפרבולה: 
+היפרבולה:
+ 
 \begin_inset Formula $\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1$
 \end_inset
 
@@ -9617,7 +10032,8 @@ d & e & f
 \end_layout
 
 \begin_layout Itemize
-פרבולה: 
+פרבולה:
+ 
 \begin_inset Formula $y^{2}=2px$
 \end_inset
 
@@ -9631,7 +10047,8 @@ d & e & f
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr_{2}\left[x,y,z\right]=\left\{ f\in\bbr\left[x,y,z\right]\mid\deg\left(f\right)=2\right\} $
 \end_inset
 
@@ -9645,7 +10062,8 @@ d & e & f
 הגדרה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $p,q\in\bbr_{2}\left[x,y,z\right]$
 \end_inset
 
@@ -9667,7 +10085,8 @@ d & e & f
 
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $S_{2}\left(\bbr\right)=\nicefrac{\bbr_{2}\left[x,y,z\right]}{\sim}$
 \end_inset
 
@@ -9685,7 +10104,8 @@ d & e & f
 
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbr_{2}\left[x,y,z\right]$
 \end_inset
 
@@ -9703,7 +10123,8 @@ d & e & f
 למה
 \series default
 \color inherit
-: משטח אלגברי ממעלה 
+:
+ משטח אלגברי ממעלה 
 \begin_inset Formula $2$
 \end_inset
 
@@ -9725,7 +10146,8 @@ d & e & f
 
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $Q\in O\left(3\right)$
 \end_inset
 
@@ -9751,7 +10173,8 @@ d & e & f
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f$
 \end_inset
 
@@ -9773,7 +10196,8 @@ d & e & f
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{3}\left(\bbr\right)$
 \end_inset
 
@@ -9793,7 +10217,8 @@ d & e & f
 \end_layout
 
 \begin_layout Itemize
-המטריצה המצומצמת: 
+המטריצה המצומצמת:
+ 
 \begin_inset Formula $A_{p}=A$
 \end_inset
 
@@ -9801,7 +10226,8 @@ d & e & f
 \end_layout
 
 \begin_layout Itemize
-המטריצה המורחבת: 
+המטריצה המורחבת:
+ 
 \begin_inset Formula $\widehat{A_{p}}=\left(\begin{smallmatrix}A & B\\
 B^{t} & c
 \end{smallmatrix}\right)$
@@ -9817,7 +10243,8 @@ B^{t} & c
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $p\in\bbr_{2}\left[x,y,z\right]$
 \end_inset
 
@@ -9843,7 +10270,8 @@ B^{t} & c
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $p\in\bbr_{2}\left[x,y,z\right]$
 \end_inset
 
@@ -9869,7 +10297,8 @@ B^{t} & c
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $p,q\in\bbr_{2}\left[x,y,z\right]$
 \end_inset
 
@@ -9911,7 +10340,8 @@ B^{t} & c
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $S\in S_{2}\left(\bbr\right)$
 \end_inset
 
@@ -9931,7 +10361,8 @@ B^{t} & c
 \end_layout
 
 \begin_layout Itemize
-קבוצה ריקה: 
+קבוצה ריקה:
+ 
 \begin_inset Formula $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=-1$
 \end_inset
 
@@ -9939,7 +10370,8 @@ B^{t} & c
 \end_layout
 
 \begin_layout Itemize
-אליפסויד: 
+אליפסויד:
+ 
 \begin_inset Formula $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=1$
 \end_inset
 
@@ -9947,7 +10379,8 @@ B^{t} & c
 \end_layout
 
 \begin_layout Itemize
-היפרבולויד חד־יריעתי: 
+היפרבולויד חד־יריעתי:
+ 
 \begin_inset Formula $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=1$
 \end_inset
 
@@ -9955,7 +10388,8 @@ B^{t} & c
 \end_layout
 
 \begin_layout Itemize
-היפרבולויד דו־יריעתי: 
+היפרבולויד דו־יריעתי:
+ 
 \begin_inset Formula $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=-1$
 \end_inset
 
@@ -9963,7 +10397,8 @@ B^{t} & c
 \end_layout
 
 \begin_layout Itemize
-פרבולויד אליפטי: 
+פרבולויד אליפטי:
+ 
 \begin_inset Formula $\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=z$
 \end_inset
 
@@ -9971,7 +10406,8 @@ B^{t} & c
 \end_layout
 
 \begin_layout Itemize
-פרבולויד היפרבולי: 
+פרבולויד היפרבולי:
+ 
 \begin_inset Formula $\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=z$
 \end_inset
 
