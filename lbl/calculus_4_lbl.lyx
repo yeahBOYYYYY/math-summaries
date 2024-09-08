@@ -8339,7 +8339,7 @@ e_{n} & | &  & |
 \color inherit
 1
 \numeric off
-־תבית דיפרנציאלית על 
+־תבנית דיפרנציאלית על 
 \begin_inset Formula $\m$
 \end_inset
 
@@ -8349,6 +8349,25 @@ e_{n} & | &  & |
 
  אזי 
 \begin_inset Formula $\omega_{x}=\omega\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הערה
+\series default
+\color inherit
+:
+ ההגדרה מלעיל לא מדוייקת מכיוון ולא מתקיים 
+\begin_inset Formula $\omega_{x}\in\left(\bbr^{n}\right)^{*}$
+\end_inset
+
+ אלא 
+\begin_inset Formula $\omega_{x}\in T_{x}^{*}\left(\m\right)$
 \end_inset
 
 .
@@ -8406,7 +8425,7 @@ e_{n} & | &  & |
 
 \series bold
 \color brown
-סימון
+נגזרת חיצונית
 \series default
 \color inherit
 :
@@ -8419,7 +8438,7 @@ e_{n} & | &  & |
 \end_inset
 
  המוגדרת 
-\begin_inset Formula $\left(\text{d}f\right)_{x}\left(v\right)=\frac{\partial f}{\partial v}\left(x\right)$
+\begin_inset Formula $\left(\text{d}f\right)\left(x\right)\left(v\right)=\frac{\partial f}{\partial v}\left(x\right)$
 \end_inset
 
 .
@@ -8589,12 +8608,16 @@ e_{n} & | &  & |
 \begin_inset Formula $f:\u\to\bbr$
 \end_inset
 
+ תהא 
+\begin_inset Formula $p\in\m$
+\end_inset
+
  ויהי 
-\begin_inset Formula $i\in\left[n\right]$
+\begin_inset Formula $i\in\left[k\right]$
 \end_inset
 
  אזי 
-\begin_inset Formula $\frac{\partial f}{\partial x_{i}}=\frac{\partial\left(f\circ\varphi^{-1}\right)}{\partial q_{i}}$
+\begin_inset Formula $\frac{\partial f}{\partial x_{i}}\left(p\right)=\frac{\partial\left(f\circ\varphi^{-1}\right)}{\partial x_{i}}\left(\varphi\left(p\right)\right)$
 \end_inset
 
 .
@@ -8640,7 +8663,7 @@ e_{n} & | &  & |
 \end_inset
 
  ויהי 
-\begin_inset Formula $i\in\left[n\right]$
+\begin_inset Formula $i\in\left[k\right]$
 \end_inset
 
  אזי 
@@ -8701,12 +8724,16 @@ e_{n} & | &  & |
 \begin_inset Formula $\m$
 \end_inset
 
+ תהא 
+\begin_inset Formula $p\in\m$
+\end_inset
+
  ויהי 
 \begin_inset Formula $i\in\left[n\right]$
 \end_inset
 
  אזי 
-\begin_inset Formula $\frac{\partial}{\partial x_{i}}=\frac{\partial\varphi^{-1}}{\partial q_{i}}$
+\begin_inset Formula $\frac{\partial}{\partial x_{i}}\left(p\right)=\frac{\partial\varphi^{-1}}{\partial x_{i}}\left(\varphi\left(p\right)\right)$
 \end_inset
 
 .
@@ -8729,7 +8756,7 @@ e_{n} & | &  & |
 \end_inset
 
  יהי 
-\begin_inset Formula $i\in\left[n\right]$
+\begin_inset Formula $i\in\left[k\right]$
 \end_inset
 
  ויהי 
@@ -8791,15 +8818,15 @@ e_{n} & | &  & |
 \end_inset
 
  יהי 
-\begin_inset Formula $i\in\left[n\right]$
+\begin_inset Formula $i\in\left[k\right]$
 \end_inset
 
  ויהי 
-\begin_inset Formula $x\in\u$
+\begin_inset Formula $p\in\u$
 \end_inset
 
  אזי 
-\begin_inset Formula $\text{d}x_{1}|_{x}=\left(\frac{\partial}{\partial x_{i}}\right)^{*}$
+\begin_inset Formula $\text{d}x_{i}|_{p}=\left(\frac{\partial}{\partial x_{i}}\left(p\right)\right)^{*}$
 \end_inset
 
 .
@@ -8996,7 +9023,7 @@ e_{n} & | &  & |
 \color inherit
 :
  תהא 
-\begin_inset Formula $f\in C^{m+1}\left(\m\right)$
+\begin_inset Formula $f\in C^{1}\left(\m\right)$
 \end_inset
 
  ותהא 
@@ -9008,7 +9035,7 @@ e_{n} & | &  & |
 \end_inset
 
  אזי 
-\begin_inset Formula $\text{d}f=\sum_{i=1}^{k}\frac{\text{d}f}{\text{d}x_{i}}\cdot\text{d}x_{i}$
+\begin_inset Formula $\text{d}f=\sum_{i=1}^{k}\frac{\partial f}{\partial x_{i}}\cdot\text{d}x_{i}$
 \end_inset
 
 .
@@ -9069,6 +9096,15 @@ e_{n} & | &  & |
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\n}{\mathcal{N}}
+{\mathcal{N}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color brown
@@ -9081,19 +9117,19 @@ e_{n} & | &  & |
 \color inherit
 :
  תהא 
-\begin_inset Formula $M\subseteq\bbr^{m}$
+\begin_inset Formula $\m\subseteq\bbr^{m}$
 \end_inset
 
  יריעה תהא 
-\begin_inset Formula $N\subseteq\bbr^{n}$
+\begin_inset Formula $\n\subseteq\bbr^{n}$
 \end_inset
 
  יריעה ותהא 
-\begin_inset Formula $F\in C^{1}\left(M,N\right)$
+\begin_inset Formula $F\in C^{1}\left(\m,\n\right)$
 \end_inset
 
  אזי 
-\begin_inset Formula $F^{*}:\Omega^{1}\left(N\right)\to\Omega^{1}\left(M\right)$
+\begin_inset Formula $F^{*}:\Omega^{1}\left(\n\right)\to\Omega^{1}\left(\m\right)$
 \end_inset
 
  המוגדרת 
@@ -9272,35 +9308,34 @@ e_{n} & | &  & |
 
 \series bold
 \color orange
-אוריינטציה של יריעה
+אוריינטציה של מסילה
 \series default
 \color inherit
 :
  תהא 
-\begin_inset Formula $\m\subseteq\bbr^{n}$
+\begin_inset Formula $\g:\left[a,b\right]\to\m$
 \end_inset
 
- יריעה אזי 
-\begin_inset Formula $O:\m\to\P\left(\bbr^{n}\right)$
+ מסילה פשוטה אזי 
+\begin_inset Formula $O:\im\left(\g\right)\to\bbr^{n}$
 \end_inset
 
- עבורה 
-\begin_inset Formula $O\left(x\right)$
+ רציפה למקוטעין עבורה 
+\begin_inset Formula $O\left(x\right)\in\left\{ \pm\dot{\g}\left(\g^{-1}\left(x\right)\right)\right\} $
 \end_inset
 
- בסיס של 
-\begin_inset Formula $T_{x}\left(\m\right)$
-\end_inset
+.
+\end_layout
 
- לכל 
-\begin_inset Formula $x\in\m$
-\end_inset
+\begin_layout Standard
 
- וכן 
-\begin_inset Formula $O_{1}\ldots O_{k}$
-\end_inset
-
- רציפות למקוטעין.
+\series bold
+\color orange
+הערה
+\series default
+\color inherit
+:
+ אם המסילה לא פשוטה נפרק אותה מספר מסילות פשוטות ונחבר בסוף.
 \end_layout
 
 \begin_layout Standard
@@ -9320,7 +9355,7 @@ e_{n} & | &  & |
 \end_inset
 
  למקוטעין אזי 
-\begin_inset Formula $O:\im\left(\g\right)\to\P\left(\bbr^{n}\right)$
+\begin_inset Formula $O:\im\left(\g\right)\to\bbr^{n}$
 \end_inset
 
  המוגדרת
@@ -9332,17 +9367,6 @@ e_{n} & | &  & |
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color orange
-הערה
-\series default
-\color inherit
-:
- אם המסילה לא פשוטה נפרק אותה מספר מסילות פשוטות ונחבר בסוף.
 \end_layout
 
 \begin_layout Standard
@@ -9394,37 +9418,6 @@ e_{n} & | &  & |
 
  המוגדרת 
 \begin_inset Formula $\overline{\g}\left(t\right)=\g\left(a+b-t\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color orange
-טענה
-\series default
-\color inherit
-:
- תהא 
-\begin_inset Formula $\g:\left[a,b\right]\to\m$
-\end_inset
-
- מסילה 
-\begin_inset Formula $C^{1}$
-\end_inset
-
- למקוטעין אזי 
-\begin_inset Formula $O:\im\left(\g\right)\to\P\left(\bbr^{n}\right)$
-\end_inset
-
- המוגדרת 
-\begin_inset Formula $O\left(x\right)=\dot{\overline{\g}}\left(\overline{\g}^{-1}\left(x\right)\right)$
-\end_inset
-
- הינה אוריינטציה של 
-\begin_inset Formula $\im\left(\g\right)$
 \end_inset
 
 .
@@ -9647,7 +9640,7 @@ e_{n} & | &  & |
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -9987,6 +9980,36 @@ u_{k}
 
 \series bold
 \color orange
+\begin_inset Formula $k$
+\end_inset
+
+־תבנית
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו מעל 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bigwedge^{k}V^{*}=\left\{ \omega\in\Hom\left(V^{k},\bbr\right)\mid\text{ אנטי סימטרית}\omega\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
 סימון
 \series default
 \color inherit
@@ -10005,10 +10028,6 @@ u_{k}
 
  אזי 
 \begin_inset Formula $\bigwedge^{0}V^{*}=\bbr$
-\end_inset
-
- וכן 
-\begin_inset Formula $\bigwedge^{k}V^{*}=\left\{ \omega\in\Hom\left(V^{k},\bbr\right)\mid\text{ אנטי סימטרית}\omega\right\} $
 \end_inset
 
 .
@@ -10039,7 +10058,7 @@ u_{k}
 \end_inset
 
  אזי 
-\begin_inset Formula $\det\in\bigwedge^{n}V^{*}$
+\begin_inset Formula $\det_{n}\in\bigwedge^{n}V^{*}$
 \end_inset
 
 .
@@ -10102,6 +10121,10 @@ u_{k}
 
 
 \begin_inset Formula $\left(\varphi_{1}\wedge\ldots\wedge\varphi_{k}\right)\left(u_{1}\ldots u_{k}\right)=\det\left(\left(\varphi_{i}\left(u_{j}\right)\right)_{i,j\in\left[k\right]}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $u_{1}\ldots u_{k}\in V$
 \end_inset
 
 .
@@ -10175,7 +10198,38 @@ u_{k}
 \end_inset
 
  אזי 
-\begin_inset Formula $\bigwedge^{n}V^{*}=\sp\left\{ \det\right\} $
+\begin_inset Formula $\dim\left(\bigwedge^{k}V^{*}\right)={n \choose k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו מעל 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\dim\left(V\right)=n$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bigwedge^{n}V^{*}=\sp\left\{ \det_{n}\right\} $
 \end_inset
 
 .
@@ -10229,6 +10283,1839 @@ u_{k}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\o}{\omega}
+{\omega}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\l}{\mathcal{L}}
+{\mathcal{L}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+\begin_inset Formula $p$
+\end_inset
+
+־תבנית דיפרנציאלית
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה אזי 
+\begin_inset Formula $\omega:\m\to\Hom\left(\left(\bbr^{n}\right)^{p},\bbr\right)$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\omega\left(x\right)\in\bigwedge^{p}T_{x}^{*}\left(\m\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה תהא 
+\begin_inset Formula $\omega$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $p$
+\end_inset
+
+־תבנית דיפרנציאלית על 
+\begin_inset Formula $\m$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $x\in\m$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\omega_{x}=\omega\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+הערה
+\series default
+\color inherit
+:
+ ההגדרה מלעיל לא מדוייקת מכיוון ולא מתקיים 
+\begin_inset Formula $\omega_{x}\in\Hom\left(\left(\bbr^{n}\right)^{p},\bbr\right)$
+\end_inset
+
+ אלא 
+\begin_inset Formula $\omega_{x}\in\bigwedge^{p}T_{x}^{*}\left(\m\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מכפלת וודג'/מכפלת יתד
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה תהא 
+\begin_inset Formula $\o$
+\end_inset
+
+ 
+\begin_inset Formula $p$
+\end_inset
+
+־תבנית דיפרנציאלית ותהא 
+\begin_inset Formula $\nu$
+\end_inset
+
+ 
+\begin_inset Formula $q$
+\end_inset
+
+־תבנית דיפרנציאלית אזי 
+\begin_inset Formula $\o\wedge\nu$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\left(p+q\right)$
+\end_inset
+
+־תבנית דיפרנציאלית באשר 
+\begin_inset Formula $\left(\o\wedge\nu\right)_{x}=\o_{x}\wedge\nu_{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $a:\left[p\right]\to\left[k\right]$
+\end_inset
+
+ באשר 
+\begin_inset Formula $1\le a_{1}<\ldots<a_{k}\le n$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{d}x_{\left\{ a_{1}\ldots a_{p}\right\} }=\text{d}x_{a_{1}}\wedge\ldots\wedge\text{d}x_{a_{p}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+\begin_inset Formula $p$
+\end_inset
+
+־תבנית דיפרנציאלית 
+\begin_inset Formula $C^{m}$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה אזי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $p$
+\end_inset
+
+־תבנית דיפרנציאלית 
+\begin_inset Formula $\omega$
+\end_inset
+
+ עבורה לכל מפה 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ של 
+\begin_inset Formula $\m$
+\end_inset
+
+ ולכל
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $f\in\P_{p}\left(\left[k\right]\right)\to\left(\u\to\bbr\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\omega=\sum_{I\in\P_{p}\left(\left[k\right]\right)}f_{I}\cdot\text{d}x_{I}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $f_{I}\in C^{m}\left(\u\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $I\in\P_{p}\left(\left[k\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה אזי 
+\begin_inset Formula $\Omega^{p}\left(\m\right)=\left\{ \omega\mid\m\text{ על }C^{\infty}\text{־תבנית דיפרנציאלית }p\text{ הינה }\omega\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+משיכה לאחור (
+\begin_inset Formula $\text{back pull}$
+\end_inset
+
+)
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{m}$
+\end_inset
+
+ יריעה תהא 
+\begin_inset Formula $\n\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה ותהא 
+\begin_inset Formula $F\in C^{1}\left(\m,\n\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H^{*}:\Omega^{p}\left(\n\right)\to\Omega^{p}\left(\m\right)$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $H^{*}\left(\omega,x,v_{1}\ldots v_{p}\right)=\omega_{H\left(x\right)}\left(\mathcal{D}_{x}\left(H\right)\cdot v_{1},\ldots,\mathcal{D}_{x}\left(H\right)\cdot v_{p}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{m}$
+\end_inset
+
+ יריעה תהא 
+\begin_inset Formula $\n\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה ותהא 
+\begin_inset Formula $H\in C^{1}\left(\m,\n\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(H_{\omega}^{*}\right)_{x}\left(v\right)=H^{*}\left(\omega,x,v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{m}$
+\end_inset
+
+ יריעה תהא 
+\begin_inset Formula $\n\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה תהא 
+\begin_inset Formula $\l\subseteq\bbr^{\ell}$
+\end_inset
+
+ יריעה תהא 
+\begin_inset Formula $H\in C^{1}\left(\m,\n\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $G\in C^{1}\left(\n,\l\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(G\circ H\right)^{*}=H^{*}\circ G^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+נגזרת חיצונית
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\u\subseteq\bbr^{n}$
+\end_inset
+
+ פתוחה אזי 
+\begin_inset Formula $\text{d}:\Omega^{p}\left(\u\right)\to\Omega^{p+1}\left(\u\right)$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\text{d}\left(\sum_{I\in\P_{p}\left(\left[k\right]\right)}f_{I}\cdot\text{d}x_{I}\right)=\sum_{I\in\P_{p}\left(\left[k\right]\right)}\left(\text{d}f_{I}\wedge\text{d}x_{I}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\u\subseteq\bbr^{n}$
+\end_inset
+
+ פתוחה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אזי 
+\begin_inset Formula $\text{d}$
+\end_inset
+
+ לינארית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\u\subseteq\bbr^{n}$
+\end_inset
+
+ פתוחה ותהא 
+\begin_inset Formula $\o\in\Omega^{p}\left(\u\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{d}\left(\text{d}\o\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\u\subseteq\bbr^{n}$
+\end_inset
+
+ פתוחה אזי 
+\begin_inset Formula $\Omega\left(\u\right)=\bigcup_{p\in\bbn_{+}}\Omega^{p}\left(\u\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size small
+\color teal
+אופרטור המקיים את כלל לייבניץ עבור תבניות דיפרנציאליות
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\u\subseteq\bbr^{n}$
+\end_inset
+
+ פתוחה אזי 
+\begin_inset Formula $\text{b}:\Omega\left(\u\right)\to\Omega\left(\u\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\text{b}\left(\o\right)\in\Omega^{p+1}\left(\u\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\o\in\Omega^{p}\left(\u\right)$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\text{b}\left(\a_{1}\wedge\ldots\wedge\a_{k}\right)=\sum_{i=1}^{k}\left(-1\right)^{i+1}\left(\a_{1}\wedge\ldots\wedge\a_{i-1}\wedge\text{b}\left(\a_{i}\right)\wedge\a_{i+1}\wedge\ldots\wedge\a_{k}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\a_{1}\ldots\a_{k}\in\u^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה כלל לייבניץ
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\u\subseteq\bbr^{n}$
+\end_inset
+
+ פתוחה אזי 
+\begin_inset Formula $\text{d}$
+\end_inset
+
+ מקיימת את כלל לייבניץ.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\u\subseteq\bbr^{n}$
+\end_inset
+
+ פתוחה ותהא 
+\begin_inset Formula $\text{b}:\Omega\left(\u\right)\to\Omega\left(\u\right)$
+\end_inset
+
+ לינארית המקיימת את כלל לייבניץ וכן 
+\begin_inset Formula $\text{b}\left(\text{b}\left(\o\right)\right)=0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\o\in\Omega\left(\u\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\text{b}\left(f\right)=\text{d}f$
+\end_inset
+
+ לכל 
+\begin_inset Formula $f\in C^{\infty}\left(\u\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{b}=\text{d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+:
+ תהיינה 
+\begin_inset Formula $\u,\v\subseteq\bbr^{n}$
+\end_inset
+
+ פתוחות יהי 
+\begin_inset Formula $F:\u\to\v$
+\end_inset
+
+ דיפאומורפיזם ותהא 
+\begin_inset Formula $\o\in\Omega^{p}\left(\v\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{d}\left(F_{\o}^{*}\right)=F_{\text{d}\o}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+:
+ תהיינה 
+\begin_inset Formula $\u,\v\subseteq\bbr^{n}$
+\end_inset
+
+ פתוחות יהי 
+\begin_inset Formula $F:\u\to\v$
+\end_inset
+
+ דיפאומורפיזם ותהא 
+\begin_inset Formula $\o\in\Omega^{p}\left(\v\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(F^{-1}\right)^{*}=\left(F^{*}\right)^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סימון
+\series default
+\color inherit
+:
+ תהיינה 
+\begin_inset Formula $\u,\v\subseteq\bbr^{n}$
+\end_inset
+
+ פתוחות יהי 
+\begin_inset Formula $F:\u\to\v$
+\end_inset
+
+ דיפאומורפיזם ותהא 
+\begin_inset Formula $\o\in\Omega^{p}\left(\v\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $F^{-*}=\left(F^{-1}\right)^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה תהא 
+\begin_inset Formula $\o\in\Omega^{p}\left(\m\right)$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $\left(\u_{1},\varphi_{1}\right),\left(\u_{2},\varphi_{2}\right)$
+\end_inset
+
+ מפות אזי 
+\begin_inset Formula $\varphi_{2}^{*}\left(\text{d}\left(\varphi_{2}^{-*}\left(\o\right)\right)\right)=\varphi_{1}^{*}\left(\text{d}\left(\varphi_{1}^{-*}\left(\o\right)\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+הגדרה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה ותהא 
+\begin_inset Formula $\o\in\Omega^{p}\left(\m\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{d}\o\in\Omega^{p+1}\left(\m\right)$
+\end_inset
+
+ עבורה לכל מפה 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\varphi^{-*}\left(\text{d}\o\right)=\text{d}\left(\varphi^{-*}\o\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה תהא 
+\begin_inset Formula $\left(\m,\varphi\right)$
+\end_inset
+
+ מפה ותהא 
+\begin_inset Formula $\o\in\Omega^{p}\left(\m\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{d}\o=\varphi^{*}\left(\text{d}\left(\varphi^{-*}\o\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+הערה
+\series default
+\color inherit
+:
+ בקבוצה 
+\begin_inset Formula $\bbr^{n}$
+\end_inset
+
+ עצמה 
+\begin_inset Formula $p$
+\end_inset
+
+־תבנית היא שקולה ל־
+\begin_inset Formula $p$
+\end_inset
+
+־תבנית דיפרנציאלית מהיות ומתקיים 
+\begin_inset Formula $T_{p}\left(\bbr^{n}\right)=\bbr^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו מעל 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\dim\left(V\right)=n$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\det_{n}=\text{d}x_{1}\wedge\ldots\wedge\text{d}x_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+אינגטרל
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\u\subseteq\bbr^{k}$
+\end_inset
+
+ פתוחה ותהא 
+\begin_inset Formula $f\in C\left(\u\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $f\cdot\text{d}x_{1}\wedge\ldots\wedge\text{d}x_{k}$
+\end_inset
+
+ בעלת תומך קומפקטי אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\intop_{\u}\left(f\cdot\text{d}x_{1}\wedge\ldots\wedge\text{d}x_{n}\right)=\intop_{\u}f\left(x\right)\text{d}x_{1}\ldots\text{d}x_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+הערה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\u\subseteq\bbr^{k}$
+\end_inset
+
+ פתוחה ויהי 
+\begin_inset Formula $\o\in\Omega^{k}\left(\u\right)$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $f\in C\left(\u\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\o=f\cdot\det_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $\u,\v\subseteq\bbr^{n}$
+\end_inset
+
+ תחומים יהי 
+\begin_inset Formula $F:\u\to\v$
+\end_inset
+
+ דיפאומורפיזם ותהא 
+\begin_inset Formula $\o\in\Omega^{k}\left(\u\right)$
+\end_inset
+
+ בעלת תומך קומפקטי אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\intop_{\u}\o=\sign\left(\det\left(\mathcal{D}\left(T\right)\right)\right)\cdot\int_{\v}T_{\o}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+תבנית נפח
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה 
+\begin_inset Formula $k$
+\end_inset
+
+־מימדית אזי 
+\begin_inset Formula $\o\in\Omega^{k}\left(\m\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\o_{x}\ne0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+תבניות נפח שקולות
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה 
+\begin_inset Formula $k$
+\end_inset
+
+־מימדית אזי תבניות נפח 
+\begin_inset Formula $\o_{1},\o_{2}\in\Omega^{k}\left(\m\right)$
+\end_inset
+
+ עבורן קיימת 
+\begin_inset Formula $f:\m\to\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $f>0$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\o_{2}=f\cdot\o_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה אזי שקילות תבניות נפח על 
+\begin_inset Formula $\m$
+\end_inset
+
+ הינו יחס שקילות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה קשירה אזי קיימות לכל היותר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מחלקות שקילות של תבניות נפח על 
+\begin_inset Formula $\m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+אוריינטציה של יריעה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה קשירה אזי מחלקת שקילות של תבניות נפח על 
+\begin_inset Formula $\m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+האוריינטציה האוקלידית הסטנדרטית
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי מחלקת השקילות של 
+\begin_inset Formula $\det_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תבנית נפח חיובית
+\series default
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה 
+\begin_inset Formula $k$
+\end_inset
+
+־מימדית עם אוריינטציה אזי תבנית נפח 
+\begin_inset Formula $\eta\in\Omega^{k}\left(\m\right)$
+\end_inset
+
+ השייכת לאוריינטציה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מפה משמרת אוריינטציה
+\series default
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה 
+\begin_inset Formula $k$
+\end_inset
+
+־מימדית עם אוריינטציה אזי מפה 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $\eta$
+\end_inset
+
+ תבנית נפח חיובית על 
+\begin_inset Formula $\u$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $\left(\varphi^{-1}\right)^{*}\left(\eta\right)$
+\end_inset
+
+ תבנית נפח חיובית על 
+\begin_inset Formula $\bbr^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה 
+\begin_inset Formula $k$
+\end_inset
+
+־מימדית עם אוריינטציה ותהא 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ מפה אזי קיימת מפה משמרת אוריינטציה 
+\begin_inset Formula $\left(\u,\psi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה 
+\begin_inset Formula $k$
+\end_inset
+
+־מימדית עם אוריינטציה תהיינה 
+\begin_inset Formula $\left(\u,\varphi\right),\left(\v,\psi\right)$
+\end_inset
+
+ מפות משמרות אוריינטציה ותהא 
+\begin_inset Formula $\o\in\Omega^{k}\left(\m\right)$
+\end_inset
+
+ בעלת תומך קומפקטי עבורה 
+\begin_inset Formula $\supp\left(\o\right)\subseteq\u\cap\v$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{\varphi\left(\u\right)}\varphi_{\o}^{-*}=\intop_{\psi\left(\v\right)}\psi_{\o}^{-*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אינטגרל
+\series default
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה 
+\begin_inset Formula $k$
+\end_inset
+
+־מימדית עם אוריינטציה תהא 
+\begin_inset Formula $\left(\u,\varphi\right)$
+\end_inset
+
+ מפה משמרת אוריינטציה ותהא 
+\begin_inset Formula $\o\in\Omega^{k}\left(\m\right)$
+\end_inset
+
+ בעלת תומך קומפקטי עבורה 
+\begin_inset Formula $\supp\left(\o\right)\subseteq\u$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{\m}\o=\intop_{\varphi\left(\u\right)}\varphi_{\o}^{-*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה 
+\begin_inset Formula $k$
+\end_inset
+
+־מימדית תהא 
+\begin_inset Formula $\o$
+\end_inset
+
+ 
+\begin_inset Formula $k$
+\end_inset
+
+־תבנית יהיו 
+\begin_inset Formula $\left\{ \left(\u_{i},\varphi_{i}\right)\right\} _{i=1}^{\infty},\left\{ \left(\v_{i},\psi_{i}\right)\right\} _{i=1}^{\infty}$
+\end_inset
+
+ כיסויים של 
+\begin_inset Formula $\supp\left(\o\right)$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\left\{ \rho_{i}\right\} _{i=1}^{\infty}$
+\end_inset
+
+ פירוק יחידה של 
+\begin_inset Formula $\left\{ \left(\u_{i},\varphi_{i}\right)\right\} _{i=1}^{\infty}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\left\{ \eta_{i}\right\} _{i=1}^{\infty}$
+\end_inset
+
+ פירוק יחידה של 
+\begin_inset Formula $\left\{ \left(\v_{i},\psi_{i}\right)\right\} _{i=1}^{\infty}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum_{i=1}^{\infty}\intop_{\m}\left(\rho_{i}\cdot\o\right)=\sum_{i=1}^{\infty}\intop_{\m}\left(\eta_{i}\cdot\o\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אינטגרל
+\series default
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה 
+\begin_inset Formula $k$
+\end_inset
+
+־מימדית תהא 
+\begin_inset Formula $\o$
+\end_inset
+
+ 
+\begin_inset Formula $k$
+\end_inset
+
+־תבנית יהי 
+\begin_inset Formula $\left\{ \left(\u_{i},\varphi_{i}\right)\right\} _{i=1}^{\infty}$
+\end_inset
+
+ כיסוי של 
+\begin_inset Formula $\supp\left(\o\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\left\{ \rho_{i}\right\} _{i=1}^{\infty}$
+\end_inset
+
+ פירוק יחידה של 
+\begin_inset Formula $\left\{ \left(\u_{i},\varphi_{i}\right)\right\} _{i=1}^{\infty}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{\m}\o=\sum_{i=1}^{\infty}\intop_{\m}\left(\rho_{i}\cdot\o\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט גרין בשפה של תבנית
+\series default
+:
+ תהא 
+\begin_inset Formula $G\subseteq\bbr^{n}$
+\end_inset
+
+ חסומה פתוחה עם שפה כמעט חלקה עבורה 
+\begin_inset Formula $\vol_{n-1}\left(\partial^{\text{sm}}G\right)<\infty$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\partial G$
+\end_inset
+
+ הינה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין תהא 
+\begin_inset Formula $\w\subseteq\bbr^{n}$
+\end_inset
+
+ פתוחה באשר 
+\begin_inset Formula $\overline{G}\subseteq\w$
+\end_inset
+
+ יהי 
+\begin_inset Formula $N$
+\end_inset
+
+ נורמל חיצוני ל־
+\begin_inset Formula $G$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\o$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+־תבנית על 
+\begin_inset Formula $\w$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{\partial G}\o=\intop_{G}\text{d}\o$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\partial G$
+\end_inset
+
+ עם אוריינטציית רגל שמאל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\numeric on
+1
+\numeric off
+־תבנית דיפרנציאלית סגורה
+\series default
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה אזי 
+\begin_inset Formula $\o\in\Omega^{1}\left(\m\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\text{d}\o=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\numeric on
+1
+\numeric off
+־תבנית דיפרנציאלית מדוייקת
+\series default
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה אזי 
+\begin_inset Formula $\o\in\Omega^{1}\left(\m\right)$
+\end_inset
+
+ עבורה קיימת 
+\begin_inset Formula $f\in C^{\infty}\left(\m\right)$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\o=\text{d}f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה ותהא 
+\begin_inset Formula $\o\in\Omega^{1}\left(\m\right)$
+\end_inset
+
+ מדוייקת אזי 
+\begin_inset Formula $\o$
+\end_inset
+
+ סגורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\numeric on
+1
+\numeric off
+־תבנית דיפרנציאלית משמרת
+\series default
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה אזי 
+\begin_inset Formula $\o\in\Omega^{1}\left(\m\right)$
+\end_inset
+
+ עבורה לכל מסילה סגורה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין 
+\begin_inset Formula $\g$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\intop_{\g}\o=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה ותהא 
+\begin_inset Formula $\o\in\Omega^{1}\left(\m\right)$
+\end_inset
+
+ אזי (
+\begin_inset Formula $\o$
+\end_inset
+
+ משמרת)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיימת 
+\begin_inset Formula $f:\bbr\to\bbr$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $\g:\left[a,b\right]\to\m$
+\end_inset
+
+ מסילה 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ למקוטעין מתקיים 
+\begin_inset Formula $\intop_{\g}\o=f\left(\g\left(b\right)\right)-f\left(\g\left(a\right)\right)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\o\in\Omega^{1}\left(\bbr^{n}\right)$
+\end_inset
+
+ סגורה אזי 
+\begin_inset Formula $\o$
+\end_inset
+
+ משמרת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה ותהא 
+\begin_inset Formula $\o\in\Omega^{1}\left(\m\right)$
+\end_inset
+
+ אזי (
+\begin_inset Formula $\o$
+\end_inset
+
+ מדוייקת)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\o$
+\end_inset
+
+ משמרת).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $\o\in\Omega^{1}\left(\bbr^{n}\right)$
+\end_inset
+
+ אזי (
+\begin_inset Formula $\o$
+\end_inset
+
+ סגורה)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\o$
+\end_inset
+
+ מדוייקת)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\o$
+\end_inset
+
+ משמרת).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה גאומטרית/קצה
+\series default
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה אזי 
+\begin_inset Formula $\partial_{g}\m=\overline{\m}\backslash\m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נקודת קצה חלקה
+\series default
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה אזי 
+\begin_inset Formula $x\in\partial_{g}\left(\m\right)$
+\end_inset
+
+ עבורה קיים 
+\begin_inset Formula $\d>0$
+\end_inset
+
+ וקיימת יריעה 
+\begin_inset Formula $\n\subseteq B_{\d}\left(x\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\m\cap B_{\d}\left(x\right)\subseteq\n$
+\end_inset
+
+ וקיימת 
+\begin_inset Formula $\v\subseteq\bbr^{k}$
+\end_inset
+
+ וקיימת פרמטריזציה טובה 
+\begin_inset Formula $r:\v\to\n$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $r^{-1}\left(x\right)\in\partial^{\text{sm}}\left(r^{-1}\left(\n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+יריעה בעלת קצה חלק
+\series default
+:
+ יריעה 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ עבורה כל 
+\begin_inset Formula $x\in\partial_{g}\m$
+\end_inset
+
+ הינה נקודת קצה חלקה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה 
+\begin_inset Formula $k$
+\end_inset
+
+־מימדית בעלת קצה חלק אזי 
+\begin_inset Formula $\partial_{g}\m$
+\end_inset
+
+ יריעה 
+\begin_inset Formula $\left(k-1\right)$
+\end_inset
+
+־מימדית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אוריינטציה מושרית על קצה חלק
+\series default
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה 
+\begin_inset Formula $k$
+\end_inset
+
+־מימדית בעלת קצה חלק יהי 
+\begin_inset Formula $N$
+\end_inset
+
+ קו־אוריינטציה ותהא 
+\begin_inset Formula $\o\in\Omega^{k}\left(\m\right)$
+\end_inset
+
+ תבנית נפח אזי 
+\begin_inset Formula $\o^{\partial}\in\Omega^{k-1}\left(\m\right)$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\o_{x}^{\partial}\left(u_{1}\ldots u_{k-1}\right)=\o_{x}\left(N\left(x\right),u_{1}\ldots u_{k-1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט סטוקס
+\series default
+:
+ תהא 
+\begin_inset Formula $\m\subseteq\bbr^{n}$
+\end_inset
+
+ יריעה 
+\begin_inset Formula $k$
+\end_inset
+
+־מימדית חסומה בעלת קצה חלק ותהא 
+\begin_inset Formula $\o\in\Omega^{k-1}\left(\bbr^{n}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\intop_{\m}\text{d}\o=\intop_{\partial_{g}\m}\o$
+\end_inset
+
+.
 \end_layout
 
 \end_body
