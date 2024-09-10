@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -74,11 +74,11 @@
 \end_preamble
 \options no-math
 \use_default_options true
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language hebrew
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "David CLM"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -86,7 +86,9 @@
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -100,7 +102,7 @@
 \paperfontsize default
 \spacing onehalf
 \use_hyperref false
-\papersize letterpaper
+\papersize letter
 \use_geometry true
 \use_package amsmath 2
 \use_package amssymb 2
@@ -121,7 +123,9 @@
 \suppress_date true
 \justification false
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -141,11 +145,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -154,7 +163,29 @@
 \begin_inset CommandInset include
 LatexCommand include
 filename "../../macros.lyx"
+literal "true"
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\re}{\mathcal{RE}}
+{\mathcal{RE}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\r}{\mathcal{R}}
+{\mathcal{R}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\core}{\text{co}\mathcal{RE}}
+{\text{co}\mathcal{RE}}
 \end_inset
 
 
@@ -165,7 +196,8 @@ filename "../../macros.lyx"
 \series bold
 רישום קבוצה בעזרת רשימת איברים
 \series default
-: 
+:
+ 
 \begin_inset Formula $\left\{ a_{1},\ldots,a_{n}\right\} $
 \end_inset
 
@@ -181,15 +213,16 @@ filename "../../macros.lyx"
 \series bold
 סימון
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Sigma$
 \end_inset
 
- אלפבית אזי 
-\begin_inset Formula $\Sigma^{*}$
+ קבוצה אזי 
+\begin_inset Formula $\Sigma^{*}=\bigcup_{i=0}^{\infty}\Sigma^{i}$
 \end_inset
 
- כל המחרוזות הסופיות באלפבית.
+.
 \end_layout
 
 \begin_layout Standard
@@ -197,11 +230,12 @@ filename "../../macros.lyx"
 \series bold
 טענה
 \series default
-: יהי עולם 
+:
+ תהא 
 \begin_inset Formula $\Sigma$
 \end_inset
 
- תהא 
+ קבוצה תהא 
 \begin_inset Formula $B\subseteq\Sigma^{*}$
 \end_inset
 
@@ -235,7 +269,8 @@ filename "../../macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-מינימליות: תהא 
+מינימליות:
+ תהא 
 \begin_inset Formula $A\subseteq\Sigma^{*}$
 \end_inset
 
@@ -263,11 +298,12 @@ filename "../../macros.lyx"
 \series bold
 אינדוקציה מבנית
 \series default
-: יהי עולם 
+:
+ תהא 
 \begin_inset Formula $\Sigma$
 \end_inset
 
- תהא 
+ קבוצה תהא 
 \begin_inset Formula $B\subseteq\Sigma^{*}$
 \end_inset
 
@@ -293,9 +329,60 @@ filename "../../macros.lyx"
 \begin_layout Standard
 
 \series bold
+עולם באינדוקציה מבנית
+\series default
+:
+ תהא 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ קבוצה תהא 
+\begin_inset Formula $B\subseteq\Sigma^{*}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F=\left\{ f_{i}:\left(\Sigma^{*}\right)^{n_{i}}\to\Sigma^{*}\mid i\in I\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בסיס באינדוקציה מבנית
+\series default
+:
+ תהא 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ קבוצה תהא 
+\begin_inset Formula $B\subseteq\Sigma^{*}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F=\left\{ f_{i}:\left(\Sigma^{*}\right)^{n_{i}}\to\Sigma^{*}\mid i\in I\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $B\subseteq\Sigma^{*}$
 \end_inset
 
@@ -313,9 +400,10 @@ filename "../../macros.lyx"
 \begin_layout Standard
 
 \series bold
-מסקנה
+מסקנה הוכחה באינדוקציה מבנית
 \series default
-: יהי עולם 
+:
+ יהי עולם 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -341,9 +429,39 @@ filename "../../macros.lyx"
 \begin_layout Standard
 
 \series bold
+אינווריאנטה
+\series default
+:
+ יהי עולם 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $Y\subseteq\Sigma^{*}$
+\end_inset
+
+ סגורה להפעלת 
+\begin_inset Formula $F$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $B\subseteq Y$
+\end_inset
+
+ אזי 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 מסקנה משפט האינדוקציה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $p$
 \end_inset
 
@@ -363,7 +481,8 @@ filename "../../macros.lyx"
 \series bold
 סדרת יצירה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in X_{B,F}$
 \end_inset
 
@@ -379,15 +498,15 @@ filename "../../macros.lyx"
 \begin_inset Formula $i\in\left[n\right]$
 \end_inset
 
- מתקיים )
+ מתקיים (
 \begin_inset Formula $a_{i}\in B$
 \end_inset
 
-(
+)
 \begin_inset Formula $\lor$
 \end_inset
 
-)
+(
 \begin_inset Formula $a_{i}$
 \end_inset
 
@@ -399,7 +518,7 @@ filename "../../macros.lyx"
 \begin_inset Formula $\left\{ a_{1},\ldots,a_{i-1}\right\} $
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -407,23 +526,24 @@ filename "../../macros.lyx"
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\Sigma^{*}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $a\in X_{B,F}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימת סדרת יצירה ל־
+(קיימת סדרת יצירה ל־
 \begin_inset Formula $a$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -431,7 +551,8 @@ filename "../../macros.lyx"
 \series bold
 מסקנה
 \series default
-: 
+:
+ 
 \begin_inset Formula $X_{B,F}=\bigcup_{i=1}^{\infty}\left\{ a\in\Sigma^{*}\mid n\text{ בעלת סדרת יצירה באורך }a\right\} $
 \end_inset
 
@@ -443,7 +564,8 @@ filename "../../macros.lyx"
 \series bold
 עולם תחשיב הפסוקים
 \series default
-: 
+:
+ 
 \begin_inset Formula $\Sigma=\left\{ \land,\lor,\neg,\implies,(,)\right\} \cup\left\{ p_{i}\mid i\in\bbn\right\} $
 \end_inset
 
@@ -455,7 +577,8 @@ filename "../../macros.lyx"
 \series bold
 ביטוי
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -471,7 +594,8 @@ filename "../../macros.lyx"
 \series bold
 הגדרה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\omega_{1},\omega_{2}\in\left\{ p_{i}\mid i\in\bbn\right\} $
 \end_inset
 
@@ -511,7 +635,8 @@ filename "../../macros.lyx"
 \series bold
 קבוצת הנוסחאות המוגדרות היטב/ביטוי חוקי/פסוק
 \series default
-: 
+:
+ 
 \begin_inset Formula $\wff=X_{\left\{ p_{i}\mid i\in\bbn\right\} ,\left\{ \land,\lor,\neg,\implies\right\} }$
 \end_inset
 
@@ -523,7 +648,8 @@ filename "../../macros.lyx"
 \series bold
 פסוק אטומי/יסודי
 \series default
-: 
+:
+ 
 \begin_inset Formula $p\in\wff$
 \end_inset
 
@@ -539,19 +665,20 @@ filename "../../macros.lyx"
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\wff$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $p$
 \end_inset
 
- פסוק אטומי(
+ פסוק אטומי)
 \begin_inset Formula $\lor$
 \end_inset
 
-)הפסוק 
+(הפסוק 
 \begin_inset Formula $p$
 \end_inset
 
@@ -563,7 +690,7 @@ filename "../../macros.lyx"
 \begin_inset Formula $")"$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -571,7 +698,8 @@ filename "../../macros.lyx"
 \series bold
 מסקנה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $q_{1},q_{2}\in\wff$
 \end_inset
 
@@ -587,7 +715,8 @@ filename "../../macros.lyx"
 \series bold
 משפט הקריאה היחידה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\a\in\wff$
 \end_inset
 
@@ -654,7 +783,8 @@ filename "../../macros.lyx"
 \series bold
 מסקנה אלגוריתם לבדיקת חוקיות
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -678,7 +808,8 @@ filename "../../macros.lyx"
 \series bold
 סדר קדימות של קשרים
 \series default
-: נגדיר סדר ביצוע פעולות
+:
+ נגדיר סדר ביצוע פעולות
 \end_layout
 
 \begin_layout Enumerate
@@ -709,7 +840,8 @@ filename "../../macros.lyx"
 אמת
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $T,\text{true}$
 \end_inset
 
@@ -723,7 +855,8 @@ filename "../../macros.lyx"
 שקר
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $F,\text{false}$
 \end_inset
 
@@ -737,7 +870,8 @@ filename "../../macros.lyx"
 טבלת אמת
 \series default
 \color inherit
-: טבלה אשר מסכמת את אמיתו של פסוק בשינוי ערכם של פסוקי היסוד בו.
+:
+ טבלה אשר מסכמת את אמיתו של פסוק בשינוי ערכם של פסוקי היסוד בו.
 \end_layout
 
 \begin_layout Standard
@@ -747,7 +881,8 @@ filename "../../macros.lyx"
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\circ\in\left\{ \land,\lor,\neg,\implies\right\} $
 \end_inset
 
@@ -769,12 +904,15 @@ filename "../../macros.lyx"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $p,q$
 \end_inset
 
  פסוקים אזי
 \begin_inset Float table
+placement document
+alignment document
 wide false
 sideways false
 status collapsed
@@ -1591,7 +1729,8 @@ status open
 השמה
 \series default
 \color inherit
-: פונקציה 
+:
+ פונקציה 
 \begin_inset Formula $v:\left\{ p_{i}\right\} \to\left\{ F,T\right\} $
 \end_inset
 
@@ -1605,7 +1744,8 @@ status open
 השמת ערך אמת לפסוק
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $v$
 \end_inset
 
@@ -1663,7 +1803,8 @@ status open
 השמה מספקת פסוק
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $v$
 \end_inset
 
@@ -1685,7 +1826,8 @@ status open
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $v$
 \end_inset
 
@@ -1711,7 +1853,8 @@ status open
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $v$
 \end_inset
 
@@ -1737,7 +1880,8 @@ status open
 הפסוקים האטומיים בפסוק
 \series default
 \color inherit
-: פונקציה 
+:
+ פונקציה 
 \begin_inset Formula $\var:\wff\to\P\left(\left\{ p_{i}\right\} \right)$
 \end_inset
 
@@ -1791,7 +1935,8 @@ status open
 משפט התלות הסופית
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $v_{1},v_{2}$
 \end_inset
 
@@ -1817,7 +1962,8 @@ status open
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\a\in\wff$
 \end_inset
 
@@ -1839,7 +1985,8 @@ status open
 מערכת קשרים שלמה פונקציונלית
 \series default
 \color inherit
-: קבוצה 
+:
+ קבוצה 
 \begin_inset Formula $K\subseteq\left\{ \land,\lor,\neg,\implies\right\} $
 \end_inset
 
@@ -1865,7 +2012,8 @@ status open
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left\{ \land,\lor,\neg,\implies\right\} $
 \end_inset
 
@@ -1879,7 +2027,8 @@ status open
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $K$
 \end_inset
 
@@ -1901,7 +2050,8 @@ status open
 פסוק ספיק
 \series default
 \color inherit
-: פסוק 
+:
+ פסוק 
 \begin_inset Formula $\a\in\wff$
 \end_inset
 
@@ -1923,7 +2073,8 @@ status open
 טאוטולוגיה
 \series default
 \color inherit
-: פסוק 
+:
+ פסוק 
 \begin_inset Formula $\a\in\wff$
 \end_inset
 
@@ -1945,7 +2096,8 @@ status open
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\a\in\wff$
 \end_inset
 
@@ -1963,7 +2115,8 @@ status open
 סתירה
 \series default
 \color inherit
-: פסוק 
+:
+ פסוק 
 \begin_inset Formula $\a\in\wff$
 \end_inset
 
@@ -1981,7 +2134,8 @@ status open
 פסוקים שקולים
 \series default
 \color inherit
-: פסוקים 
+:
+ פסוקים 
 \begin_inset Formula $\a,\b\in\wff$
 \end_inset
 
@@ -2003,7 +2157,8 @@ status open
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\a,\b\in\wff$
 \end_inset
 
@@ -2021,7 +2176,8 @@ status open
 קבוצה ספיקה
 \series default
 \color inherit
-: קבוצה 
+:
+ קבוצה 
 \begin_inset Formula $\Gamma\subseteq\wff$
 \end_inset
 
@@ -2047,7 +2203,8 @@ status open
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Gamma\subseteq\wff$
 \end_inset
 
@@ -2069,7 +2226,8 @@ status open
 פסוק נובע סמנטית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Gamma\subseteq\wff$
 \end_inset
 
@@ -2099,7 +2257,8 @@ status open
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Gamma\subseteq\wff$
 \end_inset
 
@@ -2125,7 +2284,8 @@ status open
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\a,\b,\g\in\wff$
 \end_inset
 
@@ -2209,7 +2369,8 @@ status open
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\g\in\wff$
 \end_inset
 
@@ -2231,7 +2392,8 @@ status open
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Gamma\subseteq\wff$
 \end_inset
 
@@ -2261,7 +2423,8 @@ status open
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Gamma\subseteq\wff$
 \end_inset
 
@@ -2291,7 +2454,8 @@ status open
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\a,\b\in\wff$
 \end_inset
 
@@ -2309,7 +2473,8 @@ status open
 הצבת פסוק בפסוק
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\a,\varphi\in\wff$
 \end_inset
 
@@ -2391,7 +2556,8 @@ status open
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\a,\varphi\in\wff$
 \end_inset
 
@@ -2413,7 +2579,8 @@ status open
 הצבת פסוקים בפסוק
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\a,\varphi_{1}\ldots\varphi_{n}\in\wff$
 \end_inset
 
@@ -2503,7 +2670,8 @@ status open
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\a,\varphi\in\wff$
 \end_inset
 
@@ -2535,7 +2703,9 @@ status open
 מסקנה הקשר בין הצבות לעדכוני שמות
 \series default
 \color inherit
-: טענה: יהיו 
+:
+ טענה:
+ יהיו 
 \begin_inset Formula $\a,\varphi_{1}\ldots\varphi_{n}\in\wff$
 \end_inset
 
@@ -2567,7 +2737,8 @@ status open
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\a\in\wff$
 \end_inset
 
@@ -2598,7 +2769,8 @@ status open
 
 
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\nnf=X_{\left\{ p_{i}\mid i\in\bbn\right\} \cup\left\{ \left(\neg p_{i}\right)\mid i\in\bbn\right\} ,\left\{ \land,\lor\right\} }$
 \end_inset
 
@@ -2612,7 +2784,8 @@ status open
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\a\in\wff$
 \end_inset
 
@@ -2634,7 +2807,8 @@ status open
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\text{Conj}=X_{\left\{ p_{i}\mid i\in\bbn\right\} \cup\left\{ \left(\neg p_{i}\right)\mid i\in\bbn\right\} ,\left\{ \land\right\} }$
 \end_inset
 
@@ -2653,7 +2827,8 @@ status open
 
 
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\dnf=X_{\text{Conj},\left\{ \lor\right\} }$
 \end_inset
 
@@ -2667,7 +2842,8 @@ status open
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\a\in\wff$
 \end_inset
 
@@ -2689,7 +2865,8 @@ status open
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\text{Disj}=X_{\left\{ p_{i}\mid i\in\bbn\right\} \cup\left\{ \left(\neg p_{i}\right)\mid i\in\bbn\right\} ,\left\{ \lor\right\} }$
 \end_inset
 
@@ -2708,7 +2885,8 @@ status open
 
 
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\cnf=X_{\text{Disj},\left\{ \land\right\} }$
 \end_inset
 
@@ -2722,7 +2900,8 @@ status open
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\a\in\wff$
 \end_inset
 
@@ -2744,7 +2923,8 @@ status open
 מערכת הוכחה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -2774,7 +2954,8 @@ status open
 הערה
 \series default
 \color inherit
-: בקורס זה כל מערכות ההוכחה יהיו מעל האלפבית של תחשיב הפסוקים.
+:
+ בקורס זה כל מערכות ההוכחה יהיו מעל האלפבית של תחשיב הפסוקים.
 \end_layout
 
 \begin_layout Standard
@@ -2784,7 +2965,8 @@ status open
 נוסחאות של מערכת הוכחה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(\Sigma,N,A,F\right)$
 \end_inset
 
@@ -2802,7 +2984,8 @@ status open
 אקסיומת של מערכת הוכחה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(\Sigma,N,A,F\right)$
 \end_inset
 
@@ -2820,7 +3003,8 @@ status open
 כללי היסק של מערכת הוכחה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(\Sigma,N,A,F\right)$
 \end_inset
 
@@ -2838,7 +3022,8 @@ status open
 קבוצת המשפטים
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(\Sigma,N,A,F\right)$
 \end_inset
 
@@ -2856,7 +3041,8 @@ status open
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $S$
 \end_inset
 
@@ -2878,7 +3064,8 @@ status open
 מערכת הוכחה בעלת הנחות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(\Sigma,N,A,F\right)$
 \end_inset
 
@@ -2900,7 +3087,8 @@ status open
 קבוצת הטענות היכיחות מהנחות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(\Sigma,N,A,F,\Gamma\right)$
 \end_inset
 
@@ -2918,7 +3106,8 @@ status open
 הוכחה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(\Sigma,N,A,F,\Gamma\right)$
 \end_inset
 
@@ -2940,7 +3129,8 @@ status open
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $S$
 \end_inset
 
@@ -2966,7 +3156,8 @@ status open
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $S$
 \end_inset
 
@@ -2978,7 +3169,8 @@ status open
 \end_layout
 
 \begin_layout Itemize
-מונוטוניות: תהא 
+מונוטוניות:
+ תהא 
 \begin_inset Formula $\Delta\subseteq N$
 \end_inset
 
@@ -2998,7 +3190,8 @@ status open
 \end_layout
 
 \begin_layout Itemize
-קומפקטיות: תהא 
+קומפקטיות:
+ תהא 
 \begin_inset Formula $\Gamma\subseteq N$
 \end_inset
 
@@ -3018,7 +3211,8 @@ status open
 \end_layout
 
 \begin_layout Itemize
-טרנזיטיביות: תהיינה 
+טרנזיטיביות:
+ תהיינה 
 \begin_inset Formula $\Delta,\Gamma\subseteq N$
 \end_inset
 
@@ -3048,7 +3242,8 @@ status open
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $S$
 \end_inset
 
@@ -3071,14 +3266,15 @@ status open
 
 \series bold
 \color red
-כלל הניתוק )ֵ
+כלל הניתוק (ֵ
 \begin_inset Formula $\text{Modus Ponens}$
 \end_inset
 
-(
+)
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(\Sigma,N,A,F\right)$
 \end_inset
 
@@ -3093,18 +3289,20 @@ status open
 
 \series bold
 \color red
-מערכת ההוכחה של הילברט )
+מערכת ההוכחה של הילברט (
 \begin_inset Formula $\hpc$
 \end_inset
 
-(
+)
 \series default
 \color inherit
-: נגדיר מערכת הוכחה כך
+:
+ נגדיר מערכת הוכחה כך
 \end_layout
 
 \begin_layout Itemize
-אלפבית: 
+אלפבית:
+ 
 \begin_inset Formula $\Sigma=\left\{ p_{i}\mid i\in\bbn\right\} \cup\left\{ \neg,\implies,(,)\right\} $
 \end_inset
 
@@ -3112,7 +3310,8 @@ status open
 \end_layout
 
 \begin_layout Itemize
-נוסחאות: 
+נוסחאות:
+ 
 \begin_inset Formula $N=X_{\left\{ p_{i}\mid i\in\bbn\right\} ,\left\{ \neg,\implies\right\} }$
 \end_inset
 
@@ -3147,7 +3346,8 @@ status open
 
 \end_deeper
 \begin_layout Itemize
-כללי היסק: 
+כללי היסק:
+ 
 \begin_inset Formula $F=\left\{ \text{MP}\right\} $
 \end_inset
 
@@ -3161,7 +3361,8 @@ status open
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\a,\b$
 \end_inset
 
@@ -3200,7 +3401,8 @@ status open
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\a,\b$
 \end_inset
 
@@ -3226,7 +3428,8 @@ status open
 הערה
 \series default
 \color inherit
-: בקורס זה ניתן להניח כי הסימון 
+:
+ בקורס זה ניתן להניח כי הסימון 
 \begin_inset Formula $\vdash$
 \end_inset
 
@@ -3244,7 +3447,8 @@ status open
 משפט הדידוקציה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -3274,7 +3478,8 @@ status open
 סימון
 \series default
 \color inherit
-: תהא מערכת הוכחה 
+:
+ תהא מערכת הוכחה 
 \begin_inset Formula $S$
 \end_inset
 
@@ -3296,7 +3501,8 @@ status open
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\a$
 \end_inset
 
@@ -3315,78 +3521,11 @@ status open
 
 \series bold
 \color red
-מערכת הוכחה נאותה
-\series default
-\color inherit
-: מערכת הוכחה 
-\begin_inset Formula $S$
-\end_inset
-
- עבורה לכל 
-\begin_inset Formula $\Gamma$
-\end_inset
-
- הנחות מעל 
-\begin_inset Formula $S$
-\end_inset
-
- ולכל 
-\begin_inset Formula $\a$
-\end_inset
-
- נוסחה מעל 
-\begin_inset Formula $S$
-\end_inset
-
- מתקיים 
-\begin_inset Formula $\left(\Gamma\underset{S}{\vdash}\a\right)\implies\left(\Gamma\models\a\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-מערכת הוכחה שלמה
-\series default
-\color inherit
-: מערכת הוכחה 
-\begin_inset Formula $S$
-\end_inset
-
- עבורה לכל 
-\begin_inset Formula $\Gamma$
-\end_inset
-
- הנחות מעל 
-\begin_inset Formula $S$
-\end_inset
-
- ולכל 
-\begin_inset Formula $\a$
-\end_inset
-
- נוסחה מעל 
-\begin_inset Formula $S$
-\end_inset
-
- מתקיים 
-\begin_inset Formula $\left(\Gamma\models\a\right)\implies\left(\Gamma\underset{S}{\vdash}\a\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
 למה
 \series default
 \color inherit
-: אקסיומות 
+:
+ אקסיומות 
 \begin_inset Formula $\hpc$
 \end_inset
 
@@ -3400,11 +3539,28 @@ status open
 משפט הנאותות
 \series default
 \color inherit
-: 
+:
+ תהיינה 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ הנחות מעל 
 \begin_inset Formula $\hpc$
 \end_inset
 
- מערכת נאותה.
+ ותהא 
+\begin_inset Formula $\a$
+\end_inset
+
+ נוסחה מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\Gamma\underset{\hpc}{\vdash}\a\right)\implies\left(\Gamma\models\a\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3414,7 +3570,8 @@ status open
 למה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -3448,7 +3605,8 @@ status open
 משפט הדיכוטומיה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -3482,7 +3640,8 @@ status open
 קבוצת הנחות עקבית
 \series default
 \color inherit
-: תהא מערכת הוכחה 
+:
+ תהא מערכת הוכחה 
 \begin_inset Formula $S$
 \end_inset
 
@@ -3516,7 +3675,8 @@ status open
 טענה
 \series default
 \color inherit
-: תהא מערכת הוכחה 
+:
+ תהא מערכת הוכחה 
 \begin_inset Formula $S$
 \end_inset
 
@@ -3528,15 +3688,15 @@ status open
 \begin_inset Formula $S$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\Gamma$
 \end_inset
 
- אינה עקבית(
+ אינה עקבית)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימת 
+(קיימת 
 \begin_inset Formula $\a$
 \end_inset
 
@@ -3552,7 +3712,7 @@ status open
 \begin_inset Formula $\left(\Gamma\not\underset{S}{\vdash}\a\right)\land\left(\Gamma\underset{S}{\vdash}\a\right)$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -3562,7 +3722,8 @@ status open
 טענה
 \series default
 \color inherit
-: תהא מערכת הוכחה 
+:
+ תהא מערכת הוכחה 
 \begin_inset Formula $S$
 \end_inset
 
@@ -3574,15 +3735,15 @@ status open
 \begin_inset Formula $S$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\Gamma$
 \end_inset
 
- עקבית(
+ עקבית)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $\Delta\subseteq\Gamma$
 \end_inset
 
@@ -3590,7 +3751,7 @@ status open
 \begin_inset Formula $\Delta$
 \end_inset
 
- עקבית(.
+ עקבית).
 \end_layout
 
 \begin_layout Standard
@@ -3600,7 +3761,8 @@ status open
 קבוצת הנחות עקבית מקסימלית
 \series default
 \color inherit
-: תהא מערכת הוכחה 
+:
+ תהא מערכת הוכחה 
 \begin_inset Formula $S$
 \end_inset
 
@@ -3638,7 +3800,8 @@ status open
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -3672,7 +3835,8 @@ status open
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -3702,7 +3866,8 @@ status open
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -3736,7 +3901,8 @@ status open
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -3758,7 +3924,8 @@ status open
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -3784,7 +3951,8 @@ status open
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -3806,7 +3974,8 @@ status open
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -3814,19 +3983,19 @@ status open
 \begin_inset Formula $\hpc$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\Gamma$
 \end_inset
 
- עקבית(
+ עקבית)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\Gamma$
 \end_inset
 
- ספיקה(.
+ ספיקה).
 \end_layout
 
 \begin_layout Standard
@@ -3836,11 +4005,28 @@ status open
 משפט השלמות
 \series default
 \color inherit
-: 
+:
+ תהיינה 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ הנחות מעל 
 \begin_inset Formula $\hpc$
 \end_inset
 
- מערכת שלמה.
+ ותהא 
+\begin_inset Formula $\a$
+\end_inset
+
+ נוסחה מעל 
+\begin_inset Formula $\hpc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\Gamma\underset{\hpc}{\vdash}\a\right)\impliedby\left(\Gamma\models\a\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3850,7 +4036,8 @@ status open
 מסקנה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -3880,7 +4067,8 @@ status open
 משפט הקומפקטיות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -3888,15 +4076,15 @@ status open
 \begin_inset Formula $\hpc$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\Gamma$
 \end_inset
 
- ספיקה(
+ ספיקה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $\Delta\subseteq\Gamma$
 \end_inset
 
@@ -3904,7 +4092,7 @@ status open
 \begin_inset Formula $\Delta$
 \end_inset
 
- ספיקה(.
+ ספיקה).
 \end_layout
 
 \begin_layout Standard
@@ -3923,7 +4111,8 @@ status open
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Gamma\subseteq\wff$
 \end_inset
 
@@ -3941,7 +4130,8 @@ status open
 טענה
 \series default
 \color inherit
-: הקבוצה 
+:
+ הקבוצה 
 \begin_inset Formula $\left\{ \left(\left\{ p_{i}\right\} \to\left\{ F,T\right\} \right)\backslash\ass\left(\Gamma\right)\mid\Gamma\subseteq\wff\right\} $
 \end_inset
 
@@ -3959,7 +4149,8 @@ status open
 טענה
 \series default
 \color inherit
-: הטופולוגיה 
+:
+ הטופולוגיה 
 \begin_inset Formula $\left\{ \left(\left\{ p_{i}\right\} \to\left\{ F,T\right\} \right)\backslash\ass\left(\Gamma\right)\mid\Gamma\subseteq\wff\right\} $
 \end_inset
 
@@ -3973,7 +4164,8 @@ status open
 הגדרה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4011,7 +4203,8 @@ status open
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4023,7 +4216,7 @@ status open
 \begin_inset Quotes erd
 \end_inset
 
-ע אזי )
+ע אזי (
 \begin_inset Formula $G$
 \end_inset
 
@@ -4031,15 +4224,15 @@ status open
 \begin_inset Formula $2$
 \end_inset
 
-־צביע(
+־צביע)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left\{ \varphi_{G}\left(e\right)\mid e\in E\right\} $
 \end_inset
 
- ספיקה(.
+ ספיקה).
 \end_layout
 
 \begin_layout Standard
@@ -4049,11 +4242,12 @@ status open
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף בן מנייה פשוט לא מכוון אזי )
+ גרף בן מנייה פשוט לא מכוון אזי (
 \begin_inset Formula $G$
 \end_inset
 
@@ -4061,11 +4255,11 @@ status open
 \begin_inset Formula $2$
 \end_inset
 
-־צביע(
+־צביע)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $G^{\prime}\le G$
 \end_inset
 
@@ -4077,7 +4271,7 @@ status open
 \begin_inset Formula $2$
 \end_inset
 
-־צביע(.
+־צביע).
 \end_layout
 
 \begin_layout Standard
@@ -4087,11 +4281,12 @@ status open
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף בן מנייה פשוט לא מכוון אזי )
+ גרף בן מנייה פשוט לא מכוון אזי (
 \begin_inset Formula $G$
 \end_inset
 
@@ -4099,11 +4294,11 @@ status open
 \begin_inset Formula $k$
 \end_inset
 
-־צביע(
+־צביע)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $G^{\prime}\le G$
 \end_inset
 
@@ -4115,7 +4310,7 @@ status open
 \begin_inset Formula $k$
 \end_inset
 
-־צביע(.
+־צביע).
 \end_layout
 
 \begin_layout Standard
@@ -4125,7 +4320,8 @@ status open
 קבוצת השמות גדירה
 \series default
 \color inherit
-: קבוצה 
+:
+ קבוצה 
 \begin_inset Formula $K\subseteq\P\left(\left\{ p_{i}\right\} \to\left\{ F,T\right\} \right)$
 \end_inset
 
@@ -4147,15 +4343,38 @@ status open
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\emptyset$
 \end_inset
 
- גדירה, 
+ גדירה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+:
+ 
 \begin_inset Formula $\left\{ p_{i}\right\} \to\left\{ F,T\right\} $
 \end_inset
 
- גדירה, לכל 
+ גדירה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+:
+ לכל 
 \begin_inset Formula $v$
 \end_inset
 
@@ -4173,7 +4392,8 @@ status open
 טענה
 \series default
 \color inherit
-: קיימת 
+:
+ קיימת 
 \begin_inset Formula $K\subseteq\P\left(\left\{ p_{i}\right\} \to\left\{ F,T\right\} \right)$
 \end_inset
 
@@ -4187,7 +4407,8 @@ status open
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $K_{\text{finite}}=\left\{ v\in\left\{ p_{i}\right\} \to\left\{ F,T\right\} \mid\left|v^{-1}\left(\left\{ T\right\} \right)\right|<\aleph_{0}\right\} $
 \end_inset
 
@@ -4201,7 +4422,8 @@ status open
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $K_{\text{finite}}$
 \end_inset
 
@@ -4215,7 +4437,8 @@ status open
 קבוצת השמות גדירה באופן סופי
 \series default
 \color inherit
-: קבוצה 
+:
+ קבוצה 
 \begin_inset Formula $K\subseteq\P\left(\left\{ p_{i}\right\} \to\left\{ F,T\right\} \right)$
 \end_inset
 
@@ -4237,7 +4460,8 @@ status open
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $K\subseteq\P\left(\left\{ p_{i}\right\} \to\left\{ F,T\right\} \right)$
 \end_inset
 
@@ -4280,7 +4504,8 @@ status open
 מילון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -4298,7 +4523,8 @@ status open
 סימני קבוע במילון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(C,R,F\right)$
 \end_inset
 
@@ -4316,7 +4542,8 @@ status open
 סימני יחס במילון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(C,R,F\right)$
 \end_inset
 
@@ -4334,7 +4561,8 @@ status open
 סימני פונקציה במילון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(C,R,F\right)$
 \end_inset
 
@@ -4352,7 +4580,8 @@ status open
 מילון סופי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -4370,7 +4599,8 @@ status open
 מילון יחסי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -4388,7 +4618,8 @@ status open
 לוגיקה מסדר ראשון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\Sigma$
 \end_inset
 
@@ -4410,7 +4641,8 @@ status open
 משתנים בלוגיקה מסדר ראשון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left\{ x_{i}\mid i\in\bbn\right\} $
 \end_inset
 
@@ -4424,7 +4656,8 @@ status open
 סימני עזר בלוגיקה מסדר ראשון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left\{ "(",")"\right\} $
 \end_inset
 
@@ -4438,7 +4671,8 @@ status open
 קשרים בוליאניים בלוגיקה מסדר ראשון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left\{ \neg,\lor,\land,\implies\right\} $
 \end_inset
 
@@ -4452,7 +4686,8 @@ status open
 כמתים בלוגיקה מסדר ראשון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left\{ x_{i}\mid i\in\bbn\right\} $
 \end_inset
 
@@ -4466,7 +4701,8 @@ status open
 סיגנטורה של לוגיקה מסדר ראשון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4484,7 +4720,8 @@ status open
 שמות עצם מעל מילון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -4502,7 +4739,8 @@ status open
 משפט הקריאה היחידה לשמות עצם
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -4550,7 +4788,8 @@ status open
 הגדרה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -4586,7 +4825,8 @@ status open
 נוסחאות אטומיות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -4604,7 +4844,8 @@ status open
 נוסחאות מעל מילון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -4622,7 +4863,8 @@ status open
 משפט הקריאה היחידה לנוסחאות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -4704,7 +4946,8 @@ status open
 משתנה חופשי בשם עצם
 \series default
 \color inherit
-: נגדיר 
+:
+ נגדיר 
 \begin_inset Formula $\fv:\left\{ t\mid\sigma\text{ שם עצם במילון }t\right\} \to\P\left(\left\{ x_{i}\mid i\in\bbn\right\} \right)$
 \end_inset
 
@@ -4758,7 +5001,8 @@ status open
 משתנה חופשי בנוסחה
 \series default
 \color inherit
-: נגדיר 
+:
+ נגדיר 
 \begin_inset Formula $\fv:\left\{ \varphi\mid\sigma\text{ נוסחה במילון }\varphi\right\} \to\P\left(\left\{ x_{i}\mid i\in\bbn\right\} \right)$
 \end_inset
 
@@ -4836,7 +5080,8 @@ status open
 נוסחה סגורה
 \series default
 \color inherit
-: נוסחה 
+:
+ נוסחה 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -4854,7 +5099,8 @@ status open
 סדר קדימות של פעולות בלוגיקה מסדר ראשון
 \series default
 \color inherit
-: נגדיר סדר ביצוע פעולות
+:
+ נגדיר סדר ביצוע פעולות
 \end_layout
 
 \begin_layout Enumerate
@@ -4892,7 +5138,8 @@ status open
 מבנה עבור מילון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -4942,7 +5189,8 @@ status open
 תחום של מבנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -4968,7 +5216,8 @@ status open
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -4998,7 +5247,8 @@ status open
 פירוש של סימנים במילון על ידי מבנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5024,7 +5274,8 @@ status open
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5058,7 +5309,8 @@ status open
 השמה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5084,7 +5336,8 @@ status open
 השמת ערך לשם עצם
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5150,7 +5403,8 @@ status open
 משפט התלות הסופית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5188,7 +5442,8 @@ status open
 השמה מתוקנת
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5232,7 +5487,8 @@ d &  & \text{else}
 ערך אמת לנוסחה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5326,7 +5582,8 @@ d &  & \text{else}
 משפט התלות הסופית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5364,7 +5621,8 @@ d &  & \text{else}
 נוסחה ספיקה במבנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5394,7 +5652,8 @@ d &  & \text{else}
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5431,7 +5690,8 @@ d &  & \text{else}
 ־מודל של נוסחה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5465,7 +5725,8 @@ d &  & \text{else}
 קבוצת נוסחאות ספיקה במבנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5499,7 +5760,8 @@ d &  & \text{else}
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5533,7 +5795,8 @@ d &  & \text{else}
 נוסחה ספיקה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5572,7 +5835,8 @@ d &  & \text{else}
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5630,7 +5894,8 @@ d &  & \text{else}
 ־שקולות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5664,7 +5929,8 @@ d &  & \text{else}
 ־תקפה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5706,7 +5972,8 @@ d &  & \text{else}
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5732,7 +5999,8 @@ d &  & \text{else}
 נוסחה נכונה במבנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5762,7 +6030,8 @@ d &  & \text{else}
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5795,7 +6064,8 @@ d &  & \text{else}
 ־מודל של נוסחה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5821,7 +6091,8 @@ d &  & \text{else}
 קבוצת נוסחאות נכונה במבנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5851,7 +6122,8 @@ d &  & \text{else}
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5885,7 +6157,8 @@ d &  & \text{else}
 ־ספיקה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5920,7 +6193,8 @@ d &  & \text{else}
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -5974,7 +6248,8 @@ d &  & \text{else}
 ־שקולות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -6004,7 +6279,8 @@ d &  & \text{else}
 ־תקפה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -6042,7 +6318,8 @@ d &  & \text{else}
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -6068,7 +6345,8 @@ d &  & \text{else}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -6090,7 +6368,8 @@ d &  & \text{else}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -6116,7 +6395,8 @@ d &  & \text{else}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -6142,7 +6422,8 @@ d &  & \text{else}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -6168,7 +6449,8 @@ d &  & \text{else}
 פסוק
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -6190,7 +6472,8 @@ d &  & \text{else}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -6216,7 +6499,8 @@ d &  & \text{else}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -6228,7 +6512,7 @@ d &  & \text{else}
 \begin_inset Formula $\varphi$
 \end_inset
 
- נוסחה אזי )
+ נוסחה אזי (
 \begin_inset Formula $\Gamma\cup\left\{ \varphi\right\} $
 \end_inset
 
@@ -6236,15 +6520,15 @@ d &  & \text{else}
 \begin_inset Formula $t$
 \end_inset
 
-־ספיקה(
+־ספיקה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\Gamma\not\tmodels\neg\varphi$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -6254,7 +6538,8 @@ d &  & \text{else}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -6262,7 +6547,7 @@ d &  & \text{else}
 \begin_inset Formula $\varphi,\psi$
 \end_inset
 
- נוסחאות אזי )
+ נוסחאות אזי (
 \begin_inset Formula $\varphi,\psi$
 \end_inset
 
@@ -6270,15 +6555,156 @@ d &  & \text{else}
 \begin_inset Formula $t$
 \end_inset
 
-־שקולות(
+־שקולות)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left(\varphi\iff\psi\right)$
 \end_inset
 
- תקפה(.
+ תקפה).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+איזומורפיזם בין מבנים
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון ויהיו 
+\begin_inset Formula $M,N$
+\end_inset
+
+ מבנים מעל 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ אזי 
+\begin_inset Formula $G:D^{M}\to D^{N}$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל עבורה
+\end_layout
+
+\begin_layout Itemize
+לכל סימן קבוע 
+\begin_inset Formula $c\in\sigma$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $G\left(c^{M}\right)=c^{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל סימן פונקציה 
+\begin_inset Formula $f\in\sigma$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $a_{1}\ldots a_{n}\in D^{M}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $G\left(f^{M}\left(a_{1}\ldots a_{n}\right)\right)=f^{N}\left(G\left(a_{1}\right)\ldots G\left(a_{n}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל סימן יחס 
+\begin_inset Formula $R\in\sigma$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $a_{1}\ldots a_{n}\in D^{M}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(\left(a_{1}\ldots a_{n}\right)\in R^{M}\right)\iff\left(\left(G\left(a_{1}\right)\ldots G\left(a_{n}\right)\right)\in R^{N}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מבנים איזומורפיים
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון אזי מבנים 
+\begin_inset Formula $M,N$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ עבורם קיים איזומורפיזם 
+\begin_inset Formula $G$
+\end_inset
+
+ מ־
+\begin_inset Formula $M$
+\end_inset
+
+ ל־
+\begin_inset Formula $N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון יהיו 
+\begin_inset Formula $M,N$
+\end_inset
+
+ מבנים איזומורפיים מעל 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ פסוק אזי 
+\begin_inset Formula $\left(M\models\varphi\right)\iff\left(N\models\varphi\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -6295,7 +6721,8 @@ d &  & \text{else}
 הערה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -6325,7 +6752,8 @@ d &  & \text{else}
 הצבת שם עצם בשם עצם
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $r,s$
 \end_inset
 
@@ -6391,7 +6819,8 @@ d &  & \text{else}
 הצבת שם עצם בנוסחה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -6505,7 +6934,8 @@ d &  & \text{else}
 שם עצם חופשי להצבה בנוסחה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -6675,7 +7105,8 @@ d &  & \text{else}
 משתנה בעל מופע קשור
 \series default
 \color inherit
-: נגדיר 
+:
+ נגדיר 
 \begin_inset Formula $f:\left\{ \text{נוסחאות}\right\} \to\P\left(\left\{ x_{i}\right\} \right)$
 \end_inset
 
@@ -6749,7 +7180,8 @@ d &  & \text{else}
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -6761,7 +7193,7 @@ d &  & \text{else}
 \begin_inset Formula $r$
 \end_inset
 
- שם עצם אזי )
+ שם עצם אזי (
 \begin_inset Formula $r$
 \end_inset
 
@@ -6769,11 +7201,11 @@ d &  & \text{else}
 \begin_inset Formula $\varphi$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $y\in\fv\left(r\right)$
 \end_inset
 
@@ -6785,7 +7217,7 @@ d &  & \text{else}
 \begin_inset Formula $\varphi\left[\nicefrac{r}{x}\right]$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -6795,7 +7227,8 @@ d &  & \text{else}
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $s$
 \end_inset
 
@@ -6823,7 +7256,8 @@ d &  & \text{else}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $s$
 \end_inset
 
@@ -6849,7 +7283,8 @@ d &  & \text{else}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -6879,7 +7314,8 @@ d &  & \text{else}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -6909,7 +7345,8 @@ d &  & \text{else}
 טענה שינוי שם משתנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -6965,7 +7402,8 @@ d &  & \text{else}
 
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $X_{\left\{ \varphi\mid\text{ נוסחה חסרת כמתים }\varphi\right\} ,\left\{ \forall,\exists\right\} }$
 \end_inset
 
@@ -6979,11 +7417,12 @@ d &  & \text{else}
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi$
 \end_inset
 
- נוסחה אזי )
+ נוסחה אזי (
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -6991,11 +7430,11 @@ d &  & \text{else}
 \begin_inset Formula $\pnf$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימת נוסחה 
+(קיימת נוסחה 
 \begin_inset Formula $\a$
 \end_inset
 
@@ -7011,7 +7450,7 @@ d &  & \text{else}
 \begin_inset Formula $\varphi=Q_{1}x_{1}\ldots Q_{n}x_{n}\a$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -7021,7 +7460,8 @@ d &  & \text{else}
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $\varphi,\psi$
 \end_inset
 
@@ -7087,7 +7527,8 @@ d &  & \text{else}
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -7113,7 +7554,8 @@ d &  & \text{else}
 פסוק אוניברסלי
 \series default
 \color inherit
-: פסוק 
+:
+ פסוק 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -7139,7 +7581,8 @@ d &  & \text{else}
 פסוק יישי
 \series default
 \color inherit
-: פסוק 
+:
+ פסוק 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -7165,7 +7608,8 @@ d &  & \text{else}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -7181,7 +7625,7 @@ d &  & \text{else}
 \begin_inset Formula $c\notin\sigma$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\exists x\varphi$
 \end_inset
 
@@ -7189,11 +7633,11 @@ d &  & \text{else}
 \begin_inset Formula $\sigma$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\varphi\left[\nicefrac{c}{x}\right]$
 \end_inset
 
@@ -7201,7 +7645,7 @@ d &  & \text{else}
 \begin_inset Formula $\sigma\cup\left\{ c\right\} $
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -7211,7 +7655,8 @@ d &  & \text{else}
 סקולמיזציה למילון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -7233,7 +7678,8 @@ d &  & \text{else}
 קבועי סקולם
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -7259,7 +7705,8 @@ d &  & \text{else}
 פונקציות סקולם
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -7285,7 +7732,8 @@ d &  & \text{else}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -7293,7 +7741,7 @@ d &  & \text{else}
 \begin_inset Formula $\sigma$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\forall y_{1}\ldots\forall y_{n}\exists x\varphi$
 \end_inset
 
@@ -7301,11 +7749,11 @@ d &  & \text{else}
 \begin_inset Formula $\sigma$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\forall y_{1}\ldots\forall y_{n}\left(\varphi\left[\nicefrac{f\left(y_{1}\ldots y_{n}\right)}{x}\right]\right)$
 \end_inset
 
@@ -7317,7 +7765,7 @@ d &  & \text{else}
 \begin_inset Formula $n$
 \end_inset
 
-־מקומית(.
+־מקומית).
 \end_layout
 
 \begin_layout Standard
@@ -7327,7 +7775,8 @@ d &  & \text{else}
 משפט סקולם
 \series default
 \color inherit
-: קיים אלגוריתם המקבל נוסחה 
+:
+ קיים אלגוריתם המקבל נוסחה 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -7351,19 +7800,19 @@ d &  & \text{else}
 \begin_inset Formula $\sigma^{\prime}$
 \end_inset
 
- עבורו )
+ עבורו (
 \begin_inset Formula $\varphi$
 \end_inset
 
- ספיק(
+ ספיק)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\psi$
 \end_inset
 
- ספיק(.
+ ספיק).
 \end_layout
 
 \begin_layout Standard
@@ -7373,7 +7822,8 @@ d &  & \text{else}
 טענה
 \series default
 \color inherit
-: קיים אלגוריתם 
+:
+ קיים אלגוריתם 
 \begin_inset Formula $\text{FOLWFF}$
 \end_inset
 
@@ -7393,35 +7843,35 @@ d &  & \text{else}
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $\varphi$
 \end_inset
 
- ספיק(
+ ספיק)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\a$
 \end_inset
 
- ספיק(.
+ ספיק).
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $\varphi$
 \end_inset
 
- תקפה(
+ תקפה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\a$
 \end_inset
 
- טאוטולוגיה(.
+ טאוטולוגיה).
 \end_layout
 
 \begin_layout Standard
@@ -7431,7 +7881,8 @@ d &  & \text{else}
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -7461,7 +7912,8 @@ d &  & \text{else}
 שם עצם סגור
 \series default
 \color inherit
-: שם עצם חסר משתנים.
+:
+ שם עצם חסר משתנים.
 \end_layout
 
 \begin_layout Standard
@@ -7471,7 +7923,8 @@ d &  & \text{else}
 מבנה הרברנד
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -7517,7 +7970,8 @@ d &  & \text{else}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -7550,7 +8004,8 @@ d &  & \text{else}
 הערה
 \series default
 \color inherit
-: מהגדרת מבנה הרברנד נובע כי ניתן לכתוב 
+:
+ מהגדרת מבנה הרברנד נובע כי ניתן לכתוב 
 \begin_inset Formula $D^{M}=\left\{ \varphi\mid\sigma\text{ שם עצם חסר משתנים ב־}\varphi\right\} $
 \end_inset
 
@@ -7564,7 +8019,8 @@ d &  & \text{else}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -7586,7 +8042,8 @@ d &  & \text{else}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M$
 \end_inset
 
@@ -7642,15 +8099,15 @@ d &  & \text{else}
 \begin_inset Formula $\varphi$
 \end_inset
 
- נוסחה אזי )
+ נוסחה אזי (
 \begin_inset Formula $\exists x\varphi$
 \end_inset
 
- ספיקה(
+ ספיקה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיים שם עצם סגור 
+(קיים שם עצם סגור 
 \begin_inset Formula $s$
 \end_inset
 
@@ -7658,7 +8115,7 @@ d &  & \text{else}
 \begin_inset Formula $\varphi\left[\nicefrac{s}{x}\right]$
 \end_inset
 
- ספיקה(.
+ ספיקה).
 \end_layout
 
 \begin_layout Itemize
@@ -7670,15 +8127,15 @@ d &  & \text{else}
 \begin_inset Formula $\exists x\varphi$
 \end_inset
 
- פסוק אזי )
+ פסוק אזי (
 \begin_inset Formula $\exists x\varphi$
 \end_inset
 
- תקפה(
+ תקפה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיים שם עצם סגור 
+(קיים שם עצם סגור 
 \begin_inset Formula $s$
 \end_inset
 
@@ -7686,7 +8143,7 @@ d &  & \text{else}
 \begin_inset Formula $\varphi\left[\nicefrac{s}{x}\right]$
 \end_inset
 
- תקפה(.
+ תקפה).
 \end_layout
 
 \begin_layout Itemize
@@ -7694,15 +8151,15 @@ d &  & \text{else}
 \begin_inset Formula $\varphi$
 \end_inset
 
- נוסחה אזי )
+ נוסחה אזי (
 \begin_inset Formula $\forall x\varphi$
 \end_inset
 
- ספיקה(
+ ספיקה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל שם עצם סגור 
+(לכל שם עצם סגור 
 \begin_inset Formula $s$
 \end_inset
 
@@ -7710,7 +8167,7 @@ d &  & \text{else}
 \begin_inset Formula $\varphi\left[\nicefrac{s}{x}\right]$
 \end_inset
 
- ספיקה(.
+ ספיקה).
 \end_layout
 
 \begin_layout Itemize
@@ -7722,15 +8179,15 @@ d &  & \text{else}
 \begin_inset Formula $\forall x\varphi$
 \end_inset
 
- פסוק אזי )
+ פסוק אזי (
 \begin_inset Formula $\forall x\varphi$
 \end_inset
 
- תקפה(
+ תקפה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל שם עצם חסר משתנים 
+(לכל שם עצם חסר משתנים 
 \begin_inset Formula $s$
 \end_inset
 
@@ -7738,7 +8195,7 @@ d &  & \text{else}
 \begin_inset Formula $\varphi\left[\nicefrac{s}{x}\right]$
 \end_inset
 
- תקפה(.
+ תקפה).
 \end_layout
 
 \begin_layout Standard
@@ -7748,7 +8205,8 @@ d &  & \text{else}
 משפט הרברנד
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -7756,19 +8214,19 @@ d &  & \text{else}
 \begin_inset Formula $\varphi$
 \end_inset
 
- פסוק אוניברסלי אזי )
+ פסוק אוניברסלי אזי (
 \begin_inset Formula $\varphi$
 \end_inset
 
- ספיק(
+ ספיק)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\varphi$
 \end_inset
 
- ספיק במבנה הרברנד(.
+ ספיק במבנה הרברנד).
 \end_layout
 
 \begin_layout Standard
@@ -7787,7 +8245,8 @@ d &  & \text{else}
 מופעי בסיס
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -7813,7 +8272,8 @@ d &  & \text{else}
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -7831,23 +8291,24 @@ d &  & \text{else}
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Gamma$
 \end_inset
 
- קבוצת פסוקים סגורים וכמתים אזי )
+ קבוצת פסוקים סגורים וכמתים אזי (
 \begin_inset Formula $\Gamma$
 \end_inset
 
- ספיקה(
+ ספיקה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\Gamma$
 \end_inset
 
- ספיקה במבנה הרברנד(.
+ ספיקה במבנה הרברנד).
 \end_layout
 
 \begin_layout Standard
@@ -7857,7 +8318,8 @@ d &  & \text{else}
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -7903,7 +8365,8 @@ d &  & \text{else}
 משפט הקומפקטיות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -7919,15 +8382,15 @@ d &  & \text{else}
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $\Gamma$
 \end_inset
 
- ספיקה(
+ ספיקה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $\Delta\subseteq\Gamma$
 \end_inset
 
@@ -7935,19 +8398,19 @@ d &  & \text{else}
 \begin_inset Formula $\Delta$
 \end_inset
 
- ספיקה(.
+ ספיקה).
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $\Gamma\tmodels\varphi$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימת 
+(קיימת 
 \begin_inset Formula $\Delta\subseteq\Gamma$
 \end_inset
 
@@ -7955,19 +8418,19 @@ d &  & \text{else}
 \begin_inset Formula $\Delta\tmodels\varphi$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $\Gamma\vmodels\varphi$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימת 
+(קיימת 
 \begin_inset Formula $\Delta\subseteq\Gamma$
 \end_inset
 
@@ -7975,7 +8438,7 @@ d &  & \text{else}
 \begin_inset Formula $\Delta\vmodels\varphi$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -7985,7 +8448,8 @@ d &  & \text{else}
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x,y$
 \end_inset
 
@@ -7997,15 +8461,15 @@ d &  & \text{else}
 \begin_inset Formula $\left\{ E\left(\cdot,\cdot\right)\right\} $
 \end_inset
 
- המקיימת )
+ המקיימת (
 \begin_inset Formula $M\models\Gamma$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)יש מסלול ב־
+(יש מסלול ב־
 \begin_inset Formula $M$
 \end_inset
 
@@ -8017,7 +8481,7 @@ d &  & \text{else}
 \begin_inset Formula $y$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -8027,7 +8491,8 @@ d &  & \text{else}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -8039,15 +8504,15 @@ d &  & \text{else}
 \begin_inset Formula $\sigma$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\exists x\varphi$
 \end_inset
 
- תקפה(
+ תקפה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימים שמות עצם סגורים 
+(קיימים שמות עצם סגורים 
 \begin_inset Formula $t_{1}\ldots t_{n}$
 \end_inset
 
@@ -8055,7 +8520,42 @@ d &  & \text{else}
 \begin_inset Formula $\varphi\left[\nicefrac{t_{1}}{x}\right]\lor\ldots\lor\varphi\left[\nicefrac{t_{n}}{x}\right]$
 \end_inset
 
- תקפה(.
+ תקפה).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מבנה הנקין
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון אזי מבנה 
+\begin_inset Formula $H$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $a\in D^{H}$
+\end_inset
+
+ קיים שם עצם סגור 
+\begin_inset Formula $t$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $t^{H}=a$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -8070,7 +8570,8 @@ d &  & \text{else}
 \series bold
 הערה
 \series default
-: ניתן להגדיר מילון ומבנה לא בני־מנייה.
+:
+ ניתן להגדיר מילון ומבנה לא בני־מנייה.
 \end_layout
 
 \begin_layout Standard
@@ -8078,7 +8579,8 @@ d &  & \text{else}
 \series bold
 משפט לוונהיים־סקולם היורד
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -8090,15 +8592,15 @@ d &  & \text{else}
 \begin_inset Formula $\sigma$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\varphi$
 \end_inset
 
- ספיקה(
+ ספיקה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיים מבנה בן־מנייה 
+(קיים מבנה בן־מנייה 
 \begin_inset Formula $M$
 \end_inset
 
@@ -8110,7 +8612,7 @@ d &  & \text{else}
 \begin_inset Formula $\varphi$
 \end_inset
 
- ספיקה(.
+ ספיקה).
 \end_layout
 
 \begin_layout Standard
@@ -8118,7 +8620,8 @@ d &  & \text{else}
 \series bold
 משפט לוונהיים־סקולם העולה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -8174,7 +8677,8 @@ d &  & \text{else}
 \series bold
 מסקנה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -8190,7 +8694,11 @@ d &  & \text{else}
 \begin_inset Formula $\sigma$
 \end_inset
 
- המקיימת 
+ המקיימת
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\left(\left|M\right|=\kappa\right)\iff\left(M\models\Gamma\right)$
 \end_inset
 
@@ -8202,7 +8710,8 @@ d &  & \text{else}
 \series bold
 הערה
 \series default
-: אקסיומות 
+:
+ אקסיומות 
 \begin_inset Formula $\text{ZFC}$
 \end_inset
 
@@ -8214,27 +8723,83 @@ d &  & \text{else}
 \series bold
 מסקנה
 \series default
-: קיים מבנה בן־מנייה לתורת הקבוצות.
+:
+ קיים מבנה בן־מנייה לתורת הקבוצות.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\valid}{\text{VALID}}
+{\text{VALID}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\halt}{\text{HALT}}
+{\text{HALT}}
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-משפט בדיקת תקפות
+סימון
 \series default
-: קיים אלגוריתם המקבל נוסחה 
-\begin_inset Formula $\varphi$
+:
+ יהי 
+\begin_inset Formula $\sigma$
 \end_inset
 
- המקיים )האלגוריתם מחזיר תשובה(
-\begin_inset Formula $\iff$
+ מילון אזי 
+\begin_inset Formula $\valid=\left\{ \varphi\mid\left(\sigma\text{ נוסחה מעל }\varphi\right)\land\left(\text{ תקפה}\varphi\right)\right\} $
 \end_inset
 
-)
-\begin_inset Formula $\varphi$
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט אלגוריתם בדיקת תקפות
+\series default
+:
+ יהי 
+\begin_inset Formula $\sigma$
 \end_inset
 
- תקפה(.
+ מילון אזי 
+\begin_inset Formula $\valid\in\re$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט צ'רץ'־טיורינג
+\series default
+:
+ 
+\begin_inset Formula $\halt\le_{m}\valid$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ 
+\begin_inset Formula $\valid\notin\r$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -8242,7 +8807,8 @@ d &  & \text{else}
 \series bold
 בעיית הריצוף
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $R_{1}\ldots R_{n}$
 \end_inset
 
@@ -8310,21 +8876,146 @@ d &  & \text{else}
 \begin_layout Standard
 
 \series bold
-טענה
+בעיית הריצוף
 \series default
-: לא קיים אלגוריתם המכריע את בעיית הריצוף.
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $R:\left[n\right]^{2}\times\left\{ \text{left},\text{right},\text{above},\text{below}\right\} \to\left\{ \text{yes},\text{no}\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $f:\bbn^{2}\to\left[n\right]$
+\end_inset
+
+ עבורה
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $m\in\bbn$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $R\left(f\left(\begin{smallmatrix}n\\
+m
+\end{smallmatrix}\right),f\left(\begin{smallmatrix}n-1\\
+m
+\end{smallmatrix}\right),\text{left}\right)=\text{yes}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $m,n\in\bbn$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $R\left(f\left(\begin{smallmatrix}n\\
+m
+\end{smallmatrix}\right),f\left(\begin{smallmatrix}n+1\\
+m
+\end{smallmatrix}\right),\text{right}\right)=\text{yes}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $m,n\in\bbn$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $R\left(f\left(\begin{smallmatrix}n\\
+m
+\end{smallmatrix}\right),f\left(\begin{smallmatrix}n\\
+m+1
+\end{smallmatrix}\right),\text{above}\right)=\text{yes}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $m\in\bbn_{+}$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $R\left(f\left(\begin{smallmatrix}n\\
+m
+\end{smallmatrix}\right),f\left(\begin{smallmatrix}n\\
+m-1
+\end{smallmatrix}\right),\text{below}\right)=\text{yes}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\tiling}{\text{TILING}}
+{\text{TILING}}
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-משפט צ'רץ'־טיורינג
+סימון
 \series default
-: לא קיים אלגוריתם המקבל נוסחה 
-\begin_inset Formula $\varphi$
+:
+ 
+\begin_inset Formula $\tiling=\left\{ \left(n,R,f\right)\mid R\text{ פתרון לבעיית הריצוף עבור }f\right\} $
 \end_inset
 
- ומכריע האם היא תקיפה.
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ 
+\begin_inset Formula $\valid\le_{m}\tiling$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ 
+\begin_inset Formula $\tiling\notin\r$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -8332,7 +9023,8 @@ d &  & \text{else}
 \series bold
 יחס קונגרואנציה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -8344,7 +9036,8 @@ d &  & \text{else}
 \end_layout
 
 \begin_layout Itemize
-רפלקסיבי: 
+רפלקסיבי:
+ 
 \begin_inset Formula $\forall x\left(E\left(x,x\right)\right)$
 \end_inset
 
@@ -8352,7 +9045,8 @@ d &  & \text{else}
 \end_layout
 
 \begin_layout Itemize
-סימטרי: 
+סימטרי:
+ 
 \begin_inset Formula $\forall x\forall y\left(E\left(x,y\right)\implies E\left(y,x\right)\right)$
 \end_inset
 
@@ -8360,7 +9054,8 @@ d &  & \text{else}
 \end_layout
 
 \begin_layout Itemize
-טרנזיטיבי: 
+טרנזיטיבי:
+ 
 \begin_inset Formula $\forall x\forall y\forall z\left(\left(E\left(x,y\right)\land E\left(y,z\right)\right)\implies E\left(x,z\right)\right)$
 \end_inset
 
@@ -8396,7 +9091,8 @@ d &  & \text{else}
 \series bold
 הערה
 \series default
-: בהינתן מילון עם שיוויון 
+:
+ בהינתן מילון עם שיוויון 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -8412,7 +9108,8 @@ d &  & \text{else}
 \series bold
 מילון מחלקות קונגרואנציה
 \series default
-: יהי מילון 
+:
+ יהי מילון 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -8469,9 +9166,11 @@ d &  & \text{else}
 \begin_layout Standard
 
 \series bold
+\size small
 החלפת שיוויון ביחס קונגרואנציה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -8495,11 +9194,7 @@ d &  & \text{else}
 \begin_inset Formula $\varphi$
 \end_inset
 
- אזי
-\begin_inset Newline newline
-\end_inset
-
-
+ אזי 
 \begin_inset Formula $\varphi_{E}=\varphi\left[\nicefrac{E}{=}\right]\land\left(\text{ יחס שקילות}E\right)\land\left(\bigwedge_{i=1}^{n}\left(f_{i}\text{ יחס קונגרואנציה ביחס ל־}E\right)\right)\land\left(\bigwedge_{i=1}^{m}\left(E_{i}\text{ יחס קונגרואנציה ביחס ל־}E\right)\right)$
 \end_inset
 
@@ -8511,7 +9206,8 @@ d &  & \text{else}
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -8551,7 +9247,8 @@ d &  & \text{else}
 \series bold
 משפט
 \series default
-: קיים אלגוריתם המקבל נוסחה 
+:
+ קיים אלגוריתם המקבל נוסחה 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -8575,19 +9272,19 @@ d &  & \text{else}
 \begin_inset Formula $\sigma^{\prime}$
 \end_inset
 
- עבורו )
+ עבורו (
 \begin_inset Formula $\varphi$
 \end_inset
 
- ספיק(
+ ספיק)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\psi$
 \end_inset
 
- ספיק(.
+ ספיק).
 \end_layout
 
 \begin_layout Standard
@@ -8595,7 +9292,8 @@ d &  & \text{else}
 \series bold
 משפט
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -8603,19 +9301,19 @@ d &  & \text{else}
 \begin_inset Formula $\sigma$
 \end_inset
 
- עם שיוויון אזי )
+ עם שיוויון אזי (
 \begin_inset Formula $\Gamma$
 \end_inset
 
- ספיקה(
+ ספיקה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\Gamma_{E}$
 \end_inset
 
- ספיקה(.
+ ספיקה).
 \end_layout
 
 \begin_layout Standard
@@ -8623,7 +9321,8 @@ d &  & \text{else}
 \series bold
 משפט הקומפקטיות
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -8635,15 +9334,15 @@ d &  & \text{else}
 \begin_inset Formula $\varphi$
 \end_inset
 
- נוסחה אזי )
+ נוסחה אזי (
 \begin_inset Formula $\Gamma$
 \end_inset
 
- ספיקה(
+ ספיקה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)לכל 
+(לכל 
 \begin_inset Formula $\Delta\subseteq\Gamma$
 \end_inset
 
@@ -8651,7 +9350,141 @@ d &  & \text{else}
 \begin_inset Formula $\Delta$
 \end_inset
 
- ספיקה(.
+ ספיקה).
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\m}{\mathcal{M}}
+{\mathcal{M}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+המודל הסטנדרטי של הטבעיים
+\series default
+:
+ יהי מילון 
+\begin_inset Formula $\left\{ c_{0},c_{1},f_{+},f_{\times},R_{>}\right\} $
+\end_inset
+
+ אזי מבנה 
+\begin_inset Formula $\m_{\bbn}$
+\end_inset
+
+ עבורו
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D^{\m_{\bbn}}=\bbn$
+\end_inset
+
+ וכן 
+\begin_inset Formula $c_{0}^{\m_{\bbn}}=0$
+\end_inset
+
+ וכן 
+\begin_inset Formula $c_{1}^{\m_{\bbn}}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{+}^{\m_{\bbn}}\left(a,b\right)=a+b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{\times}^{\m_{\bbn}}\left(a,b\right)=a\times b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\left(a,b\right)\in R_{>}^{\m_{\bbn}}\right)\iff\left(a>b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\at}{\text{AT}}
+{\text{AT}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פסוקים נכונים אריתמטית
+\series default
+:
+ יהי מילון 
+\begin_inset Formula $\left\{ c_{0},c_{1},f_{+},f_{\times},R_{>}\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\at=\left\{ \a\mid\left(\m_{\bbn}\models\a\right)\land\left(\fv\left(\a\right)=\emptyset\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מודל לא סטנדרטי של הטבעיים
+\series default
+:
+ יהי מילון 
+\begin_inset Formula $\left\{ c_{0},c_{1},f_{+},f_{\times},R_{>}\right\} $
+\end_inset
+
+ אזי מבנה 
+\begin_inset Formula $M$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $M\models\at$
+\end_inset
+
+ וכן 
+\begin_inset Formula $M$
+\end_inset
+
+ אינו איזומורפי ל־
+\begin_inset Formula $\m_{\bbn}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $M$
+\end_inset
+
+ מודל לא סטדנרטי של הטבעיים אזי 
+\begin_inset Formula $\left|D^{M}\right|>\aleph_{0}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -8666,9 +9499,12 @@ d &  & \text{else}
 \begin_layout Standard
 
 \series bold
+\color blue
 כלל ג'ן
 \series default
-: יהי 
+\color inherit
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -8686,13 +9522,16 @@ d &  & \text{else}
 \begin_layout Standard
 
 \series bold
-מערכת ההוכחה של הילברט )
+\color blue
+מערכת ההוכחה של הילברט (
 \begin_inset Formula $\hc$
 \end_inset
 
-(
+)
 \series default
-: יהי 
+\color inherit
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -8700,7 +9539,8 @@ d &  & \text{else}
 \end_layout
 
 \begin_layout Itemize
-אלפבית: 
+אלפבית:
+ 
 \begin_inset Formula $\Sigma=\sigma$
 \end_inset
 
@@ -8708,8 +9548,9 @@ d &  & \text{else}
 \end_layout
 
 \begin_layout Itemize
-נוסחאות: 
-\begin_inset Formula $N=X_{\left\{ t\mid\text{ שם עצם}t\right\} ,\left\{ \neg,\implies\right\} }$
+נוסחאות:
+ 
+\begin_inset Formula $N=X_{\left\{ t\mid\text{ שם עצם}t\right\} ,\left\{ \neg,\implies,\forall\right\} }$
 \end_inset
 
 .
@@ -8775,7 +9616,8 @@ d &  & \text{else}
 
 \end_deeper
 \begin_layout Itemize
-כללי היסק: 
+כללי היסק:
+ 
 \begin_inset Formula $F=\left\{ \text{MP},\text{Gen}\right\} $
 \end_inset
 
@@ -8785,9 +9627,12 @@ d &  & \text{else}
 \begin_layout Standard
 
 \series bold
+\color blue
 הערה
 \series default
-: מערכת ההוכחה 
+\color inherit
+:
+ מערכת ההוכחה 
 \begin_inset Formula $\hc$
 \end_inset
 
@@ -8797,9 +9642,23 @@ d &  & \text{else}
 \begin_layout Standard
 
 \series bold
+\color blue
+הערה
+\series default
+\color inherit
+:
+ במערכת הוכחה מעל לוגיקה מסדר ראשון ניתן לעשות שינוי שם בנוסחה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
 משפט הנאותות
 \series default
-: יהי 
+\color inherit
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -8829,9 +9688,12 @@ d &  & \text{else}
 \begin_layout Standard
 
 \series bold
+\color blue
 טענה
 \series default
-: יהי 
+\color inherit
+:
+ יהי 
 \begin_inset Formula $\a\in\wff$
 \end_inset
 
@@ -8857,9 +9719,12 @@ d &  & \text{else}
 \begin_layout Standard
 
 \series bold
+\color blue
 משפט הדידוקציה
 \series default
-: תהיינה 
+\color inherit
+:
+ תהיינה 
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -8904,9 +9769,371 @@ d &  & \text{else}
 \begin_layout Standard
 
 \series bold
+\color blue
+משפט הדידוקציה
+\series default
+\color inherit
+:
+ תהיינה 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ הנחות מעל 
+\begin_inset Formula $\hc$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $\a,\b$
+\end_inset
+
+ נוחסאות מעל 
+\begin_inset Formula $\hc$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $\Gamma\cup\left\{ \a\right\} \underset{\hc}{\vdash}\b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\Gamma\cup\left\{ \neg\a\right\} \underset{\hc}{\vdash}\b$
+\end_inset
+
+ וכן בהוכחות לא הופעל כלל 
+\begin_inset Formula $\text{Gen}$
+\end_inset
+
+ על משתנה חופשי ב־
+\begin_inset Formula $\a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Gamma\underset{\hc}{\vdash}\b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+קבוצת נוסחאות 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־שלמה
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $\sigma,\Sigma$
+\end_inset
+
+ מילונים באשר 
+\begin_inset Formula $\sigma\subseteq\Sigma$
+\end_inset
+
+ אזי קבוצת נוסחאות 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ עבורה לכל פסוק 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(\varphi\in\Gamma\right)\lor\left(\neg\varphi\in\Gamma\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+קבוצת נוסחאות בעלת תכונת הנקין
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון אזי קבוצת נוסחאות 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ עבורה לכל נוסחה 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\neg\forall x\varphi$
+\end_inset
+
+ פסוק וכן 
+\begin_inset Formula $\neg\forall x\varphi\in\Gamma$
+\end_inset
+
+ מתקיים שקיים סימן קבוע 
+\begin_inset Formula $c\in\sigma$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\neg\varphi\left[\nicefrac{c}{x}\right]\in\Gamma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון ותהא 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ עקבית אזי קיים מילון 
+\begin_inset Formula $\sigma\subseteq\Sigma$
+\end_inset
+
+ וקיימת 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ עקבית 
+\begin_inset Formula $\sigma$
+\end_inset
+
+־שלמה מעל 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\Gamma\subseteq\Delta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+למה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון תהא 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ עקבית תהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ נוסחה באשר 
+\begin_inset Formula $\neg\forall x\varphi$
+\end_inset
+
+ פסוק וכן 
+\begin_inset Formula $\neg\forall x\varphi\in\Gamma$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $c\notin\sigma$
+\end_inset
+
+ סימן קבוע אזי 
+\begin_inset Formula $\Gamma\cup\left\{ \neg\varphi\left[\nicefrac{c}{x}\right]\right\} $
+\end_inset
+
+ עקבית מעל 
+\begin_inset Formula $\sigma\cup\left\{ c\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט הנקין
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון ותהא 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ עקבית אזי קיים מילון 
+\begin_inset Formula $\sigma\subseteq\Sigma$
+\end_inset
+
+ וקיימת 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ עקבית מעל 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ המקיימת את תכונת הנקין עבורה 
+\begin_inset Formula $\Gamma\subseteq\Delta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון ותהא 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ עקבית אזי קיים מילון 
+\begin_inset Formula $\sigma\subseteq\Sigma$
+\end_inset
+
+ וקיימת 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ עקבית 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+־שלמה המקיימת את תכונת הנקין עבורה 
+\begin_inset Formula $\Gamma\subseteq\Delta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון תהא 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ עקבית שלמה המקיימת את תכונת הנקין יהי 
+\begin_inset Formula $M$
+\end_inset
+
+ מבנה ההרברנד מעל 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left(\left(t_{1}\ldots t_{n}\right)\in R^{M}\right)\iff\left(R\left(t_{1}\ldots t_{n}\right)\in\Gamma\right)$
+\end_inset
+
+ לכל סימן יחס 
+\begin_inset Formula $R\in\sigma$
+\end_inset
+
+ ולכל שמות עצם 
+\begin_inset Formula $t_{1}\ldots t_{n}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ נוסחה אזי 
+\begin_inset Formula $\left(\varphi\in\Gamma\right)\iff\left(M\models\varphi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון ותהא 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ עקבית שלמה המקיימת את תכונת הנקין אזי קיים מבנה 
+\begin_inset Formula $M$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $M\models\Gamma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
 משפט השלמות של גדל
 \series default
-: יהי 
+\color inherit
+:
+ יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -8934,7 +10161,101 @@ d &  & \text{else}
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\th}{\text{Th}}
+{\text{Th}}
+\end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+תורה של מבנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $M$
+\end_inset
+
+ מבנה מעל מילון 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\th\left(M\right)=\left\{ \varphi\mid\left(M\models\varphi\right)\land\left(\fv\left(\varphi\right)=\emptyset\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\th\left(\m_{\bbn}\right)=\at$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון ותהא 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ קבוצת פסוקים התב
+\begin_inset Quotes erd
+\end_inset
+
+ש
+\end_layout
+
+\begin_layout Itemize
+לכל מבנים 
+\begin_inset Formula $M,N$
+\end_inset
+
+ המספקים את 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\th\left(M\right)=\th\left(N\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל פסוק 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(\Gamma\vdash\varphi\right)\lor\left(\Gamma\vdash\left(\neg\varphi\right)\right)$
+\end_inset
+
+.
 \end_layout
 
 \end_body
