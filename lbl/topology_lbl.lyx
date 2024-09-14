@@ -941,7 +941,10 @@ literal "true"
 \end_inset
 
 
-\begin_inset Formula $\mathcal{T}\left(\mathcal{S}\right)=\left\{ U\subseteq X\mid\exists A_{1}\ldots A_{k}\subseteq\mathcal{S}.U=\bigcup\left(\bigcap_{i=1}^{k}A\right)\right\} $
+\begin_inset Formula $\mathcal{T}\left(\mathcal{S}\right)=\left\{ U\subseteq X\mid\exists\left\{ S_{\a,i}\right\} _{\substack{\a\in\Lambda\\
+i\in\left[k_{\a}\right]
+}
+}\subseteq\mathcal{S}.U=\bigcup_{\a\in\Lambda}\left(\bigcap_{i=1}^{k_{\a}}S_{\a,i}\right)\right\} $
 \end_inset
 
 .
@@ -3316,7 +3319,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
 \end_inset
 
-מ
+ מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -3389,7 +3392,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
 \end_inset
 
-מ
+ מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -3416,7 +3419,7 @@ E^{\mathcal{C}}\in\mathcal{T}
 \begin_inset Formula $\left\{ \left(X_{\a},\t_{\a}\right)\right\} _{\a\in\Lambda}$
 \end_inset
 
-מ
+ מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -4286,11 +4289,11 @@ E^{\mathcal{C}}\in\mathcal{T}
 \end_inset
 
  רציפה עבורה 
-\begin_inset Formula $f\left(0\right)=x$
+\begin_inset Formula $\g\left(0\right)=x$
 \end_inset
 
  וכן 
-\begin_inset Formula $f\left(1\right)=y$
+\begin_inset Formula $\g\left(1\right)=y$
 \end_inset
 
 .
@@ -4767,6 +4770,14 @@ E^{\mathcal{C}}\in\mathcal{T}
 \series default
 :
  יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט ויהי 
 \begin_inset Formula $D$
 \end_inset
 
@@ -6447,18 +6458,14 @@ E^{\mathcal{C}}\in\mathcal{T}
 \color inherit
 :
  יהי 
-\begin_inset Formula $X$
+\begin_inset Formula $\left(X,d\right)$
 \end_inset
 
- מ
-\begin_inset Quotes erd
+ מרחב מטרי אזי 
+\begin_inset Formula $\left(X,\t\left(d\right)\right)$
 \end_inset
 
-ט מושרה ממרחב מטרי אזי 
-\begin_inset Formula $X$
-\end_inset
-
- מרחב 
+ הינו 
 \begin_inset Formula $T_{2}$
 \end_inset
 
@@ -6564,72 +6571,6 @@ E^{\mathcal{C}}\in\mathcal{T}
 
  וכן אינו 
 \begin_inset Formula $T_{2}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color green
-טענה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $\left(X,d\right)$
-\end_inset
-
- מרחב מטרי אזי 
-\begin_inset Formula $\left(X,\t\left(d\right)\right)$
-\end_inset
-
- הינו 
-\begin_inset Formula $T_{2}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color green
-טענה
-\series default
-\color inherit
-:
- תהא 
-\begin_inset Formula $\left(X,\t\right)$
-\end_inset
-
- מ
-\begin_inset Quotes erd
-\end_inset
-
-ט 
-\begin_inset Formula $T_{i}$
-\end_inset
-
- ותהא 
-\begin_inset Formula $\left(Y,\s\right)$
-\end_inset
-
- מ
-\begin_inset Quotes erd
-\end_inset
-
-ט באשר 
-\begin_inset Formula $\t\subseteq\s$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left(Y,S\right)$
-\end_inset
-
- הינה 
-\begin_inset Formula $T_{i}$
 \end_inset
 
 .
