@@ -4247,7 +4247,7 @@ status open
 \begin_inset Formula $G$
 \end_inset
 
- גרף בן מנייה פשוט לא מכוון אזי (
+ גרף בן־מנייה פשוט לא מכוון אזי (
 \begin_inset Formula $G$
 \end_inset
 
@@ -4286,7 +4286,7 @@ status open
 \begin_inset Formula $G$
 \end_inset
 
- גרף בן מנייה פשוט לא מכוון אזי (
+ גרף בן־מנייה פשוט לא מכוון אזי (
 \begin_inset Formula $G$
 \end_inset
 
@@ -6570,6 +6570,156 @@ d &  & \text{else}
 
 \series bold
 \color purple
+הסגור האוניברסלי
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון ותהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ נוסחה עבורה 
+\begin_inset Formula $\fv\left(\varphi\right)=\left\{ x_{1}\ldots x_{n}\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\varphi^{\forall}=\forall x_{1}\forall x_{2}\ldots\forall x_{n}\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+הסגור היישי
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון ותהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ נוסחה עבורה 
+\begin_inset Formula $\fv\left(\varphi\right)=\left\{ x_{1}\ldots x_{n}\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\varphi^{\exists}=\exists x_{1}\exists x_{2}\ldots\exists x_{n}\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+סימון
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון ותהא 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ קבוצת נוסחאות אזי 
+\begin_inset Formula $\Gamma^{\forall}=\left\{ \varphi^{\forall}\mid\varphi\in\Gamma\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון תהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ נוסחה ויהי 
+\begin_inset Formula $M$
+\end_inset
+
+ מבנה אזי (
+\begin_inset Formula $\varphi^{\forall}$
+\end_inset
+
+ ספיק ב־
+\begin_inset Formula $M$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $M\vmodels\varphi$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון תהא 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ קבוצת נוסחאות ותהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ נוסחה אזי 
+\begin_inset Formula $\left(\Gamma\vmodels\varphi\right)\iff\left(\Gamma^{\forall}\vmodels\varphi^{\forall}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
 איזומורפיזם בין מבנים
 \series default
 \color inherit
@@ -6644,7 +6794,7 @@ d &  & \text{else}
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 מבנים איזומורפיים
 \series default
 \color inherit
@@ -6679,7 +6829,7 @@ d &  & \text{else}
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 טענה
 \series default
 \color inherit
@@ -6705,13 +6855,6 @@ d &  & \text{else}
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -7652,83 +7795,6 @@ d &  & \text{else}
 
 \series bold
 \color orange
-סקולמיזציה למילון
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $\sigma$
-\end_inset
-
- מילון ויהיו 
-\begin_inset Formula $a_{1}\ldots a_{n}\notin\sigma$
-\end_inset
-
- סימני קבועים ופונקציות אזי 
-\begin_inset Formula $\sigma\cup\left\{ a_{1}\ldots a_{n}\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color orange
-קבועי סקולם
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $\sigma$
-\end_inset
-
- מילון ויהי 
-\begin_inset Formula $\sigma\cup\left\{ a_{1}\ldots a_{n}\right\} $
-\end_inset
-
- סקולמיזציה של סימני קבועים ל־
-\begin_inset Formula $\sigma$
-\end_inset
-
- אזי 
-\begin_inset Formula $a_{1}\ldots a_{n}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color orange
-פונקציות סקולם
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $\sigma$
-\end_inset
-
- מילון ויהי 
-\begin_inset Formula $\sigma\cup\left\{ a_{1}\ldots a_{n}\right\} $
-\end_inset
-
- סקולמיזציה של פונקציות ל־
-\begin_inset Formula $\sigma$
-\end_inset
-
- אזי 
-\begin_inset Formula $a_{1}\ldots a_{n}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color orange
 טענה
 \series default
 \color inherit
@@ -7757,15 +7823,28 @@ d &  & \text{else}
 \begin_inset Formula $\forall y_{1}\ldots\forall y_{n}\left(\varphi\left[\nicefrac{f\left(y_{1}\ldots y_{n}\right)}{x}\right]\right)$
 \end_inset
 
- ספיק מעל סקולמיזציה 
+ ספיק מעל המילון 
 \begin_inset Formula $\sigma\cup\left\{ f\right\} $
 \end_inset
 
- של פונקציה 
+ באשר 
+\begin_inset Formula $f$
+\end_inset
+
+ פונקציה 
 \begin_inset Formula $n$
 \end_inset
 
 ־מקומית).
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\sk}{\text{sk}}
+{\text{sk}}
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7776,11 +7855,11 @@ d &  & \text{else}
 \series default
 \color inherit
 :
- קיים אלגוריתם המקבל נוסחה 
-\begin_inset Formula $\varphi$
+ קיים אלגוריתם 
+\begin_inset Formula $\sk$
 \end_inset
 
- באשר 
+ המקבל נוסחה 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -7788,15 +7867,7 @@ d &  & \text{else}
 \begin_inset Formula $\sigma$
 \end_inset
 
- ומחזיר פסוק אוניברסלי 
-\begin_inset Formula $\psi$
-\end_inset
-
- באשר 
-\begin_inset Formula $\psi$
-\end_inset
-
- מעל מילון 
+ ומחזיר פסוק אוניברסלי מעל מילון 
 \begin_inset Formula $\sigma^{\prime}$
 \end_inset
 
@@ -7809,10 +7880,33 @@ d &  & \text{else}
 \end_inset
 
 (
-\begin_inset Formula $\psi$
+\begin_inset Formula $\sk\left(\varphi\right)$
 \end_inset
 
  ספיק).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+סקולמיזציה למילון
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון ותהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ נוסחה אזי המילון המינימלי מעליו מוגדר 
+\begin_inset Formula $\sk\left(\varphi\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -8649,7 +8743,7 @@ d &  & \text{else}
 \begin_inset Formula $\kappa$
 \end_inset
 
- ולכל מבנה 
+ קיים מבנה 
 \begin_inset Formula $M^{\prime}$
 \end_inset
 
@@ -8661,7 +8755,7 @@ d &  & \text{else}
 \begin_inset Formula $\sigma$
 \end_inset
 
- מתקיים כי 
+ עבורו 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -9770,7 +9864,7 @@ m-1
 
 \series bold
 \color blue
-משפט הדידוקציה
+משפט הדיכוטומיה
 \series default
 \color inherit
 :
