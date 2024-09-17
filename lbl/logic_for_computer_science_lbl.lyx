@@ -553,7 +553,7 @@ literal "true"
 \series default
 :
  
-\begin_inset Formula $X_{B,F}=\bigcup_{i=1}^{\infty}\left\{ a\in\Sigma^{*}\mid n\text{ בעלת סדרת יצירה באורך }a\right\} $
+\begin_inset Formula $X_{B,F}=\bigcup_{n=1}^{\infty}\left\{ a\in\Sigma^{*}\mid n\text{ בעלת סדרת יצירה באורך }a\right\} $
 \end_inset
 
 .
@@ -2437,7 +2437,7 @@ status open
 \end_inset
 
  וכן 
-\begin_inset Formula $\Gamma\cup\left\{ \a\right\} \models\b$
+\begin_inset Formula $\Gamma\cup\left\{ \a\right\} \models\left(\neg\b\right)$
 \end_inset
 
  אזי 
@@ -2491,7 +2491,7 @@ status open
 \end_inset
 
  אזי 
-\begin_inset Formula $\a\left(\nicefrac{\varphi}{p}\right)=\varphi$
+\begin_inset Formula $\a\left[\nicefrac{\varphi}{p}\right]=\varphi$
 \end_inset
 
 .
@@ -2507,7 +2507,7 @@ status open
 \end_inset
 
  אזי 
-\begin_inset Formula $\a\left(\nicefrac{\varphi}{p}\right)=\a$
+\begin_inset Formula $\a\left[\nicefrac{\varphi}{p}\right]=\a$
 \end_inset
 
 .
@@ -2523,7 +2523,7 @@ status open
 \end_inset
 
  אזי 
-\begin_inset Formula $\a\left(\nicefrac{\varphi}{p}\right)=\neg\b\left(\nicefrac{\varphi}{p}\right)$
+\begin_inset Formula $\a\left[\nicefrac{\varphi}{p}\right]=\neg\b\left[\nicefrac{\varphi}{p}\right]$
 \end_inset
 
 .
@@ -2543,7 +2543,7 @@ status open
 \end_inset
 
  אזי 
-\begin_inset Formula $\a\left(\nicefrac{\varphi}{p}\right)=\b\left(\nicefrac{\varphi}{p}\right)\circ\g\left(\nicefrac{\varphi}{p}\right)$
+\begin_inset Formula $\a\left[\nicefrac{\varphi}{p}\right]=\b\left[\nicefrac{\varphi}{p}\right]\circ\g\left[\nicefrac{\varphi}{p}\right]$
 \end_inset
 
 .
@@ -2566,7 +2566,7 @@ status open
 \end_inset
 
  אזי 
-\begin_inset Formula $\a\left(\nicefrac{\varphi}{p}\right)\in\wff$
+\begin_inset Formula $\a\left[\nicefrac{\varphi}{p}\right]\in\wff$
 \end_inset
 
 .
@@ -2601,7 +2601,7 @@ status open
 \end_inset
 
  אזי 
-\begin_inset Formula $\a\left(\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right)=\varphi_{i}$
+\begin_inset Formula $\a\left[\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right]=\varphi_{i}$
 \end_inset
 
 .
@@ -2621,7 +2621,7 @@ status open
 \end_inset
 
  אזי 
-\begin_inset Formula $\a\left(\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right)=\a$
+\begin_inset Formula $\a\left[\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right]=\a$
 \end_inset
 
 .
@@ -2637,7 +2637,7 @@ status open
 \end_inset
 
  אזי 
-\begin_inset Formula $\a\left(\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right)=\neg\b\left(\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right)$
+\begin_inset Formula $\a\left[\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right]=\neg\b\left[\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right]$
 \end_inset
 
 .
@@ -2656,8 +2656,41 @@ status open
 \begin_inset Formula $\a=\b\circ\g$
 \end_inset
 
- אזי 
-\begin_inset Formula $\a\left(\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right)=\b\left(\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right)\circ\g\left(\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right)$
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\a\left[\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right]=\b\left[\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right]\circ\g\left[\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סימון
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $\a,\varphi\in\wff$
+\end_inset
+
+ יהי 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ פסוק אטומי ותהא 
+\begin_inset Formula $v$
+\end_inset
+
+ השמה אזי ההשמה 
+\begin_inset Formula $v\left[\nicefrac{\overline{v}\left(\varphi\right)}{p_{i}}\right]\left(p_{j}\right)=\left\{ \begin{smallmatrix}v\left(p_{j}\right) &  & i\ne j\\
+\overline{v}\left(\varphi\right) &  & i=j
+\end{smallmatrix}\right.$
 \end_inset
 
 .
@@ -2676,21 +2709,44 @@ status open
 \end_inset
 
  יהי 
-\begin_inset Formula $p_{i}$
+\begin_inset Formula $p$
 \end_inset
 
  פסוק אטומי ותהא 
 \begin_inset Formula $v$
 \end_inset
 
- השמה נגדיר השמה 
-\begin_inset Formula $v^{\prime}\left(p_{j}\right)=\left\{ \begin{smallmatrix}v\left(p_{j}\right) &  & i\ne j\\
-\overline{v}\left(\varphi\right) &  & i=j
-\end{smallmatrix}\right.$
+ השמה אזי 
+\begin_inset Formula $\overline{v}\left(\a\left(\nicefrac{\varphi}{p}\right)\right)=\overline{v\left[\nicefrac{\overline{v}\left(\varphi\right)}{p}\right]}\left(\a\right)$
 \end_inset
 
- אזי 
-\begin_inset Formula $\overline{v}\left(\a\left(\nicefrac{\varphi}{p}\right)\right)=\overline{v^{\prime}}\left(\a\right)$
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סימון
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $\a,\varphi_{1}\ldots\varphi_{n}\in\wff$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $p_{1}\ldots p_{n}$
+\end_inset
+
+ פסוקים אטומים ותהא 
+\begin_inset Formula $v$
+\end_inset
+
+ השמה אזי ההשמה 
+\begin_inset Formula $v\left[\nicefrac{\overline{v}\left(\varphi_{1}\right)}{p_{1}},\ldots,\nicefrac{\overline{v}\left(\varphi_{1}\right)}{p_{1}}\right]\left(p_{j}\right)=\left\{ \begin{smallmatrix}v\left(p_{j}\right) &  & j\notin\left[n\right]\\
+\overline{v}\left(\varphi_{j}\right) &  & j\in\left[n\right]
+\end{smallmatrix}\right.$
 \end_inset
 
 .
@@ -2704,7 +2760,6 @@ status open
 \series default
 \color inherit
 :
- טענה:
  יהיו 
 \begin_inset Formula $\a,\varphi_{1}\ldots\varphi_{n}\in\wff$
 \end_inset
@@ -2717,14 +2772,8 @@ status open
 \begin_inset Formula $v$
 \end_inset
 
- השמה נגדיר השמה 
-\begin_inset Formula $v^{\prime}\left(p_{j}\right)=\left\{ \begin{smallmatrix}v\left(p_{j}\right) &  & j\notin\left[n\right]\\
-\overline{v}\left(\varphi_{j}\right) &  & j\in\left[n\right]
-\end{smallmatrix}\right.$
-\end_inset
-
- אזי 
-\begin_inset Formula $\overline{v}\left(\a\left(\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right)\right)=\overline{v^{\prime}}\left(\a\right)$
+ השמה אזי 
+\begin_inset Formula $\overline{v}\left(\a\left[\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right]\right)=\overline{v\left[\nicefrac{\overline{v}\left(\varphi_{1}\right)}{p_{1}},\ldots,\nicefrac{\overline{v}\left(\varphi_{1}\right)}{p_{1}}\right]}\left(\a\right)$
 \end_inset
 
 .
@@ -2746,12 +2795,12 @@ status open
 \begin_inset Formula $\varphi_{1}\ldots\varphi_{n}\in\wff$
 \end_inset
 
- ויהיו 
+ יהיו 
 \begin_inset Formula $p_{1}\ldots p_{n}$
 \end_inset
 
  פסוקים אטומים אזי 
-\begin_inset Formula $\a\left(\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right)$
+\begin_inset Formula $\a\left[\nicefrac{\varphi_{1}}{p_{1}}\ldots\nicefrac{\varphi_{n}}{p_{n}}\right]$
 \end_inset
 
  טאוטולוגיה.
@@ -4707,7 +4756,7 @@ status open
 \end_inset
 
  לוגיקה מסדר ראשון אזי המילון 
-\begin_inset Formula $D$
+\begin_inset Formula $\sigma$
 \end_inset
 
  בה.
@@ -5151,19 +5200,11 @@ status open
 \begin_inset Formula $C:\left\{ c_{i}\right\} \to D$
 \end_inset
 
- חח
-\begin_inset Quotes erd
-\end_inset
-
-ע וכן 
+ וכן 
 \begin_inset Formula $R:\left\{ R_{n,i}\right\} \to D^{n}$
 \end_inset
 
- חח
-\begin_inset Quotes erd
-\end_inset
-
-ע לכל 
+ לכל 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -5171,12 +5212,8 @@ status open
 \begin_inset Formula $F:\left\{ f_{n,i}\right\} \to\left(D^{n}\to D\right)$
 \end_inset
 
- חח
-\begin_inset Quotes erd
-\end_inset
-
-ע אזי 
-\begin_inset Formula $\left(D,C\left(c_{0}\right),\ldots,R\left(R_{2,0}\right),\ldots,f\left(f_{0,0}\right)\right)$
+ אזי 
+\begin_inset Formula $\left(D,C\left(c_{0}\right),\ldots,R\left(R_{1,0}\right),\ldots,f\left(f_{0,0}\right)\ldots\right)$
 \end_inset
 
 .
@@ -5852,7 +5889,7 @@ d &  & \text{else}
 \begin_inset Formula $\varphi$
 \end_inset
 
- נוסחה עבורה אם 
+ נוסחה עבורה לכל 
 \begin_inset Formula $\left(M,v\right)$
 \end_inset
 
@@ -5864,7 +5901,7 @@ d &  & \text{else}
 \begin_inset Formula $\Gamma$
 \end_inset
 
- אז 
+ מתקיים כי 
 \begin_inset Formula $\left(M,v\right)$
 \end_inset
 
@@ -6206,7 +6243,7 @@ d &  & \text{else}
 \begin_inset Formula $\varphi$
 \end_inset
 
- נוסחה עבורה אם 
+ נוסחה עבורה לכל 
 \begin_inset Formula $M$
 \end_inset
 
@@ -6218,7 +6255,7 @@ d &  & \text{else}
 \begin_inset Formula $\Gamma$
 \end_inset
 
- אז 
+ מתקיים כי 
 \begin_inset Formula $M$
 \end_inset
 
@@ -6676,7 +6713,7 @@ d &  & \text{else}
 \end_inset
 
 (
-\begin_inset Formula $M\vmodels\varphi$
+\begin_inset Formula $M\models\varphi$
 \end_inset
 
 ).
@@ -6892,7 +6929,7 @@ d &  & \text{else}
 
 \series bold
 \color brown
-הצבת שם עצם בשם עצם
+הצבת שם עצם במשתנה
 \series default
 \color inherit
 :
@@ -7980,7 +8017,7 @@ d &  & \text{else}
 \begin_inset Formula $\varphi$
 \end_inset
 
- נוסחה חסרת משתנים וכמתים המורכבת מיחסים 
+ נוסחה חסרת משתנים וכמתים המורכבת מהנוסחאות האטומיות 
 \begin_inset Formula $\a_{1}\ldots\a_{k}$
 \end_inset
 
@@ -7993,7 +8030,7 @@ d &  & \text{else}
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(M\models\psi\right)\iff\left(\overline{v}\left(\text{FOLWFF}\left(\psi\right)\right)=T\right)$
+\begin_inset Formula $\left(M\models\varphi\right)\iff\left(\overline{v}\left(\text{FOLWFF}\left(\varphi\right)\right)=T\right)$
 \end_inset
 
 .
@@ -8390,7 +8427,7 @@ d &  & \text{else}
 \begin_inset Formula $\Gamma$
 \end_inset
 
- קבוצת פסוקים סגורים וכמתים אזי (
+ קבוצת פסוקים סגורים חסרי כמתים אזי (
 \begin_inset Formula $\Gamma$
 \end_inset
 
@@ -8662,10 +8699,26 @@ d &  & \text{else}
 \begin_layout Standard
 
 \series bold
-הערה
+עוצמה של מבנה
 \series default
 :
- ניתן להגדיר מילון ומבנה לא בני־מנייה.
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון ויהי 
+\begin_inset Formula $M$
+\end_inset
+
+ מבנה מעל 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|M\right|=\left|D^{M}\right|$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -8678,7 +8731,7 @@ d &  & \text{else}
 \begin_inset Formula $\sigma$
 \end_inset
 
- מילון בן־מנייה ותהא 
+ מילון ותהא 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -8694,12 +8747,8 @@ d &  & \text{else}
 \begin_inset Formula $\iff$
 \end_inset
 
-(קיים מבנה בן־מנייה 
+(קיים מבנה לכל היותר בן־מנייה 
 \begin_inset Formula $M$
-\end_inset
-
- מעל 
-\begin_inset Formula $\sigma$
 \end_inset
 
  בו 
@@ -8719,7 +8768,7 @@ d &  & \text{else}
 \begin_inset Formula $\sigma$
 \end_inset
 
- מילון בן־מנייה יהי 
+ מילון יהי 
 \begin_inset Formula $M$
 \end_inset
 
@@ -8751,10 +8800,6 @@ d &  & \text{else}
 \begin_inset Formula $\kappa$
 \end_inset
 
- מעל 
-\begin_inset Formula $\sigma$
-\end_inset
-
  עבורו 
 \begin_inset Formula $\varphi$
 \end_inset
@@ -8776,7 +8821,7 @@ d &  & \text{else}
 \begin_inset Formula $\sigma$
 \end_inset
 
- מילון בן־מנייה ותהא 
+ מילון ותהא 
 \begin_inset Formula $\kappa$
 \end_inset
 
@@ -8788,11 +8833,7 @@ d &  & \text{else}
 \begin_inset Formula $\sigma$
 \end_inset
 
- המקיימת
-\begin_inset Newline newline
-\end_inset
-
-
+ המקיימת 
 \begin_inset Formula $\left(\left|M\right|=\kappa\right)\iff\left(M\models\Gamma\right)$
 \end_inset
 
@@ -8842,12 +8883,8 @@ d &  & \text{else}
 סימון
 \series default
 :
- יהי 
-\begin_inset Formula $\sigma$
-\end_inset
-
- מילון אזי 
-\begin_inset Formula $\valid=\left\{ \varphi\mid\left(\sigma\text{ נוסחה מעל }\varphi\right)\land\left(\text{ תקפה}\varphi\right)\right\} $
+ 
+\begin_inset Formula $\valid=\left\{ \left<\sigma,\varphi\right>\mid\left(\sigma\text{ נוסחה מעל }\varphi\right)\land\left(\text{ תקפה}\varphi\right)\right\} $
 \end_inset
 
 .
@@ -10169,7 +10206,11 @@ m-1
 \begin_inset Formula $\sigma$
 \end_inset
 
- עבורו 
+ עבורו
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\left(\left(t_{1}\ldots t_{n}\right)\in R^{M}\right)\iff\left(R\left(t_{1}\ldots t_{n}\right)\in\Gamma\right)$
 \end_inset
 
@@ -10185,7 +10226,11 @@ m-1
 \begin_inset Formula $\varphi$
 \end_inset
 
- נוסחה אזי 
+ נוסחה אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\left(\varphi\in\Gamma\right)\iff\left(M\models\varphi\right)$
 \end_inset
 
@@ -10223,15 +10268,11 @@ m-1
 
 \series bold
 \color blue
-משפט השלמות של גדל
+משפט השלמות
 \series default
 \color inherit
 :
- יהי 
-\begin_inset Formula $\sigma$
-\end_inset
-
- מילון ללא שיוויון תהיינה 
+ תהיינה 
 \begin_inset Formula $\Gamma$
 \end_inset
 
