@@ -158,23 +158,19 @@
     </div>
 
     <div class="container">
-        <pre id="lastCommitName"></pre>
+        <p style="direction: ltr; text-align: left;">
+            Last commit: <span id="lastCommitName" style="display: inline;"></span>
+        </p>
+        <p>© 2024 רון מיכלמן, כל הזכויות שמורות.</p>
         <script>
             fetch('https://api.github.com/repos/yeahBOYYYYY/math-summaries/commits?per_page=1')
             .then(res => res.json())
             .then(res => {
-                document.getElementById('lastCommitName').innerHTML = res[0].commit.message
+                document.getElementById('lastCommitName').innerHTML = res[0].commit.message;
             })
         </script>
     </div>
 
-    <!-- <div class="container">
-        <h2>
-            מעקב אחרי
-        </h2>
-        <p>לכל הפדופילים שם בחוץ.</p>
-        <iframe src="https://calendar.google.com/calendar/embed?src=c0379e05ca9c2100a836046230d391fdc7a251a2b9c9d816cfdb7260daeec70b%40group.calendar.google.com&ctz=Asia%2FJerusalem" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    </div> -->
 
 
     <!-- Info box overlay -->
