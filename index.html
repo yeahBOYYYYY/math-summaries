@@ -157,6 +157,17 @@
         </script>
     </div>
 
+    <div class="container">
+        <pre id="lastCommitName"></pre>
+        <script>
+            fetch('https://api.github.com/repos/yeahBOYYYYY/math-summaries/commits?per_page=1')
+            .then(res => res.json())
+            .then(res => {
+                document.getElementById('lastCommitName').innerHTML = res[0].commit.message
+            })
+        </script>
+    </div>
+
     <!-- <div class="container">
         <h2>
             מעקב אחרי
