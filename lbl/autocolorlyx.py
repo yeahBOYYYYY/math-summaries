@@ -17,9 +17,9 @@ class Color(StrEnum):
     BROWN = "brown"
     ORANGE = "orange"
     TEAL = "teal"
-    CYAN = "cyan"
-    OLIVE = "olive"
-    PINK = "pink"
+    # PINK = "pink"
+    # CYAN = "cyan"
+    # OLIVE = "olive"
 
     def next(self):
         cls = self.__class__
@@ -96,5 +96,5 @@ if __name__ == "__main__":
 
     # colorAbsolute(path, color, from_line, to_line)
 
-    path = "topology_lbl.lyx"
+    path = "NotUsed/calculus_lbl.lyx"
     colorChanges(path)
