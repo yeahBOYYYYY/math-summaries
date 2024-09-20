@@ -184,10 +184,11 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color purple
+\color black
 סימון
 \series default
 \color inherit
+
 :
  
 \begin_inset Formula $\left[n\right]=\left\{ 1,\ldots,n\right\} $
@@ -199,24 +200,18 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color purple
-הערה
-\series default
-\color inherit
-:
- כל הקבוצות מעכשיו הן סופיות.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color purple
+\color black
 עיקרון החיבור
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula $\forall A_{1}\ldots A_{n}.\left|\biguplus_{i=1}^{n}A_{i}\right|=\sum_{i=1}^{n}\left|A_{i}\right|$
+ תהיינה 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ קבוצות סופיות אזי 
+\begin_inset Formula $\left|\biguplus_{i=1}^{n}A_{i}\right|=\sum_{i=1}^{n}\left|A_{i}\right|$
 \end_inset
 
 .
@@ -225,13 +220,22 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color purple
+\color black
 עיקרון המשלים
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula $\forall A,B.A\subseteq B\implies\left|A\right|+\left|B\backslash A\right|=\left|B\right|$
+ תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קבוצות סופיות באשר 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|A\right|+\left|B\backslash A\right|=\left|B\right|$
 \end_inset
 
 .
@@ -240,17 +244,26 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color purple
+\color black
 עיקרון הכפל
 \series default
 \color inherit
+
 :
- נניח כי 
-\begin_inset Formula $A=\biguplus_{i=1}^{n}A_{i}$
+ תהיינה 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ קבוצות סופיות זרות באשר לכל 
+\begin_inset Formula $i,j\in\left[n\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|A_{i}\right|=\left|A_{j}\right|$
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(\forall i,j\in\left[n\right].\left|A_{i}\right|=\left|A_{j}\right|\right)\implies\left(\left|A\right|=n\cdot\left|A_{1}\right|\right)$
+\begin_inset Formula $\left|\biguplus_{i=1}^{n}A_{i}\right|=n\cdot\left|A_{1}\right|$
 \end_inset
 
 .
@@ -259,55 +272,30 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color purple
-הכללה
+\color black
+עיקרון הכפל
 \series default
 \color inherit
+
 :
- יהי 
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה סופית יהי 
 \begin_inset Formula $R\subseteq A^{2}$
 \end_inset
 
- יחס שקילות אזי 
-\begin_inset Formula $\left(\forall x,y\in A.\left|\left[x\right]_{R}\right|=\left|\left[y\right]_{R}\right|\right)\implies\left(\forall x\in A.\left|A\right|=\left|\left[x\right]_{R}\right|\cdot\left|\nicefrac{A}{R}\right|\right)$
+ יחס שקילות עבורו לכל 
+\begin_inset Formula $x,y\in A$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color purple
-הכללה
-\series default
-\color inherit
-:
- תהא 
-\begin_inset Formula $\Pi\subseteq\P A{}$
-\end_inset
-
- חלוקה אזי 
-\begin_inset Formula $\left(\forall X,Y\in\Pi.\left|X\right|=\left|Y\right|\right)\implies\left(\forall X\in\Pi.\left|A\right|=\left|\Pi\right|\cdot\left|X\right|\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color purple
-עיקרון החלוקה/שיקולי סימטריה
-\series default
-\color inherit
-:
- נניח כי 
-\begin_inset Formula $A=\biguplus_{i=1}^{n}A_{i}$
+ מתקיים 
+\begin_inset Formula $\left|\left[x\right]_{R}\right|=\left|\left[y\right]_{R}\right|$
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(\forall i,j\in\left[n\right].\left|A_{i}\right|=\left|A_{j}\right|\right)\implies\left(\frac{\left|A\right|}{n}=\left|A_{1}\right|\right)$
+\begin_inset Formula $\forall x\in A.\left(\left|A\right|=\left|\left[x\right]_{R}\right|\cdot\left|\nicefrac{A}{R}\right|\right)$
 \end_inset
 
 .
@@ -316,12 +304,77 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color purple
+\color black
+עיקרון הכפל
+\series default
+\color inherit
+
+:
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה סופית תהא 
+\begin_inset Formula $\Pi\subseteq\P A{}$
+\end_inset
+
+ חלוקה עבורה לכל 
+\begin_inset Formula $X,Y\in\Pi$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|X\right|=\left|Y\right|$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\forall X\in\Pi.\left(\left|A\right|=\left|\Pi\right|\cdot\left|X\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+עיקרון החלוקה/שיקולי סימטריה
+\series default
+\color inherit
+
+:
+ תהיינה 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ קבוצות סופיות זרות באשר לכל 
+\begin_inset Formula $i,j\in\left[n\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|A_{i}\right|=\left|A_{j}\right|$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{\left|\biguplus_{i=1}^{n}A_{i}\right|}{n}=\left|A_{1}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
 תמורה/פרמוטציה
 \series default
 \color inherit
+
 :
- פונקציה 
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה סופית אזי פונקציה 
 \begin_inset Formula $f:A\to A$
 \end_inset
 
@@ -335,12 +388,37 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color purple
+\color black
+טענה
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\left[k\right]\to\left[n\right]\right|=n^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
 הערה
 \series default
 \color inherit
+
 :
- 
+ יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי 
 \begin_inset Formula $n^{k}$
 \end_inset
 
@@ -350,12 +428,37 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color purple
+\color black
+עצרת
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $n!=\prod_{k=1}^{n}k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
 טענה
 \series default
 \color inherit
+
 :
- 
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\left|\left\{ f\in\left[n\right]\to\left[n\right]\bmid\text{ חח"ע ועל}f\right\} \right|=n!$
 \end_inset
 
@@ -365,13 +468,18 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color purple
-חליפות
+\color black
+עצרת
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula $\left|\left\{ f\in\left[k\right]\to\left[n\right]\bmid\text{חח"ע}f\right\} \right|=P\left(k,n\right)=\frac{n!}{\left(n-k\right)!}$
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $A!=\left|\left\{ f\in A\to A\bmid\text{ חח"ע ועל}f\right\} \right|$
 \end_inset
 
 .
@@ -380,12 +488,97 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color purple
+\color black
+טענה
+\series default
+\color inherit
+
+:
+ תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קבוצות עבורן 
+\begin_inset Formula $\left|A\right|=\left|B\right|$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A!=B!$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+
+:
+ 
+\begin_inset Formula $\aleph_{0}!=\aleph$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+חליפות
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $P\left(k,n\right)=\left|\left\{ f\in\left[k\right]\to\left[n\right]\bmid\text{חח"ע}f\right\} \right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $P\left(k,n\right)=\frac{n!}{\left(n-k\right)!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
 הערה
 \series default
 \color inherit
+
 :
- 
+ יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי 
 \begin_inset Formula $P\left(n,k\right)$
 \end_inset
 
@@ -395,12 +588,21 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color purple
+\color black
 הגדרה
 \series default
 \color inherit
+
 :
- 
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה ויהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\P Ak=\left\{ B\in\P A{}\mid\left|B\right|=k\right\} $
 \end_inset
 
@@ -410,13 +612,18 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color purple
+\color black
 צירופים
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula $\left|\P{\left[n\right]}k\right|=C\left(n,k\right)=\binom{n}{k}=\frac{n!}{k!\left(n-k\right)!}$
+ יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $C\left(n,k\right)=\left|\P{\left[n\right]}k\right|$
 \end_inset
 
 .
@@ -425,13 +632,58 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color purple
+\color black
+מקדם בינומי
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\binom{n}{k}=\frac{n!}{k!\left(n-k\right)!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $C\left(n,k\right)=\binom{n}{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
 הערה
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula $\binom{n}{k}$
+ יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $C\left(n,k\right)$
 \end_inset
 
  זו ספירה בלי חשיבות לסדר ובלי חזרה.
@@ -440,13 +692,18 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color purple
+\color black
 חלוקות
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula $\left|\left\{ \left<x_{1},\ldots,x_{n}\right>\in\bbn^{n}\mid\sum_{i=1}^{n}x_{i}=k\right\} \right|=S\left(n,k\right)=\binom{k+n-1}{k}$
+ יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S\left(n,k\right)=\left|\left\{ x\in\bbn^{n}\mid\sum_{i=1}^{n}x_{i}=k\right\} \right|$
 \end_inset
 
 .
@@ -455,12 +712,37 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color purple
+\color black
+טענה
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S\left(n,k\right)=\binom{k+n-1}{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
 הערה
 \series default
 \color inherit
+
 :
- 
+ יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי 
 \begin_inset Formula $S\left(n,k\right)$
 \end_inset
 
@@ -470,10 +752,11 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color purple
-מולטי קבוצה
+\color black
+מולטי־קבוצה
 \series default
 \color inherit
+
 :
  תהא 
 \begin_inset Formula $A$
@@ -484,15 +767,7 @@ literal "true"
 \end_inset
 
  אזי 
-\begin_inset Formula $B=\left(A,f\right)$
-\end_inset
-
- זאת קבוצה עם 
-\begin_inset Formula $f\left(a\right)$
-\end_inset
-
- פעמים האיבר 
-\begin_inset Formula $a$
+\begin_inset Formula $\left(A,f\right)$
 \end_inset
 
 .
@@ -501,16 +776,88 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color brown
-סידור עצמים בשורה
+\color black
+עוצמה של מולטי־קבוצה
 \series default
 \color inherit
+
+:
+ תהא 
+\begin_inset Formula $\left(A,f\right)$
+\end_inset
+
+ מולטי־קבוצה אזי 
+\begin_inset Formula $\left|\left(A,f\right)\right|=\left|A\right|\cdot\sum_{a\in A}f\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+סימון
+\series default
+\color inherit
+
+:
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה ויהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{P}_{k}^{\text{Multi}}\left(A\right)=\left\{ \left(B,f\right)\mid\left(B\subseteq A\right)\land\left(f:B\to\bbn_{+}\right)\land\left(\left|\left(B,f\right)\right|=k\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\mathcal{P}_{k}^{\text{Multi}}\left(\left[n\right]\right)\right|=S\left(n,k\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הערה סידור עצמים בשורה
+\series default
+\color inherit
+
 :
  כמות האפשרויות לסדר 
 \begin_inset Formula $n$
 \end_inset
 
- עצמים בשורה היא 
+ עצמים בשורה הינה 
 \begin_inset Formula $n!$
 \end_inset
 
@@ -520,16 +867,17 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color brown
-סידור עצמים במעגל
+\color blue
+הערב סידור עצמים במעגל
 \series default
 \color inherit
+
 :
  כמות האפשרויות לסדר 
 \begin_inset Formula $n$
 \end_inset
 
- עצמים בשורה היא 
+ עצמים במעגל הינה 
 \begin_inset Formula $\left(n-1\right)!$
 \end_inset
 
@@ -539,10 +887,11 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color brown
-בחירה
+\color blue
+הערה בחירה
 \series default
 \color inherit
+
 :
  כמות האפשרויות לבחור 
 \begin_inset Formula $k$
@@ -552,7 +901,7 @@ literal "true"
 \begin_inset Formula $n$
 \end_inset
 
- עצמים היא 
+ עצמים הינה 
 \begin_inset Formula $\binom{n}{k}$
 \end_inset
 
@@ -562,10 +911,11 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color brown
-חלוקת כדורים לתאים
+\color blue
+הערה חלוקת כדורים לתאים
 \series default
 \color inherit
+
 :
  כמות האפשרויות לחלק 
 \begin_inset Formula $k$
@@ -575,7 +925,7 @@ literal "true"
 \begin_inset Formula $n$
 \end_inset
 
- תאים שונים היא 
+ תאים שונים הינה 
 \begin_inset Formula $S\left(n,k\right)$
 \end_inset
 
@@ -585,13 +935,22 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color brown
+\color blue
 טענה
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula $\forall k\le n.\binom{n}{k}=\binom{n}{n-k}$
+ יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $k\le n$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\binom{n}{k}=\binom{n}{n-k}$
 \end_inset
 
 .
@@ -600,12 +959,17 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color brown
+\color blue
 זהות פסקל
 \series default
 \color inherit
+
 :
- 
+ יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\binom{n}{k}=\binom{n-1}{k}+\binom{n-1}{k-1}$
 \end_inset
 
@@ -615,13 +979,62 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color brown
+\color blue
+טענה
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $k\cdot\binom{n}{k}=\binom{n-1}{k-1}\cdot n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\binom{n}{\floor{\frac{n}{2}}}=\binom{n}{\ceil{\frac{n}{2}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
 משפט
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula $\binom{n}{k}\le\binom{n}{\floor{\frac{n}{2}}}=\binom{n}{\ceil{\frac{n}{2}}}$
+ יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\binom{n}{k}\le\binom{n}{\floor{\frac{n}{2}}}$
 \end_inset
 
 .
@@ -630,13 +1043,22 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color brown
-הבינום של ניוטון
+\color blue
+משפט הבינום של ניוטון
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula $\forall a,b\in\bbr.\forall n\in\bbn.\left(a+b\right)^{n}=\sum_{k=0}^{n}\binom{n}{k}a^{k}b^{n-k}$
+ יהיו 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(a+b\right)^{n}=\sum_{k=0}^{n}\binom{n}{k}a^{k}b^{n-k}$
 \end_inset
 
 .
@@ -645,13 +1067,18 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color brown
+\color blue
 משפט
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula $\left|\left\{ X\in\P{\left[n\right]}{}\mid\left|X\right|\in\bbn_{even}\right\} \right|=2^{n-1}$
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\left\{ X\in\P{\left[n\right]}{}\mid\left|X\right|\in\bbn_{\text{even}}\right\} \right|=2^{n-1}$
 \end_inset
 
 .
@@ -660,12 +1087,41 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color brown
-מולטינום
+\color blue
+מסקנה
 \series default
 \color inherit
+
 :
- 
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\left\{ X\in\P{\left[n\right]}{}\mid\left|X\right|\in\bbn_{\text{odd}}\right\} \right|=2^{n-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מקדם מולטינומי
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $n,k_{1}\ldots k_{\ell}\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\sum_{i=1}^{\ell}k_{i}=n$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\binom{n}{k_{1},\ldots,k_{\ell}}=\frac{n!}{k_{1}!\cdot\ldots\cdot k_{\ell}!}$
 \end_inset
 
@@ -675,14 +1131,11 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color brown
-מעל א
-\begin_inset Quotes erd
-\end_inset
-
-ב
+\color blue
+אלפבית
 \series default
 \color inherit
+
 :
  עולם הדיון.
 \end_layout
@@ -690,51 +1143,53 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color brown
+\color blue
 טענה
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula $\binom{n}{k_{1},\ldots,k_{\ell}}$
+ יהיו 
+\begin_inset Formula $\ell,n\in\bbn$
 \end_inset
 
- הוא מספר המחרוזות באורך 
-\begin_inset Formula $n$
+ ויהיו 
+\begin_inset Formula $k_{1}\ldots k_{\ell}\in\bbn$
 \end_inset
 
- מעל א
-\begin_inset Quotes erd
+ באשר 
+\begin_inset Formula $\sum_{i=1}^{\ell}k_{i}=n$
 \end_inset
 
-ב 
-\begin_inset Formula $\left\{ 1,\ldots,\ell\right\} $
+ אזי 
+\begin_inset Formula $\binom{n}{k_{1},\ldots,k_{\ell}}=\left\{ f:\left[n\right]\to\left[\ell\right]\mid\forall i\in\left[\ell\right].f^{-1}\left[\left\{ i\right\} \right]=k_{i}\right\} $
 \end_inset
 
- עם 
-\begin_inset Formula $k_{i}$
-\end_inset
-
- פעמים 
-\begin_inset Formula $i$
-\end_inset
-
- במחרוזת.
+.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color brown
+\color blue
 נוסחת המולטינום
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula ${\displaystyle \left(x_{1}+\ldots+x_{\ell}\right)^{n}=\sum_{\substack{\left<k_{1},\ldots,k_{\ell}\right>\in\bbn^{\ell}\\
-k_{1}+\ldots+k_{\ell}=n
+ יהיו 
+\begin_inset Formula $\ell,n\in\bbn$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $x_{1}\ldots x_{\ell}\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula ${\displaystyle \left(x_{1}+\ldots+x_{\ell}\right)^{n}=\sum_{\substack{k\in\bbn^{\ell}\\
+\sum_{i=1}^{\ell}k_{i}=n
 }
-}\left)\binom{n}{k_{1},\ldots,k_{\ell}}\prod_{i=1}^{\ell}x_{i}^{k_{i}}\right(}$
+}\left(\binom{n}{k_{1},\ldots,k_{\ell}}\prod_{i=1}^{\ell}x_{i}^{k_{i}}\right)}$
 \end_inset
 
 .
@@ -743,13 +1198,105 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
-\color orange
+\color blue
+עצרת נופלת
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $r\in\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $r^{\underline{k}}=\prod_{i=0}^{k-1}\left(r-i\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מקדם
+\series default
+\color inherit
+
+ 
+\series bold
+בינומי
+\series default
+ 
+\series bold
+מוכלל
+\series default
+:
+ יהי 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\binom{\a}{k}=\frac{\a^{\underline{k}}}{k!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הבינום
+\series default
+\color inherit
+
+ 
+\series bold
+השלילי
+\series default
+:
+ יהיו 
+\begin_inset Formula $x,y,\a\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(x+y\right)^{\a}=\sum_{k=0}^{\infty}\binom{\a}{k}x^{k}y^{\a-k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
 טענה
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula $\forall A,B.\left|A\cup B\right|=\left|A\right|+\left|B\right|-\left|A\cap B\right|$
+ תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קבוצות אזי 
+\begin_inset Formula $\left|A\cup B\right|=\left|A\right|+\left|B\right|-\left|A\cap B\right|$
 \end_inset
 
 .
@@ -758,12 +1305,21 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
 נוסחת ההכלה וההדחה
 \series default
 \color inherit
+
 :
- 
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ קבוצות אזי 
 \begin_inset Formula ${\displaystyle \left|\bigcup_{i=1}^{n}A_{i}\right|=\sum_{\emptyset\ne I\subseteq\left[n\right]}\left(\left(-1\right)^{\left|I\right|+1}\left|\bigcap_{i\in I}A_{i}\right|\right)}$
 \end_inset
 
@@ -773,13 +1329,30 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
 נוסחת ההכלה וההדחה הסימטרית
 \series default
 \color inherit
+
 :
- אם 
-\begin_inset Formula $\forall I,J\in\P{\left[n\right]}k.\left|\bigcap_{i\in I}A_{i}\right|=\left|\bigcap_{i\in J}A_{i}\right|$
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ קבוצות עבורן לכל 
+\begin_inset Formula $k\in\left[n\right]$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $I,J\in\P{\left[n\right]}k$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|\bigcap_{i\in I}A_{i}\right|=\left|\bigcap_{i\in J}A_{i}\right|$
 \end_inset
 
  אזי 
@@ -792,13 +1365,26 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
 נקודת שבת
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula $f\left(x\right)=x$
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $f:A\to A$
+\end_inset
+
+ פונקציה אזי 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $f\left(a\right)=a$
 \end_inset
 
 .
@@ -807,62 +1393,105 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
-\color orange
-שובך היונים
+\color red
+משפט
 \series default
 \color inherit
+
 :
- אם מחלקים 
-\begin_inset Formula $n+1$
+ יהי 
+\begin_inset Formula $n\in\bbn$
 \end_inset
 
- יונים ל־
-\begin_inset Formula $n$
+ אזי 
+\begin_inset Formula $\left|\left\{ f:\left[n\right]\to\left[n\right]\mid\text{ תמורה}f\right\} \right|=\sum_{k=0}^{n}\left(-1\right)^{k}\frac{n!}{k!}$
 \end_inset
 
- שובכים אז קיים שובך עם לפחות 
-\begin_inset Formula $2$
-\end_inset
-
- יונים.
+.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color orange
-שובך היונים המוכלל
+\color red
+עיקרון שובך היונים
 \series default
 \color inherit
+
 :
- אם מחלקים 
-\begin_inset Formula $m$
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
- יונים ל־
-\begin_inset Formula $n$
+ ותהא 
+\begin_inset Formula $f:\left[n+1\right]\to\left[n\right]$
 \end_inset
 
- שובכים אז קיים שובך עם לפחות 
-\begin_inset Formula $\ceil{\frac{m}{n}}$
+ אזי קיימים 
+\begin_inset Formula $i,j\in\left[n+1\right]$
 \end_inset
 
- יונים.
+ שונים עבורם 
+\begin_inset Formula $f\left(i\right)=f\left(j\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
+עיקרון שובך היונים המוכלל
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $n,m\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\left[m\right]\to\left[n\right]$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left|f^{-1}\left[\left\{ i\right\} \right]\right|\ge\ceil{\frac{m}{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
 פונקציית מידה
 \series default
 \color inherit
+
 :
- 
+ פונקציה 
+\begin_inset Formula $\mu:\bbr^{2}\to\bbr_{+}$
+\end_inset
+
+ באשר 
 \begin_inset Formula $\mu\left(A\right)$
 \end_inset
 
- זה השטח של 
+ זה 
+\begin_inset Quotes eld
+\end_inset
+
+השטח
+\begin_inset Quotes erd
+\end_inset
+
+ של 
 \begin_inset Formula $A$
 \end_inset
 
@@ -872,10 +1501,11 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
 הערה
 \series default
 \color inherit
+
 :
  
 \begin_inset Formula $\mu\left(\biguplus_{i=1}^{m}A_{i}\right)=\sum_{i=1}^{m}\mu\left(A_{i}\right)$
@@ -887,13 +1517,22 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
 טענה
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula $A\subseteq B\implies\mu\left(A\right)\le\mu\left(B\right)$
+ תהיינה 
+\begin_inset Formula $A,B\subseteq\bbr^{2}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu\left(A\right)\le\mu\left(B\right)$
 \end_inset
 
 .
@@ -902,9 +1541,11 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
 שובך
 \series default
+\color inherit
+
  
 \series bold
 היונים
@@ -913,10 +1554,25 @@ k_{1}+\ldots+k_{\ell}=n
 \series bold
 הגאומטרי
 \series default
-\color inherit
 :
- 
-\begin_inset Formula $\forall A\subseteq\bbr^{2}.\forall A_{1},\ldots,A_{m}\subseteq A.\left(\sum_{i=1}^{m}\mu\left(A_{i}\right)>\mu\left(A\right)\right)\implies\left(\exists i\ne j.A_{i}\cap A_{j}\ne\emptyset\right)$
+ תהא 
+\begin_inset Formula $A\subseteq\bbr^{2}$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $A_{1},\ldots,A_{m}\subseteq A$
+\end_inset
+
+ קבוצות עבורן 
+\begin_inset Formula $\sum_{i=1}^{m}\mu\left(A_{i}\right)>\mu\left(A\right)$
+\end_inset
+
+ אזי קיימים 
+\begin_inset Formula $i,j\in\left[m\right]$
+\end_inset
+
+ שונים עבורם 
+\begin_inset Formula $A_{i}\cap A_{j}\ne\emptyset$
 \end_inset
 
 .
@@ -925,99 +1581,54 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
 טענה
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula $\forall A.\left|A\right|=\aleph_{0}\implies\mu\left(A\right)=0$
+ תהא 
+\begin_inset Formula $A\subseteq\bbr^{2}$
+\end_inset
+
+ קבוצה באשר 
+\begin_inset Formula $\left|A\right|\le\aleph_{0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu\left(A\right)=0$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-\color orange
-עצרת נופלת
-\series default
-\color inherit
-:
- 
-\begin_inset Formula $\forall r\in\bbr.\forall k\in\bbn.r^{\underline{k}}=r\cdot\left(r-1\right)\cdot\ldots\cdot\left(r-k+1\right)$
+\begin_inset FormulaMacro
+\newcommand{\u}{\mathcal{U}}
+{\mathcal{U}}
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color orange
-מקדם
-\series default
- 
-\series bold
-בינומי
-\series default
- 
-\series bold
-מוכלל
-\series default
-\color inherit
-:
- 
-\begin_inset Formula $\forall\a\in\bbr.\forall k\in\bbn.\binom{\a}{k}=\frac{\a^{\underline{k}}}{k!}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color orange
-הבינום
-\series default
- 
-\series bold
-השלילי
-\series default
-\color inherit
-:
- 
-\begin_inset Formula $\forall x,y\in\bbr.\forall\a\in\bbr.\left(x+y\right)^{\a}=\sum_{k=0}^{\infty}\binom{\a}{k}x^{k}y^{\a-k}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color orange
-סימון
-\series default
-\color inherit
-:
- עולם הדיון הוא 
-\begin_inset Formula ${\cal U}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color orange
+\color red
 טענה
 \series default
 \color inherit
+
 :
- 
+ תהא 
+\begin_inset Formula $\u$
+\end_inset
+
+ קבוצה ותהיינה 
+\begin_inset Formula $A_{1}\ldots A_{n}\subseteq\u$
+\end_inset
+
+ קבוצות אזי 
 \begin_inset Formula $\left|\bigcap_{i=1}^{n}A_{i}^{{\cal C}}\right|=\left|{\cal U}\right|+\sum_{\emptyset\ne I\subseteq\left[n\right]}\left(\left(-1\right)^{\left|I\right|}\left|\bigcap_{i\in I}A_{i}\right|\right)$
 \end_inset
 
@@ -1025,18 +1636,30 @@ k_{1}+\ldots+k_{\ell}=n
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
-\color teal
+\color green
 מספר
 \series default
+\color inherit
+
  
 \series bold
 קטלן
 \series default
-\color inherit
 :
- 
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
 \begin_inset Formula $C_{n}=\frac{1}{n+1}\binom{2n}{n}=\binom{2n}{n}-\binom{2n}{n-1}$
 \end_inset
 
@@ -1046,50 +1669,12 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
-\color teal
-הערה
+\color green
+מסקנה
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula $C_{n}$
-\end_inset
-
- הוא מספר המסלולים מ־
-\begin_inset Formula $\left<0,0\right>$
-\end_inset
-
- ל־
-\begin_inset Formula $\left<n,n\right>$
-\end_inset
-
-כאשר כל צעד במסלול הוא 
-\begin_inset Formula $\left<x,y\right>\mapsto\begin{cases}
-\left<x+1,y\right>\\
-\left<x,y+1\right>
-\end{cases}$
-\end_inset
-
- וגם תמיד 
-\begin_inset Formula $y\le x$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color teal
-משפט
-\series default
-\color inherit
-:
- 
-\begin_inset Formula $C_{n}=\sum_{i=1}^{n}C_{i-1}-C_{n-i}$
-\end_inset
-
-,
  
 \begin_inset Formula $C_{0}=C_{1}=1$
 \end_inset
@@ -1100,17 +1685,214 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
-\color teal
-סדרה
+\color green
+סימון
 \series default
+\color inherit
+
+:
+ תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קבוצות יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:A\to B^{k}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $i\in\left[k\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f_{i}\left(a\right)=\left(f\left(a\right)\right)_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסלול חוקי על הסריג
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f:\left[n\right]\to\bbn^{2}$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים כי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $f\left(i+1\right)\in\left\{ \left<f_{1}\left(i\right)+1,f_{2}\left(i\right)\right>,\left<f_{1}\left(i\right),f_{2}\left(i\right)+1\right>\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מסלולים חוקיים בין נקודות על הסריג
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $a,b\in\bbn^{2}$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\text{Path}\left(a,b\right)=\bigcup_{n=0}^{\infty}\left\{ f:\left[n\right]\to\bbn^{2}\mid\left(\text{ מסלול חוקי על הסריג}f\right)\land\left(f\left(1\right)=a\right)\land\left(f\left(n\right)=b\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+סימון
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $a,b\in\bbn^{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{PC}\left(a,b\right)=\bigcup_{n=0}^{\infty}\left\{ f\in\text{Path}\left(a,b\right)\mid\exists i\in\left[n\right].f_{1}\left(i\right)<f_{2}\left(i\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+למה
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{Path}\left(\left<0,0\right>,\left<n-1,n+1\right>\right)=\text{PC}\left(\left<0,0\right>,\left<n,n\right>\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+סימון
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $a,b\in\bbn^{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{PB}\left(a,b\right)=\bigcup_{n=0}^{\infty}\left\{ f\in\text{Path}\left(a,b\right)\mid\forall i\in\left[n\right].f_{1}\left(i\right)\ge f_{2}\left(i\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{PB}\left(\left<0,0\right>,\left<n,n\right>\right)=C_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+משפט
+\series default
+\color inherit
+
+:
+ 
+\begin_inset Formula $C_{n}=\sum_{i=1}^{n}\left(C_{i-1}\cdot C_{n-i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+סדרות
+\series default
+\color inherit
+
  
 \series bold
-מאוזנת
+מאוזנות
 \series default
-\color inherit
 :
- פונקציה 
-\begin_inset Formula $\left\{ f:\left[n\right]\to\left\{ 0,1\right\} \mid\forall i\in\left[n\right].\left(a_{i}=0\right)\implies\left(\exists j>i.a_{j}=1\right)\right\} \ni f$
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\text{BS}\left(n\right)=\left\{ f:\left[2n\right]\to\left\{ 0,1\right\} \mid\left(\left|f^{-1}\left[\left\{ 0\right\} \right]\right|=\left|f^{-1}\left[\left\{ 1\right\} \right]\right|\right)\land\left(\forall k\in\left[n\right].\left|\left(f_{\upharpoonright_{\left[k\right]}}\right)^{-1}\left(\left\{ 0\right\} \right)\right|\le\left|\left(f_{\upharpoonright_{\left[k\right]}}\right)^{-1}\left(\left\{ 1\right\} \right)\right|\right)\right\} $
 \end_inset
 
 .
@@ -1119,17 +1901,18 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
-\color teal
-הערה
+\color green
+משפט
 \series default
 \color inherit
+
 :
- כמות הסדרות המאוזנות באורך 
-\begin_inset Formula $2n$
+ יהי 
+\begin_inset Formula $n\in\bbn$
 \end_inset
 
- היא 
-\begin_inset Formula $C_{n}$
+ אזי 
+\begin_inset Formula $\left|\text{BS}\left(n\right)\right|=C_{n}$
 \end_inset
 
 .
@@ -1138,47 +1921,34 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
-\color teal
+\color green
 מצולע
 \series default
+\color inherit
+
  
 \series bold
 קמור
 \series default
-\color inherit
 :
- מצולע כך שהישר בין כל שתי נקודות בתוך הצורה לא יוצא מן הצורה.
-\end_layout
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
 
-\begin_layout Standard
+ אזי 
+\begin_inset Formula $K\subseteq\bbr^{n}$
+\end_inset
 
-\series bold
-\color teal
-מצולע
-\series default
- 
-\series bold
-קעור
-\series default
-\color inherit
-:
- מצולע שאינו קמור.
-\end_layout
+ עבורו לכל 
+\begin_inset Formula $a,b\in K$
+\end_inset
 
-\begin_layout Standard
+ ולכל 
+\begin_inset Formula $t\in\left[0,1\right]$
+\end_inset
 
-\series bold
-\color teal
-קבוצת
-\series default
- 
-\series bold
-סידון
-\series default
-\color inherit
-:
- 
-\begin_inset Formula $\forall\left\{ a,b\right\} ,\left\{ x,y\right\} \in\P A2.a+b=x+y$
+ מתקיים כי 
+\begin_inset Formula $ta+\left(1-t\right)b\in K$
 \end_inset
 
 .
@@ -1187,10 +1957,63 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
-\color teal
+\color green
+מצולע
+\series default
+\color inherit
+
+ 
+\series bold
+קעור
+\series default
+:
+ הי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $K\subseteq\bbr^{n}$
+\end_inset
+
+ שאינו קמור.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+קבוצת
+\series default
+\color inherit
+
+ 
+\series bold
+סידון
+\series default
+:
+ קבוצה 
+\begin_inset Formula $A\subseteq\bbn$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $a,b,c,d\in A$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a+b\ne x+y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
 סימון
 \series default
 \color inherit
+
 :
  אם 
 \begin_inset Formula $f:A\to B$
@@ -1210,10 +2033,11 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
-\color teal
+\color green
 סימון
 \series default
 \color inherit
+
 :
  אם 
 \begin_inset Formula $f:A\to B$
@@ -1229,9 +2053,11 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
-\color teal
+\color green
 משפט
 \series default
+\color inherit
+
  
 \series bold
 ארדש
@@ -1240,13 +2066,24 @@ k_{1}+\ldots+k_{\ell}=n
 \series bold
 סקרש
 \series default
-\color inherit
 :
- תהא 
-\begin_inset Formula $f:\left[a\cdot b+1\right]\overset{1-1}{\to}\bbr$
+ יהיו 
+\begin_inset Formula $a,b\in\bbn$
 \end_inset
 
- אזי (קיימים 
+ ותהא 
+\begin_inset Formula $f:\left[a\cdot b+1\right]\to\bbr$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע אזי אחד מהבאים מתקיים
+\end_layout
+
+\begin_layout Itemize
+קיימים 
 \begin_inset Formula $k_{1}<\ldots<k_{a+1}$
 \end_inset
 
@@ -1254,11 +2091,11 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_inset Formula $f_{\upharpoonright_{\left\{ k_{1},\ldots,k_{a+1}\right\} }}$
 \end_inset
 
- מונוטונית עולה)
-\begin_inset Formula $\lor$
-\end_inset
+ מונוטונית עולה.
+\end_layout
 
-(קיימים 
+\begin_layout Itemize
+קיימים 
 \begin_inset Formula $k_{1}<\ldots<k_{b+1}$
 \end_inset
 
@@ -1266,26 +2103,35 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_inset Formula $f_{\upharpoonright_{\left\{ k_{1},\ldots,k_{b+1}\right\} }}$
 \end_inset
 
- מונוטונית יורדת).
+ מונוטונית יורדת.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-טור
+\color magenta
+טענה
 \series default
- 
-\series bold
-הנדסי
-\series default
+\color inherit
+
 :
- 
-\begin_inset Formula $\sum_{i=0}^{n}x^{i}=\frac{1-x^{n+1}}{1-x}$
+ יהי 
+\begin_inset Formula $n\in\bbn$
 \end_inset
 
-,
- 
-\begin_inset Formula $\sum_{i=0}^{\infty}x^{i}=\frac{1}{1-q}$
+ ויהי 
+\begin_inset Formula $x\in\bbr\backslash\left\{ 1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum_{i=0}^{n}x^{i}=\frac{1-x^{n+1}}{1-x}$
 \end_inset
 
 .
@@ -1294,8 +2140,31 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
+\color magenta
+טענה טור הנדסי
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $x\in\left(-1,1\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum_{i=0}^{\infty}x^{i}=\frac{1}{1-x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
 סדרה
 \series default
+\color inherit
+
 :
  פונקציה 
 \begin_inset Formula $a$
@@ -1311,14 +2180,37 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
+\color magenta
+סדרה ממשית
+\series default
+\color inherit
+
+:
+ פונקציה 
+\begin_inset Formula $a:\bbn\to\bbr$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
 טור
 \series default
+\color inherit
+
  
 \series bold
 חזקות
 \series default
 :
- 
+ תהא 
+\begin_inset Formula $a$
+\end_inset
+
+ סדרה ממשית אזי 
 \begin_inset Formula $\sum_{n=0}^{\infty}a_{n}x^{n}$
 \end_inset
 
@@ -1328,31 +2220,41 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
-פונקציה
+\color magenta
+טור
 \series default
+\color inherit
+
  
 \series bold
-יוצרת
+חזקות יוצרת סדרה
 \series default
 :
- תהא 
+ יהי 
+\begin_inset Formula $\sum_{n=0}^{\infty}a_{n}x^{n}$
+\end_inset
+
+ טור חזקות אזי 
 \begin_inset Formula $\lambda n\in\bbn.a_{n}$
 \end_inset
 
- אזי 
-\begin_inset Formula $\sum_{n=0}^{\infty}a_{n}x^{n}$
-\end_inset
-
 .
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-נוסחה
+\color magenta
+טענה
 \series default
+\color inherit
+
 :
- 
+ יהי 
+\begin_inset Formula $m\in\bbn$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\frac{1}{\left(1-x\right)^{m}}=\sum_{n=0}^{\infty}S\left(m,n\right)x^{n}$
 \end_inset
 
@@ -1362,10 +2264,57 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_layout Standard
 
 \series bold
+\color magenta
+הגדרה גזירת טור
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $f\left(x\right)=\sum_{n=0}^{\infty}a_{n}x^{n}$
+\end_inset
+
+ טור חזקות אזי 
+\begin_inset Formula $f^{\prime}\left(x\right)=\sum_{n=1}^{\infty}na_{n}x^{n-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הגדרה אינטגרציית טור
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $f\left(x\right)=\sum_{n=0}^{\infty}a_{n}x^{n}$
+\end_inset
+
+ טור חזקות אזי 
+\begin_inset Formula $\intop f\left(x\right)=\sum_{n=0}^{\infty}\frac{a_{n}}{n+1}x^{n+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
 משפט
 \series default
+\color inherit
+
 :
- נניח כי 
+ יהיו 
+\begin_inset Formula $f,g$
+\end_inset
+
+ טורים באשר 
 \begin_inset Formula $f\left(x\right)$
 \end_inset
 
@@ -1373,7 +2322,7 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_inset Formula $\lambda n\in\bbn.a_{n}$
 \end_inset
 
- ו־
+ וכן 
 \begin_inset Formula $g\left(x\right)$
 \end_inset
 
@@ -1381,21 +2330,37 @@ k_{1}+\ldots+k_{\ell}=n
 \begin_inset Formula $\lambda n\in\bbn.b_{n}$
 \end_inset
 
-
+ אזי
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $f\left(x\right)\pm g\left(x\right)$
+\begin_inset Formula $f\left(x\right)+g\left(x\right)$
 \end_inset
 
  יוצרת את 
-\begin_inset Formula $\lambda n\in\bbn.a_{n}\pm b_{n}$
+\begin_inset Formula $\lambda n\in\bbn.a_{n}+b_{n}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
+\begin_inset Formula $f\left(x\right)-g\left(x\right)$
+\end_inset
+
+ יוצרת את 
+\begin_inset Formula $\lambda n\in\bbn.a_{n}-b_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $c\in\bbr$
+\end_inset
+
+ אזי 
 \begin_inset Formula $cf\left(x\right)$
 \end_inset
 
@@ -1407,14 +2372,18 @@ k_{1}+\ldots+k_{\ell}=n
 \end_layout
 
 \begin_layout Itemize
+יהי 
+\begin_inset Formula $m\in\bbn$
+\end_inset
+
+ אזי 
 \begin_inset Formula $x^{m}f\left(x\right)$
 \end_inset
 
  יוצרת את 
-\begin_inset Formula $\lambda n\in\bbn.\begin{cases}
-0 & n<n\\
-a_{n-m} & else
-\end{cases}$
+\begin_inset Formula $\lambda n\in\bbn.\left\{ \begin{smallmatrix}0 &  & n<m\\
+a_{n-m} &  & \text{else}
+\end{smallmatrix}\right.$
 \end_inset
 
 .
@@ -1445,8 +2414,184 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
+\color magenta
+טענה
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $\a,a,c\in\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $m\in\bbn$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda x\in\bbr.x^{m}$
+\end_inset
+
+ יוצרת את 
+\begin_inset Formula $\lambda n\in\bbn.\left\{ \begin{smallmatrix}1 &  & n=m\\
+0 &  & n\ne m
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda x\in\bbr.\frac{1}{1-x}$
+\end_inset
+
+ יוצרת את 
+\begin_inset Formula $\lambda n\in\bbn.1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda x\in\bbr.\frac{1}{1+x}$
+\end_inset
+
+ יוצרת את 
+\begin_inset Formula $\lambda n\in\bbn.\left(-1\right)^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda x\in\bbr.\frac{1}{1-cx}$
+\end_inset
+
+ יוצרת את 
+\begin_inset Formula $\lambda n\in\bbn.c^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda x\in\bbr.\left(1+x\right)^{\a}$
+\end_inset
+
+ יוצרת את 
+\begin_inset Formula $\lambda n\in\bbn.{\a \choose n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda x\in\bbr.\frac{1}{\left(1-x\right)^{\a}}$
+\end_inset
+
+ יוצרת את 
+\begin_inset Formula $\lambda n\in\bbn.{\a+n-1 \choose n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda x\in\bbr.\frac{x}{\left(1-x\right)^{2}}$
+\end_inset
+
+ יוצרת את 
+\begin_inset Formula $\lambda n\in\bbn.n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda x\in\bbr.\left(-\ln\left(1-x\right)\right)$
+\end_inset
+
+ יוצרת את 
+\begin_inset Formula $\lambda n\in\bbn.\left\{ \begin{smallmatrix}0 &  & n=0\\
+\frac{1}{n} &  & \text{else}
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda x\in\bbr.e^{\a x}$
+\end_inset
+
+ יוצרת את 
+\begin_inset Formula $\lambda n\in\bbn.\frac{\a^{n}}{n!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda x\in\bbr.\cosh\left(\a x\right)$
+\end_inset
+
+ יוצרת את 
+\begin_inset Formula $\lambda n\in\bbn.\left\{ \begin{smallmatrix}\frac{\a^{n}}{n!} &  & n\in\bbn_{\text{even}}\\
+0 &  & \text{else}
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda x\in\bbr.\sinh\left(\a x\right)$
+\end_inset
+
+ יוצרת את 
+\begin_inset Formula $\lambda n\in\bbn.\left\{ \begin{smallmatrix}\frac{\a^{n}}{n!} &  & n\in\bbn_{\text{odd}}\\
+0 &  & \text{else}
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+פונקציה רציונלית
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $p,q\in\bbr\left[x\right]$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\exists a\in\bbr.q\left(a\right)\ne0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{p}{q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
 פירוק
 \series default
+\color inherit
+
  
 \series bold
 לשברים
@@ -1464,7 +2609,7 @@ a_{n-m} & else
 \begin_inset Formula $\a_{1},\ldots\a_{n}\in\bbc$
 \end_inset
 
- נמצא 
+ אזי 
 \begin_inset Formula $A_{1},\ldots A_{n}$
 \end_inset
 
@@ -1478,8 +2623,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
+\color magenta
 פונקציה
 \series default
+\color inherit
+
  
 \series bold
 יוצרת
@@ -1501,27 +2649,27 @@ a_{n-m} & else
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
-\color blue
-נוסחה
-\series default
- 
-\series bold
-סגורה
+\color purple
+כלל/נוסחת נסיגה
 \series default
 \color inherit
+
 :
- סדרה 
-\begin_inset Formula $\lambda n\in\bbn.a_{n}$
+ יהי 
+\begin_inset Formula $n\in\bbn$
 \end_inset
 
- כך ש־
-\begin_inset Formula $a_{n}$
-\end_inset
-
- לא תלויה ב־
-\begin_inset Formula $a_{1},\ldots,a_{n-1}$
+ אזי פונקציה 
+\begin_inset Formula $f:\bbr^{n}\to\bbr$
 \end_inset
 
 .
@@ -1530,25 +2678,30 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color blue
-נוסחת
-\series default
- 
-\series bold
-נסיגה
+\color purple
+סדרה נוצרת מכלל נסיגה
 \series default
 \color inherit
+
 :
- סדרה 
-\begin_inset Formula $\lambda n\in\bbn.a_{n}$
+ יהי 
+\begin_inset Formula $n\in\bbn$
 \end_inset
 
- כך ש־
-\begin_inset Formula $a_{n}$
+ ותהא 
+\begin_inset Formula $f:\bbr^{i}\to\bbr$
 \end_inset
 
- תלויה ב־
-\begin_inset Formula $a_{1},\ldots,a_{n-1}$
+ נוסחת נסיגה אזי סדרה 
+\begin_inset Formula $a$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $n\ge i$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a_{n}=f\left(a_{n-1},\ldots a_{n-i}\right)$
 \end_inset
 
 .
@@ -1557,29 +2710,82 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color blue
-עומק
-\series default
- 
-\series bold
-הרקורסיה
+\color purple
+עומק הרקורסיה/נוסחאת הנסיגה
 \series default
 \color inherit
+
 :
- אם 
-\begin_inset Formula $i$
+ יהי 
+\begin_inset Formula $i\in\bbn$
 \end_inset
 
- הוא האינדקס המינימלי כך ש־
-\begin_inset Formula $a_{n}$
+ ותהא 
+\begin_inset Formula $f:\bbr^{n}\to\bbr$
 \end_inset
 
- תלוי ב־
-\begin_inset Formula $a_{i}$
+ נוסחת נסיגה אזי 
+\begin_inset Formula $k\in\left[n\right]$
+\end_inset
+
+ מינימלי עבורו קיימת 
+\begin_inset Formula $g:\bbr^{k}\to\bbr$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $f\left(x_{1}\ldots x_{n}\right)=g\left(x_{1}\ldots x_{k}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\bbr^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+הערה
+\series default
+\color inherit
+
+:
+ מכאן והלאה נניח כי כל נוסחאות הנסיגה 
+\begin_inset Formula $f:\bbr^{n}\to\bbr$
+\end_inset
+
+ הן מעומק 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+תנאי
+\series default
+\color inherit
+
+ 
+\series bold
+התחלה
+\series default
+:
+ יהי 
+\begin_inset Formula $f$
+\end_inset
+
+ כלל נסיגה עם עומק 
+\begin_inset Formula $n\in\bbn$
 \end_inset
 
  אזי 
-\begin_inset Formula $n-i$
+\begin_inset Formula $p\in\bbr^{n}$
 \end_inset
 
 .
@@ -1588,69 +2794,74 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color blue
-תנאי
-\series default
- 
-\series bold
-התחלה
-\series default
-\color inherit
-:
- תהא נוסחת נסיגה 
-\begin_inset Formula $a_{n}$
-\end_inset
-
- עם עומק רקורסיה 
-\begin_inset Formula $i$
-\end_inset
-
- אזי חובה להגדיר את 
-\begin_inset Formula $a_{1},\ldots,a_{i}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color blue
+\color purple
 בעיית
 \series default
+\color inherit
+
  
 \series bold
 התחלה
 \series default
-\color inherit
 :
- נוסחת נסיגה עם תנאי התחלה.
+ יהי 
+\begin_inset Formula $f$
+\end_inset
+
+ כלל נסיגה עם עומק 
+\begin_inset Formula $i\in\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p\in\bbr^{i}$
+\end_inset
+
+ תנאי התחלה אזי סדרה ממשית 
+\begin_inset Formula $a$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $a_{n}=p_{n}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\left[i\right]$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a_{n}=f\left(a_{n-1},\ldots a_{n-i}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n>i$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color blue
+\color purple
 סדרת
 \series default
+\color inherit
+
  
 \series bold
 פיבונאצ'י
 \series default
-\color inherit
 :
  
-\begin_inset Formula $a_{n}=a_{n-1}+a_{n-2}$
+\begin_inset Formula $F_{0}=0$
 \end_inset
 
-,
- 
-\begin_inset Formula $a_{1}=1$
+ וכן 
+\begin_inset Formula $F_{1}=1$
 \end_inset
 
-,
- 
-\begin_inset Formula $a_{0}=0$
+ וכן 
+\begin_inset Formula $F_{n}=F_{n-1}+F_{n-2}$
 \end_inset
 
 .
@@ -1659,20 +2870,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color blue
-משפט
-\series default
-\color inherit
-:
- לכל בעיית התחלה קיים פתרון יחיד.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color blue
+\color purple
 נוסחת
 \series default
+\color inherit
+
  
 \series bold
 נסיגה
@@ -1681,14 +2883,17 @@ a_{n-m} & else
 \series bold
 לינארית
 \series default
-\color inherit
 :
- יהיו 
-\begin_inset Formula $\a_{0},\ldots,\a_{n}\in\bbr$
+ נוסחת נסיגה 
+\begin_inset Formula $f:\bbr^{n}\to\bbr$
 \end_inset
 
- אזי 
-\begin_inset Formula $a_{n}=\sum_{i=0}^{n-1}\a_{i}a_{i}+\a_{n}$
+ עבורה קיימים 
+\begin_inset Formula $\a_{1}\ldots\a_{n+1}\in\bbr$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $f\left(x\right)=\left(\sum_{i=1}^{n}\a_{i}x_{i}\right)+\a_{n+1}$
 \end_inset
 
 .
@@ -1697,9 +2902,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color blue
+\color purple
 נוסחת
 \series default
+\color inherit
+
  
 \series bold
 נסיגה
@@ -1712,10 +2919,17 @@ a_{n-m} & else
 \series bold
 הומוגנית
 \series default
-\color inherit
 :
- 
-\begin_inset Formula $a_{n}=\sum_{i=0}^{n-1}\a_{i}a_{i}$
+ נוסחת נסיגה 
+\begin_inset Formula $f:\bbr^{n}\to\bbr$
+\end_inset
+
+ עבורה קיימים 
+\begin_inset Formula $\a_{1}\ldots\a_{n}\in\bbr$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $f\left(x\right)=\sum_{i=1}^{n}\a_{i}x_{i}$
 \end_inset
 
 .
@@ -1724,21 +2938,26 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color blue
-פולינום
-\series default
- 
-\series bold
-אופייני
+\color purple
+הפולינום
 \series default
 \color inherit
+
+ 
+\series bold
+האופייני
+\series default
 :
- תהא נוסחת נסיגה הומוגנית 
-\begin_inset Formula $a_{n}=\sum_{i=0}^{n-1}\a_{i}a_{i}$
+ תהא 
+\begin_inset Formula $f:\bbr^{n-1}\to\bbr$
+\end_inset
+
+ נוסחת נסיגה הומוגנית באשר 
+\begin_inset Formula $f\left(x\right)=\sum_{i=1}^{n-1}\a_{i}x_{i}$
 \end_inset
 
  אזי 
-\begin_inset Formula $x^{n}=\sum_{i=0}^{n-1}\a_{i}x^{i}$
+\begin_inset Formula $p_{f}\left(x\right)=x^{n}-\sum_{i=0}^{n-1}\a_{i}x^{i}$
 \end_inset
 
 .
@@ -1747,9 +2966,31 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color blue
-פתרון
+\color purple
+משפט קיום ויחידות פתרון לבעיית נסיגה לינארית הומוגנית
 \series default
+\color inherit
+
+:
+ תהא 
+\begin_inset Formula $f:\bbr^{n-1}\to\bbr$
+\end_inset
+
+ נוסחת נסיגה הומוגנית ויהי 
+\begin_inset Formula $p\in\bbr^{n-1}$
+\end_inset
+
+ תנאי התחלה אזי קיים ויחיד פתרון לבעיית ההתחלה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט פתרון
+\series default
+\color inherit
+
  
 \series bold
 לבעיית
@@ -1758,22 +2999,45 @@ a_{n-m} & else
 \series bold
 ההתחלה
 \series default
-\color inherit
 :
- תהא נוסחת נסיגה הומוגנית 
-\begin_inset Formula $a_{n}$
+ תהא 
+\begin_inset Formula $f:\bbr^{i-1}\to\bbr$
 \end_inset
 
- בעומק 
+ נוסחת נסיגה לינארית הומוגנית ויהיו 
+\begin_inset Formula $\left\{ \b_{1},\ldots,\b_{i}\right\} $
+\end_inset
+
+ הפתרונות של 
+\begin_inset Formula $p_{f}$
+\end_inset
+
+ אזי קיימים 
+\begin_inset Formula $A_{1}\ldots A_{i}\in\bbr$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $a_{n}=\sum_{j=1}^{i}A_{j}\b_{j}^{n}$
+\end_inset
+
+ פתרון לבעיית ההתחלה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+הערה
+\series default
+\color inherit
+
+:
+ המשפט מלעיל הוא רק כאשר יש 
 \begin_inset Formula $i$
 \end_inset
 
- אזי יהיו 
-\begin_inset Formula $\b_{1},\ldots,\b_{i}$
-\end_inset
-
- פתרונות של הפולינום האופייני אזי 
-\begin_inset Formula $\exists A_{1},\ldots,A_{j}.a_{n}=\sum_{j=1}^{i}A_{j}\b_{j}^{n}$
+ פתרונות שונים ל־
+\begin_inset Formula $p_{f}$
 \end_inset
 
 .
@@ -1782,40 +3046,90 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color blue
-פתרון
-\series default
- 
-\series bold
-לסדרת
-\series default
- 
-\series bold
-פיבונאצ'י
+\color purple
+משפט פתרון
 \series default
 \color inherit
-:
+
  
-\begin_inset Formula $a_{n}=\frac{1}{\sqrt{5}}\left(\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}\right)$
+\series bold
+לבעיית
+\series default
+ 
+\series bold
+ההתחלה
+\series default
+:
+ תהא 
+\begin_inset Formula $f:\bbr^{i-1}\to\bbr$
 \end_inset
 
-.
+ נוסחת נסיגה לינארית הומוגנית יהיו 
+\begin_inset Formula $\left\{ \b_{1},\ldots,\b_{k}\right\} $
+\end_inset
+
+ הפתרונות של 
+\begin_inset Formula $p_{f}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $r:\left[k\right]\to\left[i\right]$
+\end_inset
+
+ באשר 
+\begin_inset Formula $r\left(j\right)$
+\end_inset
+
+ הריבוי של 
+\begin_inset Formula $\b_{j}$
+\end_inset
+
+ בפתרונות של 
+\begin_inset Formula $p_{f}$
+\end_inset
+
+ אזי קיימים 
+\begin_inset Formula $A_{1}\ldots A_{i}\in\bbr$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $a_{n}=\sum_{j=1}^{k}\sum_{\ell=0}^{r\left(j\right)-1}n^{\ell}A_{j}\b_{j}^{n}$
+\end_inset
+
+ פתרון לבעיית ההתחלה.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color blue
+\color purple
+מסקנה
+\series default
+\color inherit
+
+:
+ הסדרה 
+\begin_inset Formula $F_{n}=\frac{1}{\sqrt{5}}\left(\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}\right)$
+\end_inset
+
+ הינה פתרון לבעיית ההתחלה של סדרת פיבונאצ'י.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
 יחס
 \series default
+\color inherit
+
  
 \series bold
 הזהב
 \series default
-\color inherit
 :
  
-\begin_inset Formula $\varphi=\lim_{n\to\infty}\frac{a_{n+1}}{a_{n}}=\frac{1+\sqrt{5}}{2}$
+\begin_inset Formula $\phi=\lim_{n\to\infty}\frac{F_{n+1}}{F_{n}}$
 \end_inset
 
 .
@@ -1824,10 +3138,27 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color blue
+\color purple
+טענה
+\series default
+\color inherit
+
+:
+ 
+\begin_inset Formula $\phi=\frac{1+\sqrt{5}}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
 משפט
 \series default
 \color inherit
+
 :
  תהנא 
 \begin_inset Formula $S_{0},\ldots,S_{k}\subseteq\bbn$
@@ -1859,10 +3190,122 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color red
+\color purple
+סימו
+\series default
+\color inherit
+
+ן:
+ תהא 
+\begin_inset Formula $A\subseteq\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $p_{A}\left(n\right)=\left|\bigcup_{i=1}^{n}\left\{ a\in A^{i}\bmid\left(\sum_{j=1}^{i}a_{i}=n\right)\land\left(\text{ עולה}a\right)\right\} \right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מספר החלוקות של מספר
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $p\left(n\right)=p_{\bbn}\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מספר החלוקות השונות של מספר
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $p_{\text{dist}}\left(n\right)=\left|\bigcup_{i=1}^{n}\left\{ a\in\bbn^{i}\bmid\left(\sum_{j=1}^{i}a_{i}=n\right)\land\left(\text{ עולה ממש}a\right)\right\} \right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מספר החלוקות האי־זוגיות של מספר
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $p_{\text{odd}}\left(n\right)=p_{\bbn_{\text{odd}}}\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משפט אוילר
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $p_{\text{odd}}\left(n\right)=p_{\text{dist}}\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
 גרף מכוון
 \series default
 \color inherit
+
 :
  תהא 
 \begin_inset Formula $V$
@@ -1882,10 +3325,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color red
+\color brown
 גרף לא מכוון
 \series default
 \color inherit
+
 :
  תהא 
 \begin_inset Formula $V$
@@ -1903,35 +3347,20 @@ a_{n-m} & else
 \end_layout
 
 \begin_layout Standard
-מולטי גרף:
- ...
-\end_layout
-
-\begin_layout Standard
 
 \series bold
-\color red
-הערה
-\series default
-\color inherit
-:
- בקורס מדובר רק על גרפים לא מכוונים אלא אם כן מצויין אחרת.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
+\color brown
 קודקודים/צמתים
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $\left<V,E\right>$
 \end_inset
 
  גרף אזי 
-\begin_inset Formula $V$
+\begin_inset Formula $V\left(G\right)=V$
 \end_inset
 
 .
@@ -1940,36 +3369,18 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color red
-סימון
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף אזי 
-\begin_inset Formula $V\left(G\right)$
-\end_inset
-
- היא קבוצת הקודקודים.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
+\color brown
 קשתות/צלעות
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $\left<V,E\right>$
 \end_inset
 
  גרף אזי 
-\begin_inset Formula $E$
+\begin_inset Formula $E\left(G\right)=E$
 \end_inset
 
 .
@@ -1978,182 +3389,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color red
-סימון
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף אזי 
-\begin_inset Formula $E\left(G\right)$
-\end_inset
-
- היא קבוצת הקשתות.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-שרוך
-\series default
-\color inherit
-:
- 
-\begin_inset Formula $\left<\left[n\right],\left\{ \left\{ k,k+1\right\} \mid k\in\left[n-1\right]\right\} \right>$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-גרף
-\series default
- 
-\series bold
-מעגל
-\series default
-\color inherit
-:
- 
-\begin_inset Formula $C_{n}=\left<\left[n\right],\left\{ \left\{ k,k+1\right\} \mid k\in\left[n-1\right]\right\} \cup\left\{ \left\{ 0,n\right\} \right\} \right>$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-גרף
-\series default
- 
-\series bold
-
-\begin_inset Formula $n$
-\end_inset
-
-־צדדי
-\series default
-\color inherit
-:
- 
-\begin_inset Formula $\left<V_{1}\uplus\ldots\uplus V_{n},E\right>$
-\end_inset
-
- המקיים 
-\begin_inset Formula $\forall e\in E.\exists i\ne j.\left|e\cap V_{i}\right|=\left|e\cap V_{j}\right|$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-גרף
-\series default
- 
-\series bold
-
-\begin_inset Formula $n$
-\end_inset
-
-־צדדי מלא
-\series default
-\color inherit
-:
- 
-\begin_inset Formula $\left<V_{1}\uplus\ldots\uplus V_{n},E\right>$
-\end_inset
-
- גרף 
-\begin_inset Formula $n$
-\end_inset
-
-־צדדי המקיים 
-\begin_inset Formula $E=\bigcup_{i=1}^{n}\bigcup_{j=i+1}^{n}\left\{ \left\{ e_{1},e_{2}\right\} \mid e_{1}\in V_{i}\land e_{2}\in V_{j}\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-סימון
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $G=\left<V_{1}\uplus\ldots\uplus V_{n},E\right>$
-\end_inset
-
- גרף 
-\begin_inset Formula $n$
-\end_inset
-
-־צדדי מלא נסמנו 
-\begin_inset Formula $K_{\left|V_{1}\right|,\ldots\left|V_{n}\right|}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-קליקה
-\series default
-\color inherit
-:
- 
-\begin_inset Formula $K_{n}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-קבוצת השכנים
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף ויהי 
-\begin_inset Formula $v\in V\left(G\right)$
-\end_inset
-
- אזי
-\begin_inset Formula $N_{G}\left(v\right)=\left\{ u\in V\left(G\right)\mid\left\{ u,v\right\} \in E\left(G\right)\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
+\color brown
 לולאה
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
@@ -2173,25 +3413,231 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color red
+\color brown
 גרף
 \series default
+\color inherit
+
  
 \series bold
 פשוט
 \series default
-\color inherit
 :
- גרף לא מכוון חסר לולאות.
+ גרף מכוון חסר לולאות.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color red
+\color brown
+הערה
+\series default
+\color inherit
+
+:
+ בקורס מדובר רק על גרפים לא מכוונים אלא אם כן מצויין אחרת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+גרף שרוך
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<\left[n\right],\left\{ \left\{ k,k+1\right\} \mid k\in\left[n-1\right]\right\} \right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+גרף
+\series default
+\color inherit
+
+ 
+\series bold
+מעגל
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $C_{n}=\left<\left[n\right],\left\{ \left\{ k,k+1\right\} \mid k\in\left[n-1\right]\right\} \cup\left\{ \left\{ 0,n\right\} \right\} \right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+גרף
+\series default
+\color inherit
+
+ 
+\series bold
+
+\begin_inset Formula $n$
+\end_inset
+
+־צדדי
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ תהיינה 
+\begin_inset Formula $V_{1}\ldots V_{n}$
+\end_inset
+
+ קבוצות זרות אזי גרף 
+\begin_inset Formula $\left<\biguplus_{i=1}^{n}V_{i},E\right>$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $e\in E$
+\end_inset
+
+ קיימים 
+\begin_inset Formula $i,j\in\left[n\right]$
+\end_inset
+
+ שונים עבורם 
+\begin_inset Formula $\left|e\cap V_{i}\right|=\left|e\cap V_{j}\right|=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+גרף
+\series default
+\color inherit
+
+ 
+\series bold
+
+\begin_inset Formula $n$
+\end_inset
+
+־צדדי מלא
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $V_{1}\ldots V_{n}$
+\end_inset
+
+ קבוצות זרות אזי 
+\begin_inset Formula $K_{\left|V_{1}\right|,\ldots\left|V_{n}\right|}=\left<\biguplus_{i=1}^{n}V_{i},\bigcup_{i=1}^{n}\bigcup_{j=i+1}^{n}\left\{ \left\{ v,u\right\} \mid\left(v\in V_{i}\right)\land\left(u\in V_{j}\right)\right\} \right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $V_{1}\ldots V_{n}$
+\end_inset
+
+ קבוצות זרות אזי 
+\begin_inset Formula $K_{\left|V_{1}\right|,\ldots\left|V_{n}\right|}$
+\end_inset
+
+ גרף 
+\begin_inset Formula $n$
+\end_inset
+
+־צדדי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+קליקה
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $K_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+קבוצת השכנים
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $v\in V\left(G\right)$
+\end_inset
+
+ אזי
+\begin_inset Formula $N_{G}\left(v\right)=\left\{ u\in V\left(G\right)\mid\left\{ u,v\right\} \in E\left(G\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
 דרגה
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
@@ -2211,16 +3657,21 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color red
+\color brown
 קודקוד מבודד
 \series default
 \color inherit
+
 :
- 
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי 
 \begin_inset Formula $v\in V\left(G\right)$
 \end_inset
 
- המקיים 
+ עבורו 
 \begin_inset Formula $d\left(v\right)=0$
 \end_inset
 
@@ -2230,16 +3681,21 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color red
+\color brown
 עלה
 \series default
 \color inherit
+
 :
- 
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי 
 \begin_inset Formula $v\in V\left(G\right)$
 \end_inset
 
- המקיים 
+ עבורו 
 \begin_inset Formula $d\left(v\right)=1$
 \end_inset
 
@@ -2249,10 +3705,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color red
+\color brown
 טענה
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
@@ -2268,16 +3725,17 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color red
+\color brown
 נוסחת לחיצות הידיים
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף מתקיים 
+ גרף אזי 
 \begin_inset Formula $2\left|E\left(G\right)\right|=\sum_{v\in V\left(G\right)}\left(d\left(v\right)\right)$
 \end_inset
 
@@ -2285,23 +3743,31 @@ a_{n-m} & else
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
-\color green
-תת גרף
+\color orange
+תת־גרף
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף אזי 
-\begin_inset Formula $G'$
+ גרף אזי גרף 
+\begin_inset Formula $T$
 \end_inset
 
- המקיימת 
-\begin_inset Formula $\left(V\left(G'\right)\subseteq V\left(G\right)\right)\land\left(E\left(G'\right)\subseteq E\left(G\right)\cap\P{V\left(G'\right)}2\right)$
+ עבורו 
+\begin_inset Formula $\left(V\left(T\right)\subseteq V\left(G\right)\right)\land\left(E\left(T\right)\subseteq E\left(G\right)\cap\P{V\left(T\right)}2\right)$
 \end_inset
 
 .
@@ -2310,21 +3776,50 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color green
-תת הגרף הנפרש
+\color orange
+סימון
 \series default
 \color inherit
+
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $T$
+\end_inset
+
+ תת־גרף של 
+\begin_inset Formula $G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $T\lhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+תת־גרף נפרש
+\series default
+\color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
 \end_inset
 
  גרף ותהא 
-\begin_inset Formula $V'\subseteq V\left(G\right)$
+\begin_inset Formula $U\subseteq V\left(G\right)$
 \end_inset
 
  אזי 
-\begin_inset Formula $G\left[V'\right]=\left<V',\P{V'}2\cap E\left(G\right)\right>$
+\begin_inset Formula $G\left[U\right]=\left<U,\P U2\cap E\left(G\right)\right>$
 \end_inset
 
 .
@@ -2333,10 +3828,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color green
+\color orange
 גרף משלים
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
@@ -2352,24 +3848,33 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color green
+\color orange
 טיול
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
 \end_inset
 
  גרף ויהיו 
-\begin_inset Formula $a_{1},a_{n}\in V\left(G\right)$
+\begin_inset Formula $v,u\in V\left(G\right)$
 \end_inset
 
  אזי 
-\begin_inset Formula $\left<a_{1},\ldots,a_{n}\right>\in V\left(G\right)^{n}$
+\begin_inset Formula $a\in V\left(G\right)^{n}$
 \end_inset
 
- המקיימת 
+ באשר 
+\begin_inset Formula $a_{1}=v$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a_{n}=u$
+\end_inset
+
+ וכן 
 \begin_inset Formula $\forall i\in\left[n-1\right].\left\{ a_{i},a_{i+1}\right\} \in E\left(G\right)$
 \end_inset
 
@@ -2379,17 +3884,22 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color green
+\color orange
 אורך
 \series default
+\color inherit
+
  
 \series bold
 טיול
 \series default
-\color inherit
 :
  יהי 
-\begin_inset Formula $\sigma=\left<a_{1},\ldots,a_{n}\right>$
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $\sigma\in V\left(G\right)^{n}$
 \end_inset
 
  טיול אזי 
@@ -2402,21 +3912,26 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color green
+\color orange
 מסלול
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף ויהיו 
-\begin_inset Formula $a_{1},a_{n}\in V\left(G\right)$
+ גרף אזי טיול 
+\begin_inset Formula $\sigma$
 \end_inset
 
- אזי מסלול המקיים 
-\begin_inset Formula $\forall i\ne j\in\left[n-1\right].\left\{ a_{i},a_{i+1}\right\} \ne\left\{ a_{j},a_{j+1}\right\} $
+ עבורו לכל 
+\begin_inset Formula $i,j\in\left[\ell\left(\sigma\right)\right]$
+\end_inset
+
+ שונים מתקיים 
+\begin_inset Formula $\left\{ \sigma_{i},\sigma_{i+1}\right\} \ne\left\{ \sigma_{j},\sigma_{j+1}\right\} $
 \end_inset
 
 .
@@ -2425,16 +3940,17 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color green
-תת
-\series default
- 
-\series bold
-מסלול
+\color orange
+תת־מסלול
 \series default
 \color inherit
+
 :
  יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
 \begin_inset Formula $\left<a_{1},\ldots,a_{n}\right>$
 \end_inset
 
@@ -2442,16 +3958,25 @@ a_{n-m} & else
 \begin_inset Formula $\left<a_{i},\ldots,a_{j}\right>$
 \end_inset
 
+ עבור 
+\begin_inset Formula $i,j\in\left[n\right]$
+\end_inset
+
+ באשר 
+\begin_inset Formula $i<j$
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color green
+\color orange
 מעגל
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
@@ -2475,25 +4000,35 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color green
+\color orange
 מסלול פשוט
 \series default
 \color inherit
+
 :
- (מסלול)
-\begin_inset Formula $\land$
+ יהי 
+\begin_inset Formula $G$
 \end_inset
 
-(כל תת מסלול שלו אינו מעגל).
+ גרף אזי מסלול 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ עבורו כל תת־מסלול של 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ אינו מעגל.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color green
+\color orange
 מעגל פשוט
 \series default
 \color inherit
+
 :
  מעגל 
 \begin_inset Formula $\left<a_{1},\ldots,a_{n},a_{1}\right>$
@@ -2509,10 +4044,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color green
+\color orange
 משפט
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
@@ -2522,7 +4058,7 @@ a_{n-m} & else
 \begin_inset Formula $v_{1},v_{2}\in V\left(G\right)$
 \end_inset
 
-
+ אזי
 \end_layout
 
 \begin_layout Itemize
@@ -2534,11 +4070,11 @@ a_{n-m} & else
 \begin_inset Formula $v_{2}$
 \end_inset
 
-) 
+)
 \begin_inset Formula $\iff$
 \end_inset
 
- (קיים טיול מ־
+(קיים טיול מ־
 \begin_inset Formula $v_{1}$
 \end_inset
 
@@ -2558,11 +4094,11 @@ a_{n-m} & else
 \begin_inset Formula $v_{1}$
 \end_inset
 
-) 
+)
 \begin_inset Formula $\iff$
 \end_inset
 
- (קיים מעגל מ־
+(קיים מעגל מ־
 \begin_inset Formula $v_{1}$
 \end_inset
 
@@ -2576,10 +4112,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color green
+\color orange
 משפט
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
@@ -2595,10 +4132,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color green
+\color orange
 למה
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
@@ -2616,18 +4154,34 @@ a_{n-m} & else
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
-\color magenta
+\color teal
 יחס הקשירות
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף אזי (קיים טיול מ־
+ גרף אזי 
+\begin_inset Formula $\underset{G}{\to}\subseteq V\left(G\right)^{2}$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $u,v\in V\left(G\right)$
+\end_inset
+
+ מתקיים (קיים טיול מ־
 \begin_inset Formula $v$
 \end_inset
 
@@ -2636,7 +4190,55 @@ a_{n-m} & else
 \end_inset
 
 )
-\begin_inset Formula $\forall u,v\in V\left(G\right).v\underset{G}{\to}u\iff$
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $v\underset{G}{\to}u$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי 
+\begin_inset Formula $\underset{G}{\to}$
+\end_inset
+
+ יחס שקילות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+רכיב קשירות
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי 
+\begin_inset Formula $\left[v\right]_{\underset{G}{\to}}$
+\end_inset
+
+ עבור 
+\begin_inset Formula $v\in V\left(G\right)$
 \end_inset
 
 .
@@ -2645,32 +4247,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color magenta
-טענה
-\series default
-\color inherit
-:
- יחס הקשירות הוא יחס שקילות.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-רכיב קשירות
-\series default
-\color inherit
-:
- מחלקת שקילות ביחס הקשירות.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
+\color teal
 מסקנה
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
@@ -2690,16 +4271,17 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color magenta
+\color teal
 גרף קשיר
 \series default
 \color inherit
+
 :
  גרף 
 \begin_inset Formula $G$
 \end_inset
 
- המקיים 
+ עבורו 
 \begin_inset Formula $\left|\nicefrac{V\left(G\right)}{\underset{G}{\to}}\right|=1$
 \end_inset
 
@@ -2709,21 +4291,22 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color magenta
+\color teal
 הגדרה
 \series default
 \color inherit
+
 :
  יהי 
-\begin_inset Formula $G=\left<V,E\right>$
+\begin_inset Formula $G$
 \end_inset
 
  גרף ותהא 
-\begin_inset Formula $\P V2\supseteq E'$
+\begin_inset Formula $F\subseteq\P{V\left(G\right)}2$
 \end_inset
 
  אזי 
-\begin_inset Formula $G+E'=\left<V,E\cup E'\right>$
+\begin_inset Formula $G+F=\left<V\left(G\right),E\left(G\right)\cup F\right>$
 \end_inset
 
 .
@@ -2732,21 +4315,22 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color magenta
+\color teal
 הגדרה
 \series default
 \color inherit
+
 :
  יהי 
-\begin_inset Formula $G=\left<V,E\right>$
+\begin_inset Formula $G$
 \end_inset
 
  גרף ותהא 
-\begin_inset Formula $\P V2\supseteq E'$
+\begin_inset Formula $F\subseteq\P{V\left(G\right)}2$
 \end_inset
 
  אזי 
-\begin_inset Formula $G-E'=\left<V,E\backslash E'\right>$
+\begin_inset Formula $G-F=\left<V\left(G\right),E\left(G\right)\backslash F\right>$
 \end_inset
 
 .
@@ -2755,10 +4339,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color magenta
+\color teal
 טענה
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
@@ -2768,28 +4353,18 @@ a_{n-m} & else
 \begin_inset Formula $v,u\in V\left(G\right)$
 \end_inset
 
-
+ אזי
 \end_layout
 
 \begin_layout Enumerate
-אם 
-\begin_inset Formula $v\underset{G}{\to}u$
-\end_inset
-
- אז 
-\begin_inset Formula $\left[v\right]_{\xrightarrow[G]{}}=\left[v\right]_{\xrightarrow[G+\left\{ \left\{ v,u\right\} \right\} ]{}}$
+\begin_inset Formula $\left(v\underset{G}{\to}u\right)\implies\left(\left[v\right]_{\xrightarrow[G]{}}=\left[v\right]_{\xrightarrow[G+\left\{ \left\{ v,u\right\} \right\} ]{}}\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Enumerate
-אם 
-\begin_inset Formula $\neg\left(v\underset{G}{\to}u\right)$
-\end_inset
-
- אז 
-\begin_inset Formula $\left[v\right]_{\xrightarrow[G]{}}\uplus\left[u\right]_{\xrightarrow[G]{}}=\left[v\right]_{\xrightarrow[G+\left\{ \left\{ v,u\right\} \right\} ]{}}$
+\begin_inset Formula $\left(\neg\left(v\underset{G}{\to}u\right)\right)\implies\left(\left[v\right]_{\xrightarrow[G]{}}\uplus\left[u\right]_{\xrightarrow[G]{}}=\left[v\right]_{\xrightarrow[G+\left\{ \left\{ v,u\right\} \right\} ]{}}\right)$
 \end_inset
 
 .
@@ -2798,10 +4373,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color magenta
+\color teal
 מסקנה
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
@@ -2815,27 +4391,23 @@ a_{n-m} & else
 \end_layout
 
 \begin_layout Standard
-אלגוריתם דייקסטרה:
- ...
-\end_layout
-
-\begin_layout Standard
 
 \series bold
-\color magenta
+\color teal
 מסקנה
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף אם 
+ גרף עבורו 
 \begin_inset Formula $\cn{V\left(G\right)}-1>\cn{E\left(G\right)}$
 \end_inset
 
- אז 
+ אזי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2845,16 +4417,17 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color magenta
+\color teal
 מסקנה
 \series default
 \color inherit
+
 :
- אם 
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
- קשיר אז 
+ גרף קשיר אזי 
 \begin_inset Formula $\cn{E\left(G\right)}\ge\cn{V\left(G\right)}-1$
 \end_inset
 
@@ -2864,16 +4437,17 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color magenta
+\color teal
 טענה
 \series default
 \color inherit
+
 :
- אם 
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
- חסר מעגלים אז 
+ גרף חסר מעגלים אזי 
 \begin_inset Formula $\cn{E\left(G\right)}\le\cn{V\left(G\right)}-1$
 \end_inset
 
@@ -2883,78 +4457,42 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color magenta
+\color teal
 עץ
 \series default
 \color inherit
+
 :
- (קשיר)
-\begin_inset Formula $\land$
+ גרף 
+\begin_inset Formula $T$
 \end_inset
 
-(חסר מעגלים).
+ באשר 
+\begin_inset Formula $T$
+\end_inset
+
+ קשיר וחסר מעגלים.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color magenta
+\color teal
 טענה
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף אזי כל 
+ גרף ויהי 
 \begin_inset Formula $K\in\nicefrac{V\left(G\right)}{\xrightarrow[G]{}}$
 \end_inset
 
- הוא עץ.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-מסקנה
-\series default
-\color inherit
-:
- אם 
-\begin_inset Formula $T$
-\end_inset
-
- עץ אז 
-\begin_inset Formula $\cn{E\left(G\right)}=\cn{V\left(G\right)}-1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color magenta
-עץ פורש
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף ותהא 
-\begin_inset Formula $E'\subseteq E\left(G\right)$
-\end_inset
-
  אזי 
-\begin_inset Formula $T=\left<V\left(G\right),E'\right>$
-\end_inset
-
- כך ש־
-\begin_inset Formula $T$
+\begin_inset Formula $K$
 \end_inset
 
  עץ.
@@ -2963,27 +4501,81 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color magenta
+\color teal
+מסקנה
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $T$
+\end_inset
+
+ עץ אזי 
+\begin_inset Formula $\cn{E\left(T\right)}=\cn{V\left(T\right)}-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+עץ פורש
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי עץ 
+\begin_inset Formula $\left<V\left(G\right),F\right>$
+\end_inset
+
+ באשר 
+\begin_inset Formula $F\subseteq E\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
 יער
 \series default
 \color inherit
+
 :
+ גרף 
+\begin_inset Formula $T$
+\end_inset
+
+ באשר 
+\begin_inset Formula $T$
+\end_inset
+
  חסר מעגלים.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color magenta
+\color teal
 קשיר מינימלי
 \series default
 \color inherit
+
 :
  גרף 
 \begin_inset Formula $G$
 \end_inset
 
- כך שלכל 
+ עבורו לכל 
 \begin_inset Formula $e\in E\left(G\right)$
 \end_inset
 
@@ -2991,22 +4583,23 @@ a_{n-m} & else
 \begin_inset Formula $G-\left\{ e\right\} $
 \end_inset
 
- לא קשיר.
+ אינו קשיר.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color magenta
+\color teal
 חסר מעגלים מקסימלי
 \series default
 \color inherit
+
 :
  גרף 
 \begin_inset Formula $G$
 \end_inset
 
- כך שלכל 
+ עבורו לכל 
 \begin_inset Formula $v,u\in V\left(G\right)$
 \end_inset
 
@@ -3020,10 +4613,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color magenta
+\color teal
 משפט העצים
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
@@ -3033,7 +4627,7 @@ a_{n-m} & else
 \begin_inset Quotes erd
 \end_inset
 
-ש (התנאים הבאים שקולים)
+ש
 \end_layout
 
 \begin_layout Itemize
@@ -3098,27 +4692,40 @@ a_{n-m} & else
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-\color purple
-גרף מישורי
-\series default
-\color inherit
-:
- גרף 
-\begin_inset Formula $G$
+\begin_inset Separator plain
 \end_inset
 
- כך שכל הקשתות בדיאגרמה של הגרף לא נחתכות אחת עם השנייה.
+
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color purple
+\color black
+גרף מישורי
+\series default
+\color inherit
+
+:
+ גרף 
+\begin_inset Formula $G$
+\end_inset
+
+ באשר 
+\begin_inset Formula $G$
+\end_inset
+
+ בעל דיאגרמה בה כל קשתות הגרף אינן נחתכות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
 הגדרה
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
@@ -3134,10 +4741,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color purple
+\color black
 הגדרה
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
@@ -3153,21 +4761,26 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color purple
-מעגל המילטון
+\color black
+מסלול המילטוני/המילטון
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף אזי 
+ גרף אזי מסלול פשוט 
 \begin_inset Formula $\sigma$
 \end_inset
 
- מעגל המקיים 
-\begin_inset Formula $\ell\left(\sigma\right)=\cn{V\left(G\right)}$
+ עבורו לכל 
+\begin_inset Formula $v\in V\left(G\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $v\in\sigma$
 \end_inset
 
 .
@@ -3176,47 +4789,85 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color purple
-משפט דיראק
+\color black
+מעגל המילטוני/המילטון
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף על 
-\begin_inset Formula $n$
+ גרף אזי מעגל פשוט 
+\begin_inset Formula $\sigma$
 \end_inset
 
- קודקודים אזי (
-\begin_inset Formula $\d\left(G\right)\ge\frac{n}{2}$
+ עבורו לכל 
+\begin_inset Formula $v\in V\left(G\right)$
 \end_inset
 
-) 
-\begin_inset Formula $\impliedby$
+ מתקיים 
+\begin_inset Formula $v\in\sigma$
 \end_inset
 
- (קיים מעגל המילטון בגרף).
+.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color purple
+\color black
+משפט דיראק
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף באשר 
+\begin_inset Formula $V\left(G\right)=\left[n\right]$
+\end_inset
+
+ אזי (
+\begin_inset Formula $\d\left(G\right)\ge\frac{n}{2}$
+\end_inset
+
+)
+\begin_inset Formula $\impliedby$
+\end_inset
+
+(קיים מעגל המילטון ב־
+\begin_inset Formula $G$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
 הגדרה
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף ויהי קודקוד 
+ גרף ויהי 
 \begin_inset Formula $v\in V\left(G\right)$
 \end_inset
 
- נגדיר 
+ אזי 
 \begin_inset Formula $G+\left\{ v\right\} =\left<V\left(G\right)\cup\left\{ v\right\} ,E\left(G\right)\right>$
 \end_inset
 
@@ -3226,20 +4877,21 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color purple
+\color black
 הגדרה
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף ויהי קודקוד 
+ גרף ויהי 
 \begin_inset Formula $v\in V\left(G\right)$
 \end_inset
 
- נגדיר 
+ אזי 
 \begin_inset Formula $G-\left\{ v\right\} =\left<V\left(G\right)\backslash\left\{ v\right\} ,E\left(G\right)\backslash\left\{ \left\{ v,u\right\} \mid u\in V\left(G\right)\right\} \right>$
 \end_inset
 
@@ -3249,10 +4901,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color purple
+\color black
 טענה
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $T$
@@ -3272,10 +4925,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color purple
+\color black
 גרף ממושקל
 \series default
 \color inherit
+
 :
  גרף 
 \begin_inset Formula $G$
@@ -3289,35 +4943,13 @@ a_{n-m} & else
 \end_layout
 
 \begin_layout Standard
-אלגוריתם קרוסקל:
- ...
-\end_layout
-
-\begin_layout Standard
-אלגוריתם פרים:
- ...
-\end_layout
-
-\begin_layout Standard
 
 \series bold
-\color purple
-קידוד פרופר
-\series default
-\color inherit
-:
- שיטה לקידוד עץ בינארי למחרוזת,
- בכל שלב נבחר עלה בעל ערך קטן ביותר ונוסיף למחרוזת את הקודקוד היחידי שהוא מחובר אליו,
- לאחר מכן נמחק את אותו עלה ונמשיך ברקורסיה עד שישארו שני קודקודים בגרף.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color purple
+\color black
 משפט קיילי
 \series default
 \color inherit
+
 :
  כמות העצים על 
 \begin_inset Formula $n$
@@ -3333,33 +4965,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color purple
-הערה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $G$
-\end_inset
-
- גרף אזי מספר המופעים של 
-\begin_inset Formula $v\in V\left(G\right)$
-\end_inset
-
- בקידוד פרופר הוא 
-\begin_inset Formula $\deg\left(v\right)-1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
+\color black
 מסלול אוילר
 \series default
 \color inherit
+
 :
  מסלול העובר על כל הקשתות בגרף.
 \end_layout
@@ -3367,31 +4977,69 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color brown
-מעגל אוילר
+\color black
+מסלול אוילר
 \series default
 \color inherit
-:
- (מעגל)
-\begin_inset Formula $\land$
-\end_inset
 
-(מסלול אוילר).
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-משפט אוילר
-\series default
-\color inherit
 :
  יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף קשיר
+ גרף אזי מסלול 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $e\in E\left(G\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $e\in\sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מעגל אוילר
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי מעגל 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מסלול אוילר.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+משפט אוילר
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף קשיר אזי
 \end_layout
 
 \begin_layout Itemize
@@ -3399,12 +5047,12 @@ a_{n-m} & else
 \begin_inset Formula $G$
 \end_inset
 
- יש מעגל אוילר) 
+ יש מעגל אוילר)
 \begin_inset Formula $\iff$
 \end_inset
 
- (
-\begin_inset Formula $\forall v\in V\left(G\right).d\left(v\right)\in\bbn_{even}$
+(
+\begin_inset Formula $\forall v\in V\left(G\right).d\left(v\right)\in\bbn_{\text{even}}$
 \end_inset
 
 ).
@@ -3415,48 +5063,47 @@ a_{n-m} & else
 \begin_inset Formula $G$
 \end_inset
 
- יש מסלול אוילר) 
+ יש מסלול אוילר)
 \begin_inset Formula $\iff$
 \end_inset
 
- (
-\begin_inset Formula $\exists!v,u\in V\left(G\right).\left(v\ne u\right)\land\left(d\left(v\right),d\left(u\right)\in\bbn_{odd}\right)$
+(
+\begin_inset Formula $\left|\left\{ v\in V\left(G\right)\mid d\left(v\right)\in\bbn_{\text{odd}}\right\} \right|\in\left\{ 0,2\right\} $
 \end_inset
 
-)
-\begin_inset Formula $\lor$
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
-(ב־
-\begin_inset Formula $G$
-\end_inset
 
- יש מעגל אוילר).
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color brown
+\color blue
 הומומורפיזם
 \series default
 \color inherit
+
 :
  יהיו 
-\begin_inset Formula $G_{1}$
-\end_inset
-
-,
- 
-\begin_inset Formula $G_{2}$
+\begin_inset Formula $G,S$
 \end_inset
 
  גרפים אזי 
-\begin_inset Formula $f:V\left(G_{1}\right)\to V\left(G_{2}\right)$
+\begin_inset Formula $f:V\left(G\right)\to V\left(S\right)$
 \end_inset
 
- המקיימת 
-\begin_inset Formula $\forall\left\{ v,u\right\} \in E\left(G_{1}\right).\left\{ f\left(v\right),f\left(u\right)\right\} \in E\left(G_{2}\right)$
+ עבורה לכל 
+\begin_inset Formula $v,u\in V\left(G\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(\left\{ v,e\right\} \in E\left(G\right)\right)\iff\left(\left\{ f\left(v\right),f\left(u\right)\right\} \in E\left(S\right)\right)$
 \end_inset
 
 .
@@ -3465,70 +5112,144 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color brown
+\color blue
 איזומורפיזם
 \series default
 \color inherit
+
 :
- (הומומורפיזם)
-\begin_inset Formula $\land$
+ יהיו 
+\begin_inset Formula $G,S$
 \end_inset
 
-(זיווג).
+ גרפים אזי הומומורפיזם 
+\begin_inset Formula $f:V\left(G\right)\to V\left(S\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $f$
+\end_inset
+
+ זיווג.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color brown
-טענה
+\color blue
+גרפים איזומורפיים
 \series default
 \color inherit
+
 :
  יהיו 
-\begin_inset Formula $G_{1}$
-\end_inset
-
-,
- 
-\begin_inset Formula $G_{2}$
+\begin_inset Formula $G,S$
 \end_inset
 
  גרפים ויהי 
-\begin_inset Formula $f:V\left(G_{1}\right)\to V\left(G_{2}\right)$
+\begin_inset Formula $f:V\left(G\right)\to V\left(S\right)$
 \end_inset
 
- איזומורפיזם
+ איזומורפיזם אזי 
+\begin_inset Formula $G\cong S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סימון
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $G,S$
+\end_inset
+
+ גרפים יהי 
+\begin_inset Formula $f:V\left(G\right)\to V\left(S\right)$
+\end_inset
+
+ איזומורפיזם יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\sigma\in V\left(G\right)^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(\sigma\right)=\left<f\left(\sigma_{1}\right),\ldots,f\left(\sigma_{n}\right)\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $G,S$
+\end_inset
+
+ גרפים ויהי 
+\begin_inset Formula $f:V\left(G\right)\to V\left(S\right)$
+\end_inset
+
+ איזומורפיזם אזי
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\cn{V\left(G_{1}\right)}=\cn{V\left(G_{2}\right)}$
+\begin_inset Formula $\cn{V\left(G\right)}=\cn{V\left(S\right)}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\cn{E\left(G_{1}\right)}=\cn{E\left(G_{2}\right)}$
+\begin_inset Formula $\cn{E\left(G\right)}=\cn{E\left(S\right)}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\forall v\in V\left(G_{1}\right).d_{G_{1}}\left(v\right)=d_{G_{2}}\left(f\left(v\right)\right)$
+לכל 
+\begin_inset Formula $v\in V\left(G\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $d_{G}\left(v\right)=d_{S}\left(f\left(v\right)\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-(
-\begin_inset Formula $\left<a_{1},\ldots,a_{n}\right>$
+יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\sigma\in V\left(G\right)^{n}$
+\end_inset
+
+ אזי (
+\begin_inset Formula $\sigma$
 \end_inset
 
  טיול ב־
-\begin_inset Formula $G_{1}$
+\begin_inset Formula $G$
 \end_inset
 
 ) 
@@ -3536,11 +5257,11 @@ a_{n-m} & else
 \end_inset
 
  (
-\begin_inset Formula $\left<f\left(a_{1}\right),\ldots,f\left(a_{n}\right)\right>$
+\begin_inset Formula $f\left(\sigma\right)$
 \end_inset
 
  טיול ב־
-\begin_inset Formula $G_{2}$
+\begin_inset Formula $S$
 \end_inset
 
 ).
@@ -3548,29 +5269,302 @@ a_{n-m} & else
 
 \begin_layout Itemize
 (
-\begin_inset Formula $G_{1}$
+\begin_inset Formula $G$
 \end_inset
 
- קשיר/עץ/חסר מעגלים) 
+ קשיר) 
 \begin_inset Formula $\iff$
 \end_inset
 
  (
-\begin_inset Formula $G_{2}$
+\begin_inset Formula $S$
 \end_inset
 
- קשיר/עץ/חסר מעגלים).
+ קשיר).
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color brown
+\color blue
+מסקנה
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $G,S$
+\end_inset
+
+ גרפים איזומורפיים אזי
+\end_layout
+
+\begin_layout Itemize
+(
+\begin_inset Formula $G$
+\end_inset
+
+ עץ) 
+\begin_inset Formula $\iff$
+\end_inset
+
+ (
+\begin_inset Formula $S$
+\end_inset
+
+ עץ).
+\end_layout
+
+\begin_layout Itemize
+(
+\begin_inset Formula $G$
+\end_inset
+
+ חסר מעגלים) 
+\begin_inset Formula $\iff$
+\end_inset
+
+ (
+\begin_inset Formula $S$
+\end_inset
+
+ חסר מעגלים).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+
+:
+ יהיו 
+\begin_inset Formula $G,S$
+\end_inset
+
+ גרפים יהי 
+\begin_inset Formula $f:V\left(G\right)\to V\left(S\right)$
+\end_inset
+
+ איזומורפיזם יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\sigma\in V\left(G\right)^{n}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+(
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מסלול ב־
+\begin_inset Formula $G$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $f\left(\sigma\right)$
+\end_inset
+
+ מסלול ב־
+\begin_inset Formula $S$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+(
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מסלול פשוט ב־
+\begin_inset Formula $G$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $f\left(\sigma\right)$
+\end_inset
+
+ מסלול פשוט ב־
+\begin_inset Formula $S$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+(
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מעגל ב־
+\begin_inset Formula $G$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $f\left(\sigma\right)$
+\end_inset
+
+ מעגל ב־
+\begin_inset Formula $S$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+(
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מעגל פשוט ב־
+\begin_inset Formula $G$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $f\left(\sigma\right)$
+\end_inset
+
+ מעגל פשוט ב־
+\begin_inset Formula $S$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+(
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מסלול אוילר ב־
+\begin_inset Formula $G$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $f\left(\sigma\right)$
+\end_inset
+
+ מסלול אוילר ב־
+\begin_inset Formula $S$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+(
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מעגל אוילר ב־
+\begin_inset Formula $G$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $f\left(\sigma\right)$
+\end_inset
+
+ מעגל אוילר ב־
+\begin_inset Formula $S$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+(
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מסלול המילטון ב־
+\begin_inset Formula $G$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $f\left(\sigma\right)$
+\end_inset
+
+ מסלול המילטון ב־
+\begin_inset Formula $S$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+(
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מעגל המילטון ב־
+\begin_inset Formula $G$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $f\left(\sigma\right)$
+\end_inset
+
+ מעגל המילטון ב־
+\begin_inset Formula $S$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
 הגדרה
 \series default
 \color inherit
+
 :
- 
+ תהא 
+\begin_inset Formula $V$
+\end_inset
+
+ קבוצה אזי 
 \begin_inset Formula $\text{Graph}\left(V\right)=\left\{ \left<V,E\right>\mid E\subseteq\P V2\right\} $
 \end_inset
 
@@ -3580,13 +5574,18 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color brown
+\color blue
 גרף לא מסומן
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula $\nicefrac{\text{Graph}\left(V\right)}{\cong}\ni K$
+ תהא 
+\begin_inset Formula $V$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $K\in\nicefrac{\text{Graph}\left(V\right)}{\cong}$
 \end_inset
 
 .
@@ -3595,12 +5594,17 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color brown
-הערה
+\color blue
+טענה
 \series default
 \color inherit
+
 :
- 
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\frac{2^{\binom{n}{2}}}{n!}\le\left|\nicefrac{\text{Graph}\left(\left[n\right]\right)}{\cong}\right|\le2^{\binom{n}{2}}$
 \end_inset
 
@@ -3608,18 +5612,30 @@ a_{n-m} & else
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
-\color orange
+\color red
 צביעת קשתות
 \series default
 \color inherit
+
 :
- יהי 
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה ויהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף אזי 
+ גרף אזי פונקציה 
 \begin_inset Formula $f:E\left(G\right)\to A$
 \end_inset
 
@@ -3629,10 +5645,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color orange
-תת גרף מונוכרומטי
+\color red
+תת־גרף מונוכרומטי
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
@@ -3643,15 +5660,11 @@ a_{n-m} & else
 \end_inset
 
  צביעה אזי 
-\begin_inset Formula $G'$
+\begin_inset Formula $S\lhd G$
 \end_inset
 
- תת גרף של 
-\begin_inset Formula $G$
-\end_inset
-
- כך שמתקיים 
-\begin_inset Formula $\forall e_{1},e_{2}\in E\left(G'\right).f\left(e_{1}\right)=f\left(e_{2}\right)$
+ עבורו 
+\begin_inset Formula $\forall e_{1},e_{2}\in E\left(S\right).f\left(e_{1}\right)=f\left(e_{2}\right)$
 \end_inset
 
 .
@@ -3660,45 +5673,59 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
 מספר ראמזי
 \series default
 \color inherit
+
 :
- לכל 
+ יהיו 
 \begin_inset Formula $s,t\ge2$
 \end_inset
 
- נגדיר את 
+ אזי 
 \begin_inset Formula $R\left(s,t\right)$
 \end_inset
 
- להיות ה־
+ הוא ה־
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
- הקטן ביותר כך שלכל צביעת קשתות של 
+ המינימלי עבורו לכל צביעת קשתות 
+\begin_inset Formula $f:E\left(K_{n}\right)\to\left\{ 0,1\right\} $
+\end_inset
+
+ מתקיים כי (קיימת ב־
 \begin_inset Formula $K_{n}$
 \end_inset
 
- בשני צבעים ניתן למצוא קליקה מונוכרומטית 
+ קליקה 
 \begin_inset Formula $K_{s}$
 \end_inset
 
- אדומה או קליקה מונוכרומטית 
+ מונוכרומטית 0)
+\begin_inset Formula $\lor$
+\end_inset
+
+(קיימת ב־
+\begin_inset Formula $K_{n}$
+\end_inset
+
+ קליקה 
 \begin_inset Formula $K_{t}$
 \end_inset
 
- כחולה.
+ מונוכרומטית 1).
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
 משפט
 \series default
 \color inherit
+
 :
  
 \begin_inset Formula $R\left(3,3\right)=6$
@@ -3710,13 +5737,18 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
 משפט
 \series default
 \color inherit
+
 :
- 
-\begin_inset Formula $\forall s,t\ge2.R\left(s,t\right)=R\left(t,s\right)$
+ יהיו 
+\begin_inset Formula $s,t\ge2$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R\left(s,t\right)=R\left(t,s\right)$
 \end_inset
 
 .
@@ -3725,13 +5757,22 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
 משפט ראמזי
 \series default
 \color inherit
+
 :
- מתקיים 
-\begin_inset Formula $\forall s,t\ge2.\exists n\in\bbn.R\left(s,t\right)=n$
+ יהיו 
+\begin_inset Formula $s,t\ge2$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $R\left(s,t\right)=n$
 \end_inset
 
 .
@@ -3740,13 +5781,78 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
+הגדרה
+\series default
+\color inherit
+
+:
+ תהא 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ עוצמה ותהא 
+\begin_inset Formula $V$
+\end_inset
+
+ קבוצה באשר 
+\begin_inset Formula $\left|V\right|=\kappa$
+\end_inset
+
+ אזי 
+\begin_inset Formula $K_{\kappa}=\left<V,\left\{ X\subseteq V\mid\left|X\right|=2\right\} \right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+עוצמה מסוג רמזי
+\series default
+\color inherit
+
+:
+ עוצמה 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ עבורה לכל צביעת קשתות 
+\begin_inset Formula $f:E\left(K_{\kappa}\right)\to\left\{ 0,1\right\} $
+\end_inset
+
+ קיימת ב־
+\begin_inset Formula $K_{\kappa}$
+\end_inset
+
+ קליקה 
+\begin_inset Formula $K_{\kappa}$
+\end_inset
+
+ מונוכרומטית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
 משפט קונינג
 \series default
 \color inherit
+
 :
- לכל 
-\begin_inset Formula $\forall f\in\P{\bbn}2\to\left\{ 0,1\right\} .\exists H\subseteq\bbn.\left(\left|H\right|=\aleph_{0}\right)\land\left(\cn{f\left[\P H2\right]}=1\right)$
+ תהא 
+\begin_inset Formula $f\in\P{\bbn}2\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $H\subseteq\bbn$
+\end_inset
+
+ בת־מנייה עבורה 
+\begin_inset Formula $\cn{f\left[\P H2\right]}=1$
 \end_inset
 
 .
@@ -3755,21 +5861,38 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
+מסקנה
+\series default
+\color inherit
+
+:
+ 
+\begin_inset Formula $\aleph_{0}$
+\end_inset
+
+ הינה עוצמה מסוג רמזי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
 משפט ארדש־ראדו
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף שמקיים 
+ גרף באשר 
 \begin_inset Formula $\aleph<\left|V\left(G\right)\right|$
 \end_inset
 
  ותהא 
-\begin_inset Formula $f\in\P{V\left(G\right)}2\to\bbn$
+\begin_inset Formula $f:\P{V\left(G\right)}2\to\bbn$
 \end_inset
 
  אזי קיימת 
@@ -3786,10 +5909,31 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
+משפט
+\series default
+\color inherit
+
+:
+ ב־
+\begin_inset Formula $\text{ZFC}$
+\end_inset
+
+ לא ניתן להוכיח ולא ניתן להפריך את קיומם של עוצמות גדולות מ־
+\begin_inset Formula $\aleph_{0}$
+\end_inset
+
+ מסוג רמזי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
 צביעת קודקודים
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
@@ -3805,10 +5949,11 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
 צביעת קודקודים חוקית
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
@@ -3818,12 +5963,16 @@ a_{n-m} & else
 \begin_inset Formula $f:V\left(G\right)\to A$
 \end_inset
 
- המקיימת
-\begin_inset Newline newline
+ עבורה לכל 
+\begin_inset Formula $v,u\in V\left(G\right)$
 \end_inset
 
+ באשר 
+\begin_inset Formula $\left\{ v,u\right\} \in E\left(G\right)$
+\end_inset
 
-\begin_inset Formula $\forall v,u\in V\left(G\right).\left\{ v,u\right\} \in E\left(G\right)\implies f\left(v\right)\ne f\left(u\right)$
+ מתקיים 
+\begin_inset Formula $f\left(v\right)\ne f\left(u\right)$
 \end_inset
 
 .
@@ -3832,9 +5981,31 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
+טענה
+\series default
+\color inherit
+
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ f:\left[n\right]\to\left[n\right]\mid\text{ צביעה חוקית}f\right\} =n!$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
 גרף
 \series default
+\color inherit
+
  
 \series bold
 
@@ -3843,13 +6014,12 @@ a_{n-m} & else
 
 ־צביע
 \series default
-\color inherit
 :
  גרף 
 \begin_inset Formula $G$
 \end_inset
 
- המקיים כי קיימת צביעה חוקית של 
+ עבורו קיימת צביעה חוקית של 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3863,19 +6033,21 @@ a_{n-m} & else
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
 הערה
 \series default
 \color inherit
+
 :
- לכל גרף 
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
-
+ גרף אזי
 \end_layout
 
 \begin_layout Itemize
+(
 \begin_inset Formula $G$
 \end_inset
 
@@ -3883,18 +6055,19 @@ a_{n-m} & else
 \begin_inset Formula $1$
 \end_inset
 
-־צביע 
+־צביע)
 \begin_inset Formula $\iff$
 \end_inset
 
- 
+(
 \begin_inset Formula $E\left(G\right)=\emptyset$
 \end_inset
 
-.
+).
 \end_layout
 
 \begin_layout Itemize
+(
 \begin_inset Formula $G$
 \end_inset
 
@@ -3902,78 +6075,73 @@ a_{n-m} & else
 \begin_inset Formula $2$
 \end_inset
 
-־צביע 
+־צביע)
 \begin_inset Formula $\iff$
 \end_inset
 
- 
+(
 \begin_inset Formula $G$
 \end_inset
 
- גרף דו צדדי.
+ גרף דו צדדי).
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
 משפט
 \series default
 \color inherit
+
 :
- 
+ יהי 
 \begin_inset Formula $G$
 \end_inset
 
- גרף דו צדדי 
+ גרף אזי (
+\begin_inset Formula $G$
+\end_inset
+
+ גרף דו צדדי)
 \begin_inset Formula $\iff$
 \end_inset
 
- אין ב־
+(אין ב־
 \begin_inset Formula $G$
 \end_inset
 
- מעגלים באורך אי־זוגי.
+ מעגלים באורך אי־זוגי).
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color orange
+\color red
 מספר הצביעה
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
 \end_inset
 
  גרף אזי 
-\begin_inset Formula $\chi\left(G\right)$
+\begin_inset Formula $\chi\left(G\right)=\min\left\{ n\in\bbn\mid\text{־צביע}n\text{ הינו }G\right\} $
 \end_inset
 
- הינו המספר הטבעי 
-\begin_inset Formula $n$
-\end_inset
-
- הכי קטן כך ש־
-\begin_inset Formula $G$
-\end_inset
-
- 
-\begin_inset Formula $n$
-\end_inset
-
-־צביע.
+.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color orange
-הערה
+\color red
+מסקנה
 \series default
 \color inherit
+
 :
  יהי 
 \begin_inset Formula $G$
