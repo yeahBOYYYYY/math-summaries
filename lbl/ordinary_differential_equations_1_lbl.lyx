@@ -38,12 +38,13 @@
 \setlist[itemize,1]{label={\fontfamily{david}\fontencoding{T1}\selectfont\textbullet}}
 
 % colors
-\definecolor{blue}{RGB}{14,107,217}
 \definecolor{green}{RGB}{0,158,40}
 \definecolor{red}{RGB}{235,16,16}
 \definecolor{brown}{RGB}{164,66,0}
 \definecolor{orange}{RGB}{231,135,26}
 \definecolor{purple}{RGB}{94,53,177}
+\definecolor{pink}{RGB}{255,127,127}
+
 \definecolor{keywordcolor}{RGB}{255,117,0}
 \definecolor{commentcolor}{RGB}{128,128,128}
 \definecolor{stringcolor}{RGB}{0,168,0}
@@ -74,6 +75,10 @@
 \end_preamble
 \options no-math
 \use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+\end_modules
 \maintain_unincluded_children no
 \language british
 \language_package default
@@ -174,9 +179,164 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\u}{\mathcal{U}}
+{\mathcal{U}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
-Claim
+Ordinary Differential Equation (ODE)
+\series default
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ and let 
+\begin_inset Formula $f:\bbr^{n+1}\to\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $f\left(x,y\left(x\right),y^{\prime}\left(x\right),\ldots y^{\left(n\right)}\left(x\right)\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Solution of an Ordinary Differential Equation
+\series default
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ let 
+\begin_inset Formula $\u\subseteq\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $f:\bbr^{n+1}\to\bbr$
+\end_inset
+
+ then a function 
+\begin_inset Formula $y\in C^{n}\left(\u\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $f\left(x,y\left(x\right),\ldots,y^{\left(n\right)}\left(x\right)\right)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in\u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Notation
+\series default
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ let 
+\begin_inset Formula $\u\subseteq\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $f:\bbr^{n+1}\to\bbr$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\sols\left(f\left(x,y\left(x\right),y^{\prime}\left(x\right),\ldots y^{\left(n\right)}\left(x\right)\right)=0\right)=\left\{ y\in C^{n}\left(\u\right)\mid f\left(x,y\left(x\right),\ldots,y^{\left(n\right)}\left(x\right)\right)=0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+First Order Ordinary Differential Equation
+\series default
+:
+ let 
+\begin_inset Formula $f:\bbr^{3}\to\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $f\left(x,y,y^{\prime}\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Separable Ordinary Differential Equation
+\series default
+:
+ let 
+\begin_inset Formula $f,g:\bbr\to\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $y^{\prime}=f\left(y\right)g\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim Separation of Variables
+\series default
+:
+ let 
+\begin_inset Formula $f,g:\bbr\to\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $f\left(x\right)\ne0$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in\bbr$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\sols\left(y^{\prime}=f\left(y\right)g\left(x\right)\right)=\sols\left(\intop\frac{1}{f\left(y\right)}\text{d}y=\intop g\left(x\right)\text{d}x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary
 \series default
 :
  
@@ -217,8 +377,8 @@ Curves that foliate a domain
 Claim
 \series default
 :
- The solutions of the ODE 
-\begin_inset Formula $y\left(x\right)=y^{\prime}\left(x\right)$
+ 
+\begin_inset Formula $\sols\left(y=y^{\prime}\right)$
 \end_inset
 
  foliate the plane.
@@ -227,29 +387,116 @@ Claim
 \begin_layout Standard
 
 \series bold
-Theorem of existence and uniqueness of ODEs
+Remark
 \series default
 :
- Let 
-\begin_inset Formula $f\in C^{1}\left(\bbr^{2},\bbr\right)$
+ let 
+\begin_inset Formula $f:\bbr^{n+1}\to\bbr$
 \end_inset
 
  and let 
-\begin_inset Formula $a\in\bbr^{2}$
+\begin_inset Formula $g\in\sols\left(f\left(x,y,\ldots,y^{\left(n\right)}\right)\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $g$
+\end_inset
+
+ is piecewise continuous then each continuous branch of 
+\begin_inset Formula $g$
+\end_inset
+
+ is a solution of the ODE.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Initial Value Problem (IVP)
+\series default
+:
+ let 
+\begin_inset Formula $f:\bbr^{n+1}\to\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $p\in\bbr^{2}$
+\end_inset
+
+ then 
+\begin_inset Formula $\left\{ \begin{smallmatrix}f\left(x,y^{\prime},\ldots y^{\left(n\right)}\right)=0\\
+y\left(p_{1}\right)=p_{2}
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Theorem Cauchy-Peano
+\series default
+:
+ let 
+\begin_inset Formula $I,J\subseteq\bbr$
+\end_inset
+
+ be closed intervals let 
+\begin_inset Formula $f\in C^{1}\left(I\times J\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $p\in\text{int}\left(I\times J\right)$
 \end_inset
 
  then there exsits 
 \begin_inset Formula $\e>0$
 \end_inset
 
- such that the ODE 
+ such that 
 \begin_inset Formula $\left\{ \begin{smallmatrix}y^{\prime}=f\left(x,y\right)\\
-y\left(a_{1}\right)=a_{2}
+y\left(p_{1}\right)=p_{2}
+\end{smallmatrix}\right.$
+\end_inset
+
+ has a solution on the interval 
+\begin_inset Formula $\left(p_{1}-\e,p_{1}+\e\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Theorem of Existence and Uniqueness
+\series default
+:
+ let 
+\begin_inset Formula $I,J\subseteq\bbr$
+\end_inset
+
+ be closed intervals let 
+\begin_inset Formula $f\in C^{1}\left(I\times J\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $p\in\text{int}\left(I\times J\right)$
+\end_inset
+
+ then there exsits 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ such that 
+\begin_inset Formula $\left\{ \begin{smallmatrix}y^{\prime}=f\left(x,y\right)\\
+y\left(p_{1}\right)=p_{2}
 \end{smallmatrix}\right.$
 \end_inset
 
  has a unique solution on the interval 
-\begin_inset Formula $\left(a_{1}-\e,a_{1}+\e\right)$
+\begin_inset Formula $\left(p_{1}-\e,p_{1}+\e\right)$
 \end_inset
 
 .
@@ -258,61 +505,40 @@ y\left(a_{1}\right)=a_{2}
 \begin_layout Standard
 
 \series bold
-Claim
+Corollary
 \series default
 :
- Let 
-\begin_inset Formula $\Omega\subseteq\bbr^{2}$
+ let 
+\begin_inset Formula $I,J\subseteq\bbr$
 \end_inset
 
- be a domain and let 
-\begin_inset Formula $f\in C^{1}\left(\Omega,\bbr\right)$
-\end_inset
-
- then the solutions of 
-\begin_inset Formula $y^{\prime}=f\left(x,y\right)$
-\end_inset
-
- foliates 
-\begin_inset Formula $\Omega$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Theorem Peano
-\series default
-:
- Let 
-\begin_inset Formula $\Omega\subseteq\bbr^{2}$
-\end_inset
-
- be a domain and let 
-\begin_inset Formula $f\in C\left(\Omega,\bbr\right)$
+ be closed intervals and let 
+\begin_inset Formula $f\in C^{1}\left(I\times J\right)$
 \end_inset
 
  then 
-\begin_inset Formula $y^{\prime}=f\left(x,y\right)$
+\begin_inset Formula $\sols\left(y^{\prime}=f\left(x,y\right)\right)$
 \end_inset
 
- has a solution.
+ foliates 
+\begin_inset Formula $I\times J$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-Vector field in the plane
+Vector Field
 \series default
 :
- Let 
+ let 
 \begin_inset Formula $\Omega\subseteq\bbr^{2}$
 \end_inset
 
- be a domain then a function 
-\begin_inset Formula $\nu:\Omega\to\bbr^{2}$
+ be a domain then 
+\begin_inset Formula $\nu\in C\left(\Omega,\bbr^{2}\right)$
 \end_inset
 
 .
@@ -324,12 +550,16 @@ Vector field in the plane
 Notation
 \series default
 :
- Let 
+ let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a set and let 
 \begin_inset Formula $\g:\bbr\to X$
 \end_inset
 
- be a function of time then 
-\begin_inset Formula $\frac{d}{dt}\g=\dot{\g}$
+ then 
+\begin_inset Formula $\dot{\g}=\frac{\text{d}\g}{\text{d}t}$
 \end_inset
 
 .
@@ -341,12 +571,12 @@ Notation
 Integral curve
 \series default
 :
- Let 
+ let 
 \begin_inset Formula $\nu:\Omega\to\bbr^{2}$
 \end_inset
 
  be a vector field then a curve 
-\begin_inset Formula $\g:I\to\Omega$
+\begin_inset Formula $\g:\left[a,b\right]\to\Omega$
 \end_inset
 
  such that 
@@ -362,15 +592,80 @@ Integral curve
 Claim
 \series default
 :
- Let 
-\begin_inset Formula $\nu\in C^{1}\left(\Omega,\bbr^{2}\right)$
+ let 
+\begin_inset Formula $\nu:\Omega\to\bbr^{2}$
 \end_inset
 
- be a vector field then 
-\begin_inset Formula $\left\{ \g:I\to\Omega\mid\gamma\text{ is an integral curve of }\nu\right\} $
+ be a vector field such that 
+\begin_inset Formula $v\left(x\right)\ne0$
 \end_inset
 
- foliate 
+ for all 
+\begin_inset Formula $x\in\Omega$
+\end_inset
+
+ and let 
+\begin_inset Formula $\g:\left[a,b\right]\to\Omega$
+\end_inset
+
+ be a curve such that 
+\begin_inset Formula $v\left(\g\left(t\right)\right)\in T_{\g\left(t\right)}\left(\im\left(\g\right)\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\in\left[a,b\right]$
+\end_inset
+
+ then there exists a curve 
+\begin_inset Formula $\eta:\left[\a,\b\right]\to\left[a,b\right]$
+\end_inset
+
+ such that 
+\begin_inset Formula $\g\circ\eta$
+\end_inset
+
+ is an integral curve.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula $C^{n}$
+\end_inset
+
+ Vector Field
+\series default
+:
+ let 
+\begin_inset Formula $\Omega\subseteq\bbr^{2}$
+\end_inset
+
+ be a domain then 
+\begin_inset Formula $\nu\in C^{n}\left(\Omega,\bbr^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $\nu:\Omega\to\bbr^{2}$
+\end_inset
+
+ be a 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+ vector field then 
+\begin_inset Formula $\left\{ \g:\left[a,b\right]\to\Omega\mid\left(a,b\in\bbr\right)\land\left(\gamma\text{ is an integral curve of }\nu\right)\right\} $
+\end_inset
+
+ foliates 
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -383,12 +678,12 @@ Claim
 Theorem Peano
 \series default
 :
- Let 
-\begin_inset Formula $\nu\in C\left(\Omega,\bbr^{2}\right)$
+ let 
+\begin_inset Formula $\nu:\Omega\to\bbr^{2}$
 \end_inset
 
  be a vector field then 
-\begin_inset Formula $\left\{ \g:I\to\Omega\mid\gamma\text{ is an integral curve of }\nu\right\} $
+\begin_inset Formula $\left\{ \g:\left[a,b\right]\to\Omega\mid\left(a,b\in\bbr\right)\land\left(\gamma\text{ is an integral curve of }\nu\right)\right\} $
 \end_inset
 
  covers 
@@ -401,35 +696,412 @@ Theorem Peano
 \begin_layout Standard
 
 \series bold
-Theorem
+Lemma
 \series default
 :
- Let 
+ let 
 \begin_inset Formula $\Omega\subseteq\bbr^{2}$
 \end_inset
 
- and let 
-\begin_inset Formula $f\in C^{1}\left(\Omega,\bbr\right)$
+ be a domain and let 
+\begin_inset Formula $f\in C^{1}\left(\Omega\right)$
 \end_inset
 
  then 
-\begin_inset Formula $\left(y^{\prime}=f\left(x,y\right)\right)\iff\left(\left(x,y\left(x\right)\right)\text{ is an integral curve of }\left(1,f\right)\right)$
+\begin_inset Formula $\left(\begin{smallmatrix}1\\
+f
+\end{smallmatrix}\right)$
+\end_inset
+
+ is a vector field.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Theorem of Existence and Uniqueness
+\series default
+:
+ let 
+\begin_inset Formula $\Omega\subseteq\bbr^{2}$
+\end_inset
+
+ be a domain let 
+\begin_inset Formula $f\in C^{1}\left(\Omega\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $g\in C^{1}\left(\bbr\right)$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left(g^{\prime}=f\left(x,g\right)\right)\iff\left(\left(\begin{smallmatrix}x\\
+g
+\end{smallmatrix}\right)\text{ is an integral curve of }\left(\begin{smallmatrix}1\\
+f
+\end{smallmatrix}\right)\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-Logistic equation:
- Let 
+
+\series bold
+Autonomous Ordinary Differential Equations
+\series default
+:
+ let 
+\begin_inset Formula $f:\bbr\to\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $y^{\prime}=f\left(y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Logistic Equation
+\series default
+:
+ let 
 \begin_inset Formula $L>0$
 \end_inset
 
  then 
-\begin_inset Formula $\dot{P}=P\left(L-P\right)$
+\begin_inset Formula $\dot{P}\left(t\right)=P\left(t\right)\left(L-P\left(t\right)\right)$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Equilibrium Solution
+\series default
+:
+ let 
+\begin_inset Formula $f:\bbr\to\bbr$
+\end_inset
+
+ then a function 
+\begin_inset Formula $g\in\sols\left(y^{\prime}=f\left(y\right)\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $f\left(g\left(x\right)\right)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in\bbr$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary
+\series default
+:
+ let 
+\begin_inset Formula $f\in C\left(\bbr\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $g:\bbr\to\bbr$
+\end_inset
+
+ be an equalibriem solution then 
+\begin_inset Formula $g$
+\end_inset
+
+ is constant.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary
+\series default
+:
+ let 
+\begin_inset Formula $L>0$
+\end_inset
+
+ then 
+\begin_inset Formula $\left\{ 0,L\right\} $
+\end_inset
+
+ are the equilibium solutions of the logistic equation.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Logistic Equation With Harvesting
+\series default
+:
+ let 
+\begin_inset Formula $L,k>0$
+\end_inset
+
+ then 
+\begin_inset Formula $\dot{P}\left(t\right)=P\left(t\right)\left(L-P\left(t\right)\right)-k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Stable Equilibrium Solution
+\series default
+:
+ let 
+\begin_inset Formula $f:\bbr\to\bbr$
+\end_inset
+
+ then an equilibrium solution 
+\begin_inset Formula $g:\bbr\to\bbr$
+\end_inset
+
+ such that for all 
+\begin_inset Formula $y\in\sols\left(y^{\prime}=f\left(y\right)\right)$
+\end_inset
+
+ and for all 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ if there exists 
+\begin_inset Formula $\d>0$
+\end_inset
+
+ and 
+\begin_inset Formula $p\in\bbr$
+\end_inset
+
+ for which 
+\begin_inset Formula $\left|y\left(p\right)-g\left(p\right)\right|<\d$
+\end_inset
+
+ then 
+\begin_inset Formula $\left|y\left(t\right)-g\left(t\right)\right|<\e$
+\end_inset
+
+ for all 
+\begin_inset Formula $t>p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lotka–Volterra equations
+\series default
+:
+ let 
+\begin_inset Formula $\a>0$
+\end_inset
+
+ then 
+\begin_inset Formula $\left\{ \begin{smallmatrix}\dot{x}\left(t\right)=x\left(t\right)\cdot\left(1-y\left(t\right)\right)\\
+\dot{y}\left(t\right)=\a\cdot y\left(t\right)\cdot\left(x\left(t\right)-1\right)
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $\a>0$
+\end_inset
+
+ then 
+\begin_inset Formula $\left\{ \left(\begin{smallmatrix}0\\
+0
+\end{smallmatrix}\right),\left(\begin{smallmatrix}1\\
+1
+\end{smallmatrix}\right)\right\} $
+\end_inset
+
+ are the equilibium solutions of the lotka-volterra equation.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $\a>0$
+\end_inset
+
+ and let 
+\begin_inset Formula $\left(\begin{smallmatrix}x\\
+y
+\end{smallmatrix}\right)\in C^{1}\left(\bbr^{2}\right)$
+\end_inset
+
+ be a solution to the lotka-volterra equation then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\frac{\text{d}}{\text{d}t}\left(\left(y\left(t\right)-1-\log\left(y\left(t\right)\right)\right)+\a\left(x\left(t\right)-1-\log\left(x\left(t\right)\right)\right)\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary
+\series default
+:
+ let 
+\begin_inset Formula $\a>0$
+\end_inset
+
+ let 
+\begin_inset Formula $p\in\bbr^{2}$
+\end_inset
+
+ and let 
+\begin_inset Formula $\left(\begin{smallmatrix}x\\
+y
+\end{smallmatrix}\right)\in C^{1}\left(\bbr^{2}\right)$
+\end_inset
+
+ be a solution to 
+\begin_inset Formula $\left\{ \begin{smallmatrix}\dot{x}\left(t\right)=x\left(t\right)\cdot\left(1-y\left(t\right)\right)\\
+\dot{y}\left(t\right)=\a\cdot y\left(t\right)\cdot\left(x\left(t\right)-1\right)\\
+\left(\begin{smallmatrix}x\\
+y
+\end{smallmatrix}\right)\left(0\right)=p
+\end{smallmatrix}\right.$
+\end_inset
+
+ then 
+\begin_inset Formula $\left(\begin{smallmatrix}x\\
+y
+\end{smallmatrix}\right)$
+\end_inset
+
+ is periodic.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lemma
+\series default
+:
+ let 
+\begin_inset Formula $\a>0$
+\end_inset
+
+ let 
+\begin_inset Formula $p\in\bbr^{2}$
+\end_inset
+
+ and let 
+\begin_inset Formula $\left(\begin{smallmatrix}x\\
+y
+\end{smallmatrix}\right)\in C^{1}\left(\bbr^{2}\right)$
+\end_inset
+
+ be a solution to 
+\begin_inset Formula $\left\{ \begin{smallmatrix}\dot{x}\left(t\right)=x\left(t\right)\cdot\left(1-y\left(t\right)\right)\\
+\dot{y}\left(t\right)=\a\cdot y\left(t\right)\cdot\left(x\left(t\right)-1\right)\\
+\left(\begin{smallmatrix}x\\
+y
+\end{smallmatrix}\right)\left(0\right)=p
+\end{smallmatrix}\right.$
+\end_inset
+
+ with priod 
+\begin_inset Formula $T$
+\end_inset
+
+ then 
+\begin_inset Formula $\frac{1}{T}\intop_{0}^{T}x\text{d}t=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{1}{T}\intop_{0}^{T}y\text{d}t=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim Linear Substitution
+\series default
+:
+ let 
+\begin_inset Formula $a,b,c\in\bbr$
+\end_inset
+
+ let 
+\begin_inset Formula $f:\bbr\to\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $y\in\sols\left(y^{\prime}=f\left(ax+by+c\right)\right)$
+\end_inset
+
+ then the function 
+\begin_inset Formula $z:\bbr\to\bbr$
+\end_inset
+
+ which defined by 
+\begin_inset Formula $z\left(x\right)=ax+by+c$
+\end_inset
+
+ satisfies 
+\begin_inset Formula $z^{\prime}=a+bf\left(z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \end_body
