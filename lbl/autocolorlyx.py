@@ -96,5 +96,5 @@ if __name__ == "__main__":
 
     # colorAbsolute(path, color, from_line, to_line)
 
-    path = "NotUsed/discrete_math_2_lbl.lyx"
+    path = "ordinary_differential_equations_1_lbl.lyx"
     colorChanges(path)

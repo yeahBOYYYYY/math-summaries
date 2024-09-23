@@ -547,27 +547,6 @@ Vector Field
 \begin_layout Standard
 
 \series bold
-Notation
-\series default
-:
- let 
-\begin_inset Formula $X$
-\end_inset
-
- be a set and let 
-\begin_inset Formula $\g:\bbr\to X$
-\end_inset
-
- then 
-\begin_inset Formula $\dot{\g}=\frac{\text{d}\g}{\text{d}t}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
 Integral curve
 \series default
 :
@@ -580,7 +559,7 @@ Integral curve
 \end_inset
 
  such that 
-\begin_inset Formula $\dot{\g}\left(t\right)=\nu\left(g\left(t\right)\right)$
+\begin_inset Formula $\frac{\text{d}\g}{\text{d}t}\left(t\right)=\nu\left(g\left(t\right)\right)$
 \end_inset
 
 .
@@ -918,10 +897,105 @@ Stable Equilibrium Solution
 \begin_layout Standard
 
 \series bold
-\color blue
+Notation
+\series default
+:
+ let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a set and let 
+\begin_inset Formula $\g:\bbr\to X$
+\end_inset
+
+ then 
+\begin_inset Formula $\dot{\g}=\frac{\text{d}\g}{\text{d}t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Notation
+\series default
+:
+ let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a set and let 
+\begin_inset Formula $\g:\bbr\to X$
+\end_inset
+
+ then 
+\begin_inset Formula $\ddot{\g}=\frac{\text{d}^{2}\g}{\text{d}t^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark
+\series default
+:
+ the notation 
+\begin_inset Formula $\dot{\g},\ddot{\g}$
+\end_inset
+
+ is often used when 
+\begin_inset Formula $\g$
+\end_inset
+
+ is a function of time.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+System of Ordinary Differential Equation (ODE)
+\series default
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ let 
+\begin_inset Formula $m\in\bbn_{+}$
+\end_inset
+
+ and let 
+\begin_inset Formula $f:\bbr\times\left(\bbr^{m}\right)^{n}\to\bbr^{m}$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $f\left(t,y\left(t\right),y^{\prime}\left(t\right),\ldots y^{\left(n\right)}\left(t\right)\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark
+\series default
+:
+ all the theory of first order ODEs also applies to vectors of first order ODEs.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 Lotka–Volterra equations
 \series default
-\color inherit
 :
  let 
 \begin_inset Formula $\a>0$
@@ -939,10 +1013,8 @@ Lotka–Volterra equations
 \begin_layout Standard
 
 \series bold
-\color blue
 Claim
 \series default
-\color inherit
 :
  let 
 \begin_inset Formula $\a>0$
@@ -962,10 +1034,37 @@ Claim
 \begin_layout Standard
 
 \series bold
-\color blue
+Conserved Quantity
+\series default
+:
+ let 
+\begin_inset Formula $\u\subseteq\bbr^{n}$
+\end_inset
+
+ and let 
+\begin_inset Formula $f:\u\to\bbr$
+\end_inset
+
+ then a function 
+\begin_inset Formula $g\in C^{1}\left(\u\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $g\circ y$
+\end_inset
+
+ is constant for all 
+\begin_inset Formula $y\in\sols\left(y^{\prime}=f\left(y\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 Claim
 \series default
-\color inherit
 :
  let 
 \begin_inset Formula $\a>0$
@@ -991,10 +1090,8 @@ y
 \begin_layout Standard
 
 \series bold
-\color blue
 Corollary
 \series default
-\color inherit
 :
  let 
 \begin_inset Formula $\a>0$
@@ -1031,10 +1128,8 @@ y
 \begin_layout Standard
 
 \series bold
-\color blue
 Lemma
 \series default
-\color inherit
 :
  let 
 \begin_inset Formula $\a>0$
@@ -1077,10 +1172,8 @@ y
 \begin_layout Standard
 
 \series bold
-\color blue
 Claim Linear Substitution
 \series default
-\color inherit
 :
  let 
 \begin_inset Formula $a,b,c\in\bbr$
@@ -1104,6 +1197,610 @@ Claim Linear Substitution
 
  satisfies 
 \begin_inset Formula $z^{\prime}=a+bf\left(z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Notation
+\series default
+:
+ let 
+\begin_inset Formula $\Omega\subseteq\bbr^{2}$
+\end_inset
+
+ be a domain let 
+\begin_inset Formula $f:\Omega\to\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $p\in\bbr^{2}$
+\end_inset
+
+ then 
+\begin_inset Formula $\left(\a_{-},\a_{+}\right)$
+\end_inset
+
+ is the maximal interval where a solution to 
+\begin_inset Formula $\left\{ \begin{smallmatrix}y^{\prime}=f\left(x,y\right)\\
+y\left(p_{1}\right)=p_{2}
+\end{smallmatrix}\right.$
+\end_inset
+
+ is defined.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary
+\series default
+:
+ let 
+\begin_inset Formula $\Omega\subseteq\bbr^{2}$
+\end_inset
+
+ be a domain let 
+\begin_inset Formula $f\in C^{1}\left(\Omega\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $p\in\bbr^{2}$
+\end_inset
+
+ then 
+\begin_inset Formula $\a_{-}<p_{1}<\a_{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Theorem
+\series default
+:
+ let 
+\begin_inset Formula $f\in C^{1}\left(\bbr^{2}\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $p\in\bbr^{2}$
+\end_inset
+
+ then
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\a_{+}<\infty\right)\iff\left(\lim_{x\to\a_{+}^{-}}\left|y\left(x\right)\right|=\infty\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(-\infty<\a_{-}\right)\iff\left(\lim_{x\to\a_{-}^{+}}\left|y\left(x\right)\right|=\infty\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Theorem Extensibility of Solutions
+\series default
+:
+ let 
+\begin_inset Formula $D\subseteq\bbr^{n+1}$
+\end_inset
+
+ be a closed set let 
+\begin_inset Formula $f\in C^{1}\left(D,\bbr^{n}\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $y\in\sols\left(y^{\prime}=f\left(x,y\right)\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\Gamma_{y}\cap D\ne\emptyset$
+\end_inset
+
+ then there exists 
+\begin_inset Formula $\psi:\left[a,b\right]\to\bbr^{n}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\psi\in\sols\left(y^{\prime}=f\left(x,y\right)\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi\left(x\right)=y\left(x\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in\dom\left(y\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(\begin{smallmatrix}a\\
+\psi\left(a\right)
+\end{smallmatrix}\right),\left(\begin{smallmatrix}b\\
+\psi\left(b\right)
+\end{smallmatrix}\right)\in\partial D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary
+\series default
+:
+ let 
+\begin_inset Formula $D\subseteq\bbr^{n+1}$
+\end_inset
+
+ such that for all 
+\begin_inset Formula $\a,\b\in\bbr$
+\end_inset
+
+ the set 
+\begin_inset Formula $D\cap\left\{ \a\le x_{1}\le\b\right\} $
+\end_inset
+
+ is bounded let 
+\begin_inset Formula $f\in C^{1}\left(D,\bbr^{n}\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $y\in\sols\left(y^{\prime}=f\left(x,y\right)\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\Gamma_{y}\cap D\ne\emptyset$
+\end_inset
+
+ then one of the next statements is true
+\end_layout
+
+\begin_layout Itemize
+there exists 
+\begin_inset Formula $\psi:\left[a,b\right]\to\bbr^{n}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\psi\in\sols\left(y^{\prime}=f\left(x,y\right)\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi\left(x\right)=y\left(x\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in\dom\left(y\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(\begin{smallmatrix}a\\
+\psi\left(a\right)
+\end{smallmatrix}\right),\left(\begin{smallmatrix}b\\
+\psi\left(b\right)
+\end{smallmatrix}\right)\in\partial D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+there exists 
+\begin_inset Formula $\psi:\bbr\to\bbr^{n}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\psi\in\sols\left(y^{\prime}=f\left(x,y\right)\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi\left(x\right)=y\left(x\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in\dom\left(y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary
+\series default
+:
+ let 
+\begin_inset Formula $I\subseteq\bbr$
+\end_inset
+
+ be an open interval let 
+\begin_inset Formula $D\subseteq\bbr^{n}$
+\end_inset
+
+ let 
+\begin_inset Formula $f\in C^{1}\left(I\times D,\bbr^{n}\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $p,q:\bbr\to\bbr$
+\end_inset
+
+ such that
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\norm{f\left(x,y\right)}\le p\left(x\right)\norm y+q\left(x\right)$
+\end_inset
+
+ then for all 
+\begin_inset Formula $y\in\sols\left(y^{\prime}=f\left(x,y\right)\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\Gamma_{y}\cap\left(I\times D\right)\ne\emptyset$
+\end_inset
+
+ there exists 
+\begin_inset Formula $\psi:I\to\bbr^{n}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\psi\in\sols\left(y^{\prime}=f\left(x,y\right)\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi\left(x\right)=y\left(x\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in\dom\left(y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Theorem Continuous Dependence on Initial Conditions
+\series default
+:
+ let 
+\begin_inset Formula $\Omega\subseteq\bbr^{2}$
+\end_inset
+
+ let 
+\begin_inset Formula $f\in C^{1}\left(\Omega\right)$
+\end_inset
+
+ let 
+\begin_inset Formula $a,b,p\in\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $y_{p}$
+\end_inset
+
+ be a solution to 
+\begin_inset Formula $\left\{ \begin{smallmatrix}y^{\prime}=f\left(x,y\right)\\
+y\left(a\right)=p
+\end{smallmatrix}\right.$
+\end_inset
+
+ such that 
+\begin_inset Formula $y_{p}$
+\end_inset
+
+ is defined on 
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ then for all 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ there exists 
+\begin_inset Formula $\d>0$
+\end_inset
+
+ such that for all 
+\begin_inset Formula $q\in\bbr$
+\end_inset
+
+ for which 
+\begin_inset Formula $\left|p-q\right|<\d$
+\end_inset
+
+ if 
+\begin_inset Formula $y_{q}$
+\end_inset
+
+ is a solution to 
+\begin_inset Formula $\left\{ \begin{smallmatrix}y^{\prime}=f\left(x,y\right)\\
+y\left(a\right)=q
+\end{smallmatrix}\right.$
+\end_inset
+
+ then 
+\begin_inset Formula $y_{q}$
+\end_inset
+
+ is defined on 
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $\left|y_{p}-y_{q}\right|<\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Theorem
+\series default
+:
+ let 
+\begin_inset Formula $\Omega\subseteq\bbr^{2}$
+\end_inset
+
+ let 
+\begin_inset Formula $f\in C^{1}\left(\Omega\right)$
+\end_inset
+
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ let 
+\begin_inset Formula $g\in C^{1}\left(\left[a,b\right]\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $\left\{ g_{n}\right\} _{n=0}^{\infty}\subseteq\sols\left(y^{\prime}=f\left(x,y\right)\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $g_{n}$
+\end_inset
+
+ is defined on 
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ and 
+\begin_inset Formula $g_{n}\limpw g$
+\end_inset
+
+ then 
+\begin_inset Formula $g\in\sols\left(y^{\prime}=f\left(x,y\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula $n$
+\end_inset
+
+-th Order Ordinary Differential Equation
+\series default
+:
+ let 
+\begin_inset Formula $f:\bbr^{n+1}\to\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $f\left(x,y\ldots y^{\left(n\right)}\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ let 
+\begin_inset Formula $f:\bbr^{n+1}\to\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $g:\bbr\to\bbr$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left(g\in\sols\left(f\left(t,x\left(t\right)\ldots x^{\left(n\right)}\left(t\right)\right)=0\right)\right)\iff\left(\left(\begin{smallmatrix}g\\
+\vdots\\
+g^{\left(n\right)}
+\end{smallmatrix}\right)\in\sols\left(\left\{ \begin{smallmatrix}y_{1}=\dot{x}\\
+\vdots\\
+y_{n-1}=\dot{y_{n-2}}\\
+\dot{y_{n-1}}=f\left(t,x,y_{1}\ldots,y_{n-1}\right)
+\end{smallmatrix}\right.\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Harmonic Oscillator/Spring Position Equation
+\series default
+:
+ 
+\begin_inset Formula $\ddot{x}=-x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ the function 
+\begin_inset Formula $E\left(x,y\right)=\frac{1}{2}x^{2}+\frac{1}{2}y^{2}$
+\end_inset
+
+ is a conserved quantity of 
+\begin_inset Formula $\left\{ \begin{smallmatrix}\dot{x}=y\\
+\dot{y}=-x
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Spring with Friction Position Equation
+\series default
+:
+ 
+\begin_inset Formula $\ddot{x}=-x-\dot{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Constant Tension Spring Position Equation
+\series default
+:
+ 
+\begin_inset Formula $\ddot{x}=-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ the function 
+\begin_inset Formula $E\left(x,y\right)=x+\frac{1}{2}y^{2}$
+\end_inset
+
+ is a conserved quantity of 
+\begin_inset Formula $\left\{ \begin{smallmatrix}\dot{x}=y\\
+\dot{y}=-1
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Gravity in One Dimension Equation
+\series default
+:
+ 
+\begin_inset Formula $\ddot{x}=-\frac{1}{x^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ the function 
+\begin_inset Formula $E\left(x,y\right)=\frac{1}{x}+\frac{1}{2}y^{2}$
+\end_inset
+
+ is a conserved quantity of 
+\begin_inset Formula $\left\{ \begin{smallmatrix}\dot{x}=y\\
+\dot{y}=-\frac{1}{x^{2}}
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Pendulum Equation
+\series default
+:
+ 
+\begin_inset Formula $\ddot{x}=-\sin\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ the function 
+\begin_inset Formula $E\left(x,y\right)=\frac{1}{2}y^{2}-\cos\left(x\right)$
+\end_inset
+
+ is a conserved quantity of 
+\begin_inset Formula $\left\{ \begin{smallmatrix}\dot{x}=y\\
+\dot{y}=-\sin\left(x\right)
+\end{smallmatrix}\right.$
 \end_inset
 
 .
