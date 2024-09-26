@@ -170,7 +170,7 @@ theorems-ams-extended
 \lang hebrew
 \begin_inset CommandInset include
 LatexCommand include
-filename "E:/University/!Summaries/macros.lyx"
+filename "C:/Users/user/OneDrive/Documents/summaries/macros.lyx"
 literal "true"
 
 \end_inset
@@ -2260,6 +2260,551 @@ Claim
 \begin_inset Separator plain
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Conservative Vector Field
+\series default
+:
+ a vector field 
+\begin_inset Formula $F:\bbr^{n}\to\bbr^{n}$
+\end_inset
+
+ such that there exists 
+\begin_inset Formula $U\in C^{1}\left(\bbr^{n}\right)$
+\end_inset
+
+ for which 
+\begin_inset Formula $F=-\nabla U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Kinetic Energy
+\series default
+:
+ let 
+\begin_inset Formula $X\in C^{1}\left(\bbr,\bbr^{n}\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $K:\bbr^{n}\to\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $K\left(X\left(t\right)\right)=\frac{\norm{\dot{X}\left(t\right)}^{2}}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Total Energy
+\series default
+:
+ let 
+\begin_inset Formula $U\in C^{1}\left(\bbr^{n}\right)$
+\end_inset
+
+ let 
+\begin_inset Formula $F:\bbr^{n}\to\bbr^{n}$
+\end_inset
+
+ be a conservative vector field such that 
+\begin_inset Formula $F=-\nabla U$
+\end_inset
+
+ let 
+\begin_inset Formula $X\in\sols\left(\ddot{X}=F\left(X\right)\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $K:\bbr^{n}\to\bbr$
+\end_inset
+
+ be the kinetic energy of 
+\begin_inset Formula $X$
+\end_inset
+
+ then 
+\begin_inset Formula $E:\bbr^{n}\to\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $E=K+U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lemma
+\series default
+:
+ let 
+\begin_inset Formula $U\in C^{1}\left(\bbr^{n}\right)$
+\end_inset
+
+ let 
+\begin_inset Formula $F:\bbr^{n}\to\bbr^{n}$
+\end_inset
+
+ be a conservative vector field such that 
+\begin_inset Formula $F=-\nabla U$
+\end_inset
+
+ let 
+\begin_inset Formula $X\in\sols\left(\ddot{X}=F\left(X\right)\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $E:\bbr^{n}\to\bbr$
+\end_inset
+
+ be the total energy of 
+\begin_inset Formula $X$
+\end_inset
+
+ then 
+\begin_inset Formula $\dot{E}\left(X\left(t\right)\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Weighted Average/Center of Mass
+\series default
+:
+ let 
+\begin_inset Formula $p_{1}\ldots p_{n}\in\bbr^{n}$
+\end_inset
+
+ and let 
+\begin_inset Formula $w:\left\{ p_{1}\ldots p_{n}\right\} \to\bbr_{+}$
+\end_inset
+
+ then 
+\begin_inset Formula $\frac{\sum_{i=1}^{n}w\left(p_{i}\right)\cdot p_{i}}{\sum_{i=1}^{n}w\left(p_{i}\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Center of Mass
+\series default
+:
+ let 
+\begin_inset Formula $K\subseteq\bbr^{2}$
+\end_inset
+
+ be compact and let 
+\begin_inset Formula $\rho:K\to\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $\left(\frac{\intop_{K}x\cdot\rho\left(x,y\right)\text{d}x\text{d}y}{\intop_{K}\rho\left(x,y\right)\text{d}x\text{d}y},\frac{\intop_{K}y\cdot\rho\left(x,y\right)\text{d}x\text{d}y}{\intop_{K}\rho\left(x,y\right)\text{d}x\text{d}y}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Line
+\series default
+:
+ let 
+\begin_inset Formula $A,B\in\bbr^{2}$
+\end_inset
+
+ then 
+\begin_inset Formula $L_{A,B}=\left\{ \lambda A+\left(1-\lambda\right)B\mid\lambda\in\left[0,1\right]\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Triangle
+\series default
+:
+ let 
+\begin_inset Formula $A,B,C\in\bbr^{2}$
+\end_inset
+
+ such that 
+\begin_inset Formula $A\notin L_{B,C}$
+\end_inset
+
+ and 
+\begin_inset Formula $B\notin L_{A,C}$
+\end_inset
+
+ and 
+\begin_inset Formula $C\notin L_{A,B}$
+\end_inset
+
+ then 
+\begin_inset Formula $\left\{ A,B,C\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Theorem Ceva
+\series default
+:
+ let 
+\begin_inset Formula $A,B,C\in\bbr^{2}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\left\{ A,B,C\right\} $
+\end_inset
+
+ is a triangle let 
+\begin_inset Formula $A^{\prime}\in L_{B,C}$
+\end_inset
+
+ let 
+\begin_inset Formula $B^{\prime}\in L_{A,C}$
+\end_inset
+
+ and let 
+\begin_inset Formula $C^{\prime}\in L_{A,C}$
+\end_inset
+
+ then 
+\begin_inset Formula $\left(L_{A,A^{\prime}}\cap L_{B,B^{\prime}}\cap L_{C,C^{\prime}}\ne\emptyset\right)\iff\left(\frac{d\left(A,B^{\prime}\right)}{d\left(B^{\prime},C\right)}\cdot\frac{d\left(C,A^{\prime}\right)}{d\left(A^{\prime},B\right)}\cdot\frac{d\left(B,C^{\prime}\right)}{d\left(C^{\prime},A\right)}=1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Special Orthogonal Group
+\series default
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ then 
+\begin_inset Formula $\text{SO}\left(n\right)=\left\{ A\in M_{n}\left(\bbr\right)\mid\left(\det\left(A\right)=1\right)\land\left(A^{T}=A^{-1}\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Cross Product
+\series default
+:
+ let 
+\begin_inset Formula $x,y\in\bbr^{3}$
+\end_inset
+
+ then 
+\begin_inset Formula $x\times y=\left(\begin{smallmatrix}x_{2}y_{3}-x_{3}y_{2}\\
+x_{3}y_{1}-x_{1}y_{3}\\
+x_{1}y_{2}-x_{2}y_{1}
+\end{smallmatrix}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim Antisymmetry
+\series default
+:
+ let 
+\begin_inset Formula $x,y\in\bbr^{3}$
+\end_inset
+
+ then 
+\begin_inset Formula $x\times y=-y\times x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim Orthogonality
+\series default
+:
+ let 
+\begin_inset Formula $x,y\in\bbr^{3}$
+\end_inset
+
+ be linearly independent then 
+\begin_inset Formula $x\times y\perp x$
+\end_inset
+
+ and 
+\begin_inset Formula $x\times y\perp y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $x,y\in\bbr^{3}$
+\end_inset
+
+ and let 
+\begin_inset Formula $\theta$
+\end_inset
+
+ be the angle between 
+\begin_inset Formula $x,y$
+\end_inset
+
+ then 
+\begin_inset Formula $\norm{x\times y}=\norm x\cdot\norm y\cdot\cos\left(\theta\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary
+\series default
+:
+ let 
+\begin_inset Formula $x,y\in\bbr^{3}$
+\end_inset
+
+ then (
+\begin_inset Formula $x\times y=0$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $x,y$
+\end_inset
+
+ are linearly dependent).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $x,y,z\in\bbr^{2}$
+\end_inset
+
+ and let 
+\begin_inset Formula $\a,\b\in\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $\left(\a x+\b y\right)\times z=\a\left(x\times z\right)+\b\left(y\times z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Claim:
+ let 
+\begin_inset Formula $X,Y\in C^{1}\left(\bbr^{3}\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $\frac{\text{d}}{\text{d}t}\left(X\times Y\right)=\dot{X}\times Y+X\times\dot{Y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Angular Momentum
+\series default
+:
+ let 
+\begin_inset Formula $X\in C^{1}\left(\bbr^{3}\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $\mathcal{L}=X\times\dot{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lemma
+\series default
+:
+ angular momentum is a conserved quantity of 
+\begin_inset Formula $\ddot{X}=-\frac{X}{\norm X^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Exact Ordinary Differential Equation
+\series default
+:
+ let 
+\begin_inset Formula $\Omega\subseteq\bbr^{2}$
+\end_inset
+
+ and let 
+\begin_inset Formula $F\in C^{1}\left(\Omega\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $\frac{\partial F}{\partial x}\left(x,y\right)+y^{\prime}\cdot\frac{\partial F}{\partial y}\left(x,y\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $\Omega\subseteq\bbr^{2}$
+\end_inset
+
+ let 
+\begin_inset Formula $F\in C^{1}\left(\Omega\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $y\in C^{1}\left(\bbr\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $\frac{\text{d}}{\text{d}t}\left(F\left(x,y\left(x\right)\right)\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark
+\series default
+:
+ let 
+\begin_inset Formula $\Omega\subseteq\bbr^{2}$
+\end_inset
+
+ let 
+\begin_inset Formula $F\in C^{1}\left(\Omega\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $c\in\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $\left\{ F=c\right\} $
+\end_inset
+
+ are solutions to 
+\begin_inset Formula $\frac{\partial F}{\partial x}\left(x,y\right)+y^{\prime}\cdot\frac{\partial F}{\partial y}\left(x,y\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $\Omega\subseteq\bbr^{2}$
+\end_inset
+
+ be a simply connected domain and let 
+\begin_inset Formula $P,Q\in C^{1}\left(\Omega\right)$
+\end_inset
+
+ then (
+\begin_inset Formula $P\left(x,y\right)+y^{\prime}\cdot Q\left(x,y\right)=0$
+\end_inset
+
+ is an exact ODE)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
