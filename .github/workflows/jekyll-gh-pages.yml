@@ -23,13 +23,19 @@ concurrency:
 
 jobs:
   complie-md:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
-      - name: Convert Markdown to HTML
-        uses: natescherer/markdown-to-html-with-github-style-action@v1
+      - uses: actions/checkout@v3
+      - uses: baileyjm02/markdown-to-pdf@v1
         with:
-          path: ToDo.md
-          outputpath: website
+          input_path: ToDo.md
+          output_dir: website
+          build_html: true
+          build_pdf: false
+      - uses: actions/upload-artifact@v3
+        with:
+          name: docs
+          path: website
 
   # Build job
   build:
