@@ -23,25 +23,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  complie-md:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: baileyjm02/markdown-to-pdf@v1
-        with:
-          input_path: website/ToDo.md
-          output_dir: website
-          build_html: true
-          build_pdf: true
-      - uses: actions/upload-artifact@v4
-        with:
-          name: docs
-          path: website
-
   # Build job
   build:
     runs-on: ubuntu-latest
-    needs: complie-md
     steps:
       - name: Checkout
         uses: actions/checkout@v4
