@@ -25,17 +25,14 @@ jobs:
   complie-md:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: baileyjm02/markdown-to-pdf@v1
+      - uses: ZacJW/markdown-html-action@1.1.0
         with:
-          input_path: ToDo.md
-          output_dir: website
-          build_html: true
-          build_pdf: false
+          input_files: '["ToDo.md"]'
+          output_files: '["ToDo.html"]'
       - uses: actions/upload-artifact@v4
         with:
           name: docs
-          path: website
+          path: ToDo.html
 
   # Build job
   build:
