@@ -1,32 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Embed Markdown</title>
-  <!-- Marked.js for parsing markdown -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Summaries</title>
+    <link rel="stylesheet" href="website/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <script src="website/main.js"></script>
 </head>
 <body>
-  <!-- Where the markdown content will be displayed -->
-  <div id="markdown-content"></div>
+    <div class="container">
+        <h1>סיכומים במתמטיקה</h1>
+        <p>
+            על מנת לראות את קבצי המקור, לתקן טעות או להעלות סיכום משלך של קורס, לחצו על הלינק הבא,
+        </p>
+        <div class="pdf-button-container gradient-generic">
+            <a class="pdf-button" href="https://github.com/yeahBOYYYYY/math-summaries" target="_blank">חזרה לעמוד ה־github</a>
+        </div>
 
-  <script>
-    // Your markdown content as a string
-    const markdownContent = `
-    # This is Markdown Content
+        <p>
+            על מנת לפנות אלי אישית במייל הפרטי ניתן ללחוץ כאן,
+        </p>
+        <div class="pdf-button-container gradient-generic">
+            <a class="pdf-button" href="mailto:mikhelman.ron@gmail.com" target="_blank">יצירת קשר</a>
+        </div>
+    </div>
 
-    - Item 1
-    - Item 2
-    - Item 3
 
-    ## Subheading
+    <div class="container">
+        <h2>
+            סיכומי lbl
+        </h2>
+        <p>
+            סיכומי lbl אלו סיכומים של החומר ללא הוכחות, דוגמאות וכדומה. הסיכום הוא בעצם רשימה של כל המשפטים ההגדרות וכדומה אשר נועד למי שלמד את הקורס או בעל רקע מתמטי מספק בשביל ללמוד אותו לבד מהצורה הזאת.
+        </p>
+        <p>
+            על מנת לראות גרסאות ישנות או עוד מידע על הקורס לחצו על לחצן המידע.
+        </p>
+        
+        <br>
+        <h3>
+            לוגיקה ודיסקרטית
+        </h3>
+        <script>
+            document.write(createPdfButtonContainer('בדידה1/מבוא לתקב"ץ', 'lbl/discrete_math_1_lbl.pdf', 'gradient-red1', 'bdida.txt'));
+            document.write(createPdfButtonContainer('בדידה2/מבוא לקומבי', 'lbl/discrete_math_2_lbl.pdf', 'gradient-red2', 'bdida.txt'));
+            document.write(createPdfButtonContainer('לוגיקה למדמ"ח', 'lbl/logic_for_computer_science_lbl.pdf', 'gradient-red3', 'logicMadmah.txt'));
+            document.write(createGenericContainer('תקב"ץ'));
+            document.write(createPdfButtonContainer('תומ"ס', 'lbl/number_theory_lbl.pdf', 'gradient-red4', 'numbers.txt'));
+        </script>
 
-    More markdown text here.
-    `;
+        <br><br>
+        <h3>
+            אנליזה
+        </h3>
+        <script>
+            document.write(createPdfButtonContainer('חדו"א1', 'lbl/calculus_1a_lbl.pdf', 'gradient-blue1', 'hedva1a.txt'));
+            document.write(createPdfButtonContainer('חדו"א2', 'lbl/calculus_2a_lbl.pdf', 'gradient-blue2', 'hedva2a.txt'));
+            document.write(createPdfButtonContainer('חדו"א3', 'lbl/calculus_3_lbl.pdf', 'gradient-blue3', 'hedva3.txt'));
+            document.write(createPdfButtonContainer('חדו"א4', 'lbl/calculus_4_lbl.pdf', 'gradient-blue4', 'hedva4.txt'));
+            document.write(createPdfButtonContainer('מרוכבות1', 'lbl/complex_functions1_lbl.pdf', 'gradient-lightblue1', 'merocavot1.txt'));
+            document.write(createPdfButtonContainer('מד"ר1', 'lbl/ordinary_differential_equations_1_lbl.pdf', 'gradient-blue5', 'madar1.txt'));
+            document.write(createPdfButtonContainer('ממשיות', 'lbl/functions_of_a_real_variable_lbl.pdf', 'gradient-lightblue2', 'mamashiot.txt'));
+        </script>
 
-    // Use marked.js to convert the markdown to HTML
-    document.getElementById('markdown-content').innerHTML = marked(markdownContent);
-  </script>
+        <br><br>
+        <h3>
+            אלגברה
+        </h3>
+        <script>
+            document.write(createPdfButtonContainer('לינארית1', 'lbl/linear_algebra_1a_lbl.pdf', 'gradient-green1', 'lini1a.txt'));
+            document.write(createPdfButtonContainer('לינארית2', 'lbl/linear_algebra_2a_lbl_v2.pdf', 'gradient-green2', 'lini2a.txt'));
+            document.write(createPdfButtonContainer('חבורות', 'lbl/group_theory_lbl.pdf', 'gradient-green3', 'groups.txt'));
+        </script>
+
+        <br><br>
+        <h3>
+            הסתברות
+        </h3>
+        <script>
+            document.write(createPdfButtonContainer('מבוא להסתברות', 'lbl/introduction_to_probability_theory_lbl.pdf', 'gradient-purple1', 'preprob.txt'));
+            document.write(createPdfButtonContainer('הסתברות למדעים', 'lbl/probability_for_sciences_lbl.pdf', 'gradient-pink1', 'scienceprob.txt'));
+        </script>
+
+        <br><br>
+        <h3>
+            מדעי המחשב
+        </h3>
+        <script>
+            document.write(createPdfButtonContainer('מודלים', 'lbl/computational_models_lbl.pdf', 'gradient-teal1', 'modelim.txt'));
+            document.write(createPdfButtonContainer('אלגוריתמים', 'lbl/algorithms_lbl.pdf', 'gradient-teal2', 'algorithms.txt'));
+            document.write(createPdfButtonContainer('נומרית', 'lbl/numerical_analysis_lbl.pdf', 'gradient-teal3', 'nomerit.txt'));
+            document.write(createGenericContainer('סיבוכיות'));
+            document.write(createGenericContainer('יסודות פורמליים של שפות תכנות'));
+        </script>
+
+        <br><br>
+        <h3>
+            טופולוגיה וגאומטריה
+        </h3>
+        <script>
+            document.write(createPdfButtonContainer('טופולוגיה', 'lbl/topology_lbl.pdf', 'gradient-orange3', 'topologia.txt'));
+        </script>
+    </div>
+
+
+    <div class="container">
+        <h2>
+            סיכומים נוספים
+        </h2>
+        <p>על מנת לראות גרסאות ישנות או עוד מידע על הקורס לחצו על לחצן המידע.</p>
+
+        <h3>
+            סיכומים מלאים
+        </h3>
+        <script>
+            document.write(createPdfButtonContainer('בדידה', 'other/discrete_math.pdf', 'gradient-red1', 'bdida.txt'));
+        </script>
+
+        <br><br>
+        <h3>
+            איגוד סיכומי lbl
+        </h3>
+        <script>
+            document.write(createPdfButtonContainer('חדו"א', 'other/calculus_lbl.pdf', 'gradient-blue4', 'hedva.txt'));
+        </script>
+
+        <br><br>
+        <h3>
+            סיכומי lbl בגרות
+        </h3>
+        <script>
+            document.write(createPdfButtonContainer('קורס A', 'other/course_A_lbl.pdf', 'gradient-brown1', 'courseA.txt'));
+            document.write(createPdfButtonContainer('קורס B', 'other/course_B_lbl.pdf', 'gradient-brown2', 'courseB.txt'));
+            document.write(createPdfButtonContainer('פיזיקה', 'other/physics_bagrut_lbl.pdf', 'gradient-brown3', 'physicsBagrut.txt'));
+        </script>
+    </div>
+
+
+    <div class="container">
+        <h2>
+            דפי נוסחאות
+        </h2>
+        <p>דפי נוסחאות למבחן, אם לקורס מסויים קיים סיכום lbl דף הנוסחאות הוא פשוט הסיכום בכמות הדפים המותרת לבחינה.</p>
+        <script>
+            document.write(createPdfButtonContainer('חדו"א3', 'cheatsheet/calculus_3.pdf', 'gradient-blue3', 'hedva3.txt'));
+            document.write(createPdfButtonContainer('מבוא להסתברות', 'cheatsheet/introduction_to_probability_theory.pdf', 'gradient-purple1', 'preprob.txt'));
+            document.write(createPdfButtonContainer('הסתברות למדעים', 'cheatsheet/probability_for_sciences.pdf', 'gradient-pink1', 'scienceprob.txt'));
+            document.write(createPdfButtonContainer('מודלים', 'cheatsheet/computational_models_defnos.pdf', 'gradient-teal1', 'modelim.txt'));
+            document.write(createPdfButtonContainer('פרוייקט תוכנה', 'cheatsheet/software_project.pdf', 'gradient-teal2', 'softwareProject.txt'));
+            document.write(createPdfButtonContainer('טופולוגיה', 'cheatsheet/topology_defnos.pdf', 'gradient-orange3', 'topologia.txt'));
+        </script>
+    </div>
+
+
+    <div class="container">
+        <h2>
+            קורסים לסיכום עתידי
+        </h2>
+        <p>רשימת קורסים חסרי סיכום באתר שאשמח לסכם או לקבל סיכומים ממי שיכול לעזור.</p>
+        <script>
+            document.write(createGenericContainer('הסתברות למתמטיקאים'));
+            document.write(createGenericContainer('מרוכבות2'));
+            document.write(createGenericContainer('גיאודיף'));
+            document.write(createGenericContainer('מרחבי הילברט'));
+            document.write(createGenericContainer('תורת גלואה'));
+            document.write(createGenericContainer('אלגברה קומוטטיבית'));
+            document.write(createGenericContainer('לוגיקה'));
+            document.write(createGenericContainer('גרפים'));
+        </script>
+    </div>
+
+    <div markdown="1">Have **fun!**</div>
+
+
+    <div class="container">
+        <h2>
+            מידע נוסף
+        </h2>
+
+        <p style="direction: ltr; text-align: left;">
+            Last commit: <span id="lastCommitName" style="display: inline;"></span>
+        </p>
+        <p>© 2024 רון מיכלמן, כל הזכויות שמורות.</p>
+        <script>
+            fetch('https://api.github.com/repos/yeahBOYYYYY/math-summaries/commits?per_page=1')
+            .then(res => res.json())
+            .then(res => {
+                document.getElementById('lastCommitName').innerHTML = res[0].commit.message;
+            })
+        </script>
+    </div>
+
+
+
+    <!-- Info box overlay -->
+    <div class="info-box-overlay">
+        <div class="info-box">
+            <button class="close-button">&times;</button>
+        <div class="info-content"></div>
+    </div>
 </body>
 </html>
