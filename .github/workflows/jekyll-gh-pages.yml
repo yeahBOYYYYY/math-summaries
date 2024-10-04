@@ -23,14 +23,13 @@ concurrency:
 
 jobs:
   complie-md:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
-      - name: Converts Markdown to HTML
-        uses: jaywcjlove/markdown-to-html-cli@main
+      - name: Convert Markdown to HTML
+        uses: natescherer/markdown-to-html-with-github-style-action@v1
         with:
-          source: ToDo.md
-          output: website/ToDo.html
-          github-corners: https://github.com/jaywcjlove/markdown-to-html-cli
+          path: ToDo.md
+          outputpath: website
 
   # Build job
   build:
