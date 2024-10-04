@@ -85,7 +85,7 @@ theorems-ams-extended
 \inputencoding auto-legacy
 \fontencoding auto
 \font_roman "default" "David CLM"
-\font_sans "default" "default"
+\font_sans "default" "David"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
@@ -185,6 +185,56 @@ literal "true"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+Notation
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a set and let 
+\begin_inset Formula $y:\bbr\to\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $y^{\left(0\right)}=y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+Notation
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ be sets let 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ and let 
+\begin_inset Formula $y\in C^{n}\left(X,Y\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $y^{\left(n\right)}=\left(y^{\left(n-1\right)}\right)^{\prime}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1021,7 +1071,7 @@ Remark
 
 \series bold
 \color blue
-System of Ordinary Differential Equation (ODE)
+System of Ordinary Differential Equation
 \series default
 \color inherit
 :
@@ -1660,7 +1710,7 @@ y\left(a\right)=q
 
 \series bold
 \color red
-Theorem
+Theorem Continuous Dependence on Initial Conditions
 \series default
 \color inherit
 :
@@ -1677,15 +1727,29 @@ Theorem
 \end_inset
 
  let 
-\begin_inset Formula $g\in C^{1}\left(\left[a,b\right]\right)$
+\begin_inset Formula $p\in\bbr$
 \end_inset
 
- and let 
-\begin_inset Formula $\left\{ g_{n}\right\} _{n=0}^{\infty}\subseteq\sols\left(y^{\prime}=f\left(x,y\right)\right)$
+ let 
+\begin_inset Formula $\left\{ p_{n}\right\} _{n=0}^{\infty}\subseteq\bbr$
 \end_inset
 
  such that 
-\begin_inset Formula $g_{n}$
+\begin_inset Formula $p_{n}\to p$
+\end_inset
+
+ and let 
+\begin_inset Formula $\left\{ g_{p_{n}}\right\} _{n=0}^{\infty}\subseteq\bbr\to\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $g_{p_{n}}\in\sols\left(\left\{ \begin{smallmatrix}y^{\prime}=f\left(x,y\right)\\
+y\left(a\right)=p_{n}
+\end{smallmatrix}\right.\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $g_{p_{n}}$
 \end_inset
 
  is defined on 
@@ -1696,12 +1760,18 @@ Theorem
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
- and 
-\begin_inset Formula $g_{n}\limpw g$
+ then there exists 
+\begin_inset Formula $g:\bbr\to\bbr$
 \end_inset
 
- then 
-\begin_inset Formula $g\in\sols\left(y^{\prime}=f\left(x,y\right)\right)$
+ such that 
+\begin_inset Formula $g_{p_{n}}\limpw g$
+\end_inset
+
+ and 
+\begin_inset Formula $g\in\sols\left(\left\{ \begin{smallmatrix}y^{\prime}=f\left(x,y\right)\\
+y\left(a\right)=p
+\end{smallmatrix}\right.\right)$
 \end_inset
 
 .
@@ -2266,8 +2336,10 @@ Claim
 \begin_layout Standard
 
 \series bold
+\color magenta
 Conservative Vector Field
 \series default
+\color inherit
 :
  a vector field 
 \begin_inset Formula $F:\bbr^{n}\to\bbr^{n}$
@@ -2287,8 +2359,10 @@ Conservative Vector Field
 \begin_layout Standard
 
 \series bold
+\color magenta
 Kinetic Energy
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $X\in C^{1}\left(\bbr,\bbr^{n}\right)$
@@ -2308,8 +2382,10 @@ Kinetic Energy
 \begin_layout Standard
 
 \series bold
+\color magenta
 Total Energy
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $U\in C^{1}\left(\bbr^{n}\right)$
@@ -2349,8 +2425,10 @@ Total Energy
 \begin_layout Standard
 
 \series bold
+\color magenta
 Lemma
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $U\in C^{1}\left(\bbr^{n}\right)$
@@ -2386,8 +2464,10 @@ Lemma
 \begin_layout Standard
 
 \series bold
+\color magenta
 Weighted Average/Center of Mass
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $p_{1}\ldots p_{n}\in\bbr^{n}$
@@ -2407,8 +2487,10 @@ Weighted Average/Center of Mass
 \begin_layout Standard
 
 \series bold
+\color magenta
 Center of Mass
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $K\subseteq\bbr^{2}$
@@ -2428,8 +2510,10 @@ Center of Mass
 \begin_layout Standard
 
 \series bold
+\color magenta
 Line
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $A,B\in\bbr^{2}$
@@ -2445,8 +2529,10 @@ Line
 \begin_layout Standard
 
 \series bold
+\color magenta
 Triangle
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $A,B,C\in\bbr^{2}$
@@ -2474,8 +2560,10 @@ Triangle
 \begin_layout Standard
 
 \series bold
+\color magenta
 Theorem Ceva
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $A,B,C\in\bbr^{2}$
@@ -2507,8 +2595,10 @@ Theorem Ceva
 \begin_layout Standard
 
 \series bold
+\color magenta
 Special Orthogonal Group
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $n\in\bbn$
@@ -2524,8 +2614,10 @@ Special Orthogonal Group
 \begin_layout Standard
 
 \series bold
+\color magenta
 Cross Product
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $x,y\in\bbr^{3}$
@@ -2544,8 +2636,10 @@ x_{1}y_{2}-x_{2}y_{1}
 \begin_layout Standard
 
 \series bold
+\color magenta
 Claim Antisymmetry
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $x,y\in\bbr^{3}$
@@ -2561,8 +2655,10 @@ Claim Antisymmetry
 \begin_layout Standard
 
 \series bold
+\color magenta
 Claim Orthogonality
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $x,y\in\bbr^{3}$
@@ -2582,8 +2678,10 @@ Claim Orthogonality
 \begin_layout Standard
 
 \series bold
+\color magenta
 Claim
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $x,y\in\bbr^{3}$
@@ -2607,8 +2705,10 @@ Claim
 \begin_layout Standard
 
 \series bold
+\color magenta
 Corollary
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $x,y\in\bbr^{3}$
@@ -2632,8 +2732,10 @@ Corollary
 \begin_layout Standard
 
 \series bold
+\color magenta
 Claim
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $x,y,z\in\bbr^{2}$
@@ -2651,7 +2753,13 @@ Claim
 \end_layout
 
 \begin_layout Standard
-Claim:
+
+\series bold
+\color magenta
+Claim
+\series default
+\color inherit
+:
  let 
 \begin_inset Formula $X,Y\in C^{1}\left(\bbr^{3}\right)$
 \end_inset
@@ -2666,15 +2774,17 @@ Claim:
 \begin_layout Standard
 
 \series bold
+\color magenta
 Angular Momentum
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $X\in C^{1}\left(\bbr^{3}\right)$
 \end_inset
 
  then 
-\begin_inset Formula $\mathcal{L}=X\times\dot{X}$
+\begin_inset Formula $X\times\dot{X}$
 \end_inset
 
 .
@@ -2683,8 +2793,10 @@ Angular Momentum
 \begin_layout Standard
 
 \series bold
+\color magenta
 Lemma
 \series default
+\color inherit
 :
  angular momentum is a conserved quantity of 
 \begin_inset Formula $\ddot{X}=-\frac{X}{\norm X^{2}}$
@@ -2703,8 +2815,10 @@ Lemma
 \begin_layout Standard
 
 \series bold
+\color purple
 Exact Ordinary Differential Equation
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $\Omega\subseteq\bbr^{2}$
@@ -2724,8 +2838,33 @@ Exact Ordinary Differential Equation
 \begin_layout Standard
 
 \series bold
+\color purple
+Remark
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $\Omega\subseteq\bbr^{2}$
+\end_inset
+
+ and let 
+\begin_inset Formula $F\in C^{1}\left(\Omega\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $\frac{\partial F}{\partial x}+y^{\prime}\cdot\frac{\partial F}{\partial y}=\text{d}F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
 Claim
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $\Omega\subseteq\bbr^{2}$
@@ -2749,8 +2888,10 @@ Claim
 \begin_layout Standard
 
 \series bold
+\color purple
 Remark
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $\Omega\subseteq\bbr^{2}$
@@ -2778,8 +2919,10 @@ Remark
 \begin_layout Standard
 
 \series bold
+\color purple
 Claim
 \series default
+\color inherit
 :
  let 
 \begin_inset Formula $\Omega\subseteq\bbr^{2}$
@@ -2802,6 +2945,1354 @@ Claim
 \end_inset
 
 ).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+Fibonacci Sequence
+\series default
+\color inherit
+:
+ a sequence 
+\begin_inset Formula $F:\bbn\to\bbn$
+\end_inset
+
+ such that 
+\begin_inset Formula $F_{0}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{1}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{n+2}=F_{n+1}+F_{n}$
+\end_inset
+
+ for 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+Lemma
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $n,m\in\bbn$
+\end_inset
+
+ then 
+\begin_inset Formula $F_{m+n+1}=F_{m}F_{n}+F_{m+1}F_{n+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+Lemma Cassini Identity
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ then 
+\begin_inset Formula $F_{n}^{2}=F_{n+1}F_{n-1}+\left(-1\right)^{n-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+Left Shift Operator
+\series default
+\color inherit
+:
+ a function 
+\begin_inset Formula $\text{LS}:\left(\bbn\to\bbc\right)\to\left(\bbn\to\bbc\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\text{LS}\left(x\right)=\lambda n\in\bbn.x_{n+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+Remark
+\series default
+\color inherit
+;
+ let 
+\begin_inset Formula $x\in\bbn\to\bbc$
+\end_inset
+
+ then 
+\begin_inset Formula $\left(\forall n\in\bbn.x_{n+2}=x_{n+1}+x_{n}\right)\iff\left(x\in\ker\left(\text{LS}^{2}-\text{LS}-1\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+Lemma
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $p,q\in\bbc\left[x\right]$
+\end_inset
+
+ then 
+\begin_inset Formula $\left(p\cdot q\right)\left(\text{LS}\right)=p\left(\text{LS}\right)\cdot q\left(\text{LS}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+Corollary
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\text{LS}^{2}-\text{LS}-1=\left(\text{LS}-\frac{-1+\sqrt{5}}{2}\right)\left(\text{LS}-\frac{-1-\sqrt{5}}{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+Homogeneous Linear Ordinary Differential Equation
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ and let 
+\begin_inset Formula $a_{0}\ldots a_{n-1`}:\bbr\to\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $y^{\left(n\right)}+\sum_{i=0}^{n-1}a_{i}\left(x\right)\cdot y^{\left(i\right)}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+Remark
+\series default
+\color inherit
+:
+ In this course we will discuss only homogeneous linear ODEs where the coefficients are constant.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+Characteristic Polynomial of a Homogeneous Linear Ordinary Differential Equation
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ and let 
+\begin_inset Formula $a_{0}\ldots a_{n-1`}\in\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $p\left(x\right)=x^{n}+\sum_{i=0}^{n-1}a_{i}\cdot x^{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+Claim
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ let 
+\begin_inset Formula $a_{0}\ldots a_{n-1`}\in\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $f,g\in\sols\left(y^{\left(n\right)}+\sum_{i=0}^{n-1}a_{i}\cdot y^{\left(i\right)}=0\right)$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $f+g\in\sols\left(y^{\left(n\right)}+\sum_{i=0}^{n-1}a_{i}\cdot y^{\left(i\right)}=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+Theorem
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ let 
+\begin_inset Formula $a_{0}\ldots a_{n-1`}\in\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ be a solution to 
+\begin_inset Formula $p\left(x\right)$
+\end_inset
+
+ with multiplicity 
+\begin_inset Formula $\rho$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left\{ x^{0}e^{\a x},\ldots,x^{\rho-1}e^{\a x}\right\} \subseteq\sols\left(y^{\left(n\right)}+\sum_{i=0}^{n-1}a_{i}\cdot y^{\left(i\right)}=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+Claim
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ let 
+\begin_inset Formula $a_{0}\ldots a_{n-1`}\in\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $f\in\sols\left(y^{\left(n\right)}+\sum_{i=0}^{n-1}a_{i}\cdot y^{\left(i\right)}=0\right)$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\re\left(f\right),\im\left(f\right)\in\sols\left(y^{\left(n\right)}+\sum_{i=0}^{n-1}a_{i}\cdot y^{\left(i\right)}=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+Linear System of Ordinary Differential Equation
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ and let 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $y^{\prime}\left(x\right)=A\cdot y\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+Definition
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $\max\left(\left|A\right|\right)=\max\left\{ \left|\left(A\right)_{i,j}\right|\mid i,j\in\left[n\right]\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+Lemma
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ let 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $i,j\in\left[n\right]$
+\end_inset
+
+ then 
+\begin_inset Formula $\left(A\right)_{i,j}^{k}\le n^{k-1}\cdot\max\left(\left|A\right|\right)^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+Corollary
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ let 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $i,j\in\left[n\right]$
+\end_inset
+
+ then 
+\begin_inset Formula $\left(A\right)_{i,j}^{k}\le\left(n\cdot\max\left(\left|A\right|\right)\right)^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+Theorem
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ and let 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $\sum_{k=0}^{\infty}\frac{A^{k}}{k!}\in M_{n}\left(\bbr\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+Definition
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ and let 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $e^{A}=\sum_{k=0}^{\infty}\frac{A^{k}}{k!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+Lemma
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $s,t\in\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $e^{sA}\cdot e^{tA}=e^{\left(s+t\right)A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+Matrix Differentiation
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $A:\bbr\to M_{n}\left(\bbr\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\left(A\right)_{i,j}\in C^{1}\left(\bbr\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $i,j\in\left[n\right]$
+\end_inset
+
+ then 
+\begin_inset Formula $\left(A^{\prime}\left(t\right)\right)_{i,j}=\left(A\left(t\right)\right)_{i,j}^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+Claim
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $A,B\in C^{1}\left(\bbr,M_{n}\left(\bbr\right)\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $\frac{\text{d}}{\text{d}t}\left(AB\right)=\dot{A}B+A\dot{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+Corollary
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $A\in C^{1}\left(\bbr,M_{n}\left(\bbr\right)\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $v\in C^{1}\left(\bbr,\bbr^{n}\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $\frac{\text{d}}{\text{d}t}\left(Av\right)=\dot{A}v+A\dot{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+Lemma
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $\left(\frac{\text{d}}{\text{d}t}\left(e^{tA}\right)\right)\left(0\right)=A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+Corollary
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $\mu\in\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $\left(\frac{\text{d}}{\text{d}t}\left(e^{tA}\right)\right)\left(\mu\right)=e^{\mu A}A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+Theorem
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ and let 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $e^{tA}v$
+\end_inset
+
+ is a solution to 
+\begin_inset Formula $\left\{ \begin{smallmatrix}y^{\prime}=A\cdot y\\
+y\left(0\right)=v
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+Zeckendorff Representation
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ let 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ and let 
+\begin_inset Formula $c_{0}\ldots c_{k}\in\bbn$
+\end_inset
+
+ such that 
+\begin_inset Formula $c_{0}\ge2$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{i+1}>c_{i}+1$
+\end_inset
+
+ for all 
+\begin_inset Formula $i\in\left\{ 0\ldots k-1\right\} $
+\end_inset
+
+ and 
+\begin_inset Formula $n=\sum_{i=0}^{k}F_{c_{i}}$
+\end_inset
+
+ then 
+\begin_inset Formula $\left(F_{c_{0}},\ldots,F_{c_{k}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+Theorem Zeckendorff
+\series default
+\color inherit
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ then
+\end_layout
+
+\begin_layout Itemize
+Existence:
+ there exists a zeckendorff representation for 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Uniqueness:
+ let 
+\begin_inset Formula $\left(F_{c_{0}},\ldots,F_{c_{k}}\right),\left(F_{d_{0}},\ldots,F_{d_{m}}\right)$
+\end_inset
+
+ be zeckendorff representations for 
+\begin_inset Formula $n$
+\end_inset
+
+ then 
+\begin_inset Formula $k=m$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{i}=d_{i}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i\in\left\{ 0\ldots k-1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\series bold
+\size footnotesize
+Theorem Grönwall's Inequality
+\family default
+\series default
+\size default
+:
+ let 
+\begin_inset Formula $\Omega\subseteq\bbr^{2}$
+\end_inset
+
+ let 
+\begin_inset Formula $f_{1},f_{2}\in C\left(\Omega\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $f_{2}\left(x,y\right)>f_{1}\left(x,y\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x>0$
+\end_inset
+
+ and 
+\begin_inset Formula $y\in\bbr$
+\end_inset
+
+ let 
+\begin_inset Formula $a_{1},a_{2}\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a_{2}>a_{1}$
+\end_inset
+
+ let 
+\begin_inset Formula $y_{1}\in\sols\left(\left\{ \begin{smallmatrix}y^{\prime}=f_{1}\left(x,y\right)\\
+y\left(0\right)=a_{1}
+\end{smallmatrix}\right.\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $y_{2}\in\sols\left(\left\{ \begin{smallmatrix}y^{\prime}=f_{2}\left(x,y\right)\\
+y\left(0\right)=a_{2}
+\end{smallmatrix}\right.\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $y_{2}\left(x\right)>y_{1}\left(x\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Theorem
+\series default
+:
+ let 
+\begin_inset Formula $\Omega\subseteq\bbr^{2}$
+\end_inset
+
+ let 
+\begin_inset Formula $f_{1},f_{2}\in C^{1}\left(\Omega\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $f_{2}\left(x,y\right)\ge f_{1}\left(x,y\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x>0$
+\end_inset
+
+ and 
+\begin_inset Formula $y\in\bbr$
+\end_inset
+
+ let 
+\begin_inset Formula $a_{1},a_{2}\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a_{2}\ge a_{1}$
+\end_inset
+
+ let 
+\begin_inset Formula $y_{1}\in\sols\left(\left\{ \begin{smallmatrix}y^{\prime}=f_{1}\left(x,y\right)\\
+y\left(0\right)=a_{1}
+\end{smallmatrix}\right.\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $y_{2}\in\sols\left(\left\{ \begin{smallmatrix}y^{\prime}=f_{2}\left(x,y\right)\\
+y\left(0\right)=a_{2}
+\end{smallmatrix}\right.\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $y_{2}\left(x\right)\ge y_{1}\left(x\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Wronskian
+\series default
+:
+ let 
+\begin_inset Formula $\u\subseteq\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $u,v\in C^{1}\left(\u\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $W_{u,v}:\u\to\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $W_{u,v}\left(t\right)=\det\left(\begin{smallmatrix}u\left(t\right) & v\left(t\right)\\
+u^{\prime}\left(t\right) & v^{\prime}\left(t\right)
+\end{smallmatrix}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary
+\series default
+:
+ let 
+\begin_inset Formula $\u\subseteq\bbr$
+\end_inset
+
+ let 
+\begin_inset Formula $u\in C^{1}\left(\u\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $c\in\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $W_{u,c\cdot u}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark
+\series default
+:
+ let 
+\begin_inset Formula $\u\subseteq\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $u,v\in C^{1}\left(\u\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $W=W_{u,v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Theorem Abel's Identity
+\series default
+:
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a<b$
+\end_inset
+
+ let 
+\begin_inset Formula $p,q:\left(a,b\right)\to\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $u,v\in\sols\left(y^{\prime\prime}+py^{\prime}+qy=0\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $W_{u,v}\in\sols\left(y^{\prime}+py=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary
+\series default
+:
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a<b$
+\end_inset
+
+ let 
+\begin_inset Formula $p,q:\left(a,b\right)\to\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $u,v\in\sols\left(y^{\prime\prime}+py^{\prime}+qy=0\right)$
+\end_inset
+
+ then there exists 
+\begin_inset Formula $p\in\left(a,b\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $c\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $W_{u,v}\left(t\right)=\exp\left(c\right)\cdot W_{u,v}\left(p\right)\cdot\exp\left(-\intop_{p}^{t}p\left(s\right)\text{d}s\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\in\left(a,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary
+\series default
+:
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a<b$
+\end_inset
+
+ let 
+\begin_inset Formula $p,q:\left(a,b\right)\to\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $u,v\in\sols\left(y^{\prime\prime}+py^{\prime}+qy=0\right)$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\sign\left(W\left(t_{1}\right)\right)=\sign\left(W\left(t_{2}\right)\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $t_{1},t_{2}\in\left(a,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary
+\series default
+:
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a<b$
+\end_inset
+
+ let 
+\begin_inset Formula $p,q:\left(a,b\right)\to\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $u,v\in\sols\left(y^{\prime\prime}+py^{\prime}+qy=0\right)$
+\end_inset
+
+ then (
+\begin_inset Formula $u,v$
+\end_inset
+
+ are linearly dependent)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\sign\left(W\right)=0$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary Complementary Solution
+\series default
+:
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a<b$
+\end_inset
+
+ let 
+\begin_inset Formula $p,q:\left(a,b\right)\to\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $u\in\sols\left(y^{\prime\prime}+py^{\prime}+qy=0\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $u\intop\frac{W}{u^{2}}$
+\end_inset
+
+ is a solution of 
+\begin_inset Formula $y^{\prime\prime}+py^{\prime}+qy=0$
+\end_inset
+
+ and 
+\begin_inset Formula $u,u\intop\frac{W}{u^{2}}$
+\end_inset
+
+ are linearly independent.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim Variation of Parameters
+\series default
+:
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a<b$
+\end_inset
+
+ let 
+\begin_inset Formula $p,q,f:\left(a,b\right)\to\bbr$
+\end_inset
+
+ let 
+\begin_inset Formula $u,v\in\sols\left(y^{\prime\prime}+py^{\prime}+qy=0\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $u,v$
+\end_inset
+
+ are linearly independent and let 
+\begin_inset Formula $C_{1},C_{2}\in C^{1}\left(\bbr\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $C_{1}u+C_{2}v$
+\end_inset
+
+ is a solution of 
+\begin_inset Formula $y^{\prime\prime}+py^{\prime}+qy=f$
+\end_inset
+
+ and 
+\begin_inset Formula $C_{1}^{\prime}u+C_{2}^{\prime}v=0$
+\end_inset
+
+ then 
+\begin_inset Formula $\left\{ \begin{smallmatrix}C_{1}^{\prime}u+C_{2}^{\prime}v=0\\
+C_{1}^{\prime}u^{\prime}+C_{2}^{\prime}v^{\prime}=f
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary Lagrange’s Formula
+\series default
+:
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a<b$
+\end_inset
+
+ let 
+\begin_inset Formula $p,q,f:\left(a,b\right)\to\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $u,v\in\sols\left(y^{\prime\prime}+py^{\prime}+qy=0\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $u,v$
+\end_inset
+
+ are linearly independent then 
+\begin_inset Formula $-u\intop\frac{fv}{W_{u,v}}+v\intop\frac{fu}{W_{u,v}}$
+\end_inset
+
+ is a solution of 
+\begin_inset Formula $y^{\prime\prime}+py^{\prime}+qy=f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Green Function
+\series default
+:
+ let 
+\begin_inset Formula $\u\subseteq\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $u,v\in C^{1}\left(\u\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $G_{u,v}:\u^{2}\to\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $G_{u,v}\left(s,t\right)=\frac{v\left(t\right)u\left(s\right)-u\left(t\right)v\left(s\right)}{u\left(s\right)v^{\prime}\left(s\right)-u^{\prime}\left(s\right)v\left(s\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $\u\subseteq\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $u,v\in C^{1}\left(\u\right)$
+\end_inset
+
+ then
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G\left(t,t\right)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\in\u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{\partial G}{\partial y}\left(t,t\right)=1$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\in\u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary
+\series default
+:
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a<b$
+\end_inset
+
+ let 
+\begin_inset Formula $p,q,f:\left(a,b\right)\to\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $u,v\in\sols\left(y^{\prime\prime}+py^{\prime}+qy=0\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $u,v$
+\end_inset
+
+ are linearly independent then there exists 
+\begin_inset Formula $p\in\left(a,b\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\intop_{p}^{t}G_{u,v}\left(s,t\right)f\left(s\right)\text{d}s$
+\end_inset
+
+ is a solution of 
+\begin_inset Formula $y^{\prime\prime}+py^{\prime}+qy=f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lemma
+\series default
+:
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a<b$
+\end_inset
+
+ let 
+\begin_inset Formula $p,q,f:\left(a,b\right)\to\bbr$
+\end_inset
+
+ let 
+\begin_inset Formula $u,v\in\sols\left(y^{\prime\prime}+py^{\prime}+qy=0\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $u,v$
+\end_inset
+
+ are linearly independent let 
+\begin_inset Formula $p\in\left(a,b\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\intop_{p}^{t}G_{u,v}\left(s,t\right)f\left(s\right)\text{d}s$
+\end_inset
+
+ is a solution of 
+\begin_inset Formula $y^{\prime\prime}+py^{\prime}+qy=f$
+\end_inset
+
+ and let 
+\begin_inset Formula $g\in\sols\left(\begin{smallmatrix}y^{\prime\prime}+py^{\prime}+qy=f\\
+y\left(p\right)=0\\
+y^{\prime}\left(p\right)=0
+\end{smallmatrix}\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $g=\intop_{p}^{t}G_{u,v}\left(s,t\right)f\left(s\right)\text{d}s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
