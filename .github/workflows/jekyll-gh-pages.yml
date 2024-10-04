@@ -22,6 +22,16 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  complie-md:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Converts Markdown to HTML
+        uses: jaywcjlove/markdown-to-html-cli@main
+        with:
+          source: ToDo.md
+          output: website/ToDo.html
+          github-corners: https://github.com/jaywcjlove/markdown-to-html-cli
+
   # Build job
   build:
     runs-on: ubuntu-latest
