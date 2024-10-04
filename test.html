@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embed Markdown</title>
+  <!-- Marked.js for parsing markdown -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <!-- Where the markdown content will be displayed -->
+  <div id="markdown-content"></div>
+
+  <script>
+    // Your markdown content as a string
+    const markdownContent = `
+    # This is Markdown Content
+
+    - Item 1
+    - Item 2
+    - Item 3
+
+    ## Subheading
+
+    More markdown text here.
+    `;
+
+    // Use marked.js to convert the markdown to HTML
+    document.getElementById('markdown-content').innerHTML = marked(markdownContent);
+  </script>
+</body>
+</html>
