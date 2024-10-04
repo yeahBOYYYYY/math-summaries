@@ -25,10 +25,9 @@ jobs:
   complie-md:
     runs-on: ubuntu-latest
     steps:
-      - uses: ZacJW/markdown-html-action@1.1.0
+      - uses: jd-solanki/gh-action-md-to-html@v1.3.0
         with:
-          input_files: '["ToDo.md"]'
-          output_files: '["ToDo.html"]'
+          files: '[["ToDo.md", "ToDo.html"]]'
       - uses: actions/upload-artifact@v4
         with:
           name: docs
