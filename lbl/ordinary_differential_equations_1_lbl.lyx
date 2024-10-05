@@ -76,10 +76,13 @@
 \options no-math
 \use_default_options true
 \begin_modules
-theorems-ams
-theorems-ams-extended
+algorithm2e
 \end_modules
 \maintain_unincluded_children no
+\begin_local_layout
+Format 66
+PackageOptions algorithm2e vlined
+\end_local_layout
 \language british
 \language_package default
 \inputencoding auto-legacy
@@ -2875,11 +2878,11 @@ Claim
 \end_inset
 
  and let 
-\begin_inset Formula $y\in C^{1}\left(\bbr\right)$
+\begin_inset Formula $y\in\sols\left(\frac{\partial F}{\partial x}\left(x,y\right)+y^{\prime}\cdot\frac{\partial F}{\partial y}\left(x,y\right)=0\right)$
 \end_inset
 
  then 
-\begin_inset Formula $\frac{\text{d}}{\text{d}t}\left(F\left(x,y\left(x\right)\right)\right)=0$
+\begin_inset Formula $\frac{\text{d}}{\text{d}x}\left(F\left(x,y\left(x\right)\right)\right)=0$
 \end_inset
 
 .
@@ -2945,6 +2948,144 @@ Claim
 \end_inset
 
 ).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Linear Ordinary Differential Equation
+\series default
+:
+ let 
+\begin_inset Formula $f:\bbr\to\bbr$
+\end_inset
+
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ and let 
+\begin_inset Formula $a_{0}\ldots a_{n-1`}:\bbr\to\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $y^{\left(n\right)}+\sum_{i=0}^{n-1}a_{i}\left(x\right)\cdot y^{\left(i\right)}=f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $I\subseteq\bbr$
+\end_inset
+
+ be an interval let 
+\begin_inset Formula $p,q:I\to\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $\psi\in\sols\left(y^{\prime}+py=q\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $\sols\left(y^{\prime}+py=q\right)=\sols\left(y^{\prime}+py=0\right)+\psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Bernoulli's Equation
+\series default
+:
+ let 
+\begin_inset Formula $\a\in\bbr\backslash\left\{ 0,1\right\} $
+\end_inset
+
+ and let 
+\begin_inset Formula $p,q:\bbr\to\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $y^{\prime}=py+qy^{\a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $\a\in\bbr\backslash\left\{ 0,1\right\} $
+\end_inset
+
+ and let 
+\begin_inset Formula $p,q:\bbr\to\bbr$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\sols\left(y^{\prime}=py+qy^{\a}\right)=\sols\left(\frac{1}{1-\a}\cdot\left(y^{1-\a}\right)^{\prime}=p\cdot y^{1-\a}+q\right)\cup\left\{ 0\mid\a>0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Riccati's Equation
+\series default
+:
+ let 
+\begin_inset Formula $p,q,r:\bbr\to\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $y^{\prime}+p+qy+ry^{2}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $p,q,r:\bbr\to\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $\psi\in\sols\left(y^{\prime}+p+qy+ry^{2}=0\right)$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\sols\left(y^{\prime}+p+qy+ry^{2}=0\right)=\sols\left(\left(y+\psi\right)^{\prime}+\left(q+2r\psi\right)\left(y+\psi\right)+r\left(y+\psi\right)^{2}=0\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3248,6 +3389,185 @@ Claim
 
 
 \begin_inset Formula $\re\left(f\right),\im\left(f\right)\in\sols\left(y^{\left(n\right)}+\sum_{i=0}^{n-1}a_{i}\cdot y^{\left(i\right)}=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Complex Quasi Polynomial
+\series default
+:
+ let 
+\begin_inset Formula $\g\in\bbc$
+\end_inset
+
+ and let 
+\begin_inset Formula $p\in\bbc\left[x\right]$
+\end_inset
+
+ then 
+\begin_inset Formula $f:\bbc\to\bbc$
+\end_inset
+
+ such that 
+\begin_inset Formula $f\left(z\right)=e^{\g z}\cdot p\left(z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Degree of a Complex Quasi Polynomial
+\series default
+:
+ let 
+\begin_inset Formula $\g\in\bbc$
+\end_inset
+
+ and let 
+\begin_inset Formula $p\in\bbc\left[x\right]$
+\end_inset
+
+ then 
+\begin_inset Formula $\deg\left(e^{\g z}\cdot p\left(z\right)\right)=\deg\left(p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Exponent of a Complex Quasi Polynomial
+\series default
+:
+ let 
+\begin_inset Formula $\g\in\bbc$
+\end_inset
+
+ and let 
+\begin_inset Formula $p\in\bbc\left[x\right]$
+\end_inset
+
+ then 
+\begin_inset Formula $\g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Real Quasi Polynomial
+\series default
+:
+ let 
+\begin_inset Formula $\a,\b\in\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $p,q\in\bbr\left[x\right]$
+\end_inset
+
+ then 
+\begin_inset Formula $f:\bbr\to\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $f\left(x\right)=e^{\a x}\left(p\left(x\right)\cos\left(\b x\right)+q\left(x\right)\sin\left(\b x\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Degree of a Real Quasi Polynomial
+\series default
+:
+ let 
+\begin_inset Formula $\a,\b\in\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $p,q\in\bbr\left[x\right]$
+\end_inset
+
+ then 
+\begin_inset Formula $\deg\left(e^{\a x}\left(p\left(x\right)\cos\left(\b x\right)+q\left(x\right)\sin\left(\b x\right)\right)\right)=\max\left\{ \deg\left(p\right),\deg\left(q\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $P:\bbc\to\bbc$
+\end_inset
+
+ be a complex quasi polynomial then 
+\begin_inset Formula $\re\left(P\right)$
+\end_inset
+
+ is a real quasi polynomial.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ let 
+\begin_inset Formula $a_{0}\ldots a_{n-1`}\in\bbr$
+\end_inset
+
+ let 
+\begin_inset Formula $\g\in\bbc$
+\end_inset
+
+ let 
+\begin_inset Formula $p\in\bbc\left[x\right]$
+\end_inset
+
+ and let 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ the multiplicity of the root 
+\begin_inset Formula $\g$
+\end_inset
+
+ in 
+\begin_inset Formula $x^{n}+\sum_{i=0}^{n-1}a_{i}\cdot x^{i}$
+\end_inset
+
+ then there exists 
+\begin_inset Formula $q\in\bbc\left[x\right]$
+\end_inset
+
+ such that 
+\begin_inset Formula $\deg\left(q\right)=\deg\left(p\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $t^{k}q\left(t\right)e^{\g t}\in\sols\left(y^{\left(n\right)}+\sum_{i=0}^{n-1}a_{i}\cdot y^{\left(i\right)}=p\cdot e^{\g t}\right)$
 \end_inset
 
 .
@@ -3862,15 +4182,11 @@ Theorem Abel's Identity
 \series default
 :
  let 
-\begin_inset Formula $a,b\in\bbr$
+\begin_inset Formula $I\subseteq\bbr$
 \end_inset
 
- such that 
-\begin_inset Formula $a<b$
-\end_inset
-
- let 
-\begin_inset Formula $p,q:\left(a,b\right)\to\bbr$
+ be an open interval let 
+\begin_inset Formula $p,q:I\to\bbr$
 \end_inset
 
  and let 
@@ -3891,15 +4207,11 @@ Corollary
 \series default
 :
  let 
-\begin_inset Formula $a,b\in\bbr$
+\begin_inset Formula $I\subseteq\bbr$
 \end_inset
 
- such that 
-\begin_inset Formula $a<b$
-\end_inset
-
- let 
-\begin_inset Formula $p,q:\left(a,b\right)\to\bbr$
+ be an open interval let 
+\begin_inset Formula $p,q:I\to\bbr$
 \end_inset
 
  and let 
@@ -3907,7 +4219,7 @@ Corollary
 \end_inset
 
  then there exists 
-\begin_inset Formula $p\in\left(a,b\right)$
+\begin_inset Formula $p\in I$
 \end_inset
 
  and 
@@ -3919,7 +4231,7 @@ Corollary
 \end_inset
 
  for all 
-\begin_inset Formula $t\in\left(a,b\right)$
+\begin_inset Formula $t\in I$
 \end_inset
 
 .
@@ -3932,15 +4244,11 @@ Corollary
 \series default
 :
  let 
-\begin_inset Formula $a,b\in\bbr$
+\begin_inset Formula $I\subseteq\bbr$
 \end_inset
 
- such that 
-\begin_inset Formula $a<b$
-\end_inset
-
- let 
-\begin_inset Formula $p,q:\left(a,b\right)\to\bbr$
+ be an open interval let 
+\begin_inset Formula $p,q:I\to\bbr$
 \end_inset
 
  and let 
@@ -3956,7 +4264,7 @@ Corollary
 \end_inset
 
  for all 
-\begin_inset Formula $t_{1},t_{2}\in\left(a,b\right)$
+\begin_inset Formula $t_{1},t_{2}\in I$
 \end_inset
 
 .
@@ -3969,15 +4277,11 @@ Corollary
 \series default
 :
  let 
-\begin_inset Formula $a,b\in\bbr$
+\begin_inset Formula $I\subseteq\bbr$
 \end_inset
 
- such that 
-\begin_inset Formula $a<b$
-\end_inset
-
- let 
-\begin_inset Formula $p,q:\left(a,b\right)\to\bbr$
+ be an open interval let 
+\begin_inset Formula $p,q:I\to\bbr$
 \end_inset
 
  and let 
@@ -4013,19 +4317,15 @@ Corollary Complementary Solution
 \series default
 :
  let 
-\begin_inset Formula $a,b\in\bbr$
+\begin_inset Formula $I\subseteq\bbr$
 \end_inset
 
- such that 
-\begin_inset Formula $a<b$
-\end_inset
-
- let 
-\begin_inset Formula $p,q:\left(a,b\right)\to\bbr$
+ be an open interval let 
+\begin_inset Formula $p,q:I\to\bbr$
 \end_inset
 
  and let 
-\begin_inset Formula $u\in\sols\left(y^{\prime\prime}+py^{\prime}+qy=0\right)$
+\begin_inset Formula $u\in\sols\left(y^{\prime\prime}+py^{\prime}+qy=0\right)\backslash\left\{ 0\right\} $
 \end_inset
 
  then 
@@ -4050,15 +4350,11 @@ Claim Variation of Parameters
 \series default
 :
  let 
-\begin_inset Formula $a,b\in\bbr$
+\begin_inset Formula $I\subseteq\bbr$
 \end_inset
 
- such that 
-\begin_inset Formula $a<b$
-\end_inset
-
- let 
-\begin_inset Formula $p,q,f:\left(a,b\right)\to\bbr$
+ be an open interval let 
+\begin_inset Formula $p,q,f:I\to\bbr$
 \end_inset
 
  let 
@@ -4070,7 +4366,7 @@ Claim Variation of Parameters
 \end_inset
 
  are linearly independent and let 
-\begin_inset Formula $C_{1},C_{2}\in C^{1}\left(\bbr\right)$
+\begin_inset Formula $C_{1},C_{2}\in C^{1}\left(I\right)$
 \end_inset
 
  such that 
@@ -4101,15 +4397,11 @@ Corollary Lagrange’s Formula
 \series default
 :
  let 
-\begin_inset Formula $a,b\in\bbr$
+\begin_inset Formula $I\subseteq\bbr$
 \end_inset
 
- such that 
-\begin_inset Formula $a<b$
-\end_inset
-
- let 
-\begin_inset Formula $p,q,f:\left(a,b\right)\to\bbr$
+ be an open interval let 
+\begin_inset Formula $p,q,f:I\to\bbr$
 \end_inset
 
  and let 
@@ -4202,15 +4494,11 @@ Corollary
 \series default
 :
  let 
-\begin_inset Formula $a,b\in\bbr$
+\begin_inset Formula $I\subseteq\bbr$
 \end_inset
 
- such that 
-\begin_inset Formula $a<b$
-\end_inset
-
- let 
-\begin_inset Formula $p,q,f:\left(a,b\right)\to\bbr$
+ be an open interval let 
+\begin_inset Formula $p,q,f:I\to\bbr$
 \end_inset
 
  and let 
@@ -4222,7 +4510,7 @@ Corollary
 \end_inset
 
  are linearly independent then there exists 
-\begin_inset Formula $p\in\left(a,b\right)$
+\begin_inset Formula $p\in I$
 \end_inset
 
  such that 
@@ -4243,15 +4531,11 @@ Lemma
 \series default
 :
  let 
-\begin_inset Formula $a,b\in\bbr$
+\begin_inset Formula $I\subseteq\bbr$
 \end_inset
 
- such that 
-\begin_inset Formula $a<b$
-\end_inset
-
- let 
-\begin_inset Formula $p,q,f:\left(a,b\right)\to\bbr$
+ be an open interval let 
+\begin_inset Formula $p,q,f:I\to\bbr$
 \end_inset
 
  let 
@@ -4263,7 +4547,7 @@ Lemma
 \end_inset
 
  are linearly independent let 
-\begin_inset Formula $p\in\left(a,b\right)$
+\begin_inset Formula $p\in I$
 \end_inset
 
  such that 
@@ -4282,7 +4566,11 @@ y^{\prime}\left(p\right)=0
 \end_inset
 
  then 
-\begin_inset Formula $g=\intop_{p}^{t}G_{u,v}\left(s,t\right)f\left(s\right)\text{d}s$
+\begin_inset Formula $g\left(t\right)=\intop_{p}^{t}G_{u,v}\left(s,t\right)f\left(s\right)\text{d}s$
+\end_inset
+
+ for all 
+\begin_inset Formula $t\in I$
 \end_inset
 
 .
@@ -4297,6 +4585,1202 @@ y^{\prime}\left(p\right)=0
 
 \begin_layout Standard
 
+\series bold
+Simple Zero
+\series default
+:
+ let 
+\begin_inset Formula $f\in C^{1}\left(\bbr\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $p\in\ker\left(f\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $f^{\prime}\left(p\right)\ne0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Isolated Zero
+\series default
+:
+ let 
+\begin_inset Formula $f:\bbr\to\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $p\in\ker\left(f\right)$
+\end_inset
+
+ such that there exists a neighbourhood 
+\begin_inset Formula $\u$
+\end_inset
+
+ of 
+\begin_inset Formula $p$
+\end_inset
+
+ for which 
+\begin_inset Formula $0\notin f\left(\u\backslash\left\{ p\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lemma
+\series default
+:
+ let 
+\begin_inset Formula $I\subseteq\bbr$
+\end_inset
+
+ be an open interval let 
+\begin_inset Formula $p,q:I\to\bbr$
+\end_inset
+
+ let 
+\begin_inset Formula $u\in\sols\left(y^{\prime\prime}+py^{\prime}+qy=0\right)\backslash\left\{ 0\right\} $
+\end_inset
+
+ and let 
+\begin_inset Formula $p\in\ker\left(u\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $p$
+\end_inset
+
+ is a simple and isolated zero of 
+\begin_inset Formula $u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lemma
+\series default
+:
+ let 
+\begin_inset Formula $I\subseteq\bbr$
+\end_inset
+
+ be an open interval let 
+\begin_inset Formula $p,q:I\to\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $u,v\in\sols\left(y^{\prime\prime}+py^{\prime}+qy=0\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $u,v$
+\end_inset
+
+ are linearly independent then 
+\begin_inset Formula $\ker\left(u\right)\cap\ker\left(v\right)=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Theorem Sturm's Separation Theorem
+\series default
+:
+ let 
+\begin_inset Formula $I\subseteq\bbr$
+\end_inset
+
+ be an open interval let 
+\begin_inset Formula $p,q:I\to\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $u,v\in\sols\left(y^{\prime\prime}+py^{\prime}+qy=0\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $u,v$
+\end_inset
+
+ are linearly independent then for all 
+\begin_inset Formula $z,w\in\ker\left(u\right)$
+\end_inset
+
+ if 
+\begin_inset Formula $\left(z,w\right)\cap\ker\left(u\right)=\emptyset$
+\end_inset
+
+ then 
+\begin_inset Formula $\left|\left(z,w\right)\cap\ker\left(v\right)\right|=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Theorem Sturm's Comparison Theorem
+\series default
+:
+ let 
+\begin_inset Formula $I\subseteq\bbr$
+\end_inset
+
+ be an open interval let 
+\begin_inset Formula $p,q:I\to\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $p\ge q$
+\end_inset
+
+ and 
+\begin_inset Formula $p\ne q$
+\end_inset
+
+ let 
+\begin_inset Formula $u\in\sols\left(y^{\prime\prime}+py=0\right)$
+\end_inset
+
+ let 
+\begin_inset Formula $v\in\sols\left(y^{\prime\prime}+qy=0\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $u,v$
+\end_inset
+
+ are linearly independent and let 
+\begin_inset Formula $z,w\in\ker\left(v\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $\left(z,w\right)\cap\ker\left(u\right)\ne\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $k<0$
+\end_inset
+
+ then 
+\begin_inset Formula $e^{\sqrt{-k}\cdot t}$
+\end_inset
+
+ is a solution of 
+\begin_inset Formula $y^{\prime\prime}+ky=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ the function 
+\begin_inset Formula $1$
+\end_inset
+
+ is a solution of 
+\begin_inset Formula $y^{\prime\prime}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary
+\series default
+:
+ let 
+\begin_inset Formula $I\subseteq\bbr$
+\end_inset
+
+ be an open interval let 
+\begin_inset Formula $q:I\to\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $0\ge q$
+\end_inset
+
+ and let 
+\begin_inset Formula $v\in\sols\left(y^{\prime\prime}+qy=0\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $v\ne0$
+\end_inset
+
+ then 
+\begin_inset Formula $\left|\ker\left(v\right)\right|\le1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $k>0$
+\end_inset
+
+ then 
+\begin_inset Formula $\sin\left(\sqrt{k}\cdot t\right)$
+\end_inset
+
+ is a solution of 
+\begin_inset Formula $y^{\prime\prime}+ky=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Supremum Norm/
+\begin_inset Formula $L^{\infty}$
+\end_inset
+
+ Norm
+\series default
+:
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a\le b$
+\end_inset
+
+ and let 
+\begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $\norm f_{\infty}=\max\left(\im\left(\left|f\right|\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a\le b$
+\end_inset
+
+ then 
+\begin_inset Formula $\norm{\cdot}_{\infty}$
+\end_inset
+
+ is a norm on 
+\begin_inset Formula $C\left(\left[a,b\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Supremum Metric
+\series default
+:
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a\le b$
+\end_inset
+
+ and let 
+\begin_inset Formula $f,g\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $d_{\infty}\left(f,g\right)=\norm{f-g}_{\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a\le b$
+\end_inset
+
+ then 
+\begin_inset Formula $d_{\infty}$
+\end_inset
+
+ is a metric on 
+\begin_inset Formula $C\left(\left[a,b\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a\le b$
+\end_inset
+
+ let 
+\begin_inset Formula $f\in C\left(\left[a,b\right]\right)$
+\end_inset
+
+ and let 
+\begin_inset Formula $\left\{ f_{n}\right\} _{n=0}^{\infty}\subseteq C\left(\left[a,b\right]\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $\left(f_{n}\xrightarrow{L^{\infty}}f\right)\iff\left(f_{n}\limu f\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Theorem
+\series default
+:
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a\le b$
+\end_inset
+
+ then 
+\begin_inset Formula $\left(C\left(\left[a,b\right]\right),d_{\infty}\right)$
+\end_inset
+
+ is complete.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Closed Set
+\series default
+:
+ let 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ be a metric space then 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ such that for all 
+\begin_inset Formula $\left\{ a_{n}\right\} _{n=0}^{\infty}\subseteq A$
+\end_inset
+
+ and for all 
+\begin_inset Formula $L\in X$
+\end_inset
+
+ if 
+\begin_inset Formula $a_{n}\to L$
+\end_inset
+
+ then 
+\begin_inset Formula $L\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Fixed Point
+\series default
+:
+ let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a set and let 
+\begin_inset Formula $f:X\to X$
+\end_inset
+
+ then 
+\begin_inset Formula $p\in X$
+\end_inset
+
+ such that 
+\begin_inset Formula $f\left(p\right)=p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Contraction
+\series default
+:
+ let 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ be a metric space then 
+\begin_inset Formula $f:X\to X$
+\end_inset
+
+ such that there exists 
+\begin_inset Formula $\rho\in\left[0,1\right)$
+\end_inset
+
+ for which 
+\begin_inset Formula $d\left(f\left(x\right),f\left(y\right)\right)\le\rho\cdot d\left(x,y\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Theorem Contraction Mapping Theorem
+\series default
+:
+ let 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ be a complete metric space such that 
+\begin_inset Formula $X\ne\emptyset$
+\end_inset
+
+ and let 
+\begin_inset Formula $f:X\to X$
+\end_inset
+
+ be a contraction then there exists a unique 
+\begin_inset Formula $p\in X$
+\end_inset
+
+ for which 
+\begin_inset Formula $f\left(p\right)=p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lipschitz Function
+\series default
+:
+ let 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ be a metric space then 
+\begin_inset Formula $f:X\to\bbr$
+\end_inset
+
+ such that there exists 
+\begin_inset Formula $L\in\bbr$
+\end_inset
+
+ for which 
+\begin_inset Formula $\left|f\left(x\right)-f\left(y\right)\right|\le L\cdot d\left(x,y\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lipschitz Constant
+\series default
+:
+ let 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ be a metric space and let 
+\begin_inset Formula $f:X\to\bbr$
+\end_inset
+
+ be lipschitz then minimal 
+\begin_inset Formula $L\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $\left|f\left(x\right)-f\left(y\right)\right|\le L\cdot d\left(x,y\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ be a metric space and let 
+\begin_inset Formula $f:X\to\bbr$
+\end_inset
+
+ be lipschitz then 
+\begin_inset Formula $f\in C\left(X\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Locally Lipschitz Function
+\series default
+:
+ let 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ be a metric space then 
+\begin_inset Formula $f:X\to\bbr$
+\end_inset
+
+ such that for all 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ there exists a neighbourhood 
+\begin_inset Formula $\u$
+\end_inset
+
+ of 
+\begin_inset Formula $x$
+\end_inset
+
+ for which 
+\begin_inset Formula $f_{\upharpoonright_{\u}}$
+\end_inset
+
+ is lipschitz.
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\series bold
+\size footnotesize
+Theorem Picard-Lindelöf
+\family default
+\series default
+\size default
+:
+ let 
+\begin_inset Formula $I,J\subseteq\bbr$
+\end_inset
+
+ be closed intervals let 
+\begin_inset Formula $f\in C\left(I\times J\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $f$
+\end_inset
+
+ is locally lipschitz in the second coordinate and let 
+\begin_inset Formula $p\in\text{int}\left(I\times J\right)$
+\end_inset
+
+ then there exists 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ such that 
+\begin_inset Formula $\left\{ \begin{smallmatrix}y^{\prime}=f\left(x,y\right)\\
+y\left(p_{1}\right)=p_{2}
+\end{smallmatrix}\right.$
+\end_inset
+
+ has a unique solution on the interval 
+\begin_inset Formula $\left(p_{1}-\e,p_{1}+\e\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Compact Set
+\series default
+:
+ let 
+\begin_inset Formula $\left(X,d\right)$
+\end_inset
+
+ be a metric space then 
+\begin_inset Formula $K\subseteq X$
+\end_inset
+
+ such that for all 
+\begin_inset Formula $\left\{ x_{n}\right\} _{n=0}^{\infty}\subseteq K$
+\end_inset
+
+ there exists a convergent subsequence.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Uniformly Bounded Sequence of Functions
+\series default
+:
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a\le b$
+\end_inset
+
+ then 
+\begin_inset Formula $\left\{ f_{n}\right\} _{n=0}^{\infty}\subseteq C\left(\left[a,b\right]\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\exists M\in\bbr.\forall x\in\left[a,b\right].\forall n\in\bbn.\left|f_{n}\left(x\right)\right|\le M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Uniformly Equicontinuous Sequence of Functions
+\series default
+:
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a\le b$
+\end_inset
+
+ then 
+\begin_inset Formula $\left\{ f_{n}\right\} _{n=0}^{\infty}\subseteq C\left(\left[a,b\right]\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall\e>0.\exists\d>0.\forall x,y\in\left[a,b\right].\left|x-y\right|<\d\implies\left|f\left(x\right)-f\left(y\right)\right|<\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Theorem Arzela-Ascoli
+\series default
+:
+ let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $a\le b$
+\end_inset
+
+ and let 
+\begin_inset Formula $\left\{ f_{n}\right\} _{n=0}^{\infty}\subseteq C\left(\left[a,b\right]\right)$
+\end_inset
+
+ then (
+\begin_inset Formula $\left\{ f_{n}\right\} _{n=0}^{\infty}$
+\end_inset
+
+ has a convergent subsequence)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\left\{ f_{n}\right\} _{n=0}^{\infty}$
+\end_inset
+
+ is uniformly bounded and uniformly equicontinuous).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Notation
+\series default
+:
+ let 
+\begin_inset Formula $p\in\bbr^{2}$
+\end_inset
+
+ and let 
+\begin_inset Formula $f:\bbr\to\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $\eta_{f}\left(p\right):\bbr\to\bbr$
+\end_inset
+
+ such that 
+\begin_inset Formula $\eta_{f}\left(p\right)\left(x\right)=f\left(p\right)\cdot\left(x-p_{1}\right)+p_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Algorithm Euler's Method
+\series default
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ let 
+\begin_inset Formula $f\in C\left(\bbr\right)$
+\end_inset
+
+ let 
+\begin_inset Formula $\e\in\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $p\in\bbr^{2}$
+\end_inset
+
+ then
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{Name}{EulerMethod}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+Name{$n,
+ f,
+ 
+\backslash
+varepsilon,
+ p$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $(x_0,
+ y_0) 
+\backslash
+gets p$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$i 
+\backslash
+gets 
+\backslash
+{1
+\backslash
+ldots n
+\backslash
+}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $x_i 
+\backslash
+gets x_0 + 
+\backslash
+varepsilon
+\backslash
+cdot 
+\backslash
+frac{i}{n}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $g_i 
+\backslash
+gets (
+\backslash
+lambda x
+\backslash
+in [x_{i-1},
+ x_{i}].
+ (f
+\backslash
+left(x_{i-1},y_{i-1}
+\backslash
+right)
+\backslash
+cdot
+\backslash
+left(x-x_{i-1}
+\backslash
+right)+y_{i-1}))$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $y_{i}
+\backslash
+gets g_i(x_{i})$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $
+\backslash
+bigcup_{i=1}^{n} g_i$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\em}{\text{EulerMethod}}
+{\text{EulerMethod}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ let 
+\begin_inset Formula $f\in C\left(\bbr\right)$
+\end_inset
+
+ let 
+\begin_inset Formula $\e\in\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $p\in\bbr^{2}$
+\end_inset
+
+ then 
+\begin_inset Formula $\em\left(n,f,\varepsilon,p\right):\left[p_{1},p_{1}+\e\right]\to\bbr$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Notation
+\series default
+:
+ let 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ let 
+\begin_inset Formula $f\in C\left(\bbr\right)$
+\end_inset
+
+ let 
+\begin_inset Formula $\e\in\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $p\in\bbr^{2}$
+\end_inset
+
+ then 
+\begin_inset Formula $\em_{n}=\em\left(n,f,\varepsilon,p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+:
+ let 
+\begin_inset Formula $f\in C\left(\bbr\right)$
+\end_inset
+
+ let 
+\begin_inset Formula $\e\in\bbr$
+\end_inset
+
+ let 
+\begin_inset Formula $p\in\bbr^{2}$
+\end_inset
+
+ then there exists a convergent subsequence 
+\begin_inset Formula $\left\{ \em_{n_{k}}\right\} $
+\end_inset
+
+ such that 
+\begin_inset Formula $\lim_{k\to\infty}\em_{n_{k}}$
+\end_inset
+
+ is a solution of 
+\begin_inset Formula $\left\{ \begin{smallmatrix}y^{\prime}=f\left(x,y\right)\\
+y\left(p_{1}\right)=p_{2}
+\end{smallmatrix}\right.$
+\end_inset
+
+ defined on 
+\begin_inset Formula $\left[p_{1},p_{1}+\e\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Boundary Value Problem (BVP)
+\series default
+:
+ let 
+\begin_inset Formula $f:\bbr^{n+1}\to\bbr$
+\end_inset
+
+ and let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $\left\{ \begin{smallmatrix}f\left(x,y^{\prime},\ldots y^{\left(n\right)}\right)=0\\
+y\left(0\right)=a\\
+y\left(1\right)=b
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Theorem
+\series default
+:
+ let 
+\begin_inset Formula $k\in C\left(\left[0,1\right]\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $k>0$
+\end_inset
+
+ and let 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ then 
+\begin_inset Formula $\left|\sols\left(\left\{ \begin{smallmatrix}y^{\prime\prime}=ky\\
+y\left(0\right)=a\\
+y\left(1\right)=b
+\end{smallmatrix}\right.\right)\right|=1$
+\end_inset
+
+.
 \end_layout
 
 \end_body
