@@ -375,39 +375,6 @@ List/Sequence Abstract Data Type
 \end_inset
 
  such that 
-\begin_inset Formula $\forall n\in\bbn.\forall x\in\Sigma^{n}.\text{Length}\left(x\right)=n$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\text{Retrieve}:\bigcup_{n=0}^{\infty}\left(\Sigma^{n}\times\left[n\right]\right)\to\Sigma$
-\end_inset
-
- such that 
-\begin_inset Formula $\forall n\in\bbn.\forall x\in\Sigma^{n}.\forall i\in\left[n\right].\text{Retrieve}\left(x,i\right)=x_{i}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\text{Insert}:\bigcup_{n=0}^{\infty}\left(\Sigma^{n}\times\left[n+1\right]\times\Sigma\right)\to\Sigma^{*}$
-\end_inset
-
- such that 
-\begin_inset Formula $\forall n\in\bbn.\forall x\in\Sigma^{n}.\forall i\in\left[n+1\right].\forall\sigma\in\Sigma.\text{Insert}\left(x,i,\sigma\right)=\left<x_{1}\ldots x_{i-1},\sigma,x_{i}\ldots x_{n}\right>$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\text{Length}:\Sigma^{*}\to\bbn$
-\end_inset
-
- such that 
 \begin_inset Formula $\text{Length}\left(x\right)=n$
 \end_inset
 

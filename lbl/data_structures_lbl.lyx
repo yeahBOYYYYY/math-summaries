@@ -177,6 +177,308 @@ literal "true"
 
 \begin_layout Standard
 
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ויהיו 
+\begin_inset Formula $\psi_{1}\ldots\psi_{n}$
+\end_inset
+
+ פרידיקטים על 
+\begin_inset Formula $\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Sigma_{\psi_{1}\ldots\psi_{n}}^{*}=\left\{ w\in\Sigma^{*}\mid\psi_{1}\left(w\right)\land\ldots\land\psi_{n}\left(w\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טיפוס נתונים מופשט (
+\lang english
+ADT
+\lang hebrew
+)
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית יהיו 
+\begin_inset Formula $\psi_{1}\ldots\psi_{n}$
+\end_inset
+
+ פרידיקטים על 
+\begin_inset Formula $\Sigma^{*}$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $f_{1}\ldots f_{m}$
+\end_inset
+
+ פונקציות אזי 
+\begin_inset Formula $\left(\Sigma,\Sigma_{\psi_{1}\ldots\psi_{n}}^{*},f_{1},\ldots,f_{m}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תחום של טיפוס נתונים מופשט
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\Sigma_{\psi_{1}\ldots\psi_{n}}^{*},f_{1}\ldots f_{m}\right)$
+\end_inset
+
+ טיפוס נתונים מופשט אזי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אקסיומות של טיפוס נתונים מופשט
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\Sigma_{\psi_{1}\ldots\psi_{n}}^{*},f_{1}\ldots f_{m}\right)$
+\end_inset
+
+ טיפוס נתונים מופשט אזי 
+\begin_inset Formula $\psi_{1}\ldots\psi_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אובייקטים של טיפוס נתונים מופשט
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\Sigma_{\psi_{1}\ldots\psi_{n}}^{*},f_{1}\ldots f_{m}\right)$
+\end_inset
+
+ טיפוס נתונים מופשט אזי 
+\begin_inset Formula $\Sigma_{\psi_{1}\ldots\psi_{n}}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציות של טיפוס נתונים מופשט
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\Sigma_{\psi_{1}\ldots\psi_{n}}^{*},f_{1}\ldots f_{m}\right)$
+\end_inset
+
+ טיפוס נתונים מופשט אזי 
+\begin_inset Formula $\left\{ f_{1}\ldots f_{m}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ טיפוס נתונים מופשט ותהא 
+\begin_inset Formula $f$
+\end_inset
+
+ פונקציה של 
+\begin_inset Formula $A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A.f=f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ טיפוס נתונים מופשט עבורו 
+\begin_inset Formula $\e$
+\end_inset
+
+ אובייקט של 
+\begin_inset Formula $A$
+\end_inset
+
+ אזי נאמר כי 
+\begin_inset Formula $A$
+\end_inset
+
+ הינה פונקציה באשר 
+\begin_inset Formula $A\left(\right)=\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רשימה
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית אזי 
+\begin_inset Formula $\text{List}=\left(\Sigma^{*},\text{Length},\text{Retrieve},\text{Insert},\text{Delete}\right)$
+\end_inset
+
+ באשר
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{Length}:\Sigma^{*}\to\bbn$
+\end_inset
+
+ מוגדרת כך 
+\begin_inset Formula $\text{Length}\left(x\right)=n$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{Retrieve}:\bigcup_{n=0}^{\infty}\left(\Sigma^{n}\times\left[n\right]\right)\to\Sigma$
+\end_inset
+
+ מוגדרת כך 
+\begin_inset Formula $\text{Retrieve}\left(x,i\right)=x_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{Insert}:\bigcup_{n=0}^{\infty}\left(\Sigma^{n}\times\left[n+1\right]\times\Sigma\right)\to\Sigma^{*}$
+\end_inset
+
+ מוגדרת כך 
+\begin_inset Formula $\text{Insert}\left(x,i,\sigma\right)=\left<x_{1}\ldots x_{i-1},\sigma,x_{i}\ldots x_{n}\right>$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n+1\right]$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\sigma\in\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{Delete}:\bigcup_{n=0}^{\infty}\left(\Sigma^{n}\times\left[n\right]\right)\to\left(\Sigma^{*}\times\Sigma\right)$
+\end_inset
+
+ מוגדרת כך 
+\begin_inset Formula $\text{Delete}\left(x,i\right)=\left(\left<x_{1}\ldots x_{i-1},x_{i+1}\ldots x_{n}\right>,x_{i}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית אזי 
+\begin_inset Formula $\text{List}$
+\end_inset
+
+ הינו טיפוס נתונים מופשט.
 \end_layout
 
 \end_body
