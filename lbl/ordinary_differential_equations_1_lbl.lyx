@@ -20,6 +20,7 @@
 \usepackage{booktabs}
 \usepackage{fancyhdr}
 
+
 % it's here?
 \setlength{\tabcolsep}{1pt}
 \renewcommand{\arraystretch}{1.25} % Default value: 1
@@ -38,17 +39,19 @@
 \setlist[itemize,1]{label={\fontfamily{david}\fontencoding{T1}\selectfont\textbullet}}
 
 % colors
+\definecolor{blue}{RGB}{14,107,217}
 \definecolor{green}{RGB}{0,158,40}
 \definecolor{red}{RGB}{235,16,16}
 \definecolor{brown}{RGB}{164,66,0}
 \definecolor{orange}{RGB}{231,135,26}
 \definecolor{purple}{RGB}{94,53,177}
-\definecolor{pink}{RGB}{255,127,127}
-
 \definecolor{keywordcolor}{RGB}{255,117,0}
 \definecolor{commentcolor}{RGB}{128,128,128}
 \definecolor{stringcolor}{RGB}{0,168,0}
 \definecolor{remarkcolor}{RGB}{150,145,91} % 255,225,88
+
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{gray}{#1}}
+\SetCommentSty{mycommfont}
 
 % hyperlinks
 \hypersetup{
@@ -88,7 +91,7 @@ PackageOptions algorithm2e vlined
 \inputencoding auto-legacy
 \fontencoding auto
 \font_roman "default" "David CLM"
-\font_sans "default" "David"
+\font_sans "default" "Times New Roman"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
@@ -110,7 +113,19 @@ PackageOptions algorithm2e vlined
 \float_alignment class
 \paperfontsize default
 \spacing onehalf
-\use_hyperref false
+\use_hyperref true
+\pdf_title "Ordinary Differential Equations 1 lbl"
+\pdf_author "Ron Mikhelman"
+\pdf_subject "Math Summeries"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize letter
 \use_geometry true
 \use_package amsmath 2

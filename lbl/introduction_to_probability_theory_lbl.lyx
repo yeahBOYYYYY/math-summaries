@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -19,6 +19,7 @@
 \usepackage{polynom}
 \usepackage{booktabs}
 \usepackage{fancyhdr}
+
 
 % it's here?
 \setlength{\tabcolsep}{1pt}
@@ -49,6 +50,9 @@
 \definecolor{stringcolor}{RGB}{0,168,0}
 \definecolor{remarkcolor}{RGB}{150,145,91} % 255,225,88
 
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{gray}{#1}}
+\SetCommentSty{mycommfont}
+
 % hyperlinks
 \hypersetup{
     colorlinks=true,
@@ -65,22 +69,37 @@
 \renewcommand{\iff}{\negthickspace\RonMikhelmanLoll\negthickspace}
 \let\RonMikhelmanLolll\impliedby
 \renewcommand{\impliedby}{\negthickspace\RonMikhelmanLolll\negthickspace}
+
+%for defnos
+\usepackage{multicol}
+\usepackage{color}
+\setlength{\columnseprule}{1pt}
+\def\columnseprulecolor{\color{black}}
 \end_preamble
 \options no-math
 \use_default_options true
-\maintain_unincluded_children false
+\begin_modules
+algorithm2e
+\end_modules
+\maintain_unincluded_children no
+\begin_local_layout
+Format 66
+PackageOptions algorithm2e vlined
+\end_local_layout
 \language hebrew
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "David CLM"
-\font_sans "default" "default"
+\font_sans "default" "Times New Roman"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -91,10 +110,23 @@
 \bibtex_command default
 \index_command default
 \float_placement H
+\float_alignment class
 \paperfontsize default
 \spacing onehalf
-\use_hyperref false
-\papersize letterpaper
+\use_hyperref true
+\pdf_title "Introduction to Probability Theory lbl"
+\pdf_author "Ron Mikhelman"
+\pdf_subject "Math Summeries"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letter
 \use_geometry true
 \use_package amsmath 2
 \use_package amssymb 2
@@ -115,7 +147,9 @@
 \suppress_date true
 \justification false
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -135,11 +169,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -148,6 +187,7 @@
 \begin_inset CommandInset include
 LatexCommand include
 filename "E:/University/macros.lyx"
+literal "true"
 
 \end_inset
 
@@ -167,7 +207,8 @@ filename "E:/University/macros.lyx"
 \series bold
 נקודתית
 \series default
-: 
+:
+ 
 \begin_inset Formula $\bbp\in\left[0,1\right]^{\Omega}$
 \end_inset
 
@@ -187,11 +228,12 @@ filename "E:/University/macros.lyx"
 \series bold
 הסתברות
 \series default
- )מ
+ (מ
 \begin_inset Quotes erd
 \end_inset
 
-ה(: תהא 
+ה):
+ תהא 
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -215,7 +257,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מדגם
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(\Omega,\bbp\right)$
 \end_inset
 
@@ -239,7 +282,8 @@ filename "E:/University/macros.lyx"
 \series bold
 בדיד
 \series default
-: מרחב הסתברות 
+:
+ מרחב הסתברות 
 \begin_inset Formula $\left(\Omega,\bbp\right)$
 \end_inset
 
@@ -263,7 +307,8 @@ filename "E:/University/macros.lyx"
 \series bold
 סופי
 \series default
-: מרחב הסתברות 
+:
+ מרחב הסתברות 
 \begin_inset Formula $\left(\Omega,\bbp\right)$
 \end_inset
 
@@ -279,7 +324,8 @@ filename "E:/University/macros.lyx"
 \series bold
 הערה
 \series default
-: בקורס זה כל מרחבי ההסתברות הינם בדידים.
+:
+ בקורס זה כל מרחבי ההסתברות הינם בדידים.
 \end_layout
 
 \begin_layout Standard
@@ -287,7 +333,8 @@ filename "E:/University/macros.lyx"
 \series bold
 סימון
 \series default
-: 
+:
+ 
 \begin_inset Formula $2^{A}=\P\left(A\right)$
 \end_inset
 
@@ -299,7 +346,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מאורע
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\subseteq\Omega$
 \end_inset
 
@@ -315,7 +363,8 @@ filename "E:/University/macros.lyx"
 \series bold
 סימון
 \series default
-: 
+:
+ 
 \begin_inset Formula $\left[n\right]=\left\{ 1,\ldots,n\right\} $
 \end_inset
 
@@ -327,7 +376,8 @@ filename "E:/University/macros.lyx"
 \series bold
 משפט
 \series default
-: יהי מרחב הסתברות 
+:
+ יהי מרחב הסתברות 
 \begin_inset Formula $\left(\Omega,\bbp\right)$
 \end_inset
 
@@ -343,7 +393,8 @@ filename "E:/University/macros.lyx"
 \series bold
 משלים
 \series default
-: 
+:
+ 
 \begin_inset Formula $\bbp\left(A^{{\cal C}}\right)=1-\bbp\left(A\right)$
 \end_inset
 
@@ -355,7 +406,8 @@ filename "E:/University/macros.lyx"
 \series bold
 אדטיביות
 \series default
-: 
+:
+ 
 \begin_inset Formula $\bbp\left(A\uplus B\right)=\bbp\left(A\right)+\bbp\left(B\right)$
 \end_inset
 
@@ -374,7 +426,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מונוטוניות
 \series default
-: 
+:
+ 
 \begin_inset Formula $\left(A\subseteq B\right)\implies\left(\bbp\left(A\right)\le\bbp\left(B\right)\right)$
 \end_inset
 
@@ -390,7 +443,8 @@ filename "E:/University/macros.lyx"
 \series bold
 והדחה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\bbp\left(A\cup B\right)=\bbp\left(A\right)+\bbp\left(B\right)-\bbp\left(A\cap B\right)$
 \end_inset
 
@@ -402,7 +456,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מסקנה
 \series default
-: תהא פונקציית הסתברות 
+:
+ תהא פונקציית הסתברות 
 \begin_inset Formula $\bbp$
 \end_inset
 
@@ -418,7 +473,8 @@ filename "E:/University/macros.lyx"
 \series bold
 משפט סיגמא־אדטיביות
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $E=\biguplus_{i=1}^{\infty}E_{i}$
 \end_inset
 
@@ -442,7 +498,8 @@ filename "E:/University/macros.lyx"
 \series bold
 כללית
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $A_{1}\ldots A_{n}$
 \end_inset
 
@@ -466,7 +523,8 @@ filename "E:/University/macros.lyx"
 \series bold
 סימטרית
 \series default
-: נניח כי 
+:
+ נניח כי 
 \begin_inset Formula $\forall I\subseteq\left[n\right].\left(\left|I\right|=k\right)\Rightarrow\left(\bbp\left(A_{I}\right)=a_{k}\right)$
 \end_inset
 
@@ -490,7 +548,8 @@ filename "E:/University/macros.lyx"
 \series bold
 אחיד
 \series default
-: מרחב הסתברות סופי 
+:
+ מרחב הסתברות סופי 
 \begin_inset Formula $\left(\Omega,\bbp\right)$
 \end_inset
 
@@ -506,7 +565,8 @@ filename "E:/University/macros.lyx"
 \series bold
 תמורה מקרית/סידור אקראי
 \series default
-: המרחב האחיד על 
+:
+ המרחב האחיד על 
 \begin_inset Formula $S_{n}$
 \end_inset
 
@@ -528,7 +588,8 @@ filename "E:/University/macros.lyx"
 האיחוד
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $A,B$
 \end_inset
 
@@ -546,7 +607,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $A_{1}\ldots A_{n}$
 \end_inset
 
@@ -564,7 +626,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ A_{n}\right\} _{n=1}^{\infty}$
 \end_inset
 
@@ -582,7 +645,8 @@ filename "E:/University/macros.lyx"
 אי שוויונות בונפרוני
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $A_{1}\ldots A_{n}$
 \end_inset
 
@@ -601,7 +665,7 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $\bbp\left(\bigcup_{i=1}^{n}A_{i}\right)\le\sum_{i=1}^{k}\left(-1\right)^{i+1}\sum_{\substack{I\subseteq\left[n\right]\\
 \left|I\right|=k
 }
-}\bbp\left(\bigcap_{i\in I}A_{i}\right)$
+}\bbp\left)\bigcap_{i\in I}A_{i}\right($
 \end_inset
 
 .
@@ -615,7 +679,7 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $\bbp\left(\bigcup_{i=1}^{n}A_{i}\right)\ge\sum_{i=1}^{k}\left(-1\right)^{i+1}\sum_{\substack{I\subseteq\left[n\right]\\
 \left|I\right|=k
 }
-}\bbp\left(\bigcap_{i\in I}A_{i}\right)$
+}\bbp\left)\bigcap_{i\in I}A_{i}\right($
 \end_inset
 
 .
@@ -640,7 +704,8 @@ filename "E:/University/macros.lyx"
 ההסתברות
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ A_{n}\right\} _{n=1}^{\infty}$
 \end_inset
 
@@ -672,7 +737,8 @@ filename "E:/University/macros.lyx"
 
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $h\in\left[m\right]^{\left[n\right]}$
 \end_inset
 
@@ -686,7 +752,8 @@ filename "E:/University/macros.lyx"
 התנגשות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $h$
 \end_inset
 
@@ -716,7 +783,8 @@ filename "E:/University/macros.lyx"
 ההולדת
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $h\in\left[m\right]^{\left[n\right]}$
 \end_inset
 
@@ -734,7 +802,8 @@ filename "E:/University/macros.lyx"
 מספר ראמזי
 \series default
 \color inherit
-: נגדיר 
+:
+ נגדיר 
 \begin_inset Formula $R:\bbn^{\bbn}$
 \end_inset
 
@@ -752,7 +821,8 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $2^{\frac{t-3}{2}}<R\left(t\right)\le c\cdot\frac{4^{t}}{\sqrt{t}}$
 \end_inset
 
@@ -766,7 +836,8 @@ filename "E:/University/macros.lyx"
 פונקציית הסתברות מותנית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $F$
 \end_inset
 
@@ -791,7 +862,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: פונקציית הסתברות מותנית הינה פונקציית הסתברות.
+:
+ פונקציית הסתברות מותנית הינה פונקציית הסתברות.
 \end_layout
 
 \begin_layout Standard
@@ -801,7 +873,8 @@ filename "E:/University/macros.lyx"
 מרחב הסתברות מותנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(\Omega,\bbp\right)$
 \end_inset
 
@@ -823,7 +896,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: מרחב הסתברות מותנית הוא מרחב הסתברות.
+:
+ מרחב הסתברות מותנית הוא מרחב הסתברות.
 \end_layout
 
 \begin_layout Standard
@@ -833,7 +907,8 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $E,F$
 \end_inset
 
@@ -851,7 +926,8 @@ filename "E:/University/macros.lyx"
 כלל השרשרת
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $A,B$
 \end_inset
 
@@ -869,7 +945,8 @@ filename "E:/University/macros.lyx"
 כלל השרשרת
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $A_{1}\ldots A_{n}$
 \end_inset
 
@@ -887,7 +964,8 @@ filename "E:/University/macros.lyx"
 נוסחת ההסתברות השלמה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $A,B$
 \end_inset
 
@@ -905,7 +983,8 @@ filename "E:/University/macros.lyx"
 הכללה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ A_{i}\right\} _{i=1}^{\infty}$
 \end_inset
 
@@ -927,7 +1006,8 @@ filename "E:/University/macros.lyx"
 כלל בייס
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $E,F$
 \end_inset
 
@@ -945,7 +1025,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $A,B$
 \end_inset
 
@@ -967,7 +1048,8 @@ filename "E:/University/macros.lyx"
 מאורע מחזק
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $B$
 \end_inset
 
@@ -990,14 +1072,15 @@ filename "E:/University/macros.lyx"
 
 \series bold
 \color green
-מאורעות בלתי תלויים )ב
+מאורעות בלתי תלויים (ב
 \begin_inset Quotes erd
 \end_inset
 
-ת(
+ת)
 \series default
 \color inherit
-: מאורעות 
+:
+ מאורעות 
 \begin_inset Formula $A,B$
 \end_inset
 
@@ -1015,7 +1098,8 @@ filename "E:/University/macros.lyx"
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $AB=A\cap B$
 \end_inset
 
@@ -1029,11 +1113,12 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A$
 \end_inset
 
- מאורע אזי )
+ מאורע אזי (
 \begin_inset Formula $A$
 \end_inset
 
@@ -1041,7 +1126,7 @@ filename "E:/University/macros.lyx"
 \begin_inset Quotes erd
 \end_inset
 
-ת עם עצמו(
+ת עם עצמו)
 \begin_inset Formula $\left(\bbp\left(A\right)\in\left\{ 0,1\right\} \right)\iff$
 \end_inset
 
@@ -1055,7 +1140,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $A,B$
 \end_inset
 
@@ -1077,7 +1163,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $A,B$
 \end_inset
 
@@ -1123,7 +1210,8 @@ filename "E:/University/macros.lyx"
 אי תלות בזוגות
 \series default
 \color inherit
-: מאורעות 
+:
+ מאורעות 
 \begin_inset Formula $A_{1}\ldots A_{n}$
 \end_inset
 
@@ -1141,7 +1229,8 @@ filename "E:/University/macros.lyx"
 אי תלות בזוגות
 \series default
 \color inherit
-: מאורעות 
+:
+ מאורעות 
 \begin_inset Formula $\left\{ A_{i}\right\} _{i\in I}$
 \end_inset
 
@@ -1156,14 +1245,15 @@ filename "E:/University/macros.lyx"
 
 \series bold
 \color green
-מאורעות בלתי תלויים )ב
+מאורעות בלתי תלויים (ב
 \begin_inset Quotes erd
 \end_inset
 
-ת(
+ת)
 \series default
 \color inherit
-: מאורעות 
+:
+ מאורעות 
 \begin_inset Formula $A_{1}\ldots A_{n}$
 \end_inset
 
@@ -1181,7 +1271,8 @@ filename "E:/University/macros.lyx"
 הכללה
 \series default
 \color inherit
-: מאורעות 
+:
+ מאורעות 
 \begin_inset Formula $\left\{ A_{i}\right\} _{i\in I}$
 \end_inset
 
@@ -1199,7 +1290,8 @@ filename "E:/University/macros.lyx"
 הערה
 \series default
 \color inherit
-: נסמן זמנית 
+:
+ נסמן זמנית 
 \begin_inset Formula $\left(A^{1}=A\right)\land\left(A^{-1}=A^{{\cal C}}\right)$
 \end_inset
 
@@ -1213,11 +1305,12 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: )
+:
+ (
 \begin_inset Formula $A_{1}\ldots A_{n}$
 \end_inset
 
- בלתי תלויים(
+ בלתי תלויים)
 \begin_inset Formula $\left(\forall\e\in\left\{ \pm1\right\} ^{n}.\bbp\left(\bigcap_{i=1}^{n}A_{i}^{\e_{i}}\right)=\prod_{i=1}^{n}\bbp\left(A_{i}^{\e_{i}}\right)\right)\iff$
 \end_inset
 
@@ -1231,7 +1324,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $A_{1}\ldots A_{n},B_{1}$
 \end_inset
 
@@ -1269,7 +1363,8 @@ filename "E:/University/macros.lyx"
 מכפלה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left(\Omega_{1},\bbp_{1}\right),\left(\Omega_{2},\bbp_{2}\right)$
 \end_inset
 
@@ -1291,7 +1386,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: פונקציית הסתברות מכפלה היא פונקציית הסתברות.
+:
+ פונקציית הסתברות מכפלה היא פונקציית הסתברות.
 \end_layout
 
 \begin_layout Standard
@@ -1305,7 +1401,8 @@ filename "E:/University/macros.lyx"
 מכפלה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left(\Omega_{1},\bbp_{1}\right),\left(\Omega_{2},\bbp_{2}\right)$
 \end_inset
 
@@ -1327,7 +1424,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: מרחב מכפלה הוא מרחב הסתברות.
+:
+ מרחב מכפלה הוא מרחב הסתברות.
 \end_layout
 
 \begin_layout Standard
@@ -1337,7 +1435,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left(\Omega_{1},\bbp_{1}\right)\ldots\left(\Omega_{n},\bbp_{n}\right)$
 \end_inset
 
@@ -1359,7 +1458,8 @@ filename "E:/University/macros.lyx"
 מלבן
 \series default
 \color inherit
-: מאורע 
+:
+ מאורע 
 \begin_inset Formula $C\subseteq\Omega_{1}\times\Omega_{2}$
 \end_inset
 
@@ -1377,7 +1477,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A\times B\subseteq\Omega_{1}\times\Omega_{2}$
 \end_inset
 
@@ -1395,7 +1496,8 @@ filename "E:/University/macros.lyx"
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\bigotimes_{i=1}^{n}\left(\Omega_{i},\bbp_{i}\right)$
 \end_inset
 
@@ -1421,7 +1523,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A\subseteq\Omega_{i}$
 \end_inset
 
@@ -1451,7 +1554,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A\subseteq\Omega_{i}$
 \end_inset
 
@@ -1469,7 +1573,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbp\left(\left(\omega_{1}\ldots\omega_{n}\right)\right)=\prod_{i=1}^{n}\bbp_{i}\left(\omega_{i}\right)$
 \end_inset
 
@@ -1483,7 +1588,8 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $A_{1}\ldots A_{n}$
 \end_inset
 
@@ -1521,7 +1627,8 @@ filename "E:/University/macros.lyx"
 בהתנייה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\bbp\left(C\right)>0$
 \end_inset
 
@@ -1546,7 +1653,8 @@ filename "E:/University/macros.lyx"
  ניסויי ברנולי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $0\le p\le1$
 \end_inset
 
@@ -1575,7 +1683,8 @@ p & k=1\\
 טענה
 \series default
 \color inherit
-: נסמן 
+:
+ נסמן 
 \begin_inset Formula $M_{n}="\text{ ניסויי ברנולי}n\text{ ב־}1\text{הרצף הארוך ביותר של }"$
 \end_inset
 
@@ -1593,7 +1702,8 @@ p & k=1\\
 מטריצת שכנויות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $G=\left(V,E\right)$
 \end_inset
 
@@ -1622,7 +1732,8 @@ p & k=1\\
  קודקודים
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -1644,7 +1755,8 @@ p & k=1\\
 
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\left[0,1\right]$
 \end_inset
 
@@ -1662,7 +1774,8 @@ p & k=1\\
 גרף מקרי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -1684,7 +1797,8 @@ p & k=1\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\omega\in G\left(n,p\right)$
 \end_inset
 
@@ -1702,21 +1816,23 @@ p & k=1\\
 מסקנה
 \series default
 \color inherit
-: גרף מקרי הינו מרחב הסתברות.
+:
+ גרף מקרי הינו מרחב הסתברות.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
 \color magenta
-משתנה מקרי )מ
+משתנה מקרי (מ
 \begin_inset Quotes erd
 \end_inset
 
-מ(
+מ)
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(\Omega,\bbp\right)$
 \end_inset
 
@@ -1738,7 +1854,8 @@ p & k=1\\
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -1760,7 +1877,8 @@ p & k=1\\
 אינדיקטור
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A\subseteq\Omega$
 \end_inset
 
@@ -1785,7 +1903,8 @@ p & k=1\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\mathds{1}_{A}\cdot\mathds{1}_{B}=\mathds{1}_{A\cap B}\right)\land\left(\mathds{1}_{A}+\mathds{1}_{B}=\mathds{1}_{A\uplus B}\right)$
 \end_inset
 
@@ -1799,7 +1918,8 @@ p & k=1\\
 תומך
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:S\to\bbr$
 \end_inset
 
@@ -1817,7 +1937,8 @@ p & k=1\\
 התפלגות בדידה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\mu:S\to\left[0,1\right]$
 \end_inset
 
@@ -1835,7 +1956,8 @@ p & k=1\\
 התפלגות של משתנה מקרי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -1861,7 +1983,8 @@ p & k=1\\
 טענה
 \series default
 \color inherit
-: ההתפלגות של משתנה מקרית היא התפלגות בדידה.
+:
+ ההתפלגות של משתנה מקרית היא התפלגות בדידה.
 \end_layout
 
 \begin_layout Standard
@@ -1871,7 +1994,8 @@ p & k=1\\
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -1893,7 +2017,8 @@ p & k=1\\
 משתנים מקריים שווים
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $X,Y\in S^{\Omega}$
 \end_inset
 
@@ -1911,7 +2036,8 @@ p & k=1\\
 משתנים מקריים שווי התפלגות
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -1933,7 +2059,8 @@ p & k=1\\
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -1955,7 +2082,8 @@ p & k=1\\
 התפלגות אחידה בדידה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbz$
 \end_inset
 
@@ -1980,7 +2108,8 @@ p & k=1\\
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2006,7 +2135,8 @@ p & k=1\\
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -2031,7 +2161,8 @@ p_{i} & k=x_{i}\\
 התפלגות ברנולי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\left[0,1\right]$
 \end_inset
 
@@ -2056,7 +2187,8 @@ p_{i} & k=x_{i}\\
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2086,7 +2218,8 @@ p_{i} & k=x_{i}\\
 גאומטרית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\left[0,1\right]$
 \end_inset
 
@@ -2108,7 +2241,8 @@ p_{i} & k=x_{i}\\
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2138,7 +2272,8 @@ p_{i} & k=x_{i}\\
 בינומית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\left[0,1\right]$
 \end_inset
 
@@ -2164,7 +2299,8 @@ p_{i} & k=x_{i}\\
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2194,7 +2330,8 @@ p_{i} & k=x_{i}\\
 פואסון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\lambda>0$
 \end_inset
 
@@ -2216,7 +2353,8 @@ p_{i} & k=x_{i}\\
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2250,7 +2388,8 @@ p_{i} & k=x_{i}\\
 בינום־פואסון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $k\in\bbn$
 \end_inset
 
@@ -2276,7 +2415,8 @@ p_{i} & k=x_{i}\\
 היפרגאומטרית
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $r,n,m\in\bbn$
 \end_inset
 
@@ -2298,7 +2438,8 @@ p_{i} & k=x_{i}\\
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2332,7 +2473,8 @@ p_{i} & k=x_{i}\\
 שלילית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $r\in\bbn$
 \end_inset
 
@@ -2358,7 +2500,8 @@ p_{i} & k=x_{i}\\
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2388,7 +2531,8 @@ p_{i} & k=x_{i}\\
 היפרגאומטרית שלילית
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $r,k,m\in\bbn$
 \end_inset
 
@@ -2410,7 +2554,8 @@ p_{i} & k=x_{i}\\
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2448,7 +2593,8 @@ p_{i} & k=x_{i}\\
 מקרי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $X\in A^{\Omega}$
 \end_inset
 
@@ -2470,7 +2616,8 @@ p_{i} & k=x_{i}\\
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2496,7 +2643,8 @@ p_{i} & k=x_{i}\\
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2530,7 +2678,8 @@ p_{i} & k=x_{i}\\
 מקריים
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X:\Omega\to A$
 \end_inset
 
@@ -2556,7 +2705,8 @@ p_{i} & k=x_{i}\\
 משותפת
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,Y\right)$
 \end_inset
 
@@ -2578,7 +2728,8 @@ p_{i} & k=x_{i}\\
 הכללה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X_{1}\ldots X_{n}$
 \end_inset
 
@@ -2604,7 +2755,8 @@ p_{i} & k=x_{i}\\
 שוליות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left(X,Y\right)$
 \end_inset
 
@@ -2626,7 +2778,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\mu_{X}\left(x\right)=\sum_{y\in S}\mu_{X,Y}\left(x,y\right)$
 \end_inset
 
@@ -2652,7 +2805,8 @@ p_{i} & k=x_{i}\\
 תלויים
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(X,Y\right)$
 \end_inset
 
@@ -2674,7 +2828,8 @@ p_{i} & k=x_{i}\\
 הכללה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $X_{1}\ldots X_{n}$
 \end_inset
 
@@ -2712,7 +2867,8 @@ p_{i} & k=x_{i}\\
 בזוגות
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $X_{1}\ldots X_{n}$
 \end_inset
 
@@ -2742,7 +2898,8 @@ p_{i} & k=x_{i}\\
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X_{1}\ldots X_{n}$
 \end_inset
 
@@ -2776,7 +2933,8 @@ p_{i} & k=x_{i}\\
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -2814,7 +2972,8 @@ p_{i} & k=x_{i}\\
 משפט
 \series default
 \color inherit
-: )
+:
+ (
 \begin_inset Formula $A_{1}\ldots A_{n}$
 \end_inset
 
@@ -2822,11 +2981,11 @@ p_{i} & k=x_{i}\\
 \begin_inset Quotes erd
 \end_inset
 
-ת(
+ת)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\mathds{1}_{A_{1}}\ldots\mathds{1}_{A_{n}}$
 \end_inset
 
@@ -2838,7 +2997,7 @@ p_{i} & k=x_{i}\\
 \begin_inset Quotes erd
 \end_inset
 
-ת(.
+ת).
 \end_layout
 
 \begin_layout Standard
@@ -2848,7 +3007,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\mu_{1},\mu_{2}$
 \end_inset
 
@@ -2886,7 +3046,8 @@ p_{i} & k=x_{i}\\
 קונבולוציה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\mu_{1},\mu_{2}$
 \end_inset
 
@@ -2904,7 +3065,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\mu_{1},\mu_{2}$
 \end_inset
 
@@ -2922,7 +3084,8 @@ p_{i} & k=x_{i}\\
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -2948,7 +3111,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\text{Bin}\left(n,p\right)+\text{Bin}\left(m,p\right)\sim\text{Bin}\left(n+m,p\right)$
 \end_inset
 
@@ -2962,7 +3126,8 @@ p_{i} & k=x_{i}\\
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\text{Bin}\left(n,p\right)\sim\sum_{i=1}^{n}\text{Ber}\left(p\right)$
 \end_inset
 
@@ -2976,7 +3141,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\text{Pois}\left(\lambda_{1}\right)+\text{Pois}\left(\lambda_{2}\right)\sim\text{Pois}\left(\lambda_{1}+\lambda_{2}\right)$
 \end_inset
 
@@ -2990,7 +3156,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\text{NB}\left(n,p\right)\sim\sum_{i=1}^{n}\text{Geo}\left(p\right)$
 \end_inset
 
@@ -3012,7 +3179,8 @@ p_{i} & k=x_{i}\\
 מותנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A$
 \end_inset
 
@@ -3042,7 +3210,8 @@ p_{i} & k=x_{i}\\
 מותנית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A$
 \end_inset
 
@@ -3068,7 +3237,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -3090,7 +3260,8 @@ p_{i} & k=x_{i}\\
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -3116,7 +3287,8 @@ p_{i} & k=x_{i}\\
 מולטינומית
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $p_{1}\ldots p_{n}$
 \end_inset
 
@@ -3142,7 +3314,8 @@ p_{i} & k=x_{i}\\
 מצטברת
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -3168,7 +3341,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -3223,7 +3397,8 @@ p_{i} & k=x_{i}\\
 ההישרדות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -3245,7 +3420,8 @@ p_{i} & k=x_{i}\\
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\text{Geo}\left(1-\prod_{i=1}^{n}\left(1-p_{i}\right)\right)\sim\min_{i=1}^{n}\left\{ \text{Geo}\left(p_{i}\right)\right\} $
 \end_inset
 
@@ -3263,7 +3439,8 @@ p_{i} & k=x_{i}\\
 פואסון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -3321,7 +3498,8 @@ p_{i} & k=x_{i}\\
 צימוד בין התפלגויות
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\mu_{1},\mu_{2}:\left[0,1\right]^{S}$
 \end_inset
 
@@ -3351,7 +3529,8 @@ p_{i} & k=x_{i}\\
 צימוד בין משתנים
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -3381,7 +3560,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -3451,7 +3631,8 @@ p_{i} & k=x_{i}\\
 התפלגות שולטת סטוכסטית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -3481,7 +3662,8 @@ p_{i} & k=x_{i}\\
 צימוד מונוטוני
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -3520,7 +3702,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -3542,7 +3725,8 @@ p_{i} & k=x_{i}\\
 מטריקת ההשתנות הכוללת
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left|S\right|\le\aleph_{0}$
 \end_inset
 
@@ -3564,7 +3748,8 @@ p_{i} & k=x_{i}\\
 למה
 \series default
 \color inherit
-: מטריקת ההשתנות הכוללת הינה מטריקה.
+:
+ מטריקת ההשתנות הכוללת הינה מטריקה.
 \end_layout
 
 \begin_layout Standard
@@ -3574,7 +3759,8 @@ p_{i} & k=x_{i}\\
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -3596,7 +3782,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -3618,7 +3805,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -3644,7 +3832,8 @@ p_{i} & k=x_{i}\\
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X_{1}\ldots X_{2n}$
 \end_inset
 
@@ -3666,7 +3855,8 @@ p_{i} & k=x_{i}\\
 חוק המספרים הקטנים
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ X_{i}\sim\text{Ber}\left(p_{i}\right)\right\} _{i=1}^{n}$
 \end_inset
 
@@ -3692,7 +3882,8 @@ p_{i} & k=x_{i}\\
 חציון של משתנה מקרי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -3718,7 +3909,8 @@ p_{i} & k=x_{i}\\
 משתנה בעל תוחלת
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $X$
 \end_inset
 
@@ -3740,7 +3932,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -3762,7 +3955,8 @@ p_{i} & k=x_{i}\\
 תוחלת
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -3784,7 +3978,8 @@ p_{i} & k=x_{i}\\
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -3800,7 +3995,8 @@ p_{i} & k=x_{i}\\
 \end_layout
 
 \begin_layout Itemize
-הומוגניות: 
+הומוגניות:
+ 
 \begin_inset Formula $\bbe\left[cX\right]=c\bbe\left[X\right]$
 \end_inset
 
@@ -3808,7 +4004,8 @@ p_{i} & k=x_{i}\\
 \end_layout
 
 \begin_layout Itemize
-חיבוריות: 
+חיבוריות:
+ 
 \begin_inset Formula $\bbe\left[X+Y\right]=\bbe\left[X\right]+\bbe\left[Y\right]$
 \end_inset
 
@@ -3816,7 +4013,8 @@ p_{i} & k=x_{i}\\
 \end_layout
 
 \begin_layout Itemize
-מונוטוניות: 
+מונוטוניות:
+ 
 \begin_inset Formula $\left(X\le Y\right)\implies\left(\bbe\left[X\right]\le\bbe\left[Y\right]\right)$
 \end_inset
 
@@ -3830,7 +4028,8 @@ p_{i} & k=x_{i}\\
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X_{1}\ldots X_{n}$
 \end_inset
 
@@ -3852,7 +4051,8 @@ p_{i} & k=x_{i}\\
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -3874,7 +4074,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -3934,7 +4135,8 @@ p_{i} & k=x_{i}\\
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -3964,7 +4166,8 @@ p_{i} & k=x_{i}\\
 הזנב
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -3990,7 +4193,8 @@ p_{i} & k=x_{i}\\
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -4020,7 +4224,8 @@ p_{i} & k=x_{i}\\
 מותנית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4046,7 +4251,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4072,7 +4278,8 @@ p_{i} & k=x_{i}\\
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,\mathds{1}_{A}$
 \end_inset
 
@@ -4106,7 +4313,8 @@ p_{i} & k=x_{i}\\
 השלמה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4132,7 +4340,8 @@ p_{i} & k=x_{i}\\
 הכללה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ A_{i}\right\} _{i=1}^{\infty}$
 \end_inset
 
@@ -4162,7 +4371,8 @@ p_{i} & k=x_{i}\\
 תוחלת של משתנה מותנה במשתנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -4184,7 +4394,8 @@ p_{i} & k=x_{i}\\
 משפט/נוסחאת ההחלקה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -4206,7 +4417,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -4236,7 +4448,8 @@ p_{i} & k=x_{i}\\
 
 \series default
 \color inherit
-: מ
+:
+ מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -4258,7 +4471,8 @@ p_{i} & k=x_{i}\\
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4284,7 +4498,8 @@ p_{i} & k=x_{i}\\
 
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X\in\ell^{k}$
 \end_inset
 
@@ -4302,7 +4517,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $m<k\in\bbn$
 \end_inset
 
@@ -4320,7 +4536,8 @@ p_{i} & k=x_{i}\\
 אי שיוויון קושי שוורץ
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y\in\ell^{2}$
 \end_inset
 
@@ -4338,7 +4555,8 @@ p_{i} & k=x_{i}\\
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X\in\ell^{2}$
 \end_inset
 
@@ -4356,7 +4574,8 @@ p_{i} & k=x_{i}\\
 שונות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X\in\ell^{2}$
 \end_inset
 
@@ -4374,7 +4593,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X\in\ell^{2}$
 \end_inset
 
@@ -4392,7 +4612,8 @@ p_{i} & k=x_{i}\\
 סטיית תקן
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X\in\ell^{2}$
 \end_inset
 
@@ -4410,7 +4631,8 @@ p_{i} & k=x_{i}\\
 משתנה דטרמיניסטי
 \series default
 \color inherit
-: מ
+:
+ מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -4432,7 +4654,8 @@ p_{i} & k=x_{i}\\
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X\in\ell^{2}$
 \end_inset
 
@@ -4451,11 +4674,11 @@ p_{i} & k=x_{i}\\
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $X$
 \end_inset
 
- דטרמיניסטי(
+ דטרמיניסטי)
 \begin_inset Formula $\left(\var\left[X\right]=0\right)\iff$
 \end_inset
 
@@ -4483,7 +4706,8 @@ p_{i} & k=x_{i}\\
 פונקציית הפסד
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X\in\ell^{2}$
 \end_inset
 
@@ -4501,7 +4725,8 @@ p_{i} & k=x_{i}\\
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X\in\ell^{2}$
 \end_inset
 
@@ -4519,7 +4744,8 @@ p_{i} & k=x_{i}\\
 חציון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4541,7 +4767,8 @@ p_{i} & k=x_{i}\\
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4567,7 +4794,8 @@ p_{i} & k=x_{i}\\
 
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4589,7 +4817,8 @@ p_{i} & k=x_{i}\\
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4611,7 +4840,8 @@ p_{i} & k=x_{i}\\
 שכיח
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4633,7 +4863,8 @@ p_{i} & k=x_{i}\\
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4655,7 +4886,8 @@ p_{i} & k=x_{i}\\
 שונות משותפת
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -4677,7 +4909,8 @@ p_{i} & k=x_{i}\\
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\var\left[X+Y\right]=\var\left[X\right]+2\cov\left[X,Y\right]+\var\left[Y\right]$
 \end_inset
 
@@ -4691,7 +4924,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\cov\left[X,Y\right]=\bbe\left[\left(X-\bbe\left[X\right]\right)\left(Y-\bbe\left[Y\right]\right)\right]$
 \end_inset
 
@@ -4705,7 +4939,8 @@ p_{i} & k=x_{i}\\
 משתנים בלתי מתואמים
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -4723,7 +4958,8 @@ p_{i} & k=x_{i}\\
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -4745,7 +4981,8 @@ p_{i} & k=x_{i}\\
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -4763,7 +5000,8 @@ p_{i} & k=x_{i}\\
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y,Z$
 \end_inset
 
@@ -4786,7 +5024,8 @@ p_{i} & k=x_{i}\\
 \end_layout
 
 \begin_layout Itemize
-סימטריות: 
+סימטריות:
+ 
 \begin_inset Formula $\cov\left[X,Y\right]=\cov\left[Y,X\right]$
 \end_inset
 
@@ -4794,7 +5033,8 @@ p_{i} & k=x_{i}\\
 \end_layout
 
 \begin_layout Itemize
-בי־לינאריות: 
+בי־לינאריות:
+ 
 \begin_inset Formula $\cov\left[\a X+\b Y,Z\right]=\a\cov\left[X,Z\right]+\b\cov\left[Y,Z\right]$
 \end_inset
 
@@ -4802,7 +5042,8 @@ p_{i} & k=x_{i}\\
 \end_layout
 
 \begin_layout Itemize
-אינווריאנטיות להוספת סקלר: 
+אינווריאנטיות להוספת סקלר:
+ 
 \begin_inset Formula $\cov\left[X+\a,Y\right]=\cov\left[X,Y\right]$
 \end_inset
 
@@ -4823,7 +5064,8 @@ p_{i} & k=x_{i}\\
 מקדם המתאם
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -4845,7 +5087,8 @@ p_{i} & k=x_{i}\\
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -4868,11 +5111,11 @@ p_{i} & k=x_{i}\\
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $X,Y$
 \end_inset
 
- בלתי מתואמים(
+ בלתי מתואמים)
 \begin_inset Formula $\left(\rho_{X,Y}=0\right)\iff$
 \end_inset
 
@@ -4893,7 +5136,8 @@ p_{i} & k=x_{i}\\
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4953,7 +5197,8 @@ p_{i} & k=x_{i}\\
 \series bold
 פונקציה יוצרת
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -4977,7 +5222,8 @@ p_{i} & k=x_{i}\\
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5027,7 +5273,8 @@ p_{i} & k=x_{i}\\
 \series bold
 משפט
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5047,7 +5294,8 @@ p_{i} & k=x_{i}\\
 \series bold
 למה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -5104,7 +5352,8 @@ p_{i} & k=x_{i}\\
 \series bold
 מסקנה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X\in\ell^{2}$
 \end_inset
 
@@ -5130,7 +5379,8 @@ p_{i} & k=x_{i}\\
 \series bold
 פונקציה יוצרת מומנטים
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5150,7 +5400,8 @@ p_{i} & k=x_{i}\\
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X\sim\text{Bin}\left(n,p\right)$
 \end_inset
 
@@ -5166,7 +5417,8 @@ p_{i} & k=x_{i}\\
 \series bold
 למה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X,Y$
 \end_inset
 
@@ -5213,7 +5465,8 @@ p_{i} & k=x_{i}\\
 \series bold
 מסקנה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $I$
 \end_inset
 
@@ -5237,7 +5490,8 @@ p_{i} & k=x_{i}\\
 \series bold
 אי־שוויון מרקוב
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5261,7 +5515,8 @@ p_{i} & k=x_{i}\\
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\left[0,\infty\right)^{\bbr}$
 \end_inset
 
@@ -5289,7 +5544,8 @@ p_{i} & k=x_{i}\\
 \series bold
 אי־שוויון צ'בישב
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X\in\ell^{2}$
 \end_inset
 
@@ -5309,7 +5565,8 @@ p_{i} & k=x_{i}\\
 \series bold
 סימון
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X_{1}\ldots X_{n}$
 \end_inset
 
@@ -5329,7 +5586,8 @@ p_{i} & k=x_{i}\\
 \series bold
 טענה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $X_{1}\sim\ldots\sim X_{n}$
 \end_inset
 
@@ -5353,7 +5611,8 @@ p_{i} & k=x_{i}\\
 \series bold
 אי־שוויון צ'רנוף
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ X_{i}\sim\text{Ber}\left(p_{i}\right)\right\} _{i=1}^{n}$
 \end_inset
 
@@ -5369,7 +5628,8 @@ p_{i} & k=x_{i}\\
 \series bold
 הכללה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5393,7 +5653,8 @@ p_{i} & k=x_{i}\\
 \series bold
 פונקציה קמורה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $I$
 \end_inset
 
@@ -5413,7 +5674,8 @@ p_{i} & k=x_{i}\\
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi\in\bbr^{\left(a,b\right)}$
 \end_inset
 
@@ -5433,7 +5695,8 @@ p_{i} & k=x_{i}\\
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi\in\bbr^{\left(a,b\right)}$
 \end_inset
 
@@ -5449,7 +5712,8 @@ p_{i} & k=x_{i}\\
 \series bold
 למה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\varphi\in\bbr^{I}$
 \end_inset
 
@@ -5473,7 +5737,8 @@ p_{i} & k=x_{i}\\
 \series bold
 אי־שוויון ינסן
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5505,7 +5770,8 @@ p_{i} & k=x_{i}\\
 \series bold
 הממוצעים
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{1}\ldots a_{n}>0$
 \end_inset
 
@@ -5521,7 +5787,8 @@ p_{i} & k=x_{i}\\
 \series bold
 אי־שיוויון המשולש
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5543,7 +5810,8 @@ p_{i} & k=x_{i}\\
 החוק החלש של המספרים הגדולים
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
 \end_inset
 
@@ -5577,7 +5845,8 @@ p_{i} & k=x_{i}\\
 החוק החלש של המספרים הגדולים
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X\in\ell^{1}$
 \end_inset
 
@@ -5623,7 +5892,8 @@ p_{i} & k=x_{i}\\
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X\sim\text{Bin}\left(n,p\right)$
 \end_inset
 
@@ -5645,7 +5915,8 @@ p_{i} & k=x_{i}\\
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x\in\left[0,1\right]$
 \end_inset
 
@@ -5671,7 +5942,8 @@ p_{i} & k=x_{i}\\
 פולינום ברנשטיין
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $k<n\in\bbn$
 \end_inset
 
@@ -5689,7 +5961,8 @@ p_{i} & k=x_{i}\\
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[0,1\right]\right)$
 \end_inset
 
@@ -5707,7 +5980,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $Q_{n}\left(t\right)\in\bbr_{n}\left[x\right]$
 \end_inset
 
@@ -5721,7 +5995,8 @@ p_{i} & k=x_{i}\\
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\left[0,1\right]\right)$
 \end_inset
 
@@ -5739,7 +6014,8 @@ p_{i} & k=x_{i}\\
 החוק החזק של המספרים הגדולים
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X\in\ell^{4}$
 \end_inset
 
@@ -5789,7 +6065,8 @@ p_{i} & k=x_{i}\\
 פונקציית צפיפות רציפה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $f:I\to\left[0,1\right]$
 \end_inset
 
@@ -5807,7 +6084,8 @@ p_{i} & k=x_{i}\\
 הסתברות רציפה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:I\to\left[0,1\right]$
 \end_inset
 
@@ -5829,7 +6107,8 @@ p_{i} & k=x_{i}\\
 משנה מקרי רציף
 \series default
 \color inherit
-: מ
+:
+ מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -5855,7 +6134,8 @@ p_{i} & k=x_{i}\\
 פונקציית ההתפלגות המצטברת
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5877,7 +6157,8 @@ p_{i} & k=x_{i}\\
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5899,7 +6180,8 @@ p_{i} & k=x_{i}\\
 משתנה מקרי אחיד רציף
 \series default
 \color inherit
-: מ
+:
+ מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -5924,7 +6206,8 @@ p_{i} & k=x_{i}\\
 תוחלת רציפה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5946,7 +6229,8 @@ p_{i} & k=x_{i}\\
 מומנט רציף
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5968,7 +6252,8 @@ p_{i} & k=x_{i}\\
 התפלגות נורמלית
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\sigma^{2},\mu\in\bbr$
 \end_inset
 
@@ -5990,7 +6275,8 @@ p_{i} & k=x_{i}\\
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $Z$
 \end_inset
 
@@ -6016,7 +6302,8 @@ p_{i} & k=x_{i}\\
 גאוסיאן
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\phi\left(x\right)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^{2}}{2}}$
 \end_inset
 
@@ -6030,7 +6317,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $Z$
 \end_inset
 
@@ -6056,7 +6344,8 @@ p_{i} & k=x_{i}\\
 הגדרה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $Z\sim N\left(0,1\right)$
 \end_inset
 
@@ -6078,7 +6367,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $t\in\bbr$
 \end_inset
 
@@ -6093,11 +6383,11 @@ p_{i} & k=x_{i}\\
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $\Phi$
 \end_inset
 
- עולה ממש(
+ עולה ממש)
 \begin_inset Formula $\left(\Phi\in C\left(\bbr\right)\right)\land\left(\Phi>0\right)\land$
 \end_inset
 
@@ -6118,7 +6408,8 @@ p_{i} & k=x_{i}\\
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\Phi\left(\infty\right)=1\right)\land\left(\Phi\left(-\infty\right)=0\right)$
 \end_inset
 
@@ -6132,7 +6423,8 @@ p_{i} & k=x_{i}\\
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $Z\sim N\left(0,1\right)$
 \end_inset
 
@@ -6154,7 +6446,8 @@ p_{i} & k=x_{i}\\
 משתנה מתוקנן
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $X\in\ell^{2}$
 \end_inset
 
@@ -6172,7 +6465,8 @@ p_{i} & k=x_{i}\\
 תקנון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X\in\ell^{2}$
 \end_inset
 
@@ -6190,7 +6484,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $X\in\ell^{2}$
 \end_inset
 
@@ -6208,7 +6503,8 @@ p_{i} & k=x_{i}\\
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -6226,7 +6522,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\lim_{n\to\infty}\frac{\frac{\pi}{4^{n}}{2n \choose n}}{\frac{2}{2n+1}\frac{4^{n}}{{2n \choose n}}}=1$
 \end_inset
 
@@ -6240,7 +6537,8 @@ p_{i} & k=x_{i}\\
 משפט דה־מואבר לפלס
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a\le b$
 \end_inset
 
@@ -6262,7 +6560,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\bbr\right)$
 \end_inset
 
@@ -6288,7 +6587,8 @@ p_{i} & k=x_{i}\\
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C\left(\bbr\right)$
 \end_inset
 
@@ -6306,7 +6606,8 @@ p_{i} & k=x_{i}\\
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in C^{3}\left(\bbr\right)$
 \end_inset
 
@@ -6340,10 +6641,11 @@ p_{i} & k=x_{i}\\
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\psi\left(x\right)=\begin{cases}
 1 & x\ge0\\
-1+x-\frac{2\sin\left(2\pi x\right)}{3\pi}+\frac{\sin\left(4\pi x\right)}{12\pi} & -1\le x\le0\\
+1+x-\frac{2\sin\left)2\pi x\right(}{3\pi}+\frac{\sin\left)4\pi x\right(}{12\pi} & -1\le x\le0\\
 0 & x\le-1
 \end{cases}$
 \end_inset
@@ -6358,15 +6660,16 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\land\left(\psi\in C^{3}\left(\bbr\right)\right)$
 \end_inset
 
-)
+(
 \begin_inset Formula $\psi$
 \end_inset
 
- חסומה(.
+ חסומה).
 \end_layout
 
 \begin_layout Standard
@@ -6376,7 +6679,8 @@ p_{i} & k=x_{i}\\
 הגדרה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\e>0$
 \end_inset
 
@@ -6398,7 +6702,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\e>0$
 \end_inset
 
@@ -6410,11 +6715,11 @@ p_{i} & k=x_{i}\\
 \begin_inset Formula $\land\left(I_{a,b,\e}\in C^{3}\left(\bbr\right)\right)$
 \end_inset
 
-)
+(
 \begin_inset Formula $I_{a,b,\e}$
 \end_inset
 
- חסומה(.
+ חסומה).
 \end_layout
 
 \begin_layout Standard
@@ -6424,7 +6729,8 @@ p_{i} & k=x_{i}\\
 למה
 \series default
 \color inherit
-: קייים 
+:
+ קייים 
 \begin_inset Formula $B>0$
 \end_inset
 
@@ -6450,7 +6756,8 @@ p_{i} & k=x_{i}\\
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a\le b$
 \end_inset
 
@@ -6472,7 +6779,8 @@ p_{i} & k=x_{i}\\
 משפט הגבול המרכזי
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a\le b$
 \end_inset
 
@@ -6510,7 +6818,8 @@ p_{i} & k=x_{i}\\
 מרחב מצבים
 \series default
 \color inherit
-: קבוצה 
+:
+ קבוצה 
 \begin_inset Formula $S$
 \end_inset
 
@@ -6524,7 +6833,8 @@ p_{i} & k=x_{i}\\
 מטריצת מצבים
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula ${\cal P}:S^{2}\to\left[0,1\right]$
 \end_inset
 
@@ -6542,7 +6852,8 @@ p_{i} & k=x_{i}\\
 שרשרת מרקוב הומוגנית בזמן ובעלת מרחב מצבים סופי
 \series default
 \color inherit
-: מ
+:
+ מ
 \begin_inset Quotes erd
 \end_inset
 
@@ -6572,7 +6883,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
 \end_inset
 
@@ -6590,7 +6902,8 @@ p_{i} & k=x_{i}\\
 הערה
 \series default
 \color inherit
-: נתייחס אל התפלגות 
+:
+ נתייחס אל התפלגות 
 \begin_inset Formula $\mu_{X}$
 \end_inset
 
@@ -6608,7 +6921,8 @@ p_{i} & k=x_{i}\\
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
 \end_inset
 
@@ -6626,7 +6940,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
 \end_inset
 
@@ -6644,7 +6959,8 @@ p_{i} & k=x_{i}\\
 התפלגות סטציונרית/עמידה
 \series default
 \color inherit
-: התפלגות 
+:
+ התפלגות 
 \begin_inset Formula $\pi$
 \end_inset
 
@@ -6666,7 +6982,8 @@ p_{i} & k=x_{i}\\
 וקטור עצמי שמאלי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbf\right)$
 \end_inset
 
@@ -6688,7 +7005,8 @@ p_{i} & k=x_{i}\\
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
 \end_inset
 
@@ -6696,11 +7014,11 @@ p_{i} & k=x_{i}\\
 \begin_inset Formula $\impliedby\left(\mu_{X_{0}}{\cal P}^{n}\to\pi\right)$
 \end_inset
 
-)
+(
 \begin_inset Formula $\pi$
 \end_inset
 
- התפלגות סטציונרית(.
+ התפלגות סטציונרית).
 \end_layout
 
 \begin_layout Standard
@@ -6710,7 +7028,8 @@ p_{i} & k=x_{i}\\
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
 \end_inset
 
@@ -6728,7 +7047,8 @@ p_{i} & k=x_{i}\\
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x,y\in S$
 \end_inset
 
@@ -6750,7 +7070,8 @@ p_{i} & k=x_{i}\\
 מטריצת מעברים אי פריקה
 \series default
 \color inherit
-: שרשרת עבורה 
+:
+ שרשרת עבורה 
 \begin_inset Formula $\forall x,y\in S.x\shortrightarrow y$
 \end_inset
 
@@ -6764,7 +7085,8 @@ p_{i} & k=x_{i}\\
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula ${\cal P}$
 \end_inset
 
@@ -6786,7 +7108,8 @@ p_{i} & k=x_{i}\\
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula ${\cal P}$
 \end_inset
 
@@ -6804,7 +7127,8 @@ p_{i} & k=x_{i}\\
 משפט התכנסות ממוצעים
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula ${\cal P}$
 \end_inset
 
@@ -6826,7 +7150,8 @@ p_{i} & k=x_{i}\\
 הערה
 \series default
 \color inherit
-: נתייחס אל טרנספורמציה 
+:
+ נתייחס אל טרנספורמציה 
 \begin_inset Formula $f$
 \end_inset
 
@@ -6844,7 +7169,8 @@ p_{i} & k=x_{i}\\
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
 \end_inset
 
@@ -6874,7 +7200,8 @@ p_{i} & k=x_{i}\\
 מחזור
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x\in S$
 \end_inset
 
@@ -6892,7 +7219,8 @@ p_{i} & k=x_{i}\\
 מצב חסר מחזור
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $x\in S$
 \end_inset
 
@@ -6910,7 +7238,8 @@ p_{i} & k=x_{i}\\
 שרשרת חסרת מחזור
 \series default
 \color inherit
-: שרשרת 
+:
+ שרשרת 
 \begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
 \end_inset
 
@@ -6924,7 +7253,8 @@ p_{i} & k=x_{i}\\
 המשפט הארגודי לשרשראות מרקוב
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left\{ X_{i}\right\} _{i=1}^{\infty}$
 \end_inset
 
@@ -6942,7 +7272,8 @@ p_{i} & k=x_{i}\\
 זמן החזרה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x\in S$
 \end_inset
 
@@ -6972,7 +7303,8 @@ p_{i} & k=x_{i}\\
 משפט
 \series default
 \color inherit
-: תהא שרשרת אי פריקה בעלת התפלגות סטציונרית יחידה 
+:
+ תהא שרשרת אי פריקה בעלת התפלגות סטציונרית יחידה 
 \begin_inset Formula $\pi$
 \end_inset
 
@@ -6990,7 +7322,8 @@ p_{i} & k=x_{i}\\
 זמן הפגיעה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x,y\in S$
 \end_inset
 
@@ -7020,7 +7353,8 @@ p_{i} & k=x_{i}\\
 משפט
 \series default
 \color inherit
-: תהא שרשרת אי פריקה בעלת התפלגות סטציונרית יחידה 
+:
+ תהא שרשרת אי פריקה בעלת התפלגות סטציונרית יחידה 
 \begin_inset Formula $\pi$
 \end_inset
 

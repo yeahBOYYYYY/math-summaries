@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -19,6 +19,7 @@
 \usepackage{polynom}
 \usepackage{booktabs}
 \usepackage{fancyhdr}
+
 
 % it's here?
 \setlength{\tabcolsep}{1pt}
@@ -49,6 +50,9 @@
 \definecolor{stringcolor}{RGB}{0,168,0}
 \definecolor{remarkcolor}{RGB}{150,145,91} % 255,225,88
 
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{gray}{#1}}
+\SetCommentSty{mycommfont}
+
 % hyperlinks
 \hypersetup{
     colorlinks=true,
@@ -74,19 +78,28 @@
 \end_preamble
 \options no-math
 \use_default_options true
-\maintain_unincluded_children false
+\begin_modules
+algorithm2e
+\end_modules
+\maintain_unincluded_children no
+\begin_local_layout
+Format 66
+PackageOptions algorithm2e vlined
+\end_local_layout
 \language hebrew
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "David CLM"
-\font_sans "default" "default"
+\font_sans "default" "Times New Roman"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -97,10 +110,22 @@
 \bibtex_command default
 \index_command default
 \float_placement H
+\float_alignment class
 \paperfontsize default
 \spacing onehalf
-\use_hyperref false
-\papersize letterpaper
+\use_hyperref true
+\pdf_author "Ron Mikhelman"
+\pdf_subject "Math Summeries"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letter
 \use_geometry true
 \use_package amsmath 2
 \use_package amssymb 2
@@ -121,7 +146,9 @@
 \suppress_date true
 \justification false
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -141,11 +168,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -154,6 +186,7 @@
 \begin_inset CommandInset include
 LatexCommand include
 filename "E:/University/macros.lyx"
+literal "true"
 
 \end_inset
 
@@ -176,7 +209,8 @@ filename "E:/University/macros.lyx"
 פעולה בינארית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A$
 \end_inset
 
@@ -194,7 +228,8 @@ filename "E:/University/macros.lyx"
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $*$
 \end_inset
 
@@ -212,7 +247,8 @@ filename "E:/University/macros.lyx"
 חבורה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -228,7 +264,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-אסוציטיביות/קיבוציות: 
+אסוציטיביות/קיבוציות:
+ 
 \begin_inset Formula $\forall a,b,c\in A.a*\left(b*c\right)=\left(a*b\right)*c$
 \end_inset
 
@@ -236,7 +273,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-איבר יחידה: 
+איבר יחידה:
+ 
 \begin_inset Formula $\exists e\in A.\forall g\in G.e*g=g*e=g$
 \end_inset
 
@@ -244,7 +282,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-איבר הופכי/נגדי: 
+איבר הופכי/נגדי:
+ 
 \begin_inset Formula $\forall g\in G.\exists h\in A.g*h=h*g=e_{G}$
 \end_inset
 
@@ -258,7 +297,8 @@ filename "E:/University/macros.lyx"
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -280,7 +320,8 @@ filename "E:/University/macros.lyx"
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -306,7 +347,8 @@ filename "E:/University/macros.lyx"
 חוג
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $R$
 \end_inset
 
@@ -329,7 +371,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-אסוציטיביות/קיבוציות: 
+אסוציטיביות/קיבוציות:
+ 
 \begin_inset Formula $a*\left(b*c\right)=\left(a*b\right)*c$
 \end_inset
 
@@ -337,7 +380,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-איבר יחידה לכפל: 
+איבר יחידה לכפל:
+ 
 \begin_inset Formula $\exists e_{*}\in R.\forall g\in R.e_{*}*g=g*e_{*}=g$
 \end_inset
 
@@ -345,7 +389,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-חוק הפילוג: 
+חוק הפילוג:
+ 
 \begin_inset Formula $\left(\left(b+c\right)*a=b*a+c*a\right)\land\left(a*\left(b+c\right)=a*b+a*c\right)$
 \end_inset
 
@@ -359,7 +404,8 @@ filename "E:/University/macros.lyx"
 שדה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\bbf$
 \end_inset
 
@@ -400,7 +446,8 @@ filename "E:/University/macros.lyx"
 \series bold
 חזקה מושלמת
 \series default
-: 
+:
+ 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -424,7 +471,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מקדם בינומי
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $k,n\in\bbn$
 \end_inset
 
@@ -444,7 +492,8 @@ filename "E:/University/macros.lyx"
 \series bold
 סימון
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $k,n\in\bbn$
 \end_inset
 
@@ -460,15 +509,18 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $S_{n}^{\left(0\right)}=n$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $S_{n}^{\left(1\right)}=\frac{n\left(n+1\right)}{2}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $S_{n}^{\left(2\right)}=\frac{n\left(n+1\right)\left(2n+1\right)}{6}$
 \end_inset
 
@@ -480,7 +532,8 @@ filename "E:/University/macros.lyx"
 \series bold
 הבינום של ניוטון
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x,y\in\bbr$
 \end_inset
 
@@ -500,7 +553,8 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $S_{n}^{\left(k\right)}=\frac{1}{k+1}\left(n^{k+1}-\sum_{t=0}^{k-1}\left(-1\right)^{k-t}{k+1 \choose t}S_{n}^{\left(t\right)}\right)$
 \end_inset
 
@@ -512,7 +566,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מסקנה
 \series default
-: 
+:
+ 
 \begin_inset Formula $S_{n}^{\left(3\right)}=\frac{n^{4}+2n^{3}+n^{2}}{4}$
 \end_inset
 
@@ -528,7 +583,8 @@ filename "E:/University/macros.lyx"
 
 
 \series default
-: קבוצה 
+:
+ קבוצה 
 \begin_inset Formula $A\subseteq\bbc$
 \end_inset
 
@@ -543,7 +599,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-סגירות לכפל: 
+סגירות לכפל:
+ 
 \begin_inset Formula $\forall a,b\in A.ab\in A$
 \end_inset
 
@@ -562,7 +619,8 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A$
 \end_inset
 
@@ -582,7 +640,8 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\bbz$
 \end_inset
 
@@ -598,7 +657,8 @@ filename "E:/University/macros.lyx"
 \series bold
 הגדרה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\bbz\left[\a\right]=\bigcup_{n=0}^{\infty}\left\{ \sum_{i=0}^{n}k_{i}\a^{i}\bmid k\in\bbz^{n}\right\} $
 \end_inset
 
@@ -610,7 +670,8 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $m\in\bbz$
 \end_inset
 
@@ -638,7 +699,8 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $m\in\bbz$
 \end_inset
 
@@ -662,7 +724,8 @@ filename "E:/University/macros.lyx"
 \series bold
 חוג השלמים של גאוס
 \series default
-: 
+:
+ 
 \begin_inset Formula $\bbz\left[i\right]=\left\{ a+bi\mid a,b\in\bbz\right\} $
 \end_inset
 
@@ -674,7 +737,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מסקנה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\bbz\left[i\right]$
 \end_inset
 
@@ -690,7 +754,8 @@ filename "E:/University/macros.lyx"
 \series bold
 חבורת ההפיכים
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A$
 \end_inset
 
@@ -710,7 +775,8 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A$
 \end_inset
 
@@ -730,7 +796,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מחלק
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A$
 \end_inset
 
@@ -758,7 +825,8 @@ filename "E:/University/macros.lyx"
 \series bold
 סימון
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $b\in A$
 \end_inset
 
@@ -778,7 +846,8 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b,c\in A$
 \end_inset
 
@@ -802,7 +871,8 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b,c\in A$
 \end_inset
 
@@ -828,7 +898,8 @@ filename "E:/University/macros.lyx"
 יחס חברות
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sim$
 \end_inset
 
@@ -850,7 +921,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יחס החברות הינו יחס שקילות.
+:
+ יחס החברות הינו יחס שקילות.
 \end_layout
 
 \begin_layout Standard
@@ -860,15 +932,16 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in A$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $a,b$
 \end_inset
 
- חברים(
+ חברים)
 \begin_inset Formula $\left(\left(a\mid b\right)\land\left(b\mid a\right)\right)\iff$
 \end_inset
 
@@ -882,7 +955,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $m\in\bbz$
 \end_inset
 
@@ -904,7 +978,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $z\in\bbz\left[i\right]$
 \end_inset
 
@@ -931,14 +1006,15 @@ filename "E:/University/macros.lyx"
 \series default
  
 \series bold
-)א
+(א
 \begin_inset Quotes erd
 \end_inset
 
-פ(
+פ)
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $a\in A\backslash A^{*}$
 \end_inset
 
@@ -956,7 +1032,8 @@ filename "E:/University/macros.lyx"
 ראשוני
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $a\in A\backslash\left(A^{*}\cup\left\{ 0\right\} \right)$
 \end_inset
 
@@ -974,7 +1051,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in A$
 \end_inset
 
@@ -996,7 +1074,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: בחוג 
+:
+ בחוג 
 \begin_inset Formula $\bbz\left[\sqrt{-5}\right]$
 \end_inset
 
@@ -1018,7 +1097,8 @@ filename "E:/University/macros.lyx"
 תחום פריקות
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $A$
 \end_inset
 
@@ -1056,7 +1136,8 @@ filename "E:/University/macros.lyx"
 
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbz$
 \end_inset
 
@@ -1070,7 +1151,8 @@ filename "E:/University/macros.lyx"
 פונקציית הצמוד
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\a\in\bbz$
 \end_inset
 
@@ -1096,7 +1178,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $z,w\in\bbz\left[\sqrt{\a}\right]$
 \end_inset
 
@@ -1142,7 +1225,8 @@ filename "E:/University/macros.lyx"
 נורמה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\a\in\bbz$
 \end_inset
 
@@ -1168,7 +1252,8 @@ filename "E:/University/macros.lyx"
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $z,w\in\bbz\left[\sqrt{\a}\right]$
 \end_inset
 
@@ -1196,7 +1281,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\a\in\bbz$
 \end_inset
 
@@ -1222,7 +1308,8 @@ filename "E:/University/macros.lyx"
 
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\a\in\bbz$
 \end_inset
 
@@ -1244,7 +1331,8 @@ filename "E:/University/macros.lyx"
 תחום פריקות יחידה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $A$
 \end_inset
 
@@ -1274,19 +1362,20 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $A$
 \end_inset
 
- תחום פריקות אזי )
+ תחום פריקות אזי (
 \begin_inset Formula $A$
 \end_inset
 
- תחום פריקות יחידה(
+ תחום פריקות יחידה)
 \begin_inset Formula $\iff$
 \end_inset
 
-)כל 
+(כל 
 \begin_inset Formula $a\in A$
 \end_inset
 
@@ -1294,7 +1383,7 @@ filename "E:/University/macros.lyx"
 \begin_inset Quotes erd
 \end_inset
 
-פ הינו ראשוני(.
+פ הינו ראשוני).
 \end_layout
 
 \begin_layout Standard
@@ -1304,7 +1393,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbz\left[\sqrt{-5}\right]$
 \end_inset
 
@@ -1322,7 +1412,8 @@ filename "E:/University/macros.lyx"
 
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbz$
 \end_inset
 
@@ -1352,7 +1443,8 @@ filename "E:/University/macros.lyx"
 שארית חלוקה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbz$
 \end_inset
 
@@ -1386,7 +1478,8 @@ filename "E:/University/macros.lyx"
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbz$
 \end_inset
 
@@ -1416,7 +1509,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbz$
 \end_inset
 
@@ -1424,7 +1518,7 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $a>0$
 \end_inset
 
- אזי )שארית החלוקה של 
+ אזי (שארית החלוקה של 
 \begin_inset Formula $b$
 \end_inset
 
@@ -1436,7 +1530,7 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $0$
 \end_inset
 
-(
+)
 \begin_inset Formula $\left(a\mid b\right)\iff$
 \end_inset
 
@@ -1450,7 +1544,8 @@ filename "E:/University/macros.lyx"
 מחלק משותף
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbz$
 \end_inset
 
@@ -1473,14 +1568,15 @@ filename "E:/University/macros.lyx"
 
 \series bold
 \color green
-מחלק משותף מקסימלי )ממ
+מחלק משותף מקסימלי (ממ
 \begin_inset Quotes erd
 \end_inset
 
-מ(
+מ)
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbz$
 \end_inset
 
@@ -1502,7 +1598,8 @@ filename "E:/University/macros.lyx"
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbz$
 \end_inset
 
@@ -1520,7 +1617,8 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbz$
 \end_inset
 
@@ -1538,7 +1636,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbz$
 \end_inset
 
@@ -1560,7 +1659,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbz$
 \end_inset
 
@@ -1568,7 +1668,7 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $d\in\bbz$
 \end_inset
 
- מחלק משותף אזי )לכל מחלק משותף 
+ מחלק משותף אזי (לכל מחלק משותף 
 \begin_inset Formula $r\in\bbz$
 \end_inset
 
@@ -1576,7 +1676,7 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $r\mid d$
 \end_inset
 
-(
+)
 \begin_inset Formula $\left(d=\gcd\left(a,b\right)\right)\impliedby$
 \end_inset
 
@@ -1587,14 +1687,15 @@ filename "E:/University/macros.lyx"
 
 \series bold
 \color green
-מחלק משותף מקסימלי )ממ
+מחלק משותף מקסימלי (ממ
 \begin_inset Quotes erd
 \end_inset
 
-מ(
+מ)
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{1}\ldots a_{n}\in\bbz$
 \end_inset
 
@@ -1616,7 +1717,8 @@ filename "E:/University/macros.lyx"
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{1}\ldots a_{n}\in\bbz$
 \end_inset
 
@@ -1634,7 +1736,8 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{1}\ldots a_{n}\in\bbz$
 \end_inset
 
@@ -1652,7 +1755,8 @@ filename "E:/University/macros.lyx"
 אלגוריתם אוקלידס
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz\backslash\left\{ 0\right\} $
 \end_inset
 
@@ -1682,7 +1786,8 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz\backslash\left\{ 0\right\} $
 \end_inset
 
@@ -1704,7 +1809,8 @@ filename "E:/University/macros.lyx"
 מספרים זרים
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $a,b\in\bbz$
 \end_inset
 
@@ -1722,7 +1828,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbz$
 \end_inset
 
@@ -1740,7 +1847,8 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz$
 \end_inset
 
@@ -1762,7 +1870,8 @@ filename "E:/University/macros.lyx"
 המשפט היסודי של האריתמטיקה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbz$
 \end_inset
 
@@ -1776,7 +1885,8 @@ filename "E:/University/macros.lyx"
 משפט אוקלידס
 \series default
 \color inherit
-: קיימים אינסוף ראשוניים ב־
+:
+ קיימים אינסוף ראשוניים ב־
 \begin_inset Formula $\bbz$
 \end_inset
 
@@ -1790,7 +1900,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: בסדרה 
+:
+ בסדרה 
 \begin_inset Formula $\left\{ 4n+3\right\} _{n=0}^{\infty}$
 \end_inset
 
@@ -1804,7 +1915,8 @@ filename "E:/University/macros.lyx"
 משפט דיריכלה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbn_{+}$
 \end_inset
 
@@ -1822,7 +1934,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left\{ p_{n}\right\} _{n=1}^{\infty}$
 \end_inset
 
@@ -1840,7 +1953,8 @@ filename "E:/University/macros.lyx"
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbp=\left\{ p\in\bbn\mid\text{ ראשוני}p\right\} $
 \end_inset
 
@@ -1854,7 +1968,8 @@ filename "E:/University/macros.lyx"
 השערת התאומים הראשוניים
 \series default
 \color inherit
-: קיימים אינסוף 
+:
+ קיימים אינסוף 
 \begin_inset Formula $p\in\bbp$
 \end_inset
 
@@ -1875,7 +1990,8 @@ filename "E:/University/macros.lyx"
 פונקציית ספירת ראשוניים
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\pi\left(x\right)=\left|\left\{ p\in\bbp\mid p\le x\right\} \right|$
 \end_inset
 
@@ -1889,7 +2005,8 @@ filename "E:/University/macros.lyx"
 אלגוריתם הנפה של ארטוסטנס
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -1919,7 +2036,8 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -1941,7 +2059,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\pi\left(x\right)>\log\log\left(x\right)$
 \end_inset
 
@@ -1955,7 +2074,8 @@ filename "E:/University/macros.lyx"
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g\in\bbr\to\bbn$
 \end_inset
 
@@ -1977,7 +2097,8 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\pi\left(x\right)\sim\frac{x}{\log\left(x\right)}$
 \end_inset
 
@@ -1991,7 +2112,8 @@ filename "E:/University/macros.lyx"
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x\in\bbr$
 \end_inset
 
@@ -2009,7 +2131,8 @@ filename "E:/University/macros.lyx"
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp$
 \end_inset
 
@@ -2035,7 +2158,8 @@ filename "E:/University/macros.lyx"
 משפט צ'בישב
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\exists a\in\left(0,1\right).\exists b\in\left(1,\infty\right).\forall x\ge2.\left(a\frac{x}{\log\left(x\right)}<\pi\left(x\right)<b\frac{x}{\log\left(x\right)}\right)$
 \end_inset
 
@@ -2049,7 +2173,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\exists\a,\b>0.\forall n\in\bbn\backslash\left\{ 0,1\right\} .\left(\a n\log\left(n\right)<p_{n}<\b n\log\left(n\right)\right)$
 \end_inset
 
@@ -2063,7 +2188,8 @@ filename "E:/University/macros.lyx"
 משפט השערת ברטרנד
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -2081,7 +2207,8 @@ filename "E:/University/macros.lyx"
 הגדרה
 \series default
 \color inherit
-: נגדיר 
+:
+ נגדיר 
 \begin_inset Formula $\text{Li}:\bbr\to\bbr$
 \end_inset
 
@@ -2099,7 +2226,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\text{Li}\left(x\right)\sim\frac{x}{\log\left(x\right)}$
 \end_inset
 
@@ -2113,7 +2241,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\text{Li}\left(x\right)\sim\pi\left(x\right)$
 \end_inset
 
@@ -2127,7 +2256,8 @@ filename "E:/University/macros.lyx"
 פונקציית זטא של רימן
 \series default
 \color inherit
-: נגדיר 
+:
+ נגדיר 
 \begin_inset Formula $\zeta:\bbr\to\bbr$
 \end_inset
 
@@ -2145,7 +2275,8 @@ filename "E:/University/macros.lyx"
 השערת רימן
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall\b>\frac{1}{2}.\exists x_{0}\in\bbr_{+}.\forall x\ge x_{0}.\left|\pi\left(x\right)-\text{Li}\left(x\right)\right|\le x^{\b}$
 \end_inset
 
@@ -2162,7 +2293,8 @@ filename "E:/University/macros.lyx"
 משפט
 \series default
 \color inherit
-: )השערת רימן נכונה(
+:
+ (השערת רימן נכונה)
 \begin_inset Formula $\left(\sols_{\bbc}\left(\zeta\left(s\right)=0\right)\backslash\left\{ -2n\mid n\in\bbn_{+}\right\} \subseteq\left\{ z\in\bbc\mid\re\left(z\right)=\frac{1}{2}\right\} \right)\iff$
 \end_inset
 
@@ -2176,7 +2308,8 @@ filename "E:/University/macros.lyx"
 מספרי פרמה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -2194,7 +2327,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x,y\in\bbr$
 \end_inset
 
@@ -2216,7 +2350,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $m,n\in\bbn$
 \end_inset
 
@@ -2238,7 +2373,8 @@ filename "E:/University/macros.lyx"
 מספרי מרסן
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp$
 \end_inset
 
@@ -2256,7 +2392,8 @@ filename "E:/University/macros.lyx"
 מספר מושלם
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -2277,7 +2414,8 @@ d<n
 פונקציית סכום המחלקים
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -2295,15 +2433,16 @@ d<n
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $n$
 \end_inset
 
- מושלם(
+ מושלם)
 \begin_inset Formula $\left(\sigma\left(n\right)=2n\right)\iff$
 \end_inset
 
@@ -2317,7 +2456,8 @@ d<n
 פונקציה כפלית
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $f:\bbn\to\bbc$
 \end_inset
 
@@ -2339,7 +2479,8 @@ d<n
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f$
 \end_inset
 
@@ -2365,7 +2506,8 @@ d<n
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -2379,7 +2521,8 @@ d<n
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp$
 \end_inset
 
@@ -2401,7 +2544,8 @@ d<n
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -2423,7 +2567,8 @@ d<n
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f$
 \end_inset
 
@@ -2441,7 +2586,8 @@ d<n
 פונקציית מביוס
 \series default
 \color inherit
-: נגדיר 
+:
+ נגדיר 
 \begin_inset Formula $\mu:\bbn\to\left\{ 0,\pm1\right\} $
 \end_inset
 
@@ -2471,7 +2617,8 @@ d<n
 משפט נוסחת ההיפוך של מביוס
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbn\to\bbc$
 \end_inset
 
@@ -2489,7 +2636,8 @@ d<n
 משפט אוקלידס
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $M_{p}\in\bbp$
 \end_inset
 
@@ -2507,7 +2655,8 @@ d<n
 משפט אוילר
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{\text{even}}$
 \end_inset
 
@@ -2525,7 +2674,8 @@ d<n
 שלשה פיתגורית
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $x,y,z\in\bbn_{+}$
 \end_inset
 
@@ -2543,7 +2693,8 @@ d<n
 אלגוריתם מציאת כל הנקודות הרציונליות על חתך חרוט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $r,s\in\bbq$
 \end_inset
 
@@ -2598,11 +2749,12 @@ rx^{2}+sy^{2}=1
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $r,s\in\bbq$
 \end_inset
 
- אזי )אלגוריתם מציאת כל הנקודות הרציונליות על חתך חרוט(
+ אזי (אלגוריתם מציאת כל הנקודות הרציונליות על חתך חרוט)
 \begin_inset Formula $\sols_{\bbq}\left(rx^{2}+sy^{2}=1\right)=$
 \end_inset
 
@@ -2616,7 +2768,8 @@ rx^{2}+sy^{2}=1
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $t\in\bbr$
 \end_inset
 
@@ -2634,7 +2787,8 @@ rx^{2}+sy^{2}=1
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $f:\bbq\to\left\{ \left(x,y\right)\in\bbq^{2}\mid x^{2}+y^{2}=1\right\} \backslash\left\{ \left(1,0\right)\right\} $
 \end_inset
 
@@ -2656,7 +2810,8 @@ rx^{2}+sy^{2}=1
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sols_{\bbq}\left(x^{2}+y^{2}=1\right)=\left\{ \left(1,0\right)\right\} \cup\left\{ \left(\frac{t^{2}-1}{t^{2}+1},\frac{2t}{t^{2}+1}\right)\bmid t\in\bbq\right\} $
 \end_inset
 
@@ -2670,7 +2825,8 @@ rx^{2}+sy^{2}=1
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(\begin{smallmatrix}x\\
 y\\
 z
@@ -2735,7 +2891,8 @@ z
 מספרים קונגרואנטים
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -2757,7 +2914,8 @@ z
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -2783,7 +2941,8 @@ z
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -2805,7 +2964,8 @@ z
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $a+n\bbz=\left\{ a+n\cdot m\mid m\in\bbz\right\} $
 \end_inset
 
@@ -2819,7 +2979,8 @@ z
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -2837,7 +2998,8 @@ z
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\nicefrac{\bbz}{\text{mod}n}=\left\{ a+n\bbz\mid a\in\left\{ 0\ldots n-1\right\} \right\} $
 \end_inset
 
@@ -2851,7 +3013,8 @@ z
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbz_{n}=\nicefrac{\bbz}{\text{mod}n}$
 \end_inset
 
@@ -2865,7 +3028,8 @@ z
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -2905,7 +3069,8 @@ z
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f\in\bbz\left[x\right]$
 \end_inset
 
@@ -2931,7 +3096,8 @@ z
 משפט סימן החלוקה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbz$
 \end_inset
 
@@ -2943,11 +3109,12 @@ z
 \begin_inset Formula $2$
 \end_inset
 
-: )ספרת האחדות של 
+:
+ (ספרת האחדות של 
 \begin_inset Formula $n$
 \end_inset
 
- היא זוגית(
+ היא זוגית)
 \begin_inset Formula $\left(2\mid n\right)\iff$
 \end_inset
 
@@ -2959,7 +3126,8 @@ z
 \begin_inset Formula $5$
 \end_inset
 
-: )ספרת האחדות של 
+:
+ (ספרת האחדות של 
 \begin_inset Formula $n$
 \end_inset
 
@@ -2967,7 +3135,7 @@ z
 \begin_inset Formula $\left\{ 0,5\right\} $
 \end_inset
 
-(
+)
 \begin_inset Formula $\left(5\mid n\right)\iff$
 \end_inset
 
@@ -2979,7 +3147,8 @@ z
 \begin_inset Formula $10$
 \end_inset
 
-: )ספרת האחדות של 
+:
+ (ספרת האחדות של 
 \begin_inset Formula $n$
 \end_inset
 
@@ -2987,7 +3156,7 @@ z
 \begin_inset Formula $0$
 \end_inset
 
-(
+)
 \begin_inset Formula $\left(10\mid n\right)\iff$
 \end_inset
 
@@ -2999,7 +3168,8 @@ z
 \begin_inset Formula $3$
 \end_inset
 
-: )סכום הספרות של 
+:
+ (סכום הספרות של 
 \begin_inset Formula $n$
 \end_inset
 
@@ -3007,7 +3177,7 @@ z
 \begin_inset Formula $3$
 \end_inset
 
-(
+)
 \begin_inset Formula $\left(3\mid n\right)\iff$
 \end_inset
 
@@ -3021,7 +3191,8 @@ z
 אריתמטיקה של מחלקות קונגרואציה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -3033,7 +3204,8 @@ z
 \end_layout
 
 \begin_layout Itemize
-חיבור: 
+חיבור:
+ 
 \begin_inset Formula $\left(a+n\bbz\right)+\left(b+n\bbz\right)=\left(a+b\right)+n\bbz$
 \end_inset
 
@@ -3041,7 +3213,8 @@ z
 \end_layout
 
 \begin_layout Itemize
-כפל: 
+כפל:
+ 
 \begin_inset Formula $\left(a+n\bbz\right)\cdot\left(b+n\bbz\right)=ab+n\bbz$
 \end_inset
 
@@ -3055,7 +3228,8 @@ z
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbz_{n}$
 \end_inset
 
@@ -3073,7 +3247,8 @@ z
 
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $a\in\bbz_{n}$
 \end_inset
 
@@ -3095,7 +3270,8 @@ z
 
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $a\in\bbz$
 \end_inset
 
@@ -3113,11 +3289,12 @@ z
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $a$
 \end_inset
 
@@ -3125,11 +3302,11 @@ z
 \begin_inset Formula $n$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $a+n\bbz$
 \end_inset
 
@@ -3137,7 +3314,7 @@ z
 \begin_inset Formula $\bbz_{n}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -3147,7 +3324,8 @@ z
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a$
 \end_inset
 
@@ -3169,11 +3347,12 @@ z
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $a$
 \end_inset
 
@@ -3181,7 +3360,7 @@ z
 \begin_inset Formula $n$
 \end_inset
 
-(
+)
 \begin_inset Formula $\left(\gcd\left(a,n\right)=1\right)\iff$
 \end_inset
 
@@ -3195,7 +3374,8 @@ z
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbz_{n}^{*}=\left\{ a\in\bbz_{n}\mid\exists b\in\bbz_{n}.a\cdot b=1\right\} $
 \end_inset
 
@@ -3209,7 +3389,8 @@ z
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\overline{a}=a+n\bbz$
 \end_inset
 
@@ -3223,7 +3404,8 @@ z
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\overline{a}\in\bbz_{n}$
 \end_inset
 
@@ -3249,7 +3431,8 @@ z
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\overline{a}\cdot\overline{b}\right)^{-1}=\overline{a}^{-1}\cdot\overline{b}^{-1}$
 \end_inset
 
@@ -3263,7 +3446,8 @@ z
 פונקציית אוילר
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\phi\left(n\right)=\left|\bbz_{n}^{*}\right|$
 \end_inset
 
@@ -3277,7 +3461,8 @@ z
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp$
 \end_inset
 
@@ -3295,7 +3480,8 @@ z
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp$
 \end_inset
 
@@ -3313,15 +3499,16 @@ z
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\bbz_{n}$
 \end_inset
 
- שדה(
+ שדה)
 \begin_inset Formula $\left(n\in\bbp\right)\iff$
 \end_inset
 
@@ -3335,7 +3522,8 @@ z
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $n,k\in\bbn_{+}$
 \end_inset
 
@@ -3353,7 +3541,8 @@ z
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $n,k\in\bbn_{+}$
 \end_inset
 
@@ -3362,7 +3551,7 @@ z
 \end_inset
 
  מחלק משותף אזי 
-\begin_inset Formula $\forall a,b\in\bbz.\left(ka\equiv kb\mod n\right)\iff\left(\frac{k}{r}a\equiv\frac{k}{r}b\mod\frac{n}{r}\right)$
+\begin_inset Formula $\forall a,b\in\bbz.\left(ka\equiv kb\mod n\right)\iff\left(\frac{k}{r}a\equiv\frac{k}{r}b\mod{\frac{n}{r}}\right)$
 \end_inset
 
 .
@@ -3375,12 +3564,13 @@ z
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $n,k\in\bbn_{+}$
 \end_inset
 
  אזי 
-\begin_inset Formula $\forall a,b\in\bbz.\left(ka\equiv kb\mod n\right)\iff\left(a\equiv b\mod\frac{n}{\gcd\left(k,n\right)}\right)$
+\begin_inset Formula $\forall a,b\in\bbz.\left(ka\equiv kb\mod n\right)\iff\left(a\equiv b\mod{\frac{n}{\gcd\left(k,n\right)}}\right)$
 \end_inset
 
 .
@@ -3393,7 +3583,8 @@ z
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp$
 \end_inset
 
@@ -3419,7 +3610,8 @@ z
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp$
 \end_inset
 
@@ -3445,7 +3637,8 @@ z
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $s,\ell\in\bbn_{+}$
 \end_inset
 
@@ -3459,8 +3652,8 @@ z
 
  אזי 
 \begin_inset Formula $\phi\left(p^{\ell}\cdot s\right)=\begin{cases}
-p^{\ell-1}\left(p-1\right) & s=1\\
-p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
+p^{\ell-1}\left)p-1\right( & s=1\\
+p^{\ell-1}\left)p-1\right(\phi\left)s\right( & \text{else}
 \end{cases}$
 \end_inset
 
@@ -3474,7 +3667,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -3496,7 +3690,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -3518,7 +3713,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\phi$
 \end_inset
 
@@ -3532,7 +3728,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -3550,7 +3747,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 ראשוני סופי ז'רמן
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $q\in\bbp$
 \end_inset
 
@@ -3568,7 +3766,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -3594,7 +3793,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -3602,7 +3802,7 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 \begin_inset Formula ${\displaystyle \sum_{\substack{\gcd\left(k,n\right)=1\\
 1\le k\le n
 }
-}k=\frac{1}{2}n\phi\left(n\right)}$
+}k=\frac{1}{2}n\phi\left)n\right(}$
 \end_inset
 
 .
@@ -3615,7 +3815,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz\backslash\left\{ 0\right\} $
 \end_inset
 
@@ -3641,7 +3842,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz\backslash\left\{ 0\right\} $
 \end_inset
 
@@ -3658,7 +3860,7 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 \end_inset
 
  וכן 
-\begin_inset Formula $\left(\frac{a}{\gcd\left(a,n\right)}\right)\cdot c\equiv1\mod\frac{n}{\gcd\left(a,n\right)}$
+\begin_inset Formula $\left(\frac{a}{\gcd\left(a,n\right)}\right)\cdot c\equiv1\mod{\frac{n}{\gcd\left(a,n\right)}}$
 \end_inset
 
  אזי 
@@ -3675,7 +3877,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz\backslash\left\{ 0\right\} $
 \end_inset
 
@@ -3692,7 +3895,7 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 \end_inset
 
  וכן 
-\begin_inset Formula $\left(\frac{a}{\gcd\left(a,n\right)}\right)\cdot c\equiv1\mod\frac{n}{\gcd\left(a,n\right)}$
+\begin_inset Formula $\left(\frac{a}{\gcd\left(a,n\right)}\right)\cdot c\equiv1\mod{\frac{n}{\gcd\left(a,n\right)}}$
 \end_inset
 
  אזי 
@@ -3709,7 +3912,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz\backslash\left\{ 0\right\} $
 \end_inset
 
@@ -3739,7 +3943,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 משפט פתרון משוואות דיופנטיות לינאריות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz\backslash\left\{ 0\right\} $
 \end_inset
 
@@ -3756,7 +3961,7 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 \end_inset
 
  וגם 
-\begin_inset Formula $\left(\frac{a}{\gcd\left(a,n\right)}\right)\cdot c\equiv1\mod\frac{n}{\gcd\left(a,n\right)}$
+\begin_inset Formula $\left(\frac{a}{\gcd\left(a,n\right)}\right)\cdot c\equiv1\mod{\frac{n}{\gcd\left(a,n\right)}}$
 \end_inset
 
  וכן 
@@ -3775,7 +3980,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 \series bold
 משפט השאריות הסיני
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $n_{1}\ldots n_{k}\in\bbn_{+}$
 \end_inset
 
@@ -3795,7 +4001,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 \series bold
 משפט אוילר
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -3819,7 +4026,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 \series bold
 מסקנה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -3843,7 +4051,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 \series bold
 מסקנה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -3856,7 +4065,7 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 \end_inset
 
  אזי 
-\begin_inset Formula $a^{x}\equiv a^{x\mod\phi\left(n\right)}\mod n$
+\begin_inset Formula $a^{x}\equiv a^{x\mod{\phi}\left(n\right)}\mod n$
 \end_inset
 
 .
@@ -3867,7 +4076,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 \series bold
 המשפט הקטן של פרמה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp$
 \end_inset
 
@@ -3891,7 +4101,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 \series bold
 הגדרה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\bbz_{n}\left[x\right]=\bigcup_{m=0}^{\infty}\left\{ \sum_{i=0}^{m}a_{i}x^{i}\mid\forall i\in\left[m\right].a_{i}\in\bbz_{n}\right\} $
 \end_inset
 
@@ -3903,7 +4114,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 \series bold
 הגדרה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\sum_{i=0}^{m}a_{i}x^{i},\sum_{i=0}^{m}b_{i}x^{i}\in\bbz_{n}\left[x\right]$
 \end_inset
 
@@ -3919,7 +4131,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 \series bold
 סימון
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g\in\bbz_{n}\left[x\right]$
 \end_inset
 
@@ -3939,7 +4152,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 
 
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\sum_{i=0}^{m}a_{i}x^{i},\sum_{i=0}^{k}b_{i}x^{i}\in\bbz_{n}\left[x\right]$
 \end_inset
 
@@ -3965,7 +4179,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 \series bold
 משפט וילסון
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp$
 \end_inset
 
@@ -3983,7 +4198,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f\in\bbz\left[x\right]$
 \end_inset
 
@@ -4009,7 +4225,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f\in\bbz\left[x\right]$
 \end_inset
 
@@ -4035,7 +4252,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f\in\bbz\left[x\right]$
 \end_inset
 
@@ -4081,7 +4299,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 הרמת פתרון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f\in\bbz\left[x\right]$
 \end_inset
 
@@ -4119,7 +4338,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 סדר
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -4141,7 +4361,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz_{n}^{*}$
 \end_inset
 
@@ -4159,7 +4380,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz_{n}^{*}$
 \end_inset
 
@@ -4177,7 +4399,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz_{n}^{*}$
 \end_inset
 
@@ -4199,7 +4422,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz_{n}^{*}$
 \end_inset
 
@@ -4218,14 +4442,15 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 
 \series bold
 \color blue
-שורש פרימיטיבי )ש
+שורש פרימיטיבי (ש
 \begin_inset Quotes erd
 \end_inset
 
-פ(
+פ)
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -4247,7 +4472,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -4255,7 +4481,7 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 \begin_inset Formula $a\in\bbz_{n}^{*}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $a$
 \end_inset
 
@@ -4263,11 +4489,11 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 \begin_inset Quotes erd
 \end_inset
 
-פ(
+פ)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $a$
 \end_inset
 
@@ -4275,7 +4501,7 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 \begin_inset Formula $\bbz_{n}^{*}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -4285,7 +4511,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz_{n}^{*}$
 \end_inset
 
@@ -4307,7 +4534,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp$
 \end_inset
 
@@ -4325,7 +4553,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
 \end_inset
 
@@ -4347,7 +4576,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
 \end_inset
 
@@ -4369,7 +4599,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $j\in\bbn\backslash\left\{ 0,1,2\right\} $
 \end_inset
 
@@ -4378,7 +4609,7 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 \end_inset
 
  אזי 
-\begin_inset Formula $b^{2^{j-2}}\equiv1\mod2^{j}$
+\begin_inset Formula $b^{2^{j-2}}\equiv1\mod 2^{j}$
 \end_inset
 
 .
@@ -4391,7 +4622,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $j\in\bbn\backslash\left\{ 0,1,2\right\} $
 \end_inset
 
@@ -4413,7 +4645,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $j\in\bbn\backslash\left\{ 0,1,2\right\} $
 \end_inset
 
@@ -4431,7 +4664,8 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $n_{1},n_{2}\in\bbn\backslash\left\{ 0,1,2\right\} $
 \end_inset
 
@@ -4453,15 +4687,16 @@ p^{\ell-1}\left(p-1\right)\phi\left(s\right) & \text{else}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
- אזי )קיים שורש פרימיטיבי מודולו 
+ אזי (קיים שורש פרימיטיבי מודולו 
 \begin_inset Formula $n$
 \end_inset
 
-(
+)
 \begin_inset Formula $\left(n\in\left\{ 1,2,4\right\} \cup\left\{ p^{j}\bmid\substack{p\in\bbp\\
 j\in\bbn_{+}
 }
@@ -4481,7 +4716,8 @@ j\in\bbn_{+}
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -4507,7 +4743,8 @@ j\in\bbn_{+}
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -4517,7 +4754,7 @@ j\in\bbn_{+}
 
  נגדיר 
 \begin_inset Formula $\substack{f:\bbz_{n}^{*}\to\bbz_{n}^{*}\\
-f\left(x\right)\equiv x^{m}\mod n
+f\left)x\right(\equiv x^{m}\mod n
 }
 $
 \end_inset
@@ -4536,7 +4773,8 @@ $
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $n,m\in\bbn_{+}$
 \end_inset
 
@@ -4546,7 +4784,7 @@ $
 
  אזי 
 \begin_inset Formula $\substack{f:\bbz_{n}^{*}\to\bbz_{n}^{*}\\
-f\left(x\right)\equiv x^{m}\mod n
+f\left)x\right(\equiv x^{m}\mod n
 }
 $
 \end_inset
@@ -4577,7 +4815,8 @@ $
 \begin_inset Formula $p,q\in\bbp$
 \end_inset
 
- גדולים, ונסמן 
+ גדולים,
+ ונסמן 
 \begin_inset Formula $n=pq$
 \end_inset
 
@@ -4589,8 +4828,9 @@ $
 \begin_inset Formula $m\in\bbz_{\phi\left(n\right)}^{*}$
 \end_inset
 
-, ונחשב 
-\begin_inset Formula $s\equiv m^{-1}\mod\phi\left(n\right)$
+,
+ ונחשב 
+\begin_inset Formula $s\equiv m^{-1}\mod{\phi}\left(n\right)$
 \end_inset
 
 .
@@ -4621,7 +4861,8 @@ $
 \begin_inset Formula $B$
 \end_inset
 
-, רק מי שיודע את 
+,
+ רק מי שיודע את 
 \begin_inset Formula $s$
 \end_inset
 
@@ -4643,7 +4884,8 @@ $
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $p,q\in\bbp$
 \end_inset
 
@@ -4673,7 +4915,8 @@ $
 טענה
 \series default
 \color inherit
-: מציאת פתרון למשוואה 
+:
+ מציאת פתרון למשוואה 
 \begin_inset Formula $x^{m}\equiv B\mod n$
 \end_inset
 
@@ -4695,7 +4938,8 @@ $
 טענה
 \series default
 \color inherit
-: מציאת 
+:
+ מציאת 
 \begin_inset Formula $p,q$
 \end_inset
 
@@ -4716,7 +4960,8 @@ $
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
 \end_inset
 
@@ -4738,7 +4983,8 @@ $
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
 \end_inset
 
@@ -4760,7 +5006,8 @@ $
 שארית ריבועית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
 \end_inset
 
@@ -4782,7 +5029,8 @@ $
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
 \end_inset
 
@@ -4794,7 +5042,7 @@ $
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $a$
 \end_inset
 
@@ -4802,7 +5050,7 @@ $
 \begin_inset Formula $p$
 \end_inset
 
-(
+)
 \begin_inset Formula $\left(a^{\frac{p-1}{2}}\equiv1\mod p\right)\iff$
 \end_inset
 
@@ -4810,7 +5058,7 @@ $
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $a$
 \end_inset
 
@@ -4818,7 +5066,7 @@ $
 \begin_inset Formula $p$
 \end_inset
 
-(
+)
 \begin_inset Formula $\left(a^{\frac{p-1}{2}}\equiv-1\mod p\right)\iff$
 \end_inset
 
@@ -4832,7 +5080,8 @@ $
 סימן לז'נדר
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
 \end_inset
 
@@ -4857,7 +5106,8 @@ $
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\frac{a}{p}\right)\equiv a^{\frac{p-1}{2}}\mod p$
 \end_inset
 
@@ -4871,7 +5121,8 @@ $
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left|\left\{ a\in\bbz_{p}^{*}\bmid\left(\frac{a}{p}\right)=1\right\} \right|=\frac{p-1}{2}=\left|\left\{ a\in\bbz_{p}^{*}\bmid\left(\frac{a}{p}\right)=-1\right\} \right|$
 \end_inset
 
@@ -4885,7 +5136,8 @@ $
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\a\in\bbz_{p}^{*}$
 \end_inset
 
@@ -4907,7 +5159,8 @@ $
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\a\in\bbz_{p}^{*}$
 \end_inset
 
@@ -4925,7 +5178,8 @@ $
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b\in\bbz_{p}^{*}$
 \end_inset
 
@@ -4943,12 +5197,13 @@ $
 משפט אוילר
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp\backslash\left\{ 2,3\right\} $
 \end_inset
 
  המקיים 
-\begin_inset Formula $p\equiv3\mod4$
+\begin_inset Formula $p\equiv3\mod 4$
 \end_inset
 
  וכן 
@@ -4969,7 +5224,8 @@ $
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz_{\text{odd}}$
 \end_inset
 
@@ -4987,7 +5243,8 @@ $
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz_{\text{odd}}$
 \end_inset
 
@@ -4996,7 +5253,7 @@ $
 
 \begin_layout Itemize
 אם 
-\begin_inset Formula $a\equiv1\mod4$
+\begin_inset Formula $a\equiv1\mod 4$
 \end_inset
 
  אזי
@@ -5008,7 +5265,7 @@ $
 
 \begin_layout Itemize
 אם 
-\begin_inset Formula $a\not\equiv1\mod4$
+\begin_inset Formula $a\not\equiv1\mod 4$
 \end_inset
 
  אזי 
@@ -5025,7 +5282,8 @@ $
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz_{\text{odd}}$
 \end_inset
 
@@ -5034,7 +5292,7 @@ $
 
 \begin_layout Itemize
 אם 
-\begin_inset Formula $a\equiv1\mod8$
+\begin_inset Formula $a\equiv1\mod 8$
 \end_inset
 
  אזי
@@ -5046,7 +5304,7 @@ $
 
 \begin_layout Itemize
 אם 
-\begin_inset Formula $a\not\equiv1\mod8$
+\begin_inset Formula $a\not\equiv1\mod 8$
 \end_inset
 
  אזי 
@@ -5063,7 +5321,8 @@ $
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz_{\text{odd}}$
 \end_inset
 
@@ -5072,7 +5331,7 @@ $
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(\sols_{\bbz_{2^{k}}}\left(x^{2}=a\right)\ne\emptyset\right)\iff\left(a\equiv1\mod8\right)$
+\begin_inset Formula $\left(\sols_{\bbz_{2^{k}}}\left(x^{2}=a\right)\ne\emptyset\right)\iff\left(a\equiv1\mod 8\right)$
 \end_inset
 
 .
@@ -5085,7 +5344,8 @@ $
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz_{\text{odd}}$
 \end_inset
 
@@ -5094,7 +5354,7 @@ $
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(\sols_{\bbz_{2^{k}}}\left(x^{2}=a\right)\ne\emptyset\right)\iff\left(a\equiv1\mod\gcd\left(8,2^{k}\right)\right)$
+\begin_inset Formula $\left(\sols_{\bbz_{2^{k}}}\left(x^{2}=a\right)\ne\emptyset\right)\iff\left(a\equiv1\mod{\gcd}\left(8,2^{k}\right)\right)$
 \end_inset
 
 .
@@ -5107,7 +5367,8 @@ $
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz_{\text{odd}}$
 \end_inset
 
@@ -5116,7 +5377,7 @@ $
 \end_inset
 
  עבורם 
-\begin_inset Formula $a\equiv1\mod\gcd\left(8,2^{k}\right)$
+\begin_inset Formula $a\equiv1\mod{\gcd}\left(8,2^{k}\right)$
 \end_inset
 
  אזי 
@@ -5137,7 +5398,8 @@ $
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
 \end_inset
 
@@ -5163,7 +5425,8 @@ $
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
 \end_inset
 
@@ -5193,7 +5456,8 @@ $
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -5210,7 +5474,7 @@ $
 \end_inset
 
 
-\begin_inset Formula $\left(\sols_{\bbz_{n}}\left(x^{2}=a\right)\ne\emptyset\right)\iff\left(\left(a\equiv1\mod\gcd\left(8,2^{r_{0}}\right)\right)\land\left(\forall i\in\left[k\right].a^{\frac{1}{2}\phi\left(p_{i}^{r_{i}}\right)}\equiv1\mod p_{i}^{r_{i}}\right)\right)$
+\begin_inset Formula $\left(\sols_{\bbz_{n}}\left(x^{2}=a\right)\ne\emptyset\right)\iff\left(\left(a\equiv1\mod{\gcd}\left(8,2^{r_{0}}\right)\right)\land\left(\forall i\in\left[k\right].a^{\frac{1}{2}\phi\left(p_{i}^{r_{i}}\right)}\equiv1\mod p_{i}^{r_{i}}\right)\right)$
 \end_inset
 
 .
@@ -5223,7 +5487,8 @@ $
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -5260,7 +5525,8 @@ $
 הלמה של גאוס
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
 \end_inset
 
@@ -5285,7 +5551,8 @@ aj<0
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
 \end_inset
 
@@ -5303,14 +5570,15 @@ aj<0
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
 \end_inset
 
  אזי 
 \begin_inset Formula $\left(\frac{2}{p}\right)=\begin{cases}
-1 & p\equiv\pm1\mod8\\
--1 & p\equiv\pm3\mod8
+1 & p\equiv\pm1\mod 8\\
+-1 & p\equiv\pm3\mod 8
 \end{cases}$
 \end_inset
 
@@ -5324,7 +5592,8 @@ aj<0
 משפט ההדדיות הריבועית של גאוס
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $p,q\in\bbp\backslash\left\{ 2\right\} $
 \end_inset
 
@@ -5346,7 +5615,8 @@ aj<0
 מסקנה
 \series default
 \color inherit
-: בסדרה 
+:
+ בסדרה 
 \begin_inset Formula $\left\{ 5n-1\right\} _{n=1}^{\infty}$
 \end_inset
 
@@ -5360,7 +5630,8 @@ aj<0
 סמל יעקובי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{\text{odd}}$
 \end_inset
 
@@ -5386,7 +5657,8 @@ aj<0
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{\text{odd}}$
 \end_inset
 
@@ -5408,7 +5680,7 @@ aj<0
 \begin_inset Formula $\impliedby\left(\left(\frac{a}{n}\right)=-1\right)$
 \end_inset
 
-)
+(
 \begin_inset Formula $a$
 \end_inset
 
@@ -5416,7 +5688,7 @@ aj<0
 \begin_inset Formula $n$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -5426,7 +5698,8 @@ aj<0
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $n_{1}\ldots n_{k}\in\bbn_{\text{odd}}$
 \end_inset
 
@@ -5434,14 +5707,14 @@ aj<0
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\frac{1}{2}\left(\left(\prod_{i=1}^{k}n_{i}\right)-1\right)\equiv\frac{1}{2}\sum_{i=1}^{k}\left(n_{i}-1\right)\mod2$
+\begin_inset Formula $\frac{1}{2}\left(\left(\prod_{i=1}^{k}n_{i}\right)-1\right)\equiv\frac{1}{2}\sum_{i=1}^{k}\left(n_{i}-1\right)\mod 2$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\frac{1}{2}\left(\left(\prod_{i=1}^{k}n_{i}\right)^{2}-1\right)\equiv\frac{1}{2}\sum_{i=1}^{k}\left(n_{i}^{2}-1\right)\mod2$
+\begin_inset Formula $\frac{1}{2}\left(\left(\prod_{i=1}^{k}n_{i}\right)^{2}-1\right)\equiv\frac{1}{2}\sum_{i=1}^{k}\left(n_{i}^{2}-1\right)\mod 2$
 \end_inset
 
 .
@@ -5454,7 +5727,8 @@ aj<0
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $n,m\in\bbn_{\text{odd}}$
 \end_inset
 
@@ -5515,7 +5789,8 @@ aj<0
 חוק ההדיות של גאוס
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $n,m\in\bbn_{\text{odd}}\backslash\left\{ 1\right\} $
 \end_inset
 
@@ -5533,7 +5808,8 @@ aj<0
 אלגוריתם חישוב סמל יעקובי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{\text{odd}}$
 \end_inset
 
@@ -5571,7 +5847,8 @@ aj<0
 עד פרמה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -5593,7 +5870,8 @@ aj<0
 מספרי קרמייקל
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $n\in\bbn_{+}\backslash\bbp$
 \end_inset
 
@@ -5611,7 +5889,8 @@ aj<0
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $k\in\bbn\backslash\left\{ 0,1\right\} $
 \end_inset
 
@@ -5641,7 +5920,8 @@ aj<0
 כפולה משותפת מינימלית
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{1}\ldots a_{n}\in\bbz$
 \end_inset
 
@@ -5663,7 +5943,8 @@ aj<0
 הגדרה
 \series default
 \color inherit
-: נגדיר 
+:
+ נגדיר 
 \begin_inset Formula $\lambda:\bbn_{+}\to\bbn_{+}$
 \end_inset
 
@@ -5742,7 +6023,8 @@ aj<0
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $j\in\bbn\backslash\left\{ 0,1,2\right\} $
 \end_inset
 
@@ -5760,7 +6042,8 @@ aj<0
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -5788,7 +6071,8 @@ aj<0
 למה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn\backslash\left\{ 0,1,2\right\} $
 \end_inset
 
@@ -5806,7 +6090,8 @@ aj<0
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
@@ -5840,7 +6125,8 @@ aj<0
 עד אוילר־יעקובי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{\text{odd}}$
 \end_inset
 
@@ -5862,7 +6148,8 @@ aj<0
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{\text{odd}}$
 \end_inset
 
@@ -5876,7 +6163,8 @@ aj<0
 אלגוריתם מבחן רבין־מילר לבדיקת ראשוניות
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{\text{odd}}\backslash\left\{ 1\right\} $
 \end_inset
 
@@ -5914,7 +6202,8 @@ aj<0
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{\text{odd}}\backslash\left\{ 1\right\} $
 \end_inset
 
@@ -5936,7 +6225,8 @@ aj<0
 תבנית ריבועית
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b,c\in\bbz$
 \end_inset
 
@@ -5958,7 +6248,8 @@ aj<0
 מטריצה מייצגת של תבנית ריבועית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\left(x,y\right)=ax^{2}+bxy+cy^{2}$
 \end_inset
 
@@ -5978,7 +6269,8 @@ aj<0
 קבוצת התבניות הריבועיות
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sym_{2}\left(\bbz\right)=\left\{ A\in M_{2}\left(\bbz\right)\mid A=A^{t}\right\} $
 \end_inset
 
@@ -5992,7 +6284,8 @@ aj<0
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
 \end_inset
 
@@ -6010,7 +6303,8 @@ aj<0
 דיסקרימננטה של תבנית ריבועית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f=\left(\begin{smallmatrix}a & \frac{b}{2}\\
 \frac{b}{2} & c
 \end{smallmatrix}\right)\in\sym_{2}\left(\bbz\right)$
@@ -6030,12 +6324,13 @@ aj<0
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(\Delta_{f}\equiv0\mod4\right)\lor\left(\Delta_{f}\equiv1\mod4\right)$
+\begin_inset Formula $\left(\Delta_{f}\equiv0\mod 4\right)\lor\left(\Delta_{f}\equiv1\mod 4\right)$
 \end_inset
 
 .
@@ -6048,12 +6343,13 @@ aj<0
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\d\in\bbz$
 \end_inset
 
  המקיים 
-\begin_inset Formula $\left(\d\equiv0\mod4\right)\lor\left(\d\equiv1\mod4\right)$
+\begin_inset Formula $\left(\d\equiv0\mod 4\right)\lor\left(\d\equiv1\mod 4\right)$
 \end_inset
 
  אזי 
@@ -6070,7 +6366,8 @@ aj<0
 פירוק תבנית ריבועית לגורמים לינאריים
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
 \end_inset
 
@@ -6088,11 +6385,12 @@ aj<0
 משפט גאוס
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $f$
 \end_inset
 
@@ -6100,11 +6398,11 @@ aj<0
 \begin_inset Formula $\bbq$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $f$
 \end_inset
 
@@ -6112,7 +6410,7 @@ aj<0
 \begin_inset Formula $\bbz$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -6122,11 +6420,12 @@ aj<0
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $f$
 \end_inset
 
@@ -6134,7 +6433,7 @@ aj<0
 \begin_inset Formula $\bbz$
 \end_inset
 
-(
+)
 \begin_inset Formula $\left(\exists k\in\bbz.\Delta=k^{2}\right)\iff$
 \end_inset
 
@@ -6148,7 +6447,8 @@ aj<0
 ייצוג על ידי תבנית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
 \end_inset
 
@@ -6170,19 +6470,20 @@ aj<0
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\d\in\bbz\backslash\left\{ k^{2}\mid k\in\bbz\right\} $
 \end_inset
 
  המקיים 
-\begin_inset Formula $\left(\d\equiv0\mod4\right)\lor\left(\d\equiv1\mod4\right)$
+\begin_inset Formula $\left(\d\equiv0\mod 4\right)\lor\left(\d\equiv1\mod 4\right)$
 \end_inset
 
  ויהי 
 \begin_inset Formula $n\in\bbz$
 \end_inset
 
- אזי )קיימת 
+ אזי (קיימת 
 \begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
 \end_inset
 
@@ -6198,7 +6499,7 @@ aj<0
 \begin_inset Formula $f$
 \end_inset
 
-(
+)
 \begin_inset Formula $\left(\sols_{\bbz_{4n}}\left(x^{2}=\d\right)\ne\emptyset\right)\iff$
 \end_inset
 
@@ -6212,7 +6513,8 @@ aj<0
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\text{SL}_{2}\left(\bbz\right)=\left\{ U\in M_{2}\left(\bbz\right)\mid\det\left(U\right)=1\right\} $
 \end_inset
 
@@ -6226,7 +6528,8 @@ aj<0
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\text{SL}_{2}\left(\bbz\right)$
 \end_inset
 
@@ -6240,7 +6543,8 @@ aj<0
 תבניות ריבועיות שקולות
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $f,g\in\sym_{2}\left(\bbz\right)$
 \end_inset
 
@@ -6258,7 +6562,8 @@ aj<0
 טענה
 \series default
 \color inherit
-: שקילות תבניות ריבועיות הינו יחס שקילות.
+:
+ שקילות תבניות ריבועיות הינו יחס שקילות.
 \end_layout
 
 \begin_layout Standard
@@ -6268,7 +6573,8 @@ aj<0
 סימון
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g\in\sym_{2}\left(\bbz\right)$
 \end_inset
 
@@ -6286,7 +6592,8 @@ aj<0
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g\in\sym_{2}\left(\bbz\right)$
 \end_inset
 
@@ -6304,13 +6611,14 @@ aj<0
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $U\in\text{SL}_{2}\left(\bbz\right)$
 \end_inset
 
  ונגדיר 
 \begin_inset Formula $\substack{T_{U}:\bbz^{2}\to\bbz^{2}\\
-T_{U}\left(m,n\right)=\left(m,n\right)\cdot U
+T_{U}\left)m,n\right(=\left)m,n\right(\cdot U
 }
 $
 \end_inset
@@ -6348,7 +6656,8 @@ $
 טענה
 \series default
 \color inherit
-: תהיינה 
+:
+ תהיינה 
 \begin_inset Formula $f,g\in\sym_{2}\left(\bbz\right)$
 \end_inset
 
@@ -6374,7 +6683,7 @@ $
 \begin_inset Formula $n\in\bbz$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $n$
 \end_inset
 
@@ -6382,11 +6691,11 @@ $
 \begin_inset Formula $f$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $n$
 \end_inset
 
@@ -6394,7 +6703,7 @@ $
 \begin_inset Formula $g$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -6404,7 +6713,8 @@ $
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
 \end_inset
 
@@ -6428,7 +6738,8 @@ $
 אלגוריתם חפיפת תבנית לצורה קנונית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left(\begin{smallmatrix}a & \frac{b}{2}\\
 \frac{b}{2} & c
 \end{smallmatrix}\right)\in\sym_{2}\left(\bbz\right)$
@@ -6472,7 +6783,8 @@ k & 1
 משפט
 \series default
 \color inherit
-: נסמן 
+:
+ נסמן 
 \begin_inset Formula $\text{CanonicalFormMatrixCongruence}\left(\left(\begin{smallmatrix}a & \frac{b}{2}\\
 \frac{b}{2} & c
 \end{smallmatrix}\right)\right)=\left(\begin{smallmatrix}d & \frac{e}{2}\\
@@ -6502,7 +6814,8 @@ k & 1
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in\nicefrac{\sym_{2}\left(\bbz\right)}{\sim}$
 \end_inset
 
@@ -6524,12 +6837,13 @@ k & 1
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\d\in\bbz\backslash\left\{ k^{2}\mid k\in\bbz\right\} $
 \end_inset
 
  המקיים 
-\begin_inset Formula $\left(\d\equiv0\mod4\right)\lor\left(\d\equiv1\mod4\right)$
+\begin_inset Formula $\left(\d\equiv0\mod 4\right)\lor\left(\d\equiv1\mod 4\right)$
 \end_inset
 
  אזי 
@@ -6546,7 +6860,8 @@ k & 1
 תבנית חיובית לחלוטין
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\begin{smallmatrix}a & \frac{b}{2}\\
 \frac{b}{2} & c
 \end{smallmatrix}\right)\in\sym_{2}\left(\bbz\right)$
@@ -6566,7 +6881,8 @@ k & 1
 מחלקה חיובית לחלוטין
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $A\in\nicefrac{\sym_{2}\left(\bbz\right)}{\sim}$
 \end_inset
 
@@ -6584,7 +6900,8 @@ k & 1
 תבנית שלילית לחלוטין
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\begin{smallmatrix}a & \frac{b}{2}\\
 \frac{b}{2} & c
 \end{smallmatrix}\right)\in\sym_{2}\left(\bbz\right)$
@@ -6604,7 +6921,8 @@ k & 1
 מחלקה שלילית לחלוטין
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $A\in\nicefrac{\sym_{2}\left(\bbz\right)}{\sim}$
 \end_inset
 
@@ -6622,7 +6940,8 @@ k & 1
 תבנית בצורה מצומצמת
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\begin{smallmatrix}a & \frac{b}{2}\\
 \frac{b}{2} & c
 \end{smallmatrix}\right)\in\sym_{2}\left(\bbz\right)$
@@ -6642,7 +6961,8 @@ k & 1
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A\in\nicefrac{\sym_{2}\left(\bbz\right)}{\sim}$
 \end_inset
 
@@ -6660,7 +6980,8 @@ k & 1
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
 \end_inset
 
@@ -6678,7 +6999,8 @@ k & 1
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
 \end_inset
 
@@ -6696,7 +7018,8 @@ k & 1
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\in\sym_{2}\left(\bbz\right)$
 \end_inset
 
@@ -6714,7 +7037,8 @@ k & 1
 משפט
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g\in\sym_{2}\left(\bbz\right)$
 \end_inset
 
@@ -6732,7 +7056,8 @@ k & 1
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\d\in\bbz\backslash\bbn$
 \end_inset
 
@@ -6750,12 +7075,13 @@ k & 1
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
  אזי 
-\begin_inset Formula ${\scriptstyle \left(\exists k,m\in\bbn.k^{2}+m^{2}=n\right)\iff\left(\forall p\in\bbp.\left(p\mid n\right)\land\left(p\equiv3\mod4\right)\implies\max\left\{ r\in\bbn\mid\left(p^{r}\mid n\right)\right\} \in\bbn_{\text{even}}\right)}$
+\begin_inset Formula ${\scriptstyle \left(\exists k,m\in\bbn.k^{2}+m^{2}=n\right)\iff\left(\forall p\in\bbp.\left(p\mid n\right)\land\left(p\equiv3\mod 4\right)\implies\max\left\{ r\in\bbn\mid\left(p^{r}\mid n\right)\right\} \in\bbn_{\text{even}}\right)}$
 \end_inset
 
 .
@@ -6768,12 +7094,13 @@ k & 1
 מסקנה משפט פרמה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p\in\bbp\backslash\left\{ 2\right\} $
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(\exists k,m\in\bbn.k^{2}+m^{2}=p\right)\iff\left(p\equiv1\mod4\right)$
+\begin_inset Formula $\left(\exists k,m\in\bbn.k^{2}+m^{2}=p\right)\iff\left(p\equiv1\mod 4\right)$
 \end_inset
 
 .
@@ -6784,15 +7111,16 @@ k & 1
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\theta\in\bbr$
 \end_inset
 
- אזי )קיים ל־
+ אזי (קיים ל־
 \begin_inset Formula $\theta$
 \end_inset
 
- יצוג עשרוני סופי(
+ יצוג עשרוני סופי)
 \begin_inset Formula $\left(\exists z\in\bbz.\exists n,k\in\bbn.\theta=\frac{z}{2^{n}5^{k}}\right)\iff$
 \end_inset
 
@@ -6804,23 +7132,24 @@ k & 1
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\theta\in\bbr$
 \end_inset
 
- אזי )קיים ל־
+ אזי (קיים ל־
 \begin_inset Formula $\theta$
 \end_inset
 
- יצוג עשרוני סופי(
+ יצוג עשרוני סופי)
 \begin_inset Formula $\iff$
 \end_inset
 
-)קיימים ל־
+(קיימים ל־
 \begin_inset Formula $\theta$
 \end_inset
 
- יצוגים עשרוניים שונים(.
+ יצוגים עשרוניים שונים).
 \end_layout
 
 \begin_layout Standard
@@ -6828,15 +7157,16 @@ k & 1
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\theta\in\bbr$
 \end_inset
 
- אזי )קיים ל־
+ אזי (קיים ל־
 \begin_inset Formula $\theta$
 \end_inset
 
- יצוג מחזורי החל ממקום מסויים(
+ יצוג מחזורי החל ממקום מסויים)
 \begin_inset Formula $\left(\theta\in\bbq\right)\iff$
 \end_inset
 
@@ -6848,7 +7178,8 @@ k & 1
 \series bold
 סימון
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $x_{0}\ldots x_{n}\in\bbr$
 \end_inset
 
@@ -6864,7 +7195,8 @@ k & 1
 \series bold
 שבר משולב
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{0}\ldots a_{n}\in\bbz$
 \end_inset
 
@@ -6880,7 +7212,8 @@ k & 1
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\theta\in\bbr$
 \end_inset
 
@@ -6896,7 +7229,8 @@ k & 1
 \series bold
 סימון
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $x\in\bbr^{\bbn}$
 \end_inset
 
@@ -6912,7 +7246,8 @@ k & 1
 \series bold
 שבר משולב
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a\in\bbz^{\bbn}$
 \end_inset
 
@@ -6928,7 +7263,8 @@ k & 1
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\theta\in\bbr$
 \end_inset
 
@@ -6944,7 +7280,8 @@ k & 1
 \series bold
 אלגוריתם פיתוח מספר ממשי לשבר משולב
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\theta\in\bbr$
 \end_inset
 
@@ -6969,7 +7306,8 @@ k & 1
 \series bold
 משפט
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\theta\in\bbr$
 \end_inset
 
@@ -6992,7 +7330,8 @@ k & 1
 \series bold
 מנות חלקיות
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\theta\in\bbr\backslash\bbq$
 \end_inset
 
@@ -7012,7 +7351,8 @@ k & 1
 \series bold
 הגורמים המתכנסים
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\theta\in\bbr\backslash\bbq$
 \end_inset
 
@@ -7032,7 +7372,8 @@ k & 1
 \series bold
 הגדרה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a\in\bbz^{\bbn}$
 \end_inset
 
@@ -7068,7 +7409,8 @@ q_{-1}=0
 \series bold
 טענה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a\in\bbr^{\bbn}$
 \end_inset
 
@@ -7084,7 +7426,8 @@ q_{-1}=0
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\theta\in\bbr\backslash\bbq$
 \end_inset
 
@@ -7104,7 +7447,8 @@ q_{-1}=0
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\forall n\in\bbn\uplus\left\{ -1\right\} .p_{n}q_{n-1}-p_{n-1}q_{n}=\left(-1\right)^{n-1}$
 \end_inset
 
@@ -7116,7 +7460,8 @@ q_{-1}=0
 \series bold
 מסקנה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\forall n\in\bbn\uplus\left\{ -1\right\} .\gcd\left(p_{n},q_{n}\right)=1$
 \end_inset
 
@@ -7128,7 +7473,8 @@ q_{-1}=0
 \series bold
 טענה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\theta\in\bbr\backslash\bbq$
 \end_inset
 
@@ -7144,7 +7490,8 @@ q_{-1}=0
 \series bold
 מסקנה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a\in\bbz^{\bbn}$
 \end_inset
 
@@ -7160,7 +7507,8 @@ q_{-1}=0
 \series bold
 למה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\bbz$
 \end_inset
 
@@ -7184,7 +7532,8 @@ q_{-1}=0
 \series bold
 סימון
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{0}\ldots a_{n},b_{0}\ldots b_{m}\in\bbz$
 \end_inset
 
@@ -7200,7 +7549,8 @@ q_{-1}=0
 \series bold
 טרינום
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b,c\in\bbr$
 \end_inset
 
@@ -7220,7 +7570,8 @@ q_{-1}=0
 \series bold
 דסקרימיננטה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $ax^{2}+bx+c\in\bbr\left[x\right]$
 \end_inset
 
@@ -7236,7 +7587,8 @@ q_{-1}=0
 \series bold
 משפט לגראנז'
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\a\in\bbr$
 \end_inset
 
@@ -7244,7 +7596,7 @@ q_{-1}=0
 \begin_inset Formula $\iff\left(\exists a_{0}\ldots a_{k},b_{1}\ldots b_{m}\in\bbz.\a=\left[a_{0}\ldots a_{k},\overline{b_{1}\ldots b_{m}}\right]\right)$
 \end_inset
 
-)קיים טרינום 
+(קיים טרינום 
 \begin_inset Formula $f\in\bbz\left[x\right]$
 \end_inset
 
@@ -7256,7 +7608,7 @@ q_{-1}=0
 \begin_inset Formula $f\left(\a\right)=0$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -7270,7 +7622,8 @@ q_{-1}=0
 
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\a\in\bbr$
 \end_inset
 
@@ -7291,7 +7644,8 @@ m\in\bbz
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\theta\in\bbr$
 \end_inset
 
@@ -7309,7 +7663,8 @@ m\in\bbz
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\theta\in\bbr$
 \end_inset
 
@@ -7327,7 +7682,8 @@ m\in\bbz
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\theta\in\bbr\backslash\bbq$
 \end_inset
 
@@ -7345,7 +7701,8 @@ m\in\bbz
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\theta\in\bbr\backslash\bbq$
 \end_inset
 
@@ -7363,7 +7720,8 @@ m\in\bbz
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\theta\in\bbr\backslash\bbq$
 \end_inset
 
@@ -7375,7 +7733,8 @@ m\in\bbz
 \end_layout
 
 \begin_layout Itemize
-במובן החלש: יהיו 
+במובן החלש:
+ יהיו 
 \begin_inset Formula $a,b\in\bbz$
 \end_inset
 
@@ -7391,7 +7750,8 @@ m\in\bbz
 \end_layout
 
 \begin_layout Itemize
-במובן החזק: יהיו 
+במובן החזק:
+ יהיו 
 \begin_inset Formula $a,b\in\bbz$
 \end_inset
 
@@ -7413,7 +7773,8 @@ m\in\bbz
 מספר אלגברי
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\a\in\bbr$
 \end_inset
 
@@ -7431,7 +7792,8 @@ m\in\bbz
 מספר טרנסצנדנטי
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\a\in\bbr$
 \end_inset
 
@@ -7445,7 +7807,8 @@ m\in\bbz
 מעלה של מספר אלגברי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\a\in\bbr$
 \end_inset
 
@@ -7463,7 +7826,8 @@ m\in\bbz
 משפט ליוביל
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\a\in\bbr$
 \end_inset
 
@@ -7485,7 +7849,8 @@ m\in\bbz
 מספר ליוביל
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\a\in\bbr$
 \end_inset
 
@@ -7503,7 +7868,8 @@ m\in\bbz
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\a\in\bbr$
 \end_inset
 
@@ -7521,7 +7887,8 @@ m\in\bbz
 קבוע ליוביל
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{10^{n!}}$
 \end_inset
 
@@ -7535,7 +7902,8 @@ m\in\bbz
 טענה
 \series default
 \color inherit
-: קבוע ליוביל הינו מספר ליוביל.
+:
+ קבוע ליוביל הינו מספר ליוביל.
 \end_layout
 
 \begin_layout Standard
@@ -7545,7 +7913,8 @@ m\in\bbz
 שדה ריבועי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $d\in\bbz\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
 \end_inset
 
@@ -7563,7 +7932,8 @@ m\in\bbz
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $d\in\bbz\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
 \end_inset
 
@@ -7607,7 +7977,8 @@ m\in\bbz
 מספר אי־רציונלי ממעלה שנייה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\theta\in\bbr\backslash\bbq$
 \end_inset
 
@@ -7629,7 +8000,8 @@ m\in\bbz
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $f\in\bbz\left[x\right]$
 \end_inset
 
@@ -7659,7 +8031,8 @@ m\in\bbz
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g\in\bbq\left[x\right]$
 \end_inset
 
@@ -7681,7 +8054,8 @@ m\in\bbz
 מספר אי־רציונלי ממעלה שנייה בעל מחזוריות טהורה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\theta\in\bbr$
 \end_inset
 
@@ -7699,15 +8073,16 @@ m\in\bbz
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\theta\in\bbr$
 \end_inset
 
- אי־רציונלי ממעלה שנייה אזי )
+ אי־רציונלי ממעלה שנייה אזי (
 \begin_inset Formula $\theta$
 \end_inset
 
- בעל מחזוריות טהורה(
+ בעל מחזוריות טהורה)
 \begin_inset Formula $\iff$
 \end_inset
 
@@ -7725,7 +8100,8 @@ m\in\bbz
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $d\in\bbn\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
 \end_inset
 
@@ -7743,7 +8119,8 @@ m\in\bbz
 משוואת פל
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $d\in\bbn\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
 \end_inset
 
@@ -7761,7 +8138,8 @@ m\in\bbz
 פתרון משוואת פל
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\substack{d\in\bbn\backslash\left\{ k^{2}\mid k\in\bbn\right\} \\
 \sqrt{d}=\left[a_{0},\overline{a_{1}\ldots a_{m}}\right]
 }
@@ -7785,7 +8163,8 @@ $
 סימון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $d\in\bbn\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
 \end_inset
 
@@ -7806,13 +8185,14 @@ x^{2}-dy^{2}=1
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $d\in\bbn\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
 \end_inset
 
  אזי 
 \begin_inset Formula $\O_{d}^{*}=\left\{ x+y\sqrt{d}\bmid\substack{x,y\in\bbz\\
-N\left(x+y\sqrt{d}\right)=1
+N\left)x+y\sqrt{d}\right(=1
 }
 \right\} $
 \end_inset
@@ -7827,7 +8207,8 @@ N\left(x+y\sqrt{d}\right)=1
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\O_{d}^{*}$
 \end_inset
 
@@ -7845,7 +8226,8 @@ N\left(x+y\sqrt{d}\right)=1
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $z\in\bbq\left[\sqrt{d}\right]$
 \end_inset
 
@@ -7863,7 +8245,8 @@ N\left(x+y\sqrt{d}\right)=1
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $d\in\bbn\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
 \end_inset
 
@@ -7881,7 +8264,8 @@ N\left(x+y\sqrt{d}\right)=1
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $d\in\bbn\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
 \end_inset
 
@@ -7899,7 +8283,8 @@ N\left(x+y\sqrt{d}\right)=1
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $d\in\bbn\backslash\left\{ k^{2}\mid k\in\bbn\right\} $
 \end_inset
 

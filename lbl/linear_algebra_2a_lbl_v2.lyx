@@ -20,6 +20,7 @@
 \usepackage{booktabs}
 \usepackage{fancyhdr}
 
+
 % it's here?
 \setlength{\tabcolsep}{1pt}
 \renewcommand{\arraystretch}{1.25} % Default value: 1
@@ -49,6 +50,9 @@
 \definecolor{stringcolor}{RGB}{0,168,0}
 \definecolor{remarkcolor}{RGB}{150,145,91} % 255,225,88
 
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{gray}{#1}}
+\SetCommentSty{mycommfont}
+
 % hyperlinks
 \hypersetup{
     colorlinks=true,
@@ -74,13 +78,20 @@
 \end_preamble
 \options no-math
 \use_default_options true
+\begin_modules
+algorithm2e
+\end_modules
 \maintain_unincluded_children no
+\begin_local_layout
+Format 66
+PackageOptions algorithm2e vlined
+\end_local_layout
 \language hebrew
 \language_package default
 \inputencoding auto-legacy
 \fontencoding auto
 \font_roman "default" "David CLM"
-\font_sans "default" "default"
+\font_sans "default" "Times New Roman"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
@@ -99,9 +110,22 @@
 \bibtex_command default
 \index_command default
 \float_placement H
+\float_alignment class
 \paperfontsize default
 \spacing onehalf
-\use_hyperref false
+\use_hyperref true
+\pdf_title "Linear Algebra 2a lbl"
+\pdf_author "Ron Mikhelman"
+\pdf_subject "Math Summeries"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize letter
 \use_geometry true
 \use_package amsmath 2

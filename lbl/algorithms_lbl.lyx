@@ -19,16 +19,6 @@
 \usepackage{polynom}
 \usepackage{booktabs}
 \usepackage{fancyhdr}
-\usepackage{multicol}
-\usepackage{color}
-\usepackage{xcolor}
-
-
-% heb font
-\newfontfamily\hebrewfont{David CLM}
-\newfontfamily\hebrewfontsf{David CLM}
-\newfontfamily\hebrewfonttt{David CLM}
-\newfontface\tempfont{Times New Roman}[Contextuals={WordInitial,WordFinal}]
 
 
 % it's here?
@@ -81,6 +71,8 @@
 \renewcommand{\impliedby}{\negthickspace\RonMikhelmanLolll\negthickspace}
 
 %for defnos
+\usepackage{multicol}
+\usepackage{color}
 \setlength{\columnseprule}{1pt}
 \def\columnseprulecolor{\color{black}}
 \end_preamble
@@ -96,12 +88,12 @@ PackageOptions algorithm2e vlined
 \end_local_layout
 \language hebrew
 \language_package default
-\inputencoding utf8
+\inputencoding auto-legacy
 \fontencoding auto
-\font_roman "lmodern" "default"
-\font_sans "avant" "default"
-\font_typewriter "courier" "default"
-\font_math "default" "auto"
+\font_roman "default" "David CLM"
+\font_sans "default" "Times New Roman"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
@@ -121,7 +113,19 @@ PackageOptions algorithm2e vlined
 \float_alignment class
 \paperfontsize default
 \spacing onehalf
-\use_hyperref false
+\use_hyperref true
+\pdf_title "Algorithms lbl"
+\pdf_author "Ron Mikhelman"
+\pdf_subject "Math Summeries"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize letter
 \use_geometry true
 \use_package amsmath 2
@@ -787,7 +791,7 @@ end{algorithm}
 \begin_inset Formula $\deg\left(v\right)\in\bbn_{\text{even}}$
 \end_inset
 
-.(
+).
 \end_layout
 
 \begin_layout Standard
@@ -1054,11 +1058,11 @@ end{algorithm}
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left|\left\{ v\in V\left(G\right)\mid\deg\left(v\right)\in\bbn_{\text{odd}}\right\} \right|=2$
 \end_inset
 
-.(
+).
 \end_layout
 
 \begin_layout Standard
@@ -1318,7 +1322,7 @@ end{algorithm}
 \begin_inset Formula $\text{IsBipartite}\left(G\right)=\text{true}$
 \end_inset
 
-.(
+).
 \end_layout
 
 \begin_layout Standard
@@ -1523,11 +1527,11 @@ end{algorithm}
 \begin_inset Formula $G_{\pi}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $e$
 \end_inset
 
@@ -1652,7 +1656,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -2706,11 +2710,11 @@ end{algorithm}
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $k\left[u\right]<k\left[v\right]<f\left[u\right]$
 \end_inset
 
-.(
+).
 \end_layout
 
 \begin_layout Standard
@@ -2737,7 +2741,7 @@ end{algorithm}
 \begin_inset Formula $f\left[v\right]<k\left[u\right]$
 \end_inset
 
-.(
+).
 \end_layout
 
 \begin_layout Standard
@@ -2979,7 +2983,7 @@ end{algorithm}
 \begin_inset Formula $G$
 \end_inset
 
- רציקלי)
+ אציקלי)
 \begin_inset Formula $\iff$
 \end_inset
 
@@ -3379,7 +3383,7 @@ end{algorithm}
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $C$
 \end_inset
 
@@ -3865,7 +3869,7 @@ end{algorithm}
 \begin_inset Formula $C\in\text{SCC}\left(G\right)$
 \end_inset
 
-.(
+).
 \end_layout
 
 \begin_layout Standard
@@ -5235,13 +5239,28 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\bor}{\text{\textsf{Borůvska}}}
+{\text{\textsf{Borůvska}}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\borAlg}{\text{\textsf{Borůvska'sAlgorithm}}}
+{\text{\textsf{Borůvska'sAlgorithm}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color green
 אלגוריתם 
 \lang english
 
-\begin_inset Formula $\text{Borůvska}$
+\begin_inset Formula $\bor$
 \end_inset
 
 
@@ -5283,7 +5302,9 @@ begin{algorithm}
 \backslash
 SetAlgoLined 
 \backslash
-SetKwFunction{name}{Borůvska’sAlgorithm}
+SetKwFunction{name}{
+\backslash
+borAlg}
 \end_layout
 
 \begin_layout Plain Layout
@@ -5427,7 +5448,7 @@ end{algorithm}
 ע אזי סיבוכיות 
 \lang english
 
-\begin_inset Formula $\text{Borůvska’sAlgorithm}\left(G\right)$
+\begin_inset Formula $\borAlg\left(G\right)$
 \end_inset
 
 
@@ -5501,7 +5522,7 @@ end{algorithm}
 ע אזי 
 \lang english
 
-\begin_inset Formula $\text{Borůvska’sAlgorithm}\left(G\right)$
+\begin_inset Formula $\borAlg\left(G\right)$
 \end_inset
 
 
@@ -6970,7 +6991,7 @@ end{algorithm}
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $\text{BellmanFord}$
 \end_inset
 
@@ -7477,7 +7498,7 @@ end{algorithm}
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $\text{IsZeroCircle}$
 \end_inset
 
@@ -7485,7 +7506,7 @@ end{algorithm}
 \begin_inset Formula $\text{true}$
 \end_inset
 
-.(
+).
 \end_layout
 
 \begin_layout Standard
@@ -8031,7 +8052,7 @@ end{algorithm}
 \begin_inset Formula $\text{APSP}$
 \end_inset
 
-(
+)
 \series default
 :
  יהי 
@@ -8590,11 +8611,11 @@ end{algorithm}
 \begin_inset Formula $\text{None}$
 \end_inset
 
-.(
+).
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $G$
 \end_inset
 
