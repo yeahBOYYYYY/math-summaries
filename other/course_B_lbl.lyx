@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -19,6 +19,7 @@
 \usepackage{polynom}
 \usepackage{booktabs}
 \usepackage{fancyhdr}
+
 
 % it's here?
 \setlength{\tabcolsep}{1pt}
@@ -49,6 +50,9 @@
 \definecolor{stringcolor}{RGB}{0,168,0}
 \definecolor{remarkcolor}{RGB}{150,145,91} % 255,225,88
 
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{gray}{#1}}
+\SetCommentSty{mycommfont}
+
 % hyperlinks
 \hypersetup{
     colorlinks=true,
@@ -74,19 +78,28 @@
 \end_preamble
 \options no-math
 \use_default_options true
-\maintain_unincluded_children false
+\begin_modules
+algorithm2e
+\end_modules
+\maintain_unincluded_children no
+\begin_local_layout
+Format 66
+PackageOptions algorithm2e vlined
+\end_local_layout
 \language hebrew
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "David CLM"
-\font_sans "default" "default"
+\font_sans "default" "Times New Roman"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -97,10 +110,23 @@
 \bibtex_command default
 \index_command default
 \float_placement H
+\float_alignment class
 \paperfontsize default
 \spacing onehalf
-\use_hyperref false
-\papersize letterpaper
+\use_hyperref true
+\pdf_title "Course B lbl"
+\pdf_author "Ron Mikhelman"
+\pdf_subject "Math Summeries"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letter
 \use_geometry true
 \use_package amsmath 2
 \use_package amssymb 2
@@ -121,7 +147,9 @@
 \suppress_date true
 \justification false
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -141,11 +169,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -154,6 +187,7 @@
 \begin_inset CommandInset include
 LatexCommand include
 filename "E:/University/macros.lyx"
+literal "true"
 
 \end_inset
 
@@ -163,7 +197,7 @@ filename "E:/University/macros.lyx"
 \begin_layout Standard
 \begin_inset FormulaMacro
 \renewcommand{\P}[2]{\mathcal{P}_{#2}\left(#1\right)}
-{\mathcal{P}_{#2}\left(#1\right)}
+{\mathcal{P}_{#2}\left)#1\right(}
 \end_inset
 
 
@@ -174,7 +208,8 @@ filename "E:/University/macros.lyx"
 \series bold
 סדרה ממשית
 \series default
-: 
+:
+ 
 \begin_inset Formula $a:\bbn\to\bbr$
 \end_inset
 
@@ -186,11 +221,13 @@ filename "E:/University/macros.lyx"
 \series bold
 סימון
 \series default
-: 
+:
+ 
 \begin_inset Formula $a_{n}=a\left(n\right)$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $a=\left(a_{n}\right)_{n=0}^{\infty}$
 \end_inset
 
@@ -206,7 +243,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מונוטונית
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -214,7 +252,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-עולה ממש: 
+עולה ממש:
+ 
 \begin_inset Formula $\forall n,m\in\bbn.n<m\implies a_{n}<a_{m}$
 \end_inset
 
@@ -222,7 +261,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-עולה: 
+עולה:
+ 
 \begin_inset Formula $\forall n,m\in\bbn.n<m\implies a_{n}\le a_{m}$
 \end_inset
 
@@ -230,7 +270,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-יורדת ממש: 
+יורדת ממש:
+ 
 \begin_inset Formula $\forall n,m\in\bbn.n<m\implies a_{n}>a_{m}$
 \end_inset
 
@@ -238,7 +279,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-יורדת: 
+יורדת:
+ 
 \begin_inset Formula $\forall n,m\in\bbn.n<m\implies a_{n}\ge a_{m}$
 \end_inset
 
@@ -254,7 +296,8 @@ filename "E:/University/macros.lyx"
 \series bold
 חסומה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\exists M\in\bbr.\forall n\in\bbn.\left|a_{n}\right|<M$
 \end_inset
 
@@ -274,7 +317,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מלמעלה/מלעיל
 \series default
-: 
+:
+ 
 \begin_inset Formula $\exists M\in\bbr.\forall n\in\bbn.a_{n}<M$
 \end_inset
 
@@ -294,7 +338,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מלמטה/מלרע
 \series default
-: 
+:
+ 
 \begin_inset Formula $\exists M\in\bbr.\forall n\in\bbn.a_{n}>M$
 \end_inset
 
@@ -306,7 +351,8 @@ filename "E:/University/macros.lyx"
 \series bold
 גבול
 \series default
-: 
+:
+ 
 \begin_inset Formula $\left(\underset{n\to\infty}{\lim}a_{n}=L\right)\equiv\left(\forall\e>0.\exists N\in\bbn.\forall n\ge N.\left|a_{n}-L\right|<\e\right)$
 \end_inset
 
@@ -318,7 +364,8 @@ filename "E:/University/macros.lyx"
 \series bold
 סימון
 \series default
-: 
+:
+ 
 \begin_inset Formula $\left(a_{n}\xrightarrow[n\to\infty]{}L\right)\equiv\left(\underset{n\to\infty}{\lim}a_{n}=L\right)$
 \end_inset
 
@@ -334,7 +381,8 @@ filename "E:/University/macros.lyx"
 \series bold
 הגבול
 \series default
-: 
+:
+ 
 \begin_inset Formula $\left(\lim_{n\to\infty}a_{n}=L_{1}\right)\land\left(\lim_{n\to\infty}a_{n}=L_{2}\right)\implies L_{1}=L_{2}$
 \end_inset
 
@@ -346,7 +394,8 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\lim_{n\to\infty}c=c$
 \end_inset
 
@@ -366,11 +415,13 @@ filename "E:/University/macros.lyx"
 \series bold
 גבולות
 \series default
-: נניח כי 
+:
+ נניח כי 
 \begin_inset Formula $\lim_{n\to\infty}a_{n}=L_{1}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\lim_{n\to\infty}b_{n}=L_{2}$
 \end_inset
 
@@ -407,7 +458,8 @@ filename "E:/University/macros.lyx"
 \series bold
 הסנדוויץ'
 \series default
-: 
+:
+ 
 \begin_inset Formula $\left(\forall n\in\bbn.a_{n}\le b_{n}\le c_{n}\right)\land\left(\lim_{n\to\infty}a_{n}=L=\lim_{n\to\infty}c_{n}\right)\implies\left(\lim_{n\to\infty}b_{n}=L\right)$
 \end_inset
 
@@ -427,7 +479,8 @@ filename "E:/University/macros.lyx"
 \series bold
 הרחב
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -469,11 +522,13 @@ filename "E:/University/macros.lyx"
 \series bold
 הרחב
 \series default
-: נניח כי 
+:
+ נניח כי 
 \begin_inset Formula $\lim_{n\to\infty}a_{n}=L_{1}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\lim_{n\to\infty}b_{n}=L_{2}$
 \end_inset
 
@@ -525,7 +580,8 @@ filename "E:/University/macros.lyx"
 \series bold
 הרחב
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b$
 \end_inset
 
@@ -555,7 +611,8 @@ filename "E:/University/macros.lyx"
 \series bold
 הערה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -576,7 +633,8 @@ filename "E:/University/macros.lyx"
 משפט בולצאנו ויירשטראס
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -594,7 +652,8 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $q\in\left(0,1\right)$
 \end_inset
 
@@ -616,7 +675,8 @@ filename "E:/University/macros.lyx"
 גאומטרית
 \series default
 \color inherit
-: סדרה 
+:
+ סדרה 
 \begin_inset Formula $a$
 \end_inset
 
@@ -634,7 +694,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -660,7 +721,8 @@ filename "E:/University/macros.lyx"
 ברנולי
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall n\in\bbn.\forall x\in\left(-1,\infty\right).\left(1+x\right)^{n}\ge1+nx$
 \end_inset
 
@@ -674,9 +736,10 @@ filename "E:/University/macros.lyx"
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\lim_{n\to\infty}q^{n}=\begin{cases}
-0 & q\in\left(0,1\right)\\
+0 & q\in\left)0,1\right(\\
 \infty & q\in\left(1,\infty\right)
 \end{cases}$
 \end_inset
@@ -695,7 +758,8 @@ filename "E:/University/macros.lyx"
 המנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -724,7 +788,8 @@ filename "E:/University/macros.lyx"
 השורש
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -745,7 +810,8 @@ filename "E:/University/macros.lyx"
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $p,q\in\bbr\left[x\right]$
 \end_inset
 
@@ -773,7 +839,8 @@ filename "E:/University/macros.lyx"
 סדרת הסכומים החלקיים
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -795,7 +862,8 @@ filename "E:/University/macros.lyx"
 ההפרשים
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -816,7 +884,8 @@ b_{n}-b_{n-1} & else
 טור
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sum_{k=0}^{\infty}a_{k}=\lim_{n\to\infty}\sum_{k=0}^{n}a_{k}$
 \end_inset
 
@@ -830,7 +899,8 @@ b_{n}-b_{n-1} & else
 הערה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -859,7 +929,8 @@ b_{n}-b_{n-1} & else
 הנדסית
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall q\in\bbr.\sum_{k=0}^{n}q^{k}=\frac{1-q^{n+1}}{1-q}$
 \end_inset
 
@@ -873,7 +944,8 @@ b_{n}-b_{n-1} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall q\in\left(-1,1\right).\sum_{n=0}^{\infty}q^{n}=\frac{1}{1-q}$
 \end_inset
 
@@ -887,7 +959,8 @@ b_{n}-b_{n-1} & else
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sum_{n=0}^{\infty}a_{n}$
 \end_inset
 
@@ -913,7 +986,8 @@ b_{n}-b_{n-1} & else
 ההרמוני
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{n}$
 \end_inset
 
@@ -927,7 +1001,8 @@ b_{n}-b_{n-1} & else
 משפט
 \series default
 \color inherit
-: הטור ההרמוני מתבדר.
+:
+ הטור ההרמוני מתבדר.
 \end_layout
 
 \begin_layout Standard
@@ -937,7 +1012,8 @@ b_{n}-b_{n-1} & else
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b$
 \end_inset
 
@@ -969,7 +1045,8 @@ b_{n}-b_{n-1} & else
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{n^{2}}$
 \end_inset
 
@@ -991,7 +1068,8 @@ b_{n}-b_{n-1} & else
 טורים
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a,b$
 \end_inset
 
@@ -1019,7 +1097,8 @@ b_{n}-b_{n-1} & else
 סביבה מנוקבת
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\d>0$
 \end_inset
 
@@ -1045,7 +1124,8 @@ b_{n}-b_{n-1} & else
 נקודתי
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\lim_{x\to x_{0}}f\left(x\right)=L\right)\equiv\left(\forall\e>0.\exists\d>0.\forall x\in I_{x_{0}}.\left|f\left(x\right)-L\right|<\e\right)$
 \end_inset
 
@@ -1071,7 +1151,8 @@ b_{n}-b_{n-1} & else
 שמאלי
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\lim_{x\to x_{0}^{-}}f\left(x\right)=L\right)\equiv\left(\forall\e>0.\exists\d>0.\forall x\in\left(x_{0}-\d,x_{0}\right).\left|f\left(x\right)-L\right|<\e\right)$
 \end_inset
 
@@ -1097,7 +1178,8 @@ b_{n}-b_{n-1} & else
 ימני
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\lim_{x\to x_{0}^{+}}f\left(x\right)=L\right)\equiv\left(\forall\e>0.\exists\d>0.\forall x\in\left(x_{0},x_{0}+\d\right).\left|f\left(x\right)-L\right|<\e\right)$
 \end_inset
 
@@ -1111,7 +1193,8 @@ b_{n}-b_{n-1} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\lim_{x\to x_{0}^{-}}f\left(x\right)=L=\lim_{x\to x_{0}^{+}}f\left(x\right)\right)\implies\left(\lim_{x\to x_{0}}f\left(x\right)=L\right)$
 \end_inset
 
@@ -1125,7 +1208,8 @@ b_{n}-b_{n-1} & else
 גבול
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\lim_{x\to\infty}f\left(x\right)=L\right)\equiv\left(\forall\e>0.\exists M\in\bbr.\forall x\ge M.\left|f\left(x\right)-L\right|<\e\right)$
 \end_inset
 
@@ -1175,7 +1259,8 @@ b_{n}-b_{n-1} & else
 היינה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\lim_{x\to x_{0}}f\left(x\right)=L\right)\iff\left(\forall y\in\bbr^{\bbn}.\left(\lim_{n\to\infty}y_{n}=x_{0}\right)\implies\left(\lim_{n\to\infty}f\left(y_{n}\right)=L\right)\right)$
 \end_inset
 
@@ -1197,11 +1282,13 @@ b_{n}-b_{n-1} & else
 גבולות
 \series default
 \color inherit
-: נניח כי 
+:
+ נניח כי 
 \begin_inset Formula $\lim_{x\to x_{0}}f\left(x\right)=L_{1}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\lim_{x\to x_{0}}g\left(x\right)=L_{2}$
 \end_inset
 
@@ -1275,7 +1362,8 @@ b_{n}-b_{n-1} & else
 הסנדוויץ'
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\forall x\in I_{x_{0}}.h\left(x\right)\le f\left(x\right)\le g\left(x\right)\right)\land\left(\lim_{x\to x_{0}}h\left(x\right)=L=\lim_{x\to x_{0}}g\left(x\right)\right)\implies\left(\lim_{n\to\infty}b_{n}=L\right)$
 \end_inset
 
@@ -1289,7 +1377,8 @@ b_{n}-b_{n-1} & else
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall x\in\bbr.\left|\sin\left(x\right)\right|\le\left|x\right|$
 \end_inset
 
@@ -1303,7 +1392,8 @@ b_{n}-b_{n-1} & else
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall x_{0}\in\bbr.\left(\lim_{x\to x_{0}}\sin\left(x\right)=\sin\left(x_{0}\right)\right)\land\left(\lim_{x\to x_{0}}\cos\left(x\right)=\cos\left(x_{0}\right)\right)$
 \end_inset
 
@@ -1325,7 +1415,8 @@ b_{n}-b_{n-1} & else
 נקודתית
 \series default
 \color inherit
-: פונקציה 
+:
+ פונקציה 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
@@ -1347,7 +1438,8 @@ b_{n}-b_{n-1} & else
 רציפה
 \series default
 \color inherit
-: פונקציה 
+:
+ פונקציה 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
@@ -1365,7 +1457,9 @@ b_{n}-b_{n-1} & else
 משפט
 \series default
 \color inherit
-: סכום, כפל והרכבה של פונקציות רציפות היא פונקציה רציפה.
+:
+ סכום,
+ כפל והרכבה של פונקציות רציפות היא פונקציה רציפה.
 \end_layout
 
 \begin_layout Standard
@@ -1375,7 +1469,8 @@ b_{n}-b_{n-1} & else
 מסקנה
 \series default
 \color inherit
-: לכל 
+:
+ לכל 
 \begin_inset Formula $f\in\bbr\left[x_{1},\dots,x_{n}\right]$
 \end_inset
 
@@ -1393,7 +1488,8 @@ b_{n}-b_{n-1} & else
 משפט
 \series default
 \color inherit
-: הפונקציות הטריגונומטריות והפונקציה המעריכית הינן רציפות.
+:
+ הפונקציות הטריגונומטריות והפונקציה המעריכית הינן רציפות.
 \end_layout
 
 \begin_layout Standard
@@ -1407,7 +1503,8 @@ b_{n}-b_{n-1} & else
 רציפות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
@@ -1415,7 +1512,8 @@ b_{n}-b_{n-1} & else
 \end_layout
 
 \begin_layout Itemize
-אי רציפות סליקה: 
+אי רציפות סליקה:
+ 
 \begin_inset Formula $\lim_{x\to x_{0}}f\left(x\right)\ne f\left(x_{0}\right)$
 \end_inset
 
@@ -1423,7 +1521,8 @@ b_{n}-b_{n-1} & else
 \end_layout
 
 \begin_layout Itemize
-אי רציפות מסוג שני: 
+אי רציפות מסוג שני:
+ 
 \begin_inset Formula $\lim_{x\to x_{0}^{-}}f\left(x\right)\ne\lim_{x\to x_{0}^{+}}f\left(x\right)$
 \end_inset
 
@@ -1431,19 +1530,20 @@ b_{n}-b_{n-1} & else
 \end_layout
 
 \begin_layout Itemize
-אי רציפות מסוג שלישי: )
+אי רציפות מסוג שלישי:
+ (
 \begin_inset Formula $\lim_{x\to x_{0}^{+}}f\left(x\right)$
 \end_inset
 
- לא קיים(
+ לא קיים)
 \begin_inset Formula $\lor$
 \end_inset
 
-)
+(
 \begin_inset Formula $\lim_{x\to x_{0}^{-}}f\left(x\right)$
 \end_inset
 
- לא קיים(.
+ לא קיים).
 \end_layout
 
 \begin_layout Standard
@@ -1453,7 +1553,8 @@ b_{n}-b_{n-1} & else
 משפט
 \series default
 \color inherit
-: אם 
+:
+ אם 
 \begin_inset Formula $f$
 \end_inset
 
@@ -1475,7 +1576,8 @@ b_{n}-b_{n-1} & else
 הביניים
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $I\subseteq\bbr$
 \end_inset
 
@@ -1487,7 +1589,8 @@ b_{n}-b_{n-1} & else
 \end_layout
 
 \begin_layout Itemize
-ניסוח ראשון: נניח כי 
+ניסוח ראשון:
+ נניח כי 
 \begin_inset Formula $\left[a,b\right]\subseteq I$
 \end_inset
 
@@ -1503,7 +1606,8 @@ b_{n}-b_{n-1} & else
 \end_layout
 
 \begin_layout Itemize
-ניסוח שני: נניח כי 
+ניסוח שני:
+ נניח כי 
 \begin_inset Formula $\left[a,b\right]\subseteq I$
 \end_inset
 
@@ -1521,7 +1625,8 @@ b_{n}-b_{n-1} & else
 מסקנה
 \series default
 \color inherit
-: פונקציה רציפה וחח
+:
+ פונקציה רציפה וחח
 \begin_inset Quotes erd
 \end_inset
 
@@ -1535,7 +1640,8 @@ b_{n}-b_{n-1} & else
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
@@ -1557,7 +1663,9 @@ b_{n}-b_{n-1} & else
 מסקנה
 \series default
 \color inherit
-: הפונקציות הטריגונומטריות ההפוכות, הפונקציה המעריכית והפונקציה 
+:
+ הפונקציות הטריגונומטריות ההפוכות,
+ הפונקציה המעריכית והפונקציה 
 \begin_inset Formula $x^{\frac{1}{k}}$
 \end_inset
 
@@ -1575,7 +1683,8 @@ b_{n}-b_{n-1} & else
 מיקום
 \series default
 \color inherit
-: יהי חלקיק אזי 
+:
+ יהי חלקיק אזי 
 \begin_inset Formula $x:\bbr\to\bbr$
 \end_inset
 
@@ -1589,7 +1698,8 @@ b_{n}-b_{n-1} & else
 העתק
 \series default
 \color inherit
-: יהי חלקיק אזי 
+:
+ יהי חלקיק אזי 
 \begin_inset Formula $x\left(t\right)$
 \end_inset
 
@@ -1611,7 +1721,8 @@ b_{n}-b_{n-1} & else
 הבסיסית
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\text{דרך}=\text{מהירות}\cdot\text{זמן}$
 \end_inset
 
@@ -1633,7 +1744,8 @@ b_{n}-b_{n-1} & else
 נקודתית
 \series default
 \color inherit
-: פונקציה 
+:
+ פונקציה 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
@@ -1651,7 +1763,8 @@ b_{n}-b_{n-1} & else
 נגזרת
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $f'\left(x\right)=\lim_{h\to0}\frac{f\left(x+h\right)-f\left(x\right)}{h}$
 \end_inset
 
@@ -1665,15 +1778,18 @@ b_{n}-b_{n-1} & else
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $f^{\left(0\right)}=f$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $f^{\left(1\right)}=f'$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $f^{\left(n+1\right)}=\left(f^{\left(n\right)}\right)'$
 \end_inset
 
@@ -1687,11 +1803,13 @@ b_{n}-b_{n-1} & else
 סימון הנקודה של ניוטון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\dot{x}=x'$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\ddot{x}=x''$
 \end_inset
 
@@ -1705,7 +1823,8 @@ b_{n}-b_{n-1} & else
 סימון לייבניץ
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\frac{d^{n}f}{dx^{n}}=f^{\left(n\right)}$
 \end_inset
 
@@ -1719,7 +1838,8 @@ b_{n}-b_{n-1} & else
 נוסחת ניוטון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(f\cdot g\right)^{\left(n\right)}=\sum_{k=0}^{n}\binom{n}{k}\cdot f^{\left(k\right)}\cdot g^{\left(n-k\right)}$
 \end_inset
 
@@ -1733,7 +1853,8 @@ b_{n}-b_{n-1} & else
 מהירות
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\dot{x}=v$
 \end_inset
 
@@ -1747,11 +1868,13 @@ b_{n}-b_{n-1} & else
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $C^{0}\left(I\right)="I\text{"פונקציות רציפות ב־}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $C^{n}\left(I\right)="I\text{ פעמים ב־}n\text{"פונקציות גזירות }$
 \end_inset
 
@@ -1765,7 +1888,8 @@ b_{n}-b_{n-1} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall n\in\bbn.C^{n+1}\left(I\right)\subseteq C^{n}\left(I\right)$
 \end_inset
 
@@ -1783,7 +1907,8 @@ b_{n}-b_{n-1} & else
 סימן
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sign\left(x\right)=\text{sgn}\left(x\right)=\frac{\left|x\right|}{x}$
 \end_inset
 
@@ -1797,7 +1922,8 @@ b_{n}-b_{n-1} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\lim_{x\to0}\sign\left(x\right)$
 \end_inset
 
@@ -1815,7 +1941,8 @@ b_{n}-b_{n-1} & else
 דריכלה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $D\left(x\right)=\begin{cases}
 0 & x\in\bbq\\
 1 & x\notin\bbq
@@ -1832,7 +1959,8 @@ b_{n}-b_{n-1} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $D\left(x\right)$
 \end_inset
 
@@ -1854,7 +1982,8 @@ b_{n}-b_{n-1} & else
 נגזרות
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g\in C^{1}\left(I\right)$
 \end_inset
 
@@ -1910,11 +2039,13 @@ b_{n}-b_{n-1} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sin'\left(x\right)=\cos\left(x\right)$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\arcsin'\left(x\right)=\frac{1}{\sqrt{1-x^{2}}}$
 \end_inset
 
@@ -1928,11 +2059,13 @@ b_{n}-b_{n-1} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\cos'\left(x\right)=-\sin\left(x\right)$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\arccos'\left(x\right)=-\frac{1}{\sqrt{1-x^{2}}}$
 \end_inset
 
@@ -1946,11 +2079,13 @@ b_{n}-b_{n-1} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\tan'\left(x\right)=\frac{1}{\cos^{2}\left(x\right)}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\arctan'\left(x\right)=\frac{1}{1+x^{2}}$
 \end_inset
 
@@ -1964,7 +2099,8 @@ b_{n}-b_{n-1} & else
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^{n}$
 \end_inset
 
@@ -1982,7 +2118,8 @@ b_{n}-b_{n-1} & else
 אויילר
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $e=\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^{n}\approx2.71$
 \end_inset
 
@@ -1996,7 +2133,8 @@ b_{n}-b_{n-1} & else
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall x\in\bbr.\lim_{n\to\infty}\left(1+\frac{x}{n}\right)^{n}=e^{x}$
 \end_inset
 
@@ -2010,7 +2148,8 @@ b_{n}-b_{n-1} & else
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\lim_{x\to x_{0}}f\left(x\right)=\infty\right)\implies\left(\lim_{x\to x_{0}}\left(1+\frac{1}{f\left(x\right)}\right)^{f\left(x\right)}=e\right)$
 \end_inset
 
@@ -2028,7 +2167,8 @@ b_{n}-b_{n-1} & else
 טבעי
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\ln=\log_{e}$
 \end_inset
 
@@ -2042,7 +2182,8 @@ b_{n}-b_{n-1} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\log_{a}\left(x\right)'=\frac{1}{x\ln\left(a\right)}$
 \end_inset
 
@@ -2056,7 +2197,8 @@ b_{n}-b_{n-1} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\lim_{y\to0}\frac{e^{y}-1}{y}=1$
 \end_inset
 
@@ -2070,11 +2212,13 @@ b_{n}-b_{n-1} & else
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(a^{x}\right)'=a^{x}\ln\left(a\right)$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\left(e^{x}\right)'=e^{x}$
 \end_inset
 
@@ -2088,7 +2232,8 @@ b_{n}-b_{n-1} & else
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
@@ -2114,7 +2259,8 @@ b_{n}-b_{n-1} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall x\in\bbr.1+x\le e^{x}$
 \end_inset
 
@@ -2132,11 +2278,13 @@ b_{n}-b_{n-1} & else
 היפרבוליות
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sinh\left(x\right)=\frac{e^{x}-e^{-x}}{2}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\cosh\left(x\right)=\frac{e^{x}+e^{-x}}{2}$
 \end_inset
 
@@ -2150,11 +2298,13 @@ b_{n}-b_{n-1} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sinh'=\cosh$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\cosh'=\sinh$
 \end_inset
 
@@ -2168,7 +2318,8 @@ b_{n}-b_{n-1} & else
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
@@ -2184,15 +2335,15 @@ b_{n}-b_{n-1} & else
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $f'\left(x_{0}\right)>0$
 \end_inset
 
-( 
+) 
 \begin_inset Formula $\impliedby$
 \end_inset
 
- )קיימת סביבה של 
+ (קיימת סביבה של 
 \begin_inset Formula $x_{0}$
 \end_inset
 
@@ -2200,19 +2351,19 @@ b_{n}-b_{n-1} & else
 \begin_inset Formula $f$
 \end_inset
 
- עולה(.
+ עולה).
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $f'\left(x_{0}\right)<0$
 \end_inset
 
-( 
+) 
 \begin_inset Formula $\impliedby$
 \end_inset
 
- )קיימת סביבה של 
+ (קיימת סביבה של 
 \begin_inset Formula $x_{0}$
 \end_inset
 
@@ -2220,7 +2371,7 @@ b_{n}-b_{n-1} & else
 \begin_inset Formula $f$
 \end_inset
 
- יורדת(.
+ יורדת).
 \end_layout
 
 \begin_layout Standard
@@ -2230,7 +2381,8 @@ b_{n}-b_{n-1} & else
 מינימום מקומי/לוקאלי
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $x_{0}\in\dom\left(f\right)$
 \end_inset
 
@@ -2248,7 +2400,8 @@ b_{n}-b_{n-1} & else
 מינימום גלובלי
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $x_{0}\in\dom\left(f\right)$
 \end_inset
 
@@ -2266,7 +2419,8 @@ b_{n}-b_{n-1} & else
 מקסימום מקומי/לוקאלי
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $x_{0}\in\dom\left(f\right)$
 \end_inset
 
@@ -2288,7 +2442,8 @@ b_{n}-b_{n-1} & else
 גלובלי
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $x_{0}\in\dom\left(f\right)$
 \end_inset
 
@@ -2310,11 +2465,12 @@ b_{n}-b_{n-1} & else
 קיצון
 \series default
 \color inherit
-: )מינימום מקומי(
+:
+ (מינימום מקומי)
 \begin_inset Formula $\lor$
 \end_inset
 
-)מקסימום מקומי(.
+(מקסימום מקומי).
 \end_layout
 
 \begin_layout Standard
@@ -2324,7 +2480,8 @@ b_{n}-b_{n-1} & else
 משפט
 \series default
 \color inherit
-: אם 
+:
+ אם 
 \begin_inset Formula $x$
 \end_inset
 
@@ -2350,7 +2507,8 @@ b_{n}-b_{n-1} & else
 רול
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f$
 \end_inset
 
@@ -2380,7 +2538,8 @@ b_{n}-b_{n-1} & else
 לגראנז'
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left[a,b\right]\to\bbr$
 \end_inset
 
@@ -2398,7 +2557,8 @@ b_{n}-b_{n-1} & else
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left[a,b\right]\to\bbr$
 \end_inset
 
@@ -2420,7 +2580,8 @@ b_{n}-b_{n-1} & else
 בזייה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $P_{0},\ldots,P_{n}\in\bbr^{m}$
 \end_inset
 
@@ -2446,7 +2607,8 @@ b_{n}-b_{n-1} & else
 בקטע
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall x,y\in I.\forall t\in\left[0,1\right].\left(1-t\right)f\left(x\right)+tf\left(y\right)\le f\left(\left(1-t\right)x+ty\right)$
 \end_inset
 
@@ -2468,7 +2630,8 @@ b_{n}-b_{n-1} & else
 בקטע
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall x,y\in I.\forall t\in\left[0,1\right].\left(1-t\right)f\left(x\right)+tf\left(y\right)\ge f\left(\left(1-t\right)x+ty\right)$
 \end_inset
 
@@ -2482,7 +2645,8 @@ b_{n}-b_{n-1} & else
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
@@ -2498,15 +2662,15 @@ b_{n}-b_{n-1} & else
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $f''\left(x_{0}\right)>0$
 \end_inset
 
-( 
+) 
 \begin_inset Formula $\impliedby$
 \end_inset
 
- )קיימת סביבה של 
+ (קיימת סביבה של 
 \begin_inset Formula $x_{0}$
 \end_inset
 
@@ -2514,19 +2678,19 @@ b_{n}-b_{n-1} & else
 \begin_inset Formula $f$
 \end_inset
 
- קעורה(.
+ קעורה).
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $f''\left(x_{0}\right)<0$
 \end_inset
 
-( 
+) 
 \begin_inset Formula $\impliedby$
 \end_inset
 
- )קיימת סביבה של 
+ (קיימת סביבה של 
 \begin_inset Formula $x_{0}$
 \end_inset
 
@@ -2534,7 +2698,7 @@ b_{n}-b_{n-1} & else
 \begin_inset Formula $f$
 \end_inset
 
- קמורה(.
+ קמורה).
 \end_layout
 
 \begin_layout Standard
@@ -2544,7 +2708,8 @@ b_{n}-b_{n-1} & else
 נקודת פיתול
 \series default
 \color inherit
-: נקודת קיצון של 
+:
+ נקודת קיצון של 
 \begin_inset Formula $f'$
 \end_inset
 
@@ -2558,7 +2723,8 @@ b_{n}-b_{n-1} & else
 משפט
 \series default
 \color inherit
-: אם 
+:
+ אם 
 \begin_inset Formula $x$
 \end_inset
 
@@ -2580,7 +2746,8 @@ b_{n}-b_{n-1} & else
 תאוצה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $a=\dot{v}=\ddot{x}$
 \end_inset
 
@@ -2594,7 +2761,8 @@ b_{n}-b_{n-1} & else
 משוואת ניוטון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $F=ma$
 \end_inset
 
@@ -2616,7 +2784,8 @@ b_{n}-b_{n-1} & else
 חיובית
 \series default
 \color inherit
-: תהא פונקציה 
+:
+ תהא פונקציה 
 \begin_inset Formula $f$
 \end_inset
 
@@ -2646,7 +2815,8 @@ b_{n}-b_{n-1} & else
 שלילית
 \series default
 \color inherit
-: תהא פונקציה 
+:
+ תהא פונקציה 
 \begin_inset Formula $f$
 \end_inset
 
@@ -2672,7 +2842,8 @@ b_{n}-b_{n-1} & else
 אנכית
 \series default
 \color inherit
-: תהא פונקציה 
+:
+ תהא פונקציה 
 \begin_inset Formula $f$
 \end_inset
 
@@ -2680,19 +2851,19 @@ b_{n}-b_{n-1} & else
 \begin_inset Formula $x=x_{0}$
 \end_inset
 
- המקיימת )
+ המקיימת (
 \begin_inset Formula $\lim_{x\to x_{0}^{+}}f\left(x\right)=\pm\infty$
 \end_inset
 
-(
+)
 \begin_inset Formula $\lor$
 \end_inset
 
-)
+(
 \begin_inset Formula $\lim_{x\to x_{0}^{-}}f\left(x\right)=\pm\infty$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -2702,11 +2873,13 @@ b_{n}-b_{n-1} & else
 הערה
 \series default
 \color inherit
-: אם קיימת אסימפטוטה משופעת אזי 
+:
+ אם קיימת אסימפטוטה משופעת אזי 
 \begin_inset Formula $m=\underset{x\to\pm\infty}{\lim}\frac{f\left(x\right)}{x}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $n=\underset{x\to\pm\infty}{\lim}\left(f\left(x\right)-mx\right)$
 \end_inset
 
@@ -2724,7 +2897,8 @@ b_{n}-b_{n-1} & else
 סתומה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
@@ -2754,7 +2928,8 @@ b_{n}-b_{n-1} & else
 סתומה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\frac{d}{dx}g\left(x,f\left(x\right)\right)=0$
 \end_inset
 
@@ -2772,7 +2947,8 @@ b_{n}-b_{n-1} & else
 לופיטל
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x_{0}\in\bbr\cup\left\{ \pm\infty\right\} $
 \end_inset
 
@@ -2792,7 +2968,8 @@ b_{n}-b_{n-1} & else
 \series bold
 הגדרה
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $x_{0}\in\bbr$
 \end_inset
 
@@ -2812,7 +2989,8 @@ b_{n}-b_{n-1} & else
 \series bold
 שגיאה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g$
 \end_inset
 
@@ -2828,7 +3006,8 @@ b_{n}-b_{n-1} & else
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\forall f,g\in\bbr^{\bbr}.f=g+E$
 \end_inset
 
@@ -2844,7 +3023,8 @@ b_{n}-b_{n-1} & else
 
 
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f$
 \end_inset
 
@@ -2852,19 +3032,19 @@ b_{n}-b_{n-1} & else
 \begin_inset Formula $p\in\bbr_{n}\left[x\right]$
 \end_inset
 
- המקיימת )
+ המקיימת (
 \begin_inset Formula $E\left(x_{0}\right)=0$
 \end_inset
 
-(
+)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $E\in o\left(\left(x-x_{0}\right)^{n}\right)$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -2872,7 +3052,8 @@ b_{n}-b_{n-1} & else
 \series bold
 משפט
 \series default
-: )
+:
+ (
 \begin_inset Formula $f$
 \end_inset
 
@@ -2884,11 +3065,11 @@ b_{n}-b_{n-1} & else
 \begin_inset Formula $x_{0}$
 \end_inset
 
-( 
+) 
 \begin_inset Formula $\iff$
 \end_inset
 
- )קיים קירוב מסדר 
+ (קיים קירוב מסדר 
 \begin_inset Formula $n$
 \end_inset
 
@@ -2900,7 +3081,7 @@ b_{n}-b_{n-1} & else
 \begin_inset Formula $x_{0}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -2912,7 +3093,8 @@ b_{n}-b_{n-1} & else
 \series bold
 לגרף
 \series default
-: 
+:
+ 
 \begin_inset Formula $y=f'\left(x_{0}\right)\left(x-x_{0}\right)+f\left(x_{0}\right)$
 \end_inset
 
@@ -2924,7 +3106,8 @@ b_{n}-b_{n-1} & else
 \series bold
 משפט
 \series default
-: 
+:
+ 
 \begin_inset Formula $f-g\in o\left(\left(x-x_{0}\right)^{n}\right)\iff\forall k\in\left[n\right]\cup\left\{ 0\right\} .f^{\left(k\right)}\left(x_{0}\right)=g^{\left(k\right)}\left(x_{0}\right)$
 \end_inset
 
@@ -2936,7 +3119,8 @@ b_{n}-b_{n-1} & else
 \series bold
 טור טיילור/פולינום מקלורן
 \series default
-: 
+:
+ 
 \begin_inset Formula $p_{n}\left(x\right)=\sum_{k=0}^{n}\frac{f^{\left(k\right)}\left(x_{0}\right)}{k!}\left(x-x_{0}\right)^{k}$
 \end_inset
 
@@ -2948,7 +3132,8 @@ b_{n}-b_{n-1} & else
 \series bold
 משפט
 \series default
-: 
+:
+ 
 \begin_inset Formula $p_{n}$
 \end_inset
 
@@ -2964,7 +3149,8 @@ b_{n}-b_{n-1} & else
 \series bold
 הגדרה
 \series default
-: 
+:
+ 
 \begin_inset Formula $R_{n}\left(x\right)=f\left(x\right)-p_{n}\left(x\right)$
 \end_inset
 
@@ -2992,7 +3178,8 @@ b_{n}-b_{n-1} & else
 \series bold
 לגראנז'
 \series default
-: 
+:
+ 
 \begin_inset Formula $\exists c\in\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right).R_{n}\left(x\right)=\frac{f^{\left(n+1\right)}\left(c\right)}{\left(n+1\right)!}\left(x-x_{0}\right)^{n+1}$
 \end_inset
 
@@ -3004,7 +3191,8 @@ b_{n}-b_{n-1} & else
 \series bold
 מסקנה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\left|R_{n}\left(x\right)\right|\le\underset{c'\in\left(\min\left(x,x_{0}\right),\max\left(x,x_{0}\right)\right)}{\max}\left(\frac{\left|f^{\left(n+1\right)}\left(c'\right)\right|}{\left(n+1\right)!}\left|x-x_{0}\right|^{n+1}\right)$
 \end_inset
 
@@ -3016,15 +3204,18 @@ b_{n}-b_{n-1} & else
 \series bold
 מסקנה
 \series default
-: 
+:
+ 
 \begin_inset Formula $e^{x}=\sum_{k=0}^{\infty}\frac{x^{k}}{k!}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\sin\left(x\right)=\sum_{k=0}^{\infty}\frac{\left(-1\right)^{k}x^{2k+1}}{\left(2k+1\right)!}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\cos\left(x\right)=\sum_{k=0}^{\infty}\frac{\left(-1\right)^{k}x^{2k}}{\left(2k\right)!}$
 \end_inset
 
@@ -3044,7 +3235,8 @@ b_{n}-b_{n-1} & else
 \series bold
 רפסון
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $a_{0}\in\bbr$
 \end_inset
 
@@ -3060,7 +3252,8 @@ b_{n}-b_{n-1} & else
 \series bold
 טענה
 \series default
-: בעבור פונקציה 
+:
+ בעבור פונקציה 
 \begin_inset Formula $f$
 \end_inset
 
@@ -3078,7 +3271,8 @@ b_{n}-b_{n-1} & else
 פונקציה קדומה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f$
 \end_inset
 
@@ -3100,7 +3294,8 @@ b_{n}-b_{n-1} & else
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $F_{1},F_{2}$
 \end_inset
 
@@ -3130,7 +3325,8 @@ b_{n}-b_{n-1} & else
 מסוים
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f$
 \end_inset
 
@@ -3148,7 +3344,8 @@ b_{n}-b_{n-1} & else
 סימון
 \series default
 \color inherit
-: האינטגרל הלא מסוים של 
+:
+ האינטגרל הלא מסוים של 
 \begin_inset Formula $f$
 \end_inset
 
@@ -3174,7 +3371,8 @@ b_{n}-b_{n-1} & else
 אינטגרלים
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $f,g\in\bbr\to\bbr$
 \end_inset
 
@@ -3230,7 +3428,8 @@ b_{n}-b_{n-1} & else
 סכום דרבו תחתון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left[a,b\right]\to\bbr$
 \end_inset
 
@@ -3256,7 +3455,8 @@ b_{n}-b_{n-1} & else
 עליון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left[a,b\right]\to\bbr$
 \end_inset
 
@@ -3278,7 +3478,8 @@ b_{n}-b_{n-1} & else
 מסוים
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left[a,b\right]\to\bbr$
 \end_inset
 
@@ -3300,7 +3501,8 @@ b_{n}-b_{n-1} & else
 הערה
 \series default
 \color inherit
-: אריתמטיקת האינטגרל המסוים זהה לאריתמטיקת האינטגרל הלא מסוים.
+:
+ אריתמטיקת האינטגרל המסוים זהה לאריתמטיקת האינטגרל הלא מסוים.
 \end_layout
 
 \begin_layout Standard
@@ -3310,7 +3512,8 @@ b_{n}-b_{n-1} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\int_{a}^{b}f\left(x\right)dx+\int_{b}^{c}f\left(x\right)dx=\int_{a}^{c}f\left(x\right)dx$
 \end_inset
 
@@ -3324,7 +3527,8 @@ b_{n}-b_{n-1} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(\forall x\in\left[a,b\right].f\left(x\right)\le g\left(x\right)\right)\implies\int_{a}^{b}f\left(x\right)dx\le\int_{a}^{b}g\left(x\right)dx$
 \end_inset
 
@@ -3338,7 +3542,8 @@ b_{n}-b_{n-1} & else
 פונקציה צוברת שטח
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left[a,b\right]\to\bbr$
 \end_inset
 
@@ -3364,7 +3569,8 @@ b_{n}-b_{n-1} & else
 א
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left[a,b\right]\to\bbr$
 \end_inset
 
@@ -3383,7 +3589,7 @@ b_{n}-b_{n-1} & else
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $f$
 \end_inset
 
@@ -3391,15 +3597,15 @@ b_{n}-b_{n-1} & else
 \begin_inset Formula $x$
 \end_inset
 
-( 
+) 
 \begin_inset Formula $\impliedby$
 \end_inset
 
- )
+ (
 \begin_inset Formula $F'\left(x_{0}\right)=f\left(x_{0}\right)$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -3409,7 +3615,8 @@ b_{n}-b_{n-1} & else
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left[a,b\right]\to\bbr$
 \end_inset
 
@@ -3427,7 +3634,8 @@ b_{n}-b_{n-1} & else
 הצבה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $f\left(x\right)|_{a}^{b}=\left[f\left(x\right)\right]_{a}^{b}=f\left(b\right)-f\left(a\right)$
 \end_inset
 
@@ -3449,7 +3657,8 @@ b_{n}-b_{n-1} & else
 לייבניץ
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left[a,b\right]\to\bbr$
 \end_inset
 
@@ -3471,7 +3680,8 @@ b_{n}-b_{n-1} & else
 אורך עקומה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left[a,b\right]\to\bbr$
 \end_inset
 
@@ -3493,7 +3703,8 @@ b_{n}-b_{n-1} & else
 
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left[a,b\right]\to\bbr$
 \end_inset
 
@@ -3515,7 +3726,8 @@ b_{n}-b_{n-1} & else
 
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f:\left[a,b\right]\to\bbr$
 \end_inset
 

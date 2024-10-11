@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -19,6 +19,7 @@
 \usepackage{polynom}
 \usepackage{booktabs}
 \usepackage{fancyhdr}
+
 
 % it's here?
 \setlength{\tabcolsep}{1pt}
@@ -49,6 +50,9 @@
 \definecolor{stringcolor}{RGB}{0,168,0}
 \definecolor{remarkcolor}{RGB}{150,145,91} % 255,225,88
 
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{gray}{#1}}
+\SetCommentSty{mycommfont}
+
 % hyperlinks
 \hypersetup{
     colorlinks=true,
@@ -74,19 +78,28 @@
 \end_preamble
 \options no-math
 \use_default_options true
-\maintain_unincluded_children false
+\begin_modules
+algorithm2e
+\end_modules
+\maintain_unincluded_children no
+\begin_local_layout
+Format 66
+PackageOptions algorithm2e vlined
+\end_local_layout
 \language hebrew
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "David CLM"
-\font_sans "default" "default"
+\font_sans "default" "Times New Roman"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -97,10 +110,23 @@
 \bibtex_command default
 \index_command default
 \float_placement H
+\float_alignment class
 \paperfontsize default
 \spacing onehalf
-\use_hyperref false
-\papersize letterpaper
+\use_hyperref true
+\pdf_title "Group Theory lbl"
+\pdf_author "Ron Mikhelman"
+\pdf_subject "Math Summeries"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letter
 \use_geometry true
 \use_package amsmath 2
 \use_package amssymb 2
@@ -121,7 +147,9 @@
 \suppress_date true
 \justification false
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -141,11 +169,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -154,6 +187,7 @@
 \begin_inset CommandInset include
 LatexCommand include
 filename "E:/University/macros.lyx"
+literal "true"
 
 \end_inset
 
@@ -167,7 +201,8 @@ filename "E:/University/macros.lyx"
 פעולה בינארית
 \series default
 \color inherit
-: פונקציה 
+:
+ פונקציה 
 \begin_inset Formula $*:A\times A\to A$
 \end_inset
 
@@ -183,7 +218,8 @@ filename "E:/University/macros.lyx"
 \series bold
 אגודה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -199,7 +235,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-אסוציטיביות/קיבוציות: 
+אסוציטיביות/קיבוציות:
+ 
 \begin_inset Formula $\forall a,b,c\in A.a*\left(b*c\right)=\left(a*b\right)*c$
 \end_inset
 
@@ -211,7 +248,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מונואיד
 \series default
-: אגודה 
+:
+ אגודה 
 \begin_inset Formula $\left<G,*\right>$
 \end_inset
 
@@ -219,7 +257,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-איבר יחידה: 
+איבר יחידה:
+ 
 \begin_inset Formula $\exists e\in A.\forall g\in G.e*g=g*e=g$
 \end_inset
 
@@ -231,7 +270,8 @@ filename "E:/University/macros.lyx"
 \series bold
 סימון
 \series default
-: איבר יחידה של 
+:
+ איבר יחידה של 
 \begin_inset Formula $\left<G,*\right>$
 \end_inset
 
@@ -247,7 +287,8 @@ filename "E:/University/macros.lyx"
 \series bold
 חבורה
 \series default
-: מונואיד 
+:
+ מונואיד 
 \begin_inset Formula $\left<G,*\right>$
 \end_inset
 
@@ -255,7 +296,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-איבר הופכי/נגדי: 
+איבר הופכי/נגדי:
+ 
 \begin_inset Formula $\forall g\in G.\exists h\in A.g*h=h*g=e_{G}$
 \end_inset
 
@@ -267,7 +309,8 @@ filename "E:/University/macros.lyx"
 \series bold
 סימון
 \series default
-: איבר הופכי של 
+:
+ איבר הופכי של 
 \begin_inset Formula $a$
 \end_inset
 
@@ -283,7 +326,9 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: איבר יחידה הוא יחיד, איבר הופכי הוא יחיד.
+:
+ איבר יחידה הוא יחיד,
+ איבר הופכי הוא יחיד.
 \end_layout
 
 \begin_layout Standard
@@ -291,7 +336,8 @@ filename "E:/University/macros.lyx"
 \series bold
 חזקה
 \series default
-: 
+:
+ 
 \begin_inset Formula $a^{n}=\begin{cases}
 a*a^{n-1} & n>0\\
 e_{G} & n=0\\
@@ -307,11 +353,13 @@ a^{-1}*a^{n+1} & n<0
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\left(a^{n}\right)^{k}=a^{nk}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $a^{n+k}=a^{n}\cdot a^{k}$
 \end_inset
 
@@ -323,7 +371,8 @@ a^{-1}*a^{n+1} & n<0
 \series bold
 קומוטטיביות/חילופיות/אבליות
 \series default
-: 
+:
+ 
 \begin_inset Formula $\forall a,b\in A.a*b=b*a$
 \end_inset
 
@@ -335,7 +384,8 @@ a^{-1}*a^{n+1} & n<0
 \series bold
 הגדרה
 \series default
-: 
+:
+ 
 \begin_inset Formula $GL_{n}\left(\bbf\right)$
 \end_inset
 
@@ -351,7 +401,8 @@ a^{-1}*a^{n+1} & n<0
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\left<GL_{n}\left(\bbf\right),\cdot\right>$
 \end_inset
 
@@ -363,11 +414,13 @@ a^{-1}*a^{n+1} & n<0
 \series bold
 הגדרה
 \series default
-: נגדיר 
+:
+ נגדיר 
 \begin_inset Formula $S_{A}=A\stackrel[onto]{1-1}{\to}A$
 \end_inset
 
-, נסמן 
+,
+ נסמן 
 \begin_inset Formula $S_{n}=S_{\left[n\right]}$
 \end_inset
 
@@ -379,7 +432,8 @@ a^{-1}*a^{n+1} & n<0
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\left<S_{n},\circ\right>$
 \end_inset
 
@@ -391,7 +445,8 @@ a^{-1}*a^{n+1} & n<0
 \series bold
 סדר
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -407,7 +462,8 @@ a^{-1}*a^{n+1} & n<0
 \series bold
 הגדרה
 \series default
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left<G,\cdot\right>,\left<H,\cdot\right>$
 \end_inset
 
@@ -427,7 +483,8 @@ a^{-1}*a^{n+1} & n<0
 \series bold
 הגדרה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\bbz_{n}=\left\{ 0,\ldots,n-1\right\} $
 \end_inset
 
@@ -439,7 +496,8 @@ a^{-1}*a^{n+1} & n<0
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\left<\bbz_{n},+\right>$
 \end_inset
 
@@ -459,7 +517,8 @@ a^{-1}*a^{n+1} & n<0
 \series bold
 קליין
 \series default
-: 
+:
+ 
 \begin_inset Formula $\left<\bbz_{2}\times\bbz_{2},+\right>$
 \end_inset
 
@@ -471,7 +530,8 @@ a^{-1}*a^{n+1} & n<0
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\forall a,b,c\in G.a*b=a*c\implies b=c$
 \end_inset
 
@@ -485,7 +545,8 @@ a^{-1}*a^{n+1} & n<0
 חבורה ציקלית/מעגלית
 \series default
 \color inherit
-: חבורה 
+:
+ חבורה 
 \begin_inset Formula $G$
 \end_inset
 
@@ -503,7 +564,8 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbz_{n}$
 \end_inset
 
@@ -517,7 +579,8 @@ a^{-1}*a^{n+1} & n<0
 סימון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -539,7 +602,8 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left<\left<g\right>,\cdot_{\upharpoonright_{\left<g\right>}}\right>$
 \end_inset
 
@@ -553,7 +617,8 @@ a^{-1}*a^{n+1} & n<0
 סדר
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -575,7 +640,8 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\ord\left(g\right)=\left|\left<g\right>\right|$
 \end_inset
 
@@ -589,7 +655,8 @@ a^{-1}*a^{n+1} & n<0
 הגדרה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $G,H$
 \end_inset
 
@@ -597,7 +664,8 @@ a^{-1}*a^{n+1} & n<0
 \end_layout
 
 \begin_layout Itemize
-הומומורפיזם: 
+הומומורפיזם:
+ 
 \begin_inset Formula $\varphi:G\to H$
 \end_inset
 
@@ -609,7 +677,8 @@ a^{-1}*a^{n+1} & n<0
 \end_layout
 
 \begin_layout Itemize
-מונומורפיזם/שיכון: 
+מונומורפיזם/שיכון:
+ 
 \begin_inset Formula $\varphi:G\to H$
 \end_inset
 
@@ -621,7 +690,8 @@ a^{-1}*a^{n+1} & n<0
 \end_layout
 
 \begin_layout Itemize
-אפימורפיזם: 
+אפימורפיזם:
+ 
 \begin_inset Formula $\varphi:G\to H$
 \end_inset
 
@@ -629,7 +699,8 @@ a^{-1}*a^{n+1} & n<0
 \end_layout
 
 \begin_layout Itemize
-איזומורפיזם: 
+איזומורפיזם:
+ 
 \begin_inset Formula $\varphi:G\to H$
 \end_inset
 
@@ -637,7 +708,8 @@ a^{-1}*a^{n+1} & n<0
 \end_layout
 
 \begin_layout Itemize
-אוטומורפיזם: איזומורפיזם עבורו 
+אוטומורפיזם:
+ איזומורפיזם עבורו 
 \begin_inset Formula $G=H$
 \end_inset
 
@@ -651,7 +723,8 @@ a^{-1}*a^{n+1} & n<0
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $G\hookrightarrow H$
 \end_inset
 
@@ -669,7 +742,8 @@ a^{-1}*a^{n+1} & n<0
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $Aut\left(G\right)$
 \end_inset
 
@@ -687,7 +761,8 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left<Aut\left(G\right),\circ\right>$
 \end_inset
 
@@ -701,7 +776,8 @@ a^{-1}*a^{n+1} & n<0
 סימון
 \series default
 \color inherit
-: נניח כי 
+:
+ נניח כי 
 \begin_inset Formula $G,H$
 \end_inset
 
@@ -719,7 +795,8 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\cong$
 \end_inset
 
@@ -733,23 +810,24 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: אם 
+:
+ אם 
 \begin_inset Formula $G\cong H$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $G$
 \end_inset
 
- ציקלית( 
+ ציקלית) 
 \begin_inset Formula $\iff$
 \end_inset
 
- )
+ (
 \begin_inset Formula $H$
 \end_inset
 
- ציקלית(.
+ ציקלית).
 \end_layout
 
 \begin_layout Standard
@@ -759,7 +837,8 @@ a^{-1}*a^{n+1} & n<0
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left<G,*\right>$
 \end_inset
 
@@ -781,7 +860,8 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $G\cong G^{op}$
 \end_inset
 
@@ -795,23 +875,24 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi$
 \end_inset
 
- הומומורפיזם אזי )
+ הומומורפיזם אזי (
 \begin_inset Formula $\varphi\left(e\right)=e$
 \end_inset
 
-(
+)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $\varphi\left(g^{-1}\right)=\varphi\left(g\right)^{-1}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -821,7 +902,8 @@ a^{-1}*a^{n+1} & n<0
 תת חבורה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left<G,*\right>$
 \end_inset
 
@@ -843,7 +925,8 @@ a^{-1}*a^{n+1} & n<0
 סימון
 \series default
 \color inherit
-: אם 
+:
+ אם 
 \begin_inset Formula $H$
 \end_inset
 
@@ -873,7 +956,8 @@ a^{-1}*a^{n+1} & n<0
 חבורה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -920,7 +1004,8 @@ a^{-1}*a^{n+1} & n<0
 למה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $H\le G\implies e_{G}=e_{H}$
 \end_inset
 
@@ -934,11 +1019,13 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $G\le G$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\left\{ e_{G}\right\} \le G$
 \end_inset
 
@@ -952,7 +1039,8 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $G,H$
 \end_inset
 
@@ -974,7 +1062,8 @@ a^{-1}*a^{n+1} & n<0
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -990,7 +1079,8 @@ a^{-1}*a^{n+1} & n<0
 \end_layout
 
 \begin_layout Itemize
-מחלקה שמאלית: 
+מחלקה שמאלית:
+ 
 \begin_inset Formula $gA=\left\{ ga\mid a\in A\right\} $
 \end_inset
 
@@ -998,7 +1088,8 @@ a^{-1}*a^{n+1} & n<0
 \end_layout
 
 \begin_layout Itemize
-מחלקה ימנית: 
+מחלקה ימנית:
+ 
 \begin_inset Formula $Ag=\left\{ ag\mid a\in A\right\} $
 \end_inset
 
@@ -1026,7 +1117,8 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $H\le G$
 \end_inset
 
@@ -1034,11 +1126,13 @@ a^{-1}*a^{n+1} & n<0
 \begin_inset Formula $HH=H$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $H^{-1}=H$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\forall h\in H.hH=Hh=H$
 \end_inset
 
@@ -1052,7 +1146,8 @@ a^{-1}*a^{n+1} & n<0
 הצמדה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $H\le G$
 \end_inset
 
@@ -1074,7 +1169,8 @@ a^{-1}*a^{n+1} & n<0
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $H^{g}=gHg^{-1}$
 \end_inset
 
@@ -1088,7 +1184,8 @@ a^{-1}*a^{n+1} & n<0
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $H\le G$
 \end_inset
 
@@ -1145,7 +1242,8 @@ a^{-1}*a^{n+1} & n<0
 מנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $G/H=\left\{ gH\mid g\in G\right\} $
 \end_inset
 
@@ -1159,7 +1257,8 @@ a^{-1}*a^{n+1} & n<0
 אינדקס
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left[G:H\right]=\left|G/H\right|$
 \end_inset
 
@@ -1177,7 +1276,8 @@ a^{-1}*a^{n+1} & n<0
 לגראנז'
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $H\le G$
 \end_inset
 
@@ -1195,11 +1295,13 @@ a^{-1}*a^{n+1} & n<0
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left|H\right||\left|G\right|$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\left[G:H\right]|\left|G\right|$
 \end_inset
 
@@ -1213,7 +1315,8 @@ a^{-1}*a^{n+1} & n<0
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1235,23 +1338,24 @@ a^{-1}*a^{n+1} & n<0
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
- חבורה אזי )
+ חבורה אזי (
 \begin_inset Formula $\ord\left(G\right)$
 \end_inset
 
- ראשוני( 
+ ראשוני) 
 \begin_inset Formula $\impliedby$
 \end_inset
 
- )
+ (
 \begin_inset Formula $G$
 \end_inset
 
- ציקלית(.
+ ציקלית).
 \end_layout
 
 \begin_layout Standard
@@ -1261,7 +1365,8 @@ a^{-1}*a^{n+1} & n<0
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1283,7 +1388,8 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: אם 
+:
+ אם 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1309,7 +1415,8 @@ a^{-1}*a^{n+1} & n<0
 נורמלית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1331,7 +1438,8 @@ a^{-1}*a^{n+1} & n<0
 סימון
 \series default
 \color inherit
-: אם 
+:
+ אם 
 \begin_inset Formula $H$
 \end_inset
 
@@ -1353,7 +1461,8 @@ a^{-1}*a^{n+1} & n<0
 למה
 \series default
 \color inherit
-: התב
+:
+ התב
 \begin_inset Quotes erd
 \end_inset
 
@@ -1388,7 +1497,8 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: אם 
+:
+ אם 
 \begin_inset Formula $N\lhd G$
 \end_inset
 
@@ -1410,7 +1520,8 @@ a^{-1}*a^{n+1} & n<0
 המנה
 \series default
 \color inherit
-: אם 
+:
+ אם 
 \begin_inset Formula $N\lhd G$
 \end_inset
 
@@ -1428,23 +1539,24 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
- חבורה אבלית אזי )
+ חבורה אבלית אזי (
 \begin_inset Formula $H\le G$
 \end_inset
 
-( 
+) 
 \begin_inset Formula $\iff$
 \end_inset
 
- )
+ (
 \begin_inset Formula $H\lhd G$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -1454,7 +1566,8 @@ a^{-1}*a^{n+1} & n<0
 גרעין
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $G,H$
 \end_inset
 
@@ -1476,7 +1589,8 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\ker\left(\varphi\right)\lhd G$
 \end_inset
 
@@ -1490,23 +1604,24 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi$
 \end_inset
 
- הומומורפיזם אזי )
+ הומומורפיזם אזי (
 \begin_inset Formula $\varphi$
 \end_inset
 
- מונומורפיזם( 
+ מונומורפיזם) 
 \begin_inset Formula $\iff$
 \end_inset
 
- )
+ (
 \begin_inset Formula $\ker\left(\varphi\right)=\left\{ e\right\} $
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -1516,7 +1631,8 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $H\le G$
 \end_inset
 
@@ -1534,7 +1650,8 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1552,11 +1669,13 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $H\le G$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $N\lhd G$
 \end_inset
 
@@ -1574,7 +1693,8 @@ a^{-1}*a^{n+1} & n<0
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $N,H\lhd G$
 \end_inset
 
@@ -1592,7 +1712,8 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $H_{1},H_{2}\le H$
 \end_inset
 
@@ -1610,7 +1731,8 @@ a^{-1}*a^{n+1} & n<0
 משפט האיזומורפיזם הראשון
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi:G\to K$
 \end_inset
 
@@ -1628,7 +1750,8 @@ a^{-1}*a^{n+1} & n<0
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $C=\left\{ e^{2\pi ix}\mid x\in\bbr\right\} $
 \end_inset
 
@@ -1642,7 +1765,8 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left<C,\cdot\right>$
 \end_inset
 
@@ -1656,7 +1780,8 @@ a^{-1}*a^{n+1} & n<0
 הגדרה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\left<A,*\right>$
 \end_inset
 
@@ -1674,15 +1799,18 @@ a^{-1}*a^{n+1} & n<0
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbz/4\bbz\cong\bbz_{4}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\bbr/\bbz\cong C$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\bbc^{\times}/C=\bbr^{\times}$
 \end_inset
 
@@ -1696,7 +1824,8 @@ a^{-1}*a^{n+1} & n<0
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $SL_{n}\left(\bbf\right)=\left\{ A\in GL_{n}\left(\bbf\right)\mid\det\left(A\right)=1\right\} $
 \end_inset
 
@@ -1710,11 +1839,13 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $SL_{n}\left(\bbr\right)\lhd GL_{n}\left(\bbr\right)$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $SL_{n}\left(\bbr\right)/SL_{n}\left(\bbr\right)\cong\bbr^{\times}$
 \end_inset
 
@@ -1732,7 +1863,8 @@ a^{-1}*a^{n+1} & n<0
 הקנונית
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $N\lhd G$
 \end_inset
 
@@ -1754,7 +1886,8 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\pi$
 \end_inset
 
@@ -1772,7 +1905,8 @@ a^{-1}*a^{n+1} & n<0
 ההומומורפיזם
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\varphi:H\to H$
 \end_inset
 
@@ -1798,15 +1932,16 @@ a^{-1}*a^{n+1} & n<0
 מסקנה
 \series default
 \color inherit
-: )
+:
+ (
 \begin_inset Formula $\im\left(\varphi\right)=\im\left(\varphi^{*}\right)$
 \end_inset
 
-(
+)
 \begin_inset Formula $\land$
 \end_inset
 
-))
+((
 \begin_inset Formula $\varphi^{*}$
 \end_inset
 
@@ -1814,15 +1949,15 @@ a^{-1}*a^{n+1} & n<0
 \begin_inset Quotes erd
 \end_inset
 
-ע( 
+ע) 
 \begin_inset Formula $\iff$
 \end_inset
 
- )
+ (
 \begin_inset Formula $\ker\left(\varphi\right)=N$
 \end_inset
 
-((.
+)).
 \end_layout
 
 \begin_layout Standard
@@ -1832,7 +1967,8 @@ a^{-1}*a^{n+1} & n<0
 משפט האיזומורפיזם השני
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $G,H,N$
 \end_inset
 
@@ -1840,11 +1976,13 @@ a^{-1}*a^{n+1} & n<0
 \begin_inset Formula $H\le G$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $N\lhd G$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $HN\lhd G$
 \end_inset
 
@@ -1862,7 +2000,8 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $G,H,N$
 \end_inset
 
@@ -1870,7 +2009,8 @@ a^{-1}*a^{n+1} & n<0
 \begin_inset Formula $H\le G$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $N\lhd G$
 \end_inset
 
@@ -1896,7 +2036,8 @@ a^{-1}*a^{n+1} & n<0
 יוצרת
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1918,7 +2059,8 @@ a^{-1}*a^{n+1} & n<0
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left<A\right>$
 \end_inset
 
@@ -1929,14 +2071,15 @@ a^{-1}*a^{n+1} & n<0
 
 \series bold
 \color magenta
-חבורה נוצרת סופית )נ
+חבורה נוצרת סופית (נ
 \begin_inset Quotes erd
 \end_inset
 
-ס(
+ס)
 \series default
 \color inherit
-: חבורה 
+:
+ חבורה 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1962,14 +2105,15 @@ a^{-1}*a^{n+1} & n<0
 
 \series default
 \color inherit
-: תמורה 
+:
+ תמורה 
 \begin_inset Formula $\pi$
 \end_inset
 
  המקיימת 
 \begin_inset Formula $\pi\left(b\right)=\begin{cases}
 b & b\notin\left<a_{1},\ldots,a_{k}\right>\\
-a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
+a_{\left)\iota i\in\left[k\right].b=a_{i}\right(+1\mod k} & else
 \end{cases}$
 \end_inset
 
@@ -1983,7 +2127,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\pi=\left(a_{1}\ldots a_{k}\right)$
 \end_inset
 
@@ -1997,7 +2142,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 חילוף/היפוך//חישוקון
 \series default
 \color inherit
-: מחזור מאורך 
+:
+ מחזור מאורך 
 \begin_inset Formula $2$
 \end_inset
 
@@ -2011,7 +2157,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\sigma\in S_{n}$
 \end_inset
 
@@ -2037,7 +2184,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\sigma\in S_{n}$
 \end_inset
 
@@ -2059,7 +2207,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 משפט
 \series default
 \color inherit
-: נניח כי 
+:
+ נניח כי 
 \begin_inset Formula $\prod_{i=1}^{m}p_{i}=\prod_{i=1}^{\ell}\pi_{i}$
 \end_inset
 
@@ -2068,7 +2217,7 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \end_inset
 
  חילופים אזי 
-\begin_inset Formula $\ell=m\mod2$
+\begin_inset Formula $\ell=m\mod 2$
 \end_inset
 
 .
@@ -2081,7 +2230,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 סימן
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\sigma\in S_{n}$
 \end_inset
 
@@ -2103,7 +2253,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sign:S_{n}\to\left\{ \pm1\right\} $
 \end_inset
 
@@ -2121,11 +2272,12 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 זוגית/איזוגית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\sigma\in S_{n}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $\sign\left(\sigma\right)=1$
 \end_inset
 
@@ -2137,11 +2289,11 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \begin_inset Formula $\sigma$
 \end_inset
 
- זוגית(
+ זוגית)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $\sign\left(\sigma\right)=-1$
 \end_inset
 
@@ -2153,7 +2305,7 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \begin_inset Formula $\sigma$
 \end_inset
 
- איזוגית(.
+ איזוגית).
 \end_layout
 
 \begin_layout Standard
@@ -2163,7 +2315,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $A_{n}=\left\{ \sigma\in S_{n}\mid\sign\left(\sigma\right)=1\right\} $
 \end_inset
 
@@ -2177,11 +2330,13 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $A_{n}\lhd S_{n}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\left|A_{n}\right|=\frac{\left|S_{n}\right|}{2}$
 \end_inset
 
@@ -2195,11 +2350,13 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left[S_{n}:A_{n}\right]=2$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $S_{n}/A_{n}\cong\left\{ \pm1\right\} $
 \end_inset
 
@@ -2213,7 +2370,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $N\lhd G$
 \end_inset
 
@@ -2221,19 +2379,19 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \begin_inset Formula $N\le H\le G$
 \end_inset
 
- חבורה אזי )
+ חבורה אזי (
 \begin_inset Formula $N\lhd H$
 \end_inset
 
-(
+)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $H/N\le G/N$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -2243,7 +2401,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 משפט האיזומורפיזם השלישי
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $N\lhd G$
 \end_inset
 
@@ -2269,7 +2428,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $N\lhd G$
 \end_inset
 
@@ -2315,11 +2475,13 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 הלמה של צצנהאוס/למת הפרפר
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $A_{1}\lhd A\le G$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $B_{1}\lhd B\le G$
 \end_inset
 
@@ -2347,7 +2509,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 תת חבורת האלכסון
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2365,23 +2528,25 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\Delta\cong G$
 \end_inset
 
-, )
+,
+ (
 \begin_inset Formula $\Delta\lhd G^{2}$
 \end_inset
 
-( 
+) 
 \begin_inset Formula $\iff$
 \end_inset
 
- )
+ (
 \begin_inset Formula $G$
 \end_inset
 
- אבלית(.
+ אבלית).
 \end_layout
 
 \begin_layout Standard
@@ -2391,7 +2556,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 קומוטטור
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2413,7 +2579,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $g,h$
 \end_inset
 
@@ -2435,7 +2602,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 תת חבורת הקומוטטור
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2453,7 +2621,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $G'\lhd G$
 \end_inset
 
@@ -2467,23 +2636,24 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $N\lhd G$
 \end_inset
 
- חבורות אזי )
+ חבורות אזי (
 \begin_inset Formula $G/N$
 \end_inset
 
- אבלית( 
+ אבלית) 
 \begin_inset Formula $\iff$
 \end_inset
 
-)
+(
 \begin_inset Formula $G'\le N$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -2493,7 +2663,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $H\le G$
 \end_inset
 
@@ -2527,7 +2698,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 חבורה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2545,7 +2717,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $Z\left(G\right)\lhd G$
 \end_inset
 
@@ -2559,7 +2732,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 המרכז של איבר
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2581,7 +2755,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $C_{G}\left(a\right)\le G$
 \end_inset
 
@@ -2595,7 +2770,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $Z\left(G\right)=G$
 \end_inset
 
@@ -2625,7 +2801,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 הנורמליזטור/המשמר
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2647,7 +2824,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $N_{G}\left(g\right)\le G$
 \end_inset
 
@@ -2661,7 +2839,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 הנורמליזטור/המשמר של חבורה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $H\le G$
 \end_inset
 
@@ -2679,7 +2858,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $a\in Z\left(G\right)\iff N_{G}\left(a\right)=G$
 \end_inset
 
@@ -2693,7 +2873,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 פעולה משמאל
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2729,7 +2910,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\pi\left(g,x\right)=g*x$
 \end_inset
 
@@ -2743,7 +2925,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 הגדרה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2765,7 +2948,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sim$
 \end_inset
 
@@ -2783,7 +2967,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 הגדרה
 \series default
 \color inherit
-: מחלקת השקילות של 
+:
+ מחלקת השקילות של 
 \begin_inset Formula $\sim$
 \end_inset
 
@@ -2805,7 +2990,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2831,7 +3017,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 למה
 \series default
 \color inherit
-: נניח כי 
+:
+ נניח כי 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2867,7 +3054,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2889,7 +3077,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 למת האיפיון לתת חבורות של חבורות ציקליות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G=\left<a\right>$
 \end_inset
 
@@ -2923,7 +3112,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2953,7 +3143,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 מחלקות צמידות
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -2971,7 +3162,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 משוואת המחלקים
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left\{ x_{1}\ldots x_{n}\right\} $
 \end_inset
 
@@ -2989,7 +3181,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3015,7 +3208,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $H\le G$
 \end_inset
 
@@ -3056,27 +3250,27 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $G$
 \end_inset
 
- סופית(
+ סופית)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $\left|G\right|\nmid n!$
 \end_inset
 
-( 
+) 
 \begin_inset Formula $\impliedby$
 \end_inset
 
- )
+ (
 \begin_inset Formula $K\ne\left\{ e\right\} $
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -3086,7 +3280,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 חבורה פשוטה
 \series default
 \color inherit
-: חבורה 
+:
+ חבורה 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3104,7 +3299,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $H\le G$
 \end_inset
 
@@ -3126,7 +3322,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 למה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $A_{n}$
 \end_inset
 
@@ -3148,7 +3345,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\ge5$
 \end_inset
 
@@ -3174,7 +3372,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\ge5$
 \end_inset
 
@@ -3200,7 +3399,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $n\ge5$
 \end_inset
 
@@ -3222,7 +3422,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 קיילי
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3256,7 +3457,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 פנימית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3295,7 +3497,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 סימון
 \series default
 \color inherit
-: אם 
+:
+ אם 
 \begin_inset Formula $G_{1}\ldots G_{n}$
 \end_inset
 
@@ -3325,7 +3528,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 חיצונית
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $G_{1}\ldots G_{n}$
 \end_inset
 
@@ -3343,7 +3547,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: מכפלה ישרה עם פעולה איבר איבר היא חבורה.
+:
+ מכפלה ישרה עם פעולה איבר איבר היא חבורה.
 \end_layout
 
 \begin_layout Standard
@@ -3353,7 +3558,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3451,11 +3657,12 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 מסקנה
 \series default
 \color inherit
-: )מכפלה ישרה פנימית( 
+:
+ (מכפלה ישרה פנימית) 
 \begin_inset Formula $\cong$
 \end_inset
 
- )מכפלה ישרה חיצונית(.
+ (מכפלה ישרה חיצונית).
 \end_layout
 
 \begin_layout Standard
@@ -3465,7 +3672,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3491,7 +3699,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $m\in\bbn_{+}$
 \end_inset
 
@@ -3515,7 +3724,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 
 
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3535,11 +3745,13 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \series bold
 סדרות שקולות
 \series default
-: 
+:
+ 
 \begin_inset Formula $\left\{ G_{i}\right\} _{i=0}^{m}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\left\{ H_{i}\right\} _{i=0}^{m}$
 \end_inset
 
@@ -3559,7 +3771,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \series bold
 עידון
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left\{ G_{i}\right\} _{i=0}^{m}$
 \end_inset
 
@@ -3579,7 +3792,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \series bold
 משפט שרייר
 \series default
-: לכל שתי סדרות נורמליות של אותה חבורה קיימים עידונים שקולים.
+:
+ לכל שתי סדרות נורמליות של אותה חבורה קיימים עידונים שקולים.
 \end_layout
 
 \begin_layout Standard
@@ -3587,7 +3801,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \series bold
 מסקנה
 \series default
-: לכל שתי סדרות נורמליות של אותה חבורה קיימים עידונים שקולים ללא חזרות.
+:
+ לכל שתי סדרות נורמליות של אותה חבורה קיימים עידונים שקולים ללא חזרות.
 \end_layout
 
 \begin_layout Standard
@@ -3595,7 +3810,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \series bold
 סדרת הרכב
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3607,7 +3823,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \series bold
 משפט ז'ורדן הלדר
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3623,7 +3840,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \series bold
 נורמלית מקסימלית
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3643,7 +3861,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \series bold
 למה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $\left\{ G_{i}\right\} _{i=0}^{m}$
 \end_inset
 
@@ -3688,7 +3907,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \series bold
 חבורה פתירה
 \series default
-: חבורה סופית 
+:
+ חבורה סופית 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3708,7 +3928,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \series bold
 למה
 \series default
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3716,23 +3937,24 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \begin_inset Formula $K\lhd G$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $G$
 \end_inset
 
- פתירה( 
+ פתירה) 
 \begin_inset Formula $\iff$
 \end_inset
 
- )
+ (
 \begin_inset Formula $G/K$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $K$
 \end_inset
 
- פתירות(.
+ פתירות).
 \end_layout
 
 \begin_layout Standard
@@ -3746,7 +3968,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p$
 \end_inset
 
@@ -3768,7 +3991,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $G,H$
 \end_inset
 
@@ -3776,7 +4000,7 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \begin_inset Formula $p$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $R\le G$
 \end_inset
 
@@ -3784,11 +4008,11 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \begin_inset Formula $p$
 \end_inset
 
-(
+)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $H\times G$
 \end_inset
 
@@ -3796,7 +4020,7 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \begin_inset Formula $p$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -3806,7 +4030,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G\ne\left\{ e\right\} $
 \end_inset
 
@@ -3828,7 +4053,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p$
 \end_inset
 
@@ -3836,19 +4062,19 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \begin_inset Formula $G$
 \end_inset
 
- חבורה אזי )
+ חבורה אזי (
 \begin_inset Formula $\ord\left(G\right)=p^{2}$
 \end_inset
 
-( 
+) 
 \begin_inset Formula $\impliedby$
 \end_inset
 
- )
+ (
 \begin_inset Formula $G$
 \end_inset
 
- אבלית(.
+ אבלית).
 \end_layout
 
 \begin_layout Standard
@@ -3858,7 +4084,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3884,7 +4111,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 תת חבורה מירבית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3906,7 +4134,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -3966,7 +4195,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
  סילו
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p$
 \end_inset
 
@@ -4000,7 +4230,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 משפט קושי
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p$
 \end_inset
 
@@ -4022,7 +4253,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 המשפט הראשון של סילו
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4048,7 +4280,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 משפט
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $p|\left|G\right|$
 \end_inset
 
@@ -4078,7 +4311,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 המשפט השני של סילו
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $H,N\le G$
 \end_inset
 
@@ -4100,7 +4334,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 מסקנה
 \series default
 \color inherit
-: נניח כי 
+:
+ נניח כי 
 \begin_inset Formula $n_{p}=1$
 \end_inset
 
@@ -4118,7 +4353,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 סימון
 \series default
 \color inherit
-: כמות תת חבורות 
+:
+ כמות תת חבורות 
 \begin_inset Formula $p$
 \end_inset
 
@@ -4136,11 +4372,13 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 המשפט השלישי של סילו
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $n_{p}\equiv1\mod p$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $n_{p}|\left[G:P\right]$
 \end_inset
 
@@ -4154,7 +4392,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 למה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $N\lhd G$
 \end_inset
 
@@ -4206,7 +4445,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4229,19 +4469,19 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \end_layout
 
 \begin_layout Itemize
-)
+(
 \begin_inset Formula $q\nmid p-1$
 \end_inset
 
-( 
+) 
 \begin_inset Formula $\impliedby$
 \end_inset
 
- )
+ (
 \begin_inset Formula $G$
 \end_inset
 
- ציקלית(.
+ ציקלית).
 \end_layout
 
 \begin_layout Standard
@@ -4251,7 +4491,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 הערה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left<G,\cdot\right>$
 \end_inset
 
@@ -4259,7 +4500,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \begin_inset Formula $\prod$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\left<A,+\right>$
 \end_inset
 
@@ -4277,7 +4519,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 תת חבורת הפיתול
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4295,7 +4538,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 חבורת פיתול
 \series default
 \color inherit
-: חבורה אבלית 
+:
+ חבורה אבלית 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4313,7 +4557,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 חבורה חסרת פיתול
 \series default
 \color inherit
-: חבורה אבלית 
+:
+ חבורה אבלית 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4331,7 +4576,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4368,14 +4614,15 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 
 \series bold
 \color green
-סדרה תלויה לינארית )ת
+סדרה תלויה לינארית (ת
 \begin_inset Quotes erd
 \end_inset
 
-ל(
+ל)
 \series default
 \color inherit
-: סדרה 
+:
+ סדרה 
 \begin_inset Formula $a\in A^{n}$
 \end_inset
 
@@ -4387,11 +4634,11 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \end_layout
 
 \begin_layout Itemize
-בלתי תלויה לינארית )בת
+בלתי תלויה לינארית (בת
 \begin_inset Quotes erd
 \end_inset
 
-ל(.
+ל).
 \end_layout
 
 \begin_layout Standard
@@ -4401,7 +4648,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 בסיס
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4427,7 +4675,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 חבורה חופשית
 \series default
 \color inherit
-: חבורה אבלית בעלת בסיס.
+:
+ חבורה אבלית בעלת בסיס.
  
 \end_layout
 
@@ -4438,7 +4687,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $F$
 \end_inset
 
@@ -4472,7 +4722,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4480,19 +4731,19 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \begin_inset Formula $v\in A^{n}$
 \end_inset
 
- אזי )
+ אזי (
 \begin_inset Formula $v$
 \end_inset
 
- בסיס( 
+ בסיס) 
 \begin_inset Formula $\iff$
 \end_inset
 
- )
+ (
 \begin_inset Formula $\left(\bigoplus_{i=1}^{n}\left<v_{i}\right>=A\right)\land\left(\forall i\in\left[n\right].\left<v_{i}\right>\cong\bbz\right)$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -4502,23 +4753,24 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A$
 \end_inset
 
- חבורה אבלית אינסופית אזי )
+ חבורה אבלית אינסופית אזי (
 \begin_inset Formula $A$
 \end_inset
 
- חופשית( 
+ חופשית) 
 \begin_inset Formula $\iff$
 \end_inset
 
- )
+ (
 \begin_inset Formula $A\cong\bbz^{n}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -4528,11 +4780,12 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A$
 \end_inset
 
- חבורת חסרת פיתול אבלית אזי )
+ חבורת חסרת פיתול אבלית אזי (
 \begin_inset Formula $A$
 \end_inset
 
@@ -4540,15 +4793,15 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \begin_inset Quotes erd
 \end_inset
 
-ס( 
+ס) 
 \begin_inset Formula $\iff$
 \end_inset
 
- )
+ (
 \begin_inset Formula $A$
 \end_inset
 
- חופשית(.
+ חופשית).
 \end_layout
 
 \begin_layout Standard
@@ -4558,7 +4811,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4566,7 +4820,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \begin_inset Formula $v_{1}\ldots v_{n}$
 \end_inset
 
- בסיס, 
+ בסיס,
+ 
 \begin_inset Formula $u_{1}\ldots u_{k}$
 \end_inset
 
@@ -4584,7 +4839,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $B_{1},B_{2}$
 \end_inset
 
@@ -4602,7 +4858,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 דרגה של חבורה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4624,7 +4881,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 משפט החבורות החלקיות של תת חבורה חופשית
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $H\le A$
 \end_inset
 
@@ -4650,7 +4908,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 מסקנה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $v\in A^{n}$
 \end_inset
 
@@ -4684,7 +4943,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 מסקנה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $H\le A$
 \end_inset
 
@@ -4702,7 +4962,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G=G_{1}\times\ldots\times G_{n}$
 \end_inset
 
@@ -4724,7 +4985,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 משפט השאריות הסיני
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $j,k,m\in\bbn$
 \end_inset
 
@@ -4732,7 +4994,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \begin_inset Formula $\gcd\left(j,k\right)=1$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $j\cdot k=m$
 \end_inset
 
@@ -4750,7 +5013,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 המשפט היסודי של חבורות אבליות נוצרות סופית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $A$
 \end_inset
 
@@ -4791,7 +5055,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 חבורה סבבה
 \series default
 \color inherit
-: חבורה 
+:
+ חבורה 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4813,7 +5078,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4839,7 +5105,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 הגדרה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $H,K\le G$
 \end_inset
 
@@ -4857,7 +5124,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left[H,K\right]\le G$
 \end_inset
 
@@ -4871,7 +5139,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $H,K\le G$
 \end_inset
 
@@ -4906,7 +5175,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 הסדרה המרכזית היורדת
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4914,7 +5184,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \begin_inset Formula $\Phi_{1}\left(G\right)=G$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\Phi_{i+1}\left(G\right)=\left[\Phi_{i}\left(G\right),G\right]$
 \end_inset
 
@@ -4928,7 +5199,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 למה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\Phi_{i+1}\lhd\Phi_{i}$
 \end_inset
 
@@ -4942,7 +5214,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 למה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\Phi_{i}/\Phi_{i+1}\le Z\left(G/\Phi_{i+1}\right)$
 \end_inset
 
@@ -4956,7 +5229,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 הסדרה המרכזית העולה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -4964,7 +5238,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 \begin_inset Formula $Z_{0}\left(G\right)=\left\{ e\right\} $
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $Z_{i}\left(G\right)/Z_{i-1}\left(G\right)=Z\left(G/Z_{i-1}\left(G\right)\right)$
 \end_inset
 
@@ -4978,7 +5253,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $Z_{1}\left(G\right)=Z\left(G\right)$
 \end_inset
 
@@ -4992,7 +5268,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(Z_{m}=G\right)\iff\left(\Phi_{m+1}=\left\{ e\right\} \right)$
 \end_inset
 
@@ -5006,7 +5283,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(Z_{m}=G\right)\implies\left(\forall i\in\left[m\right].\Phi_{i+1}\le Z_{m-i}\right)$
 \end_inset
 
@@ -5020,7 +5298,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 חבורה נילפוטנטית
 \series default
 \color inherit
-: חבורה 
+:
+ חבורה 
 \begin_inset Formula $G$
 \end_inset
 
@@ -5048,7 +5327,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 טענה
 \series default
 \color inherit
-: מכפלה ישרה של חבורות נילפוטנטיות היא נילפוטנטית.
+:
+ מכפלה ישרה של חבורות נילפוטנטיות היא נילפוטנטית.
 \end_layout
 
 \begin_layout Standard
@@ -5058,7 +5338,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -5080,7 +5361,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 למת הארגומנט של פראטיני
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $K\lhd G$
 \end_inset
 
@@ -5106,7 +5388,8 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 למה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
@@ -5132,23 +5415,24 @@ a_{\left(\iota i\in\left[k\right].b=a_{i}\right)+1\mod k} & else
 משפט
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $G$
 \end_inset
 
- חבורה אזי )
+ חבורה אזי (
 \begin_inset Formula $G$
 \end_inset
 
- סבבה( 
+ סבבה) 
 \begin_inset Formula $\iff$
 \end_inset
 
- )
+ (
 \begin_inset Formula $G$
 \end_inset
 
- נילפוטנטית(.
+ נילפוטנטית).
 \end_layout
 
 \end_body

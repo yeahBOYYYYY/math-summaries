@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -19,6 +19,7 @@
 \usepackage{polynom}
 \usepackage{booktabs}
 \usepackage{fancyhdr}
+
 
 % it's here?
 \setlength{\tabcolsep}{1pt}
@@ -49,6 +50,9 @@
 \definecolor{stringcolor}{RGB}{0,168,0}
 \definecolor{remarkcolor}{RGB}{150,145,91} % 255,225,88
 
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{gray}{#1}}
+\SetCommentSty{mycommfont}
+
 % hyperlinks
 \hypersetup{
     colorlinks=true,
@@ -74,19 +78,28 @@
 \end_preamble
 \options no-math
 \use_default_options true
-\maintain_unincluded_children false
+\begin_modules
+algorithm2e
+\end_modules
+\maintain_unincluded_children no
+\begin_local_layout
+Format 66
+PackageOptions algorithm2e vlined
+\end_local_layout
 \language hebrew
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "David CLM"
-\font_sans "default" "default"
+\font_sans "default" "Times New Roman"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts true
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -97,10 +110,23 @@
 \bibtex_command default
 \index_command default
 \float_placement H
+\float_alignment class
 \paperfontsize default
 \spacing onehalf
-\use_hyperref false
-\papersize letterpaper
+\use_hyperref true
+\pdf_title "Course A lbl"
+\pdf_author "Ron Mikhelman"
+\pdf_subject "Math Summeries"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letter
 \use_geometry true
 \use_package amsmath 2
 \use_package amssymb 2
@@ -121,7 +147,9 @@
 \suppress_date true
 \justification false
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -141,11 +169,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -154,6 +187,7 @@
 \begin_inset CommandInset include
 LatexCommand include
 filename "E:/University/macros.lyx"
+literal "true"
 
 \end_inset
 
@@ -163,7 +197,7 @@ filename "E:/University/macros.lyx"
 \begin_layout Standard
 \begin_inset FormulaMacro
 \renewcommand{\P}[2]{\mathcal{P}_{#2}\left(#1\right)}
-{\mathcal{P}_{#2}\left(#1\right)}
+{\mathcal{P}_{#2}\left)#1\right(}
 \end_inset
 
 
@@ -174,7 +208,8 @@ filename "E:/University/macros.lyx"
 \series bold
 הקדמה
 \series default
-: כל משפטי הגאומטריה לבגרות
+:
+ כל משפטי הגאומטריה לבגרות
 \end_layout
 
 \begin_layout Enumerate
@@ -190,11 +225,13 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Enumerate
-במשולש, מול זוויות שוות מונחות צלעות שוות.
+במשולש,
+ מול זוויות שוות מונחות צלעות שוות.
 \end_layout
 
 \begin_layout Enumerate
-במשולש שווה שוקיים, זוויות הבסיס שוות זו לזו.
+במשולש שווה שוקיים,
+ זוויות הבסיס שוות זו לזו.
 \end_layout
 
 \begin_layout Enumerate
@@ -202,27 +239,34 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Enumerate
-במשולש שווה שוקיים, חוצה זווית הראש, התיכון לבסיס והגובה לבסיס מתלכדים.
+במשולש שווה שוקיים,
+ חוצה זווית הראש,
+ התיכון לבסיס והגובה לבסיס מתלכדים.
 \end_layout
 
 \begin_layout Enumerate
-אם במשולש חוצה זווית הוא גובה, אז המשולש הוא שווה שוקיים.
+אם במשולש חוצה זווית הוא גובה,
+ אז המשולש הוא שווה שוקיים.
 \end_layout
 
 \begin_layout Enumerate
-אם במשולש חוצה זווית הוא תיכון, אז המשולש הוא שווה שוקיים.
+אם במשולש חוצה זווית הוא תיכון,
+ אז המשולש הוא שווה שוקיים.
 \end_layout
 
 \begin_layout Enumerate
-אם במשולש גובה הוא תיכון, אז המשולש הוא שווה שוקיים.
+אם במשולש גובה הוא תיכון,
+ אז המשולש הוא שווה שוקיים.
 \end_layout
 
 \begin_layout Enumerate
-במשולש )שאינו שווה צלעות(, מול הצלע הגדולה יותר מונחת זוית גדולה יותר.
+במשולש (שאינו שווה צלעות),
+ מול הצלע הגדולה יותר מונחת זוית גדולה יותר.
 \end_layout
 
 \begin_layout Enumerate
-במשולש )שאינו שווה זוויות(, מול הזווית הגדולה יותר מונחת צלע גדולה יותר.
+במשולש (שאינו שווה זוויות),
+ מול הזווית הגדולה יותר מונחת צלע גדולה יותר.
 \end_layout
 
 \begin_layout Enumerate
@@ -242,12 +286,13 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Enumerate
-ישר החוצה צלע אחת במשולש ומקביל לצלע שניה, חוצה את הצלע השלישית.
+ישר החוצה צלע אחת במשולש ומקביל לצלע שניה,
+ חוצה את הצלע השלישית.
 \end_layout
 
 \begin_layout Enumerate
-קטע שקצותיו על שתי צלעות משולש, מקביל לצלע השלישית ושווה למחציתה הוא קטע
- אמצעים.
+קטע שקצותיו על שתי צלעות משולש,
+ מקביל לצלע השלישית ושווה למחציתה הוא קטע אמצעים.
 \end_layout
 
 \begin_layout Enumerate
@@ -267,12 +312,14 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Enumerate
-האלכסון הראשי בדלתון חוצה את זוויות הראש, חוצה את האלכסון השני ומאונך לו.
+האלכסון הראשי בדלתון חוצה את זוויות הראש,
+ חוצה את האלכסון השני ומאונך לו.
 \end_layout
 
 \begin_layout Enumerate
 שני ישרים נחתכים על ידי ישר שלישי.
- אם יש זוג זוויות מתאימות שוות, אז שני הישרים מקבילים.
+ אם יש זוג זוויות מתאימות שוות,
+ אז שני הישרים מקבילים.
 \end_layout
 
 \begin_layout Enumerate
@@ -384,7 +431,9 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Enumerate
-בטרפז, ישר החוצה שוק אחת ומקביל לבסיסים, חוצה את השוק השנייה.
+בטרפז,
+ ישר החוצה שוק אחת ומקביל לבסיסים,
+ חוצה את השוק השנייה.
 \end_layout
 
 \begin_layout Enumerate
@@ -393,7 +442,7 @@ filename "E:/University/macros.lyx"
 
 \begin_layout Enumerate
 נקודת חיתוך התיכונים מחלקת כל תיכון ביחס 1:2.
- )החלק הקרוב לקדקוד הוא פי 2 מהחלק האחר(.
+ (החלק הקרוב לקדקוד הוא פי 2 מהחלק האחר).
 \end_layout
 
 \begin_layout Enumerate
@@ -401,11 +450,13 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Enumerate
-אם נקודה נמצאת במרחקים שווים משני שוקי זווית, אז היא נמצאת על חוצה הזווית.
+אם נקודה נמצאת במרחקים שווים משני שוקי זווית,
+ אז היא נמצאת על חוצה הזווית.
 \end_layout
 
 \begin_layout Enumerate
-שלושת חוצי הזוויות של משולש נחתכים בנקודה אחת, שהיא מרכז המעגל החסום במשולש.
+שלושת חוצי הזוויות של משולש נחתכים בנקודה אחת,
+ שהיא מרכז המעגל החסום במשולש.
 \end_layout
 
 \begin_layout Enumerate
@@ -413,11 +464,13 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Enumerate
-כל נקודה הנמצאת על האנך האמצעי של קטע, נמצאת במרחקים שווים מקצות הקטע.
+כל נקודה הנמצאת על האנך האמצעי של קטע,
+ נמצאת במרחקים שווים מקצות הקטע.
 \end_layout
 
 \begin_layout Enumerate
-כל נקודה הנמצאת במרחקים שווים מקצות קטע, נמצאת על האנך האמצעי לקטע.
+כל נקודה הנמצאת במרחקים שווים מקצות קטע,
+ נמצאת על האנך האמצעי לקטע.
 \end_layout
 
 \begin_layout Enumerate
@@ -425,8 +478,9 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Enumerate
-במשולש, שלושת האנכים האמצעיים נחתכים בנקודה אחת, שהיא מרכז המעגל החוסם את
- המשולש.
+במשולש,
+ שלושת האנכים האמצעיים נחתכים בנקודה אחת,
+ שהיא מרכז המעגל החוסם את המשולש.
 \end_layout
 
 \begin_layout Enumerate
@@ -442,8 +496,7 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Enumerate
-מרובע קמור חוסם מעגל אם ורק אם סכום שתי צלעות נגדיות שווה לסכום שתי הצלעות
- הנגדיות האחרות.
+מרובע קמור חוסם מעגל אם ורק אם סכום שתי צלעות נגדיות שווה לסכום שתי הצלעות הנגדיות האחרות.
 \end_layout
 
 \begin_layout Enumerate
@@ -459,17 +512,18 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Enumerate
-במעגל, שתי זוויות מרכזיות שוות זו לזו אם ורק אם שתי הקשתות המתאימות להן
- שוות זו לזו.
+במעגל,
+ שתי זוויות מרכזיות שוות זו לזו אם ורק אם שתי הקשתות המתאימות להן שוות זו לזו.
 \end_layout
 
 \begin_layout Enumerate
-במעגל, שתי זוויות מרכזיות שוות זו לזו אם ורק אם שני המיתרים המתאימים להן
- שווים זה לזה.
+במעגל,
+ שתי זוויות מרכזיות שוות זו לזו אם ורק אם שני המיתרים המתאימים להן שווים זה לזה.
 \end_layout
 
 \begin_layout Enumerate
-במעגל, מיתרים שווים זה לזה אם ורק אם שתי הקשתות המתאימות להם שוות זו לזו.
+במעגל,
+ מיתרים שווים זה לזה אם ורק אם שתי הקשתות המתאימות להם שוות זו לזו.
 \end_layout
 
 \begin_layout Enumerate
@@ -481,13 +535,14 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Enumerate
-במעגל, אם מרחקו של מיתר ממרכז המעגל קטן יותר ממרחקו של מיתר אחר, אז מיתר
- זה ארוך יותר מהמיתר האחר.
+במעגל,
+ אם מרחקו של מיתר ממרכז המעגל קטן יותר ממרחקו של מיתר אחר,
+ אז מיתר זה ארוך יותר מהמיתר האחר.
 \end_layout
 
 \begin_layout Enumerate
-האנך ממרכז המעגל למיתר חוצה את המיתר, חוצה את הזווית המרכזית המתאימה למיתר
- וחוצה את הקשת המתאימה למיתר.
+האנך ממרכז המעגל למיתר חוצה את המיתר,
+ חוצה את הזווית המרכזית המתאימה למיתר וחוצה את הקשת המתאימה למיתר.
 \end_layout
 
 \begin_layout Enumerate
@@ -495,27 +550,31 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Enumerate
-במעגל, זווית היקפית שווה למחצית הזווית המרכזית הנשענת על אותה הקשת.
+במעגל,
+ זווית היקפית שווה למחצית הזווית המרכזית הנשענת על אותה הקשת.
 \end_layout
 
 \begin_layout Enumerate
-במעגל, לזוויות היקפיות שוות קשתות שוות ומיתרים שווים.
+במעגל,
+ לזוויות היקפיות שוות קשתות שוות ומיתרים שווים.
 \end_layout
 
 \begin_layout Enumerate
-במעגל, לקשתות שוות מתאימות זוויות היקפיות שוות.
+במעגל,
+ לקשתות שוות מתאימות זוויות היקפיות שוות.
 \end_layout
 
 \begin_layout Enumerate
-במעגל, כל הזוויות ההיקפיות הנשענות על מיתר מאותו צד של המיתר שוות זו לזו.
+במעגל,
+ כל הזוויות ההיקפיות הנשענות על מיתר מאותו צד של המיתר שוות זו לזו.
 \end_layout
 
 \begin_layout Enumerate
-זווית היקפית הנשענת על קוטר היא זווית ישרה )
+זווית היקפית הנשענת על קוטר היא זווית ישרה (
 \begin_inset Formula $\text{90}^{\circ}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Enumerate
@@ -527,13 +586,13 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Enumerate
-במעגל, זווית פנימית שווה למחצית סכום שתי הקשתות הכלואות בין שוקי הזווית
- ובין המשכיהן.
+במעגל,
+ זווית פנימית שווה למחצית סכום שתי הקשתות הכלואות בין שוקי הזווית ובין המשכיהן.
 \end_layout
 
 \begin_layout Enumerate
-במעגל, זווית חיצונית שווה למחצית הפרש שתי הקשתות הכלואות בין שוקי הזווית
- ובין המשכיהן.
+במעגל,
+ זווית חיצונית שווה למחצית הפרש שתי הקשתות הכלואות בין שוקי הזווית ובין המשכיהן.
 \end_layout
 
 \begin_layout Enumerate
@@ -553,25 +612,29 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Enumerate
-קטע המחבר את מרכז המעגל לנקודה ממנה יוצאים שני משיקים למעגל, חוצה את הזווית
- שבין המשיקים.
+קטע המחבר את מרכז המעגל לנקודה ממנה יוצאים שני משיקים למעגל,
+ חוצה את הזווית שבין המשיקים.
 \end_layout
 
 \begin_layout Enumerate
-קטע המרכזים של שני מעגלים נחתכים, חוצה את המיתר המשותף ומאונך לו.
+קטע המרכזים של שני מעגלים נחתכים,
+ חוצה את המיתר המשותף ומאונך לו.
 \end_layout
 
 \begin_layout Enumerate
-נקודת ההשקה של שני מעגלים המשיקים זה לזה, נמצאת על קטע המרכזים או על המשכו.
+נקודת ההשקה של שני מעגלים המשיקים זה לזה,
+ נמצאת על קטע המרכזים או על המשכו.
 \end_layout
 
 \begin_layout Enumerate
-משפט פיתגורס: במשולש ישר זווית, סכום ריבועי הניצבים שווה לריבוע היתר.
+משפט פיתגורס:
+ במשולש ישר זווית,
+ סכום ריבועי הניצבים שווה לריבוע היתר.
 \end_layout
 
 \begin_layout Enumerate
-משפט פיתגורס ההפוך: משולש בו סכום ריבועי שתי צלעות שווה לריבוע הצלע השלישית
- הוא ישר זווית.
+משפט פיתגורס ההפוך:
+ משולש בו סכום ריבועי שתי צלעות שווה לריבוע הצלע השלישית הוא ישר זווית.
 \end_layout
 
 \begin_layout Enumerate
@@ -583,15 +646,18 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Enumerate
-אם במשולש ישר זוית, זוית חדה של 
+אם במשולש ישר זוית,
+ זוית חדה של 
 \begin_inset Formula $\text{30}^{\circ}$
 \end_inset
 
-, אז הניצב מול זוית זו שווה למחצית היתר.
+,
+ אז הניצב מול זוית זו שווה למחצית היתר.
 \end_layout
 
 \begin_layout Enumerate
-אם במשולש ישר זוית ניצב שווה למחצית היתר, אז מול ניצב זה זוית שגודלה 
+אם במשולש ישר זוית ניצב שווה למחצית היתר,
+ אז מול ניצב זה זוית שגודלה 
 \begin_inset Formula $\text{30}^{\circ}$
 \end_inset
 
@@ -599,28 +665,28 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Enumerate
-משפט תאלס: שני ישרים מקבילים החותכים שוקי זווית, מקצים עליהם קטעים פרופורציוניים.
+משפט תאלס:
+ שני ישרים מקבילים החותכים שוקי זווית,
+ מקצים עליהם קטעים פרופורציוניים.
 \end_layout
 
 \begin_layout Enumerate
-משפט תאלס המורחב: ישר המקביל לאחת מצלעות המשולש חותך את שתי הצלעות האחרות
- או את המשכיהן בקטעים פרופורציוניים.
+משפט תאלס המורחב:
+ ישר המקביל לאחת מצלעות המשולש חותך את שתי הצלעות האחרות או את המשכיהן בקטעים פרופורציוניים.
 \end_layout
 
 \begin_layout Enumerate
-משפט הפוך למשפט תאלס: שני ישרים המקצים על שוקי זווית ארבעה קטעים פרופורציוניים
- הם ישרים מקבילים.
+משפט הפוך למשפט תאלס:
+ שני ישרים המקצים על שוקי זווית ארבעה קטעים פרופורציוניים הם ישרים מקבילים.
 \end_layout
 
 \begin_layout Enumerate
-חוצה זווית פנימית במשולש מחלק את הצלע שמול הזווית לשני קטעים אשר היחס ביניהם
- שווה ליחס הצלעות הכולאות את הזווית בהתאמה.
+חוצה זווית פנימית במשולש מחלק את הצלע שמול הזווית לשני קטעים אשר היחס ביניהם שווה ליחס הצלעות הכולאות את הזווית בהתאמה.
 \end_layout
 
 \begin_layout Enumerate
-ישר העובר דרך קדקוד משולש ומחלק את הצלע שמול קדקוד זה חלוקה פנימית, ביחס
- של שתי הצלעות האחרות )בהתאמה( הוא חוצה את זווית המשולש שדרך קודקודה הוא
- עובר.
+ישר העובר דרך קדקוד משולש ומחלק את הצלע שמול קדקוד זה חלוקה פנימית,
+ ביחס של שתי הצלעות האחרות (בהתאמה) הוא חוצה את זווית המשולש שדרך קודקודה הוא עובר.
 \end_layout
 
 \begin_layout Enumerate
@@ -670,22 +736,23 @@ filename "E:/University/macros.lyx"
 
 \end_deeper
 \begin_layout Enumerate
-אם במעגל שני מיתרים נחתכים, אז מכפלת קטעי מיתר אחד שווה למכפלת קטעי המיתר
- השני.
+אם במעגל שני מיתרים נחתכים,
+ אז מכפלת קטעי מיתר אחד שווה למכפלת קטעי המיתר השני.
 \end_layout
 
 \begin_layout Enumerate
-אם מנקודה מחוץ למעגל יוצאים שני חותכים, אז מכפלת חותך אחד בחלקו החיצוני
- שווה למכפלת החותך השני בחלקו החיצוני.
+אם מנקודה מחוץ למעגל יוצאים שני חותכים,
+ אז מכפלת חותך אחד בחלקו החיצוני שווה למכפלת החותך השני בחלקו החיצוני.
 \end_layout
 
 \begin_layout Enumerate
-אם מנקודה שמחוץ למעגל יוצאים חותך ומשיק, אז מכפלת החותך בחלקו החיצוני שווה
- לריבוע המשיק.
+אם מנקודה שמחוץ למעגל יוצאים חותך ומשיק,
+ אז מכפלת החותך בחלקו החיצוני שווה לריבוע המשיק.
 \end_layout
 
 \begin_layout Enumerate
-במשולש ישר זווית, הניצב הוא ממוצע הנדסי של היתר והיטל ניצב זה על היתר.
+במשולש ישר זווית,
+ הניצב הוא ממוצע הנדסי של היתר והיטל ניצב זה על היתר.
 \end_layout
 
 \begin_layout Enumerate
@@ -705,7 +772,8 @@ filename "E:/University/macros.lyx"
 \series bold
 הגדרה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\pi=\frac{\text{"היקף מעגל"}}{\text{"קוטר מעגל"}}$
 \end_inset
 
@@ -717,7 +785,8 @@ filename "E:/University/macros.lyx"
 \series bold
 מסקנה
 \series default
-: יהי מעגל עם רדיוס 
+:
+ יהי מעגל עם רדיוס 
 \begin_inset Formula $r$
 \end_inset
 
@@ -733,7 +802,8 @@ filename "E:/University/macros.lyx"
 \series bold
 משפט
 \series default
-: יהי מעגל עם רדיוס 
+:
+ יהי מעגל עם רדיוס 
 \begin_inset Formula $r$
 \end_inset
 
@@ -749,7 +819,8 @@ filename "E:/University/macros.lyx"
 \series bold
 רדיאנים
 \series default
-: 
+:
+ 
 \begin_inset Formula $\pi=180^{\circ}$
 \end_inset
 
@@ -761,7 +832,8 @@ filename "E:/University/macros.lyx"
 \series bold
 פונקציות טריגנומטריות
 \series default
-: יהי 
+:
+ יהי 
 \begin_inset Formula $\triangle ABC$
 \end_inset
 
@@ -777,7 +849,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-סינוס: 
+סינוס:
+ 
 \begin_inset Formula $\sin\left(\a\right)=\frac{BC}{AB}$
 \end_inset
 
@@ -785,7 +858,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-קוסינוס: 
+קוסינוס:
+ 
 \begin_inset Formula $\cos\left(\a\right)=\frac{AC}{AB}$
 \end_inset
 
@@ -793,7 +867,8 @@ filename "E:/University/macros.lyx"
 \end_layout
 
 \begin_layout Itemize
-טאנגנס: 
+טאנגנס:
+ 
 \begin_inset Formula $\tan\left(\a\right)=\frac{BC}{AC}$
 \end_inset
 
@@ -805,11 +880,13 @@ filename "E:/University/macros.lyx"
 \series bold
 טענה
 \series default
-: 
+:
+ 
 \begin_inset Formula $\sin_{\upharpoonright_{\left[-\frac{\pi}{2},\frac{\pi}{2}\right]}}$
 \end_inset
 
- הפיכה, 
+ הפיכה,
+ 
 \begin_inset Formula $\cos_{\upharpoonright_{\left[0,\pi\right]}}$
 \end_inset
 
@@ -871,7 +948,8 @@ filename "E:/University/macros.lyx"
 \series bold
 הערה
 \series default
-: כאשר משתמשים בפונקציות טריגונומטריות מקובל להשתמש ברדיאנים.
+:
+ כאשר משתמשים בפונקציות טריגונומטריות מקובל להשתמש ברדיאנים.
 \end_layout
 
 \begin_layout Standard
@@ -879,7 +957,8 @@ filename "E:/University/macros.lyx"
 \series bold
 משפט
 \series default
-: 
+:
+ 
 \begin_inset Formula $\tan=\frac{\sin}{\cos}$
 \end_inset
 
@@ -891,7 +970,8 @@ filename "E:/University/macros.lyx"
 \series bold
 משפט הקוסינוסים
 \series default
-: 
+:
+ 
 \begin_inset Formula $c^{2}=a^{2}+b^{2}-2ab\cos\left(\g\right)$
 \end_inset
 
@@ -903,7 +983,8 @@ filename "E:/University/macros.lyx"
 \series bold
 משפט הסינוסים
 \series default
-: 
+:
+ 
 \begin_inset Formula $\frac{a}{\sin\left(\a\right)}=\frac{b}{\sin\left(\b\right)}=\frac{c}{\sin\left(\g\right)}=2r$
 \end_inset
 
@@ -915,7 +996,8 @@ filename "E:/University/macros.lyx"
 \series bold
 משפט פיתגורס
 \series default
-: 
+:
+ 
 \begin_inset Formula $\sin^{2}\left(\theta\right)+\cos^{2}\left(\theta\right)=1$
 \end_inset
 
@@ -929,7 +1011,8 @@ filename "E:/University/macros.lyx"
 רביע
 \series default
 \color inherit
-: המרחב האוקלידי מתחלק לארבעה חלקים
+:
+ המרחב האוקלידי מתחלק לארבעה חלקים
 \end_layout
 
 \begin_layout Itemize
@@ -937,7 +1020,8 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $\text{I}$
 \end_inset
 
-: 
+:
+ 
 \begin_inset Formula $\left\{ \left<x,y\right>\in\bbr^{2}\mid x,y\ge0\right\} $
 \end_inset
 
@@ -949,7 +1033,8 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $\text{II}$
 \end_inset
 
-: 
+:
+ 
 \begin_inset Formula $\left\{ \left<x,y\right>\in\bbr^{2}\mid x\le0\land y\ge0\right\} $
 \end_inset
 
@@ -961,7 +1046,8 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $\text{III}$
 \end_inset
 
-: 
+:
+ 
 \begin_inset Formula $\left\{ \left<x,y\right>\in\bbr^{2}\mid x,y\le0\right\} $
 \end_inset
 
@@ -973,7 +1059,8 @@ filename "E:/University/macros.lyx"
 \begin_inset Formula $\text{IV}$
 \end_inset
 
-: 
+:
+ 
 \begin_inset Formula $\left\{ \left<x,y\right>\in\bbr^{2}\mid x\ge0\land y\le0\right\} $
 \end_inset
 
@@ -999,7 +1086,8 @@ filename "E:/University/macros.lyx"
 נקודות
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $d\left(\left<a,b\right>,\left<c,d\right>\right)=\sqrt{\left(a-c\right)^{2}+\left(b-d\right)^{2}}$
 \end_inset
 
@@ -1017,7 +1105,8 @@ filename "E:/University/macros.lyx"
 מוחלט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left|x\right|=\begin{cases}
 x & x\ge0\\
 -x & x\le0
@@ -1038,7 +1127,8 @@ x & x\ge0\\
 פולרית
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left<a,b\right>\equiv\left<\sqrt{a^{2}+b^{2}},\arg\left(a,b\right)\right>$
 \end_inset
 
@@ -1052,11 +1142,12 @@ x & x\ge0\\
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\arg\left(x,y\right)=\begin{cases}
 \arctan\left(\frac{y}{x}\right) & \left(x>0\right)\land\left(y>0\right)\\
 \pi-\arctan\left(\frac{y}{x}\right) & \left(x<0\right)\land\left(y>0\right)\\
-2\pi-\arctan\left(\frac{y}{x}\right) & \left(x>0\right)\land\left(y<0\right)\\
+2\pi-\arctan\left)\frac{y}{x}\right( & \left)x>0\right(\land\left)y<0\right(\\
 \pi+\arctan\left(\frac{y}{x}\right) & \left(x<0\right)\land\left(y<0\right)
 \end{cases}$
 \end_inset
@@ -1071,7 +1162,8 @@ x & x\ge0\\
 ישר
 \series default
 \color inherit
-: הפונקציה 
+:
+ הפונקציה 
 \begin_inset Formula $f\left(x\right)=mx+b$
 \end_inset
 
@@ -1085,7 +1177,8 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: דרך כל שתי נקודות עובר ישר אחד ויחיד.
+:
+ דרך כל שתי נקודות עובר ישר אחד ויחיד.
 \end_layout
 
 \begin_layout Standard
@@ -1095,7 +1188,8 @@ x & x\ge0\\
 הערה
 \series default
 \color inherit
-: הישר העובר דרך 
+:
+ הישר העובר דרך 
 \begin_inset Formula $\left<a,b\right>,\left<c,d\right>$
 \end_inset
 
@@ -1113,7 +1207,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: כל שני ישרים שונים ולא מקבילים נחתכים בנקודה אחת.
+:
+ כל שני ישרים שונים ולא מקבילים נחתכים בנקודה אחת.
 \end_layout
 
 \begin_layout Standard
@@ -1127,7 +1222,8 @@ x & x\ge0\\
 מקבילים
 \series default
 \color inherit
-: שני ישרים 
+:
+ שני ישרים 
 \begin_inset Formula $y=m_{1}x+b_{1},y=m_{2}x+b_{2}$
 \end_inset
 
@@ -1153,7 +1249,8 @@ x & x\ge0\\
 מאונכים/ניצבים
 \series default
 \color inherit
-: שני ישרים 
+:
+ שני ישרים 
 \begin_inset Formula $y=m_{1}x+b_{1},y=m_{2}x+b_{2}$
 \end_inset
 
@@ -1175,7 +1272,8 @@ x & x\ge0\\
 סימון
 \series default
 \color inherit
-: אם 
+:
+ אם 
 \begin_inset Formula $f,g$
 \end_inset
 
@@ -1201,7 +1299,8 @@ x & x\ge0\\
 מישר
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $d\left(\left<x,y\right>,mx+b\right)=\left|\frac{mx-y+b}{\sqrt{m^{2}+1}}\right|$
 \end_inset
 
@@ -1219,11 +1318,13 @@ x & x\ge0\\
 קטע
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $\left<a,b\right>$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\left<c,d\right>$
 \end_inset
 
@@ -1249,7 +1350,8 @@ x & x\ge0\\
 חתך חרוט/חתך קוני/שניונית
 \series default
 \color inherit
-: הצורה המתקבלת מחיתוך של חרוט ומישור.
+:
+ הצורה המתקבלת מחיתוך של חרוט ומישור.
 \end_layout
 
 \begin_layout Standard
@@ -1259,7 +1361,8 @@ x & x\ge0\\
 מעגל
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $C_{r}\left(P\right)=\left\{ \left<x,y\right>\in\bbr^{2}\mid d\left(\left<x,y\right>,P\right)=r\right\} $
 \end_inset
 
@@ -1273,7 +1376,8 @@ x & x\ge0\\
 אליפסה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $E_{r}\left(P_{1},P_{2}\right)=\left\{ \left<x,y\right>\in\bbr^{2}\mid d\left(\left<x,y\right>,P_{1}\right)+d\left(\left<x,y\right>,P_{2}\right)=r\right\} $
 \end_inset
 
@@ -1287,7 +1391,8 @@ x & x\ge0\\
 היפרבולה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $H_{r}\left(P_{1},P_{2}\right)=\left\{ \left<x,y\right>\in\bbr^{2}\mid\left|d\left(\left<x,y\right>,P_{1}\right)-d\left(\left<x,y\right>,P_{2}\right)\right|=r\right\} $
 \end_inset
 
@@ -1301,7 +1406,8 @@ x & x\ge0\\
 פרבולה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $P\left(P_{1},mx+b\right)=\left\{ \left<x,y\right>\in\bbr^{2}\mid d\left(\left<x,y\right>,P_{1}\right)=d\left(\left<x,y\right>,mx+b\right)\right\} $
 \end_inset
 
@@ -1315,7 +1421,11 @@ x & x\ge0\\
 הערה
 \series default
 \color inherit
-: החתכים הקונים היחידיים הם מעגל, אליפסה, היפרבולה, פרבולה.
+:
+ החתכים הקונים היחידיים הם מעגל,
+ אליפסה,
+ היפרבולה,
+ פרבולה.
 \end_layout
 
 \begin_layout Standard
@@ -1329,7 +1439,8 @@ x & x\ge0\\
 הפרבולה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\left(x\right)=ax^{2}+bx+c$
 \end_inset
 
@@ -1347,7 +1458,8 @@ x & x\ge0\\
 דיסקרימיננטה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\left(x\right)=ax^{2}+bx+c$
 \end_inset
 
@@ -1365,7 +1477,8 @@ x & x\ge0\\
 מסקנה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $f\left(x\right)=ax^{2}+bx+c$
 \end_inset
 
@@ -1428,7 +1541,8 @@ x & x\ge0\\
 השורשים
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(ax^{2}+bx+c=0\right)\iff\left(x=\frac{-b\pm\sqrt{\Delta}}{2a}\right)$
 \end_inset
 
@@ -1446,7 +1560,8 @@ x & x\ge0\\
 וייטה
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $ax^{2}+bx+c=0$
 \end_inset
 
@@ -1454,19 +1569,19 @@ x & x\ge0\\
 \begin_inset Formula $x_{1},x_{2}$
 \end_inset
 
- השורשים של המשוואה אזי )
+ השורשים של המשוואה אזי (
 \begin_inset Formula $x_{1}\cdot x_{2}=\frac{c}{a}$
 \end_inset
 
-(
+)
 \begin_inset Formula $\land$
 \end_inset
 
-)
+(
 \begin_inset Formula $x_{1}+x_{2}=-\frac{b}{a}$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -1485,14 +1600,15 @@ x & x\ge0\\
 \series default
  
 \series bold
-)אש
+(אש
 \begin_inset Quotes erd
 \end_inset
 
-מ(
+מ)
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall a,b\in\bbr.\left|\left|a\right|-\left|b\right|\right|\le\left|a+b\right|\le\left|a\right|+\left|b\right|$
 \end_inset
 
@@ -1506,7 +1622,8 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall\left<a,b\right>\in C_{1}.\exists\theta.\left<a,b\right>=\left<\cos\left(\theta\right),\sin\left(\theta\right)\right>$
 \end_inset
 
@@ -1520,7 +1637,8 @@ x & x\ge0\\
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\sin,\cos:\bbr\to\left[-1,1\right]$
 \end_inset
 
@@ -1545,11 +1663,13 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-מחזוריות: 
+מחזוריות:
+ 
 \begin_inset Formula $\sin\left(x\right)=\sin\left(x+2\pi\right)$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\cos\left(x\right)=\cos\left(x+2\pi\right)$
 \end_inset
 
@@ -1557,11 +1677,13 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-סימטריה: 
+סימטריה:
+ 
 \begin_inset Formula $\sin\left(x\right)=\sin\left(\pi-x\right)$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\cos\left(x\right)=-\cos\left(\pi-x\right)$
 \end_inset
 
@@ -1569,11 +1691,13 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-זוגיות: 
+זוגיות:
+ 
 \begin_inset Formula $\sin\left(x\right)=-\sin\left(-x\right)$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\cos\left(x\right)=\cos\left(-x\right)$
 \end_inset
 
@@ -1581,11 +1705,13 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-סכום זוויות: 
+סכום זוויות:
+ 
 \begin_inset Formula $\sin\left(x+y\right)=\sin\left(x\right)\cos\left(y\right)+\sin\left(y\right)\cos\left(x\right)$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\cos\left(x+y\right)=\cos\left(x\right)\cos\left(y\right)-\sin\left(x\right)\sin\left(y\right)$
 \end_inset
 
@@ -1593,11 +1719,13 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-סכום פונקציות: 
+סכום פונקציות:
+ 
 \begin_inset Formula $\sin\left(x\right)+\sin\left(y\right)=2\sin\left(\frac{x+y}{2}\right)\cos\left(\frac{x-y}{2}\right)$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\cos\left(x\right)+\cos\left(y\right)=2\cos\left(\frac{x+y}{2}\right)\cos\left(\frac{x-y}{2}\right)$
 \end_inset
 
@@ -1650,7 +1778,8 @@ x & x\ge0\\
 פולינום
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $a_{0},\ldots a_{n}\in\bbr$
 \end_inset
 
@@ -1676,7 +1805,8 @@ x & x\ge0\\
 פולינום
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $P\left(x\right)=\sum_{i=0}^{n}a_{i}x^{i}$
 \end_inset
 
@@ -1694,7 +1824,8 @@ x & x\ge0\\
 סימון
 \series default
 \color inherit
-: המעלה של 
+:
+ המעלה של 
 \begin_inset Formula $P$
 \end_inset
 
@@ -1712,7 +1843,8 @@ x & x\ge0\\
 הערה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\deg\left(0\right)=-\infty$
 \end_inset
 
@@ -1730,7 +1862,8 @@ x & x\ge0\\
 המוביל
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $P\left(x\right)=\sum_{i=0}^{n}a_{i}x^{i}$
 \end_inset
 
@@ -1752,11 +1885,13 @@ x & x\ge0\\
 הפולינומים
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $R_{n}\left[x\right]=\left\{ \sum_{i=0}^{n}a_{i}x^{i}\mid a_{1},\ldots,a_{n}\in R\right\} $
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $R\left[x\right]=\bigcup_{n=0}^{\infty}R_{n}\left[x\right]$
 \end_inset
 
@@ -1778,7 +1913,8 @@ x & x\ge0\\
 פולינום
 \series default
 \color inherit
-: מספר 
+:
+ מספר 
 \begin_inset Formula $\a\in\bbr$
 \end_inset
 
@@ -1800,7 +1936,8 @@ x & x\ge0\\
 אלגברי
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\a\in\bbr$
 \end_inset
 
@@ -1818,7 +1955,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall f,g\in\bbr\left[x\right].\left(f+g\in\bbr\left[x\right]\right)\land\left(f\cdot g\in\bbr\left[x\right]\right)$
 \end_inset
 
@@ -1836,7 +1974,8 @@ x & x\ge0\\
 המעלות
 \series default
 \color inherit
-: יהיו 
+:
+ יהיו 
 \begin_inset Formula $p,q\in\bbr\left[x\right]$
 \end_inset
 
@@ -1872,7 +2011,8 @@ x & x\ge0\\
 שארית
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall p,q\in\bbr\left[x\right].\left(q\ne0\right)\implies\left(\exists!q',r\in\bbr\left[x\right].\deg\left(r\right)<\deg\left(q\right)\land p=q\cdot q'+r\right)$
 \end_inset
 
@@ -1886,11 +2026,12 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: לכל 
+:
+ לכל 
 \begin_inset Formula $\a\in\bbr$
 \end_inset
 
- )
+ (
 \begin_inset Formula $\a$
 \end_inset
 
@@ -1898,11 +2039,11 @@ x & x\ge0\\
 \begin_inset Formula $p$
 \end_inset
 
-( 
+) 
 \begin_inset Formula $\iff$
 \end_inset
 
- )
+ (
 \begin_inset Formula $x-\a$
 \end_inset
 
@@ -1910,7 +2051,7 @@ x & x\ge0\\
 \begin_inset Formula $p$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -1928,7 +2069,8 @@ x & x\ge0\\
 פריק
 \series default
 \color inherit
-: פולינום 
+:
+ פולינום 
 \begin_inset Formula $p$
 \end_inset
 
@@ -1946,7 +2088,8 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall a_{0}\ldots a_{n}\in\bbz.\forall q\in\bbq.\sum_{i=0}^{n}a_{i}q^{i}=0\implies q\in\left\{ \frac{c}{a}\mid c|a_{0}\land a|a_{n}\right\} $
 \end_inset
 
@@ -1964,7 +2107,8 @@ x & x\ge0\\
 שלילית
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall r\in\bbr\backslash\left\{ 0\right\} .\forall m\in\bbn_{+}.r^{-m}=\frac{1}{r^{m}}$
 \end_inset
 
@@ -1978,7 +2122,8 @@ x & x\ge0\\
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall m\in\bbn_{+}.\im\left(\lambda x\in\bbr.x^{m}\right)=\begin{cases}
 \left[0,\infty\right) & m\in\bbn_{even}\\
 \bbr & m\in\bbn_{odd}
@@ -1995,7 +2140,8 @@ x & x\ge0\\
 שורש
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall m\in\bbn.\forall r\in\left[0,\infty\right).\exists!r'\in\left[0,\infty\right).r'=\sqrt[m]{r}$
 \end_inset
 
@@ -2009,7 +2155,8 @@ x & x\ge0\\
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $r^{\frac{1}{m}}=\sqrt[m]{r}$
 \end_inset
 
@@ -2023,7 +2170,8 @@ x & x\ge0\\
 הערה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $m\in\bbn_{odd}\implies-\sqrt[m]{r}=\sqrt[m]{-r}$
 \end_inset
 
@@ -2041,7 +2189,8 @@ x & x\ge0\\
 רציונלית
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $r^{\frac{n}{m}}=\sqrt[m]{r^{n}}$
 \end_inset
 
@@ -2059,7 +2208,8 @@ x & x\ge0\\
 ממשית
 \series default
 \color inherit
-: תהא 
+:
+ תהא 
 \begin_inset Formula $q:\bbn\to\bbq$
 \end_inset
 
@@ -2085,7 +2235,8 @@ x & x\ge0\\
 מעריכית
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a\in\left(0,\infty\right)\backslash\left\{ 1\right\} $
 \end_inset
 
@@ -2103,7 +2254,8 @@ x & x\ge0\\
 משפט
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $a^{x}:\bbr\xrightarrow[\text{onto}]{1-1}\left(0,\infty\right)$
 \end_inset
 
@@ -2117,15 +2269,18 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left(a^{b}\right)^{c}=a^{b\cdot c}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $a^{b+c}=a^{b}\cdot a^{c}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\left(a\cdot b\right)^{c}=a^{c}\cdot b^{c}$
 \end_inset
 
@@ -2139,7 +2294,8 @@ x & x\ge0\\
 לוגריתם
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\log_{a}:\left(0,\infty\right)\xrightarrow[\text{onto}]{1-1}\bbr$
 \end_inset
 
@@ -2157,15 +2313,18 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\log_{a}\left(b\cdot c\right)=\log_{a}\left(b\right)+\log_{a}\left(c\right)$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\log_{a}\left(b^{c}\right)=c\cdot\log_{a}\left(b\right)$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\log_{a}\left(b\right)=\frac{\log_{c}\left(b\right)}{\log_{c}\left(a\right)}$
 \end_inset
 
@@ -2179,15 +2338,18 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $c^{\log_{a}\left(b\right)}=b^{\log_{a}\left(c\right)}$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $a^{\log_{a}\left(b\right)}=b$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\log_{a}\left(a^{x}\right)=x$
 \end_inset
 
@@ -2205,27 +2367,29 @@ x & x\ge0\\
 הממשיים
 \series default
 \color inherit
-: לכל 
+:
+ לכל 
 \begin_inset Formula $\emptyset\ne X\subseteq\bbr$
 \end_inset
 
- )קיים ל־
+ (קיים ל־
 \begin_inset Formula $X$
 \end_inset
 
- חסם עליון ותחתון( 
+ חסם עליון ותחתון) 
 \begin_inset Formula $\impliedby$
 \end_inset
 
- )קיימים 
+ (קיימים 
 \begin_inset Formula $\sup\left(X\right)$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\inf\left(X\right)$
 \end_inset
 
-(.
+).
 \end_layout
 
 \begin_layout Standard
@@ -2239,7 +2403,8 @@ x & x\ge0\\
 דדקינד
 \series default
 \color inherit
-: קבוצה 
+:
+ קבוצה 
 \begin_inset Formula $\emptyset\ne A\subset\bbq$
 \end_inset
 
@@ -2267,7 +2432,8 @@ x & x\ge0\\
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbr=\left\{ A\in\P{\bbq}{}\mid\text{ חתך דדקינד}A\right\} $
 \end_inset
 
@@ -2281,7 +2447,8 @@ x & x\ge0\\
 הערה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall r_{1},r_{2}\in\bbr.r_{1}\le r_{2}\iff r_{1}\subseteq r_{2}$
 \end_inset
 
@@ -2295,7 +2462,8 @@ x & x\ge0\\
 חיבור
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall r_{1},r_{2}\in\bbr.r_{1}+r_{2}=\left\{ a+b\mid a\in r_{1}\land b\in r_{2}\right\} $
 \end_inset
 
@@ -2309,7 +2477,8 @@ x & x\ge0\\
 חיסור
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall r\in\bbr.-r=\left\{ a-b\mid\left(b\in\bbq\backslash r\right)\land\left(a<0\right)\land\left(a\in\bbq\right)\right\} $
 \end_inset
 
@@ -2323,7 +2492,8 @@ x & x\ge0\\
 כפל
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall r_{1},r_{2}\in\bbr.r_{1}\cdot r_{2}=\left\{ a\cdot b\mid a\in r_{1}\land b\in r_{2}\land a,b\ge0\right\} $
 \end_inset
 
@@ -2337,7 +2507,8 @@ x & x\ge0\\
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $i^{2}=-1$
 \end_inset
 
@@ -2355,7 +2526,8 @@ x & x\ge0\\
 מרוכב
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left<a,b\right>\in\bbr^{2}$
 \end_inset
 
@@ -2369,7 +2541,8 @@ x & x\ge0\\
 סימון
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\left<a,b\right>=a+ib$
 \end_inset
 
@@ -2383,7 +2556,8 @@ x & x\ge0\\
 הגדרה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\bbc=\left\{ a+ib\mid a,b\in\bbr\right\} $
 \end_inset
 
@@ -2397,7 +2571,8 @@ x & x\ge0\\
 הגדרה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a+ib\in\bbc$
 \end_inset
 
@@ -2405,7 +2580,8 @@ x & x\ge0\\
 \begin_inset Formula $\im\left(a+ib\right)=b$
 \end_inset
 
-, 
+,
+ 
 \begin_inset Formula $\re\left(a+ib\right)=a$
 \end_inset
 
@@ -2419,7 +2595,8 @@ x & x\ge0\\
 צמוד
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a+ib\in\bbc$
 \end_inset
 
@@ -2437,7 +2614,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall z\in\bbc.z=\overline{z}\iff z\in\bbr$
 \end_inset
 
@@ -2451,7 +2629,8 @@ x & x\ge0\\
 טענה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall z\in\bbc.z\cdot\overline{z}\in\bbr$
 \end_inset
 
@@ -2465,7 +2644,8 @@ x & x\ge0\\
 נורמה
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $a+ib\in\bbc$
 \end_inset
 
@@ -2487,7 +2667,8 @@ x & x\ge0\\
 אוילר
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $e^{i\theta}=\cis\left(\theta\right)=\cos\left(\theta\right)+i\sin\left(\theta\right)$
 \end_inset
 
@@ -2505,7 +2686,8 @@ x & x\ge0\\
 דה־מואבר
 \series default
 \color inherit
-: יהי 
+:
+ יהי 
 \begin_inset Formula $z=re^{i\theta}$
 \end_inset
 
@@ -2535,7 +2717,8 @@ x & x\ge0\\
 האלגברה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall p\in\bbc\left[x\right]\backslash\bbc_{0}\left[x\right].\#\left\{ \a\in\bbc\mid p\left(\a\right)=0\right\} =\deg\left(p\right)$
 \end_inset
 
@@ -2549,7 +2732,8 @@ x & x\ge0\\
 מסקנה
 \series default
 \color inherit
-: 
+:
+ 
 \begin_inset Formula $\forall p\in\bbc\left[x\right].\exists!a_{1},\ldots,a_{\deg\left(p\right)},b\in\bbc.p\left(x\right)=b\left(x-a_{1}\right)\cdot\ldots\cdot\left(x-a_{\deg\left(p\right)}\right)$
 \end_inset
 
