@@ -1732,19 +1732,14 @@ literal "true"
 \series default
 \color inherit
 :
- כדי לייצג מערכת משוואות ליניארית נכתוב
-\begin_inset Formula 
-\[
-\begin{cases}
-a_{1,1}x_{1}+\ldots+a_{1,n}x_{n} & =b_{1}\\
-\vdots\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\vdots\\
+ כדי לייצג מערכת משוואות ליניארית נכתוב 
+\begin_inset Formula $\left\{ \begin{smallmatrix}a_{1,1}x_{1}+\ldots+a_{1,n}x_{n} & =b_{1}\\
+\vdots & \vdots\\
 a_{m,1}x_{1}+\ldots+a_{m,n}x_{n} & =b_{m}
-\end{cases}
-\]
-
+\end{smallmatrix}\right.$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -1817,15 +1812,19 @@ a_{m,1}x_{1}+\ldots+a_{m,n}x_{n} & =b_{m}
 
 \series bold
 \color green
-סימון
+וקטור
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\begin{pmatrix}\a_{1}\\
+ יהיו 
+\begin_inset Formula $\a_{1}\ldots\a_{n}\in\bbf$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\begin{smallmatrix}\a_{1}\\
 \vdots\\
 \a_{n}
-\end{pmatrix}=\left<\a_{1},\ldots,\a_{n}\right>$
+\end{smallmatrix}\right)=\left<\a_{1},\ldots,\a_{n}\right>$
 \end_inset
 
 .
@@ -1835,25 +1834,25 @@ a_{m,1}x_{1}+\ldots+a_{m,n}x_{n} & =b_{m}
 
 \series bold
 \color green
-חיבור 
-\begin_inset Formula $n$
-\end_inset
-
-יות
+חיבור וקטורים
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\begin{pmatrix}\a_{1}\\
+ יהיו 
+\begin_inset Formula $\a_{1}\ldots\a_{n},\b_{1}\ldots\b_{n}\in\bbf$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\begin{smallmatrix}\a_{1}\\
 \vdots\\
 \a_{n}
-\end{pmatrix}*\begin{pmatrix}\b_{1}\\
+\end{smallmatrix}\right)+\left(\begin{smallmatrix}\b_{1}\\
 \vdots\\
 \b_{n}
-\end{pmatrix}=\begin{pmatrix}\a_{1}*\b_{1}\\
+\end{smallmatrix}\right)=\left(\begin{smallmatrix}\a_{1}+\b_{1}\\
 \vdots\\
-\a_{n}*\b_{n}
-\end{pmatrix}$
+\a_{n}+\b_{n}
+\end{smallmatrix}\right)$
 \end_inset
 
 .
@@ -1863,26 +1862,26 @@ a_{m,1}x_{1}+\ldots+a_{m,n}x_{n} & =b_{m}
 
 \series bold
 \color green
-כפל 
-\begin_inset Formula $n$
-\end_inset
-
-יה בסקלר
+כפל וקטורים
 \series default
 \color inherit
 :
- יהי 
+ יהיו 
+\begin_inset Formula $\a_{1}\ldots\a_{n}\in\bbf$
+\end_inset
+
+ ויהי 
 \begin_inset Formula $\lambda\in\bbf$
 \end_inset
 
  אזי 
-\begin_inset Formula $\lambda*\begin{pmatrix}\a_{1}\\
+\begin_inset Formula $\lambda\cdot\left(\begin{smallmatrix}\a_{1}\\
 \vdots\\
 \a_{n}
-\end{pmatrix}=\begin{pmatrix}\lambda*\a_{1}\\
+\end{smallmatrix}\right)=\left(\begin{smallmatrix}\lambda\cdot\a_{1}\\
 \vdots\\
-\lambda*\a_{n}
-\end{pmatrix}$
+\lambda\cdot\a_{n}
+\end{smallmatrix}\right)$
 \end_inset
 
 .
@@ -1892,22 +1891,22 @@ a_{m,1}x_{1}+\ldots+a_{m,n}x_{n} & =b_{m}
 
 \series bold
 \color green
-\begin_inset Formula $n$
-\end_inset
-
-ית ה־
-\begin_inset Formula $0$
-\end_inset
-
-
+וקטור ה־
+\numeric on
+0
 \series default
+\numeric off
 \color inherit
 :
- 
-\begin_inset Formula $\overline{0}=\begin{pmatrix}0_{\bbf}\\
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\overline{0}_{n}=\left(\begin{smallmatrix}0_{\bbf}\\
 \vdots\\
 0_{\bbf}
-\end{pmatrix}$
+\end{smallmatrix}\right)$
 \end_inset
 
 .
@@ -1921,8 +1920,16 @@ a_{m,1}x_{1}+\ldots+a_{m,n}x_{n} & =b_{m}
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\forall\overline{v}\in\bbf^{n}.\forall t\in\bbf.\left(t*\overline{v}=\overline{0}\right)\iff\left(t=0_{\bbf}\right)\lor\left(\overline{v}=\overline{0}\right)$
+ יהי 
+\begin_inset Formula $v\in\bbf^{n}$
+\end_inset
+
+ וקטור יהי 
+\begin_inset Formula $t\in\bbf$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(t\cdot v=\overline{0}\right)\iff\left(\left(t=0_{\bbf}\right)\lor\left(v=\overline{0}_{n}\right)\right)$
 \end_inset
 
 .
@@ -2024,18 +2031,14 @@ a_{m,1}x_{1}+\ldots+a_{m,n}x_{n} & =b_{m}
 \series default
 \color inherit
 :
-\begin_inset Formula 
-\[
-A=\left(\begin{array}{ccc}
-a_{1,1} & \ldots & a_{1,n}\\
+ 
+\begin_inset Formula $A=\left(\begin{smallmatrix}a_{1,1} & \ldots & a_{1,n}\\
 \vdots &  & \vdots\\
 a_{m,1} & \ldots & a_{m,n}
-\end{array}\right)
-\]
-
+\end{smallmatrix}\right)$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -2179,18 +2182,14 @@ a_{m,1} & \ldots & a_{m,n}
 \color inherit
 :
  עוד סימון אפשרי לייצוג מערכת לינארית של משוואות הינה
-\begin_inset Formula 
-\[
-\left(\begin{array}{ccc|c}
+\begin_inset Formula $\left(\begin{array}{ccc|c}
 a_{1,1} & \ldots & a_{1,n} & b_{1}\\
 \vdots &  & \vdots & \vdots\\
 a_{m,1} & \ldots & a_{m,n} & b_{m}
-\end{array}\right)
-\]
-
+\end{array}\right)$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -2201,18 +2200,14 @@ a_{m,1} & \ldots & a_{m,n} & b_{m}
 \series default
 \color inherit
 :
-\begin_inset Formula 
-\[
-\left(\begin{array}{ccc}
-a_{1,1} & \ldots & a_{1,n}\\
+ 
+\begin_inset Formula $\left(\begin{smallmatrix}a_{1,1} & \ldots & a_{1,n}\\
 \vdots &  & \vdots\\
 a_{m,1} & \ldots & a_{m,n}
-\end{array}\right)
-\]
-
+\end{smallmatrix}\right)$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -2223,18 +2218,14 @@ a_{m,1} & \ldots & a_{m,n}
 \series default
 \color inherit
 :
-\begin_inset Formula 
-\[
-\left(\begin{array}{c}
-b_{1}\\
+ 
+\begin_inset Formula $\left(\begin{smallmatrix}b_{1}\\
 \vdots\\
 b_{m}
-\end{array}\right)
-\]
-
+\end{smallmatrix}\right)$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard

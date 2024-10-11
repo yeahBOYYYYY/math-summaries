@@ -208,11 +208,15 @@ literal "true"
 נקודתית
 \series default
 :
- 
-\begin_inset Formula $\bbp\in\left[0,1\right]^{\Omega}$
+ תהא 
+\begin_inset Formula $\Omega$
 \end_inset
 
- המקיימת 
+ קבוצה אזי פונקציה 
+\begin_inset Formula $\bbp:\Omega\to\left[0,1\right]$
+\end_inset
+
+ עבורה 
 \begin_inset Formula $\sum_{\omega\in\Omega}\bbp\left(\omega\right)=1$
 \end_inset
 
@@ -330,7 +334,11 @@ literal "true"
 סימון
 \series default
 :
- 
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה אזי 
 \begin_inset Formula $2^{A}=\P\left(A\right)$
 \end_inset
 
@@ -343,11 +351,32 @@ literal "true"
 מאורע
 \series default
 :
- תהא 
+ יהי 
+\begin_inset Formula $\left(\bbp,\Omega\right)$
+\end_inset
+
+ מרחב הסתברות אזי 
 \begin_inset Formula $A\subseteq\Omega$
 \end_inset
 
- אזי 
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הסתברות מאורע
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\bbp,\Omega\right)$
+\end_inset
+
+ מרחב הסתברות ויהי 
+\begin_inset Formula $A$
+\end_inset
+
+ מאורע אזי 
 \begin_inset Formula $\bbp\left(A\right)=\sum_{\omega\in A}\bbp\left(\omega\right)$
 \end_inset
 
@@ -360,7 +389,11 @@ literal "true"
 סימון
 \series default
 :
- 
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\left[n\right]=\left\{ 1,\ldots,n\right\} $
 \end_inset
 
@@ -433,11 +466,11 @@ literal "true"
 מסקנה
 \series default
 :
- תהא פונקציית הסתברות 
+ תהא 
 \begin_inset Formula $\bbp$
 \end_inset
 
- אזי 
+ פונקציית הסתברות אזי 
 \begin_inset Formula $\bbp\left(\emptyset\right)=0$
 \end_inset
 
@@ -450,12 +483,16 @@ literal "true"
 משפט סיגמא־אדטיביות
 \series default
 :
- יהיו 
-\begin_inset Formula $E=\biguplus_{i=1}^{\infty}E_{i}$
+ יהי 
+\begin_inset Formula $\left(\Omega,\bbp\right)$
+\end_inset
+
+ מרחב הסתברות ויהיו 
+\begin_inset Formula $\left\{ E_{i}\right\} _{i=1}^{\infty}\subseteq\P\left(\Omega\right)$
 \end_inset
 
  מאורעות אזי 
-\begin_inset Formula $\bbp\left(E\right)=\sum_{i=1}^{\infty}\bbp\left(E_{i}\right)$
+\begin_inset Formula $\bbp\left(\bigcup_{i=1}^{\infty}E_{i}\right)=\sum_{i=1}^{\infty}\bbp\left(E_{i}\right)$
 \end_inset
 
 .
@@ -500,11 +537,19 @@ literal "true"
 סימטרית
 \series default
 :
- נניח כי 
+ יהיו 
+\begin_inset Formula $A_{1}\ldots A_{n}$
+\end_inset
+
+ מאורעות עבורם 
 \begin_inset Formula $\forall I\subseteq\left[n\right].\left(\left|I\right|=k\right)\Rightarrow\left(\bbp\left(A_{I}\right)=a_{k}\right)$
 \end_inset
 
- אזי 
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\bbp\left(\bigcup_{i=1}^{n}A_{i}\right)=\sum_{k=1}^{n}\left(\left(-1\right)^{k+1}{n \choose k}a_{k}\right)$
 \end_inset
 
@@ -685,7 +730,7 @@ literal "true"
 \begin_inset Formula $\left\{ A_{n}\right\} _{n=1}^{\infty}$
 \end_inset
 
- מאורעות
+ מאורעות אזי
 \end_layout
 
 \begin_layout Itemize
@@ -714,8 +759,12 @@ literal "true"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $h\in\left[m\right]^{\left[n\right]}$
+ יהיו 
+\begin_inset Formula $n,m\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $h:\left[n\right]\to\left[m\right]$
 \end_inset
 
 .
@@ -729,15 +778,19 @@ literal "true"
 \series default
 \color inherit
 :
+ יהיו 
+\begin_inset Formula $n,m\in\bbn_{+}$
+\end_inset
+
  תהא 
-\begin_inset Formula $h$
+\begin_inset Formula $h:\left[n\right]\to\left[m\right]$
 \end_inset
 
  פונקציית גיבוב אזי 
-\begin_inset Formula $i\ne j$
+\begin_inset Formula $i,j\in\left[n\right]$
 \end_inset
 
- עבורם 
+ שונים עבורם 
 \begin_inset Formula $h\left(i\right)=h\left(j\right)$
 \end_inset
 
@@ -760,8 +813,12 @@ literal "true"
 \series default
 \color inherit
 :
+ יהיו 
+\begin_inset Formula $n,m\in\bbn_{+}$
+\end_inset
+
  תהא 
-\begin_inset Formula $h\in\left[m\right]^{\left[n\right]}$
+\begin_inset Formula $h:\left[n\right]\to\left[m\right]$
 \end_inset
 
  פונקציית גיבוב אזי 
@@ -780,7 +837,7 @@ literal "true"
 \color inherit
 :
  נגדיר 
-\begin_inset Formula $R:\bbn^{\bbn}$
+\begin_inset Formula $R:\bbn\to\bbn$
 \end_inset
 
  כך 
@@ -798,7 +855,11 @@ literal "true"
 \series default
 \color inherit
 :
- 
+ יהי 
+\begin_inset Formula $t\in\bbn_{+}$
+\end_inset
+
+ אזי 
 \begin_inset Formula $2^{\frac{t-3}{2}}<R\left(t\right)\le c\cdot\frac{4^{t}}{\sqrt{t}}$
 \end_inset
 
@@ -822,10 +883,9 @@ literal "true"
 \end_inset
 
  אזי 
-\begin_inset Formula $\bbp\left(\omega\mid F\right)=\begin{cases}
-\frac{\bbp\left(\omega\right)}{\bbp\left(F\right)} & \omega\in F\\
-0 & else
-\end{cases}$
+\begin_inset Formula $\bbp\left(\omega\mid F\right)=\left\{ \begin{smallmatrix}\frac{\bbp\left(\omega\right)}{\bbp\left(F\right)} &  & \omega\in F\\
+0 &  & \text{else}
+\end{smallmatrix}\right.$
 \end_inset
 
 .
@@ -1639,10 +1699,9 @@ literal "true"
 \end_inset
 
  כך 
-\begin_inset Formula $f\left(k\right)=\begin{cases}
-p & k=1\\
-1-p & k=0
-\end{cases}$
+\begin_inset Formula $f\left(k\right)=\left\{ \begin{smallmatrix}p &  & k=1\\
+1-p &  & k=0
+\end{smallmatrix}\right.$
 \end_inset
 
  אזי 
@@ -1688,10 +1747,9 @@ p & k=1\\
 \end_inset
 
  המקיים 
-\begin_inset Formula $A_{i,j}=\begin{cases}
-1 & \left\{ i,j\right\} \in E\\
-0 & else
-\end{cases}$
+\begin_inset Formula $A_{i,j}=\left\{ \begin{smallmatrix}1 &  & \left\{ i,j\right\} \in E\\
+0 &  & \text{else}
+\end{smallmatrix}\right.$
 \end_inset
 
 .
@@ -1862,11 +1920,10 @@ p & k=1\\
 \begin_inset Formula $\mathds{1}_{A}\in\left\{ 0,1\right\} ^{\Omega}$
 \end_inset
 
- המוגדר 
-\begin_inset Formula $\mathds{1}_{A}\left(\omega\right)=\begin{cases}
-1 & \omega\in A\\
-0 & else
-\end{cases}$
+ המוגדרת 
+\begin_inset Formula $\mathds{1}_{A}\left(\omega\right)=\left\{ \begin{smallmatrix}1 &  & \omega\in A\\
+0 &  & \text{else}
+\end{smallmatrix}\right.$
 \end_inset
 
 .
@@ -2068,10 +2125,9 @@ p & k=1\\
 \end_inset
 
  המקיימת 
-\begin_inset Formula $\mu\left(k\right)=\begin{cases}
-\frac{1}{b-a+1} & {\scriptscriptstyle k\in\left[a,b\right]\cap\bbz}\\
-0 & else
-\end{cases}$
+\begin_inset Formula $\mu\left(k\right)=\left\{ \begin{smallmatrix}\frac{1}{b-a+1} &  & k\in\left[a,b\right]\cap\bbz\\
+0 &  & \text{else}
+\end{smallmatrix}\right.$
 \end_inset
 
 .
@@ -2117,14 +2173,14 @@ p & k=1\\
 \end_inset
 
  התפלגות אזי 
-\begin_inset Formula $\left(\mu=\begin{cases}
-x_{1} & p_{1}\\
-\vdots & \vdots\\
-x_{n} & p_{n}
-\end{cases}\right)\equiv\left(\mu\left(k\right)=\begin{cases}
-p_{i} & k=x_{i}\\
-0 & else
-\end{cases}\right)$
+\begin_inset Formula $\left(\mu=\left\{ \begin{smallmatrix}x_{1} &  & p_{1}\\
+\vdots &  & \vdots\\
+x_{n} &  & p_{n}
+\end{smallmatrix}\right.\right)\equiv\left(\mu\left(k\right)=\left\{ \begin{smallmatrix}p_{1} &  & k=x_{1}\\
+\vdots &  & \vdots\\
+p_{n} &  & k=x_{n}\\
+0 &  & \text{else}
+\end{smallmatrix}\right.\right)$
 \end_inset
 
 .
@@ -2147,10 +2203,9 @@ p_{i} & k=x_{i}\\
 \end_inset
 
  המקיימת 
-\begin_inset Formula $\mu=\begin{cases}
-1 & p\\
-0 & 1-p
-\end{cases}$
+\begin_inset Formula $\mu=\left\{ \begin{smallmatrix}1 &  & p\\
+0 &  & 1-p
+\end{smallmatrix}\right.$
 \end_inset
 
 .
@@ -3326,7 +3381,7 @@ p_{i} & k=x_{i}\\
 \begin_inset Quotes erd
 \end_inset
 
-מ
+מ אזי
 \end_layout
 
 \begin_layout Itemize
@@ -3432,7 +3487,7 @@ p_{i} & k=x_{i}\\
 \begin_inset Formula $X_{\upharpoonright_{X+Y=n}}\sim\text{Bin}\left(n,p\right)$
 \end_inset
 
-
+ אזי
 \end_layout
 
 \begin_layout Itemize
@@ -3967,7 +4022,7 @@ p_{i} & k=x_{i}\\
 \begin_inset Formula $c\in\bbr$
 \end_inset
 
-
+ אזי
 \end_layout
 
 \begin_layout Itemize
@@ -4059,7 +4114,7 @@ p_{i} & k=x_{i}\\
 \begin_inset Quotes erd
 \end_inset
 
-מ
+מ אזי
 \end_layout
 
 \begin_layout Itemize
@@ -4639,7 +4694,7 @@ p_{i} & k=x_{i}\\
 \begin_inset Formula $a$
 \end_inset
 
- סקלר
+ סקלר אזי
 \end_layout
 
 \begin_layout Itemize
@@ -4989,7 +5044,7 @@ p_{i} & k=x_{i}\\
 \begin_inset Formula $\a,\b$
 \end_inset
 
- סקלרים
+ סקלרים אזי
 \end_layout
 
 \begin_layout Itemize
@@ -5076,7 +5131,7 @@ p_{i} & k=x_{i}\\
 \begin_inset Formula $a,b$
 \end_inset
 
- סקלרים
+ סקלרים אזי
 \end_layout
 
 \begin_layout Itemize
@@ -5121,7 +5176,7 @@ p_{i} & k=x_{i}\\
 \begin_inset Quotes erd
 \end_inset
 
-מ
+מ אזי
 \end_layout
 
 \begin_layout Itemize
@@ -5207,7 +5262,7 @@ p_{i} & k=x_{i}\\
 \begin_inset Quotes erd
 \end_inset
 
-מ בעל פונקציה יוצרת
+מ בעל פונקציה יוצרת אזי
 \end_layout
 
 \begin_layout Itemize
@@ -5283,7 +5338,7 @@ p_{i} & k=x_{i}\\
 \begin_inset Quotes erd
 \end_inset
 
-ת בעלי פונקציה יוצרת
+ת בעלי פונקציה יוצרת אזי
 \end_layout
 
 \begin_layout Itemize
@@ -5333,7 +5388,7 @@ p_{i} & k=x_{i}\\
 \begin_inset Formula $X\in\ell^{2}$
 \end_inset
 
- בעל פונקציה יוצרת
+ בעל פונקציה יוצרת אזי
 \end_layout
 
 \begin_layout Itemize
@@ -5406,7 +5461,7 @@ p_{i} & k=x_{i}\\
 \begin_inset Quotes erd
 \end_inset
 
-ת
+ת אזי
 \end_layout
 
 \begin_layout Itemize
@@ -6348,7 +6403,7 @@ p_{i} & k=x_{i}\\
 \begin_inset Formula $t\in\bbr$
 \end_inset
 
-
+ אזי
 \end_layout
 
 \begin_layout Itemize
@@ -6618,12 +6673,15 @@ p_{i} & k=x_{i}\\
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\psi\left(x\right)=\begin{cases}
-1 & x\ge0\\
-1+x-\frac{2\sin\left(2\pi x\right)}{3\pi}+\frac{\sin\left(4\pi x\right)}{12\pi} & -1\le x\le0\\
-0 & x\le-1
-\end{cases}$
+ נגדיר 
+\begin_inset Formula $\psi:\bbr\to\bbr$
+\end_inset
+
+ כך 
+\begin_inset Formula $\psi\left(x\right)=\left\{ \begin{smallmatrix}1 &  & x\ge0\\
+1+x-\frac{2\sin\left(2\pi x\right)}{3\pi}+\frac{\sin\left(4\pi x\right)}{12\pi} &  & -1\le x\le0\\
+0 &  & x\le-1
+\end{smallmatrix}\right.$
 \end_inset
 
 .
