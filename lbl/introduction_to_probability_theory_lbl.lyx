@@ -222,17 +222,13 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-מרחב
-\series default
- 
-\series bold
-הסתברות
-\series default
- (מ
+מרחב הסתברות (מ
 \begin_inset Quotes erd
 \end_inset
 
-ה):
+ה)
+\series default
+:
  תהא 
 \begin_inset Formula $\Omega$
 \end_inset
@@ -377,23 +373,19 @@ literal "true"
 משפט
 \series default
 :
- יהי מרחב הסתברות 
+ יהי 
 \begin_inset Formula $\left(\Omega,\bbp\right)$
 \end_inset
 
- ומאורעות 
+ מרחב הסתברות ויהיו 
 \begin_inset Formula $A,B$
 \end_inset
 
-
+ מאורעות אזי
 \end_layout
 
 \begin_layout Itemize
-
-\series bold
-משלים
-\series default
-:
+משלים:
  
 \begin_inset Formula $\bbp\left(A^{{\cal C}}\right)=1-\bbp\left(A\right)$
 \end_inset
@@ -402,11 +394,7 @@ literal "true"
 \end_layout
 
 \begin_layout Itemize
-
-\series bold
-אדטיביות
-\series default
-:
+אדטיביות:
  
 \begin_inset Formula $\bbp\left(A\uplus B\right)=\bbp\left(A\right)+\bbp\left(B\right)$
 \end_inset
@@ -422,11 +410,7 @@ literal "true"
 \end_layout
 
 \begin_layout Itemize
-
-\series bold
-מונוטוניות
-\series default
-:
+מונוטוניות:
  
 \begin_inset Formula $\left(A\subseteq B\right)\implies\left(\bbp\left(A\right)\le\bbp\left(B\right)\right)$
 \end_inset
@@ -435,15 +419,7 @@ literal "true"
 \end_layout
 
 \begin_layout Itemize
-
-\series bold
-הכלה
-\series default
- 
-\series bold
-והדחה
-\series default
-:
+הכלה והדחה:
  
 \begin_inset Formula $\bbp\left(A\cup B\right)=\bbp\left(A\right)+\bbp\left(B\right)-\bbp\left(A\cap B\right)$
 \end_inset
@@ -654,7 +630,7 @@ literal "true"
 \begin_inset Formula $1\le k\le n$
 \end_inset
 
-
+ אזי
 \end_layout
 
 \begin_layout Itemize
@@ -665,7 +641,7 @@ literal "true"
 \begin_inset Formula $\bbp\left(\bigcup_{i=1}^{n}A_{i}\right)\le\sum_{i=1}^{k}\left(-1\right)^{i+1}\sum_{\substack{I\subseteq\left[n\right]\\
 \left|I\right|=k
 }
-}\bbp\left)\bigcap_{i\in I}A_{i}\right($
+}\bbp\left(\bigcap_{i\in I}A_{i}\right)$
 \end_inset
 
 .
@@ -679,7 +655,7 @@ literal "true"
 \begin_inset Formula $\bbp\left(\bigcup_{i=1}^{n}A_{i}\right)\ge\sum_{i=1}^{k}\left(-1\right)^{i+1}\sum_{\substack{I\subseteq\left[n\right]\\
 \left|I\right|=k
 }
-}\bbp\left)\bigcap_{i\in I}A_{i}\right($
+}\bbp\left(\bigcap_{i\in I}A_{i}\right)$
 \end_inset
 
 .
@@ -6645,7 +6621,7 @@ p_{i} & k=x_{i}\\
  
 \begin_inset Formula $\psi\left(x\right)=\begin{cases}
 1 & x\ge0\\
-1+x-\frac{2\sin\left)2\pi x\right(}{3\pi}+\frac{\sin\left)4\pi x\right(}{12\pi} & -1\le x\le0\\
+1+x-\frac{2\sin\left(2\pi x\right)}{3\pi}+\frac{\sin\left(4\pi x\right)}{12\pi} & -1\le x\le0\\
 0 & x\le-1
 \end{cases}$
 \end_inset
