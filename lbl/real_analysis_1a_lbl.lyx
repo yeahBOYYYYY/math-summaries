@@ -1277,8 +1277,22 @@ x & x\ge0\\
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\left(\left|a\right|\le b\iff-b\le a\le b\right)\land\left(\left|a\right|\ge b\iff\left(b\le a\right)\lor\left(a\le-b\right)\right)$
+ יהיו 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\left|a\right|\ge b\right)\iff\left(\left(b\le a\right)\lor\left(a\le-b\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\left|a\right|\le b\right)\iff\left(-b\le a\le b\right)$
 \end_inset
 
 .
@@ -1391,8 +1405,16 @@ x & x\ge0\\
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\forall a,b\in\bbr.\left(\forall\e>0.\left|a-b\right|<\e\right)\implies a=b$
+ יהיו 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\forall\e>0.\left|a-b\right|<\e$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a=b$
 \end_inset
 
 .
@@ -1436,8 +1458,8 @@ x & x\ge0\\
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $a\in\bbn\to\bbr$
+ פונקציה 
+\begin_inset Formula $a:\bbn\to\bbr$
 \end_inset
 
 .
@@ -1615,11 +1637,19 @@ x & x\ge0\\
 \series default
 \color inherit
 :
- (חסומה מלרע)
-\begin_inset Formula $\land$
+ סדרה 
+\begin_inset Formula $a$
 \end_inset
 
-(חסומה מלעיל).
+ באשר 
+\begin_inset Formula $a$
+\end_inset
+
+ חסומה מלרע וכן 
+\begin_inset Formula $a$
+\end_inset
+
+ חסומה מלעיל.
 \end_layout
 
 \begin_layout Standard
@@ -1630,12 +1660,20 @@ x & x\ge0\\
 \series default
 \color inherit
 :
- תהא 
+ יהי 
+\begin_inset Formula $L\in\bbr$
+\end_inset
+
+ ותהא 
 \begin_inset Formula $a$
 \end_inset
 
- סדרה אזי 
-\begin_inset Formula $\left(\lim_{n\to\infty}a_{n}=L\right)\iff\left(\forall\e>0.\exists N\in\bbn.\forall n>N.\left|a_{n}-L\right|<\e\right)$
+ סדרה עבורה 
+\begin_inset Formula $\forall\e>0.\exists N\in\bbn.\forall n>N.\left|a_{n}-L\right|<\e$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=L$
 \end_inset
 
 .
@@ -1649,12 +1687,39 @@ x & x\ge0\\
 \series default
 \color inherit
 :
+ יהי 
+\begin_inset Formula $L\in\bbr$
+\end_inset
+
  תהא 
 \begin_inset Formula $a$
 \end_inset
 
- סדרה אזי 
-\begin_inset Formula $\left(a_{n}\to L\right)\iff\left(\underset{n\to\infty}{\lim}a_{n}=L\right)$
+ סדרה עבורה 
+\begin_inset Formula $\underset{n\to\infty}{\lim}a_{n}=L$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a_{n}\to L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $r\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lim_{n\to\infty}r=r$
 \end_inset
 
 .
@@ -1669,7 +1734,45 @@ x & x\ge0\\
 \color inherit
 :
  
-\begin_inset Formula $\left(\forall r\in\bbr.\lim_{n\to\infty}r=r\right)\land\left(\lim_{n\to\infty}\frac{1}{n}=0\right)$
+\begin_inset Formula $\lim_{n\to\infty}\frac{1}{n}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\left(0,1\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $q^{n}\to0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $c>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sqrt[n]{c}\to1$
 \end_inset
 
 .
@@ -1684,7 +1787,26 @@ x & x\ge0\\
 \color inherit
 :
  
-\begin_inset Formula $\left(\forall\a\in\bbq_{+}.\frac{1}{n^{\a}}\to0\right)\land\left(\sqrt[n]{n}\to1\right)\land\left(\forall c>0.\sqrt[n]{c}\to1\right)\land\left(\forall q\in\left(0,1\right).q^{n}\to0\right)$
+\begin_inset Formula $\sqrt[n]{n}\to1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\a\in\bbq_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{1}{n^{\a}}\to0$
 \end_inset
 
 .
@@ -1701,16 +1823,28 @@ x & x\ge0\\
 
 \series bold
 \color purple
-משפט
+משפט יחידות הגבול
 \series default
 \color inherit
 :
+ יהיו 
+\begin_inset Formula $L_{1},L_{2}\in\bbr$
+\end_inset
+
  תהא 
 \begin_inset Formula $a$
 \end_inset
 
- סדרה אזי 
-\begin_inset Formula $\left(\lim_{n\to\infty}a_{n}=L_{1}\right)\land\left(\lim_{n\to\infty}a_{n}=L_{2}\right)\implies L_{1}=L_{2}$
+ סדרה עבורה 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=L_{1}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=L_{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $L_{1}=L_{2}$
 \end_inset
 
 .
@@ -1724,12 +1858,20 @@ x & x\ge0\\
 \series default
 \color inherit
 :
+ יהי 
+\begin_inset Formula $L\in\bbr$
+\end_inset
+
  תהא 
 \begin_inset Formula $a$
 \end_inset
 
- סדרה אזי 
-\begin_inset Formula $\left(\lim_{n\to\infty}a_{n}=L\right)\implies\left(\lim_{n\to\infty}\left|a_{n}\right|=\left|L\right|\right)$
+ סדרה עבורה 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=L$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lim_{n\to\infty}\left|a_{n}\right|=\left|L\right|$
 \end_inset
 
 .
@@ -1789,12 +1931,12 @@ x & x\ge0\\
 \begin_inset Formula $a$
 \end_inset
 
- סדרה נגדיר 
-\begin_inset Formula $b_{n+k}=a_{n}$
+ סדרה ויהי 
+\begin_inset Formula $k\in\bbn$
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(\lim_{n\to\infty}a_{n}=L\right)\iff\left(\lim_{n\to\infty}b_{n}=L\right)$
+\begin_inset Formula $\left(\lim_{n\to\infty}a_{n}=L\right)\iff\left(\lim_{n\to\infty}a_{n+k}=L\right)$
 \end_inset
 
 .
@@ -1812,18 +1954,54 @@ x & x\ge0\\
 \begin_inset Formula $a$
 \end_inset
 
- סדרה אזי
-\end_layout
+ סדרה עבורה 
+\begin_inset Formula $\forall M>0.\exists N\in\bbn.\forall n>N.M<a_{n}$
+\end_inset
 
-\begin_layout Itemize
-\begin_inset Formula $\left(\lim_{n\to\infty}a_{n}=\infty\right)\iff\left(\forall M>0.\exists N\in\bbn.\forall n>N.M<a_{n}\right)$
+ אזי 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=\infty$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $\left(\lim_{n\to\infty}a_{n}=-\infty\right)\iff\left(\forall M>0.\exists N\in\bbn.\forall n>N.a_{n}<-M\right)$
+\begin_layout Standard
+
+\series bold
+\color purple
+סדרה מתבדרת למינוס אינסוף/גבול אינסופי/גבול במובן הרחב
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $a$
+\end_inset
+
+ סדרה עבורה 
+\begin_inset Formula $\forall M>0.\exists N\in\bbn.\forall n>N.a_{n}<-M$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=-\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $a>1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lim_{n\to\infty}a^{n}=\infty$
 \end_inset
 
 .
@@ -1838,7 +2016,7 @@ x & x\ge0\\
 \color inherit
 :
  
-\begin_inset Formula $\left(\lim_{n\to\infty}n=\infty\right)\land\left(\forall a>1.\lim_{n\to\infty}a^{n}=\infty\right)$
+\begin_inset Formula $\lim_{n\to\infty}n=\infty$
 \end_inset
 
 .
@@ -1875,7 +2053,11 @@ x & x\ge0\\
 \series default
 \color inherit
 :
- תהא 
+ יהי 
+\begin_inset Formula $L\in\bbr$
+\end_inset
+
+ ותהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2015,7 +2197,7 @@ x & x\ge0\\
 \end_inset
 
  אזי קיימות סדרות 
-\begin_inset Formula $a,b\in\bbq^{\bbn}$
+\begin_inset Formula $a,b:\bbn\to\bbq$
 \end_inset
 
  עבורן 
@@ -2036,7 +2218,7 @@ x & x\ge0\\
 
 \series bold
 \color brown
-ייצוג עשרוני
+טענה ייצוג עשרוני
 \series default
 \color inherit
 :
@@ -2045,7 +2227,7 @@ x & x\ge0\\
 \end_inset
 
  אזי קיים 
-\begin_inset Formula $a\in\left\{ 0,\ldots,9\right\} ^{\bbz}$
+\begin_inset Formula $a:\bbz\to\left\{ 0,\ldots,9\right\} $
 \end_inset
 
  המקיים 
@@ -2059,12 +2241,12 @@ x & x\ge0\\
 
 \series bold
 \color brown
-פיתוח מחזורי אינסופי
+סימון פיתוח מחזורי אינסופי
 \series default
 \color inherit
 :
  יהיו 
-\begin_inset Formula $d_{1}\ldots d_{n}$
+\begin_inset Formula $d_{1}\ldots d_{n}\in\left\{ 0\ldots9\right\} $
 \end_inset
 
  אזי 
@@ -2087,7 +2269,7 @@ x & x\ge0\\
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(q\in\bbq\right)\iff\left(q=a.a_{1}\ldots a_{n}\overline{b_{1}\ldots b_{\ell}}\right)$
+\begin_inset Formula $\left(q\in\bbq\right)\iff\left(\exists a\in\bbn.\exists a_{1}\ldots a_{n},b_{1}\ldots b_{\ell}\left\{ 0\ldots9\right\} .q=a.a_{1}\ldots a_{n}\overline{b_{1}\ldots b_{\ell}}\right)$
 \end_inset
 
 .
@@ -2116,35 +2298,20 @@ x & x\ge0\\
 \series default
 \color inherit
 :
- יהי 
+ סדרה 
+\begin_inset Formula $p$
+\end_inset
+
+ עבורה 
 \begin_inset Formula $p_{1}\in\bbp$
 \end_inset
 
- נגדיר 
+ וכן 
 \begin_inset Formula $p_{n}\in\left\{ p\in\bbp\mid p|\left(1+\prod_{i=1}^{n-1}p_{i}\right)\right\} $
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-טענה
-\series default
-\color inherit
-:
- עבור 
-\begin_inset Formula $p_{1}=2$
-\end_inset
-
- ועבור 
-\begin_inset Formula $p_{n}$
-\end_inset
-
- מינימלי לא ידוע אם 
-\begin_inset Formula $\im\left(p\right)=\bbp$
+ לכל 
+\begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
 .
@@ -2158,8 +2325,12 @@ x & x\ge0\\
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\forall\theta\in\bbr\backslash\bbq.\left|\left\{ \left\langle p,q\right\rangle \in\bbq\times\bbn\mid\left|\theta-\frac{p}{q}\right|<\frac{1}{q^{2}}\right\} \right|\ge\aleph_{0}$
+ יהי 
+\begin_inset Formula $\theta\in\bbr\backslash\bbq$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\left\{ \left\langle p,q\right\rangle \in\bbq\times\bbn\mid\left|\theta-\frac{p}{q}\right|<\frac{1}{q^{2}}\right\} \right|\ge\aleph_{0}$
 \end_inset
 
 .
@@ -2173,11 +2344,11 @@ x & x\ge0\\
 \series default
 \color inherit
 :
- 
+ מספר 
 \begin_inset Formula $a\in\bbr$
 \end_inset
 
- המקיים 
+ עבורו 
 \begin_inset Formula $\forall p\in\bbq.\forall q\in\bbn.\left(\left|\theta-\frac{p}{q}\right|<\frac{1}{q^{2}}\right)\implies\left(\exists c\in\bbr.\frac{c}{q^{2}}<\left|\theta-\frac{p}{q}\right|\right)$
 \end_inset
 
@@ -2222,7 +2393,16 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\left(b\ne0\right)\land\left(\forall n\in\bbn.b_{n}\ne0\right)\implies\left(\frac{a_{n}}{b_{n}}\to\frac{a}{b}\right)$
+אם 
+\begin_inset Formula $b\ne0$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\forall n\in\bbn.b_{n}\ne0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{a_{n}}{b_{n}}\to\frac{a}{b}$
 \end_inset
 
 .
@@ -2243,16 +2423,20 @@ x & x\ge0\\
 \series default
 \color inherit
 :
+ יהי 
+\begin_inset Formula $L\in\bbr$
+\end_inset
+
  תהא 
 \begin_inset Formula $d_{n}$
 \end_inset
 
- סדרה המקיימת 
-\begin_inset Formula $\forall n\in\bbn.d_{n}\ge0$
+ סדרה אי־שלילית עבורה 
+\begin_inset Formula $d_{n}\to L$
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(d_{n}\to d\right)\implies\left(d\ge0\right)$
+\begin_inset Formula $L\ge0$
 \end_inset
 
 .
@@ -2297,18 +2481,35 @@ x & x\ge0\\
 \begin_inset Formula $a_{n},b_{n}$
 \end_inset
 
- סדרות אזי
-\end_layout
+ סדרות עבורן 
+\begin_inset Formula $\exists N\in\bbn.\forall n\ge N.a_{n}\le b_{n}$
+\end_inset
 
-\begin_layout Itemize
-\begin_inset Formula $\left(\exists N\in\bbn.\forall n\ge N.a_{n}\le b_{n}\right)\implies\left(a_{n}\preccurlyeq b_{n}\right)$
+ אזי 
+\begin_inset Formula $a_{n}\preccurlyeq b_{n}$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $\left(\exists N\in\bbn.\forall n\ge N.a_{n}<b_{n}\right)\implies\left(a_{n}\prec b_{n}\right)$
+\begin_layout Standard
+
+\series bold
+\color orange
+סימון
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $a_{n},b_{n}$
+\end_inset
+
+ סדרות עבורן 
+\begin_inset Formula $\exists N\in\bbn.\forall n\ge N.a_{n}<b_{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a_{n}\prec b_{n}$
 \end_inset
 
 .
@@ -2538,7 +2739,26 @@ x & x\ge0\\
 \end_inset
 
  סדרה חסומה מלעיל אזי 
-\begin_inset Formula $\left(\sup\left(a_{n}\right)=\sup\left(\im\left(a\right)\right)\right)\land\left(\inf\left(a_{n}\right)=\inf\left(\im\left(a\right)\right)\right)$
+\begin_inset Formula $\sup\left(a_{n}\right)=\sup\left(\im\left(a\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ סדרה חסומה מלרע אזי 
+\begin_inset Formula $\inf\left(a_{n}\right)=\inf\left(\im\left(a\right)\right)$
 \end_inset
 
 .
@@ -2810,7 +3030,22 @@ x & x\ge0\\
 \color inherit
 :
  
-\begin_inset Formula $e=\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^{n}\in\left(2,3\right]$
+\begin_inset Formula $\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^{n}\in\left(2,3\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+קבוע אוילר
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $e=\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^{n}$
 \end_inset
 
 .
@@ -2889,59 +3124,66 @@ x & x\ge0\\
 \begin_inset Formula $b$
 \end_inset
 
- תת סדרה אזי
-\end_layout
-
-\begin_layout Itemize
+ תת סדרה של 
 \begin_inset Formula $a$
 \end_inset
 
- חסומה מלעיל 
-\begin_inset Formula $\impliedby$
-\end_inset
-
- 
-\begin_inset Formula $b$
-\end_inset
-
- חסומה מלעיל.
+ אזי
 \end_layout
 
 \begin_layout Itemize
+(
 \begin_inset Formula $a$
 \end_inset
 
- חסומה מלרע 
+ חסומה מלעיל)
 \begin_inset Formula $\impliedby$
 \end_inset
 
- 
+(
 \begin_inset Formula $b$
 \end_inset
 
- חסומה מלרע.
+ חסומה מלעיל).
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $a\to L\implies b\to L$
+(
+\begin_inset Formula $a$
+\end_inset
+
+ חסומה מלרע)
+\begin_inset Formula $\impliedby$
+\end_inset
+
+(
+\begin_inset Formula $b$
+\end_inset
+
+ חסומה מלרע).
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(a\to L\right)\implies\left(b\to L\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
+(
 \begin_inset Formula $a$
 \end_inset
 
- מונוטונית 
+ מונוטונית)
 \begin_inset Formula $\impliedby$
 \end_inset
 
- 
+(
 \begin_inset Formula $b$
 \end_inset
 
- מונוטונית.
+ מונוטונית).
 \end_layout
 
 \begin_layout Standard
@@ -2956,11 +3198,7 @@ x & x\ge0\\
 \begin_inset Formula $a$
 \end_inset
 
- סדרה המקיימת 
-\begin_inset Formula $\nexists\max\left(a\right)$
-\end_inset
-
- אזי קיימת תת סדרה מונוטונית עולה ממש.
+ סדרה ללא מקסימום אזי קיימת תת סדרה מונוטונית עולה ממש.
 \end_layout
 
 \begin_layout Standard
@@ -2994,10 +3232,7 @@ x & x\ge0\\
 \begin_inset Formula $b-a\to0$
 \end_inset
 
- וגם
-\end_layout
-
-\begin_layout Standard
+ וגם 
 \begin_inset Formula $\forall n\in\bbn.\left(a_{n}\le b_{n}\right)\land\left(\left[a_{n+1},b_{n+1}\right]\subseteq\left[a_{n},b_{n}\right]\right)$
 \end_inset
 
@@ -3236,12 +3471,64 @@ x & x\ge0\\
 \end_inset
 
  סדרה אזי 
-\begin_inset Formula $\lim\left(\sup\left(a\right)\right)=\overline{\lim}\left(a\right)=\sup\left({\cal P}\right)$
+\begin_inset Formula $\lim\left(\sup\left(a\right)\right)=\sup\left({\cal P}\right)$
 \end_inset
 
-,
- 
-\begin_inset Formula $\lim\left(\inf\left(a\right)\right)=\underline{\lim}\left(a\right)=\sup\left({\cal P}\right)$
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $a$
+\end_inset
+
+ סדרה אזי 
+\begin_inset Formula $\overline{\lim}\left(a\right)=\lim\left(\sup\left(a\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $a$
+\end_inset
+
+ סדרה אזי 
+\begin_inset Formula $\lim\left(\inf\left(a\right)\right)=\inf\left({\cal P}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $a$
+\end_inset
+
+ סדרה אזי 
+\begin_inset Formula $\underline{\lim}\left(a\right)=\lim\left(\inf\left(a\right)\right)$
 \end_inset
 
 .
@@ -3263,11 +3550,15 @@ x & x\ge0\\
 \begin_inset Formula $a$
 \end_inset
 
- מתכנסת) 
-\begin_inset Formula $\left(\widehat{\P}=\P\right)\land\left(\left|\widehat{\P}\right|=1\right)\iff$
+ מתכנסת)
+\begin_inset Formula $\iff$
 \end_inset
 
-.
+(
+\begin_inset Formula $\left(\widehat{\P}=\P\right)\land\left(\left|\widehat{\P}\right|=1\right)$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -3283,10 +3574,10 @@ x & x\ge0\\
 \end_inset
 
  סדרה חסומה אזי 
-\begin_inset Formula $\exists\min\left({\cal P}\right),\max\left({\cal P}\right)$
+\begin_inset Formula $\min\left({\cal P}\right),\max\left({\cal P}\right)$
 \end_inset
 
-.
+ קיימים.
 \end_layout
 
 \begin_layout Standard
@@ -3298,11 +3589,11 @@ x & x\ge0\\
 \color inherit
 :
  יהיו 
-\begin_inset Formula $b_{1}\ldots b_{m}\in\bbn^{\bbn}$
+\begin_inset Formula $b_{1}\ldots b_{m}:\bbn\to\bbn$
 \end_inset
 
  זרות בזוגות המקיימות 
-\begin_inset Formula $\left(b_{i}\uparrow\infty\right)\land\left(\bigcup b_{i}=\bbn\right)$
+\begin_inset Formula $\left(b_{i}\uparrow\infty\right)\land\left(\biguplus b_{i}=\bbn\right)$
 \end_inset
 
  ותהא 
@@ -3346,37 +3637,20 @@ x & x\ge0\\
 טענה
 \series default
 :
- תהיינה 
-\begin_inset Formula $A_{1},A_{2},\ldots$
+ תהא 
+\begin_inset Formula $\left\{ A_{i}\right\} _{i=1}^{\infty}\subseteq\P\left(\bbr\right)$
 \end_inset
 
- סדרת קבוצות פתוחות אזי (
+ באשר 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ פתוחה לכל 
+\begin_inset Formula $i\in\bbn$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\bigcup_{i=1}^{\infty}A_{i}$
-\end_inset
-
- פתוחה)
-\begin_inset Formula $\land$
-\end_inset
-
-(
-\begin_inset Formula $\bigcap_{i=1}^{n}A_{i}$
-\end_inset
-
- פתוחה).
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-קבוצה סגורה
-\series default
-:
- 
-\begin_inset Formula $B\subseteq\bbr$
-\end_inset
-
- המקיימת 
-\begin_inset Formula $\bbr\backslash B$
 \end_inset
 
  פתוחה.
@@ -3389,22 +3663,73 @@ x & x\ge0\\
 \series default
 :
  תהיינה 
-\begin_inset Formula $B_{1},B_{2},\ldots$
+\begin_inset Formula $A_{1}\ldots A_{n}\subseteq\bbr$
 \end_inset
 
- סדרת קבוצות סגורות אזי (
-\begin_inset Formula $\bigcup_{i=1}^{n}B_{i}$
+ קבוצות פתוחות אזי 
+\begin_inset Formula $\bigcap_{i=1}^{n}A_{i}$
 \end_inset
 
- סגורה)
-\begin_inset Formula $\land$
+ פתוחה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קבוצה סגורה
+\series default
+:
+ קבוצה 
+\begin_inset Formula $B\subseteq\bbr$
 \end_inset
 
-(
+ עבורה 
+\begin_inset Formula $\bbr\backslash B$
+\end_inset
+
+ פתוחה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\left\{ B_{i}\right\} _{i=1}^{\infty}\subseteq\P\left(\bbr\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $B_{i}$
+\end_inset
+
+ סגורה לכל 
+\begin_inset Formula $i\in\bbn$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\bigcap_{i=1}^{\infty}B_{i}$
 \end_inset
 
- סגורה).
+ סגורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $A_{1}\ldots A_{n}\subseteq\bbr$
+\end_inset
+
+ קבוצות סגורות אזי 
+\begin_inset Formula $\bigcup_{i=1}^{n}B_{i}$
+\end_inset
+
+ סגורה.
 \end_layout
 
 \begin_layout Standard
@@ -3958,33 +4283,35 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
+(
 \begin_inset Formula $\sum_{n=0}^{\infty}a_{n}$
 \end_inset
 
- מתכנס 
+ מתכנס)
 \begin_inset Formula $\impliedby$
 \end_inset
 
- 
+(
 \begin_inset Formula $\sum_{n=0}^{\infty}\left(a_{n}+b_{n}\right)$
 \end_inset
 
- מתכנס.
+ מתכנס).
 \end_layout
 
 \begin_layout Itemize
+(
 \begin_inset Formula $\sum_{n=0}^{\infty}a_{n}$
 \end_inset
 
- מתכנס 
+ מתכנס)
 \begin_inset Formula $\impliedby$
 \end_inset
 
- 
+(
 \begin_inset Formula $\sum_{n=0}^{\infty}\xi a_{n}$
 \end_inset
 
- מתכנס.
+ מתכנס).
 \end_layout
 
 \begin_layout Standard
@@ -4182,21 +4509,21 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $L\in\left(0,\infty\right)\implies\left(\sum b_{n}<\infty\iff\sum a_{n}<\infty\right)$
+\begin_inset Formula $\left(L\in\left(0,\infty\right)\right)\implies\left(\left(\sum b_{n}<\infty\right)\iff\left(\sum a_{n}<\infty\right)\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $L=0\implies\left(\sum b_{n}<\infty\implies\sum a_{n}<\infty\right)$
+\begin_inset Formula $\left(L=0\right)\implies\left(\left(\sum b_{n}<\infty\right)\implies\left(\sum a_{n}<\infty\right)\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $L=\infty\implies\left(\sum b_{n}<\infty\impliedby\sum a_{n}<\infty\right)$
+\begin_inset Formula $\left(L=\infty\right)\implies\left(\left(\sum b_{n}<\infty\right)\impliedby\left(\sum a_{n}<\infty\right)\right)$
 \end_inset
 
 .
@@ -4254,10 +4581,14 @@ x & x\ge0\\
 \end_inset
 
  מתכנס)
-\begin_inset Formula $\left(\lim\left(\sup\left(a_{n}^{\frac{1}{n}}\right)\right)<1\right)\implies$
+\begin_inset Formula $\implies$
 \end_inset
 
-.
+(
+\begin_inset Formula $\lim\left(\sup\left(a_{n}^{\frac{1}{n}}\right)\right)<1$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Itemize
@@ -4266,10 +4597,14 @@ x & x\ge0\\
 \end_inset
 
  מתבדר)
-\begin_inset Formula $\left(\lim\left(\sup\left(a_{n}^{\frac{1}{n}}\right)\right)>1\right)\implies$
+\begin_inset Formula $\implies$
 \end_inset
 
-.
+(
+\begin_inset Formula $\lim\left(\sup\left(a_{n}^{\frac{1}{n}}\right)\right)>1$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -4351,10 +4686,14 @@ x & x\ge0\\
 \end_inset
 
  מתכנס)
-\begin_inset Formula $\left(\lim\left(\sup\left(\frac{a_{n+1}}{a_{n}}\right)\right)<1\right)\implies$
+\begin_inset Formula $\implies$
 \end_inset
 
-.
+(
+\begin_inset Formula $\lim\left(\sup\left(\frac{a_{n+1}}{a_{n}}\right)\right)<1$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Itemize
@@ -4363,10 +4702,14 @@ x & x\ge0\\
 \end_inset
 
  מתבדר)
-\begin_inset Formula $\left(\lim\left(\inf\left(\frac{a_{n+1}}{a_{n}}\right)\right)>1\right)\implies$
+\begin_inset Formula $\implies$
 \end_inset
 
-.
+(
+\begin_inset Formula $\lim\left(\inf\left(\frac{a_{n+1}}{a_{n}}\right)\right)>1$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -4910,18 +5253,31 @@ x & x\ge0\\
 \begin_inset Formula $R\in\left[0,\infty\right]$
 \end_inset
 
- כך שלכל 
-\begin_inset Formula $x\in\bbr$
+ עבורו
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $x\in\left(-R,R\right)$
 \end_inset
 
- מתקיים 
-\begin_inset Formula $\begin{cases}
-\text{מתכנס בהחלט} & x\in\left(-R,R\right)\\
-\text{מתבדר} & x\notin\left[-R,R\right]
-\end{cases}$
+ אזי 
+\begin_inset Formula $\sum a_{k}x^{k}$
 \end_inset
 
-.
+ מתכנס בהחלט.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $x\notin\left[-R,R\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum a_{k}x^{k}$
+\end_inset
+
+ מתבדר.
 \end_layout
 
 \begin_layout Standard
@@ -4975,7 +5331,7 @@ x & x\ge0\\
 \end_inset
 
  טור חזקות אזי
-\begin_inset Formula $\left(\lim\sup\left(\left|a_{n}\right|^{\frac{1}{n}}\right)=\infty\implies R=0\right)\land\left(\lim\sup\left(\left|a_{n}\right|^{\frac{1}{n}}\right)=0\implies R=\infty\right)$
+\begin_inset Formula $\left(\left(\lim\sup\left(\left|a_{n}\right|^{\frac{1}{n}}\right)=\infty\right)\implies\left(R=0\right)\right)\land\left(\left(\lim\sup\left(\left|a_{n}\right|^{\frac{1}{n}}\right)=0\right)\implies\left(R=\infty\right)\right)$
 \end_inset
 
 .
@@ -5337,11 +5693,49 @@ x & x\ge0\\
 \color inherit
 :
  יהיו 
-\begin_inset Formula $a,b\in\bbr$
+\begin_inset Formula $a,b,x,y\in\bbr$
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(x^{a}x^{b}=x^{a+b}\right)\land\left(\left(x^{a}\right)^{b}=x^{ab}\right)\land\left(\left(yx\right)^{a}=y^{a}x^{a}\right)$
+\begin_inset Formula $\left(yx\right)^{a}=y^{a}x^{a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $a,b,x\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(x^{a}\right)^{b}=x^{ab}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+משפט
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $a,b,x\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $x^{a}x^{b}=x^{a+b}$
 \end_inset
 
 .
@@ -5508,7 +5902,7 @@ x & x\ge0\\
 \end_inset
 
  כך 
-\begin_inset Formula $\tan\left(x\right)=\frac{\cos\left(x\right)}{\sin\left(x\right)}$
+\begin_inset Formula $\cot\left(x\right)=\frac{\cos\left(x\right)}{\sin\left(x\right)}$
 \end_inset
 
 .
@@ -5543,7 +5937,52 @@ literal "false"
 \color inherit
 :
  
-\begin_inset Formula $\left(\arcsin=\sin^{-1}\right)\land\left(\arccos=\cos^{-1}\right)\land\left(\arctan=\tan^{-1}\right)\land\left(\text{arccot}=\cot^{-1}\right)$
+\begin_inset Formula $\arcsin=\sin^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הגדרה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\arccos=\cos^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הגדרה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\arctan=\tan^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הגדרה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\text{arccot}=\cot^{-1}$
 \end_inset
 
 .
@@ -5615,8 +6054,8 @@ literal "false"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $f\in\bbr^{\bbr}$
+ פונקציה 
+\begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
  המקיימת 
@@ -5634,8 +6073,8 @@ literal "false"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $f\in\bbr^{\bbr}$
+ פונקציה 
+\begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
  המקיימת 
@@ -5653,8 +6092,8 @@ literal "false"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $f\in\bbr^{\bbr}$
+ פונקציה 
+\begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
  המקיימת 
@@ -5675,7 +6114,7 @@ literal "false"
 
 \series bold
 \color purple
-קטע מנוקב/סביבה
+קטע מנוקב
 \series default
 \color inherit
 :
@@ -6015,6 +6454,15 @@ literal "false"
 
 \end_deeper
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\bbri}{\hat{\bbr}}
+{\hat{\bbr}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color purple
@@ -6022,12 +6470,8 @@ literal "false"
 \series default
 \color inherit
 :
- תהא 
-\begin_inset Formula $A\subseteq\bbr$
-\end_inset
-
- אזי 
-\begin_inset Formula $A^{\pm}=A\cup\left\{ x_{0}^{+}\mid x_{0}\in A\right\} \cup\left\{ x_{0}^{-}\mid x_{0}\in A\right\} $
+ 
+\begin_inset Formula $\bbri=\bbr\cup\left\{ -\infty,\infty\right\} $
 \end_inset
 
 .
@@ -6042,18 +6486,26 @@ literal "false"
 \color inherit
 :
  יהי 
-\begin_inset Formula $x_{0}\in\bbr_{\infty}^{\pm}$
+\begin_inset Formula $L\in\bbri$
+\end_inset
+
+ יהי 
+\begin_inset Formula $a\in\bbri$
 \end_inset
 
  ותהא 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
- אזי 
-\begin_inset Formula $\left(f\left(x\right)\xrightarrow[x\to x_{0}]{}L\right)\iff\left(\lim_{x\to x_{0}}f\left(x\right)=L\right)$
+ עבורה 
+\begin_inset Formula $\lim_{x\to a}f\left(x\right)=L$
 \end_inset
 
- במובן הרחב.
+ אזי 
+\begin_inset Formula $f\left(x\right)\xrightarrow[x\to a]{}L$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -6064,12 +6516,16 @@ literal "false"
 \series default
 \color inherit
 :
- יהי 
-\begin_inset Formula $x_{0}\in\bbr$
+ תהא 
+\begin_inset Formula $f:I\to\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbr$
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(\left(\lim_{x\to x_{0}}f\left(x\right)=L_{1}\right)\land\left(\lim_{x\to x_{0}}f\left(x\right)=L_{2}\right)\right)\implies\left(L_{1}=L_{2}\right)$
+\begin_inset Formula $\left(\left(\lim_{x\to a}f\left(x\right)=L_{1}\right)\land\left(\lim_{x\to a}f\left(x\right)=L_{2}\right)\right)\implies\left(L_{1}=L_{2}\right)$
 \end_inset
 
  .
@@ -6084,11 +6540,27 @@ literal "false"
 \color inherit
 :
  יהי 
-\begin_inset Formula $x_{0}\in\bbr$
+\begin_inset Formula $L\in\bbri$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:I\to\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbr$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\lim_{x\to a^{-}}f\left(x\right)=L$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\lim_{x\to a^{+}}f\left(x\right)=L$
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(\lim_{x\to x_{0}}f\left(x\right)=L\right)\iff\left(\lim_{x\to x_{0}^{-}}f\left(x\right)=L=\lim_{x\to x_{0}^{+}}f\left(x\right)\right)$
+\begin_inset Formula $\lim_{x\to a}f\left(x\right)=L$
 \end_inset
 
 .
@@ -6106,11 +6578,14 @@ literal "false"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $D\left(x\right)=\begin{cases}
-0 & x\in\bbq\\
-1 & x\notin\bbq
-\end{cases}$
+ נגדיר 
+\begin_inset Formula $D:\bbr\to\bbr$
+\end_inset
+
+ כך 
+\begin_inset Formula $D\left(x\right)=\left\{ \begin{smallmatrix}0 &  & x\in\bbq\\
+1 &  & x\notin\bbq
+\end{smallmatrix}\right.$
 \end_inset
 
 .
@@ -6125,25 +6600,25 @@ literal "false"
 \color inherit
 :
  יהי 
-\begin_inset Formula $x_{0}\in\bbr_{\infty}^{\pm}$
+\begin_inset Formula $a\in\bbri$
 \end_inset
 
  ויהיו 
-\begin_inset Formula $f,g:I_{x_{0}}\to\bbr$
+\begin_inset Formula $f,g:I_{a}\to\bbr$
 \end_inset
 
  אזי
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\lim_{x\to x_{0}}\left(f\left(x\right)+g\left(x\right)\right)=\lim_{x\to x_{0}}f\left(x\right)+\lim_{x\to x_{0}}g\left(x\right)$
+\begin_inset Formula $\lim_{x\to a}\left(f\left(x\right)+g\left(x\right)\right)=\left(\lim_{x\to a}f\left(x\right)\right)+\left(\lim_{x\to a}g\left(x\right)\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\lim_{x\to x_{0}}\left(f\left(x\right)g\left(x\right)\right)=\lim_{x\to x_{0}}f\left(x\right)\lim_{x\to x_{0}}g\left(x\right)$
+\begin_inset Formula $\lim_{x\to a}\left(f\left(x\right)g\left(x\right)\right)=\left(\lim_{x\to a}f\left(x\right)\right)\cdot\left(\lim_{x\to a}g\left(x\right)\right)$
 \end_inset
 
 .
@@ -6158,11 +6633,11 @@ literal "false"
 \color inherit
 :
  יהי 
-\begin_inset Formula $x_{0}\in\bbr_{\infty}^{\pm}$
+\begin_inset Formula $a\in\bbri$
 \end_inset
 
  אזי 
-\begin_inset Formula $\lim_{x\to x_{0}}x=x_{0}$
+\begin_inset Formula $\lim_{x\to a}x=a$
 \end_inset
 
 .
@@ -6177,7 +6652,7 @@ literal "false"
 \color inherit
 :
  יהי 
-\begin_inset Formula $x_{0}\in\bbr^{\pm}$
+\begin_inset Formula $a\in\bbr$
 \end_inset
 
  ויהי 
@@ -6185,7 +6660,7 @@ literal "false"
 \end_inset
 
  אזי 
-\begin_inset Formula $\lim_{x\to x_{0}}p\left(x\right)=p\left(x_{0}\right)$
+\begin_inset Formula $\lim_{x\to a}p\left(x\right)=p\left(a\right)$
 \end_inset
 
 .
@@ -6200,50 +6675,23 @@ literal "false"
 \color inherit
 :
  יהיו 
-\begin_inset Formula $x_{0},y_{0}\in\bbr_{\infty}^{\pm}$
+\begin_inset Formula $a,b\in\bbri$
 \end_inset
 
- ותהיינה 
-\begin_inset Formula $g\in\bbr^{I_{y_{0}}}$
+ תהא 
+\begin_inset Formula $g:I_{b}\to\bbr$
 \end_inset
 
- וכן 
-\begin_inset Formula $f\in I_{y_{0}}^{I_{x_{0}}}$
-\end_inset
-
- המקיימת 
-\begin_inset Formula ${\displaystyle \lim_{x\to x_{0}}}f\left(x\right)=y_{0}$
-\end_inset
-
- אזי 
-\begin_inset Formula ${\displaystyle \lim_{x\to x_{0}}}g\left(f\left(x\right)\right)={\displaystyle \lim_{x\to y_{0}}}g\left(x\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color purple
-טענה
-\series default
-\color inherit
-:
- יהיו 
-\begin_inset Formula $x_{0},y_{0}\in\bbr_{\infty}^{\pm}$
-\end_inset
-
- ותהיינה 
-\begin_inset Formula $g,f\in\bbr^{\bbr}$
+ ותהא 
+\begin_inset Formula $f:I_{a}\to I_{b}$
 \end_inset
 
  המקיימת 
-\begin_inset Formula ${\displaystyle \lim_{x\to x_{0}}}f\left(x\right)=y_{0}$
+\begin_inset Formula $\lim_{x\to a}f\left(x\right)=b$
 \end_inset
 
  אזי 
-\begin_inset Formula ${\displaystyle \lim_{x\to x_{0}}}g\left(f\left(x\right)\right)=g\left({\displaystyle \lim_{x\to y_{0}}}f\left(x\right)\right)$
+\begin_inset Formula $\lim_{x\to a}g\left(f\left(x\right)\right)=\lim_{x\to b}g\left(x\right)$
 \end_inset
 
 .
@@ -6318,11 +6766,11 @@ literal "false"
 \color inherit
 :
  יהי 
-\begin_inset Formula $x_{0}\in\bbr^{\pm}$
+\begin_inset Formula $a\in\bbr$
 \end_inset
 
  אזי 
-\begin_inset Formula $\lim_{x\to x_{0}}\cos\left(x\right)=\cos\left(x_{0}\right)$
+\begin_inset Formula $\lim_{x\to a}\cos\left(x\right)=\cos\left(a\right)$
 \end_inset
 
 .
@@ -6337,11 +6785,11 @@ literal "false"
 \color inherit
 :
  יהי 
-\begin_inset Formula $x_{0}\in\bbr^{\pm}$
+\begin_inset Formula $a\in\bbr$
 \end_inset
 
  אזי 
-\begin_inset Formula $\lim_{x\to x_{0}}\sin\left(x\right)=\sin\left(x_{0}\right)$
+\begin_inset Formula $\lim_{x\to a}\sin\left(x\right)=\sin\left(a\right)$
 \end_inset
 
 .
@@ -6379,11 +6827,11 @@ literal "false"
 \color inherit
 :
  יהי 
-\begin_inset Formula $x_{0}\in\bbr_{\infty}^{\pm}$
+\begin_inset Formula $a\in\bbri$
 \end_inset
 
  ותהיינה 
-\begin_inset Formula $f,g:\bbr^{I}$
+\begin_inset Formula $f,g:I\to\bbr$
 \end_inset
 
  המקיימות 
@@ -6391,7 +6839,7 @@ literal "false"
 \end_inset
 
  אזי 
-\begin_inset Formula $\lim_{x\to x_{0}}f\left(x\right)\le\lim_{x\to x_{0}}g\left(x\right)$
+\begin_inset Formula $\lim_{x\to a}f\left(x\right)\le\lim_{x\to a}g\left(x\right)$
 \end_inset
 
 .
@@ -6406,7 +6854,11 @@ literal "false"
 \color inherit
 :
  יהי 
-\begin_inset Formula $x_{0}\in\bbr_{\infty}^{\pm}$
+\begin_inset Formula $L\in\bbri$
+\end_inset
+
+ יהי 
+\begin_inset Formula $a\in\bbri$
 \end_inset
 
  ותהיינה 
@@ -6417,14 +6869,11 @@ literal "false"
 \begin_inset Formula $f\left(x\right)\preccurlyeq g\left(x\right)\preccurlyeq h\left(x\right)$
 \end_inset
 
- אזי
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\left(f\left(x\right),h\left(x\right)\xrightarrow[x\to x_{0}]{}L\right)\implies\left(g\left(x\right)\xrightarrow[x\to x_{0}]{}L\right)$
+ אזי 
+\begin_inset Formula $\left(f\left(x\right),h\left(x\right)\xrightarrow[x\to a]{}L\right)\implies\left(g\left(x\right)\xrightarrow[x\to a]{}L\right)$
 \end_inset
 
- במובן הרחב.
+.
 \end_layout
 
 \begin_layout Standard
@@ -6460,11 +6909,11 @@ literal "false"
 \begin_layout Itemize
 רציפות בנקודה:
  
-\begin_inset Formula $x_{0}\in I$
+\begin_inset Formula $a\in I$
 \end_inset
 
  עבורה 
-\begin_inset Formula $\lim_{x\to x_{0}}f\left(x\right)=f\left(x_{0}\right)$
+\begin_inset Formula $\lim_{x\to a}f\left(x\right)=f\left(x_{0}\right)$
 \end_inset
 
 .
@@ -6473,11 +6922,11 @@ literal "false"
 \begin_layout Itemize
 רציפה חד צדדית מימין בנקודה:
  
-\begin_inset Formula $x_{0}\in I$
+\begin_inset Formula $a\in I$
 \end_inset
 
  עבורה 
-\begin_inset Formula $\lim_{x\to x_{0}^{+}}f\left(x\right)=f\left(x_{0}\right)$
+\begin_inset Formula $\lim_{x\to a^{+}}f\left(x\right)=f\left(x_{0}\right)$
 \end_inset
 
 .
@@ -6486,11 +6935,11 @@ literal "false"
 \begin_layout Itemize
 רציפה חד צדדית משמאל בנקודה:
  
-\begin_inset Formula $x_{0}\in I$
+\begin_inset Formula $a\in I$
 \end_inset
 
  עבורה 
-\begin_inset Formula $\lim_{x\to x_{0}^{-}}f\left(x\right)=f\left(x_{0}\right)$
+\begin_inset Formula $\lim_{x\to a^{-}}f\left(x\right)=f\left(x_{0}\right)$
 \end_inset
 
 .
@@ -6500,33 +6949,65 @@ literal "false"
 
 \series bold
 \color brown
-פונקציה רציפה
+פונקציה רציפה בצורת קושי
 \series default
 \color inherit
 :
- 
+ פונקציה 
 \begin_inset Formula $f:I\to\bbr$
 \end_inset
 
- המקיימת אזי
-\end_layout
-
-\begin_layout Itemize
-קושי:
- 
-\begin_inset Formula $\forall x_{0}\in I.\lim_{x\to x_{0}}f\left(x\right)=f\left(x_{0}\right)$
+ המקיימת 
+\begin_inset Formula $\forall a\in I.\lim_{x\to a}f\left(x\right)=f\left(a\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
-היינה:
- 
-\begin_inset Formula $\forall x_{0}\in I.\forall y\in I^{\bbn}.\left(y_{n}\to x_{0}\right)\implies\left(\lim_{n\to\infty}f\left(y_{n}\right)=f\left(x_{0}\right)\right)$
+\begin_layout Standard
+
+\series bold
+\color brown
+פונקציה רציפה בצורת היינה
+\series default
+\color inherit
+:
+ פונקציה 
+\begin_inset Formula $f:I\to\bbr$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\forall a\in I.\forall x\in I^{\bbn}.\left(\left(x_{n}\to a\right)\implies\left(\lim_{n\to\infty}f\left(x_{n}\right)=f\left(a\right)\right)\right)$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+משפט
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $f:I\to\bbr$
+\end_inset
+
+ אזי (
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה בצורת קושי)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $f$
+\end_inset
+
+ רציפה בצורת הנייה).
 \end_layout
 
 \begin_layout Standard
@@ -6581,10 +7062,10 @@ literal "false"
 \end_inset
 
  פתוחה 
-\begin_inset Formula $f^{-1}\left[B\right]$
+\begin_inset Formula $f^{-1}\left(B\right)$
 \end_inset
 
- פתוחה יחסית אל 
+ פתוחה יחסית ל־
 \begin_inset Formula $I$
 \end_inset
 
@@ -6612,14 +7093,14 @@ literal "false"
 \end_inset
 
  רציפה על 
-\begin_inset Formula $a$
+\begin_inset Formula $c$
 \end_inset
 
 )
 \begin_inset Formula $\iff$
 \end_inset
 
-(
+((
 \begin_inset Formula $f_{\upharpoonright_{\left(a,c\right]}}$
 \end_inset
 
@@ -6639,7 +7120,7 @@ literal "false"
 \begin_inset Formula $c$
 \end_inset
 
-).
+)).
 \end_layout
 
 \begin_layout Standard
@@ -6655,7 +7136,7 @@ literal "false"
 \end_inset
 
  אזי 
-\begin_inset Formula $C\left(I\right)=\left\{ f\in\bbr^{I}\mid I\text{ רציפה על }f\right\} $
+\begin_inset Formula $C\left(I\right)=\left\{ f:I\to\bbr\mid I\text{ רציפה על }f\right\} $
 \end_inset
 
 .
@@ -6682,10 +7163,14 @@ literal "false"
 \end_inset
 
  חסומה מלעיל)
-\begin_inset Formula $\left(\lim_{x\to b^{-}}f\left(x\right)=\sup f\left[\left(a,b\right)\right]\right)\impliedby$
+\begin_inset Formula $\impliedby$
 \end_inset
 
-.
+(
+\begin_inset Formula $\lim_{x\to b^{-}}f\left(x\right)=\sup f\left[\left(a,b\right)\right]$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Itemize
@@ -6694,10 +7179,14 @@ literal "false"
 \end_inset
 
  אינה חסומה מלעיל)
-\begin_inset Formula $\left(\lim_{x\to b^{-}}f\left(x\right)=\infty\right)\impliedby$
+\begin_inset Formula $\impliedby$
 \end_inset
 
-.
+(
+\begin_inset Formula $\lim_{x\to b^{-}}f\left(x\right)=\infty$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Itemize
@@ -6706,10 +7195,14 @@ literal "false"
 \end_inset
 
  חסומה מלרע)
-\begin_inset Formula $\left(\lim_{x\to b^{-}}f\left(x\right)=\inf f\left[\left(a,b\right)\right]\right)\impliedby$
+\begin_inset Formula $\impliedby$
 \end_inset
 
-.
+(
+\begin_inset Formula $\lim_{x\to b^{-}}f\left(x\right)=\inf f\left[\left(a,b\right)\right]$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Itemize
@@ -6718,10 +7211,14 @@ literal "false"
 \end_inset
 
  חסומה אינה מלרע)
-\begin_inset Formula $\left(\lim_{x\to b^{-}}f\left(x\right)=-\infty\right)\impliedby$
+\begin_inset Formula $\impliedby$
 \end_inset
 
-.
+(
+\begin_inset Formula $\lim_{x\to b^{-}}f\left(x\right)=-\infty$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -6733,15 +7230,15 @@ literal "false"
 \color inherit
 :
  תהא 
-\begin_inset Formula $f\in\bbr^{\bbr}$
+\begin_inset Formula $f:\bbr\to\bbr$
 \end_inset
 
  רציפה על 
-\begin_inset Formula $x_{0}$
+\begin_inset Formula $a$
 \end_inset
 
  המקיימת 
-\begin_inset Formula $f\left(x_{0}\right)>0$
+\begin_inset Formula $f\left(a\right)>0$
 \end_inset
 
  אזי קיימת סביבה 
@@ -6749,10 +7246,10 @@ literal "false"
 \end_inset
 
  של 
-\begin_inset Formula $x_{0}$
+\begin_inset Formula $a$
 \end_inset
 
- המקיימת 
+ עבורה 
 \begin_inset Formula $\forall x\in I.f\left(x\right)>0$
 \end_inset
 
@@ -6768,15 +7265,15 @@ literal "false"
 \color inherit
 :
  תהיינה 
-\begin_inset Formula $f,g\in\bbr^{\bbr}$
+\begin_inset Formula $f,g:\bbr\to\bbr$
 \end_inset
 
  רציפות על 
-\begin_inset Formula $x_{0}$
+\begin_inset Formula $a$
 \end_inset
 
  המקיימות 
-\begin_inset Formula $f\left(x_{0}\right)>g\left(x_{0}\right)$
+\begin_inset Formula $f\left(a\right)>g\left(a\right)$
 \end_inset
 
  אזי קיימת סביבה 
@@ -6784,10 +7281,10 @@ literal "false"
 \end_inset
 
  של 
-\begin_inset Formula $x_{0}$
+\begin_inset Formula $a$
 \end_inset
 
- המקיימת 
+ עבורה 
 \begin_inset Formula $\forall x\in I.f\left(x\right)>g\left(x\right)$
 \end_inset
 
@@ -6826,7 +7323,7 @@ literal "false"
 \end_inset
 
  אזי 
-\begin_inset Formula $x_{0}\in I$
+\begin_inset Formula $a\in I$
 \end_inset
 
  המקיימת
@@ -6835,7 +7332,7 @@ literal "false"
 \begin_layout Itemize
 סליקה:
  
-\begin_inset Formula $\lim_{x\to x_{0}}f\left(x\right)\ne f\left(x_{0}\right)$
+\begin_inset Formula $\lim_{x\to a}f\left(x\right)\ne f\left(a\right)$
 \end_inset
 
 .
@@ -6844,7 +7341,7 @@ literal "false"
 \begin_layout Itemize
 סוג ראשון/קפיצה:
  
-\begin_inset Formula $\lim_{x\to x_{0}^{-}}f\left(x\right)\ne\lim_{x\to x_{0}^{+}}f\left(x\right)$
+\begin_inset Formula $\lim_{x\to a^{-}}f\left(x\right)\ne\lim_{x\to a^{+}}f\left(x\right)$
 \end_inset
 
 .
@@ -6853,7 +7350,7 @@ literal "false"
 \begin_layout Itemize
 סוג שני:
  
-\begin_inset Formula $\left(\nexists\lim_{x\to x_{0}^{-}}f\left(x\right)\right)\lor\left(\nexists\lim_{x\to x_{0}^{+}}f\left(x\right)\right)$
+\begin_inset Formula $\left(\text{ לא קיים}\lim_{x\to a^{-}}f\left(x\right)\right)\lor\left(\text{ לא קיים}\lim_{x\to a^{+}}f\left(x\right)\right)$
 \end_inset
 
 .
@@ -6891,14 +7388,18 @@ literal "false"
 \end_inset
 
  רציפה על 
-\begin_inset Formula $x_{0}$
+\begin_inset Formula $a$
 \end_inset
 
 )
-\begin_inset Formula $\left(\forall y\in\bbn^{I}.\left(y_{n}\to x_{0}\right)\implies\left(\lim f\left(y_{n}\right)\in\bbr\right)\right)\iff$
+\begin_inset Formula $\iff$
 \end_inset
 
-.
+(
+\begin_inset Formula $\forall y\in\bbn^{I}.\left(y_{n}\to a\right)\implies\left(\text{ קיים וסופי}\lim f\left(y_{n}\right)\right)$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -6909,11 +7410,14 @@ literal "false"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $R\left(x\right)=\begin{cases}
-\frac{1}{q} & \exists p,q\in\bbz.\left(\gcd\left(p,q\right)=1\right)\land\left(x=\frac{p}{q}\right)\\
-0 & else
-\end{cases}$
+ נגדיר 
+\begin_inset Formula $R:\bbr\to\bbr$
+\end_inset
+
+ כך 
+\begin_inset Formula $R\left(x\right)=\left\{ \begin{smallmatrix}\frac{1}{q} &  & \exists p,q\in\bbz.\left(\gcd\left(p,q\right)=1\right)\land\left(x=\frac{p}{q}\right)\\
+0 &  & \text{else}
+\end{smallmatrix}\right.$
 \end_inset
 
 .
@@ -6927,8 +7431,12 @@ literal "false"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\left(\forall x_{0}\in\bbr.\lim_{x\to x_{0}}R\left(x\right)=0\right)\land\left(\forall x\in\bbr.R\left(x\right)=R\left(x+1\right)\right)$
+ יהי 
+\begin_inset Formula $x\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R\left(x\right)=R\left(x+1\right)$
 \end_inset
 
 .
@@ -6938,12 +7446,31 @@ literal "false"
 
 \series bold
 \color brown
-חשבון רציפות
+טענה
 \series default
 \color inherit
 :
  יהי 
-\begin_inset Formula $x_{0}\in\bbr^{\pm}$
+\begin_inset Formula $a\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lim_{x\to a}R\left(x\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה חשבון רציפות
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $a\in\bbr$
 \end_inset
 
  ויהיו 
@@ -6951,7 +7478,7 @@ literal "false"
 \end_inset
 
  רציפות על 
-\begin_inset Formula $x_{0}$
+\begin_inset Formula $a$
 \end_inset
 
  אזי 
@@ -6959,7 +7486,7 @@ literal "false"
 \end_inset
 
  רציפות על 
-\begin_inset Formula $x_{0}$
+\begin_inset Formula $a$
 \end_inset
 
 .
@@ -6978,7 +7505,7 @@ literal "false"
 \end_inset
 
  רציפה על 
-\begin_inset Formula $x_{0}$
+\begin_inset Formula $a$
 \end_inset
 
  וכן 
@@ -6986,7 +7513,7 @@ literal "false"
 \end_inset
 
  רציפה על 
-\begin_inset Formula $f\left(x_{0}\right)$
+\begin_inset Formula $f\left(a\right)$
 \end_inset
 
  אזי 
@@ -6994,7 +7521,7 @@ literal "false"
 \end_inset
 
  רציפה על 
-\begin_inset Formula $x_{0}$
+\begin_inset Formula $a$
 \end_inset
 
 .
@@ -7023,12 +7550,12 @@ literal "false"
 \begin_inset Formula $f\in\bbr^{\bbr}$
 \end_inset
 
- רציפה וכן 
-\begin_inset Formula $g\in\bbr^{\bbr}$
+ רציפה ותהא 
+\begin_inset Formula $g:\bbr\to\bbr$
 \end_inset
 
  אזי 
-\begin_inset Formula $\lim_{x\to x_{0}}f\left(g\left(x\right)\right)=f\left(\lim_{x\to x_{0}}g\left(x\right)\right)$
+\begin_inset Formula $\lim_{x\to a}f\left(g\left(x\right)\right)=f\left(\lim_{x\to a}g\left(x\right)\right)$
 \end_inset
 
 .
@@ -7348,7 +7875,7 @@ literal "false"
 \color inherit
 :
  יהי 
-\begin_inset Formula $n\in\bbn_{odd}$
+\begin_inset Formula $n\in\bbn_{\text{odd}}$
 \end_inset
 
  ויהי 
@@ -8085,22 +8612,55 @@ literal "false"
 \color inherit
 :
  
-\begin_inset Formula $\tan'=\frac{1}{\cos^{2}}$
+\begin_inset Formula $\tan^{\prime}\left(x\right)=\frac{1}{\cos^{2}\left(x\right)}$
 \end_inset
 
-,
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+:
  
-\begin_inset Formula $\left(e^{x}\right)'=e^{x}$
+\begin_inset Formula $\left(e^{x}\right)^{\prime}=e^{x}$
 \end_inset
 
-,
- 
-\begin_inset Formula $\left(x^{r}\right)'=rx^{r-1}$
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $r\in\bbr$
 \end_inset
 
-,
- 
-\begin_inset Formula $\arctan'=\frac{1}{1+x^{2}}$
+ אזי 
+\begin_inset Formula $\left(x^{r}\right)^{\prime}=rx^{r-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+מסקנה
+\series default
+\color inherit
+:
+\begin_inset Formula $\arctan^{\prime}\left(x\right)=\frac{1}{1+x^{2}}$
 \end_inset
 
 .
