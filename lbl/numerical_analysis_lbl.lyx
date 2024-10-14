@@ -7879,6 +7879,21 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\gpp}{\text{GaussPartialPivoting}}
+{\text{GaussPartialPivoting}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\gel}{\text{GaussElimination}}
+{\text{GaussElimination}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color teal
@@ -7890,7 +7905,267 @@ status collapsed
 \begin_inset Formula $A\in M_{n}\left(\bbr\right)$
 \end_inset
 
- הפיכה ...
+ הפיכה ויהי 
+\begin_inset Formula $b\in\bbr^{n}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{Name}{GaussPartialPivoting}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+Name{$A,
+ b$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $B 
+\backslash
+gets (A | b)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$i 
+\backslash
+gets [1,
+\backslash
+ldots ,n]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $m 
+\backslash
+gets 
+\backslash
+arg
+\backslash
+max
+\backslash
+{(A)_{i,j} 
+\backslash
+mid j 
+\backslash
+in [n]
+\backslash
+}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $[R_1(B),
+ R_m(B)] 
+\backslash
+gets [R_m(B),
+ R_1(B)]$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+For{$j 
+\backslash
+gets [i + 1,
+ 
+\backslash
+ldots ,n]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $R_j(B) 
+\backslash
+gets R_i(B) - 
+\backslash
+frac{(A)_{i,
+ j}}{(A)_{i,
+ i}} 
+\backslash
+cdot R_i(B)$
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        $R_i(B) 
+\backslash
+gets 
+\backslash
+frac{1}{(A)_{i,i}} 
+\backslash
+cdot R_i(B)$
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $
+\backslash
+left(
+\backslash
+begin{smallmatrix}| &  & |
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+C_{1}
+\backslash
+left(B
+\backslash
+right) & 
+\backslash
+dots & C_{n}
+\backslash
+left(B
+\backslash
+right)
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+| &  & |
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{smallmatrix}
+\backslash
+right),
+ C_{n+1}(B)$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ הפיכה ויהי 
+\begin_inset Formula $b\in\bbr^{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $A,b$
+\end_inset
+
+ מיוצגים בעזרת נקודה צפה אזי 
+\begin_inset Formula $e\left(\text{GaussPartialPivoting}\left(A,b\right)\right)\le e\left(\gel\left(A,b\right)\right)$
+\end_inset
+
+ במציאת פתרון למשוואה 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -8055,12 +8330,17 @@ v_{1} & \dots & v_{n}\\
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
-\color teal
 משפט העיגולים של גרשגורין
 \series default
-\color inherit
 :
  תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbr\right)$
@@ -8084,10 +8364,8 @@ v_{1} & \dots & v_{n}\\
 \begin_layout Standard
 
 \series bold
-\color teal
 מסקנה
 \series default
-\color inherit
 :
  תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbr\right)$
@@ -8111,10 +8389,8 @@ v_{1} & \dots & v_{n}\\
 \begin_layout Standard
 
 \series bold
-\color teal
 מטריצה בעלת אלכסון דומיננטי בשורות
 \series default
-\color inherit
 :
  מטריצה 
 \begin_inset Formula $A\in M_{n}\left(\bbr\right)$
@@ -8134,10 +8410,8 @@ v_{1} & \dots & v_{n}\\
 \begin_layout Standard
 
 \series bold
-\color teal
 מסקנה
 \series default
-\color inherit
 :
  תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbr\right)$
@@ -8153,10 +8427,8 @@ v_{1} & \dots & v_{n}\\
 \begin_layout Standard
 
 \series bold
-\color teal
 טענה
 \series default
-\color inherit
 :
  תהא 
 \begin_inset Formula $A\in M_{n}\left(\bbr\right)$
@@ -8175,13 +8447,6 @@ v_{1} & \dots & v_{n}\\
 \end_inset
 
  הפיכה.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -8491,6 +8756,463 @@ v_{1} & \dots & v_{n}\\
 
 
 \begin_inset Formula $\left(A-\mu I\right)^{-1}v=\frac{1}{\lambda-\mu}v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\svd}{\text{SVD}}
+{\text{SVD}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\sing}{\text{Sing}}
+{\text{Sing}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פירוק 
+\begin_inset Formula $\svd$
+\end_inset
+
+
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n\times m}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A=U\Sigma V^{T}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $V\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ אורתוגונלית וכן 
+\begin_inset Formula $U\in M_{m}\left(\bbr\right)$
+\end_inset
+
+ אורתוגונלית וכן 
+\begin_inset Formula $\Sigma\in M_{m\times n}\left(\bbr\right)$
+\end_inset
+
+ אלכסונית אי־שלילית עבורה 
+\begin_inset Formula $\left(\Sigma\right)_{i,i}\le\left(\Sigma\right)_{j,j}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\ge j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ערכים סינגולריים
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n\times m}\left(\bbr\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $A=U\Sigma V^{T}$
+\end_inset
+
+ פירוק 
+\begin_inset Formula $\svd$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sing\left(A\right)=\left\{ \left(\Sigma\right)_{i,i}\mid i\in\left[\min\left\{ n,m\right\} \right]\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+וקטורים סינגולריים ימניים
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n\times m}\left(\bbr\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $A=U\Sigma V^{T}$
+\end_inset
+
+ פירוק 
+\begin_inset Formula $\svd$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ C_{i}\left(V\right)\mid i\in\left[n\right]\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+וקטורים סינגולריים שמאליים
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n\times m}\left(\bbr\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $A=U\Sigma V^{T}$
+\end_inset
+
+ פירוק 
+\begin_inset Formula $\svd$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ C_{i}\left(U\right)\mid i\in\left[m\right]\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n\times m}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\spec\left(AA^{T}\right)\cup\left\{ 0\right\} =\spec\left(A^{T}A\right)\cup\left\{ 0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n\times m}\left(\bbr\right)$
+\end_inset
+
+ בעלת פירוק 
+\begin_inset Formula $\svd$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\spec\left(A^{T}A\right)\cup\left\{ 0\right\} =\left\{ \sigma^{2}\mid\sigma\in\sing\left(A\right)\right\} \cup\left\{ 0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n\times m}\left(\bbr\right)$
+\end_inset
+
+ בעלת פירוק 
+\begin_inset Formula $\svd$
+\end_inset
+
+ אזי הוקטורים הסינגולריים הימניים של 
+\begin_inset Formula $A$
+\end_inset
+
+ הם ו
+\begin_inset Quotes erd
+\end_inset
+
+ע של 
+\begin_inset Formula $A^{T}A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n\times m}\left(\bbr\right)$
+\end_inset
+
+ בעלת פירוק 
+\begin_inset Formula $\svd$
+\end_inset
+
+ אזי הוקטורים הסינגולריים השמאליים של 
+\begin_inset Formula $A$
+\end_inset
+
+ הם ו
+\begin_inset Quotes erd
+\end_inset
+
+ע של 
+\begin_inset Formula $AA^{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n\times m}\left(\bbr\right)$
+\end_inset
+
+ יהי 
+\begin_inset Formula $A=U\Sigma V^{T}$
+\end_inset
+
+ פירוק 
+\begin_inset Formula $\svd$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $i\in\left[\min\left\{ n,m\right\} \right]$
+\end_inset
+
+ עבורו הע
+\begin_inset Quotes erd
+\end_inset
+
+ע של 
+\begin_inset Formula $C_{i}\left(V\right)$
+\end_inset
+
+ בתור ו
+\begin_inset Quotes erd
+\end_inset
+
+ע של 
+\begin_inset Formula $A^{T}A$
+\end_inset
+
+ שווה לע
+\begin_inset Quotes erd
+\end_inset
+
+ע של 
+\begin_inset Formula $C_{i}\left(U\right)$
+\end_inset
+
+ בתור ו
+\begin_inset Quotes erd
+\end_inset
+
+ע של 
+\begin_inset Formula $AA^{T}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $C_{i}\left(V\right)\sim C_{i}\left(U\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n\times m}\left(\bbr\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $A=U\Sigma V^{T}$
+\end_inset
+
+ פירוק 
+\begin_inset Formula $\svd$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ A\cdot C_{i}\left(V\right)\mid\left(i\in\left[\min\left\{ n,m\right\} \right]\right)\land\left(C_{i}\left(V\right)\sim C_{i}\left(U\right)\right)\right\} $
+\end_inset
+
+ אורתוגונליים וכן הינם ו
+\begin_inset Quotes erd
+\end_inset
+
+ע של 
+\begin_inset Formula $AA^{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם למציאת פירוק 
+\begin_inset Formula $\svd$
+\end_inset
+
+
+\series default
+:
+ ...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n\times m}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A$
+\end_inset
+
+ בעלת פירוק 
+\begin_inset Formula $\svd$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט יחידות פירוק 
+\begin_inset Formula $\svd$
+\end_inset
+
+
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n\times m}\left(\bbr\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $A=U\Sigma V^{T}$
+\end_inset
+
+ פירוק 
+\begin_inset Formula $\svd$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left(\Sigma\right)_{i,i}\ne\left(\Sigma\right)_{j,j}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\ne j$
+\end_inset
+
+ אזי קיים ויחיד פירוק 
+\begin_inset Formula $\svd$
+\end_inset
+
+ עד כדי סימן הוקטורים הסנגולריים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט יחידות פירוק 
+\begin_inset Formula $\svd$
+\end_inset
+
+
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n\times m}\left(\bbc\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $A=U\Sigma V^{T}$
+\end_inset
+
+ פירוק 
+\begin_inset Formula $\svd$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left(\Sigma\right)_{i,i}\ne\left(\Sigma\right)_{j,j}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\ne j$
+\end_inset
+
+ אזי קיים ויחיד פירוק 
+\begin_inset Formula $\svd$
+\end_inset
+
+ עד כדי הכפלת הוקטורים הסנגולריים ב־
+\begin_inset Formula $\left\{ 1,-1,i,-i\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ סימטרית אזי 
+\begin_inset Formula $\sing\left(A\right)=\left\{ \left|\lambda\right|\mid\lambda\in\spec\left(A\right)\right\} $
 \end_inset
 
 .
