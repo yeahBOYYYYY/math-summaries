@@ -23,6 +23,5 @@ Things that I still need to do
 | -------------------------- | ------------------------------------------- | ---------------- | ---- | --- | -- |
 | ode                        | Complete other semesters - From moodle      |                  | Done |     |    |
 | algorithms                 |                                             | 16/07/2024       |      | 0   | 0  |
-| logic for computer science | Add algorithms, Complete gedels proof       |                  | Done |     |    |
 | numerical analysis         | Need algorithms in the end, add SVD         |                  | Done |     |    |
 | computational models       | Complete other semesters - Space complexity |                  | Done |     |    |
