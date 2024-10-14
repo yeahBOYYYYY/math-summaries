@@ -799,6 +799,15 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\len}{\text{length}}
+{\text{length}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 מסקנה אלגוריתם לבדיקת חוקיות
@@ -812,25 +821,448 @@ literal "true"
 \begin_inset Formula $\a\in\Sigma^{*}$
 \end_inset
 
- ביטוי אזי קיים אלגוריתם 
-\begin_inset Formula $\O\left(\text{len}\left(\a\right)\right)$
-\end_inset
+ אזי
+\end_layout
 
- לבדיקה האם 
-\begin_inset Formula $\a\in\wff$
-\end_inset
+\begin_layout Standard
 
-.
-\begin_inset Note Note
+\lang english
+\begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
-...
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{Name}{wffValidity}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+Name{$
+\backslash
+alpha$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+uIf{$
+\backslash
+len(
+\backslash
+alpha) 
+\backslash
+le 3$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+lIf{$
+\backslash
+alpha 
+\backslash
+in 
+\backslash
+{p_i
+\backslash
+mid i
+\backslash
+in
+\backslash
+mathbb{N} 
+\backslash
+}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+Return True
+\end_layout
+
+\begin_layout Plain Layout
+
+        } 
+\backslash
+lElse {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+Return False
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+lIf{$(
+\backslash
+alpha_1 
+\backslash
+ne "(") 
+\backslash
+lor (
+\backslash
+alpha_{
+\backslash
+len(
+\backslash
+alpha)} 
+\backslash
+ne ")") $}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+Return False
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+lIf{$
+\backslash
+alpha_2 = "
+\backslash
+neg"$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+Return 
+\backslash
+Name{$(
+\backslash
+alpha_3 
+\backslash
+ldots 
+\backslash
+alpha_{
+\backslash
+len(
+\backslash
+alpha) - 1})$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+text{parenthesisCount} 
+\backslash
+gets 0$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$i 
+\backslash
+gets [2,
+ 
+\backslash
+ldots,
+ 
+\backslash
+len(
+\backslash
+alpha) - 1]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+lIf{$
+\backslash
+alpha_i = "("$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $
+\backslash
+text{parenthesisCount} 
+\backslash
+gets 
+\backslash
+text{parenthesisCount} + 1$
+\end_layout
+
+\begin_layout Plain Layout
+
+        } 
+\backslash
+lIf{$
+\backslash
+alpha_i = ")"$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $
+\backslash
+text{parenthesisCount} 
+\backslash
+gets 
+\backslash
+text{parenthesisCount} - 1$
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+uIf{$
+\backslash
+text{parenthesisCount} = 0$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+uIf{$
+\backslash
+alpha_{i + 1} 
+\backslash
+in 
+\backslash
+{
+\backslash
+neg,
+ 
+\backslash
+land,
+ 
+\backslash
+lor,
+ 
+\backslash
+implies
+\backslash
+}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+                
+\backslash
+Return (
+\backslash
+Name{$(
+\backslash
+alpha_2 
+\backslash
+ldots 
+\backslash
+alpha_{i})$}) $
+\backslash
+land$ (
+\backslash
+Name{$(
+\backslash
+alpha_{i + 2} 
+\backslash
+ldots 
+\backslash
+alpha_{
+\backslash
+len(
+\backslash
+alpha) - 1})$})
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return False
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ תחשיב הפסוקים ויהי 
+\begin_inset Formula $\a\in\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\text{wffValidity}\left(\a\right)\right)\iff\left(\a\in\wff\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ תחשיב הפסוקים ויהי 
+\begin_inset Formula $\a\in\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{wffValidity}\left(\a\right)$
+\end_inset
+
+ רץ בסיבוכיות זמן 
+\begin_inset Formula $\O\left(\len\left(\a\right)\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -861,6 +1293,13 @@ status collapsed
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2841,6 +3280,13 @@ status open
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color red
@@ -3717,6 +4163,13 @@ status open
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color green
@@ -4141,6 +4594,13 @@ status open
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5212,6 +5672,13 @@ status open
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6900,6 +7367,31 @@ d &  & \text{else}
 \begin_layout Standard
 
 \series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון ויהיו 
+\begin_inset Formula $M,N$
+\end_inset
+
+ מבנים איזומורפיים מעל 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ אזי 
+\begin_inset Formula $M\cong N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 \color brown
 טענה
 \series default
@@ -7927,6 +8419,12 @@ d &  & \text{else}
 \end_inset
 
 
+\begin_inset FormulaMacro
+\newcommand{\fol}{\text{FOLWFF}}
+{\text{FOLWFF}}
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7966,16 +8464,6 @@ d &  & \text{else}
 \end_inset
 
  ספיק).
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-...
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -8005,37 +8493,62 @@ status collapsed
 
 \series bold
 \color orange
+אלגוריתם לוגיקה מסדר ראשון לתחשיב הפסוקים
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון תהא 
+\begin_inset Formula $f:\left\{ \text{נוחסאות אטומיות סגורות}\right\} \to\left\{ p_{i}\mid i\in\bbn\right\} $
+\end_inset
+
+ הפיכה ותהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ נוסחה סגורה חסרת כמתים אזי 
+\begin_inset Formula $\fol\left(\varphi\right)$
+\end_inset
+
+ עובר על 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ולכל שם עצם 
+\begin_inset Formula $t$
+\end_inset
+
+ בו מחליפו ב־
+\begin_inset Formula $f\left(t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
 טענה
 \series default
 \color inherit
 :
- קיים אלגוריתם 
-\begin_inset Formula $\text{FOLWFF}$
+ יהי 
+\begin_inset Formula $\sigma$
 \end_inset
 
- המקבל נוסחה חסרת משתנים וכמתים 
+ מילון תהא 
+\begin_inset Formula $f:\left\{ \text{נוחסאות אטומיות סגורות}\right\} \to\left\{ p_{i}\mid i\in\bbn\right\} $
+\end_inset
+
+ הפיכה ותהא 
 \begin_inset Formula $\varphi$
 \end_inset
 
- ומחזיר פסוק 
-\begin_inset Formula $\a$
-\end_inset
-
- מעל 
-\begin_inset Formula $\wff$
-\end_inset
-
- המקיים
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-...
-\end_layout
-
-\end_inset
-
-
+ נוסחה סגורה חסרת כמתים אזי
 \end_layout
 
 \begin_layout Itemize
@@ -8048,7 +8561,7 @@ status collapsed
 \end_inset
 
 (
-\begin_inset Formula $\a$
+\begin_inset Formula $\fol\left(\varphi\right)$
 \end_inset
 
  ספיק).
@@ -8064,7 +8577,7 @@ status collapsed
 \end_inset
 
 (
-\begin_inset Formula $\a$
+\begin_inset Formula $\fol\left(\varphi\right)$
 \end_inset
 
  טאוטולוגיה).
@@ -8082,7 +8595,7 @@ status collapsed
 \begin_inset Formula $\varphi$
 \end_inset
 
- נוסחה חסרת משתנים וכמתים המורכבת מהנוסחאות האטומיות 
+ נוסחה סגורה חסרת כמתים המורכבת מהנוסחאות האטומיות 
 \begin_inset Formula $\a_{1}\ldots\a_{k}$
 \end_inset
 
@@ -8749,6 +9262,140 @@ status collapsed
 
  עבורו 
 \begin_inset Formula $t^{H}=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\m}{\mathcal{M}}
+{\mathcal{M}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+המודל הסטנדרטי של הטבעיים
+\series default
+:
+ יהי מילון עם שיוויון 
+\begin_inset Formula $\left\{ c_{0},c_{1},f_{+},f_{\times},R_{>}\right\} $
+\end_inset
+
+ אזי מבנה 
+\begin_inset Formula $\m_{\bbn}$
+\end_inset
+
+ עבורו
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D^{\m_{\bbn}}=\bbn$
+\end_inset
+
+ וכן 
+\begin_inset Formula $c_{0}^{\m_{\bbn}}=0$
+\end_inset
+
+ וכן 
+\begin_inset Formula $c_{1}^{\m_{\bbn}}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{+}^{\m_{\bbn}}\left(a,b\right)=a+b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{\times}^{\m_{\bbn}}\left(a,b\right)=a\times b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\left(a,b\right)\in R_{>}^{\m_{\bbn}}\right)\iff\left(a>b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\at}{\text{AT}}
+{\text{AT}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פסוקים נכונים אריתמטית
+\series default
+:
+ יהי מילון 
+\begin_inset Formula $\left\{ c_{0},c_{1},f_{+},f_{\times},R_{>}\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\at=\left\{ \a\mid\left(\m_{\bbn}\models\a\right)\land\left(\fv\left(\a\right)=\emptyset\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מודל לא סטנדרטי של הטבעיים
+\series default
+:
+ יהי מילון 
+\begin_inset Formula $\left\{ c_{0},c_{1},f_{+},f_{\times},R_{>}\right\} $
+\end_inset
+
+ אזי מבנה 
+\begin_inset Formula $M$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $M\models\at$
+\end_inset
+
+ וכן 
+\begin_inset Formula $M$
+\end_inset
+
+ אינו איזומורפי ל־
+\begin_inset Formula $\m_{\bbn}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $M$
+\end_inset
+
+ מודל לא סטדנרטי של הטבעיים אזי 
+\begin_inset Formula $\left|D^{M}\right|>\aleph_{0}$
 \end_inset
 
 .
@@ -9550,137 +10197,90 @@ m-1
 \end_layout
 
 \begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\m}{\mathcal{M}}
-{\mathcal{M}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
-המודל הסטנדרטי של הטבעיים
-\series default
-:
- יהי מילון 
-\begin_inset Formula $\left\{ c_{0},c_{1},f_{+},f_{\times},R_{>}\right\} $
-\end_inset
-
- אזי מבנה 
-\begin_inset Formula $\m_{\bbn}$
-\end_inset
-
- עבורו
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $D^{\m_{\bbn}}=\bbn$
-\end_inset
-
- וכן 
-\begin_inset Formula $c_{0}^{\m_{\bbn}}=0$
-\end_inset
-
- וכן 
-\begin_inset Formula $c_{1}^{\m_{\bbn}}=1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $f_{+}^{\m_{\bbn}}\left(a,b\right)=a+b$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $f_{\times}^{\m_{\bbn}}\left(a,b\right)=a\times b$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\left(\left(a,b\right)\in R_{>}^{\m_{\bbn}}\right)\iff\left(a>b\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\at}{\text{AT}}
-{\text{AT}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-פסוקים נכונים אריתמטית
-\series default
-:
- יהי מילון 
-\begin_inset Formula $\left\{ c_{0},c_{1},f_{+},f_{\times},R_{>}\right\} $
-\end_inset
-
- אזי 
-\begin_inset Formula $\at=\left\{ \a\mid\left(\m_{\bbn}\models\a\right)\land\left(\fv\left(\a\right)=\emptyset\right)\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-מודל לא סטנדרטי של הטבעיים
-\series default
-:
- יהי מילון 
-\begin_inset Formula $\left\{ c_{0},c_{1},f_{+},f_{\times},R_{>}\right\} $
-\end_inset
-
- אזי מבנה 
-\begin_inset Formula $M$
-\end_inset
-
- עבורו 
-\begin_inset Formula $M\models\at$
-\end_inset
-
- וכן 
-\begin_inset Formula $M$
-\end_inset
-
- אינו איזומורפי ל־
-\begin_inset Formula $\m_{\bbn}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-טענה
+הגדרה
 \series default
 :
  יהי 
-\begin_inset Formula $M$
+\begin_inset Formula $\sigma=\left\{ R\left(\cdot,\cdot\right)\right\} $
 \end_inset
 
- מודל לא סטדנרטי של הטבעיים אזי 
-\begin_inset Formula $\left|D^{M}\right|>\aleph_{0}$
+ מילון עם שיוויון אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\xi_{1}=\forall x\left(\neg\left(R\left(x,x\right)\right)\right)$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\xi_{2}=\forall x\forall y\forall z\left(\left(R\left(x,y\right)\land R\left(y,z\right)\right)\implies R\left(x,z\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\xi_{3}=\forall x\forall y\left(\left(x\ne y\right)\implies\left(R\left(x,y\right)\lor R\left(y,x\right)\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\xi_{4}=\left(\forall x\exists y\left(R\left(x,y\right)\right)\right)\land\left(\forall x\exists y\left(R\left(y,x\right)\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\xi_{5}=\forall x\forall y\left(\left(R\left(x,y\right)\right)\implies\left(\exists z\left(R\left(x,z\right)\land\left(R\left(z,y\right)\right)\right)\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\xi=\xi_{1}\land\xi_{2}\land\xi_{3}\land\xi_{4}\land\xi_{5}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט קנטור
+\series default
+:
+ יהי 
+\begin_inset Formula $\sigma=\left\{ R\left(\cdot,\cdot\right)\right\} $
+\end_inset
+
+ מילון עם שיוויון ויהיו 
+\begin_inset Formula $M,N$
+\end_inset
+
+ מבנים המספקים את 
+\begin_inset Formula $\xi$
+\end_inset
+
+ אזי 
+\begin_inset Formula $M\cong N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -10456,6 +11056,214 @@ m-1
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מערכת הוכחה עקבית
+\series default
+:
+ מערכת הוכחה בלוגיקה מסדר ראשון 
+\begin_inset Formula $S$
+\end_inset
+
+ עבורה קיים פסוק 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\not\vdash\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מערכת הוכחה שלמה
+\series default
+:
+ מערכת הוכחה בלוגיקה מסדר ראשון 
+\begin_inset Formula $S$
+\end_inset
+
+ עבורה לכל פסוק 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(\vdash\varphi\right)\lor\left(\vdash\left(\neg\varphi\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מערכת הוכחה אפקטיבית
+\series default
+:
+ מערכת הוכחה בלוגיקה מסדר ראשון 
+\begin_inset Formula $\left(\Sigma,N,A,F\right)$
+\end_inset
+
+ עבורה קיים אלגוריתם המכריע אם 
+\begin_inset Formula $\varphi\in A$
+\end_inset
+
+ לכל נוסחה 
+\begin_inset Formula $\varphi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\succ}{\text{succ}}
+{\text{succ}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אקסיומות אריתמטיקת פיאנו
+\series default
+:
+ יהי 
+\begin_inset Formula $\left\{ c_{0},\succ,*,+,<\right\} $
+\end_inset
+
+ מילון עם שיוויון אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall y\left(\succ\left(y\right)\ne c_{0}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall x\forall y\left(\left(\succ\left(x\right)=\succ\left(y\right)\right)\implies\left(x=y\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+תהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ נוסחה אזי
+\size small
+ 
+\begin_inset Formula $\forall y_{1}\ldots\forall y_{n}\left(\left(\varphi\left(c_{0},y_{1}\ldots y_{n}\right)\land\left(\forall x\left(\varphi\left(x,y_{1}\ldots y_{n}\right)\implies\varphi\left(\succ\left(x\right),y_{1}\ldots y_{n}\right)\right)\right)\right)\implies\left(\forall x\varphi\left(x,x,y_{1}\ldots y_{n}\right)\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall x\left(x+c_{0}=x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall x\forall y\left(x+\succ\left(y\right)=\succ\left(x+y\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall x\left(x*c_{0}=c_{0}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall x\forall y\left(x*\succ\left(y\right)=x+\left(x*y\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall x\forall y\left(\left(x<y\right)\iff\left(\exists z\left(\left(z\ne c_{0}\right)\land\left(x+z=y\right)\right)\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $\left\{ c_{0},\succ,*,+,<\right\} $
+\end_inset
+
+ מילון עם שיוויון אזי 
+\begin_inset Formula $\text{PA}=\left\{ \text{אקסיומות אריתמטיקת פיאנו}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מערכת הוכחה אריתמטית
+\series default
+:
+ מערכת הוכחה בלוגיקה מסדר ראשון 
+\begin_inset Formula $\left(\Sigma,N,A,F\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\text{PA}\subseteq A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט אי השלמות של גדל
+\series default
+:
+ תהא 
+\begin_inset Formula $S$
+\end_inset
+
+ מערכת הוכחה עקבית אפקטיבית ואריתמטית בלוגיקה מסדר ראשון אזי 
+\begin_inset Formula $S$
+\end_inset
+
+ אינה שלמה.
 \end_layout
 
 \end_body
