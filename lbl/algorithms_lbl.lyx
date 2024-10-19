@@ -114,7 +114,6 @@ PackageOptions algorithm2e vlined
 \paperfontsize default
 \spacing onehalf
 \use_hyperref true
-\pdf_title "Algorithms lbl"
 \pdf_author "Ron Mikhelman"
 \pdf_subject "Math Summeries"
 \pdf_bookmarks true
@@ -283,23 +282,47 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{BFS}{BFS}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{BFS}{BFS}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
 BFS{$G,
- s$}}{     $
+ s$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 left(d,
  
@@ -319,7 +342,12 @@ right)$)
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$u
 \backslash
@@ -333,13 +361,23 @@ backslash
 \backslash
 {s
 \backslash
-}$}{         color[u] $
+}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        color[u] $
 \backslash
 leftarrow$ White
 \backslash
 
 \backslash
-         d[u] $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        d[u] $
 \backslash
 leftarrow
 \backslash
@@ -347,7 +385,12 @@ infty$
 \backslash
 
 \backslash
-         $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 pi$[u] $
 \backslash
@@ -355,19 +398,39 @@ leftarrow$ Null
 \backslash
 
 \backslash
-     }     color[s] $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    color[s] $
 \backslash
 leftarrow$ Grey
 \backslash
 
 \backslash
-     d[s] $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    d[s] $
 \backslash
 leftarrow 0$
 \backslash
 
 \backslash
-     $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 pi$[s] $
 \backslash
@@ -375,43 +438,83 @@ leftarrow$ Null
 \backslash
 
 \backslash
-     Q $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    Q $
 \backslash
 gets$ queue()
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 While{$Q 
 \backslash
 ne 
 \backslash
-emptyset$}{         $u 
+emptyset$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $u 
 \backslash
 gets $ Q.head
 \backslash
 
 \backslash
-         
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
 For{$v
 \backslash
-in Neighbor(u)$}{             
+in Neighbor(u)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            
 \backslash
-If{color[v] = White}{                 color[$v$] $
+uIf{color[v] = White}{
+\end_layout
+
+\begin_layout Plain Layout
+
+                color[$v$] $
 \backslash
 leftarrow$ Grey
 \backslash
 
 \backslash
-                 $d[v]
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                $d[v]
 \backslash
 leftarrow d[u]+1$
 \backslash
 
 \backslash
-                 $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                $
 \backslash
 pi[v]
 \backslash
@@ -419,21 +522,56 @@ leftarrow u$
 \backslash
 
 \backslash
-                 Q.enqueue($v$)
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                Q.enqueue($v$)
 \backslash
 
 \backslash
-             }         }         Q.dequeue()
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        Q.dequeue()
 \backslash
 
 \backslash
-         color[$u$] $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        color[$u$] $
 \backslash
 gets$ Black
 \backslash
 
 \backslash
-     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 Return $
 \backslash
@@ -445,7 +583,17 @@ pi,
 \backslash
 text{color}
 \backslash
-right)$ } 
+right)$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -825,23 +973,47 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{EulerCircle}{EulerCircle}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{EulerCircle}{EulerCircle}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
 EulerCircle{$G,
- v$}}{     $
+ v$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 sigma 
 \backslash
@@ -851,17 +1023,32 @@ text{List}(E(G))$
 \backslash
 
 \backslash
-     $u 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $u 
 \backslash
 gets Neighbor(v)$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 While{$u
 \backslash
-ne v$}{         $
+ne v$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 sigma .
 \backslash
@@ -874,7 +1061,12 @@ text{append}(
 \backslash
 
 \backslash
-         $G = G
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $G = G
 \backslash
 backslash 
 \backslash
@@ -889,7 +1081,12 @@ backslash
 \backslash
 
 \backslash
-         $u 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $u 
 \backslash
 gets 
 \backslash
@@ -897,17 +1094,42 @@ text{Neighbor}(u)$
 \backslash
 
 \backslash
-     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
-If{$length(
+uIf{$length(
 \backslash
-sigma) = |E(G)|$}{         
+sigma) = |E(G)|$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
 Return $
 \backslash
-sigma$     } 
+sigma$
+\end_layout
+
+\begin_layout Plain Layout
+
+    } 
 \backslash
-Else{         $w 
+uElse{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $w 
 \backslash
 gets 
 \backslash
@@ -935,16 +1157,41 @@ deg(x)>0)
 \backslash
 
 \backslash
-         $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 sigma[w] = 
 \backslash
 EulerCircle{G,
- w}$     }     
+ w}$
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 Return $
 \backslash
-sigma$ } 
+sigma$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -1092,22 +1339,46 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{EulerPath}{EulerPath}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{EulerPath}{EulerPath}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
-EulerPath{$G$}}{     $
+EulerPath{$G$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 {v,
  u
@@ -1146,7 +1417,12 @@ right
 \backslash
 
 \backslash
-     $G = G + 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $G = G + 
 \backslash
 {
 \backslash
@@ -1159,7 +1435,12 @@ right
 \backslash
 
 \backslash
-     $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 sigma = 
 \backslash
@@ -1168,7 +1449,12 @@ text{EulerCircle}{(G,
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 Return $
 \backslash
@@ -1179,7 +1465,17 @@ backslash
 {v,
  u
 \backslash
-}$ } 
+}$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -1237,22 +1533,53 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{IsBipartite}{IsBipartite}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{IsBipartite}{IsBipartite}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
-IsBipartite{$G$}}{     $
+IsBipartite{$G$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 left(d,
  
@@ -1268,7 +1595,12 @@ gets$ BFS($G$)
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$
 \backslash
@@ -1276,9 +1608,14 @@ left(v,u
 \backslash
 right)
 \backslash
-in V$}{         
+in V$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
-If{$d
+lIf{$d
 \backslash
 left(v
 \backslash
@@ -1286,11 +1623,41 @@ right) = d
 \backslash
 left(u
 \backslash
-right)$}{             
+right)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            
 \backslash
-Return false         }     }     
+Return False
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
-Return true } 
+Return True
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -1319,7 +1686,7 @@ end{algorithm}
 \end_inset
 
 (
-\begin_inset Formula $\text{IsBipartite}\left(G\right)=\text{true}$
+\begin_inset Formula $\text{IsBipartite}\left(G\right)=\text{True}$
 \end_inset
 
 ).
@@ -1406,10 +1773,6 @@ end{algorithm}
 \end_inset
 
  אזי
-\begin_inset Newpage newpage
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1422,23 +1785,47 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{ShortestPathGraph}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{ShortestPathGraph}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
 name{$G,
- s$}}{     $
+ s$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 left(d,
  
@@ -1456,7 +1843,12 @@ text{BFS}(G)$
 \backslash
 
 \backslash
-     $E^
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $E^
 \backslash
 prime 
 \backslash
@@ -1466,14 +1858,24 @@ pi)$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$(u,
  v)
 \backslash
-in E(G)$}{         
+in E(G)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
-If{$|
+uIf{$|
 \backslash
 text{height}_{G_
 \backslash
@@ -1481,7 +1883,12 @@ pi}(u) -
 \backslash
 text{height}_{G_
 \backslash
-pi(v)}| = 1$}{             $E^
+pi(v)}| = 1$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $E^
 \backslash
 prime .
 \backslash
@@ -1490,16 +1897,48 @@ text{append} ((u,
 \backslash
 
 \backslash
-         }     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 Return $(V(G),
  E^
 \backslash
-prime)$ } 
+prime)$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -2372,22 +2811,46 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{DFS}{DFS}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{DFS}{DFS}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
-DFS{$G$}}{     $
+DFS{$G$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 left(k,
  f,
@@ -2407,17 +2870,32 @@ gets$ dict($V$)
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$u
 \backslash
-in V$}{         $k[u] 
+in V$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $k[u] 
 \backslash
 gets 0$
 \backslash
 
 \backslash
-         $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 pi[u] 
 \backslash
@@ -2427,7 +2905,12 @@ text{Null}$
 \backslash
 
 \backslash
-         $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 text{color} 
 \backslash
@@ -2437,7 +2920,12 @@ text{White}$
 \backslash
 
 \backslash
-         $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 text{low} 
 \backslash
@@ -2447,19 +2935,44 @@ infty$
 \backslash
 
 \backslash
-     }     $i 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $i 
 \backslash
 gets 0$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$s
 \backslash
-in V$}{         
+in V$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
-If{$k[s] = 0$}{             $
+uIf{$k[s] = 0$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $
 \backslash
 text{DFS-VISIT}(s,k ,f ,
 \backslash
@@ -2468,7 +2981,22 @@ pi,
 \backslash
 
 \backslash
-         }     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 Return $
 \backslash
@@ -2481,27 +3009,60 @@ pi,
 \backslash
 text{low}
 \backslash
-right)$ } 
+right)$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
-
-\backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{DFS-VISIT}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{DFS-VISIT}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
@@ -2517,7 +3078,12 @@ text{color},
  
 \backslash
 text{low},
- i$}}{     $
+ i$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 text{color}[u] 
 \backslash
@@ -2527,23 +3093,43 @@ text{Gray}$
 \backslash
 
 \backslash
-     $i
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $i
 \backslash
 gets i + 1$
 \backslash
 
 \backslash
-     $k[v]
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $k[v]
 \backslash
 gets i$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$w
 \backslash
-in Adj(v)$}{         
+in Adj(v)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
 uIf{$(
 \backslash
@@ -2555,7 +3141,12 @@ land(v
 \backslash
 ne
 \backslash
-pi[u])$}{             $
+pi[u])$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $
 \backslash
 text{low} 
 \backslash
@@ -2568,13 +3159,23 @@ text{low}[u],
 \backslash
 
 \backslash
-         } 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        } 
 \backslash
 uElseIf{$
 \backslash
 text{color}[v] = 
 \backslash
-text{White}$}{             $
+text{White}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $
 \backslash
 pi[w]
 \backslash
@@ -2582,7 +3183,12 @@ gets v$
 \backslash
 
 \backslash
-             
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            
 \backslash
 name{$w,
  k,
@@ -2600,7 +3206,12 @@ text{low},
 \backslash
 
 \backslash
-             $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            $
 \backslash
 text{low} 
 \backslash
@@ -2615,7 +3226,22 @@ text{low}[v])$
 \backslash
 
 \backslash
-         }     }     $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 text{color}[u] 
 \backslash
@@ -2625,19 +3251,39 @@ text{Black}$
 \backslash
 
 \backslash
-     $i
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $i
 \backslash
 gets i +1$
 \backslash
 
 \backslash
-     $f[v] 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $f[v] 
 \backslash
 gets i$
 \backslash
 
 \backslash
- } 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -3038,7 +3684,7 @@ end{algorithm}
 \end_inset
 
  עבורו 
-\begin_inset Formula $\left|\nicefrac{G}{\xrightarrow[G]{}}\right|\le\left|\nicefrac{G-\left\{ v\right\} }{\xrightarrow[G-\left\{ v\right\} ]{}}\right|$
+\begin_inset Formula $\left|\nicefrac{G}{\xrightarrow[G]{}}\right|<\left|\nicefrac{G-\left\{ v\right\} }{\xrightarrow[G-\left\{ v\right\} ]{}}\right|$
 \end_inset
 
 .
@@ -3119,28 +3765,57 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{DetachableVertices}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{DetachableVertices}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
-name{$G$}}{     $s 
+name{$G$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $s 
 \backslash
 gets V$
 \backslash
 
 \backslash
-     $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 left(k,
  f,
@@ -3160,7 +3835,12 @@ text{DFS}(G,
 \backslash
 
 \backslash
-     $A 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $A 
 \backslash
 gets 
 \backslash
@@ -3168,19 +3848,39 @@ text{set}(V)$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
-If{$|Adj_{G_
+uIf{$|Adj_{G_
 \backslash
 pi}(s)| 
 \backslash
-ne 1$}{         $A.
+ne 1$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $A.
 \backslash
 text{append}(s)$
 \backslash
 
 \backslash
-     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$u
 \backslash
@@ -3190,24 +3890,59 @@ backslash
 \backslash
 {s
 \backslash
-}$}{         
+}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
-If{$
+uIf{$
 \backslash
 exists v
 \backslash
 in children(u).
  low[v] 
 \backslash
-ge k[u]$}{             $A.
+ge k[u]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $A.
 \backslash
 text{append}(u)$
 \backslash
 
 \backslash
-         }     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
-Return $A$ } 
+Return $A$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -3423,22 +4158,46 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{SCC}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{SCC}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
-name{$G$}}{     $
+name{$G$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 left(k,
  f,
@@ -3454,10 +4213,20 @@ text{DFS}(G)$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 tcc{In the next line,
- in the main loop of DFS we go through the vertices in decreasing order of f[u]}     $
+ in the main loop of DFS we go through the vertices in decreasing order of f[u]}
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 left(k^
 \backslash
@@ -3479,7 +4248,12 @@ text{DFS}(G^T)$
 \backslash
 
 \backslash
-     $A 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $A 
 \backslash
 gets 
 \backslash
@@ -3489,11 +4263,21 @@ text{set}(V))$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$v
 \backslash
-in V$}{         $A .
+in V$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $A .
 \backslash
 text{append}
 \backslash
@@ -3503,9 +4287,29 @@ xrightarrow[G^T_{
 \backslash
 pi}]{}}
 \backslash
-right)$     }     
+right)$
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
-Return $A$ } 
+Return $A$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -3939,22 +4743,46 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{MinimalOriginSet}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{MinimalOriginSet}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
-name{$G$}}{     $A 
+name{$G$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $A 
 \backslash
 gets 
 \backslash
@@ -3962,7 +4790,12 @@ text{set}(V(G))$
 \backslash
 
 \backslash
-     $G^* 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $G^* 
 \backslash
 gets 
 \backslash
@@ -3970,11 +4803,21 @@ text{ComponentGraph}(G)$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$C
 \backslash
-in V(G^*)$}{         $v
+in V(G^*)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $v
 \backslash
 gets 
 \backslash
@@ -3998,15 +4841,40 @@ in E(G)
 \backslash
 
 \backslash
-         $A.
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $A.
 \backslash
 text{append}(v)$
 \backslash
 
 \backslash
-     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
-Return $A$ } 
+Return $A$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -4183,7 +5051,7 @@ end{algorithm}
 \end_inset
 
  עבורו 
-\begin_inset Formula $w\left(T\right)=\min\left\{ w\left(S\right)\mid G\text{ עץ פורש של}S\right\} $
+\begin_inset Formula $w\left(T\right)=\min\left\{ w\left(S\right)\mid G\text{ עץ פורש של }S\right\} $
 \end_inset
 
 .
@@ -4368,23 +5236,47 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{MST}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{MST}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
 name{$G,
- w$}}{     $
+ w$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 text{color}
 \backslash
@@ -4392,11 +5284,21 @@ gets$ dict($E$)
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$e
 \backslash
-in E$}{         $
+in E$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 text{color}[e] = 
 \backslash
@@ -4404,14 +5306,29 @@ text{White}$
 \backslash
 
 \backslash
-     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 While{$
 \backslash
 exists e
 \backslash
 in E.
- color[e] = White$}{         $
+ color[e] = White$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 text{Blueless} 
 \backslash
@@ -4440,7 +5357,12 @@ text{Blue}
 \backslash
 
 \backslash
-         $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 text{Redless} 
 \backslash
@@ -4478,13 +5400,23 @@ text{Red}
 \backslash
 
 \backslash
-         
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
-If{$Blueless 
+uIf{$Blueless 
 \backslash
 ne 
 \backslash
-emptyset$}{             $A 
+emptyset$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $A 
 \backslash
 gets 
 \backslash
@@ -4492,7 +5424,12 @@ text{Blueless}$
 \backslash
 
 \backslash
-             $f
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            $f
 \backslash
 gets 
 \backslash
@@ -4504,7 +5441,12 @@ cap E}(w(e))$
 \backslash
 
 \backslash
-             $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            $
 \backslash
 text{color}[f] = 
 \backslash
@@ -4512,15 +5454,30 @@ text{Blue}$
 \backslash
 
 \backslash
-         }         
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
-If{$
+uIf{$
 \backslash
 text{Redless} 
 \backslash
 ne 
 \backslash
-emptyset$}{             $
+emptyset$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $
 \backslash
 sigma
 \backslash
@@ -4530,7 +5487,12 @@ text{Redless}$
 \backslash
 
 \backslash
-             $f
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            $f
 \backslash
 gets 
 \backslash
@@ -4542,7 +5504,12 @@ sigma}(w(e))$
 \backslash
 
 \backslash
-             $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            $
 \backslash
 text{color}[f] = 
 \backslash
@@ -4550,7 +5517,22 @@ text{Red}$
 \backslash
 
 \backslash
-         }     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 Return $(V,
  
@@ -4565,7 +5547,17 @@ text{color}[e] =
 \backslash
 text{Blue}
 \backslash
-})$ } 
+})$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -4767,22 +5759,46 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{Prim'sAlgorithm}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{Prim'sAlgorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
-name{$G$}}{     $
+name{$G$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 text{color}
 \backslash
@@ -4792,7 +5808,12 @@ text{dict}(E)$
 \backslash
 
 \backslash
-     $U 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $U 
 \backslash
 gets 
 \backslash
@@ -4800,11 +5821,21 @@ text{set}(V)$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$e
 \backslash
-in E$}{         $
+in E$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 text{color}[e] = 
 \backslash
@@ -4812,23 +5843,48 @@ text{White}$
 \backslash
 
 \backslash
-     }     $r 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $r 
 \backslash
 gets V$
 \backslash
 
 \backslash
-     $U.
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $U.
 \backslash
 text{append}(r)$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 While{$U
 \backslash
-ne V$}{         $(u,
+ne V$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $(u,
  v) 
 \backslash
 gets 
@@ -4843,7 +5899,12 @@ backslash U)}(w(e))$
 \backslash
 
 \backslash
-         $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 text{color}[(u,
  v)] = 
@@ -4852,22 +5913,42 @@ text{Blue}$
 \backslash
 
 \backslash
-         $U.
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $U.
 \backslash
 text{append}(v)$
 \backslash
 
 \backslash
-         
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
 For{$w
 \backslash
-in U$}{             
+in U$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            
 \backslash
-If{$(w,
+uIf{$(w,
  v)
 \backslash
-in E$}{                 $
+in E$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+                $
 \backslash
 text{color}[(w,
  v)] = 
@@ -4876,7 +5957,27 @@ text{Red}$
 \backslash
 
 \backslash
-             }         }     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 Return $(V,
  
@@ -4891,7 +5992,17 @@ text{color}[e] =
 \backslash
 text{Blue}
 \backslash
-})$ } 
+})$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -5038,22 +6149,46 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{Kruskal'sAlgorithm}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{Kruskal'sAlgorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
-name{$G$}}{     $
+name{$G$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 text{color}
 \backslash
@@ -5063,7 +6198,12 @@ text{dict}(E)$
 \backslash
 
 \backslash
-     $L 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $L 
 \backslash
 gets 
 \backslash
@@ -5071,14 +6211,24 @@ text{sort}(E)$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$(u,
  v)
 \backslash
-in L$}{         
+in L$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
-If{$
+uIf{$
 \backslash
 exists
 \backslash
@@ -5102,7 +6252,12 @@ text{color}(
 \backslash
 sigma(i)) = 
 \backslash
-text{Blue}$}{             $
+text{Blue}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $
 \backslash
 text{color}[e] = 
 \backslash
@@ -5110,9 +6265,19 @@ text{Red}$
 \backslash
 
 \backslash
-         } 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        } 
 \backslash
-Else{             $
+uElse{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $
 \backslash
 text{color}[e] = 
 \backslash
@@ -5120,7 +6285,22 @@ text{Blue}$
 \backslash
 
 \backslash
-         }     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 Return $(V,
  
@@ -5135,7 +6315,17 @@ text{color}[e] =
 \backslash
 text{Blue}
 \backslash
-})$ } 
+})$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -5298,9 +6488,19 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
-SetAlgoLined 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 SetKwFunction{name}{
 \backslash
@@ -5309,13 +6509,27 @@ borAlg}
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
-name{$G$}}{     $
+name{$G$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 text{Trees} 
 \backslash
@@ -5327,11 +6541,21 @@ text{set}(G))$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$v
 \backslash
-in V$}{         $
+in V$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 text{Trees}.
 \backslash
@@ -5343,15 +6567,35 @@ text{append}(
 \backslash
 
 \backslash
-     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 While{$|Trees| 
 \backslash
-ne 1$}{         
+ne 1$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
 For{$T 
 \backslash
-in Tree$}{             $(u,
+in Tree$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $(u,
  v) 
 \backslash
 gets 
@@ -5366,7 +6610,12 @@ times V(G)}(w((u,
 \backslash
 
 \backslash
-             $S 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            $S 
 \backslash
 gets 
 \backslash
@@ -5382,7 +6631,12 @@ in V(S)
 \backslash
 
 \backslash
-             $S 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            $S 
 \backslash
 gets S + T + 
 \backslash
@@ -5393,7 +6647,12 @@ gets S + T +
 \backslash
 
 \backslash
-             $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            $
 \backslash
 text{Trees}.
 \backslash
@@ -5401,7 +6660,22 @@ text{Remove}(T)$
 \backslash
 
 \backslash
-         }     }     $A 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $A 
 \backslash
 gets 
 \backslash
@@ -5409,9 +6683,24 @@ text{Trees}$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
-Return A } 
+Return A
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -5657,32 +6946,71 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{PrioritizeMST}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{PrioritizeMST}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
 name{$G,
  w,
- F$}}{     $
+ F$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
-varepsilon 
+omega 
+\backslash
+gets (V(G) 
+\backslash
+to 
+\backslash
+mathbb{R})$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $m 
 \backslash
 gets 
 \backslash
 min(
 \backslash
-{w(e_1) - w(e_2) 
+{|w(e_1) - w(e_2)| 
 \backslash
 mid (e_1,e_2
 \backslash
@@ -5692,40 +7020,115 @@ land(w(e_1)
 \backslash
 ne w(e_2))
 \backslash
-})/2$
+}$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+varepsilon 
+\backslash
+gets 
+\backslash
+frac{m}{2}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$e
 \backslash
-in E$}{         
+in E$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
-If{$e
+uIf{$e
 \backslash
-in F$}{                       } 
+in F$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+             $
 \backslash
-Else {             $w^
-\backslash
-prime(e) 
+omega(e) 
 \backslash
 gets w(e)$
 \backslash
 
 \backslash
-         }     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        } 
+\backslash
+uElse {
+\end_layout
+
+\begin_layout Plain Layout
+
+            $
+\backslash
+omega(e) 
+\backslash
+gets w(e) + 
+\backslash
+varepsilon$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 Return $
 \backslash
 text{Kruskal'sAlgorithm}(G,
- w^
+ 
 \backslash
-prime)$
+omega)$
 \backslash
 
 \backslash
- } 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -5879,18 +7282,37 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{ActivitySelectionProblem}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{ActivitySelectionProblem}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
@@ -5903,7 +7325,12 @@ ldots,
  
 \backslash
 ldots,
- f_n$}}{     $F 
+ f_n$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $F 
 \backslash
 gets 
 \backslash
@@ -5916,10 +7343,20 @@ ldots,
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 tcc{In the next line,
- we put all the parameters in F and sort it based on $f_i$}     $F 
+ we put all the parameters in F and sort it based on $f_i$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    $F 
 \backslash
 gets 
 \backslash
@@ -5935,7 +7372,12 @@ ldots ,
 \backslash
 
 \backslash
-     $X 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $X 
 \backslash
 gets 
 \backslash
@@ -5948,7 +7390,12 @@ ldots,
 \backslash
 
 \backslash
-     $X 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $X 
 \backslash
 gets 
 \backslash
@@ -5956,23 +7403,43 @@ emptyset$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$k
 \backslash
 in [1,
 \backslash
-ldots,n]$}{         
+ldots,n]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
 uIf{$X = 
 \backslash
-emptyset$}{             $X.
+emptyset$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $X.
 \backslash
 text{append}(L[k])$
 \backslash
 
 \backslash
-         } 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        } 
 \backslash
 uElseIf{$L[k]
 \backslash
@@ -5980,15 +7447,45 @@ cap X.
 \backslash
 text{last} = 
 \backslash
-emptyset$}{             $X.
+emptyset$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $X.
 \backslash
 text{append}(L[k])$
 \backslash
 
 \backslash
-         }     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
-Return $X$ } 
+Return $X$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -6270,7 +7767,15 @@ end{algorithm}
 \series default
 \color inherit
 :
- יהיו 
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ממושקל 
+\begin_inset Formula $\ell$
+\end_inset
+
+ ויהיו 
 \begin_inset Formula $s,t\in V$
 \end_inset
 
@@ -6289,7 +7794,7 @@ end{algorithm}
 \begin_inset Formula $\text{SSSP}$
 \end_inset
 
-(
+)
 \series default
 \color inherit
 :
@@ -6355,7 +7860,11 @@ end{algorithm}
 \begin_inset Formula $\sigma$
 \end_inset
 
- מסלול קצר ביותר אזי 
+ מסלול קצר ביותר ויהי 
+\begin_inset Formula $i\in\text{len}\left(\sigma\right)$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\left(\sigma\left[i\right],\ldots\sigma\left[i+k\right]\right)$
 \end_inset
 
@@ -6395,18 +7904,37 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{BellmanFord}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{BellmanFord}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
@@ -6414,7 +7942,12 @@ name{$G,
  
 \backslash
 ell ,
- s$}}{     $
+ s$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 left(d,
  
@@ -6427,17 +7960,32 @@ gets$ dict($V$)
 \backslash
 
 \backslash
-     $d[s] 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $d[s] 
 \backslash
 gets 0$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$u
 \backslash
-in V$}{         $d[u] 
+in V$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $d[u] 
 \backslash
 gets 
 \backslash
@@ -6445,7 +7993,12 @@ infty$
 \backslash
 
 \backslash
-         $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 pi[u] 
 \backslash
@@ -6455,14 +8008,29 @@ text{None}$
 \backslash
 
 \backslash
-     }     $(c,
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $(c,
  i) 
 \backslash
 gets 1$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 While{$(i 
 \backslash
@@ -6470,18 +8038,33 @@ le |V|)
 \backslash
 land(c 
 \backslash
-ne 0)$}{         $c 
+ne 0)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $c 
 \backslash
 gets 0$
 \backslash
 
 \backslash
-         
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
 For{$(u,
  v) 
 \backslash
-in E$}{             $c 
+in E$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $c 
 \backslash
 gets 
 \backslash
@@ -6494,9 +8077,33 @@ ell,
 \backslash
 
 \backslash
-         }     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
-Return $c$ }
+Return $c$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -6508,20 +8115,43 @@ end{algorithm}
 
 \begin_layout Plain Layout
 
-
-\backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{Relax}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{Relax}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
@@ -6530,11 +8160,21 @@ name{$
 ell,
  d,
  u,
- v$}}{     
+ v$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
-If{$d[v] > d[u] + 
+uIf{$d[v] > d[u] + 
 \backslash
-ell(u,v)$}{         $d[v] 
+ell(u,v)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $d[v] 
 \backslash
 gets d[u] + 
 \backslash
@@ -6542,7 +8182,12 @@ ell(u,v)$
 \backslash
 
 \backslash
-         $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 pi[v] 
 \backslash
@@ -6550,11 +8195,35 @@ gets u$
 \backslash
 
 \backslash
-         
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
-Return 1     }     
+Return 1
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
-Return 0 }
+Return 0
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -6564,12 +8233,6 @@ Return 0 }
 end{algorithm}
 \end_layout
 
-\end_inset
-
-
-\lang hebrew
-
-\begin_inset Newpage newpage
 \end_inset
 
 
@@ -6775,7 +8438,7 @@ end{algorithm}
 \end_inset
 
 
-\begin_inset Formula $\text{Relax}\left(\sigma\left[0\right],\sigma\left[1\right]\right),\ldots,\text{Relax}\left(\sigma\left[n-1\right],\sigma\left[n\right]\right)$
+\begin_inset Formula $\left(\text{Relax}\left(\sigma\left[0\right],\sigma\left[1\right]\right),\ldots,\text{Relax}\left(\sigma\left[n-1\right],\sigma\left[n\right]\right)\right)$
 \end_inset
 
  נקבל כי 
@@ -7047,6 +8710,37 @@ end{algorithm}
 
 \series bold
 \color magenta
+עץ 
+\begin_inset Formula $\text{BellmanFord}$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $V_{\pi}=\left\{ v\in V\mid\text{BellmanFord}\left(G,s\right).\pi\left[v\right]\ne\text{Null}\right\} \cup\left\{ s\right\} $
+\end_inset
+
+ וכן 
+\begin_inset Formula $E_{\pi}=\left\{ \left(\pi\left[v\right],v\right)\mid v\in V_{\pi}\backslash\left\{ s\right\} \right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $G_{\pi}=\left(V_{\pi},E_{\pi}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
 למה
 \series default
 \color inherit
@@ -7094,11 +8788,7 @@ end{algorithm}
 \begin_inset Formula $\text{BellmanFord}$
 \end_inset
 
- הינו עץ 
-\begin_inset Formula $G_{\pi}$
-\end_inset
-
-.
+ הינו עץ.
 \end_layout
 
 \begin_layout Standard
@@ -7226,41 +8916,73 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{IsZeroCircle}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{IsZeroCircle}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
 name{$G,
  
 \backslash
-ell$}}{     $s 
-\backslash
-not
-\backslash
-gets V$
-\backslash
+ell$}}{
+\end_layout
 
-\backslash
-     $V 
+\begin_layout Plain Layout
+
+    $V 
 \backslash
 gets V 
 \backslash
-cup {s}$
+uplus 
+\backslash
+{s
+\backslash
+}$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$v
 \backslash
@@ -7270,7 +8992,12 @@ backslash
 \backslash
 {s
 \backslash
-}$}{         $E 
+}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $E 
 \backslash
 gets E 
 \backslash
@@ -7283,7 +9010,12 @@ cup
 \backslash
 
 \backslash
-         $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 ell((s,
  v)) 
@@ -7292,7 +9024,23 @@ gets 0$
 \backslash
 
 \backslash
-     }     $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $(c,
+ d,
+ 
+\backslash
+pi)
+\backslash
+ gets 
 \backslash
 text{BellmanFord}(G,
  
@@ -7302,23 +9050,32 @@ ell,
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$e
 \backslash
-in E$}{         
+in E$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
-If{$
+uIf{$d(v) 
 \backslash
-delta(s,
- v) 
+ne d(u) + 
 \backslash
-ne 
-\backslash
-delta(s,
- u) + 
-\backslash
-ell(u,v)$}{             $E 
+delta(u,v)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $E 
 \backslash
 gets E 
 \backslash
@@ -7331,31 +9088,62 @@ backslash
 \backslash
 
 \backslash
-         }     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
-If{$
+lIf{$
 \backslash
 exists 
 \backslash
 text{ circle } C 
 \backslash
-in G$}{         
+in G$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
 Return 
 \backslash
-text{true}
-\backslash
+text{True}
+\end_layout
 
-\backslash
-     }     
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 Return 
 \backslash
-text{false}
-\backslash
+text{False}
+\end_layout
 
-\backslash
- }
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -7368,8 +9156,9 @@ end{algorithm}
 \end_inset
 
 
-\lang hebrew
+\end_layout
 
+\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -7503,7 +9292,7 @@ end{algorithm}
 \end_inset
 
  מחזיר 
-\begin_inset Formula $\text{true}$
+\begin_inset Formula $\text{True}$
 \end_inset
 
 ).
@@ -7561,18 +9350,37 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{SSSP-DAG}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{SSSP-DAG}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
@@ -7580,7 +9388,12 @@ name{$G,
  
 \backslash
 ell ,
- s$}}{     $
+ s$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 left(d,
  
@@ -7593,17 +9406,32 @@ gets$ dict($V$)
 \backslash
 
 \backslash
-     $d[s] 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $d[s] 
 \backslash
 gets 0$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$u
 \backslash
-in V$}{         $d[u] 
+in V$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $d[u] 
 \backslash
 gets 
 \backslash
@@ -7611,7 +9439,12 @@ infty$
 \backslash
 
 \backslash
-         $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 pi[u] 
 \backslash
@@ -7621,9 +9454,24 @@ text{None}$
 \backslash
 
 \backslash
-     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
-tcc{Knuth’sAlgorithm is an algorithm to compute a topological sorting.}     $f 
+tcc{Knuth’sAlgorithm is an algorithm to compute a topological sorting.}
+\end_layout
+
+\begin_layout Plain Layout
+
+    $f 
 \backslash
 gets 
 \backslash
@@ -7631,24 +9479,56 @@ text{Knuth’sAlgorithm}(G)$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$i
 \backslash
-in [|V|]$}{         
+in [1,
+\backslash
+ldots,|V|]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
 For{$v
 \backslash
 in 
 \backslash
-text{Adj}(f(i))$}{             $
+text{Adj}(f(i))$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $
 \backslash
 text{Relax}((f(i),
  v))$
 \backslash
 
 \backslash
-         }     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 Return $
 \backslash
@@ -7657,7 +9537,16 @@ left(d,
 \backslash
 pi
 \backslash
-right)$ }
+right)$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -7759,18 +9648,37 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{Dijkstra}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{Dijkstra}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
@@ -7778,7 +9686,12 @@ name{$G,
  
 \backslash
 ell ,
- s$}}{     $Q 
+ s$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $Q 
 \backslash
 gets 
 \backslash
@@ -7789,7 +9702,12 @@ text{int}))$
 \backslash
 
 \backslash
-     $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 left(d,
  
@@ -7802,17 +9720,32 @@ gets$ dict($V$)
 \backslash
 
 \backslash
-     $d[s] 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $d[s] 
 \backslash
 gets 0$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$u
 \backslash
-in V$}{         $d[u] 
+in V$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $d[u] 
 \backslash
 gets 
 \backslash
@@ -7820,7 +9753,12 @@ infty$
 \backslash
 
 \backslash
-         $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 pi[u] 
 \backslash
@@ -7830,7 +9768,17 @@ text{None}$
 \backslash
 
 \backslash
-     }     $Q.
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $Q.
 \backslash
 text{insert}((s,
  d[s]))$
@@ -7842,13 +9790,22 @@ text{insert}((s,
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
     
 \backslash
 While{$Q
 \backslash
 ne 
 \backslash
-emptyset$}{         $u 
+emptyset$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $u 
 \backslash
 gets Q.
 \backslash
@@ -7856,17 +9813,32 @@ text{min}$
 \backslash
 
 \backslash
-         
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
 For{$v
 \backslash
 in 
 \backslash
-text{Adj}(u)$}{             
+text{Adj}(u)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            
 \backslash
 uIf{$d[v] = 
 \backslash
-infty$}{                 $
+infty$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+                $
 \backslash
 pi[v] 
 \backslash
@@ -7874,7 +9846,12 @@ gets u$
 \backslash
 
 \backslash
-                 $d[v] 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                $d[v] 
 \backslash
 gets d[u] + 
 \backslash
@@ -7883,19 +9860,34 @@ ell(u,
 \backslash
 
 \backslash
-                 $Q.
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                $Q.
 \backslash
 text{insert}((v,
  d[v]))$
 \backslash
 
 \backslash
-             } 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            } 
 \backslash
 uElseIf{$d[u] + 
 \backslash
 ell(u,
- v) < d[v]$}{                 $
+ v) < d[v]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+                $
 \backslash
 pi[v] 
 \backslash
@@ -7903,7 +9895,12 @@ gets u$
 \backslash
 
 \backslash
-                 $d[v] 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                $d[v] 
 \backslash
 gets d[u] + 
 \backslash
@@ -7912,14 +9909,44 @@ ell(u,
 \backslash
 
 \backslash
-                 $Q.
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                $Q.
 \backslash
 text{decrease-key}((v,
  d[v]))$
 \backslash
 
 \backslash
-             }         }     }          
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 Return $
 \backslash
@@ -7928,7 +9955,16 @@ left(d,
 \backslash
 pi
 \backslash
-right)$ }
+right)$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -8363,6 +10399,13 @@ SetAlgoLined
 
 
 \backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 SetKwFunction{name}{FeasiblePotential}
 \end_layout
 
@@ -8480,7 +10523,7 @@ ell,
 
     
 \backslash
-If{$c = 1$}{
+lIf{$c = 1$}{
 \end_layout
 
 \begin_layout Plain Layout
@@ -8492,14 +10535,12 @@ Return None
 
 \begin_layout Plain Layout
 
-    } 
-\backslash
-Else{
+    }
 \end_layout
 
 \begin_layout Plain Layout
 
-        $p
+    $p
 \backslash
 gets (V(G)
 \backslash
@@ -8514,7 +10555,7 @@ mathbb{R})$
 
 \begin_layout Plain Layout
 
-        
+    
 \backslash
 For{$v
 \backslash
@@ -8523,7 +10564,7 @@ in V(G)$}{
 
 \begin_layout Plain Layout
 
-            $p(v) 
+        $p(v) 
 \backslash
 gets 
 \backslash
@@ -8537,19 +10578,14 @@ delta (s,
 
 \begin_layout Plain Layout
 
-        }
+    }
 \end_layout
 
 \begin_layout Plain Layout
 
-        
+    
 \backslash
 Return $p$
-\end_layout
-
-\begin_layout Plain Layout
-
-    }
 \end_layout
 
 \begin_layout Plain Layout
@@ -8661,25 +10697,56 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{Johnson}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{Johnson}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
 name{$G,
  
 \backslash
-ell$}}{     $p
+ell$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $p
 \backslash
 gets 
 \backslash
@@ -8690,13 +10757,33 @@ ell)$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
-If{$p = 
+lIf{$p = 
 \backslash
-text{None}$}{         
+text{None}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
-Return None     }     $
+Return None
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 ell_p 
 \backslash
@@ -8708,11 +10795,21 @@ mathbb{R})$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$(u,v)
 \backslash
-in E$}{         $
+in E$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 ell_p ((u,
  v)) = 
@@ -8721,12 +10818,22 @@ ell ((u,v)) + p(u) - p(v)$
 \backslash
 
 \backslash
-     }     $D_{
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $(D_{
 \backslash
 ell_p},
  D_
 \backslash
-ell 
+ell) 
 \backslash
 gets M_{
 \backslash
@@ -8738,7 +10845,12 @@ mathbb{R})}$
 \backslash
 
 \backslash
-     $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 Pi 
 \backslash
@@ -8750,11 +10862,21 @@ right|}{(E)}$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$v
 \backslash
-in V$}{         $(d,
+in V$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $(d,
  
 \backslash
 pi) 
@@ -8768,20 +10890,35 @@ ell_p,
 \backslash
 
 \backslash
-         
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
 tcc{Here $D$ and $
 \backslash
 Pi$ will be simplified,
  to get a solution to APSP as needed we can modify a bit Dijkstra's algorithm to calculate $D$ and $
 \backslash
-Pi$ on the way to get constant time for this assignment.}         $D_v 
+Pi$ on the way to get constant time for this assignment.}
+\end_layout
+
+\begin_layout Plain Layout
+
+        $D_v 
 \backslash
 gets d$
 \backslash
 
 \backslash
-         $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
 \backslash
 Pi_v 
 \backslash
@@ -8791,11 +10928,26 @@ pi$
 \backslash
 
 \backslash
-     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$(u,v)
 \backslash
-in E$}{         $D_{
+in E$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $D_{
 \backslash
 ell} ((u,
  v)) = D_{
@@ -8804,12 +10956,32 @@ ell_p} ((u,v)) - p(u) + p(v)$
 \backslash
 
 \backslash
-     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 Return $(D,
  
 \backslash
-Pi)$ } 
+Pi)$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -8894,7 +11066,11 @@ end{algorithm}
 \begin_inset Formula $A*B\in\M[m\times k]$
 \end_inset
 
- באשר 
+
+\begin_inset Newline newline
+\end_inset
+
+באשר 
 \begin_inset Formula $\left(A*B\right)_{i,j}=\min_{k=1}^{n}\left(A_{i,k}+B_{k,j}\right)$
 \end_inset
 
@@ -9116,7 +11292,15 @@ end{algorithm}
 הערה
 \series default
 :
- 
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $L\in\M[\left|V\right|][\bbr]$
+\end_inset
+
+ מטריצת המשקל אזי 
 \begin_inset Formula $L^{k}=L*\ldots*L$
 \end_inset
 
@@ -9184,7 +11368,7 @@ end{algorithm}
 \end_inset
 
  מטריצת המשקל אזי 
-\begin_inset Formula $L^{n}$
+\begin_inset Formula $L^{\left|V\right|}$
 \end_inset
 
  פתרון לבעיית 
@@ -9221,33 +11405,62 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{RepeatedSquaring}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{RepeatedSquaring}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
 name{$A,
  
 \backslash
-star$}}{     $a_k 
+star$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $(a_k 
 \backslash
-ldots a_0 
+ldots a_0) 
 \backslash
 gets (n)_2$
 \backslash
 
 \backslash
-     $B 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $B 
 \backslash
 gets M_n (
 \backslash
@@ -9255,27 +11468,72 @@ mathbb{R})$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$i 
 \backslash
-in [k]$}{         
+in [k]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
-If{$a_i = 1$}{             $B = B
+uIf{$a_i = 1$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $B = B
 \backslash
 star A$
 \backslash
 
 \backslash
-         }         $A = A
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        $A = A
 \backslash
 star A$
 \backslash
 
 \backslash
-     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
-Return $B$ } 
+Return $B$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -9437,23 +11695,47 @@ status collapsed
 
 
 \backslash
-begin{algorithm} 
-\backslash
-SetAlgoLined 
-\backslash
-SetKwFunction{name}{FloydWarshall}
+begin{algorithm}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-SetKwProg{Fn}{function}{:}{} 
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{FloydWarshall}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 Fn{
 \backslash
 name{$n,
- L$}}{     $
+ L$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
 \backslash
 Pi 
 \backslash
@@ -9461,15 +11743,30 @@ gets M_n ([n])$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$u
 \backslash
-in [n]$}{         
+in [n]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
 For{$v
 \backslash
-in [n]$}{             
+in [n]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            
 \backslash
 uIf{$(u
 \backslash
@@ -9477,7 +11774,12 @@ ne v)
 \backslash
 land (L_{u,v} < 
 \backslash
-infty)$}{                 $
+infty)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+                $
 \backslash
 Pi_{u,v} 
 \backslash
@@ -9485,9 +11787,19 @@ gets u$
 \backslash
 
 \backslash
-             } 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            } 
 \backslash
-uElse{                 $
+uElse{
+\end_layout
+
+\begin_layout Plain Layout
+
+                $
 \backslash
 Pi_{u,v} 
 \backslash
@@ -9497,7 +11809,26 @@ text{None}$
 \backslash
 
 \backslash
-             }         }     }
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -9508,27 +11839,57 @@ gets L$
 \backslash
 
 \backslash
-     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 For{$k
 \backslash
-in [n]$}{         
+in [n]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
 \backslash
 For{$u
 \backslash
-in [n]$}{             
+in [n]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            
 \backslash
 For{$v
 \backslash
-in [n]$}{                 
+in [n]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+                
 \backslash
-uIf{$F_{u,k} + F_{k,v} < F_{u,v}$}{                     $F_{u,v} 
+uIf{$F_{u,k} + F_{k,v} < F_{u,v}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+                    $F_{u,v} 
 \backslash
 gets F_{u,k} + F_{k,v}$
 \backslash
 
 \backslash
-                     $
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                    $
 \backslash
 Pi_{u,v} 
 \backslash
@@ -9538,12 +11899,47 @@ Pi_{k,v}$
 \backslash
 
 \backslash
-                 }             }         }     }     
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                }
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
 Return $(F,
  
 \backslash
-Pi)$ } 
+Pi)$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{algorithm}
 \end_layout
@@ -10379,7 +12775,8 @@ OSBST{pp}}{
 
 \begin_layout Plain Layout
 
-    $C 
+    $K,
+ C 
 \backslash
 gets 
 \backslash
@@ -10490,7 +12887,7 @@ text{pp}(i,j) + C(i,
 
                 
 \backslash
-If{$t < C(i,j)$}{
+uIf{$t < C(i,j)$}{
 \end_layout
 
 \begin_layout Plain Layout
@@ -10547,6 +12944,15 @@ gets k$
 end{algorithm}
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -10650,7 +13056,11 @@ end{algorithm}
 \begin_inset Formula $\sum_{i\in\left[n\right]}f\left(i\right)v_{i}$
 \end_inset
 
- מקסימלית וכן 
+ מקסימלית וכן
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\sum_{i\in\left[n\right]}f\left(i\right)w_{i}\le W$
 \end_inset
 
@@ -10658,7 +13068,11 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
-אלגוריתם חסמן לבעיית שבר תרמיל הגב:
+
+\series bold
+אלגוריתם חמדן לבעיית שבר תרמיל הגב
+\series default
+:
  יהיו 
 \begin_inset Formula $W,w_{1}\ldots w_{n}>0$
 \end_inset
@@ -10856,7 +13270,7 @@ gets P(i)[0]$
 
         
 \backslash
-If{$t + w_{j} 
+uIf{$t + w_{j} 
 \backslash
 le W$}{
 \end_layout
@@ -10892,7 +13306,7 @@ gets t + w_{j}$
 
         
 \backslash
-Else{
+uElse{
 \end_layout
 
 \begin_layout Plain Layout
@@ -11074,6 +13488,12 @@ end{algorithm}
 \end_inset
 
  אזי
+\lang english
+
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -11372,13 +13792,6 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 רשת זרימה
@@ -11528,12 +13941,6 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\hst}{\text{s-t}\text{חתך }}
-{\text{s-t}\text{ ךתח}}
-\end_inset
-
-
-\begin_inset FormulaMacro
 \newcommand{\st}{\text{s-t}}
 {\text{s-t}}
 \end_inset
@@ -11544,7 +13951,8 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
-\begin_inset Formula $\hst$
+חתך 
+\begin_inset Formula $\st$
 \end_inset
 
 
@@ -11591,8 +13999,8 @@ end{algorithm}
 \begin_inset Formula $\left(S,T\right)$
 \end_inset
 
- 
-\begin_inset Formula $\hst$
+ חתך 
+\begin_inset Formula $\st$
 \end_inset
 
  אזי 
@@ -11616,8 +14024,8 @@ end{algorithm}
 \begin_inset Formula $\left(S,T\right)$
 \end_inset
 
- 
-\begin_inset Formula $\hst$
+ חתך 
+\begin_inset Formula $\st$
 \end_inset
 
  אזי 
@@ -11637,8 +14045,8 @@ end{algorithm}
 \begin_inset Formula $\left(S,T\right)$
 \end_inset
 
- 
-\begin_inset Formula $\hst$
+ חתך 
+\begin_inset Formula $\st$
 \end_inset
 
  אזי 
@@ -11658,8 +14066,8 @@ end{algorithm}
 \begin_inset Formula $\left(S,T\right)$
 \end_inset
 
- 
-\begin_inset Formula $\hst$
+ חתך 
+\begin_inset Formula $\st$
 \end_inset
 
  אזי 
@@ -11700,8 +14108,8 @@ end{algorithm}
 \begin_inset Formula $\left(S,T\right)$
 \end_inset
 
- 
-\begin_inset Formula $\hst$
+ חתך 
+\begin_inset Formula $\st$
 \end_inset
 
  אזי 
@@ -11742,8 +14150,8 @@ end{algorithm}
 \begin_inset Formula $\left(S,T\right)$
 \end_inset
 
- 
-\begin_inset Formula $\hst$
+ חתך 
+\begin_inset Formula $\st$
 \end_inset
 
  אזי 
@@ -11756,7 +14164,8 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
-\begin_inset Formula $\hst$
+חתך 
+\begin_inset Formula $\st$
 \end_inset
 
  מינימלי
@@ -11770,8 +14179,8 @@ end{algorithm}
 \begin_inset Formula $\left(S,T\right)$
 \end_inset
 
- 
-\begin_inset Formula $\hst$
+ חתך 
+\begin_inset Formula $\st$
 \end_inset
 
  עבורו 
@@ -11795,8 +14204,8 @@ end{algorithm}
 \begin_inset Formula $\left(S,T\right)$
 \end_inset
 
- 
-\begin_inset Formula $\hst$
+ חתך 
+\begin_inset Formula $\st$
 \end_inset
 
  מינימלי אזי 
@@ -12121,8 +14530,8 @@ f\left(e\right) &  & \text{else}
 \begin_inset Formula $\left(S,T\right)$
 \end_inset
 
- 
-\begin_inset Formula $\hst$
+ חתך 
+\begin_inset Formula $\st$
 \end_inset
 
  מינימלי ל־
@@ -12149,7 +14558,7 @@ f\left(e\right) &  & \text{else}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -12163,6 +14572,13 @@ begin{algorithm}
 
 \backslash
 SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
 \end_layout
 
 \begin_layout Plain Layout
@@ -12258,7 +14674,7 @@ text{BFS}(G,
 
         
 \backslash
-uIf{$
+lIf{$
 \backslash
 {s 
 \backslash
