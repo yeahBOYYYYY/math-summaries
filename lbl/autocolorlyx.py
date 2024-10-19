@@ -96,5 +96,5 @@ if __name__ == "__main__":
 
     # colorAbsolute(path, color, from_line, to_line)
 
-    path = "numerical_analysis_lbl.lyx"
+    path = "algorithms_lbl.lyx"
     colorChanges(path)
