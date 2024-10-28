@@ -5049,6 +5049,13 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color purple
@@ -8146,11 +8153,15 @@ literal "true"
 \series default
 \color inherit
 :
- פסוק 
+ יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ אזי פסוק 
 \begin_inset Formula $\varphi\in\cnf$
 \end_inset
 
- עבורה קיים 
+ עבורו קיים 
 \begin_inset Formula $m\in\bbn$
 \end_inset
 
@@ -8308,13 +8319,15 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color teal
-סימון
+מספר הפסוקיות המסופקות
 \series default
-\color inherit
 :
+ יהיו 
+\begin_inset Formula $k,m\in\bbn_{+}$
+\end_inset
+
  תהא 
-\begin_inset Formula $A\in\M[m\times k][\left\{ p_{i}\right\} \cup\left\{ \neg p_{i}\right\} ]$
+\begin_inset Formula $A\in M_{m\times k}\left(\left\{ p_{i}\right\} \cup\left\{ \neg p_{i}\right\} \right)$
 \end_inset
 
  ותהא 
@@ -8326,7 +8339,7 @@ literal "true"
 \end_inset
 
 
-\begin_inset Formula $N\left(\bigwedge_{i=1}^{m}\bigvee_{j=1}^{k}\left(A\right)_{i,k},v\right)=\left|\left\{ i\in\left[m\right]\bmid\overline{v}\left(\bigvee_{j=1}^{k}\left(A\right)_{i,k}\right)=\text{True}\right\} \right|$
+\begin_inset Formula $\text{Cl}\left(\bigwedge_{i=1}^{m}\bigvee_{j=1}^{k}\left(A\right)_{i,k},v\right)=\left|\left\{ i\in\left[m\right]\bmid\overline{v}\left(\bigvee_{j=1}^{k}\left(A\right)_{i,k}\right)=\text{True}\right\} \right|$
 \end_inset
 
 .
@@ -8341,7 +8354,7 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $C-\cnf=\left\{ \left<\varphi,k\right>\mid\left(\varphi\in\cnf\right)\land\left(\exists v\left(N\left(\varphi,v\right)=k\right)\right)\right\} $
+\begin_inset Formula $C-\cnf=\left\{ \left<\varphi,k\right>\mid\left(\varphi\in\cnf\right)\land\left(\exists v\left(\text{Cl}\left(\varphi,v\right)=k\right)\right)\right\} $
 \end_inset
 
 .
@@ -8401,7 +8414,7 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $C-\dnf=\left\{ \left<\varphi,k\right>\mid\left(\varphi\in\dnf\right)\land\left(\exists v\left(N\left(\varphi,v\right)=k\right)\right)\right\} $
+\begin_inset Formula $C-\dnf=\left\{ \left<\varphi,k\right>\mid\left(\varphi\in\dnf\right)\land\left(\exists v\left(\text{Cl}\left(\varphi,v\right)=k\right)\right)\right\} $
 \end_inset
 
 .
@@ -8744,7 +8757,7 @@ literal "true"
 \series default
 :
  
-\begin_inset Formula $\cirsat=\left\{ \left<C,x\right>\mid\left(\text{ מעגל בוליאני }C\right)\land\left(\exists w\in\left\{ 0,1\right\} ^{*}\left(C\left(x,w\right)=1\right)\right)\right\} $
+\begin_inset Formula $\cirsat=\left\{ \left<C,x\right>\mid\left(\text{ מעגל בוליאני}C\right)\land\left(\exists w\in\left\{ 0,1\right\} ^{*}\left(C\left(x,w\right)=1\right)\right)\right\} $
 \end_inset
 
 .
@@ -10654,7 +10667,7 @@ literal "true"
 הערה
 \series default
 :
- נקרא למכונת טיורינג בעלת סיבוכיות מקום מכונט טיורינג.
+ נקרא למכונת טיורינג בעלת סיבוכיות מקום מכונת טיורינג.
 \end_layout
 
 \begin_layout Standard
@@ -10667,7 +10680,11 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
-הגדרה:
+
+\series bold
+הגדרה
+\series default
+:
  תהא 
 \begin_inset Formula $S:\bbn\to\bbn$
 \end_inset
@@ -10681,7 +10698,7 @@ literal "true"
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\pspace}{\mathcal{PSPACE}}
+\newcommand{\pspace}{\text{PSPACE}}
 {\text{PSPACE}}
 \end_inset
 
@@ -10707,8 +10724,14 @@ literal "true"
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\logspace}{\mathcal{LOGSPACE}}
+\newcommand{\logspace}{\text{LOGSPACE}}
 {\text{LOGSPACE}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\lspace}{\text{LSPACE}}
+{\text{LSPACE}}
 \end_inset
 
 
@@ -10738,7 +10761,7 @@ literal "true"
 \series default
 :
  
-\begin_inset Formula $\logspace=\text{L}$
+\begin_inset Formula $\logspace=\lspace=\l$
 \end_inset
 
 .
@@ -10815,7 +10838,7 @@ literal "true"
 \series default
 :
  
-\begin_inset Formula $\logspace\subseteq\P$
+\begin_inset Formula $\lspace\subseteq\P$
 \end_inset
 
 .
@@ -10903,7 +10926,7 @@ literal "true"
 \series default
 :
  
-\begin_inset Formula $\logspace\subsetneq\pspace$
+\begin_inset Formula $\lspace\subsetneq\pspace$
 \end_inset
 
 .
@@ -10919,7 +10942,7 @@ literal "true"
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\logspace\subsetneq\P$
+\begin_inset Formula $\lspace\subsetneq\P$
 \end_inset
 
 .
@@ -10935,10 +10958,50 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-פונקציה חשיבה במקום לוגריתמי
+\color orange
+השערה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\lspace\subsetneq\P$
+\end_inset
+
+.
+ 
+\color lightgray
+השערה פתוחה
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+השערה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\P\subsetneq\pspace$
+\end_inset
+
+.
+ 
+\color lightgray
+השערה פתוחה
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציה חשיבה במקום 
+\begin_inset Formula $S$
+\end_inset
+
+
 \series default
 :
- תהא 
+  תהא 
 \begin_inset Formula $D\subseteq\Sigma$
 \end_inset
 
@@ -10955,7 +11018,7 @@ literal "true"
 \end_inset
 
  בעלת סיבוכיות מקום 
-\begin_inset Formula $\log\left(n\right)$
+\begin_inset Formula $S\left(n\right)$
 \end_inset
 
  המחשבת את 
@@ -11051,6 +11114,1376 @@ literal "true"
 
  אזי 
 \begin_inset Formula $A\le_{p}B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ph}{\mathcal{PH}}
+{\mathcal{PH}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\pc}{\mathcal{PC}}
+{\mathcal{PC}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה 
+\begin_inset Formula $\P$
+\end_inset
+
+־קשה
+\series default
+:
+ 
+\begin_inset Formula $\ph=\left\{ \l\mid\forall L\in\P\left(L\le_{L}\l\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה 
+\begin_inset Formula $\P$
+\end_inset
+
+־שלמה
+\series default
+:
+ 
+\begin_inset Formula $\pc=\P\cap\ph$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ חשיבה במקום 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ תהא 
+\begin_inset Formula $g$
+\end_inset
+
+ חשיבה במקום 
+\begin_inset Formula $R:\bbn\to\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $m:\bbn\to\bbn$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|f\left(x\right)\right|\le m\left(n\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ חשיבה במקום 
+\begin_inset Formula $\O\left(S\left(n\right)+\log\left(m\left(n\right)\right)+R\left(m\left(n\right)\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ שפות באשר 
+\begin_inset Formula $B\in\lspace$
+\end_inset
+
+ וכן 
+\begin_inset Formula $A\le_{L}B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\in\lspace$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ שפות באשר 
+\begin_inset Formula $A\le_{L}B$
+\end_inset
+
+ וכן 
+\begin_inset Formula $B\le_{L}C$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\le_{L}C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\in\pc\cap L$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\P=\lspace$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\cval}{\text{CVAL}}
+{\text{CVAL}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ 
+\begin_inset Formula $\cval=\left\{ \left<C,x\right>\mid\left(\text{ מעגל בוליאני}C\right)\land\left(C\left(x\right)=1\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה קוק־לוין
+\series default
+:
+ תהא 
+\begin_inset Formula $M$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט רצה בזמן פולינומי אזי קיימת פונקציה חשיבה 
+\begin_inset Formula $f$
+\end_inset
+
+ במקום לוגריתמי עבורה 
+\begin_inset Formula $f\left(1^{n}\right)=\left<C_{M,n}\right>$
+\end_inset
+
+ באשר 
+\begin_inset Formula $C_{M,n}$
+\end_inset
+
+ מעגל עבורו לכל 
+\begin_inset Formula $z\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ מתקיים (
+\begin_inset Formula $M\left(z\right)$
+\end_inset
+
+ מקבלת)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $C_{M,n}\left(z\right)=1$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\cval\in\pc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $M$
+\end_inset
+
+ מטל
+\begin_inset Quotes erd
+\end_inset
+
+ד 
+\begin_inset Formula $k$
+\end_inset
+
+־סרטית ותהא 
+\begin_inset Formula $c_{1}\$c_{2}\$\ldots\$c_{k}$
+\end_inset
+
+ קונפיגורציה אזי 
+\begin_inset Formula $\left(c_{1}\$c_{2}\$\ldots\$c_{k}\right)^{i}=c_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מכונת טיורינג לא דטרמיניסטית בעלת סיבוכיות מקום
+\series default
+:
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ אזי מטל
+\begin_inset Quotes erd
+\end_inset
+
+ד תלת־סרטית 
+\begin_inset Formula $M$
+\end_inset
+
+ עבורה לכל קונפיגורציות 
+\begin_inset Formula $c_{0}\ldots c_{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $c_{0}=q_{0}x$
+\end_inset
+
+ וכן 
+\begin_inset Formula $c_{i-1}$
+\end_inset
+
+ עוברת ל־
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים
+\end_layout
+
+\begin_layout Itemize
+סרט לקריאה בלבד:
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $c_{i}^{1}=x\backslash Q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סרט חסום במקום:
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|c_{i-1}^{2}\right|\le S\left(n\right)+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סרט לכתיבה חד־פעמית:
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $j\in\left[\left|c_{i-1}^{3}\right|\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(c_{i-1}^{3}\backslash Q\right)_{j}=\left(c_{i}^{3}\backslash Q\right)_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חסם עליון למקום ריצה של מכונת טיורינג לא דטרמיניסטית
+\series default
+:
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $M$
+\end_inset
+
+ מטל
+\begin_inset Quotes erd
+\end_inset
+
+ד בעלת סיבוכיות מקום 
+\begin_inset Formula $S$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ נקרא למכונת טיורינג לא דטרמיניסטית בעלת סיבוכיות מקום מכונת טיורינג לא דטרמיניסטית.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\nspace}{\text{NSpace}}
+{\text{NSpace}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nspace\left(S\left(n\right)\right)=\left\{ L\left(M\right)\mid\O\left(S\left(n\right)\right)\text{ מטל"ד הרצה במקום }M\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\npspace}{\text{NPSPACE}}
+{\text{NPSPACE}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה 
+\begin_inset Formula $\npspace$
+\end_inset
+
+
+\series default
+:
+ 
+\begin_inset Formula $\npspace=\bigcup_{c\in\bbn}\nspace\left(n^{c}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\nl}{\mathcal{NL}}
+{\text{NL}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה 
+\begin_inset Formula $\nl$
+\end_inset
+
+
+\series default
+:
+ 
+\begin_inset Formula $\nl=\nspace\left(\log\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+השערה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\lspace=\nl$
+\end_inset
+
+.
+ 
+\color lightgray
+השערה פתוחה
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $M$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט יהיו 
+\begin_inset Formula $x,y\in\Gamma^{*}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $q\in Q$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{find}_{Q}\left(xqy\right)=\left|x\right|+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מוודא במקום לוגריתמי
+\series default
+:
+ תהא 
+\begin_inset Formula $A\subseteq\Sigma^{*}$
+\end_inset
+
+ שפה אזי מ
+\begin_inset Quotes erd
+\end_inset
+
+ט תלת־סרטית 
+\begin_inset Formula $V$
+\end_inset
+
+ עבורה לכל קונפיגורציות 
+\begin_inset Formula $c_{0}\ldots c_{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $c_{0}=q_{0}x$
+\end_inset
+
+ וכן 
+\begin_inset Formula $c_{i-1}$
+\end_inset
+
+ עוברת ל־
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים
+\end_layout
+
+\begin_layout Itemize
+סרט לקריאה בלבד:
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $c_{i}^{1}=x\backslash Q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סרט עד:
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\text{find}_{Q}\left(c_{i-1}^{2}\right)\le\text{find}_{Q}\left(c_{i}^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סרט עבודה:
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|c_{i-1}^{3}\right|\le S\left(n\right)+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+וכן לכל 
+\begin_inset Formula $x\in\Sigma^{*}$
+\end_inset
+
+ מתקיים (
+\begin_inset Formula $x\in A$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיים 
+\begin_inset Formula $w\in\Sigma^{*}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $V\left(x\$w\right)$
+\end_inset
+
+ מקבלת).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $A\subseteq\Sigma^{*}$
+\end_inset
+
+ שפה יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מוודא בזמן לוגריתמי ויהיו 
+\begin_inset Formula $x,w\in\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $V\left(x,w\right)=V\left(x\$w\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $A\subseteq\Sigma^{*}$
+\end_inset
+
+ שפה אזי (
+\begin_inset Formula $A\in\nl$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיים ל־
+\begin_inset Formula $A$
+\end_inset
+
+ מוודא לוגריתמי).
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\stcon}{\text{STCON}}
+{\text{STCON}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ 
+\begin_inset Formula $\stcon=\left\{ \left<G,s,t\right>\mid\left(\text{ גרף מכוון}G\right)\land\left(t\text{ ל־}s\text{קיים מסלול מ־}\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\stcon\in\nl$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\nlh}{\mathcal{NLH}}
+{\text{NLH}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\nlc}{\mathcal{NLC}}
+{\text{NLC}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה 
+\begin_inset Formula $\nl$
+\end_inset
+
+־קשה
+\series default
+:
+ 
+\begin_inset Formula $\nlh=\left\{ \l\mid\forall L\in\nl\left(L\le_{L}\l\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה 
+\begin_inset Formula $\nl$
+\end_inset
+
+־שלמה
+\series default
+:
+ 
+\begin_inset Formula $\nlc=\nl\cap\nlh$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\stcon\in\nlc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ 
+\begin_inset Formula $\nl\subseteq\P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם לקיום מסלול עם חסם לאורכו בגרף מכוון
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון יהיו 
+\begin_inset Formula $s,t\in V$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\ell\in\bbn_{+}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{Reach}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$G,
+ s,
+ t,
+ 
+\backslash
+ell$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+uIf{$
+\backslash
+ell = 1$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+lIf{$(s,
+ t)
+\backslash
+in E$}{
+\backslash
+Return True}
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+Return False
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$v
+\backslash
+in V$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $b_1 
+\backslash
+gets 
+\backslash
+name{$G,
+ s,
+ v,
+ 
+\backslash
+ceil{
+\backslash
+frac{
+\backslash
+ell}{2}}$}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $b_2 
+\backslash
+gets 
+\backslash
+name{$G,
+ v,
+ t,
+ 
+\backslash
+floor{
+\backslash
+frac{
+\backslash
+ell}{2}}$}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+lIf{$b_1 
+\backslash
+land b_2$}{
+\backslash
+Return True}
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return False
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון יהיו 
+\begin_inset Formula $s,t\in V$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\ell\in\bbn_{+}$
+\end_inset
+
+ אזי (
+\begin_inset Formula $\text{Reach}\left(G,s,t,\ell\right)=\text{True}$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיים מסלול מ־
+\begin_inset Formula $s$
+\end_inset
+
+ ל־
+\begin_inset Formula $t$
+\end_inset
+
+ באורך לכל היותר 
+\begin_inset Formula $\ell$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט סאביץ'
+\series default
+:
+ 
+\begin_inset Formula $\stcon\in\dspace\left(\log\left(n\right)^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ 
+\begin_inset Formula $\nl\subseteq\dspace\left(\log\left(n\right)^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ חשיבה במקום באשר 
+\begin_inset Formula $S\ge\log$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nspace\left(S\left(n\right)\right)\subseteq\dspace\left(S^{2}\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ 
+\begin_inset Formula $\pspace=\npspace$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\conl}{\text{co}\nl}
+{\text{co}\nl}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ 
+\begin_inset Formula $\conl=\left\{ L\mid\overline{L}\in\nl\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט אימרמן־סלפצ'ני
+\series default
+:
+ 
+\begin_inset Formula $\overline{\stcon}\in\nl$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ 
+\begin_inset Formula $\nl=\conl$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פסוק 
+\begin_inset Formula $\text{E}k\cnf$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ אזי פסוק 
+\begin_inset Formula $\varphi\in\cnf$
+\end_inset
+
+ עבורו קיים 
+\begin_inset Formula $m\in\bbn$
+\end_inset
+
+ וקיימת 
+\begin_inset Formula $A\in\M[m\times k][\left\{ p_{i}\right\} \cup\left\{ \neg p_{i}\right\} ]$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\varphi=\bigwedge_{i=1}^{m}\bigvee_{j=1}^{k}\left(A\right)_{i,k}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left|\text{FV}\left(\bigvee_{j=1}^{k}\left(A\right)_{i,k}\right)\right|=k$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[m\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{E}k\sat=\left\{ \left<\varphi\right>\mid\left(\varphi\in\text{E}k\cnf\right)\land\left(\text{ ספיקה}\varphi\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{E}k\sat\in\nph$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $\varphi\in\text{E}k\sat$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp_{v:\left\{ p_{i}\right\} \to\left\{ \text{True},\text{False}\right\} }\left(\overline{v}\left(\varphi\right)=\text{True}\right)=\frac{k}{8}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+יחס הפסוקיות המסופקות
+\series default
+:
+ יהיו 
+\begin_inset Formula $k,m\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $A\in M_{m\times k}\left(\left\{ p_{i}\right\} \cup\left\{ \neg p_{i}\right\} \right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $v$
+\end_inset
+
+ השמה אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\text{RCl}\left(\bigwedge_{i=1}^{m}\bigvee_{j=1}^{k}\left(A\right)_{i,k},v\right)=\frac{1}{m}\cdot\text{Cl}\left(\bigwedge_{i=1}^{m}\bigvee_{j=1}^{k}\left(A\right)_{i,k},v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט 
+\begin_inset Formula $\text{PCP}$
+\end_inset
+
+
+\series default
+:
+ קיימת רדוקציה פולינומית 
+\begin_inset Formula $f$
+\end_inset
+
+ מ־
+\begin_inset Formula $3\cnf$
+\end_inset
+
+ ל־
+\begin_inset Formula $\text{E}3\cnf$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+תהא 
+\begin_inset Formula $\varphi\in3\cnf$
+\end_inset
+
+ ספיקה אזי 
+\begin_inset Formula $f\left(\varphi\right)$
+\end_inset
+
+ ספיקה.
+\end_layout
+
+\begin_layout Itemize
+תהא 
+\begin_inset Formula $\varphi\in3\cnf$
+\end_inset
+
+ לא ספיקה ותהא 
+\begin_inset Formula $v$
+\end_inset
+
+ השמה אזי 
+\begin_inset Formula $\text{RCl}\left(f\left(\varphi\right),v\right)\le\frac{7.01}{8}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ רדוקציה פולינומית מ־
+\begin_inset Formula $3\cnf$
+\end_inset
+
+ ל־
+\begin_inset Formula $\text{E}3\cnf$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $f\left(\varphi\right)$
+\end_inset
+
+ ספיקה לכל 
+\begin_inset Formula $\varphi\in3\cnf$
+\end_inset
+
+ ספיקה וכן קיימת 
+\begin_inset Formula $\varphi\in3\cnf$
+\end_inset
+
+ לא ספיקה וקיימת השמה 
+\begin_inset Formula $v$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $\text{RCl}\left(f\left(\varphi\right),v\right)>\frac{7.01}{8}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\P=\np$
 \end_inset
 
 .
