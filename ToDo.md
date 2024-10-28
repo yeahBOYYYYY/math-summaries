@@ -5,6 +5,9 @@ Things that I still need to do
 ### general
 
 1. לעשות סיכום מבנ"ת
+2. להשלים בנומרית את אלגוריתם למציאת SVD
+3. להשלים באלגו את אלגוריתם סימפלקס
+4. להשלים במד"ר מהמודל
 
 ### 25A
 
@@ -16,11 +19,3 @@ Things that I still need to do
 | complexity |  |  | 0 | 0 | 0 |
 | formal proggraming |  |  | 0 | 0 | 0 |
 | game theory |  |  | 0 | 0 | 0 |
-
-### 24B
-
-| Name                       | Notes                                       | Last lec updated | Lec  | Rec | HW |
-| -------------------------- | ------------------------------------------- | ---------------- | ---- | --- | -- |
-| ode                        | Complete from moodle                        |                  | Done |     |    |
-| algorithms                 | Complete Simplex algo                       |                  |      |     |    |
-| numerical analysis         | Complete SVD algo                           |                  | Done |     |    |
