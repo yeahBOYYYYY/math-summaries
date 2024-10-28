@@ -21,7 +21,6 @@ Things that I still need to do
 
 | Name                       | Notes                                       | Last lec updated | Lec  | Rec | HW |
 | -------------------------- | ------------------------------------------- | ---------------- | ---- | --- | -- |
-| ode                        | Complete other semesters - From moodle      |                  | Done |     |    |
-| algorithms                 |                                             | 16/07/2024       |      | 0   | 0  |
+| ode                        | Complete from moodle                        |                  | Done |     |    |
+| algorithms                 | Complete Simplex algo                       |                  |      |     |    |
 | numerical analysis         | Complete SVD algo                           |                  | Done |     |    |
-| computational models       | Complete other semesters - Space complexity |                  | Done |     |    |
