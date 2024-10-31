@@ -2897,7 +2897,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -3996,7 +3996,7 @@ backslash
 \backslash
 uIf{$
 \backslash
-exists v
+forall v
 \backslash
 in children(u).
  low[v] 
@@ -4361,7 +4361,11 @@ text{append}
 \backslash
 left([v]_{
 \backslash
-xrightarrow[G^T_{
+xrightarrow[
+\backslash
+left(G^T
+\backslash
+right)_{
 \backslash
 pi}]{}}
 \backslash
@@ -5154,12 +5158,16 @@ end{algorithm}
 \begin_inset Formula $G$
 \end_inset
 
- גרף אזי 
+ גרף ויהיו 
 \begin_inset Formula $A,B\subseteq V\left(G\right)$
 \end_inset
 
  עבורם 
 \begin_inset Formula $A\uplus B=V\left(G\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(A,B\right)$
 \end_inset
 
 .
@@ -5178,11 +5186,11 @@ end{algorithm}
 \end_inset
 
  גרף ויהי 
-\begin_inset Formula $A,B\subseteq V\left(G\right)$
+\begin_inset Formula $\left(A,B\right)$
 \end_inset
 
  חתך אזי 
-\begin_inset Formula $\left\{ \left(u,v\right)\in E\left(G\right)\mid\left(u\in A\right)\land\left(v\in B\right)\right\} $
+\begin_inset Formula $E\left(A,B\right)=\left\{ \left(u,v\right)\in E\left(G\right)\mid\left(u\in A\right)\land\left(v\in B\right)\right\} $
 \end_inset
 
 .
@@ -5374,18 +5382,11 @@ gets$ dict($E$)
 
 \begin_layout Plain Layout
 
-    
+	$
 \backslash
-For{$e
+text{color} 
 \backslash
-in E$}{
-\end_layout
-
-\begin_layout Plain Layout
-
-        $
-\backslash
-text{color}[e] = 
+gets 
 \backslash
 text{White}$
 \backslash
@@ -5396,7 +5397,48 @@ text{White}$
 
 \begin_layout Plain Layout
 
-    }
+	$
+\backslash
+text{Blueless} 
+\backslash
+gets 
+\backslash
+P(
+\backslash
+P(V)
+\backslash
+times 
+\backslash
+P(V))$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	$
+\backslash
+text{Redless} 
+\backslash
+gets 
+\backslash
+P(
+\backslash
+{v
+\backslash
+to v
+\backslash
+mid v
+\backslash
+in V(G)
+\backslash
+})$
+\backslash
+
+\backslash
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -5419,17 +5461,17 @@ text{Blueless}
 \backslash
 gets 
 \backslash
-{A
+{(A,
+ B) 
 \backslash
-subseteq V
+text{ חתך}
 \backslash
 mid 
 \backslash
 forall e
 \backslash
-in (A^2 
-\backslash
-cap E).
+in E(A,
+ B).
  
 \backslash
 text{color}[e] 
@@ -5885,7 +5927,8 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$G$}}{
+name{$G,
+ w$}}{
 \end_layout
 
 \begin_layout Plain Layout
@@ -5918,29 +5961,17 @@ text{set}(V)$
 
 \begin_layout Plain Layout
 
-    
+	$
 \backslash
-For{$e
+text{color}
 \backslash
-in E$}{
-\end_layout
-
-\begin_layout Plain Layout
-
-        $
-\backslash
-text{color}[e] = 
+gets 
 \backslash
 text{White}$
 \backslash
 
 \backslash
 
-\end_layout
-
-\begin_layout Plain Layout
-
-    }
 \end_layout
 
 \begin_layout Plain Layout
@@ -6275,7 +6306,8 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$G$}}{
+name{$G,
+ w$}}{
 \end_layout
 
 \begin_layout Plain Layout
@@ -6299,11 +6331,9 @@ text{dict}(E)$
 \backslash
 gets 
 \backslash
-text{sort}(E)$
+text{sort}(E)$ 
 \backslash
-
-\backslash
-
+tcp{sort is done by $w$ from small to big}
 \end_layout
 
 \begin_layout Plain Layout
@@ -6422,6 +6452,13 @@ text{Blue}
 end{algorithm}
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -6616,7 +6653,8 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$G$}}{
+name{$G,
+ w$}}{
 \end_layout
 
 \begin_layout Plain Layout
@@ -6946,12 +6984,24 @@ end{algorithm}
 \begin_inset Formula $A\subseteq E$
 \end_inset
 
+ עבורה קיים עפ
+\begin_inset Quotes erd
+\end_inset
+
+מ 
+\begin_inset Formula $S\le G$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $A\subseteq E\left(S\right)$
+\end_inset
+
  יהי 
 \begin_inset Formula $C$
 \end_inset
 
  מעגל ותהא 
-\begin_inset Formula $e\in E$
+\begin_inset Formula $e\in E\left(C\right)$
 \end_inset
 
  בעלת משקל מקסימלי אזי קיים עפ
@@ -6981,23 +7031,31 @@ end{algorithm}
 \series default
 \color inherit
 :
- יהיו 
-\begin_inset Formula $T_{1},T_{2}\le G$
+ יהי 
+\begin_inset Formula $T\le G$
 \end_inset
 
  עפ
 \begin_inset Quotes erd
 \end_inset
 
-מ ויהיו 
+מ בעל משקליי קשתות כולל כפילויות 
 \begin_inset Formula $\a_{1}\le\ldots\le\a_{n}$
 \end_inset
 
- ו־
+ ויהי 
+\begin_inset Formula $S\le G$
+\end_inset
+
+ עפ
+\begin_inset Quotes erd
+\end_inset
+
+מ בעלי משקליי קשתות כולל כפילויות 
 \begin_inset Formula $\b_{1}\le\ldots\le\b_{m}$
 \end_inset
 
- משקליי הקשתות כולל כפילויות אזי 
+ אזי 
 \begin_inset Formula $n=m$
 \end_inset
 
@@ -7264,7 +7322,7 @@ end{algorithm}
 \end_inset
 
 מ ביחס ל־
-\begin_inset Formula $w^{\prime}$
+\begin_inset Formula $\omega$
 \end_inset
 
  באלגוריתם 
@@ -7890,10 +7948,33 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\d\left(s,t\right)=\inf_{\sigma\in\left\{ s\to t\right\} }\ell\left(\sigma\right)$
+\begin_inset Formula $\d_{\ell}\left(s,t\right)=\inf_{\sigma\in\left\{ s\to t\right\} }\ell\left(\sigma\right)$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
+הערה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ממושקל 
+\begin_inset Formula $\ell$
+\end_inset
+
+ אזי נסמן 
+\begin_inset Formula $\d=\d_{\ell}$
+\end_inset
+
+ כאשר ברור שמדובר במרחק ביחס למשקל.
 \end_layout
 
 \begin_layout Standard
@@ -7947,12 +8028,20 @@ end{algorithm}
 \series default
 \color inherit
 :
- יהיו 
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ממושקל 
+\begin_inset Formula $\ell$
+\end_inset
+
+ ויהיו 
 \begin_inset Formula $u,v,w\in V$
 \end_inset
 
  אזי 
-\begin_inset Formula $\d\left(u,v\right)\le\d\left(u,w\right)+\d\left(w,v\right)$
+\begin_inset Formula $\d_{\ell}\left(u,v\right)\le\d_{\ell}\left(u,w\right)+\d_{\ell}\left(w,v\right)$
 \end_inset
 
 .
@@ -8015,6 +8104,13 @@ status open
 
 \backslash
 begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
 \end_layout
 
 \begin_layout Plain Layout
@@ -8207,6 +8303,15 @@ gets i + 1$
 \begin_layout Plain Layout
 
     }
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+lIf{$c > 0$}{$c 
+\backslash
+gets 1$}
 \end_layout
 
 \begin_layout Plain Layout
@@ -9023,9 +9128,9 @@ gets 0$
  d,
  
 \backslash
-pi)
+pi) 
 \backslash
- gets 
+gets 
 \backslash
 text{BellmanFord}(G,
  
@@ -9144,13 +9249,6 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 \color black
@@ -9162,7 +9260,7 @@ end{algorithm}
 \begin_inset Formula $\text{IsZeroCircle}$
 \end_inset
 
- לאחר מחיקת כל הקשתות נקבל את גרף מק
+ לאחר מחיקת כל הקשתות בלולאה נקבל את גרף מק
 \begin_inset Quotes erd
 \end_inset
 
@@ -9185,7 +9283,7 @@ end{algorithm}
 \begin_inset Formula $\text{IsZeroCircle}$
 \end_inset
 
- לאחר מחיקת כל הקשתות קיים מעגל 
+ לאחר מחיקת כל הקשתות בלולאה קיים מעגל 
 \begin_inset Formula $C$
 \end_inset
 
@@ -9216,7 +9314,7 @@ end{algorithm}
 \begin_inset Formula $\text{IsZeroCircle}$
 \end_inset
 
- לאחר מחיקת כל הקשתות נקבל כי 
+ לאחר מחיקת כל הקשתות בלולאה נקבל כי 
 \begin_inset Formula $C$
 \end_inset
 
