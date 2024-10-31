@@ -1427,12 +1427,8 @@ EulerPath{$G$}}{
 
 \begin_layout Plain Layout
 
-    $
-\backslash
-{v,
- u
-\backslash
-}
+    $(v,
+ u)
 \backslash
 gets
 \backslash
@@ -1751,7 +1747,11 @@ end{algorithm}
 
 \series bold
 \color blue
-מסלול קצר ביותר בין קודקודים
+מסלול קצר ביותר בין קודקודים (מק
+\begin_inset Quotes erd
+\end_inset
+
+ב)
 \series default
 \color inherit
 :
@@ -1786,11 +1786,7 @@ end{algorithm}
 
 \series bold
 \color blue
-גרף המסלולים הקצרים ביותר מקודקוד (גרף מק
-\begin_inset Quotes erd
-\end_inset
-
-ב)
+גרף המסלולים הקצרים ביותר מקודקוד
 \series default
 \color inherit
 :
@@ -2280,7 +2276,11 @@ For{$u
 \backslash
 in V
 \backslash
-backslash{s}$}{
+backslash 
+\backslash
+{s
+\backslash
+}$}{
 \end_layout
 
 \begin_layout Plain Layout
@@ -2702,7 +2702,15 @@ end{algorithm}
 \series default
 \color inherit
 :
- עץ 
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $s\in V$
+\end_inset
+
+ אזי עץ 
 \begin_inset Formula $\text{DFS}$
 \end_inset
 
@@ -2767,6 +2775,10 @@ end{algorithm}
 \begin_inset Formula $v$
 \end_inset
 
+ ביער 
+\begin_inset Formula $G_{\pi}$
+\end_inset
+
 .
 \end_layout
 
@@ -2786,6 +2798,10 @@ end{algorithm}
 
  הינו אב של 
 \begin_inset Formula $u$
+\end_inset
+
+ ביער 
+\begin_inset Formula $G_{\pi}$
 \end_inset
 
 .
@@ -2813,7 +2829,7 @@ end{algorithm}
 \end_inset
 
  גרף לא מכוון ותהא 
-\begin_inset Formula $\left(u,v\right)$
+\begin_inset Formula $\left\{ u,v\right\} $
 \end_inset
 
  קשת עץ אזי 
@@ -2881,7 +2897,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -3142,7 +3158,7 @@ SetKwProg{Fn}{function}{:}{}
 \backslash
 Fn{
 \backslash
-name{$v,
+name{$u,
  k,
  f,
  
@@ -3185,7 +3201,7 @@ gets i + 1$
 
 \begin_layout Plain Layout
 
-    $k[v]
+    $k[u]
 \backslash
 gets i$
 \backslash
@@ -3198,9 +3214,9 @@ gets i$
 
     
 \backslash
-For{$w
+For{$v
 \backslash
-in Adj(v)$}{
+in Adj(u)$}{
 \end_layout
 
 \begin_layout Plain Layout
@@ -3224,7 +3240,7 @@ pi[u])$}{
 
             $
 \backslash
-text{low} 
+text{low}[u] 
 \backslash
 gets 
 \backslash
@@ -3253,9 +3269,9 @@ text{White}$}{
 
             $
 \backslash
-pi[w]
+pi[v]
 \backslash
-gets v$
+gets u$
 \backslash
 
 \backslash
@@ -3266,7 +3282,7 @@ gets v$
 
             
 \backslash
-name{$w,
+name{$v,
  k,
  f,
  
@@ -3289,7 +3305,7 @@ text{low},
 
             $
 \backslash
-text{low} 
+text{low}[u] 
 \backslash
 gets 
 \backslash
@@ -3343,7 +3359,7 @@ gets i +1$
 
 \begin_layout Plain Layout
 
-    $f[v] 
+    $f[u] 
 \backslash
 gets i$
 \backslash
