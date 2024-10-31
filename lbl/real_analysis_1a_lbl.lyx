@@ -414,8 +414,28 @@ literal "true"
 טענה
 \series default
 :
- 
-\begin_inset Formula $\nexists x\in\bbq.\forall a\in\left\{ y\in\bbq.y^{2}\le2\right\} .\forall b\in\left\{ y\in\bbq_{+}\mid y^{2}\ge2\right\} .a\le x\le b$
+ לא קיים 
+\begin_inset Formula $x\in\bbq$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $a\in\bbq$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $a^{2}\le2$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $b\in\bbq_{+}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $b^{2}\ge2$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a\le x\le b$
 \end_inset
 
 .
@@ -436,11 +456,11 @@ literal "true"
 \series default
 \color inherit
 :
- 
+ מספר 
 \begin_inset Formula $x\in\bbr$
 \end_inset
 
- שמקיים 
+ המקיים 
 \begin_inset Formula $\forall y\in A.y\le x$
 \end_inset
 
@@ -474,7 +494,7 @@ literal "true"
 \series default
 \color inherit
 :
- 
+ קבוצה 
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
@@ -493,11 +513,11 @@ literal "true"
 \series default
 \color inherit
 :
- 
+ מספר 
 \begin_inset Formula $x\in\bbr$
 \end_inset
 
- שמקיים 
+ המקיים 
 \begin_inset Formula $\forall y\in A.x\le y$
 \end_inset
 
@@ -531,7 +551,7 @@ literal "true"
 \series default
 \color inherit
 :
- 
+ קבוצה 
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
@@ -550,15 +570,19 @@ literal "true"
 \series default
 \color inherit
 :
- 
+ קבוצה 
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
- המקיימת (חסומה מלעיל)
-\begin_inset Formula $\land$
+ עבורה 
+\begin_inset Formula $A$
 \end_inset
 
-(חסומה מלרע).
+ חסומה מלעיל וכן 
+\begin_inset Formula $A$
+\end_inset
+
+ חסומה מלרע.
 \end_layout
 
 \begin_layout Standard
@@ -569,11 +593,15 @@ literal "true"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $x\in A\subseteq\bbr$
+ תהא 
+\begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
- שמקיים 
+ אזי 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ המקיים 
 \begin_inset Formula $\forall y\in A.y\le x$
 \end_inset
 
@@ -588,12 +616,20 @@ literal "true"
 \series default
 \color inherit
 :
- המקסימום של 
-\begin_inset Formula $A$
+ תהא 
+\begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
- הוא 
-\begin_inset Formula $\max\left(A\right)$
+ קבוצה ויהי 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\forall y\in A.y\le x$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\max\left(A\right)=x$
 \end_inset
 
 .
@@ -607,11 +643,15 @@ literal "true"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $x\in A\subseteq\bbr$
+ תהא 
+\begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
- שמקיים 
+ אזי 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ המקיים 
 \begin_inset Formula $\forall y\in A.x\le y$
 \end_inset
 
@@ -626,12 +666,20 @@ literal "true"
 \series default
 \color inherit
 :
- המינימום של 
-\begin_inset Formula $A$
+ תהא 
+\begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
- הוא 
-\begin_inset Formula $\min\left(A\right)$
+ קבוצה ויהי 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\forall y\in A.x\le y$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\min\left(A\right)=x$
 \end_inset
 
 .
@@ -645,12 +693,16 @@ literal "true"
 \series default
 \color inherit
 :
- יהיו 
-\begin_inset Formula $\emptyset\ne X,Y\subseteq\bbr$
+ תהיינה 
+\begin_inset Formula $X,Y\in\P\left(\bbr\right)\backslash\left\{ \emptyset\right\} $
+\end_inset
+
+ עבורן 
+\begin_inset Formula $\forall x\in X.\forall y\in Y.x\le y$
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(\forall x\in X.\forall y\in Y.x\le y\right)\implies\left(\exists c\in\bbr.\forall x\in X.\forall y\in Y.x\le c\le y\right)$
+\begin_inset Formula $\exists c\in\bbr.\forall x\in X.\forall y\in Y.x\le c\le y$
 \end_inset
 
 .
@@ -664,11 +716,19 @@ literal "true"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\forall A\in\P\left(\bbr\right)\backslash\left\{ \emptyset\right\} .\left(\overline{B}_{A}\ne\emptyset\right)\implies\exists\min\left(\overline{B}_{A}\right)$
+ תהא 
+\begin_inset Formula $A\in\P\left(\bbr\right)\backslash\left\{ \emptyset\right\} $
 \end_inset
 
-.
+ עבורה 
+\begin_inset Formula $\overline{B}_{A}\ne\emptyset$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\min\left(\overline{B}_{A}\right)$
+\end_inset
+
+ קיים.
 \end_layout
 
 \begin_layout Standard
@@ -679,11 +739,19 @@ literal "true"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\forall A\in\P\left(\bbr\right)\backslash\left\{ \emptyset\right\} .\left(\underline{B}_{A}\ne\emptyset\right)\implies\exists\max\left(\underline{B}_{A}\right)$
+ תהא 
+\begin_inset Formula $A\in\P\left(\bbr\right)\backslash\left\{ \emptyset\right\} $
 \end_inset
 
-.
+ עבורה 
+\begin_inset Formula $\underline{B}_{A}\ne\emptyset$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\max\left(\underline{B}_{A}\right)$
+\end_inset
+
+ קיים.
 \end_layout
 
 \begin_layout Standard
@@ -698,7 +766,7 @@ literal "true"
 \begin_inset Formula $\bbr$
 \end_inset
 
- הוא השדה הסדור השלם הקטן ביותר המכיל את 
+ הינו השדה הסדור השלם הקטן ביותר המכיל את 
 \begin_inset Formula $\bbq$
 \end_inset
 
@@ -755,8 +823,35 @@ literal "true"
 \begin_inset Formula $A\subseteq\bbr$
 \end_inset
 
- אזי 
-\begin_inset Formula $\left(\exists\max\left(A\right)\implies\sup\left(A\right)=\max\left(A\right)\right)\land\left(\exists\min\left(A\right)\implies\inf\left(A\right)=\min\left(A\right)\right)$
+ עבורה 
+\begin_inset Formula $\min\left(A\right)$
+\end_inset
+
+ קיים אזי 
+\begin_inset Formula $\inf\left(A\right)=\min\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $A\subseteq\bbr$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\max\left(A\right)$
+\end_inset
+
+ קיים אזי 
+\begin_inset Formula $\sup\left(A\right)=\max\left(A\right)$
 \end_inset
 
 .
@@ -771,11 +866,38 @@ literal "true"
 \color inherit
 :
  יהיו 
-\begin_inset Formula $a<b\in\bbr$
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $a<b$
 \end_inset
 
  אזי 
-\begin_inset Formula $\inf\left(a,b\right)=a\land\sup\left(a,b\right)=b$
+\begin_inset Formula $\inf\left(\left(a,b\right)\right)=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $a<b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sup\left(\left(a,b\right)\right)=b$
 \end_inset
 
 .
@@ -823,7 +945,7 @@ literal "true"
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\forall a\in\bbr.a<b\implies a\notin\overline{B}_{A}$
+\begin_inset Formula $\forall a\in\bbr.\left(\left(a<b\right)\implies\left(a\notin\overline{B}_{A}\right)\right)$
 \end_inset
 
 .
@@ -838,11 +960,11 @@ literal "true"
 \color inherit
 :
  תהא 
-\begin_inset Formula $\emptyset\ne A\subseteq\bbr$
+\begin_inset Formula $A\in\P\left(\bbr\right)\backslash\left\{ \emptyset\right\} $
 \end_inset
 
  חסומה מלעיל אזי 
-\begin_inset Formula $\forall\e>0.\exists a\in A.\sup\left(A\right)-\e<a\le\sup\left(A\right)$
+\begin_inset Formula $\forall\e>0.\exists a\in A.\left(\sup\left(A\right)-\e<a\le\sup\left(A\right)\right)$
 \end_inset
 
 .
@@ -857,11 +979,11 @@ literal "true"
 \color inherit
 :
  תהא 
-\begin_inset Formula $\emptyset\ne A\subseteq\bbr$
+\begin_inset Formula $A\in\P\left(\bbr\right)\backslash\left\{ \emptyset\right\} $
 \end_inset
 
  אזי 
-\begin_inset Formula $b=\sup\left(A\right)\iff\left(\forall x\in A.x\le b\right)\land\left(\forall\e>0.\exists x\in A.x>b-\e\right)$
+\begin_inset Formula $\left(b=\sup\left(A\right)\right)\iff\left(\left(\forall x\in A.x\le b\right)\land\left(\forall\e>0.\exists x\in A.x>b-\e\right)\right)$
 \end_inset
 
 .
@@ -876,7 +998,7 @@ literal "true"
 \color inherit
 :
  תהיינה 
-\begin_inset Formula $\emptyset\ne A,B\subseteq\bbr$
+\begin_inset Formula $A,B\in\P\left(\bbr\right)\backslash\left\{ \emptyset\right\} $
 \end_inset
 
  חסומות אזי
@@ -911,8 +1033,16 @@ literal "true"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\forall c\in\bbr_{+}.\exists b\in\bbr_{+}.b^{2}=c$
+ יהי 
+\begin_inset Formula $c\in\bbr_{+}$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $b\in\bbr_{+}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $b^{2}=c$
 \end_inset
 
 .
@@ -926,8 +1056,20 @@ literal "true"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\forall c\in\bbr_{+}.\forall n\in\bbn.\exists b\in\bbr_{+}.b^{n}=c$
+ יהי 
+\begin_inset Formula $c\in\bbr_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $b\in\bbr_{+}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $b^{n}=c$
 \end_inset
 
 .
@@ -952,7 +1094,7 @@ literal "true"
 \begin_inset Formula $B\subseteq\bbr$
 \end_inset
 
- אזי 
+ אזי קבוצה 
 \begin_inset Formula $A\subseteq B$
 \end_inset
 
@@ -983,12 +1125,12 @@ literal "true"
 \begin_inset Formula $\bbr$
 \end_inset
 
-) 
+)
 \begin_inset Formula $\iff$
 \end_inset
 
- (
-\begin_inset Formula $\forall a,b\in\bbr.a<b\implies\left(a,b\right)\cap S\ne\emptyset$
+(
+\begin_inset Formula $\forall a,b\in\bbr.\left(\left(a<b\right)\implies\left(\left(a,b\right)\cap S\ne\emptyset\right)\right)$
 \end_inset
 
 ).
@@ -1002,8 +1144,16 @@ literal "true"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\forall a,b\in\bbq.a<b\implies\left|\left(a,b\right)\cap\bbq\right|=\aleph_{0}$
+ יהיו 
+\begin_inset Formula $a,b\in\bbq$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $a<b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\left(a,b\right)\cap\bbq\right|=\aleph_{0}$
 \end_inset
 
 .
@@ -1017,8 +1167,16 @@ literal "true"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\forall a,b\in\bbq.a<b\implies\exists r\in\bbr\backslash\bbq.a<r<b$
+ יהיו 
+\begin_inset Formula $a,b\in\bbq$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $a<b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\exists r\in\bbr\backslash\bbq.\left(a<r<b\right)$
 \end_inset
 
 .
@@ -1032,8 +1190,16 @@ literal "true"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\forall x,y\in\bbr.x<y\implies\exists q\in\bbq.x<q<y$
+ יהיו 
+\begin_inset Formula $x,y\in\bbr$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $x<y$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\exists q\in\bbq.\left(x<q<y\right)$
 \end_inset
 
 .
@@ -1047,7 +1213,7 @@ literal "true"
 \series default
 \color inherit
 :
- (
+ 
 \begin_inset Formula $\bbq$
 \end_inset
 
@@ -1055,11 +1221,22 @@ literal "true"
 \begin_inset Formula $\bbr$
 \end_inset
 
-)
-\begin_inset Formula $\land$
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+:
+ לכל 
+\begin_inset Formula $a,b\in\bbr$
 \end_inset
 
-(לכל 
+ עבורם 
 \begin_inset Formula $a<b$
 \end_inset
 
@@ -1071,7 +1248,7 @@ literal "true"
 \begin_inset Formula $\left[a,b\right]$
 \end_inset
 
-).
+.
 \end_layout
 
 \begin_layout Standard
@@ -1093,11 +1270,10 @@ literal "true"
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
- נגדיר 
-\begin_inset Formula $n!=\begin{cases}
-1 & n=0\\
-\left(n-1\right)!\cdot n & else
-\end{cases}$
+ אזי 
+\begin_inset Formula $n!=\left\{ \begin{smallmatrix}1 &  & n=0\\
+\left(n-1\right)!\cdot n &  & \text{else}
+\end{smallmatrix}\right.$
 \end_inset
 
 .
@@ -1130,7 +1306,7 @@ literal "true"
 \series default
 \color inherit
 :
- יהי 
+ יהיו 
 \begin_inset Formula $n,k\in\bbn_{+}$
 \end_inset
 
@@ -1167,16 +1343,41 @@ literal "true"
 \begin_layout Standard
 
 \series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[n\right]=\left\{ 1\ldots n\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 \color green
 למה
 \series default
 \color inherit
 :
  יהיו 
-\begin_inset Formula $a_{1}\ldots a_{n}\ge0$
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbr$
 \end_inset
 
- המקיימים 
+ עבורם 
+\begin_inset Formula $a_{i}\ge0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ וכן 
 \begin_inset Formula $\prod_{i=1}^{n}a_{i}=1$
 \end_inset
 
@@ -1196,7 +1397,15 @@ literal "true"
 \color inherit
 :
  יהיו 
-\begin_inset Formula $a_{1}\ldots a_{n}>0$
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbr$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $a_{i}\ge0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
 \end_inset
 
  אזי 
@@ -1214,8 +1423,20 @@ literal "true"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\left(\frac{\sum_{i=1}^{n}a_{i}}{n}=\sqrt[n]{\prod_{i=1}^{n}a_{i}}=\frac{n}{\sum_{i=1}^{n}\frac{1}{a_{i}}}\right)\iff\left(a_{1}=\ldots=a_{n}\right)$
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbr$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $a_{i}\ge0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\frac{\sum_{i=1}^{n}a_{i}}{n}=\sqrt[n]{\prod_{i=1}^{n}a_{i}}=\frac{n}{\sum_{i=1}^{n}\frac{1}{a_{i}}}\right)\iff\left(\forall i,j\in\left[n\right].a_{i}=a_{j}\right)$
 \end_inset
 
 .
@@ -1229,23 +1450,16 @@ literal "true"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\forall x>-1.\forall n\in\bbn.\left(1+x\right)^{n}\ge1+nx$
+ יהי 
+\begin_inset Formula $x>-1$
 \end_inset
 
-.
-\end_layout
+ ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
 
-\begin_layout Standard
-
-\series bold
-\color green
-אי־שיוויון ברנולי המוכלל
-\series default
-\color inherit
-:
- 
-\begin_inset Formula $\forall n\in\bbn.\forall x\in\bbr^{n}.\left|\sum_{i=1}^{n}x_{i}\right|\le\sum_{i=1}^{n}\left|x_{i}\right|$
+ אזי 
+\begin_inset Formula $\left(1+x\right)^{n}\ge1+nx$
 \end_inset
 
 .
@@ -1260,10 +1474,9 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $\left|x\right|=\begin{cases}
-x & x\ge0\\
--x & x<0
-\end{cases}$
+\begin_inset Formula $\left|x\right|=\left\{ \begin{smallmatrix}x &  & x\ge0\\
+-x &  & x<0
+\end{smallmatrix}\right.$
 \end_inset
 
 .
@@ -1281,17 +1494,26 @@ x & x\ge0\\
 \begin_inset Formula $a,b\in\bbr$
 \end_inset
 
- אזי
-\end_layout
-
-\begin_layout Itemize
+ אזי 
 \begin_inset Formula $\left(\left|a\right|\ge b\right)\iff\left(\left(b\le a\right)\lor\left(a\le-b\right)\right)$
 \end_inset
 
-.
+
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\left(\left|a\right|\le b\right)\iff\left(-b\le a\le b\right)$
 \end_inset
 
@@ -1481,8 +1703,22 @@ x & x\ge0\\
 \begin_inset Formula $a_{n}=a\left(n\right)$
 \end_inset
 
-,
- 
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $a$
+\end_inset
+
+ סדרה אזי 
 \begin_inset Formula $a=\left(a_{n}\right)_{n=0}^{\infty}$
 \end_inset
 
@@ -1558,7 +1794,7 @@ x & x\ge0\\
 \begin_layout Itemize
 עולה ממש:
  
-\begin_inset Formula $\forall n,m\in\bbn.n<m\implies a_{n}<a_{m}$
+\begin_inset Formula $\forall n,m\in\bbn.\left(\left(n<m\right)\implies\left(a_{n}<a_{m}\right)\right)$
 \end_inset
 
 .
@@ -1567,7 +1803,7 @@ x & x\ge0\\
 \begin_layout Itemize
 עולה:
  
-\begin_inset Formula $\forall n,m\in\bbn.n<m\implies a_{n}\le a_{m}$
+\begin_inset Formula $\forall n,m\in\bbn.\left(\left(n<m\right)\implies\left(a_{n}\le a_{m}\right)\right)$
 \end_inset
 
 .
@@ -1576,7 +1812,7 @@ x & x\ge0\\
 \begin_layout Itemize
 יורדת ממש:
  
-\begin_inset Formula $\forall n,m\in\bbn.n<m\implies a_{n}>a_{m}$
+\begin_inset Formula $\forall n,m\in\bbn.\left(\left(n<m\right)\implies\left(a_{n}>a_{m}\right)\right)$
 \end_inset
 
 .
@@ -1585,7 +1821,7 @@ x & x\ge0\\
 \begin_layout Itemize
 יורדת:
  
-\begin_inset Formula $\forall n,m\in\bbn.n<m\implies a_{n}\ge a_{m}$
+\begin_inset Formula $\forall n,m\in\bbn.\left(\left(n<m\right)\implies\left(a_{n}\ge a_{m}\right)\right)$
 \end_inset
 
 .
@@ -1691,12 +1927,12 @@ x & x\ge0\\
 \begin_inset Formula $L\in\bbr$
 \end_inset
 
- תהא 
+ ותהא 
 \begin_inset Formula $a$
 \end_inset
 
  סדרה עבורה 
-\begin_inset Formula $\underset{n\to\infty}{\lim}a_{n}=L$
+\begin_inset Formula $\lim_{n\to\infty}a_{n}=L$
 \end_inset
 
  אזי 
@@ -1831,7 +2067,7 @@ x & x\ge0\\
 \begin_inset Formula $L_{1},L_{2}\in\bbr$
 \end_inset
 
- תהא 
+ ותהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -1862,7 +2098,7 @@ x & x\ge0\\
 \begin_inset Formula $L\in\bbr$
 \end_inset
 
- תהא 
+ ותהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2091,7 +2327,11 @@ x & x\ge0\\
 \series default
 \color inherit
 :
- תהא 
+ יהי 
+\begin_inset Formula $L\in\bbr$
+\end_inset
+
+ ותהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2110,7 +2350,11 @@ x & x\ge0\\
 \series default
 \color inherit
 :
- תהא 
+ יהי 
+\begin_inset Formula $L\in\bbr$
+\end_inset
+
+ ותהא 
 \begin_inset Formula $a$
 \end_inset
 
@@ -2133,52 +2377,101 @@ x & x\ge0\\
 \series default
 \color inherit
 :
- תהא 
+ יהי 
+\begin_inset Formula $L\in\bbr$
+\end_inset
+
+ ותהא 
 \begin_inset Formula $a$
 \end_inset
 
- סדרה מונוטונית אזי
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $a$
+ סדרה יורדת ממש עבורה 
+\begin_inset Formula $a_{n}\to L$
 \end_inset
 
- יורדת ממש אזי 
-\begin_inset Formula $\left(a_{n}\downarrow L\right)\iff\left(a_{n}\to L\right)$
+ אזי 
+\begin_inset Formula $a_{n}\downarrow L$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
+
+\series bold
+\color purple
+סימון
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $L\in\bbr$
+\end_inset
+
+ ותהא 
 \begin_inset Formula $a$
 \end_inset
 
- עולה ממש אזי 
-\begin_inset Formula $\left(a_{n}\uparrow L\right)\iff\left(a_{n}\to L\right)$
+ סדרה עולה ממש עבורה 
+\begin_inset Formula $a_{n}\to L$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a_{n}\uparrow L$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
+
+\series bold
+\color purple
+סימון
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $L\in\bbr$
+\end_inset
+
+ ותהא 
 \begin_inset Formula $a$
 \end_inset
 
- יורדת אזי 
-\begin_inset Formula $\left(a_{n}\searrow L\right)\iff\left(a_{n}\to L\right)$
+ סדרה יורדת עבורה 
+\begin_inset Formula $a_{n}\to L$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a_{n}\searrow L$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
+
+\series bold
+\color purple
+סימון
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $L\in\bbr$
+\end_inset
+
+ ותהא 
 \begin_inset Formula $a$
 \end_inset
 
- עולה אזי 
-\begin_inset Formula $\left(a_{n}\nnearrow L\right)\iff\left(a_{n}\to L\right)$
+ סדרה עולה עבורה 
+\begin_inset Formula $a_{n}\to L$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a_{n}\nnearrow L$
 \end_inset
 
 .
@@ -2201,7 +2494,11 @@ x & x\ge0\\
 \end_inset
 
  עבורן 
-\begin_inset Formula $\left(a_{n}\searrow x\right)\land\left(b_{n}\nnearrow x\right)$
+\begin_inset Formula $a_{n}\searrow x$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b_{n}\nnearrow x$
 \end_inset
 
 .
@@ -2227,11 +2524,40 @@ x & x\ge0\\
 \end_inset
 
  אזי קיים 
-\begin_inset Formula $a:\bbz\to\left\{ 0,\ldots,9\right\} $
+\begin_inset Formula $n\in\bbn$
 \end_inset
 
- המקיים 
-\begin_inset Formula $x=\sum_{i=-\infty}^{\infty}a_{i}\cdot10^{-i}$
+ וקיימת 
+\begin_inset Formula $a:\bbz\backslash\bbn\to\left\{ 0,\ldots,9\right\} $
+\end_inset
+
+ עבורם 
+\begin_inset Formula $x=n+\sum_{i=-\infty}^{-1}a_{i}\cdot10^{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שארית
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,m,k\in\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\ell\in\left\{ 0\ldots n\right\} $
+\end_inset
+
+ עבורם 
+\begin_inset Formula $n=km+\ell$
+\end_inset
+
+ אזי 
+\begin_inset Formula $m\%n=\ell$
 \end_inset
 
 .
@@ -2249,8 +2575,16 @@ x & x\ge0\\
 \begin_inset Formula $d_{1}\ldots d_{n}\in\left\{ 0\ldots9\right\} $
 \end_inset
 
+ נגדיר 
+\begin_inset Formula $a:\bbn\to\left\{ d_{1}\ldots d_{n}\right\} $
+\end_inset
+
+ כך 
+\begin_inset Formula $a\left(i\right)=d_{i\%n}$
+\end_inset
+
  אזי 
-\begin_inset Formula $\overline{d_{1}\dots d_{n}}=d_{1}\dots d_{n}d_{1}\dots d_{n}\ldots$
+\begin_inset Formula $\overline{d_{1}\dots d_{n}}=a$
 \end_inset
 
 .
@@ -2269,7 +2603,7 @@ x & x\ge0\\
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(q\in\bbq\right)\iff\left(\exists a\in\bbn.\exists a_{1}\ldots a_{n},b_{1}\ldots b_{\ell}\left\{ 0\ldots9\right\} .q=a.a_{1}\ldots a_{n}\overline{b_{1}\ldots b_{\ell}}\right)$
+\begin_inset Formula $\left(q\in\bbq\right)\iff\left(\exists n,k,\ell\in\bbn.\exists a_{1}\ldots a_{k},b_{1}\ldots b_{\ell}\in\left\{ 0\ldots9\right\} .\left(q=n.a_{1}\ldots a_{k}\overline{b_{1}\ldots b_{\ell}}\right)\right)$
 \end_inset
 
 .
@@ -2330,7 +2664,7 @@ x & x\ge0\\
 \end_inset
 
  אזי 
-\begin_inset Formula $\left|\left\{ \left\langle p,q\right\rangle \in\bbq\times\bbn\mid\left|\theta-\frac{p}{q}\right|<\frac{1}{q^{2}}\right\} \right|\ge\aleph_{0}$
+\begin_inset Formula $\left|\left\{ \left\langle p,q\right\rangle \in\bbq\times\bbn\bmid\left|\theta-\frac{p}{q}\right|<\frac{1}{q^{2}}\right\} \right|\ge\aleph_{0}$
 \end_inset
 
 .
@@ -2348,8 +2682,20 @@ x & x\ge0\\
 \begin_inset Formula $a\in\bbr$
 \end_inset
 
- עבורו 
-\begin_inset Formula $\forall p\in\bbq.\forall q\in\bbn.\left(\left|\theta-\frac{p}{q}\right|<\frac{1}{q^{2}}\right)\implies\left(\exists c\in\bbr.\frac{c}{q^{2}}<\left|\theta-\frac{p}{q}\right|\right)$
+ עבורו לכל 
+\begin_inset Formula $p\in\bbq$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\left|\theta-\frac{p}{q}\right|<\frac{1}{q^{2}}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\exists c\in\bbr.\frac{c}{q^{2}}<\left|\theta-\frac{p}{q}\right|$
 \end_inset
 
 .
@@ -2359,34 +2705,38 @@ x & x\ge0\\
 
 \series bold
 \color brown
-חשבון גבולות
+טענה חשבון גבולות
 \series default
 \color inherit
 :
  יהיו 
-\begin_inset Formula $a,b\in\bbr$
+\begin_inset Formula $x,y\in\bbr$
 \end_inset
 
  ותהיינה 
-\begin_inset Formula $\left(a_{n}\right),\left(b_{n}\right)$
+\begin_inset Formula $a,b$
 \end_inset
 
  סדרות המקיימות 
-\begin_inset Formula $\left(a_{n}\to a\right)\land\left(b_{n}\to b\right)$
+\begin_inset Formula $a_{n}\to x$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b_{n}\to y$
 \end_inset
 
  אזי
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $a_{n}+b_{n}\to a+b$
+\begin_inset Formula $a_{n}+b_{n}\to x+y$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $a_{n}\cdot b_{n}\to a\cdot b$
+\begin_inset Formula $a_{n}\cdot b_{n}\to x\cdot y$
 \end_inset
 
 .
@@ -2394,7 +2744,7 @@ x & x\ge0\\
 
 \begin_layout Itemize
 אם 
-\begin_inset Formula $b\ne0$
+\begin_inset Formula $y\ne0$
 \end_inset
 
  וכן 
@@ -2402,7 +2752,7 @@ x & x\ge0\\
 \end_inset
 
  אזי 
-\begin_inset Formula $\frac{a_{n}}{b_{n}}\to\frac{a}{b}$
+\begin_inset Formula $\frac{a_{n}}{b_{n}}\to\frac{x}{y}$
 \end_inset
 
 .
@@ -2427,7 +2777,7 @@ x & x\ge0\\
 \begin_inset Formula $L\in\bbr$
 \end_inset
 
- תהא 
+ ותהא 
 \begin_inset Formula $d_{n}$
 \end_inset
 
@@ -2451,7 +2801,7 @@ x & x\ge0\\
 \color inherit
 :
  תהא 
-\begin_inset Formula $a_{n}$
+\begin_inset Formula $a$
 \end_inset
 
  סדרה אי שלילית המקיימת 
@@ -2477,8 +2827,8 @@ x & x\ge0\\
 \series default
 \color inherit
 :
- יהיו 
-\begin_inset Formula $a_{n},b_{n}$
+ תהיינה 
+\begin_inset Formula $a,b$
 \end_inset
 
  סדרות עבורן 
@@ -2486,7 +2836,7 @@ x & x\ge0\\
 \end_inset
 
  אזי 
-\begin_inset Formula $a_{n}\preccurlyeq b_{n}$
+\begin_inset Formula $a\preccurlyeq b$
 \end_inset
 
 .
@@ -2500,8 +2850,8 @@ x & x\ge0\\
 \series default
 \color inherit
 :
- יהיו 
-\begin_inset Formula $a_{n},b_{n}$
+ תהיינה 
+\begin_inset Formula $a,b$
 \end_inset
 
  סדרות עבורן 
@@ -2509,7 +2859,7 @@ x & x\ge0\\
 \end_inset
 
  אזי 
-\begin_inset Formula $a_{n}\prec b_{n}$
+\begin_inset Formula $a\prec b$
 \end_inset
 
 .
@@ -2524,11 +2874,15 @@ x & x\ge0\\
 \color inherit
 :
  תהיינה 
-\begin_inset Formula $a_{n},b_{n}$
+\begin_inset Formula $a,b$
 \end_inset
 
- סדרות מתכנסות אזי 
-\begin_inset Formula $\left(a_{n}\preccurlyeq b_{n}\right)\implies\left(\lim_{n\to\infty}a_{n}\le\lim_{n\to\infty}b_{n}\right)$
+ סדרות מתכנסות עבורן 
+\begin_inset Formula $a\preccurlyeq b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lim_{n\to\infty}a_{n}\le\lim_{n\to\infty}b_{n}$
 \end_inset
 
 .
@@ -2542,16 +2896,28 @@ x & x\ge0\\
 \series default
 \color inherit
 :
- תהיינה 
-\begin_inset Formula $a_{n},b_{n},c_{n}$
+ יהי 
+\begin_inset Formula $L\in\bbr$
 \end_inset
 
- סדרות המקיימות 
-\begin_inset Formula $a_{n}\preccurlyeq b_{n}\preccurlyeq c_{n}$
+ ותהיינה 
+\begin_inset Formula $a,b,c$
+\end_inset
+
+ סדרות עבורן 
+\begin_inset Formula $a\preccurlyeq b$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b\preccurlyeq c$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a,c\to L$
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(a_{n},c_{n}\to L\right)\implies\left(b_{n}\to L\right)$
+\begin_inset Formula $b_{n}\to L$
 \end_inset
 
 .
@@ -2566,19 +2932,19 @@ x & x\ge0\\
 \color inherit
 :
  תהא 
-\begin_inset Formula $a_{n}$
+\begin_inset Formula $a$
 \end_inset
 
  סדרה חסומה ותהא 
-\begin_inset Formula $b_{n}$
+\begin_inset Formula $b$
 \end_inset
 
- סדרה המקיימת 
-\begin_inset Formula $b_{n}\to0$
+ סדרה עבורה 
+\begin_inset Formula $b\to0$
 \end_inset
 
  אזי 
-\begin_inset Formula $a_{n}b_{n}\to0$
+\begin_inset Formula $a\cdot b\to0$
 \end_inset
 
 .
@@ -2593,11 +2959,11 @@ x & x\ge0\\
 \color inherit
 :
  תהא 
-\begin_inset Formula $a_{n}$
+\begin_inset Formula $a$
 \end_inset
 
  סדרה חסומה אזי 
-\begin_inset Formula $\frac{a_{n}}{n}\to0$
+\begin_inset Formula $\frac{a}{n}\to0$
 \end_inset
 
 .
@@ -2615,8 +2981,12 @@ x & x\ge0\\
 \begin_inset Formula $B\subseteq\bbr$
 \end_inset
 
- חסומה מלעיל אזי 
-\begin_inset Formula $\exists b\in B^{\bbn}.b_{n}\to\sup\left(B\right)$
+ חסומה מלעיל אזי קיימת 
+\begin_inset Formula $b:\bbn\to B$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $b\to\sup\left(B\right)$
 \end_inset
 
 .
@@ -2634,8 +3004,12 @@ x & x\ge0\\
 \begin_inset Formula $B\subseteq\bbr$
 \end_inset
 
- חסומה מלרע אזי 
-\begin_inset Formula $\exists b\in B^{\bbn}.b_{n}\to\inf\left(B\right)$
+ חסומה מלרע אזי קיימת 
+\begin_inset Formula $b:\bbn\to B$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $b\to\inf\left(B\right)$
 \end_inset
 
 .
@@ -2650,21 +3024,46 @@ x & x\ge0\\
 \color inherit
 :
  תהיינה 
-\begin_inset Formula $a_{n},b_{n}$
+\begin_inset Formula $a,b$
 \end_inset
 
- סדרות אזי
-\end_layout
+ סדרות עבורן 
+\begin_inset Formula $a\to\infty$
+\end_inset
 
-\begin_layout Itemize
-\begin_inset Formula $\left(a_{n}\to\infty\right)\land\left(a_{n}\preccurlyeq b_{n}\right)\implies\left(b_{n}\to\infty\right)$
+ וכן 
+\begin_inset Formula $a\preccurlyeq b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $b\to\infty$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $\left(a_{n}\to-\infty\right)\land\left(b_{n}\preccurlyeq a_{n}\right)\implies\left(b_{n}\to-\infty\right)$
+\begin_layout Standard
+
+\series bold
+\color orange
+טענה
+\series default
+\color inherit
+:
+ תהיינה 
+\begin_inset Formula $a,b$
+\end_inset
+
+ סדרות עבורן 
+\begin_inset Formula $a\to-\infty$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b\preccurlyeq a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $b\to-\infty$
 \end_inset
 
 .
@@ -2679,11 +3078,19 @@ x & x\ge0\\
 \color inherit
 :
  תהא 
-\begin_inset Formula $a_{n}$
+\begin_inset Formula $a$
 \end_inset
 
- סדרה אי שלילית אזי 
-\begin_inset Formula $\left(\exists\a\in\left[0,1\right).a_{n}\prec\a^{n}\right)\implies\left(a_{n}\to0\right)$
+ סדרה אי שלילית עבורה קיים 
+\begin_inset Formula $\a\in\left[0,1\right)$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $a\prec\a^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a\to0$
 \end_inset
 
 .
@@ -2713,14 +3120,14 @@ x & x\ge0\\
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $0\le p<1\implies a_{n}\to0$
+\begin_inset Formula $\left(0\le p<1\right)\implies\left(a_{n}\to0\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $p>1\implies a_{n}\to\infty$
+\begin_inset Formula $\left(p>1\right)\implies\left(a_{n}\to\infty\right)$
 \end_inset
 
 .
@@ -2735,7 +3142,7 @@ x & x\ge0\\
 \color inherit
 :
  תהא 
-\begin_inset Formula $a_{n}$
+\begin_inset Formula $a$
 \end_inset
 
  סדרה חסומה מלעיל אזי 
@@ -2754,7 +3161,7 @@ x & x\ge0\\
 \color inherit
 :
  תהא 
-\begin_inset Formula $a_{n}$
+\begin_inset Formula $a$
 \end_inset
 
  סדרה חסומה מלרע אזי 
@@ -2773,7 +3180,7 @@ x & x\ge0\\
 \color inherit
 :
  תהא 
-\begin_inset Formula $a_{n}$
+\begin_inset Formula $a$
 \end_inset
 
  סדרה אזי
@@ -2869,7 +3276,7 @@ x & x\ge0\\
 \color inherit
 :
  תהא 
-\begin_inset Formula $a_{n}$
+\begin_inset Formula $a$
 \end_inset
 
  סדרה אזי 
