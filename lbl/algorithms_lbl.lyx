@@ -6333,7 +6333,7 @@ gets
 \backslash
 text{sort}(E)$ 
 \backslash
-tcp{sort is done by $w$ from small to big}
+tcp{Sort is done by $w$ from small to big.}
 \end_layout
 
 \begin_layout Plain Layout
@@ -8097,7 +8097,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -11157,11 +11157,11 @@ end{algorithm}
 \begin_inset Formula $A*B\in\M[m\times k]$
 \end_inset
 
-
+ באשר
 \begin_inset Newline newline
 \end_inset
 
-באשר 
+
 \begin_inset Formula $\left(A*B\right)_{i,j}=\min_{k=1}^{n}\left(A_{i,k}+B_{k,j}\right)$
 \end_inset
 
@@ -11513,7 +11513,11 @@ end{algorithm}
 \begin_inset Formula $\star$
 \end_inset
 
- פעולה אסוציאטיבית אזי
+ פעולה אסוציאטיבית ויהי 
+\begin_inset Formula $m\in\bbn_{+}$
+\end_inset
+
+ אזי
 \end_layout
 
 \begin_layout Standard
@@ -11563,7 +11567,8 @@ Fn{
 name{$A,
  
 \backslash
-star$}}{
+star,
+ m$}}{
 \end_layout
 
 \begin_layout Plain Layout
@@ -11572,11 +11577,9 @@ star$}}{
 \backslash
 ldots a_0) 
 \backslash
-gets (n)_2$
+gets (m)_2$ 
 \backslash
-
-\backslash
-
+tcp{$(m)_2$ denotes $m$ in base 2.}
 \end_layout
 
 \begin_layout Plain Layout
@@ -11677,7 +11680,7 @@ end{algorithm}
 \end_inset
 
  מטריצת המשקל אזי 
-\begin_inset Formula $\text{RepeatedSquaring}\left(L,*\right)$
+\begin_inset Formula $\text{RepeatedSquaring}\left(L,*,n\right)$
 \end_inset
 
  פתרון לבעיית 
@@ -11700,7 +11703,7 @@ end{algorithm}
 \end_inset
 
  מטריצת המשקל אזי סיבוכיות זמן הריצה של 
-\begin_inset Formula $\text{RepeatedSquaring}\left(L,*\right)$
+\begin_inset Formula $\text{RepeatedSquaring}\left(L,*,n\right)$
 \end_inset
 
  הינה 
@@ -14155,19 +14158,11 @@ end{algorithm}
 \begin_inset Formula $\left(V,E,c,s,t\right)$
 \end_inset
 
- רשת זרימה אזי 
+ רשת זרימה אזי חתך 
 \begin_inset Formula $\left(S,T\right)$
 \end_inset
 
- באשר 
-\begin_inset Formula $S,T\subseteq V$
-\end_inset
-
- וכן 
-\begin_inset Formula $S\uplus T=V$
-\end_inset
-
- וכן 
+ עבורו 
 \begin_inset Formula $s\in S$
 \end_inset
 
@@ -15424,15 +15419,11 @@ end{algorithm}
 \begin_inset Formula $G$
 \end_inset
 
- גרף דו־צדדי לא מכוון ויהיו 
-\begin_inset Formula $A,B\subseteq V\left(G\right)$
+ גרף דו־צדדי לא מכוון ויהי 
+\begin_inset Formula $\left(A,B\right)$
 \end_inset
 
- עבורם 
-\begin_inset Formula $A\uplus B=V\left(G\right)$
-\end_inset
-
- וכן לכל 
+ חתך עבורו לכל 
 \begin_inset Formula $e\in E\left(G\right)$
 \end_inset
 
@@ -16785,7 +16776,11 @@ end{algorithm}
 \begin_inset Formula $c_{f}:E_{f}\to\bbr_{+}$
 \end_inset
 
- המוגדרת 
+ המוגדרת
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $c_{f}\left(e\right)=\left\{ \begin{smallmatrix}c\left(e\right)-f\left(e\right) &  & e\in E\\
 f\left(e^{-1}\right) &  & e\in E^{-1}
 \end{smallmatrix}\right.$
@@ -17353,7 +17348,7 @@ end{algorithm}
 \end_inset
 
 
-\begin_inset Formula $\text{Relabel}\left(f,h,u\right)=\text{Push}\left(\left(V,E,c,s,t\right),f,h,u\right)$
+\begin_inset Formula $\text{Relabel}\left(f,h,u\right)=\text{Relabel}\left(\left(V,E,c,s,t\right),f,h,u\right)$
 \end_inset
 
 .
