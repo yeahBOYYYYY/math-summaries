@@ -12,9 +12,9 @@ Things that I still need to do
 
 | Name | Notes | Last lec updated | Lec | Rec | HW |
 |---|---|---|---|---|---|
-| group theory |  |  | 0 | 0 | 0 |
-| set theory |  |  | 0 | 0 | 0 |
-| cryptography |  |  | 0 | 0 | 0 |
-| complexity |  |  | 0 | 0 | 0 |
-| formal proggraming |  |  | 0 | 0 | 0 |
-| game theory |  |  | 0 | 0 | 0 |
+| group theory |  | 03/11/24 | 0 | 0 | 0 |
+| set theory |  | 03/11/24 | 0 | 0 | 0 |
+| cryptography |  | 03/11/24 | 0 | 0 | 0 |
+| complexity |  | 03/11/24 | 0 | 0 | 0 |
+| formal proggraming |  | 03/11/24 | 0 | 0 | 0 |
+| game theory |  | 03/11/24 | 0 | 0 | 0 |
