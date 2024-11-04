@@ -195,6 +195,15 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\size}{\text{Size}}
+{\text{Size}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 גודל מעגל בוליאני
@@ -217,7 +226,7 @@ literal "true"
 \end_inset
 
  קלטים אזי 
-\begin_inset Formula $\left|C\right|=n+m$
+\begin_inset Formula $\size\left(C\right)=n+m$
 \end_inset
 
 .
@@ -335,6 +344,39 @@ literal "true"
 \begin_inset Formula $C$
 \end_inset
 
+ בעל 
+\begin_inset Formula $\text{fan-in}$
+\end_inset
+
+ לא מוגבל המחשב את 
+\begin_inset Formula $f$
+\end_inset
+
+ בגודל 
+\begin_inset Formula $\O\left(n\cdot2^{n}\right)$
+\end_inset
+
+ ובעומק 
+\begin_inset Formula $2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי קיים מעגל בוליאני 
+\begin_inset Formula $C$
+\end_inset
+
  המחשב את 
 \begin_inset Formula $f$
 \end_inset
@@ -361,7 +403,7 @@ literal "true"
 \end_inset
 
  שפה אזי קיימת משפחת מעגלים 
-\begin_inset Formula $\cal C$
+\begin_inset Formula ${\cal C}$
 \end_inset
 
  מגודל 
@@ -398,7 +440,28 @@ literal "true"
 \end_inset
 
  המחשב אותה מתקיים 
-\begin_inset Formula $\left|C\right|\ge\frac{2^{n}}{2n}$
+\begin_inset Formula $\size\left(C\right)\ge\frac{2^{n}}{2n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגודל של פונקציה בוליאנית
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\size\left(f\right)=\min\left\{ \size\left(C\right)\mid\left(\text{ מעגל}C\right)\land\left(f\text{ מחשבת את }C\right)\right\} $
 \end_inset
 
 .
@@ -447,15 +510,6 @@ literal "true"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\size}{\text{Size}}
-{\text{Size}}
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -602,6 +656,31 @@ literal "true"
 \begin_layout Standard
 
 \series bold
+טענה
+\series default
+:
+ קיים מעגל 
+\begin_inset Formula $C$
+\end_inset
+
+ המחשב את 
+\begin_inset Formula $\parity_{n}$
+\end_inset
+
+ מגודל 
+\begin_inset Formula $\O\left(n\right)$
+\end_inset
+
+ ועומק 
+\begin_inset Formula $\O\left(\log\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 משפט
 \series default
 :
@@ -613,8 +692,97 @@ literal "true"
 \begin_inset Formula $\parity_{n}$
 \end_inset
 
+ בעל 
+\begin_inset Formula $\text{fan-in}$
+\end_inset
+
+ לא מוגבל ועומק 
+\begin_inset Formula $d$
+\end_inset
+
  אזי 
-\begin_inset Formula $\left|C\right|\ge2^{\Omega\left(n^{\frac{1}{n\cdot\depth\left(C\right)}}\right)}$
+\begin_inset Formula $\size\left(C\right)\ge2^{\Omega\left(n^{\frac{1}{n\cdot d}}\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פולינום מולטי־לינארי (מ
+\begin_inset Quotes erd
+\end_inset
+
+ל)
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $p\in\bbr\left[x_{1}\ldots x_{n}\right]$
+\end_inset
+
+ בעל דרגה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פולינום מחשב פונקציה בוליאנית
+\series default
+:
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $p\in\bbr\left[x_{1}\ldots x_{n}\right]$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ל עבורו 
+\begin_inset Formula $f\left(x\right)=p\left(x\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
 \end_inset
 
 .
@@ -630,12 +798,150 @@ literal "true"
 \begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
 \end_inset
 
- אזי קיימת 
-\begin_inset Formula $q\in\bbr\left[x_{1}\ldots x_{n}\right]$
+ אזי קיים פולינום המחשב את 
+\begin_inset Formula $f$
 \end_inset
 
- מולטי־לינארית עבורה 
-\begin_inset Formula $f=q_{\upharpoonright_{\left\{ 0,1\right\} ^{n}}}$
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\deg\left(f\right)=\min\left\{ \deg\left(p\right)\mid\left(p\in\bbr\left[x_{1}\ldots x_{n}\right]\right)\land\left(f\text{ מחשב את }p\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\deg\left(\lor_{n}\right)=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פולינום מחשב פונקציה בוליאנית בממוצע עם שגיאה 
+\begin_inset Formula $\e$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $p\in\bbr\left[x_{1}\ldots x_{n}\right]$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ל עבורו 
+\begin_inset Formula $\bbp_{x\gets\left\{ 0,1\right\} ^{n}}\left(p\left(x\right)=f\left(x\right)\right)\ge1-\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ הפולינום
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מחשב את 
+\begin_inset Formula $\lor_{n}$
+\end_inset
+
+ בממוצע עם שגיאה 
+\begin_inset Formula $\frac{1}{3}$
 \end_inset
 
 .
@@ -663,7 +969,11 @@ literal "true"
 \begin_inset Formula $\e>0$
 \end_inset
 
- קיים פולינום מולטי־לינארי 
+ קיים פולינום מ
+\begin_inset Quotes erd
+\end_inset
+
+ל 
 \begin_inset Formula $p\in\bbr\left[x_{1}\ldots x_{n}\right]$
 \end_inset
 
@@ -671,8 +981,12 @@ literal "true"
 \begin_inset Formula $\O\left(\left(\log\left(n\right)\cdot\log\left(\frac{s}{\e}\right)\right)^{d}\right)$
 \end_inset
 
- עבורו 
-\begin_inset Formula $\bbp_{x\gets\left\{ 0,1\right\} ^{n}}\left(p\left(x\right)=f\left(x\right)\right)\ge1-\e$
+ המחשב את 
+\begin_inset Formula $f$
+\end_inset
+
+ בממוצע עם שגיאה 
+\begin_inset Formula $\e$
 \end_inset
 
 .
@@ -698,6 +1012,76 @@ literal "true"
 
  אזי 
 \begin_inset Formula $\deg\left(p\right)\ge2^{\Omega\left(\d n\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+התפלגות משפחת פולינומים מחשבת פונקציה בוליאנית בממוצע עם שגיאה 
+\begin_inset Formula $\e$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי קבוצת פולינומים מ
+\begin_inset Quotes erd
+\end_inset
+
+ל 
+\begin_inset Formula $P\subseteq\bbr\left[x_{1}\ldots x_{n}\right]$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\bbp_{p\gets P}\left(p\left(x\right)=f\left(x\right)\right)\ge1-\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ אזי קיימת קבוצת פולינומים מ
+\begin_inset Quotes erd
+\end_inset
+
+ל 
+\begin_inset Formula $P\subseteq\bbr\left[x_{1}\ldots x_{n}\right]$
+\end_inset
+
+ מדרגה 
+\begin_inset Formula $\O\left(\log\left(n\right)\cdot\log\left(\frac{1}{\e}\right)\right)$
+\end_inset
+
+ שמחשבת את 
+\begin_inset Formula $\lor_{n}$
+\end_inset
+
+ בממוצע עם שגיאה 
+\begin_inset Formula $\e$
 \end_inset
 
 .
