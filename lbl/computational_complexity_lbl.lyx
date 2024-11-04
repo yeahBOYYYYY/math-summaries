@@ -212,7 +212,7 @@ literal "true"
 \begin_inset Formula $n$
 \end_inset
 
- שערים וכן 
+ חוטים וכן 
 \begin_inset Formula $m$
 \end_inset
 
@@ -221,6 +221,15 @@ literal "true"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\depth}{\text{depth}}
+{\text{depth}}
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -233,7 +242,83 @@ literal "true"
 \begin_inset Formula $C$
 \end_inset
 
- מעגל בוליאני אזי אורך המסלול המקסימלי מקלט לפלט.
+ מעגל בוליאני אזי 
+\begin_inset Formula $\depth\left(C\right)$
+\end_inset
+
+ הינו אורך המסלול המקסימלי מקלט לפלט.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{\ge3}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lor_{n}:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\lor_{n}\left(x\right)=\bigvee_{i=1}^{n}x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{\ge3}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\land_{n}:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\land_{n}\left(x\right)=\bigwedge_{i=1}^{n}x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מעגל בוליאני בעל 
+\begin_inset Formula $\text{fan-in}$
+\end_inset
+
+ לא מוגבל
+\series default
+:
+ מעגל בוליאני מעל בסיס הפונקציות הבוליאניות 
+\begin_inset Formula $\left(\bigcup_{n\in\bbn}\left\{ \land_{n}\right\} \right)\cup\left(\bigcup_{n\in\bbn}\left\{ \lor_{n}\right\} \right)\cup\left\{ \land,\lor,\neg\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ אלא אם נאמר אחרת מעגל בוליאני הוא בעל 
+\begin_inset Formula $\text{fan-in}$
+\end_inset
+
+ מוגבל.
 \end_layout
 
 \begin_layout Standard
@@ -276,7 +361,7 @@ literal "true"
 \end_inset
 
  שפה אזי קיימת משפחת מעגלים 
-\begin_inset Formula $\left\{ C_{n}\right\} _{n=1}^{\infty}$
+\begin_inset Formula $\cal C$
 \end_inset
 
  מגודל 
@@ -289,6 +374,330 @@ literal "true"
 
  המחשבת את 
 \begin_inset Formula $L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ עבורה לכל מעגל בוליאני 
+\begin_inset Formula $C$
+\end_inset
+
+ המחשב אותה מתקיים 
+\begin_inset Formula $\left|C\right|\ge\frac{2^{n}}{2n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ קיים 
+\begin_inset Formula $C\in\bbr_{+}$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $n\le S<C\cdot\frac{2^{n}}{n}$
+\end_inset
+
+ קיימת 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ באשר 
+\begin_inset Formula $f$
+\end_inset
+
+ חשיבה על ידי מעגל מגודל 
+\begin_inset Formula $S\left(n\right)+10n$
+\end_inset
+
+ וכן 
+\begin_inset Formula $f$
+\end_inset
+
+ לא חשיבה על ידי מעגל מגודל 
+\begin_inset Formula $S\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\size}{\text{Size}}
+{\text{Size}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\size\left(S\left(n\right)\right)=\left\{ L\subseteq\left\{ 0,1\right\} ^{*}\mid S\left(n\right)\text{ חשיבה על ידי משפחת מעגלים מגודל לכל היותר }L\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ 
+\begin_inset Formula $\size\left(2^{n}\right)=\P\left(\left\{ 0,1\right\} ^{*}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $n\le S\left(n\right)\le\frac{2^{n}}{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\size\left(S\left(n\right)\right)\subsetneq\size\left(S\left(n\right)+10n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\poly}{\text{Poly}}
+{\text{Poly}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ 
+\begin_inset Formula $\size\left(\poly\right)=\bigcup_{c\in\bbn}\size\left(n^{c}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי 
+\begin_inset Formula $\bbe_{\text{ חתך}\left(A,B\right)}\left[\left|E\left(A,B\right)\right|\right]=\frac{\left|E\left(G\right)\right|}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי קיים חתך 
+\begin_inset Formula $\left(A,B\right)$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $E\left(A,B\right)\ge\frac{\left|E\left(G\right)\right|}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\parity}{\text{parity}}
+{\text{parity}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית זוגיות
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\parity:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\parity\left(x\right)=\bigoplus_{i=1}^{n}x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ יהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל המחשב את 
+\begin_inset Formula $\parity_{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|C\right|\ge2^{\Omega\left(n^{\frac{1}{n\cdot\depth\left(C\right)}}\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $q\in\bbr\left[x_{1}\ldots x_{n}\right]$
+\end_inset
+
+ מולטי־לינארית עבורה 
+\begin_inset Formula $f=q_{\upharpoonright_{\left\{ 0,1\right\} ^{n}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ חשיבה על ידי מעגל בוליאני מגודל 
+\begin_inset Formula $s$
+\end_inset
+
+ ועומק 
+\begin_inset Formula $d$
+\end_inset
+
+ אזי לכל 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ קיים פולינום מולטי־לינארי 
+\begin_inset Formula $p\in\bbr\left[x_{1}\ldots x_{n}\right]$
+\end_inset
+
+ מדרגה 
+\begin_inset Formula $\O\left(\left(\log\left(n\right)\cdot\log\left(\frac{s}{\e}\right)\right)^{d}\right)$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\bbp_{x\gets\left\{ 0,1\right\} ^{n}}\left(p\left(x\right)=f\left(x\right)\right)\ge1-\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbr\left[x_{1}\ldots x_{n}\right]$
+\end_inset
+
+ מולטי־לינארי ויהי 
+\begin_inset Formula $\d>0$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\bbp_{x\gets\left\{ 0,1\right\} ^{n}}\left(p\left(x\right)=\parity\left(x\right)\right)\ge\frac{1}{2}+\d$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\deg\left(p\right)\ge2^{\Omega\left(\d n\right)}$
 \end_inset
 
 .

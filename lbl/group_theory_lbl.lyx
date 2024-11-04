@@ -150,6 +150,11 @@ PackageOptions algorithm2e vlined
 \use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
+\branch nnn
+\selected 0
+\filename_suffix 0
+\color background background
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -192,6 +197,705 @@ literal "true"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולות בינאריות
+\series default
+:
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $A\times A\to A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $*$
+\end_inset
+
+ פעולה בינארית על 
+\begin_inset Formula $A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a*b=*\left(a,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $*:G\times G\to G$
+\end_inset
+
+ עבורה קיים 
+\begin_inset Formula $e\in G$
+\end_inset
+
+ עבורו
+\end_layout
+
+\begin_layout Itemize
+אסוציאטיביות:
+ לכל 
+\begin_inset Formula $a,b,c\in A$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a*\left(b*c\right)=\left(a*b\right)*c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+איבר יחידה:
+ לכל 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a*e=e*a=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+איבר הופכי:
+ לכל 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ קיים 
+\begin_inset Formula $b\in A$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $a*b=e=b*a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(G,*\right)$
+\end_inset
+
+ חבורה יהי 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $b\in A$
+\end_inset
+
+ איבר הופכי ל־
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a^{-1}=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $S\left(X\right)=\left\{ f:X\to X\mid\text{ הפיכה}f\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורת התמורות
+\series default
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\left(S\left(X\right),\circ\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה אזי חבורת התמורות הינה חבורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S_{n}=S\left(\left[n\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|S_{n}\right|=n!$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\gl}{\text{GL}}
+{\text{GL}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורת המטריצות
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\gl_{n}\left(\bbf\right),\cdot\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי חבורת המטריצות הינה חבורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+החבורות החיבוריות
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf\in\left\{ \bbz,\bbq,\bbr,\bbc\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\bbf,+\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $A\subseteq\bbc$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A^{*}=A\backslash\left\{ 0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+החבורות הכפליות
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf\in\left\{ \bbq^{*},\bbr^{*},\bbc^{*}\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\bbf,\cdot\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+החבורה הטריוואלית
+\series default
+:
+ יהי 
+\begin_inset Formula $x$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\left\{ x\right\} ,\id\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sim_{n}\subseteq\bbz^{2}$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\left(x\sim_{n}y\right)\iff\left(n|\left(x-y\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $C_{n}=\nicefrac{\bbz}{\sim_{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $+:C_{n}\times C_{n}\to C_{n}$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\left[x\right]_{\sim_{n}}+\left[y\right]_{\sim_{n}}=\left[x+y\right]_{\sim_{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורת שאריות החלוקה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(C_{n},+\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי חבורת שאריות החלוקה הינה חבורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|C_{n}\right|=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורה אבלית/חילופית/קומוטטיבית
+\series default
+:
+ חבורה 
+\begin_inset Formula $\left(G,*\right)$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $g,h\in G$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $g*h=h*g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{\ge3}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(S_{n},\circ\right)$
+\end_inset
+
+ אינה אבלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\gl_{n}\left(\bbf\right),\cdot\right)$
+\end_inset
+
+ אינה אבלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(C_{n},+\right)$
+\end_inset
+
+ אבלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורה סופית
+\series default
+:
+ חבורה 
+\begin_inset Formula $\left(G,*\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\left|G\right|\in\bbn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורה אינסופית
+\series default
+:
+ חבורה 
+\begin_inset Formula $\left(G,*\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\left|G\right|\ge\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סדר של חבורה
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(G,*\right)$
+\end_inset
+
+ חבורה סופית אזי 
+\begin_inset Formula $\ord\left(G\right)=\left|G\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(G,*\right)$
+\end_inset
+
+ חבורה סופית אזי 
+\begin_inset Formula $o\left(G\right)=\ord\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תת־חבורה
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(G,*\right)$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\subseteq G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(H,*_{\upharpoonright_{H\times H}}\right)$
+\end_inset
+
+ עבורה
+\end_layout
+
+\begin_layout Itemize
+סגירות לכפל:
+ לכל 
+\begin_inset Formula $a,b\in H$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a*b\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סגירות להופכי:
+ לכל 
+\begin_inset Formula $a\in H$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a^{-1}\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+איבר יחידה:
+ יהי 
+\begin_inset Formula $e$
+\end_inset
+
+ איבר היחידה של 
+\begin_inset Formula $G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $e\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(G,*\right)$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\subseteq G$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\left(H,*_{\upharpoonright_{H\times H}}\right)$
+\end_inset
+
+ תת־חבורה אזי 
+\begin_inset Formula $H\le G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(G,*\right)$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\in\P\left(G\right)\backslash\left\{ \emptyset\right\} $
+\end_inset
+
+ אזי (
+\begin_inset Formula $H\le G$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(לכל 
+\begin_inset Formula $a,b\in H$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a*b^{-1}\in H$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
