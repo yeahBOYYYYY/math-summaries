@@ -15,5 +15,5 @@ Things that I still need to do
 | group theory |  | 04/11/24 | 1 | 0 | 0 |
 | set theory |  | 03/11/24 | 0 | 0 | 0 |
 | cryptography |  | 03/11/24 | 0 | 0 | 0 |
-| complexity |  | 03/11/24 | 0 | 0 | 0 |
+| complexity |  | 04/11/24 | 1 | 0 | 0 |
 | game theory |  | 03/11/24 | 0 | 0 | 0 |
