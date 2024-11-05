@@ -207,6 +207,12 @@ literal "true"
 \end_inset
 
 
+\begin_inset FormulaMacro
+\newcommand{\c}{\mathcal{C}}
+{\mathcal{C}}
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -216,18 +222,22 @@ literal "true"
 \series default
 :
  תהיינה 
-\begin_inset Formula $\m,\k$
+\begin_inset Formula $\m,\k,\c$
 \end_inset
 
- קבוצות סופיות אזי 
-\begin_inset Formula $E:\m\times\k\to\m$
+ קבוצות סופיות תהא 
+\begin_inset Formula $E:\k\times\m\to\c$
 \end_inset
 
- וכן 
-\begin_inset Formula $D:\m\times\k\to\m$
+ ותהא 
+\begin_inset Formula $D:\k\times\c\to\m$
 \end_inset
 
- עבורן
+ אזי 
+\begin_inset Formula $\left(\k,\m,\c,E,D\right)$
+\end_inset
+
+ המקיימת
 \end_layout
 
 \begin_layout Itemize
@@ -241,7 +251,58 @@ literal "true"
 \end_inset
 
  מתקיים 
-\begin_inset Formula $D\left(E\left(m,k\right),k\right)=m$
+\begin_inset Formula $D\left(k,E\left(k,m\right)\right)=m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מרחב המפתחות בהצפנה סימטרית
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(\k,\m,\c,E,D\right)$
+\end_inset
+
+ הצפנה סימטרית אזי 
+\begin_inset Formula $\k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מרחב ההודעות בהצפנה סימטרית
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(\k,\m,\c,E,D\right)$
+\end_inset
+
+ הצפנה סימטרית אזי 
+\begin_inset Formula $\m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מרחב הקידודים/ההצפנות בהצפנה סימטרית
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(\k,\m,\c,E,D\right)$
+\end_inset
+
+ הצפנה סימטרית אזי 
+\begin_inset Formula $\c$
 \end_inset
 
 .
@@ -253,12 +314,8 @@ literal "true"
 פונקציית הצפנה סימטרית
 \series default
 :
- תהיינה 
-\begin_inset Formula $\m,\k$
-\end_inset
-
- קבוצות סופיות ותהא 
-\begin_inset Formula $\left(E,D\right)$
+ תהא 
+\begin_inset Formula $\left(\k,\m,\c,E,D\right)$
 \end_inset
 
  הצפנה סימטרית אזי 
@@ -274,12 +331,8 @@ literal "true"
 פונקציית פענוח סימטרית
 \series default
 :
- תהיינה 
-\begin_inset Formula $\m,\k$
-\end_inset
-
- קבוצות סופיות ותהא 
-\begin_inset Formula $\left(E,D\right)$
+ תהא 
+\begin_inset Formula $\left(\k,\m,\c,E,D\right)$
 \end_inset
 
  הצפנה סימטרית אזי 
@@ -292,56 +345,762 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-הצפנת קיסר
+הערה
 \series default
 :
- יהי 
-\begin_inset Formula $n\in\bbn_{+}$
+ מכאן והלאה נסמן הצפנה סימטרית בעזרת 
+\begin_inset Formula $\left(E,D\right)$
 \end_inset
 
- נגדיר 
-\begin_inset Formula $E:\left\{ 0\ldots n\right\} \times\k\to\m$
+ ונניח כי 
+\begin_inset Formula $\k,\m,\c$
 \end_inset
 
- ...
+ ידועים.
 \end_layout
 
 \begin_layout Standard
-...
- להשלים,
- המרצה הזה בכלל לא פורמלי ולא מעלה מצגות,
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\nospellcheck off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
+\series bold
+סימון
 \series default
-\shape default
-\size default
-\emph default
-\numeric on
-\nospellcheck default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-0/10
-\numeric off
+:
+ יהיו 
+\begin_inset Formula $n,m\in\bbn_{+}$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $\bbz_{n}^{\le m}=\bigcup_{i=0}^{m}\bbz_{n}^{i}$
+\end_inset
+
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הצפנת קיסר
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,m\in\bbn_{+}$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $E,D:\left\{ 0\ldots n\right\} \times\bbz_{n}^{\le m}\to\bbz_{n}^{\le m}$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(E\left(k,m\right)\right)_{i}=\left(m_{i}+k\right)\%n$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[\left|m\right|\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(D\left(k,c\right)\right)_{i}=\left(c_{i}-k\right)\%n$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[\left|c\right|\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,m\in\bbn_{+}$
+\end_inset
+
+ אזי הצפנת קיסר הינה הצפנה סימטרית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הצפנת הצבה
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,m\in\bbn\backslash\left\{ 0,1\right\} $
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $f_{1},\ldots,f_{n!}:\left[n\right]\to\left[n\right]$
+\end_inset
+
+ הפיכות שונות נגדיר 
+\begin_inset Formula $E,D:\left[n!\right]\times\bbz_{n-1}^{\le m}\to\bbz_{n-1}^{\le m}$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(E\left(k,m\right)\right)_{i}=f_{k}\left(m_{i}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[\left|m\right|\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(D\left(k,c\right)\right)_{i}=f_{k}^{-1}\left(c_{i}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[\left|c\right|\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,m\in\bbn\backslash\left\{ 0,1\right\} $
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $f_{1},\ldots,f_{n!}:\left[n\right]\to\left[n\right]$
+\end_inset
+
+ הפיכות שונות אזי הצפנת הצבה הינה הצפנה סימטרית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+התקפה גנרית
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ הצפנה סימטרית תהא 
+\begin_inset Formula $\mu:\m\to\left[0,1\right]$
+\end_inset
+
+ התפלגות שכיחויות המילים יהי 
+\begin_inset Formula $k^{\prime}\in\k$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $m^{\prime}\in\m$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $c=E\left(k^{\prime},m^{\prime}\right)$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{GenericAttack}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$
+\backslash
+left(E,D
+\backslash
+right),
+ 
+\backslash
+mu,
+ c$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+ell
+\backslash
+gets 
+\backslash
+mathcal{M}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $p
+\backslash
+gets [0,
+ 1]$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$k
+\backslash
+gets 
+\backslash
+mathcal{K}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $m
+\backslash
+gets D(k,
+ c)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+lIf{$
+\backslash
+mu (m) > p$}{$(
+\backslash
+ell,
+ p) 
+\backslash
+gets (m,
+ 
+\backslash
+mu(m))$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $
+\backslash
+ell$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ קבוצה סופית ותהא 
+\begin_inset Formula $\mu:\Omega\to\left[0,1\right]$
+\end_inset
+
+ התפלגות אזי 
+\begin_inset Formula $\bbp_{a\gets\mu}\left(a\right)=\mu\left(a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ קבוצה סופית אזי 
+\begin_inset Formula $\bbp_{a\gets\Omega}\left(a\right)=\frac{1}{\left|\Omega\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הצפנה סימטרית בעלת סודיות מושלמת
+\series default
+:
+ הצפנה סימטרית 
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ עבורה לכל התפלגות 
+\begin_inset Formula $\mu:\m\to\left[0,1\right]$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $a\in\m$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $c\in\c$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\bbp_{m\gets\mu}\left(m=a\right)=\bbp_{\left(m,k\right)\gets\left(\mu,\k\right)}\left(m=a\mid c=E\left(k,m\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הצפנה סימטרית בעלת חוסר הבחנה מושלם
+\series default
+:
+ הצפנה סימטרית 
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $a,b\in\m$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $c\in\c$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\bbp_{k\gets\k}\left(E\left(k,a\right)=c\right)=\bbp_{k\gets\k}\left(E\left(k,b\right)=c\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ הצפנה סימטרית אזי (
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ בעלת סודיות מושלמת)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ בעלת חוסר הבחנה מושלם).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הצפנת פנקס חד־פעמי
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $E,D:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(k,m\right)=m\oplus k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D\left(k,c\right)=c\oplus k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי הצפנת פנקס חד־פעמי הינה הצפנה סימטרית בעלת סודיות מושלמת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט שאנון
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ הצפנה סימטרית בעלת סודיות מושלמת אזי 
+\begin_inset Formula $\left|\m\right|\le\left|\k\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $m\in\bbn_{+}$
+\end_inset
+
+ אזי הצפנת קיסר 
+\begin_inset Formula $n$
+\end_inset
+
+ הינה הצפנה סימטרית בעלת סודיות מושלמת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משחק חוסר ההבחנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $\mathcal{W},\mathcal{A}$
+\end_inset
+
+ שחקנים אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{IndistinguishabilityGame}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Gm}{game}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Gm{
+\backslash
+name{$
+\backslash
+left(E,D
+\backslash
+right),
+ 
+\backslash
+mathcal{W},
+ 
+\backslash
+mathcal{A}$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+mathcal{A}$ chooses messages $m_0,m_1
+\backslash
+in
+\backslash
+mathcal{M}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+mathcal{W}$ samples key $k
+\backslash
+gets 
+\backslash
+mathcal{K}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+mathcal{W}$ samples bit $b
+\backslash
+gets 
+\backslash
+{0,
+ 1
+\backslash
+}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+mathcal{W}$ sends $E(k,
+ m_b)$ to $
+\backslash
+mathcal{A}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+mathcal{A}$ prints a bit $b^
+\backslash
+prime$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+uIf{$b^
+\backslash
+prime = b$}{
+\backslash
+Return $
+\backslash
+mathcal{A}$ won}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $
+\backslash
+mathcal{A}$ lost
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ הצפנה סימטרית אזי (
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ בעלת חוסר הבחנה מושלם)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\bbp\left(\text{ מנצחת במשחק חוסר ההבחנה}\mathcal{A}\right)=\frac{1}{2}$
+\end_inset
+
+).
 \end_layout
 
 \end_body
