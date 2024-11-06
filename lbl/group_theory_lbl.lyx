@@ -908,6 +908,27 @@ literal "true"
 \begin_inset Formula $\left(G,*\right)$
 \end_inset
 
+ חבורה ותהיינה 
+\begin_inset Formula $A,B\subseteq G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A*B=\left\{ a*b\mid\left(a\in A\right)\land\left(b\in B\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(G,*\right)$
+\end_inset
+
  חבורה תהא 
 \begin_inset Formula $H\subseteq G$
 \end_inset
@@ -917,7 +938,7 @@ literal "true"
 \end_inset
 
  אזי 
-\begin_inset Formula $gH=\left\{ gh\mid h\in H\right\} $
+\begin_inset Formula $g*H=\left\{ g\right\} *H$
 \end_inset
 
 .
@@ -1015,7 +1036,7 @@ literal "true"
 \end_inset
 
  חבורה אזי 
-\begin_inset Formula $\left(G,*\right)\le\left(G,*\right)$
+\begin_inset Formula $G\le G$
 \end_inset
 
 .
@@ -1032,10 +1053,102 @@ literal "true"
 \end_inset
 
  חבורה אזי 
-\begin_inset Formula $\left(\left\{ e\right\} ,*\right)\le\left(G,*\right)$
+\begin_inset Formula $\left\{ e\right\} \le G$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורת המכפלה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $\left(G,*\right),\left(H,\otimes\right)$
+\end_inset
+
+ חבורות נגדיר 
+\begin_inset Formula $\left(g,h\right)\cdot\left(g^{\prime},h^{\prime}\right)=\left(g*g^{\prime},h\otimes h^{\prime}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $g,g^{\prime}\in G$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $h,h^{\prime}\in H$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(G\times H,\cdot\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $\left(G,*\right),\left(H,\otimes\right)$
+\end_inset
+
+ חבורות אזי חבורת המכפלה הינה חבורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $\left(G,*\right),\left(H,\otimes\right)$
+\end_inset
+
+ חבורות אזי (חבורת המכפלה אבלית)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $H,G$
+\end_inset
+
+ אבליות).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(G,*\right)$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $H,K\le G$
+\end_inset
+
+ אזי (
+\begin_inset Formula $H*K\le G$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $HK=KH$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
