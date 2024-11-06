@@ -16,4 +16,4 @@ Things that I still need to do
 | set theory |  | 03/11/24 | 0 | 0 | 0 |
 | cryptography |  | 06/11/24 | 1 | 1 | 0 |
 | complexity |  | 05/11/24 | 1 | 1 | 0 |
-| game theory |  | 03/11/24 | 0 | 0 | 0 |
+| game theory |  | 06/11/24 | 1 | 0 | 0 |
