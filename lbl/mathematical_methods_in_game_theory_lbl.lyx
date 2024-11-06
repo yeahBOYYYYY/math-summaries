@@ -196,6 +196,412 @@ literal "true"
 
 \begin_layout Standard
 
+\series bold
+מטריקה אוקלידית
+\series default
+:
+ תהיינה 
+\begin_inset Formula $x,y\in\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $d_{2}\left(x,y\right)=\sqrt{\sum_{i=1}^{n}\left(x_{i}-y_{i}\right)^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $X,Y\subseteq\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $d_{2}\left(X,Y\right)=\inf_{\substack{x\in X\\
+y\in Y
+}
+}d_{2}\left(x,y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נקודה קרובה ביותר לנקודה
+\series default
+:
+ תהא 
+\begin_inset Formula $X\subseteq\bbr^{n}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbr^{n}\backslash X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $y\in X$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $d_{2}\left(x,a\right)\le d_{2}\left(y,a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $X\subseteq\bbr^{n}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $a\in\bbr^{n}\backslash X$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ אזי (
+\begin_inset Formula $x$
+\end_inset
+
+ הנקודה הקרובה ביותר ל־
+\begin_inset Formula $a$
+\end_inset
+
+ ב־
+\begin_inset Formula $x$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $d_{2}\left(a,x\right)=d_{2}\left(a,X\right)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט הנקודה הקרובה ביותר
+\series default
+:
+ תהא 
+\begin_inset Formula $X\subseteq\bbr^{n}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbr^{n}\backslash X$
+\end_inset
+
+ אזי קיימת נקודה קרובה ביותר ל־
+\begin_inset Formula $a$
+\end_inset
+
+ ב־
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $X\subseteq\bbr^{n}$
+\end_inset
+
+ קמורה ויהי 
+\begin_inset Formula $a\in\bbr^{n}\backslash X$
+\end_inset
+
+ אזי קיימת ויחידה נקודה קרובה ביותר ל־
+\begin_inset Formula $a$
+\end_inset
+
+ ב־
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+היפר־משטח
+\series default
+:
+ יהי 
+\begin_inset Formula $\a\in\bbr^{n}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\b\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H\left(\a,\b\right)=\left\{ x\in\bbr^{n}\mid\left<\a,x\right>=\b\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חצי מרחב נוצר על ידי היפר־משטח
+\series default
+:
+ יהי 
+\begin_inset Formula $\a\in\bbr^{n}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\b\in\bbr$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+עליון:
+ 
+\begin_inset Formula $H^{+}\left(\a,\b\right)=\left\{ x\in\bbr^{n}\mid\left<\a,x\right>\ge\b\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+תחתון:
+ 
+\begin_inset Formula $H^{-}\left(\a,\b\right)=\left\{ x\in\bbr^{n}\mid\left<\a,x\right>\le\b\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\a\in\bbr^{n}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\b\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H^{+}\left(\a,\b\right)=H^{-}\left(-\a,-\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\a\in\bbr^{n}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\b\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H^{+}\left(\a,\b\right)\cap H^{-}\left(\a,\b\right)=H\left(\a,\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+היפר־משטח מפריד
+\series default
+:
+ תהא 
+\begin_inset Formula $S\subseteq\bbr^{n}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in\bbr^{n}$
+\end_inset
+
+ אזי היפר־משטח 
+\begin_inset Formula $H\left(\a,\b\right)$
+\end_inset
+
+ המקיים אחד מהבאים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\in H^{+}\left(\a,\b\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $S\subseteq H^{-}\left(\a,\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\in H^{-}\left(\a,\b\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $S\subseteq H^{+}\left(\a,\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+היפר־משטח מפריד ממש
+\series default
+:
+ תהא 
+\begin_inset Formula $S\subseteq\bbr^{n}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in\bbr^{n}$
+\end_inset
+
+ אזי היפר־משטח מפריד 
+\begin_inset Formula $H\left(\a,\b\right)$
+\end_inset
+
+ המקיים אחד מהבאים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\in H^{+}\left(\a,\b\right)\backslash H\left(\a,\b\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $S\subseteq H^{-}\left(\a,\b\right)\backslash H\left(\a,\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\in H^{-}\left(\a,\b\right)\backslash H\left(\a,\b\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $S\subseteq H^{+}\left(\a,\b\right)\backslash H\left(\a,\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט ההפרדה על ידי היפר־משטח
+\series default
+:
+ תהא 
+\begin_inset Formula $S\subseteq\bbr^{n}$
+\end_inset
+
+ סגורה וקמורה ויהי 
+\begin_inset Formula $a\in\bbr^{n}\backslash S$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+תהא 
+\begin_inset Formula $x\in\bbr^{n}$
+\end_inset
+
+ הנקודה הקרובה ביותר ל־
+\begin_inset Formula $a$
+\end_inset
+
+ ב־
+\begin_inset Formula $S$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H\left(a-x,\left<a-x,x\right>\right)$
+\end_inset
+
+ היפר־משטח מפריד בין 
+\begin_inset Formula $S$
+\end_inset
+
+ ל־
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיים 
+\begin_inset Formula $\a\in\bbr^{n}$
+\end_inset
+
+ וקיים 
+\begin_inset Formula $\b\in\bbr$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $H\left(\a,\b\right)$
+\end_inset
+
+ היפר־משטח מפריד ממש בין 
+\begin_inset Formula $S$
+\end_inset
+
+ ל־
+\begin_inset Formula $a$
+\end_inset
+
+.
 \end_layout
 
 \end_body
