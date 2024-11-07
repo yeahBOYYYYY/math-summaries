@@ -354,7 +354,7 @@ y\in Y
 \begin_layout Standard
 
 \series bold
-היפר־משטח
+היפר־משטח/על־מישור
 \series default
 :
  יהי 
@@ -545,15 +545,11 @@ y\in Y
 \begin_inset Formula $S\subseteq\bbr^{n}$
 \end_inset
 
- סגורה וקמורה ויהי 
+ סגורה וקמורה יהי 
 \begin_inset Formula $a\in\bbr^{n}\backslash S$
 \end_inset
 
- אזי
-\end_layout
-
-\begin_layout Itemize
-תהא 
+ ותהא 
 \begin_inset Formula $x\in\bbr^{n}$
 \end_inset
 
@@ -580,8 +576,21 @@ y\in Y
 .
 \end_layout
 
-\begin_layout Itemize
-קיים 
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $S\subseteq\bbr^{n}$
+\end_inset
+
+ סגורה וקמורה ויהי 
+\begin_inset Formula $a\in\bbr^{n}\backslash S$
+\end_inset
+
+ אזי קיים 
 \begin_inset Formula $\a\in\bbr^{n}$
 \end_inset
 
@@ -602,6 +611,879 @@ y\in Y
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $S\subseteq\bbr^{n}$
+\end_inset
+
+ קמורה סגורה וקומפקטית ותהא 
+\begin_inset Formula $T\subseteq\bbr^{n}$
+\end_inset
+
+ קמורה וסגורה עבורה 
+\begin_inset Formula $S\cap T=\emptyset$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $\a\in\bbr^{n}$
+\end_inset
+
+ וקיים 
+\begin_inset Formula $\b\in\bbr$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $H\left(\a,\b\right)$
+\end_inset
+
+ היפר־משטח מפריד ממש בין 
+\begin_inset Formula $S$
+\end_inset
+
+ ל־
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהיינה 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ קבוצות ותהא 
+\begin_inset Formula $f:X\times Y\to\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sup_{x\in X}\inf_{y\in Y}f\left(x,y\right)\le\inf_{y\in Y}\sup_{x\in X}f\left(x,y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציה בילינארית
+\series default
+:
+ יהיו 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ו מעל 
+\begin_inset Formula $\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f:X\times Y\to\bbr$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $\mu,\lambda\in\bbr$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $y,z\in Y$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $f\left(x,\lambda y+\mu z\right)=\lambda f\left(x,y\right)+\mu f\left(x,z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $\mu,\lambda\in\bbr$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x,w\in X$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $f\left(\lambda x+\mu w,y\right)=\lambda f\left(x,y\right)+\mu f\left(w,y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימפלקס
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\triangle_{n}=\left\{ x\in\bbr_{+}^{n+1}\mid\sum_{i=1}^{n+1}x_{i}=1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נקודות קיצון של סימפלקס
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ e_{1},\ldots,e_{n+1}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מטריצה מייצגת
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,m\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\triangle_{n}\times\triangle_{m}\to\bbr$
+\end_inset
+
+ בילינארית אזי 
+\begin_inset Formula $\left[f\right]\in M_{\left(n+1\right)\times\left(m+1\right)}\left(\bbr\right)$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\left(\left[f\right]\right)_{i,j}=f\left(e_{i},e_{j}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,m\in\bbn$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:\triangle_{n}\times\triangle_{m}\to\bbr$
+\end_inset
+
+ בילינארית יהי 
+\begin_inset Formula $x\in\triangle_{n}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $y\in\triangle_{m}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(x,y\right)=x^{T}\cdot\left[f\right]\cdot y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט המינמקס
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,m\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\triangle_{n}\times\triangle_{m}\to\bbr$
+\end_inset
+
+ בילינארית אזי 
+\begin_inset Formula $\max_{x\in\triangle_{n}}\min_{y\in\triangle_{m}}f\left(x,y\right)=\min_{y\in\triangle_{m}}\max_{x\in\triangle_{n}}f\left(x,y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,m\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $A\in M_{\left(n+1\right)\times\left(m+1\right)}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\max_{x\in\triangle_{n}}\min_{y\in\triangle_{m}}x^{Y}Ay=\min_{y\in\triangle_{m}}\max_{x\in\triangle_{n}}x^{Y}Ay$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ 
+\begin_inset Formula $\triangle_{\infty}=\left\{ \mu:\bbn\to\left[0,1\right]\mid\sum_{n\in\bbn}\mu\left(n\right)=1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מטריצה חסומה
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,m\in\bbn_{+}\cup\left\{ \infty\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\in M_{n\times m}\left(\bbr\right)$
+\end_inset
+
+ עבורה קיים 
+\begin_inset Formula $M>0$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $j\in\left[m\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|\left(A\right)_{i,j}\right|<M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,m\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $A\in M_{\infty\times\left(m+1\right)}\left(\bbr\right)$
+\end_inset
+
+ חסומה אזי 
+\begin_inset Formula $\max_{x\in\triangle_{\infty}}\min_{y\in\triangle_{m}}x^{Y}Ay=\min_{y\in\triangle_{m}}\max_{x\in\triangle_{\infty}}x^{Y}Ay$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משחק בצורה אסטרטגית שני־שחקנים סכום־אפס
+\series default
+:
+ תהיינה 
+\begin_inset Formula $A_{1},A_{2}$
+\end_inset
+
+ קבוצות סופיות ותהא 
+\begin_inset Formula $u:A_{1}\times A_{2}\to\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולות/אסטרטגיות של שחקן 
+\begin_inset Formula $\text{1}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס אזי 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולות/אסטרטגיות של שחקן 
+\begin_inset Formula $\text{2}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס אזי 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית תשלומים
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס אזי 
+\begin_inset Formula $u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולה/אסטרטגיה מעורבת של שחקן 
+\begin_inset Formula $\text{1}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס אזי התפלגות על 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולה/אסטרטגיה מעורבת של שחקן 
+\begin_inset Formula $\text{2}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס אזי התפלגות על 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה סופית אזי 
+\begin_inset Formula $\triangle\left(A\right)=\left\{ \mu:A\to\left[0,1\right]\mid\sum_{a\in A}\mu\left(a\right)=1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(A,B,u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס תהא 
+\begin_inset Formula $\mu\in\triangle\left(A\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\lambda\in\triangle\left(B\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $u\left(\mu,\lambda\right)=\sum_{a\in A}\sum_{b\in B}\mu\left(a\right)\cdot\lambda\left(b\right)\cdot u\left(a,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ערך המקסמין של משחק
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס אזי 
+\begin_inset Formula $\underline{v}=\max_{x\in\triangle\left(A_{1}\right)}\min_{y\in\triangle\left(A_{2}\right)}u\left(x,y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ערך המינמקס של משחק
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס אזי 
+\begin_inset Formula $\overline{v}=\min_{y\in\triangle\left(A_{2}\right)}\max_{x\in\triangle\left(A_{1}\right)}u\left(x,y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס אזי 
+\begin_inset Formula $\overline{v}=\underline{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ערך של משחק
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס אזי 
+\begin_inset Formula $v=\overline{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אסטרטגיה מעורבת אופטימלית עבור שחקן 
+\begin_inset Formula $\text{1}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס אזי 
+\begin_inset Formula $x\in\triangle\left(A_{1}\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\min_{y\in\triangle\left(A_{2}\right)}u\left(x,y\right)=v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אסטרטגיה מעורבת אופטימלית עבור שחקן 
+\begin_inset Formula $\text{2}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס אזי 
+\begin_inset Formula $y\in\triangle\left(A_{2}\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\min_{x\in\triangle\left(A_{1}\right)}u\left(x,y\right)=v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולה שולטת חזק על פעולה עבור שחקן 
+\begin_inset Formula $\text{1}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס ותהא 
+\begin_inset Formula $a\in A_{1}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $b\in A_{1}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $u\left(b,c\right)<u\left(a,c\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $c\in A_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולה שולטת חזק על פעולה עבור שחקן 
+\begin_inset Formula $\text{2}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס ותהא 
+\begin_inset Formula $a\in A_{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $b\in A_{2}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $u\left(c,a\right)<u\left(c,b\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $c\in A_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולה שולטת חלש על פעולה עבור שחקן 
+\begin_inset Formula $\text{1}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס ותהא 
+\begin_inset Formula $a\in A_{1}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $b\in A_{1}$
+\end_inset
+
+ עבורה
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $c\in A_{2}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $u\left(b,c\right)\le u\left(a,c\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיים 
+\begin_inset Formula $c\in A_{2}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $u\left(b,c\right)<u\left(a,c\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולה שולטת חלש על פעולה עבור שחקן 
+\begin_inset Formula $\text{2}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס ותהא 
+\begin_inset Formula $a\in A_{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $b\in A_{2}$
+\end_inset
+
+ עבורה
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $c\in A_{1}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $u\left(c,a\right)\le u\left(c,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיים 
+\begin_inset Formula $c\in A_{1}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $u\left(c,a\right)\le u\left(c,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס תהא 
+\begin_inset Formula $a\in A_{1}$
+\end_inset
+
+ פעולה נשלטת חזק עבור שחקן 
+\begin_inset Formula $\text{1}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $x$
+\end_inset
+
+ אסטרטגיה מעורבת אופטימלית עבור שחקן 
+\begin_inset Formula $\text{1}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $x\left(a\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס ותהא 
+\begin_inset Formula $a\in A_{1}$
+\end_inset
+
+ פעולה נשלטת חלש עבור שחקן 
+\begin_inset Formula $\text{1}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v\left(\left(A_{1},A_{2},u\right)\right)=v\left(\left(A_{1}\backslash\left\{ a\right\} ,A_{2},u\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+תהא 
+\begin_inset Formula $x\in\triangle\left(A_{1}\right)$
+\end_inset
+
+ אזי (
+\begin_inset Formula $x$
+\end_inset
+
+ אופטימלית במשחק 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $u_{\upharpoonright_{A_{1}\backslash\left\{ a\right\} }}$
+\end_inset
+
+ אופטימלית במשחק 
+\begin_inset Formula $\left(A_{1}\backslash\left\{ a\right\} ,A_{2},u\right)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \end_body
