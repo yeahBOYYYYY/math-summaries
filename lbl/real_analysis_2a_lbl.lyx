@@ -808,14 +808,14 @@ literal "true"
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula ${\displaystyle \overline{\Sigma}\left(f,\Pi\right)=\sup_{\text{נקודות מתאימות }\left\{ t_{i}\right\} }S\left(f,\Pi,\left\{ t_{i}\right\} \right)}$
+\begin_inset Formula ${\displaystyle \overline{\Sigma}\left(f,\Pi\right)=\sup_{\text{ נקודות מתאימות}\left\{ t_{i}\right\} }S\left(f,\Pi,\left\{ t_{i}\right\} \right)}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula ${\displaystyle \underline{\Sigma}\left(f,\Pi\right)=\inf_{\text{נקודות מתאימות }\left\{ t_{i}\right\} }S\left(f,\Pi,\left\{ t_{i}\right\} \right)}$
+\begin_inset Formula ${\displaystyle \underline{\Sigma}\left(f,\Pi\right)=\inf_{\text{ נקודות מתאימות}\left\{ t_{i}\right\} }S\left(f,\Pi,\left\{ t_{i}\right\} \right)}$
 \end_inset
 
 .
@@ -1469,11 +1469,14 @@ literal "true"
 \begin_inset Formula $f\in R\left(\left[a,c\right]\right)$
 \end_inset
 
+ ויהי 
+\begin_inset Formula $b\in\left[b,c\right]$
+\end_inset
+
  נגדיר 
-\begin_inset Formula $g\left(x\right)=\begin{cases}
-y & x=b\\
-f\left(x\right) & \text{else}
-\end{cases}$
+\begin_inset Formula $g\left(x\right)=\left\{ \begin{smallmatrix}y &  & x=b\\
+f\left(x\right) &  & \text{else}
+\end{smallmatrix}\right.$
 \end_inset
 
  אזי 
@@ -1492,10 +1495,9 @@ f\left(x\right) & \text{else}
 \color inherit
 :
  נגדיר 
-\begin_inset Formula $f\left(x\right)=\begin{cases}
-\sin\left(\frac{1}{x}\right) & x\ne0\\
-0 & x=0
-\end{cases}$
+\begin_inset Formula $f\left(x\right)=\left\{ \begin{smallmatrix}\sin\left(\frac{1}{x}\right) &  &  & x\ne0\\
+0 &  &  & x=0
+\end{smallmatrix}\right.$
 \end_inset
 
  אזי 
