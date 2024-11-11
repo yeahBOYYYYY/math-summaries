@@ -787,6 +787,23 @@ literal "true"
 \begin_layout Standard
 
 \series bold
+סדר של חבורה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אינסופית אזי 
+\begin_inset Formula $\ord\left(G\right)=\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 \color black
 סימון
 \series default
@@ -796,7 +813,7 @@ literal "true"
 \begin_inset Formula $\left(G,*\right)$
 \end_inset
 
- חבורה סופית אזי 
+ חבורה אזי 
 \begin_inset Formula $o\left(G\right)=\ord\left(G\right)$
 \end_inset
 
@@ -1314,6 +1331,52 @@ literal "true"
 \begin_layout Standard
 
 \series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(G,*\right)$
+\end_inset
+
+ חבורה ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g^{0}=e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(G,*\right)$
+\end_inset
+
+ חבורה יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g^{n}=g*g^{n-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 \color blue
 סימון
 \series default
@@ -1360,6 +1423,56 @@ literal "true"
 
  אזי 
 \begin_inset Formula $g^{-n}=\left(g^{-1}\right)^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה יהיו 
+\begin_inset Formula $n,m\in\bbz$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g^{n+m}=g^{n}*g^{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה יהיו 
+\begin_inset Formula $n,m\in\bbz$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(g^{n}\right)^{m}=g^{n\cdot m}$
 \end_inset
 
 .
@@ -1759,6 +1872,34 @@ literal "true"
 \begin_inset Formula $G$
 \end_inset
 
+ חבורה ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<g\right>=\left\{ g^{k}\mid k\in\bbz\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
  חבורה אזי (
 \begin_inset Formula $G$
 \end_inset
@@ -1767,7 +1908,11 @@ literal "true"
 \begin_inset Formula $\iff$
 \end_inset
 
-(
+(קיים 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ עבורו 
 \begin_inset Formula $G=\left\{ g^{k}\mid k\in\bbz\right\} $
 \end_inset
 
@@ -1775,10 +1920,582 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Separator plain
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ציקלית אזי 
+\begin_inset Formula $G$
+\end_inset
+
+ אבלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+סדר של 
+\color inherit
+איבר
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ord\left(g\right)=\ord\left(\left<g\right>\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ord\left(g\right)=\min\left\{ n\in\bbn_{+}\mid g^{n}=e\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\ord\left(g\right)$
+\end_inset
+
+ לא קיים אזי 
+\begin_inset Formula $\ord\left(g\right)=\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קוסט ימני
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה תהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H*g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קוסט שמאלי
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה תהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g*H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נציג של קוסט ימני
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ויהי 
+\begin_inset Formula $Hg$
+\end_inset
+
+ קוסט ימני אזי 
+\begin_inset Formula $g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נציג של קוסט שמאלי
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ויהי 
+\begin_inset Formula $gH$
+\end_inset
+
+ קוסט שמאלי אזי 
+\begin_inset Formula $g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אבלית תהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $Hg=gH$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה תהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(gH\right)^{-1}=Hg^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה תהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי (
+\begin_inset Formula $g\in H$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $gH=H$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה תהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי (
+\begin_inset Formula $g\in H$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $Hg=H$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nicefrac{G}{H}=\left\{ gH\mid g\in G\right\} $
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H\backslash G=\left\{ Hg\mid g\in G\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nicefrac{G}{H}$
+\end_inset
+
+ חלוקה של 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה תהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $g_{1},g_{2}\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(g_{1}H=g_{2}H\right)\iff\left(g_{2}^{-1}g_{1}\in H\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הקוסט הטריוואלית
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $eH$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אינדקס של תת־חבורה בחבורה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[G:H\right]=\left|\nicefrac{G}{H}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[G:H\right]=\left|H\backslash G\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט לגראנז'
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ord\left(H\right)|\ord\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ord\left(g\right)|\ord\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית באשר 
+\begin_inset Formula $\ord\left(G\right)=p$
+\end_inset
+
+ אזי לכל 
+\begin_inset Formula $g\in G\backslash\left\{ e\right\} $
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $G=\left<g\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית באשר 
+\begin_inset Formula $\ord\left(G\right)=p$
+\end_inset
+
+ אזי 
+\begin_inset Formula $G$
+\end_inset
+
+ ציקלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה משפט פרמה הקטן
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\gcd\left(n,p\right)=1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $n^{p-1}\equiv1\mod p$
+\end_inset
+
+.
 \end_layout
 
 \end_body
