@@ -687,6 +687,103 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ac}{\mathsf{AC}}
+{\text{AC}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\nc}{\mathsf{NC}}
+{\text{NC}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size small
+הגדרה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $s,d:\bbn\to\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ac\left(s,d\right)=\left\{ L\subseteq\left\{ 0,1\right\} ^{*}\bmid\begin{smallmatrix}L\left(C\right)=L\\
+\size\left(C_{n}\right)\le s\left(n\right)\\
+\depth\left(C_{n}\right)\le d\left(n\right)
+\end{smallmatrix}\text{ בעלת fan-in לא מוגבל עבורה }C\text{קיימת משפחת מעגלים }\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ac^{k}=\bigcup_{c\in\bbn}\ac\left(n^{c},\log^{k}\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $s,d:\bbn\to\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nc\left(s,d\right)=\left\{ L\subseteq\left\{ 0,1\right\} ^{*}\bmid\begin{smallmatrix}L\left(C\right)=L\\
+\size\left(C_{n}\right)\le s\left(n\right)\\
+\depth\left(C_{n}\right)\le d\left(n\right)
+\end{smallmatrix}\text{ עבורה }C\text{קיימת משפחת מעגלים }\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nc^{k}=\bigcup_{c\in\bbn}\nc\left(n^{c},\log^{k}\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\parity}{\text{parity}}
 {\text{parity}}
@@ -744,35 +841,6 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-משפט
-\series default
-:
- יהי 
-\begin_inset Formula $C$
-\end_inset
-
- מעגל המחשב את 
-\begin_inset Formula $\parity_{n}$
-\end_inset
-
- בעל 
-\begin_inset Formula $\text{fan-in}$
-\end_inset
-
- לא מוגבל ועומק 
-\begin_inset Formula $d$
-\end_inset
-
- אזי 
-\begin_inset Formula $\size\left(C\right)\ge2^{\Omega\left(n^{\frac{1}{n\cdot d}}\right)}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
 פולינום מולטי־לינארי (מ
 \begin_inset Quotes erd
 \end_inset
@@ -820,13 +888,6 @@ literal "true"
 1
 \numeric off
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -889,8 +950,20 @@ literal "true"
 \begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
 \end_inset
 
+ ויהי 
+\begin_inset Formula $p\in\bbr\left[x_{1}\ldots x_{n}\right]$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ל המחשב את 
+\begin_inset Formula $f$
+\end_inset
+
  אזי 
-\begin_inset Formula $\deg\left(f\right)=\min\left\{ \deg\left(p\right)\mid\left(p\in\bbr\left[x_{1}\ldots x_{n}\right]\right)\land\left(f\text{ מחשב את }p\right)\right\} $
+\begin_inset Formula $\deg\left(f\right)=\deg\left(p\right)$
 \end_inset
 
 .
@@ -908,6 +981,23 @@ literal "true"
 
  אזי 
 \begin_inset Formula $\deg\left(\lor_{n}\right)=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\deg\left(\parity_{n}\right)=n$
 \end_inset
 
 .
@@ -1024,76 +1114,6 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-טענה
-\series default
-:
- תהא 
-\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
-\end_inset
-
- חשיבה על ידי מעגל בוליאני מגודל 
-\begin_inset Formula $s$
-\end_inset
-
- ועומק 
-\begin_inset Formula $d$
-\end_inset
-
- אזי לכל 
-\begin_inset Formula $\e>0$
-\end_inset
-
- קיים פולינום מ
-\begin_inset Quotes erd
-\end_inset
-
-ל 
-\begin_inset Formula $p\in\bbr\left[x_{1}\ldots x_{n}\right]$
-\end_inset
-
- מדרגה 
-\begin_inset Formula $\O\left(\left(\log\left(n\right)\cdot\log\left(\frac{s}{\e}\right)\right)^{d}\right)$
-\end_inset
-
- המחשב את 
-\begin_inset Formula $f$
-\end_inset
-
- בממוצע עם שגיאה 
-\begin_inset Formula $\e$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-טענה
-\series default
-:
- יהי 
-\begin_inset Formula $p\in\bbr\left[x_{1}\ldots x_{n}\right]$
-\end_inset
-
- מולטי־לינארי ויהי 
-\begin_inset Formula $\d>0$
-\end_inset
-
- עבורו 
-\begin_inset Formula $\bbp_{x\gets\left\{ 0,1\right\} ^{n}}\left(p\left(x\right)=\parity\left(x\right)\right)\ge\frac{1}{2}+\d$
-\end_inset
-
- אזי 
-\begin_inset Formula $\deg\left(p\right)\ge2^{\Omega\left(\d n\right)}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
 התפלגות משפחת פולינומים מחשבת פונקציה בוליאנית עם שגיאה 
 \begin_inset Formula $\e$
 \end_inset
@@ -1123,101 +1143,6 @@ literal "true"
 
  מתקיים 
 \begin_inset Formula $\bbp_{p\gets P}\left(p\left(x\right)=f\left(x\right)\right)\ge1-\e$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-טענה
-\series default
-:
- יהי 
-\begin_inset Formula $\e>0$
-\end_inset
-
- אזי קיימת קבוצת פולינומים מ
-\begin_inset Quotes erd
-\end_inset
-
-ל 
-\begin_inset Formula $P\subseteq\bbr\left[x_{1}\ldots x_{n}\right]$
-\end_inset
-
- מדרגה 
-\begin_inset Formula $\O\left(\log\left(n\right)\cdot\log\left(\frac{1}{\e}\right)\right)$
-\end_inset
-
- שמחשבת את 
-\begin_inset Formula $\lor_{n}$
-\end_inset
-
- עם שגיאה 
-\begin_inset Formula $\e$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\nc}{\mathsf{NC}}
-{\text{NC}}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\ac}{\mathsf{AC}}
-{\text{AC}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-הגדרה
-\series default
-:
- יהי 
-\begin_inset Formula $k\in\bbn$
-\end_inset
-
- אזי 
-\begin_inset Formula $\nc^{k}=\left\{ L\subseteq\left\{ 0,1\right\} ^{*}\bmid\begin{smallmatrix}L\left(C\right)=L\\
-\size\left(C\right)=\poly\left(n\right)\\
-\depth\left(C\right)=\O\left(\log^{k}\left(n\right)\right)
-\end{smallmatrix}\text{ עבורה }C\text{קיימת משפחת מעגלים }\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-הגדרה
-\series default
-:
- יהי 
-\begin_inset Formula $k\in\bbn$
-\end_inset
-
- אזי 
-\begin_inset Formula $\ac^{k}=\left\{ L\subseteq\left\{ 0,1\right\} ^{*}\bmid\begin{smallmatrix}L\left(C\right)=L\\
-\size\left(C\right)=\poly\left(n\right)\\
-\depth\left(C\right)=\O\left(\log^{k}\left(n\right)\right)
-\end{smallmatrix}\text{ בעלת fan-in לא מוגבל עבורה }C\text{קיימת משפחת מעגלים }\right\} $
 \end_inset
 
 .
@@ -1266,6 +1191,406 @@ literal "true"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\Omega,\bbp\right)$
+\end_inset
+
+ מרחב הסתברות אזי 
+\begin_inset Formula $\left(x\gets\Omega\right):\Omega\to\Omega$
+\end_inset
+
+ הינו מ
+\begin_inset Quotes erd
+\end_inset
+
+מ באשר 
+\begin_inset Formula $\bbp\left(\left(x\gets\Omega\right)=\omega\right)=\bbp\left(\omega\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה סופית אזי 
+\begin_inset Formula $x\gets A$
+\end_inset
+
+ הינו המ
+\begin_inset Quotes erd
+\end_inset
+
+מ כאשר 
+\begin_inset Formula $A$
+\end_inset
+
+ עם ההתפלגות האחידה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $S_{j,k}\gets\P\left(\left[n\right]\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $k\in\left\{ 0\ldots\log\left(n\right)\right\} $
+\end_inset
+
+ ולכל 
+\begin_inset Formula $j\in\left[c\log\left(\frac{1}{\e}\right)\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R_{\lor}\left(x\right)=1-\prod_{k,j}\left(1-\sum_{i\in S_{j,k}}x_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהי 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\lor_{n}\left(x\right)=0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R_{\lor}\left(x\right)=0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $S_{j,k}\gets\P\left(\left[n\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהי 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $S_{j,k}\gets\P\left(\left[n\right]\right)$
+\end_inset
+
+ עבורן קיימים 
+\begin_inset Formula $j,k$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\left|S_{j,k}\cap\left\{ i\mid x_{i}=1\right\} \right|=1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R_{\lor}\left(x\right)=1$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\lor_{n}\left(x\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $2^{k-1}\le\left|\left\{ i\mid x_{i}=1\right\} \right|\le2^{k}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp_{S\gets\P\left(\left[n\right]\right)}\left(\left|S\cap I\right|=1\right)\ge\frac{1}{2e}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ אזי קיימת קבוצת פולינומים מ
+\begin_inset Quotes erd
+\end_inset
+
+ל 
+\begin_inset Formula $P\subseteq\bbr\left[x_{1}\ldots x_{n}\right]$
+\end_inset
+
+ מדרגה 
+\begin_inset Formula $\O\left(\log\left(n\right)\cdot\log\left(\frac{1}{\e}\right)\right)$
+\end_inset
+
+ שמחשבת את 
+\begin_inset Formula $\lor_{n}$
+\end_inset
+
+ עם שגיאה 
+\begin_inset Formula $\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ חשיבה על ידי מעגל בוליאני מגודל 
+\begin_inset Formula $s\left(n\right)$
+\end_inset
+
+ ועומק 
+\begin_inset Formula $d\left(n\right)$
+\end_inset
+
+ אזי לכל 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ קיימת קבוצת פולינומים מ
+\begin_inset Quotes erd
+\end_inset
+
+ל 
+\begin_inset Formula $P\subseteq\bbr\left[x_{1}\ldots x_{n}\right]$
+\end_inset
+
+ מדרגה 
+\begin_inset Formula $\O\left(\left(\log\left(n\right)\cdot\log\left(\frac{s\left(n\right)}{\e}\right)\right)^{d\left(n\right)}\right)$
+\end_inset
+
+ המחשבת את 
+\begin_inset Formula $f$
+\end_inset
+
+ עם שגיאה 
+\begin_inset Formula $\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ חשיבה על ידי מעגל בוליאני מגודל 
+\begin_inset Formula $s\left(n\right)$
+\end_inset
+
+ ועומק 
+\begin_inset Formula $d\left(n\right)$
+\end_inset
+
+ אזי לכל 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ קיים פולינום מ
+\begin_inset Quotes erd
+\end_inset
+
+ל 
+\begin_inset Formula $p\in\bbr\left[x_{1}\ldots x_{n}\right]$
+\end_inset
+
+ מדרגה 
+\begin_inset Formula $\O\left(\left(\log\left(n\right)\cdot\log\left(\frac{s\left(n\right)}{\e}\right)\right)^{d\left(n\right)}\right)$
+\end_inset
+
+ המחשב את 
+\begin_inset Formula $f$
+\end_inset
+
+ בממוצע עם שגיאה 
+\begin_inset Formula $\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהי 
+\begin_inset Formula $\d>0$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p\in\bbr\left[x_{1}\ldots x_{n}\right]$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ל המחשב את 
+\begin_inset Formula $\parity_{n}$
+\end_inset
+
+ בממוצע עם שגיאה 
+\begin_inset Formula $\frac{1}{2}+\d$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\deg\left(p\right)=\Omega\left(\d\sqrt{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p\in\bbr\left[x_{1}\ldots x_{n}\right]$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ל המחשב את 
+\begin_inset Formula $\parity_{n}$
+\end_inset
+
+ בממוצע עם שגיאה 
+\begin_inset Formula $\e$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\deg\left(p\right)=\Omega\left(\sqrt{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל המחשב את 
+\begin_inset Formula $\parity_{n}$
+\end_inset
+
+ בעל 
+\begin_inset Formula $\text{fan-in}$
+\end_inset
+
+ לא מוגבל ועומק 
+\begin_inset Formula $d\left(n\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\size\left(C\right)\ge2^{\Omega\left(n^{\frac{1}{4\cdot d\left(n\right)}}\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ 
+\begin_inset Formula $\parity\notin\ac^{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \end_body
