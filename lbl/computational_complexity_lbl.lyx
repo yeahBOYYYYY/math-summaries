@@ -823,6 +823,13 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 פולינום מחשב פונקציה בוליאנית
@@ -861,7 +868,11 @@ literal "true"
 \begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
 \end_inset
 
- אזי קיים פולינום המחשב את 
+ אזי קיים פולינום מ
+\begin_inset Quotes erd
+\end_inset
+
+ל יחיד המחשב את 
 \begin_inset Formula $f$
 \end_inset
 
@@ -1083,7 +1094,7 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-התפלגות משפחת פולינומים מחשבת פונקציה בוליאנית בממוצע עם שגיאה 
+התפלגות משפחת פולינומים מחשבת פונקציה בוליאנית עם שגיאה 
 \begin_inset Formula $\e$
 \end_inset
 
@@ -1143,7 +1154,114 @@ literal "true"
 \begin_inset Formula $\lor_{n}$
 \end_inset
 
- בממוצע עם שגיאה 
+ עם שגיאה 
+\begin_inset Formula $\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\nc}{\mathsf{NC}}
+{\text{NC}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ac}{\mathsf{AC}}
+{\text{AC}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nc^{k}=\left\{ L\subseteq\left\{ 0,1\right\} ^{*}\bmid\begin{smallmatrix}L\left(C\right)=L\\
+\size\left(C\right)=\poly\left(n\right)\\
+\depth\left(C\right)=\O\left(\log^{k}\left(n\right)\right)
+\end{smallmatrix}\text{ עבורה }C\text{קיימת משפחת מעגלים }\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ac^{k}=\left\{ L\subseteq\left\{ 0,1\right\} ^{*}\bmid\begin{smallmatrix}L\left(C\right)=L\\
+\size\left(C\right)=\poly\left(n\right)\\
+\depth\left(C\right)=\O\left(\log^{k}\left(n\right)\right)
+\end{smallmatrix}\text{ בעלת fan-in לא מוגבל עבורה }C\text{קיימת משפחת מעגלים }\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ ותהא 
+\begin_inset Formula $P\subseteq\bbr\left[x_{1}\ldots x_{n}\right]$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ל המחשבת את 
+\begin_inset Formula $f$
+\end_inset
+
+ עם שגיאה 
+\begin_inset Formula $\e$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $p\in P$
+\end_inset
+
+ המחשב בממוצע את 
+\begin_inset Formula $f$
+\end_inset
+
+ עם שגיאה 
 \begin_inset Formula $\e$
 \end_inset
 
