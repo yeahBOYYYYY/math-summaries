@@ -664,8 +664,8 @@ literal "true"
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\poly}{\text{Poly}}
-{\text{Poly}}
+\newcommand{\poly}{\text{poly}}
+{\text{poly}}
 \end_inset
 
 
@@ -681,6 +681,61 @@ literal "true"
 :
  
 \begin_inset Formula $\size\left(\poly\right)=\bigcup_{c\in\bbn}\size\left(n^{c}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\mc}{\text{MC}}
+{\text{MC}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חתך מקסימלי
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי חתך 
+\begin_inset Formula $\left(A,B\right)$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left|E\left(A,B\right)\right|\ge\left|E\left(C,D\right)\right|$
+\end_inset
+
+ לכל חתך 
+\begin_inset Formula $\left(C,D\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $\left(A,B\right)$
+\end_inset
+
+ חתך מקסימלי אזי 
+\begin_inset Formula $\mc\left(G\right)=\left|E\left(A,B\right)\right|$
 \end_inset
 
 .
@@ -726,6 +781,94 @@ literal "true"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ קיימת מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אקראית 
+\begin_inset Formula $M$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $r\gets\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $M\left(1^{n};r\right)$
+\end_inset
+
+ מחזירה מ
+\begin_inset Quotes erd
+\end_inset
+
+מ 
+\begin_inset Formula $X_{1}\ldots X_{n}:\left[\log\left(n\right)+1\right]\to\left\{ 0,1\right\} $
+\end_inset
+
+ עבורם
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X_{1}\ldots X_{n}$
+\end_inset
+
+ ב
+\begin_inset Quotes erd
+\end_inset
+
+ת בזוגות.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\bbp\left(X_{i}=1\right)=\frac{1}{2}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $M$
+\end_inset
+
+ רצה בזמן 
+\begin_inset Formula $\poly\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה אלגוריתם למציאת חתך גדול
+\series default
+:
+ ...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם למציאת חתך מקסימלי
+\series default
+:
+ ...
 \end_layout
 
 \begin_layout Standard
