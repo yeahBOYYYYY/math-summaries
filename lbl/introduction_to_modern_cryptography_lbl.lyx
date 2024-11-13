@@ -150,6 +150,11 @@ PackageOptions algorithm2e vlined
 \use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
+\branch NotSure
+\selected 0
+\filename_suffix 0
+\color background background
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -222,7 +227,7 @@ literal "true"
 \series default
 :
  תהיינה 
-\begin_inset Formula $\m,\k,\c$
+\begin_inset Formula $\m,\k,\c\subseteq\left\{ 0,1\right\} ^{*}$
 \end_inset
 
  קבוצות סופיות תהא 
@@ -328,6 +333,31 @@ literal "true"
 \begin_layout Standard
 
 \series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(\k,\m,\c,E,D\right)$
+\end_inset
+
+ הצפנה סימטרית יהי 
+\begin_inset Formula $k\in\k$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $m\in\m$
+\end_inset
+
+ אזי 
+\begin_inset Formula $E_{k}\left(m\right)=E\left(k,m\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 פונקציית פענוח סימטרית
 \series default
 :
@@ -337,6 +367,31 @@ literal "true"
 
  הצפנה סימטרית אזי 
 \begin_inset Formula $D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(\k,\m,\c,E,D\right)$
+\end_inset
+
+ הצפנה סימטרית יהי 
+\begin_inset Formula $k\in\k$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $c\in\c$
+\end_inset
+
+ אזי 
+\begin_inset Formula $D_{k}\left(c\right)=D\left(k,c\right)$
 \end_inset
 
 .
@@ -394,7 +449,7 @@ literal "true"
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\left(E\left(k,m\right)\right)_{i}=\left(m_{i}+k\right)\%n$
+\begin_inset Formula $\left(E_{k}\left(m\right)\right)_{i}=\left(m_{i}+k\right)\%n$
 \end_inset
 
  לכל 
@@ -405,7 +460,7 @@ literal "true"
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\left(D\left(k,c\right)\right)_{i}=\left(c_{i}-k\right)\%n$
+\begin_inset Formula $\left(D_{k}\left(c\right)\right)_{i}=\left(c_{i}-k\right)\%n$
 \end_inset
 
  לכל 
@@ -450,7 +505,7 @@ literal "true"
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\left(E\left(k,m\right)\right)_{i}=f_{k}\left(m_{i}\right)$
+\begin_inset Formula $\left(E_{k}\left(m\right)\right)_{i}=f_{k}\left(m_{i}\right)$
 \end_inset
 
  לכל 
@@ -461,7 +516,7 @@ literal "true"
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\left(D\left(k,c\right)\right)_{i}=f_{k}^{-1}\left(c_{i}\right)$
+\begin_inset Formula $\left(D_{k}\left(c\right)\right)_{i}=f_{k}^{-1}\left(c_{i}\right)$
 \end_inset
 
  לכל 
@@ -511,7 +566,7 @@ literal "true"
 \end_inset
 
  נגדיר 
-\begin_inset Formula $c=E\left(k^{\prime},m^{\prime}\right)$
+\begin_inset Formula $c=E_{k^{\prime}}\left(m^{\prime}\right)$
 \end_inset
 
  אזי
@@ -742,7 +797,7 @@ end{algorithm}
 \end_inset
 
  מתקיים 
-\begin_inset Formula $\bbp_{m\gets\mu}\left(m=a\right)=\bbp_{\left(m,k\right)\gets\left(\mu,\k\right)}\left(m=a\mid c=E\left(k,m\right)\right)$
+\begin_inset Formula $\bbp_{m\gets\mu}\left(m=a\right)=\bbp_{\left(m,k\right)\gets\left(\mu,\k\right)}\left(m=a\mid c=E_{k}\left(m\right)\right)$
 \end_inset
 
 .
@@ -767,7 +822,7 @@ end{algorithm}
 \end_inset
 
  מתקיים 
-\begin_inset Formula $\bbp_{k\gets\k}\left(E\left(k,a\right)=c\right)=\bbp_{k\gets\k}\left(E\left(k,b\right)=c\right)$
+\begin_inset Formula $\bbp_{k\gets\k}\left(E_{k}\left(a\right)=c\right)=\bbp_{k\gets\k}\left(E_{k}\left(b\right)=c\right)$
 \end_inset
 
 .
@@ -816,14 +871,14 @@ end{algorithm}
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $E\left(k,m\right)=m\oplus k$
+\begin_inset Formula $E_{k}\left(m\right)=m\oplus k$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $D\left(k,c\right)=c\oplus k$
+\begin_inset Formula $D_{k}\left(c\right)=c\oplus k$
 \end_inset
 
 .
@@ -1124,16 +1179,158 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\size}{\text{Size}}
+{\text{Size}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch NotSure
+inverted 0
+status collapsed
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ 
+\begin_inset Formula $\hat{\bbn}=\bbn\cup\left\{ \infty\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 יריב בעל כוח חישוב
 \series default
 :
- יריב 
+ תהא 
+\begin_inset Formula $t:\bbn\to\hat{\bbn}$
+\end_inset
+
+ אזי יריב 
 \begin_inset Formula $\mathcal{A}$
 \end_inset
 
- 
+ עבורו 
+\begin_inset Formula $\size\left(\mathcal{A}\right)=\O\left(t\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ יריב תהיינה 
+\begin_inset Formula $X,Y\subseteq\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ סופיות תהא 
+\begin_inset Formula $f:X\to\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $g:Y\to\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Delta_{\mathcal{A}}\left(f,g\right)=\left|\bbp_{x\gets X}\left(\mathcal{A}\left(f\left(x\right)\right)=1\right)-\bbp_{y\gets Y}\left(\mathcal{A}\left(g\left(y\right)\right)=1\right)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+התפלגויות בלתי ניתנות להבחנה (בנ
+\begin_inset Quotes erd
+\end_inset
+
+ל)
+\series default
+:
+ יהי 
+\begin_inset Formula $\e\ge0$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $t:\bbn\to\hat{\bbn}$
+\end_inset
+
+ אזי זוג התפלגויות 
+\begin_inset Formula $\left(X,Y\right)$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ עבורן לכל יריב 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ בעל כוח חישוב 
+\begin_inset Formula $t$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\Delta_{\mathcal{A}}\left(X,Y\right)\le\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ יהי 
+\begin_inset Formula $\e\ge0$
+\end_inset
+
+ תהא 
+\begin_inset Formula $t:\bbn\to\hat{\bbn}$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ התפלגויות בנ
+\begin_inset Quotes erd
+\end_inset
+
+ל אזי 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ בנ
+\begin_inset Quotes erd
+\end_inset
+
+ל 
+\begin_inset Formula $\left(t,\e\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -1143,11 +1340,179 @@ end{algorithm}
 \series default
 :
  יהי 
-\begin_inset Formula $\e>0$
+\begin_inset Formula $\e\ge0$
 \end_inset
 
  ותהא 
-\begin_inset Formula $T:\bbn\to\bbn$
+\begin_inset Formula $t:\bbn\to\hat{\bbn}$
+\end_inset
+
+ אזי הצפנה סימטרית 
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $m,m^{\prime}\in\m$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(E\left(\cdot,m\right),E\left(\cdot,m^{\prime}\right)\right)$
+\end_inset
+
+ בנ
+\begin_inset Quotes erd
+\end_inset
+
+ל 
+\begin_inset Formula $\left(t,\e\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ הצפנה סימטרית אזי (
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ בעלת סודיות מושלמת)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ בעלת סודיות חישובית 
+\begin_inset Formula $\left(\infty,0\right)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הצפנה בעלת ביטחון סמנטי
+\series default
+:
+ ...
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\prg}{\text{PRG}}
+{\text{PRG}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+גנרטור פסודאו אקראי (
+\begin_inset Formula $\prg$
+\end_inset
+
+)
+\series default
+:
+ יהי 
+\begin_inset Formula $\e\ge0$
+\end_inset
+
+ תהא 
+\begin_inset Formula $t:\bbn\to\hat{\bbn}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\ell,n\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\ell>n$
+\end_inset
+
+ אזי 
+\begin_inset Formula $G:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{\ell}$
+\end_inset
+
+ ניתנת לחישוב בזמן פולינומי עבורה לכל יריב 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ בעל כוח חישוב 
+\begin_inset Formula $T$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|\bbp_{k\gets\left\{ 0,1\right\} ^{n}}\left(\mathcal{A}\left(G\left(k\right)\right)=1\right)-\bbp_{y\gets\left\{ 0,1\right\} ^{\ell}}\left(\mathcal{A}\left(y\right)=1\right)\right|<\e$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ 
+\begin_inset Formula $\hat{\bbn}=\bbn\cup\left\{ \infty\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+יריב בעל כוח חישוב
+\series default
+:
+ תהא 
+\begin_inset Formula $t:\bbn\to\hat{\bbn}$
+\end_inset
+
+ אזי יריב 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\size\left(\mathcal{A}\right)=\O\left(t\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הצפנה סימטרית בעלת סודיות חישובית
+\series default
+:
+ יהי 
+\begin_inset Formula $\e\ge0$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $t:\bbn\to\hat{\bbn}$
 \end_inset
 
  אזי הצפנה סימטרית 
@@ -1158,8 +1523,8 @@ end{algorithm}
 \begin_inset Formula $\mathcal{A}$
 \end_inset
 
- מגודל 
-\begin_inset Formula $T\left(n\right)$
+ בעל כוח חישוב 
+\begin_inset Formula $t$
 \end_inset
 
  ולכל 
@@ -1196,10 +1561,73 @@ end{algorithm}
 \end_inset
 
  בעלת סודיות חישובית 
-\begin_inset Formula $\left(0,\infty\right)$
+\begin_inset Formula $\left(\infty,0\right)$
 \end_inset
 
 ).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הצפנה בעלת ביטחון סמנטי
+\series default
+:
+ ...
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\prg}{\text{PRG}}
+{\text{PRG}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+גנרטור פסודאו אקראי (
+\begin_inset Formula $\prg$
+\end_inset
+
+)
+\series default
+:
+ יהי 
+\begin_inset Formula $\e\ge0$
+\end_inset
+
+ תהא 
+\begin_inset Formula $t:\bbn\to\hat{\bbn}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\ell,n\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\ell>n$
+\end_inset
+
+ אזי 
+\begin_inset Formula $G:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{\ell}$
+\end_inset
+
+ ניתנת לחישוב בזמן פולינומי עבורה לכל יריב 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ בעל כוח חישוב 
+\begin_inset Formula $T$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|\bbp_{k\gets\left\{ 0,1\right\} ^{n}}\left(\mathcal{A}\left(G\left(k\right)\right)=1\right)-\bbp_{y\gets\left\{ 0,1\right\} ^{\ell}}\left(\mathcal{A}\left(y\right)=1\right)\right|<\e$
+\end_inset
+
+.
 \end_layout
 
 \end_body

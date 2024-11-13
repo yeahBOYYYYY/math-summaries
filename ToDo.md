@@ -12,8 +12,8 @@ Things that I still need to do
 
 | Name | Notes | Last lec updated | Lec | Rec | HW |
 |---|---|---|---|---|---|
-| group theory |  | 11/11/24 | 3 | 1 | 1 |
-| set theory |  | 06/11/24 | 1 | 1 | 1 |
-| cryptography |  | 06/11/24 | 1 | 1 | 0 |
-| complexity |  | 11/11/24 | 2 | 1 | 0 |
-| game theory |  | 07/11/24 | 2 | 0 | 0 |
+| group theory | | 11/11/24 | 3 | 1 | 1 |
+| set theory   | | 12/11/24 | 2 | 0 | 0 |
+| cryptography | | 06/11/24 | 1 | 1 | 0 |
+| complexity   | | 12/11/24 | 2 | 2 | 0 |
+| game theory  | | 07/11/24 | 2 | 0 | 0 |

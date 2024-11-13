@@ -786,6 +786,208 @@ literal "true"
 \begin_layout Standard
 
 \series bold
+מסקנה אלגוריתם איטי למציאת חתך גדול
+\series default
+:
+ תהא 
+\begin_inset Formula $E$
+\end_inset
+
+ קבוצה יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ קבוצה אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{SlowBigCut}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$E,
+ 
+\backslash
+{v_1
+\backslash
+ldots v_n
+\backslash
+}$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $S 
+\backslash
+gets 
+\backslash
+mathcal{P}(
+\backslash
+{v_1
+\backslash
+ldots v_n
+\backslash
+})$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$r
+\backslash
+in
+\backslash
+{0,1
+\backslash
+}^n$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $S 
+\backslash
+gets 
+\backslash
+{v_i 
+\backslash
+mid r_i = 1
+\backslash
+}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+lIf{$|E(S,
+ 
+\backslash
+overline{S})|
+\backslash
+ge 
+\backslash
+frac{|E|}{2}$}{
+\backslash
+Return $S$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $E$
+\end_inset
+
+ קבוצה יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\text{SlowBigCut}$
+\end_inset
+
+ בעלת סיבוכיות זמן ריצה 
+\begin_inset Formula $\Omega\left(2^{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 טענה
 \series default
 :
@@ -794,7 +996,7 @@ literal "true"
 \end_inset
 
 ט אקראית 
-\begin_inset Formula $M$
+\begin_inset Formula $M_{\supp}$
 \end_inset
 
  עבורה לכל 
@@ -802,11 +1004,11 @@ literal "true"
 \end_inset
 
  ולכל 
-\begin_inset Formula $r\gets\left\{ 0,1\right\} ^{n}$
+\begin_inset Formula $r\gets\left\{ 0,1\right\} ^{\log\left(n\right)+1}$
 \end_inset
 
  מתקיים כי 
-\begin_inset Formula $M\left(1^{n};r\right)$
+\begin_inset Formula $M_{\supp}\left(1^{n};r\right)$
 \end_inset
 
  מחזירה מ
@@ -843,7 +1045,7 @@ literal "true"
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $M$
+\begin_inset Formula $M_{\supp}$
 \end_inset
 
  רצה בזמן 
@@ -856,19 +1058,752 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-מסקנה אלגוריתם למציאת חתך גדול
+סימון
 \series default
 :
- ...
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ יהי 
+\begin_inset Formula $r\in\left\{ 0,1\right\} ^{\log\left(n\right)+1}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left\{ v_{1}\ldots v_{n}\right\} $
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $S_{\supp}=\left\{ v_{i}\mid M_{\supp}\left(1^{n};r\right)_{i}=1\right\} $
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-אלגוריתם למציאת חתך מקסימלי
+טענה
 \series default
 :
- ...
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף באשר 
+\begin_inset Formula $V=\left\{ v_{1}\ldots v_{n}\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbe_{r\gets\left\{ 0,1\right\} ^{\log\left(n\right)+1}}\left[\left|E\left(S_{\supp},\overline{S_{\supp}}\right)\right|\right]=\frac{\left|E\right|}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה אלגוריתם מהיר למציאת חתך גדול
+\series default
+:
+ תהא 
+\begin_inset Formula $E$
+\end_inset
+
+ קבוצה יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ קבוצה אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{FastBigCut}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$E,
+ 
+\backslash
+{v_1
+\backslash
+ldots v_n
+\backslash
+}$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $S 
+\backslash
+gets 
+\backslash
+mathcal{P}(
+\backslash
+{v_1
+\backslash
+ldots v_n
+\backslash
+})$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$r
+\backslash
+in
+\backslash
+{0,1
+\backslash
+}^{
+\backslash
+log(n) + 1}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $X 
+\backslash
+gets M_{
+\backslash
+text{supp}}(1^n;r)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $S 
+\backslash
+gets 
+\backslash
+{v_i 
+\backslash
+mid X_i = 1
+\backslash
+}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+lIf{$|E(S,
+ 
+\backslash
+overline{S})|
+\backslash
+ge 
+\backslash
+frac{|E|}{2}$}{
+\backslash
+Return $S$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $E$
+\end_inset
+
+ קבוצה יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\text{FastBigCut}$
+\end_inset
+
+ בעלת סיבוכיות זמן ריצה 
+\begin_inset Formula $\poly\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $E$
+\end_inset
+
+ קבוצה יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ תהא 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ קבוצה ויהי 
+\begin_inset Formula $r\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S_{r}=\left\{ v_{i}\mid r_{i}=1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם למציאת חתך גדול עם תוחלת מותנית
+\series default
+:
+ תהא 
+\begin_inset Formula $E$
+\end_inset
+
+ קבוצה יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ קבוצה אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{CEBigCut}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$E,
+ 
+\backslash
+{v_1
+\backslash
+ldots v_n
+\backslash
+}$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $S 
+\backslash
+gets 
+\backslash
+mathcal{P}(
+\backslash
+{v_1
+\backslash
+ldots v_n
+\backslash
+})$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $a 
+\backslash
+gets 
+\backslash
+bigcup_{i=0}^{n}
+\backslash
+{0,
+ 1
+\backslash
+}^i$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $a
+\backslash
+gets 
+\backslash
+epsilon$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$i 
+\backslash
+in [1
+\backslash
+ldots ,n]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $c_0 
+\backslash
+gets 
+\backslash
+mathbb{E}_{r
+\backslash
+gets
+\backslash
+left
+\backslash
+{ 0,1
+\backslash
+right
+\backslash
+} ^{n}}
+\backslash
+left[
+\backslash
+left|E
+\backslash
+left(S_{r},
+\backslash
+overline{S_{r}}
+\backslash
+right)
+\backslash
+right|
+\backslash
+mid
+\backslash
+left(r_{1}=a_{1}
+\backslash
+right),
+\backslash
+ldots,
+\backslash
+left(r_{i-1}=a_{i-1}
+\backslash
+right),
+\backslash
+left(r_{i}=0
+\backslash
+right)
+\backslash
+right]$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $c_1 
+\backslash
+gets 
+\backslash
+mathbb{E}_{r
+\backslash
+gets
+\backslash
+left
+\backslash
+{ 0,1
+\backslash
+right
+\backslash
+} ^{n}}
+\backslash
+left[
+\backslash
+left|E
+\backslash
+left(S_{r},
+\backslash
+overline{S_{r}}
+\backslash
+right)
+\backslash
+right|
+\backslash
+mid
+\backslash
+left(r_{1}=a_{1}
+\backslash
+right),
+\backslash
+ldots,
+\backslash
+left(r_{i-1}=a_{i-1}
+\backslash
+right),
+\backslash
+left(r_{i}=1
+\backslash
+right)
+\backslash
+right]$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $a_i 
+\backslash
+gets 
+\backslash
+arg
+\backslash
+max_{
+\backslash
+ell
+\backslash
+in
+\backslash
+{0,
+ 1
+\backslash
+}}
+\backslash
+left(c_
+\backslash
+ell
+\backslash
+right)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $S_a$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $E$
+\end_inset
+
+ קבוצה יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ קבוצה אזי לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ באיטרציה ה־
+\begin_inset Formula $i$
+\end_inset
+
+ של 
+\begin_inset Formula $\text{CEBigCut}$
+\end_inset
+
+ מתקיים
+\begin_inset Newline newline
+\end_inset
+
+
+\size footnotesize
+
+\begin_inset Formula $\mathbb{E}_{r\gets\left\{ 0,1\right\} ^{n}}\left[\left|E\left(S_{r},\overline{S_{r}}\right)\right|\mid\left(r_{1}=a_{1}\right),\ldots,\left(r_{i-1}=a_{i-1}\right)\right]=\left|\left\{ \left(v_{i},v_{j}\right)\in E\mid\left(i,j\le k\right)\land\left(a_{i}\ne a_{j}\right)\right\} \right|+\frac{1}{2}\left|\left\{ \left(v_{i},v_{j}\right)\in E\mid\left(i>k\right)\lor\left(j>k\right)\right\} \right|$
+\end_inset
+
+
+\size default
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $E$
+\end_inset
+
+ קבוצה יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\text{CEBigCut}$
+\end_inset
+
+ בעלת סיבוכיות זמן ריצה 
+\begin_inset Formula $\poly\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $E$
+\end_inset
+
+ קבוצה יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ קבוצה אזי לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ באיטרציה ה־
+\begin_inset Formula $i$
+\end_inset
+
+ של 
+\begin_inset Formula $\text{CEBigCut}$
+\end_inset
+
+ מתקיים
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbb{E}_{r\gets\left\{ 0,1\right\} ^{n}}\left[\left|E\left(S_{r},\overline{S_{r}}\right)\right|\mid\left(r_{1}=a_{1}\right),\ldots,\left(r_{i-1}=a_{i-1}\right)\right]\ge\frac{\left|E\right|}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $E$
+\end_inset
+
+ קבוצה יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $E\left(\text{CEBigCut},\overline{\text{CEBigCut}}\right)\ge\frac{\left|E\right|}{2}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
