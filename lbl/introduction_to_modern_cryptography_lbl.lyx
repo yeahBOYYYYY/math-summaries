@@ -746,7 +746,7 @@ end{algorithm}
 \begin_inset Formula $\Omega$
 \end_inset
 
- קבוצה סופית ותהא 
+ קבוצה סופית תהא 
 \begin_inset Formula $\mu:\Omega\to\left[0,1\right]$
 \end_inset
 
@@ -788,7 +788,7 @@ end{algorithm}
 \begin_inset Formula $\mu:\m\to\left[0,1\right]$
 \end_inset
 
- ולכל 
+ לכל 
 \begin_inset Formula $a\in\m$
 \end_inset
 
@@ -1188,11 +1188,6 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch NotSure
-inverted 0
-status collapsed
-
-\begin_layout Standard
 
 \series bold
 סימון
@@ -1236,20 +1231,16 @@ status collapsed
 \begin_inset Formula $\mathcal{A}$
 \end_inset
 
- יריב תהיינה 
-\begin_inset Formula $X,Y\subseteq\left\{ 0,1\right\} ^{*}$
+ יריב ותהיינה 
+\begin_inset Formula $X,Y$
 \end_inset
 
- סופיות תהא 
-\begin_inset Formula $f:X\to\left\{ 0,1\right\} ^{*}$
-\end_inset
-
- ותהא 
-\begin_inset Formula $g:Y\to\left\{ 0,1\right\} ^{*}$
+ התפלגויות על 
+\begin_inset Formula $\left\{ 0,1\right\} ^{*}$
 \end_inset
 
  אזי 
-\begin_inset Formula $\Delta_{\mathcal{A}}\left(f,g\right)=\left|\bbp_{x\gets X}\left(\mathcal{A}\left(f\left(x\right)\right)=1\right)-\bbp_{y\gets Y}\left(\mathcal{A}\left(g\left(y\right)\right)=1\right)\right|$
+\begin_inset Formula $\Delta_{\mathcal{A}}\left(X,Y\right)=\left|\bbp_{x\gets X}\left(\mathcal{A}\left(x\right)=1\right)-\bbp_{y\gets Y}\left(\mathcal{A}\left(y\right)=1\right)\right|$
 \end_inset
 
 .
@@ -1273,8 +1264,8 @@ status collapsed
 \begin_inset Formula $t:\bbn\to\hat{\bbn}$
 \end_inset
 
- אזי זוג התפלגויות 
-\begin_inset Formula $\left(X,Y\right)$
+ אזי התפלגויות 
+\begin_inset Formula $X,Y$
 \end_inset
 
  מעל 
@@ -1299,7 +1290,7 @@ status collapsed
 \begin_layout Standard
 
 \series bold
-הערה
+סימון
 \series default
 :
  יהי 
@@ -1319,152 +1310,10 @@ status collapsed
 \end_inset
 
 ל אזי 
-\begin_inset Formula $X,Y$
-\end_inset
-
- בנ
-\begin_inset Quotes erd
-\end_inset
-
-ל 
-\begin_inset Formula $\left(t,\e\right)$
+\begin_inset Formula $X\approx_{t,\e}Y$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-הצפנה סימטרית בעלת סודיות חישובית
-\series default
-:
- יהי 
-\begin_inset Formula $\e\ge0$
-\end_inset
-
- ותהא 
-\begin_inset Formula $t:\bbn\to\hat{\bbn}$
-\end_inset
-
- אזי הצפנה סימטרית 
-\begin_inset Formula $\left(E,D\right)$
-\end_inset
-
- עבורה לכל 
-\begin_inset Formula $m,m^{\prime}\in\m$
-\end_inset
-
- מתקיים 
-\begin_inset Formula $\left(E\left(\cdot,m\right),E\left(\cdot,m^{\prime}\right)\right)$
-\end_inset
-
- בנ
-\begin_inset Quotes erd
-\end_inset
-
-ל 
-\begin_inset Formula $\left(t,\e\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-טענה
-\series default
-:
- תהא 
-\begin_inset Formula $\left(E,D\right)$
-\end_inset
-
- הצפנה סימטרית אזי (
-\begin_inset Formula $\left(E,D\right)$
-\end_inset
-
- בעלת סודיות מושלמת)
-\begin_inset Formula $\iff$
-\end_inset
-
-(
-\begin_inset Formula $\left(E,D\right)$
-\end_inset
-
- בעלת סודיות חישובית 
-\begin_inset Formula $\left(\infty,0\right)$
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-הצפנה בעלת ביטחון סמנטי
-\series default
-:
- ...
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\prg}{\text{PRG}}
-{\text{PRG}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-גנרטור פסודאו אקראי (
-\begin_inset Formula $\prg$
-\end_inset
-
-)
-\series default
-:
- יהי 
-\begin_inset Formula $\e\ge0$
-\end_inset
-
- תהא 
-\begin_inset Formula $t:\bbn\to\hat{\bbn}$
-\end_inset
-
- ויהיו 
-\begin_inset Formula $\ell,n\in\bbn$
-\end_inset
-
- באשר 
-\begin_inset Formula $\ell>n$
-\end_inset
-
- אזי 
-\begin_inset Formula $G:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{\ell}$
-\end_inset
-
- ניתנת לחישוב בזמן פולינומי עבורה לכל יריב 
-\begin_inset Formula $\mathcal{A}$
-\end_inset
-
- בעל כוח חישוב 
-\begin_inset Formula $T$
-\end_inset
-
- מתקיים 
-\begin_inset Formula $\left|\bbp_{k\gets\left\{ 0,1\right\} ^{n}}\left(\mathcal{A}\left(G\left(k\right)\right)=1\right)-\bbp_{y\gets\left\{ 0,1\right\} ^{\ell}}\left(\mathcal{A}\left(y\right)=1\right)\right|<\e$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1473,33 +1322,37 @@ status collapsed
 סימון
 \series default
 :
- 
-\begin_inset Formula $\hat{\bbn}=\bbn\cup\left\{ \infty\right\} $
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ התפלגות על 
+\begin_inset Formula $\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{*}\to\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(X\right)$
+\end_inset
+
+ הינה התפלגות על 
+\begin_inset Formula $\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $f\left(X\right)\left(c\right)=\bbp_{x\gets X}\left(f\left(x\right)=c\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-יריב בעל כוח חישוב
-\series default
-:
- תהא 
-\begin_inset Formula $t:\bbn\to\hat{\bbn}$
-\end_inset
-
- אזי יריב 
-\begin_inset Formula $\mathcal{A}$
-\end_inset
-
- עבורו 
-\begin_inset Formula $\size\left(\mathcal{A}\right)=\O\left(t\left(n\right)\right)$
-\end_inset
-
-.
-\end_layout
+\begin_inset Branch NotSure
+inverted 0
+status collapsed
 
 \begin_layout Standard
 
@@ -1538,6 +1391,40 @@ status collapsed
 .
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הצפנה סימטרית בעלת סודיות חישובית
+\series default
+:
+ יהי 
+\begin_inset Formula $\e\ge0$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $t:\bbn\to\hat{\bbn}$
+\end_inset
+
+ אזי הצפנה סימטרית 
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $m,m^{\prime}\in\m$
+\end_inset
+
+ בעלי אורך שווה מתקיים 
+\begin_inset Formula $E\left(\k,m\right)\approx_{t,\e}E\left(\k,m^{\prime}\right)$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 
 \series bold
@@ -1568,12 +1455,22 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
+\begin_inset Branch NotSure
+inverted 0
+status collapsed
+
+\begin_layout Standard
 
 \series bold
 הצפנה בעלת ביטחון סמנטי
 \series default
 :
  ...
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1584,6 +1481,11 @@ status collapsed
 
 
 \end_layout
+
+\begin_layout Standard
+\begin_inset Branch NotSure
+inverted 0
+status collapsed
 
 \begin_layout Standard
 
@@ -1628,6 +1530,414 @@ status collapsed
 \end_inset
 
 .
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $U_{n}=U\left(\left\{ 0,1\right\} ^{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+גנרטור פסודאו אקראי (
+\begin_inset Formula $\prg$
+\end_inset
+
+)
+\series default
+:
+ יהי 
+\begin_inset Formula $\e\ge0$
+\end_inset
+
+ תהא 
+\begin_inset Formula $t:\bbn\to\hat{\bbn}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\ell,n\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\ell>n$
+\end_inset
+
+ אזי 
+\begin_inset Formula $G:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{\ell}$
+\end_inset
+
+ ניתנת לחישוב בזמן פולינומי עבורה 
+\begin_inset Formula $G\left(\left\{ 0,1\right\} ^{n}\right)\approx_{t,\e}U_{\ell}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\np}{\mathcal{NP}}
+{\mathcal{NP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ אם 
+\begin_inset Formula $\P=\np$
+\end_inset
+
+ אזי לכל 
+\begin_inset Formula $\ell,n\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\ell>n$
+\end_inset
+
+ לא קיים גנרטור פסודאו אקראי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הצפנת פנקס חד־פעמי חישובית
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,\ell\in\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $G:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{\ell}$
+\end_inset
+
+ גנרטור פסודאו אקראי 
+\begin_inset Formula $\left(t,\e\right)$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $E,D:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{\ell}\to\left\{ 0,1\right\} ^{\ell}$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E_{k}\left(m\right)=G\left(k\right)\oplus m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{k}\left(c\right)=c\oplus G\left(k\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,\ell\in\bbn$
+\end_inset
+
+ יהי 
+\begin_inset Formula $G:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{\ell}$
+\end_inset
+
+ גנרטור פסודאו אקראי 
+\begin_inset Formula $\left(t,\e\right)$
+\end_inset
+
+ תהא 
+\begin_inset Formula $E$
+\end_inset
+
+ הצפנת פנקס חד־פעמי חישובית ויהי 
+\begin_inset Formula $m\in\left\{ 0,1\right\} ^{\ell}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $E\left(\left\{ 0,1\right\} ^{n},m\right)\approx_{t,\e}U_{\ell}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,\ell\in\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $G:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{\ell}$
+\end_inset
+
+ גנרטור פסודאו אקראי 
+\begin_inset Formula $\left(t,\e\right)$
+\end_inset
+
+ אזי הצפנת פנקס חד־פעמי חישובית הינה בעלת סודיות חישובית 
+\begin_inset Formula $\left(t-\ell,2\e\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\e\ge0$
+\end_inset
+
+ תהא 
+\begin_inset Formula $t:\bbn\to\hat{\bbn}$
+\end_inset
+
+ תהיינה 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ התפלגויות עבורן 
+\begin_inset Formula $X\approx_{t,\e}Y$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{*}\to\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(X\right)\approx_{t-\size\left(f\right),\e}f\left(Y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $\e,\d\ge0$
+\end_inset
+
+ תהיינה 
+\begin_inset Formula $t:\bbn\to\hat{\bbn}$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $X,Y,Z$
+\end_inset
+
+ התפלגויות עבורן 
+\begin_inset Formula $X\approx_{t,\e}Y$
+\end_inset
+
+ וכן 
+\begin_inset Formula $Y\approx_{t,\d}Z$
+\end_inset
+
+ אזי 
+\begin_inset Formula $X\approx_{t,\e+\d}Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $\e\ge0$
+\end_inset
+
+ תהיינה 
+\begin_inset Formula $t,s:\bbn\to\hat{\bbn}$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $X,Y,Z$
+\end_inset
+
+ התפלגויות עבורן 
+\begin_inset Formula $X\approx_{t,\e}Y$
+\end_inset
+
+ וכן 
+\begin_inset Formula $Y\approx_{s,\e}Z$
+\end_inset
+
+ אזי 
+\begin_inset Formula $X\approx_{\min\left(t,s\right),\e}Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $\e,\d\ge0$
+\end_inset
+
+ תהיינה 
+\begin_inset Formula $t,s:\bbn\to\hat{\bbn}$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $X,Y,Z$
+\end_inset
+
+ התפלגויות עבורן 
+\begin_inset Formula $X\approx_{t,\e}Y$
+\end_inset
+
+ וכן 
+\begin_inset Formula $Y\approx_{s,\d}Z$
+\end_inset
+
+ אזי 
+\begin_inset Formula $X\approx_{\min\left(t,s\right),\e+\d}Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ הצפנה סימטרית יהי 
+\begin_inset Formula $x\in\m^{n}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $k\in\k$
+\end_inset
+
+ אזי 
+\begin_inset Formula $E\left(k,x\right)=\left(\begin{smallmatrix}E\left(k,x_{1}\right)\\
+\vdots\\
+E\left(k,x_{n}\right)
+\end{smallmatrix}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הצפנה סימטרית בעלת סודיות חישובית למספר הודעות
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\e\ge0$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $t:\bbn\to\hat{\bbn}$
+\end_inset
+
+ אזי הצפנה סימטרית 
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $x,y\in\m^{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left|x_{i}\right|=\left|y_{i}\right|$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $E\left(\k,x\right)\approx_{t,\e}E\left(\k,y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn\backslash\left\{ 0,1\right\} $
+\end_inset
+
+ יהי 
+\begin_inset Formula $\e\ge0$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $t:\bbn\to\hat{\bbn}$
+\end_inset
+
+ אזי לא קיימת הצפנה סימטרית בעלת סודיות חישובית למספר הודעות.
 \end_layout
 
 \end_body
