@@ -1027,7 +1027,7 @@ y\in Y
 
 \series bold
 \color blue
-פעולות/אסטרטגיות של שחקן 
+פעולות/אסטרטגיות/אסטרטגיות טהורות של שחקן 
 \begin_inset Formula $\text{1}$
 \end_inset
 
@@ -1050,7 +1050,7 @@ y\in Y
 
 \series bold
 \color blue
-פעולות/אסטרטגיות של שחקן 
+פעולות/אסטרטגיות/אסטרטגיות טהורות של שחקן 
 \begin_inset Formula $\text{2}$
 \end_inset
 
@@ -1549,27 +1549,319 @@ y\in Y
 \begin_inset Formula $\text{1}$
 \end_inset
 
- אזי
-\end_layout
-
-\begin_layout Itemize
+ אזי 
 \begin_inset Formula $v\left(\left(A_{1},A_{2},u\right)\right)=v\left(\left(A_{1}\backslash\left\{ a\right\} ,A_{2},u\right)\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
-תהא 
-\begin_inset Formula $x\in\triangle\left(A_{1}\right)$
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ קבוצה סופית ותהא 
+\begin_inset Formula $t:\Omega\to\triangle\left(\Omega\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $t\left(\omega^{\prime}\mid\omega\right)=t\left(\omega\right)\left(\omega^{\prime}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\omega,\omega^{\prime}\in\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מודל של אינפורמציה לא מלאה
+\series default
+:
+ תהא 
+\begin_inset Formula $I$
+\end_inset
+
+ קבוצה סופית תהא 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ קבוצה סופית ותהא 
+\begin_inset Formula $t:I\to\left(\Omega\to\triangle\left(\Omega\right)\right)$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $i\in I$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\omega,\omega^{\prime}\in\Omega$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $t_{i}\left(\omega^{\prime}|\omega\right)>0$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $t_{i}\left(\omega\right)=t_{i}\left(\omega^{\prime}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(I,\Omega,t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שחקנים במודל של אינפורמציה לא מלאה
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(I,\Omega,t\right)$
+\end_inset
+
+ מודל של אינפורמציה לא מלאה אזי 
+\begin_inset Formula $I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מצבי עולם במודל של אינפורמציה לא מלאה
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(I,\Omega,t\right)$
+\end_inset
+
+ מודל של אינפורמציה לא מלאה אזי 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אמונה של שחקן במצב עולם במודל של אינפורמציה לא מלאה
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(I,\Omega,t\right)$
+\end_inset
+
+ מודל של אינפורמציה לא מלאה יהי 
+\begin_inset Formula $i\in I$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\omega\in\Omega$
+\end_inset
+
+ אזי 
+\begin_inset Formula $t_{i}\left(\omega\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סיטואציה של אינפורמציה לא מלאה
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(I,\Omega,t\right)$
+\end_inset
+
+ מודל של אינפורמציה לא מלאה ויהי 
+\begin_inset Formula $\omega^{*}\in\Omega$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(I,\Omega,t,\omega^{*}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(I,\Omega,t\right)$
+\end_inset
+
+ מודל של אינפורמציה לא מלאה ויהי 
+\begin_inset Formula $\omega\in\Omega$
+\end_inset
+
+ אזי 
+\begin_inset Formula $F_{i}\left(\omega\right)=\left\{ \omega^{\prime}\in\Omega\mid t_{i}\left(\omega^{\prime}\right)=t_{i}\left(\omega\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(I,\Omega,t\right)$
+\end_inset
+
+ מודל של אינפורמציה לא מלאה יהי 
+\begin_inset Formula $i\in I$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\omega\in\Omega$
+\end_inset
+
+ אזי 
+\begin_inset Formula $t_{i}\left(F_{i}\left(\omega\right)\mid\omega\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מודל שני של אינפורמציה לא מלאה
+\series default
+:
+ תהא 
+\begin_inset Formula $I$
+\end_inset
+
+ קבוצה סופית תהא 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ קבוצה סופית תהא 
+\begin_inset Formula $P:I\to\triangle\left(\Omega\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $G_{i}$
+\end_inset
+
+ חלוקה של 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in I$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(I,\Omega,P,G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+התפלגות אפריורית אפשרית
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(I,\Omega,t\right)$
+\end_inset
+
+ מודל של אינפורמציה לא מלאה ויהי 
+\begin_inset Formula $i\in I$
+\end_inset
+
+ אזי 
+\begin_inset Formula $P\in\triangle\left(\Omega\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $P\left(\cdot\mid F_{i}\left(\omega\right)\right)=t_{i}\left(\omega\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\omega\in\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(I,\Omega,t\right)$
+\end_inset
+
+ מודל של אינפורמציה לא מלאה ויהי 
+\begin_inset Formula $i\in I$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\P_{i}=\left\{ \sum_{\omega\in\Omega}\a_{\omega}\cdot t_{i}\left(\omega\right)\bmid\left(\forall\omega\in\Omega.\a_{\omega}>0\right)\land\left(\sum_{\omega\in\Omega}\a_{\omega}=1\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(I,\Omega,t\right)$
+\end_inset
+
+ מודל של אינפורמציה לא מלאה יהי 
+\begin_inset Formula $i\in I$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $P\in\triangle\left(\Omega\right)$
 \end_inset
 
  אזי (
-\begin_inset Formula $x$
-\end_inset
-
- אופטימלית במשחק 
-\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\begin_inset Formula $P\in\P\left(i\right)$
 \end_inset
 
 )
@@ -1577,14 +1869,130 @@ y\in Y
 \end_inset
 
 (
-\begin_inset Formula $u_{\upharpoonright_{A_{1}\backslash\left\{ a\right\} }}$
+\begin_inset Formula $P$
 \end_inset
 
- אופטימלית במשחק 
-\begin_inset Formula $\left(A_{1}\backslash\left\{ a\right\} ,A_{2},u\right)$
+ התפלגות אפריורית אפשרית עבור שחקן 
+\begin_inset Formula $i$
 \end_inset
 
 ).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+התפלגות אפריורית משותפת
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(I,\Omega,t\right)$
+\end_inset
+
+ מודל של אינפורמציה לא מלאה אזי 
+\begin_inset Formula $P\in\triangle\left(\Omega\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $P$
+\end_inset
+
+ התפלגות אפריורית אפשרית לכל 
+\begin_inset Formula $i\in I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+התוחלת של פונקציה בהינתן האמונה
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(I,\Omega,t\right)$
+\end_inset
+
+ מודל של אינפורמציה לא מלאה יהי 
+\begin_inset Formula $i\in I$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:\Omega\to\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\omega\in\Omega$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbe_{t_{i}}\left[f\right]\left(\omega\right)=\sum_{\omega^{\prime}\in\Omega}t_{i}\left(\omega^{\prime}\mid\omega\right)\cdot f\left(\omega^{\prime}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ספר הולנדי
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(I,\Omega,t\right)$
+\end_inset
+
+ מודל של אינפורמציה לא מלאה אזי 
+\begin_inset Formula $f:I\to\left(\Omega\to\bbr\right)$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $\omega\in\Omega$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\sum_{i\in I}f_{i}\left(\omega\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $i\in I$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\omega\in\Omega$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\bbe_{t_{i}}\left[f\right]\left(\omega\right)>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(I,\Omega,t\right)$
+\end_inset
+
+ מודל של אינפורמציה לא מלאה ותהא 
+\begin_inset Formula $P\in\triangle\left(\Omega\right)$
+\end_inset
+
+ התפלגות אפריורית משותפת אזי לא קיים ספר הולנדי.
 \end_layout
 
 \begin_layout Standard
