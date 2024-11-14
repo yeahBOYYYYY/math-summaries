@@ -921,7 +921,7 @@ y\in Y
 \end_inset
 
  אזי 
-\begin_inset Formula $\max_{x\in\triangle_{n}}\min_{y\in\triangle_{m}}x^{Y}Ay=\min_{y\in\triangle_{m}}\max_{x\in\triangle_{n}}x^{Y}Ay$
+\begin_inset Formula $\max_{x\in\triangle_{n}}\min_{y\in\triangle_{m}}x^{T}Ay=\min_{y\in\triangle_{m}}\max_{x\in\triangle_{n}}x^{T}Ay$
 \end_inset
 
 .
@@ -994,7 +994,30 @@ y\in Y
 \end_inset
 
  חסומה אזי 
-\begin_inset Formula $\sup_{x\in\triangle_{\infty}}\inf_{y\in\triangle_{m}}x^{Y}Ay=\inf_{y\in\triangle_{m}}\sup_{x\in\triangle_{\infty}}x^{Y}Ay$
+\begin_inset Formula $\sup_{x\in\triangle_{\infty}}\inf_{y\in\triangle_{m}}x^{T}Ay=\inf_{y\in\triangle_{m}}\sup_{x\in\triangle_{\infty}}x^{T}Ay$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $n,m\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $A\in M_{\infty\times\left(m+1\right)}\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sup_{x\in\triangle_{\infty}}\inf_{y\in\triangle_{m}}x^{T}Ay=\inf_{y\in\triangle_{m}}\sup_{x\in\triangle_{\infty}}x^{T}Ay$
 \end_inset
 
 .
@@ -1495,9 +1518,188 @@ y\in Y
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
-\color blue
+\color red
+פעולה מעורבת שולטת חזק על פעולה עבור שחקן 
+\begin_inset Formula $\text{1}$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס ותהא 
+\begin_inset Formula $\mu\in\triangle\left(A_{1}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $b\in A_{1}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $u\left(b,c\right)<u\left(\mu,c\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $c\in A_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+פעולה מעורבת שולטת חזק על פעולה עבור שחקן 
+\begin_inset Formula $\text{2}$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס ותהא 
+\begin_inset Formula $\mu\in\triangle\left(A_{2}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $b\in A_{2}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $u\left(c,\mu\right)<u\left(c,b\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $c\in A_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+פעולה מעורבת שולטת חלש על פעולה עבור שחקן 
+\begin_inset Formula $\text{1}$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס ותהא 
+\begin_inset Formula $\mu\in\triangle\left(A_{1}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $b\in A_{1}$
+\end_inset
+
+ עבורה
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $c\in A_{2}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $u\left(b,c\right)\le u\left(\mu,c\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיים 
+\begin_inset Formula $c\in A_{2}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $u\left(b,c\right)<u\left(\mu,c\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+פעולה מעורבת שולטת חלש על פעולה עבור שחקן 
+\begin_inset Formula $\text{2}$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\left(A_{1},A_{2},u\right)$
+\end_inset
+
+ משחק בצורה אסטרטגית שני־שחקנים סכום־אפס ותהא 
+\begin_inset Formula $\mu\in\triangle\left(A_{2}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $b\in A_{2}$
+\end_inset
+
+ עבורה
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $c\in A_{1}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $u\left(c,\mu\right)\le u\left(c,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיים 
+\begin_inset Formula $c\in A_{1}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $u\left(c,\mu\right)\le u\left(c,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
 משפט
 \series default
 \color inherit
@@ -1532,7 +1734,7 @@ y\in Y
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 משפט
 \series default
 \color inherit
@@ -1557,17 +1759,12 @@ y\in Y
 \end_layout
 
 \begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
+\color red
 סימון
 \series default
+\color inherit
 :
  תהא 
 \begin_inset Formula $\Omega$
@@ -1591,8 +1788,10 @@ y\in Y
 \begin_layout Standard
 
 \series bold
+\color red
 מודל של אינפורמציה לא מלאה
 \series default
+\color inherit
 :
  תהא 
 \begin_inset Formula $I$
@@ -1632,8 +1831,10 @@ y\in Y
 \begin_layout Standard
 
 \series bold
+\color red
 שחקנים במודל של אינפורמציה לא מלאה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(I,\Omega,t\right)$
@@ -1649,8 +1850,10 @@ y\in Y
 \begin_layout Standard
 
 \series bold
+\color red
 מצבי עולם במודל של אינפורמציה לא מלאה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(I,\Omega,t\right)$
@@ -1666,8 +1869,10 @@ y\in Y
 \begin_layout Standard
 
 \series bold
+\color red
 אמונה של שחקן במצב עולם במודל של אינפורמציה לא מלאה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(I,\Omega,t\right)$
@@ -1691,8 +1896,10 @@ y\in Y
 \begin_layout Standard
 
 \series bold
+\color red
 סיטואציה של אינפורמציה לא מלאה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(I,\Omega,t\right)$
@@ -1712,8 +1919,10 @@ y\in Y
 \begin_layout Standard
 
 \series bold
+\color red
 סימון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(I,\Omega,t\right)$
@@ -1733,8 +1942,10 @@ y\in Y
 \begin_layout Standard
 
 \series bold
+\color red
 מסקנה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(I,\Omega,t\right)$
@@ -1758,8 +1969,10 @@ y\in Y
 \begin_layout Standard
 
 \series bold
+\color red
 מודל שני של אינפורמציה לא מלאה
 \series default
+\color inherit
 :
  תהא 
 \begin_inset Formula $I$
@@ -1795,8 +2008,10 @@ y\in Y
 \begin_layout Standard
 
 \series bold
+\color red
 התפלגות אפריורית אפשרית
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(I,\Omega,t\right)$
@@ -1824,8 +2039,10 @@ y\in Y
 \begin_layout Standard
 
 \series bold
+\color red
 סימון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(I,\Omega,t\right)$
@@ -1835,7 +2052,11 @@ y\in Y
 \begin_inset Formula $i\in I$
 \end_inset
 
- אזי 
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\P_{i}=\left\{ \sum_{\omega\in\Omega}\a_{\omega}\cdot t_{i}\left(\omega\right)\bmid\left(\forall\omega\in\Omega.\a_{\omega}>0\right)\land\left(\sum_{\omega\in\Omega}\a_{\omega}=1\right)\right\} $
 \end_inset
 
@@ -1845,8 +2066,10 @@ y\in Y
 \begin_layout Standard
 
 \series bold
+\color red
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(I,\Omega,t\right)$
@@ -1882,8 +2105,10 @@ y\in Y
 \begin_layout Standard
 
 \series bold
+\color red
 התפלגות אפריורית משותפת
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(I,\Omega,t\right)$
@@ -1907,8 +2132,10 @@ y\in Y
 \begin_layout Standard
 
 \series bold
+\color red
 התוחלת של פונקציה בהינתן האמונה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(I,\Omega,t\right)$
@@ -1936,8 +2163,10 @@ y\in Y
 \begin_layout Standard
 
 \series bold
+\color red
 ספר הולנדי
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(I,\Omega,t\right)$
@@ -1981,8 +2210,10 @@ y\in Y
 \begin_layout Standard
 
 \series bold
+\color red
 משפט
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(I,\Omega,t\right)$

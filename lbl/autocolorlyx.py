@@ -98,5 +98,5 @@ if __name__ == "__main__":
 
     absulote_path = r"E:\University\!Summaries\lbl\\"
 
-    path = "introduction_to_modern_cryptography_lbl.lyx"
+    path = "mathematical_methods_in_game_theory_lbl.lyx"
     colorChanges(absulote_path + path)
