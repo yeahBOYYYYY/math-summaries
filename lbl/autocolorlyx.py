@@ -96,7 +96,8 @@ if __name__ == "__main__":
 
     # colorAbsolute(path, color, from_line, to_line)
 
-    absulote_path = r"E:\University\!Summaries\lbl\\"
+    # absulote_path = r"E:\University\!Summaries\lbl\\"
+    absulote_path = r"C:\Users\user\OneDrive\Documents\summaries\lbl\\"
 
-    path = "mathematical_methods_in_game_theory_lbl.lyx"
+    path = "group_theory_lbl.lyx"
     colorChanges(absulote_path + path)
