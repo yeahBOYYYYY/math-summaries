@@ -75,6 +75,9 @@
 \usepackage{color}
 \setlength{\columnseprule}{1pt}
 \def\columnseprulecolor{\color{black}}
+
+% reversed nicefrac for coset
+\newcommand{\tmprevnicefrac}[2]{\left.\raisebox{-0.15em}{$\scriptstyle #1$} \middle\backslash \raisebox{0.15em}{$\scriptstyle #2$}\right.}
 \end_preamble
 \options no-math
 \use_default_options true
@@ -194,6 +197,15 @@ LatexCommand include
 filename "../../macros.lyx"
 literal "true"
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\rnicefrac}[2]{\tmprevnicefrac{#1}{#2}}
+{#1\backslash#2}
 \end_inset
 
 
@@ -565,7 +577,7 @@ literal "true"
 \end_inset
 
  אזי 
-\begin_inset Formula $C_{n}=\bbz_{n}=\nicefrac{\bbz}{\sim_{n}}$
+\begin_inset Formula $C_{n}=\bbz_{n}$
 \end_inset
 
 .
@@ -2391,7 +2403,7 @@ literal "true"
 \end_inset
 
  אזי 
-\begin_inset Formula $H\backslash G=\left\{ Hg\mid g\in G\right\} $
+\begin_inset Formula $\rnicefrac HG=\left\{ Hg\mid g\in G\right\} $
 \end_inset
 
 .
@@ -2514,7 +2526,7 @@ literal "true"
 \end_inset
 
  אזי 
-\begin_inset Formula $\left[G:H\right]=\left|H\backslash G\right|$
+\begin_inset Formula $\left[G:H\right]=\left|\rnicefrac HG\right|$
 \end_inset
 
 .
@@ -2780,7 +2792,7 @@ literal "true"
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(\nicefrac{S_{n}}{\stab\left(1\right)}\right)\cap\left(\stab\left(1\right)\backslash S_{n}\right)=\left\{ \stab\left(1\right)\right\} $
+\begin_inset Formula $\left(\nicefrac{S_{n}}{\stab\left(1\right)}\right)\cap\left(\rnicefrac{\stab\left(1\right)}{S_{n}}\right)=\left\{ \stab\left(1\right)\right\} $
 \end_inset
 
 .
@@ -3358,6 +3370,40 @@ v_{\sigma\left(n\right)}
 \begin_layout Standard
 
 \series bold
+חבורת התמורות הזוגיות
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A_{n}=\ker\left(\sign\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A_{n}\le S_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 \color green
 איזומורפיזם
 \series default
@@ -3480,6 +3526,597 @@ v_{\sigma\left(n\right)}
 
  אזי 
 \begin_inset Formula $C_{n}\cong R_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מונומורפיזם
+\series default
+:
+ תהיינה 
+\begin_inset Formula $G,H$
+\end_inset
+
+ חבורות אזי הומומורפיזם חח
+\begin_inset Quotes erd
+\end_inset
+
+ע 
+\begin_inset Formula $\varphi:G\to H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אפימורפיזם
+\series default
+:
+ תהיינה 
+\begin_inset Formula $G,H$
+\end_inset
+
+ חבורות אזי הומומורפיזם על 
+\begin_inset Formula $\varphi:G\to H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אוטומורפיזם
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי איזומורפיזם 
+\begin_inset Formula $\varphi:G\to G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורת קליין
+\series default
+:
+ 
+\begin_inset Formula $K=C_{2}\times C_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ חבורת קליין הינה אבלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ חבורת קליין אינה ציקלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ חבורת קליין אינה איזומורפית ל־
+\begin_inset Formula $C_{4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית הצמדה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $c_{g}:G\to G$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $c_{g}\left(x\right)=g^{-1}xg$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $c_{g}$
+\end_inset
+
+ איזומורפיזם.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+תת־חבורה
+\color inherit
+ נורמלית
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $c_{g}\left(H\right)=H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ נורמלית אזי 
+\begin_inset Formula $H\unlhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ התב
+\begin_inset Quotes erd
+\end_inset
+
+ש
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H\unlhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $g^{-1}Hg=H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $gHg^{-1}=H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $gH=Hg$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H\unlhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $G,H$
+\end_inset
+
+ חבורות ויהי 
+\begin_inset Formula $\varphi:G\to H$
+\end_inset
+
+ הומומורפיזם אזי 
+\begin_inset Formula $\ker\left(\varphi\right)\unlhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A_{n}\unlhd S_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורה פשוטה
+\series default
+:
+ חבורה 
+\begin_inset Formula $G$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $H\unlhd G$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $H\in\left\{ \left\{ e\right\} ,G\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ אזי 
+\begin_inset Formula $C_{p}$
+\end_inset
+
+ פשוטה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{\text{odd}}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sl_{n}\left(\bbr\right)$
+\end_inset
+
+ פשוטה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(G,*\right)$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $N\unlhd G$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $*:\nicefrac{G}{N}\times\nicefrac{G}{N}\to\nicefrac{G}{N}$
+\end_inset
+
+ כך 
+\begin_inset Formula $\left(gN\right)*\left(hN\right)=\left(g*h\right)N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורת המנה
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(G,*\right)$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $N\unlhd G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\nicefrac{G}{N},*\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $N\unlhd G$
+\end_inset
+
+ אזי חבורת המנה הינה חבורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+העתקת המנה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $N\unlhd G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $q:G\to\nicefrac{G}{N}$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $q\left(g\right)=gN$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה תהא 
+\begin_inset Formula $N\unlhd G$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $q$
+\end_inset
+
+ העתקת המנה אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $q$
+\end_inset
+
+ הינה הומומורפיזם.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\ker\left(q\right)=N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $q$
+\end_inset
+
+ על.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אזי (
+\begin_inset Formula $H\unlhd G$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיים אוטומורפיזם 
+\begin_inset Formula $\varphi:G\to G$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $G=\ker\left(\varphi\right)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nicefrac{\bbz}{n\bbz}\cong\bbz_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט האיזומורפיזם הראשון
+\series default
+:
+ תהיינה 
+\begin_inset Formula $G,H$
+\end_inset
+
+ חבורות ויהי 
+\begin_inset Formula $\varphi:G\to H$
+\end_inset
+
+ הומומורפיזם אזי 
+\begin_inset Formula $\nicefrac{G}{\ker\left(\varphi\right)}\cong\im\left(\varphi\right)$
 \end_inset
 
 .
