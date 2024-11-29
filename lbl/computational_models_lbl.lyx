@@ -4587,13 +4587,9 @@ literal "true"
 
 \series bold
 \color magenta
-קונפיגורציה התחלתית
+קונפיגורציה התחלתית במכונת טיורינג רב־סרטית
 \series default
 \color inherit
- 
-\series bold
-במכונת טיורינג רב־סרטית
-\series default
 :
  תהא 
 \begin_inset Formula $M$
@@ -4650,11 +4646,11 @@ literal "true"
 \end_inset
 
  ותהיינה 
-\begin_inset Formula $\pi_{1}\ldots\pi_{p}$
+\begin_inset Formula $\pi_{1}\ldots\pi_{p}:\bbn\to\bbn$
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(k,\left(\pi_{1}\ldots\pi\right)\right)$
+\begin_inset Formula $\left(k,\left(\pi_{1}\ldots\pi_{p}\right)\right)$
 \end_inset
 
 .
@@ -4734,16 +4730,16 @@ literal "true"
 \begin_inset Formula $\text{RAM}$
 \end_inset
 
- אזי 
-\begin_inset Formula $\text{PC}\in\bbn$
+ יהיו 
+\begin_inset Formula $R_{0}\ldots R_{k}\text{PC}\in\bbn$
 \end_inset
 
- וכן 
-\begin_inset Formula $R_{0}\ldots R_{k}\in\bbn$
-\end_inset
-
- וכן 
+ ותהא 
 \begin_inset Formula $T:\bbn\to\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(T,\left\{ R_{1}\ldots R_{k}\right\} ,\text{PC}\right)$
 \end_inset
 
 .
@@ -4825,6 +4821,234 @@ literal "true"
 
  קונפיגורציה אזי 
 \begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+קונפיגורציה עוברת במודל 
+\begin_inset Formula $\text{RAM}$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\left(k,\Pi\right)$
+\end_inset
+
+ מודל 
+\begin_inset Formula $\text{RAM}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left(T,R,\text{PC}\right)$
+\end_inset
+
+ קונפיגורציה אזי קונפיגורציה 
+\begin_inset Formula $\left(T^{\prime},R^{\prime},\text{PC}^{\prime}\right)$
+\end_inset
+
+ באשר
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{PC}^{\prime}=\text{PC}+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיים 
+\begin_inset Formula $i\in\left[k\right]$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $j\in\left[k\right]\backslash\left\{ i\right\} $
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $R_{j}^{\prime}=R_{j}$
+\end_inset
+
+ וכן קיים 
+\begin_inset Formula $\pi\in\Pi\cup\left\{ \id\right\} $
+\end_inset
+
+ המקיים 
+\begin_inset Formula $R_{i}^{\prime}=\pi\left(R_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיים 
+\begin_inset Formula $i\in\bbn$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $j\in\bbn\backslash\left\{ i\right\} $
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $T^{\prime}\left(j\right)=T\left(j\right)$
+\end_inset
+
+ וכן קיים 
+\begin_inset Formula $\pi\in\Pi\cup\left\{ \id\right\} $
+\end_inset
+
+ המקיים 
+\begin_inset Formula $T^{\prime}\left(i\right)=\pi\left(T\left(i\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+אלגוריתם במודל 
+\begin_inset Formula $\text{RAM}$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\left(k,\Pi\right)$
+\end_inset
+
+ מודל 
+\begin_inset Formula $\text{RAM}$
+\end_inset
+
+ אזי פונקציה 
+\begin_inset Formula $\d$
+\end_inset
+
+ מקונפיגורציות לקונפיגורציות עבורה לכל קונפיגורציה 
+\begin_inset Formula $C$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $C$
+\end_inset
+
+ עוברת ל־
+\begin_inset Formula $\d\left(C\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\left(k,\Pi\right)$
+\end_inset
+
+ מודל 
+\begin_inset Formula $\text{RAM}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in\bbn$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $T:\bbn\to\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $T\left(n\right)=\left\{ \begin{smallmatrix}x &  & n=0\\
+0 &  & \text{else}
+\end{smallmatrix}\right.$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{Start}_{x}=\left(T,\left\{ 0\right\} ,0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+סימון
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\left(k,\Pi\right)$
+\end_inset
+
+ מודל 
+\begin_inset Formula $\text{RAM}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ אלגוריתם ויהי 
+\begin_inset Formula $x\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A_{\text{stop}}=\min\left\{ n\in\bbn\mid A^{\left(n+1\right)}\left(\text{Start}_{x}\right)=A^{\left(n\right)}\left(\text{Start}_{x}\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+ריצה של מודל 
+\begin_inset Formula $\text{RAM}$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\left(k,\Pi\right)$
+\end_inset
+
+ מודל 
+\begin_inset Formula $\text{RAM}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ אלגוריתם ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A^{\left(A_{\text{stop}}\right)}\left(\text{Start}_{x}\right)$
 \end_inset
 
 .
@@ -5095,13 +5319,9 @@ literal "true"
 
 \series bold
 \color magenta
-שפה של מכונת טיוריגנ
+שפה של מכונת טיוריגנ לא־דטרמיניסטית
 \series default
 \color inherit
- 
-\series bold
-לא־דטרמיניסטית
-\series default
 :
  תהא 
 \begin_inset Formula $N$
@@ -7426,7 +7646,9 @@ literal "true"
 \end_inset
 
 .
- השערה פתוחה
+ 
+\color lightgray
+השערה פתוחה
 \end_layout
 
 \begin_layout Standard
@@ -7917,7 +8139,9 @@ literal "true"
 \end_inset
 
 .
- השערה פתוחה
+ 
+\color lightgray
+השערה פתוחה
 \end_layout
 
 \begin_layout Standard
@@ -9300,7 +9524,9 @@ literal "true"
 \end_inset
 
 .
- השערה פתוחה
+ 
+\color lightgray
+השערה פתוחה
 \end_layout
 
 \begin_layout Standard
@@ -9408,7 +9634,9 @@ literal "true"
 \end_inset
 
 .
- השערה פתוחה
+ 
+\color lightgray
+השערה פתוחה
 \end_layout
 
 \begin_layout Standard
@@ -11133,7 +11361,9 @@ literal "true"
 \end_inset
 
 .
- השערה פתוחה
+ 
+\color lightgray
+השערה פתוחה
 \end_layout
 
 \begin_layout Standard
@@ -11149,7 +11379,9 @@ literal "true"
 \end_inset
 
 .
- השערה פתוחה
+ 
+\color lightgray
+השערה פתוחה
 \end_layout
 
 \begin_layout Standard
@@ -11814,7 +12046,9 @@ literal "true"
 \end_inset
 
 .
- השערה פתוחה
+ 
+\color lightgray
+השערה פתוחה
 \end_layout
 
 \begin_layout Standard
@@ -12333,13 +12567,6 @@ Return False
 end{algorithm}
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
 \end_inset
 
 

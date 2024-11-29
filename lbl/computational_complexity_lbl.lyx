@@ -75,6 +75,12 @@
 \usepackage{color}
 \setlength{\columnseprule}{1pt}
 \def\columnseprulecolor{\color{black}}
+
+
+\newcommand\Vtextvisiblespace{%
+  \mbox{\kern.06em\vrule height1ex}%
+  \vbox{\hrule width.8em}%
+  \hbox{\vrule height1ex}}
 \end_preamble
 \options no-math
 \use_default_options true
@@ -1379,7 +1385,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1815,14 +1821,14 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\ac}{\mathsf{AC}}
-{\text{AC}}
+\newcommand{\nuac}{\text{nu-}\mathsf{AC}}
+{\text{nu-AC}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\nc}{\mathsf{NC}}
-{\text{NC}}
+\newcommand{\nunc}{\text{nu-}\mathsf{NC}}
+{\text{nu-NC}}
 \end_inset
 
 
@@ -1831,7 +1837,6 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
-\size small
 \color blue
 הגדרה
 \series default
@@ -1842,10 +1847,10 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\ac\left(s,d\right)=\left\{ L\subseteq\left\{ 0,1\right\} ^{*}\bmid\begin{smallmatrix}L\left(C\right)=L\\
+\begin_inset Formula $\nuac\left(s,d\right)={\footnotesize \left\{ L\subseteq\left\{ 0,1\right\} ^{*}\bmid\begin{smallmatrix}L\left(C\right)=L\\
 \size\left(C_{n}\right)\le s\left(n\right)\\
 \depth\left(C_{n}\right)\le d\left(n\right)
-\end{smallmatrix}\text{ בעלת fan-in לא מוגבל עבורה }C\text{קיימת משפחת מעגלים }\right\} $
+\end{smallmatrix}\text{ בעלת fan-in לא מוגבל עבורה }C\text{קיימת משפחת מעגלים }\right\} }$
 \end_inset
 
 .
@@ -1864,7 +1869,7 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\ac^{k}=\bigcup_{c\in\bbn}\ac\left(n^{c},\log^{k}\left(n\right)\right)$
+\begin_inset Formula $\nuac^{k}=\bigcup_{c\in\bbn}\nuac\left(n^{c},\log^{k}\left(n\right)\right)$
 \end_inset
 
 .
@@ -1883,7 +1888,7 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\nc\left(s,d\right)=\left\{ L\subseteq\left\{ 0,1\right\} ^{*}\bmid\begin{smallmatrix}L\left(C\right)=L\\
+\begin_inset Formula $\nunc\left(s,d\right)=\left\{ L\subseteq\left\{ 0,1\right\} ^{*}\bmid\begin{smallmatrix}L\left(C\right)=L\\
 \size\left(C_{n}\right)\le s\left(n\right)\\
 \depth\left(C_{n}\right)\le d\left(n\right)
 \end{smallmatrix}\text{ עבורה }C\text{קיימת משפחת מעגלים }\right\} $
@@ -1905,7 +1910,7 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\nc^{k}=\bigcup_{c\in\bbn}\nc\left(n^{c},\log^{k}\left(n\right)\right)$
+\begin_inset Formula $\nunc^{k}=\bigcup_{c\in\bbn}\nunc\left(n^{c},\log^{k}\left(n\right)\right)$
 \end_inset
 
 .
@@ -1924,7 +1929,7 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\nc\left(s,d\right)\subseteq\ac\left(s,d\right)$
+\begin_inset Formula $\nunc\left(s,d\right)\subseteq\nuac\left(s,d\right)$
 \end_inset
 
 .
@@ -1943,7 +1948,20 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\ac^{k}\subseteq\nc^{k+1}$
+\begin_inset Formula $\nuac^{k}\subseteq\nunc^{k+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ 
+\begin_inset Formula $\nunc^{0}\subsetneq\nuac^{0}$
 \end_inset
 
 .
@@ -2017,7 +2035,7 @@ end{algorithm}
 \color inherit
 :
  
-\begin_inset Formula $\parity\in\nc^{1}$
+\begin_inset Formula $\parity\in\nunc^{1}$
 \end_inset
 
 .
@@ -2811,7 +2829,7 @@ end{algorithm}
 \color inherit
 :
  
-\begin_inset Formula $\parity\notin\ac^{0}$
+\begin_inset Formula $\parity\notin\nuac^{0}$
 \end_inset
 
 .
@@ -2826,7 +2844,2204 @@ end{algorithm}
 \color inherit
 :
  
-\begin_inset Formula $\ac^{0}\subsetneq\nc^{1}$
+\begin_inset Formula $\nuac^{0}\subsetneq\nunc^{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\dtime}{\text{DTime}}
+{\text{DTime}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $M$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $k$
+\end_inset
+
+־סרטית ותהא 
+\begin_inset Formula $c_{1}\$c_{2}\$\ldots\$c_{k}$
+\end_inset
+
+ קונפיגורציה אזי 
+\begin_inset Formula $\left(c_{1}\$c_{2}\$\ldots\$c_{k}\right)^{i}=c_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $x\in\Sigma^{*}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $A\subseteq\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $x\backslash A$
+\end_inset
+
+ הינה המחרוזת 
+\begin_inset Formula $x$
+\end_inset
+
+ ללא אברי 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מכונת טיורינג בעלת סיבוכיות מקום
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ אזי מ
+\begin_inset Quotes erd
+\end_inset
+
+ט תלת־סרטית 
+\begin_inset Formula $M$
+\end_inset
+
+ עבורה לכל קונפיגורציות 
+\begin_inset Formula $c_{0}\ldots c_{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $c_{0}=q_{0}x$
+\end_inset
+
+ וכן 
+\begin_inset Formula $c_{i-1}$
+\end_inset
+
+ עוברת ל־
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים
+\end_layout
+
+\begin_layout Itemize
+סרט לקריאה בלבד:
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $c_{i}^{1}=x\backslash Q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סרט חסום במקום:
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|c_{i-1}^{2}\right|\le S\left(n\right)+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+סרט לכתיבה חד־פעמית:
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $j\in\left[\left|c_{i-1}^{3}\right|\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(c_{i-1}^{3}\backslash Q\right)_{j}=\left(c_{i}^{3}\backslash Q\right)_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+חסם עליון למקום ריצה של מכונת טיורינג
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $M$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט בעלת סיבוכיות מקום 
+\begin_inset Formula $S$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הערה
+\series default
+\color inherit
+:
+ נקרא למכונת טיורינג בעלת סיבוכיות מקום מכונת טיורינג.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\dspace}{\text{DSpace}}
+{\text{DSpace}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הגדרה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\dspace\left(S\left(n\right)\right)=\left\{ L\left(M\right)\mid\O\left(S\left(n\right)\right)\text{ מ"ט שרצה במקום }M\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\pspace}{\text{PSPACE}}
+{\text{PSPACE}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+שפה 
+\begin_inset Formula $\pspace$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\pspace=\bigcup_{c\in\bbn}\dspace\left(n^{c}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\logspace}{\text{LOGSPACE}}
+{\text{LOGSPACE}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\lspace}{\text{LSPACE}}
+{\text{LSPACE}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\LOG}{\text{LOG}}
+{\text{LOG}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+שפה 
+\begin_inset Formula $\logspace$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\LOG=\dspace\left(\log\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\l}{\mathcal{L}}
+{\mathcal{L}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\LOG=\logspace=\lspace=\l$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\dspace\left(1\right)=\dspace\left(\log\left(\log\left(n\right)\right)\right)=\left\{ L\mid\text{ רגולרית}L\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $T$
+\end_inset
+
+ חשיבה בזמן אזי 
+\begin_inset Formula $\dtime\left(T\left(n\right)\right)\subseteq\dspace\left(T\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\np}{\mathcal{NP}}
+{\mathcal{NP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\np\subseteq\pspace$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $S\ge\log$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\dspace\left(S\left(n\right)\right)\subseteq\dtime\left(2^{\O\left(S\left(n\right)\right)}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\LOG\subseteq\P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ex}{\mathcal{EXP}}
+{\mathcal{EXP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\pspace\subseteq\ex$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+פונקציה חשיבה במקום
+\series default
+\color inherit
+:
+ פונקציה 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ עבורה קיימת מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $M$
+\end_inset
+
+ המקיימת לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ כי 
+\begin_inset Formula $M$
+\end_inset
+
+ על הקלט 
+\begin_inset Formula $1^{n}$
+\end_inset
+
+ מחשבת את 
+\begin_inset Formula $\left(S\left(n\right)\right)_{2}$
+\end_inset
+
+ במקום 
+\begin_inset Formula $\O\left(S\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+משפט היררכיית המקום
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ חשיבה במקום ותהא 
+\begin_inset Formula $t\left(n\right)=o\left(S\left(n\right)\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\dspace\left(t\left(n\right)\right)\subsetneq\dspace\left(T\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\LOG\subsetneq\pspace$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+:
+ לפחות אחד מהבאים נכון
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\LOG\subsetneq\P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\P\subsetneq\pspace$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+השערה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\LOG\subsetneq\P$
+\end_inset
+
+.
+ 
+\color lightgray
+השערה פתוחה
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+השערה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\P\subsetneq\pspace$
+\end_inset
+
+.
+ 
+\color lightgray
+השערה פתוחה
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\spc}{\text{\Vtextvisiblespace}}
+{⌴}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+פונקציה חשיבה במקום 
+\begin_inset Formula $S$
+\end_inset
+
+
+\series default
+\color inherit
+:
+  תהא 
+\begin_inset Formula $D\subseteq\Sigma$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f:D\to\left(\Gamma\backslash\left\{ \spc\right\} \right)^{*}$
+\end_inset
+
+ עבורה קיימת מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $M$
+\end_inset
+
+ בעלת סיבוכיות מקום 
+\begin_inset Formula $S\left(n\right)$
+\end_inset
+
+ המחשבת את 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+רדוקציית מיפוי במקום לוגריתמי
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $\Sigma,\Delta$
+\end_inset
+
+ אלפבייתים באשר 
+\begin_inset Formula $\Sigma\subseteq\Delta$
+\end_inset
+
+ תהא 
+\begin_inset Formula $A\subseteq\Sigma^{*}$
+\end_inset
+
+ שפה ותהא 
+\begin_inset Formula $B\subseteq\Delta^{*}$
+\end_inset
+
+ שפה אזי רדוקציית מיפוי 
+\begin_inset Formula $f$
+\end_inset
+
+ מ־
+\begin_inset Formula $A$
+\end_inset
+
+ ל־
+\begin_inset Formula $B$
+\end_inset
+
+ חשיבה במקום לוגריתמי.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Log}{\text{Log}}
+{\text{Log}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $\Sigma,\Delta$
+\end_inset
+
+ אלפבייתים באשר 
+\begin_inset Formula $\Sigma\subseteq\Delta$
+\end_inset
+
+ תהא 
+\begin_inset Formula $A\subseteq\Sigma^{*}$
+\end_inset
+
+ שפה תהא 
+\begin_inset Formula $B\subseteq\Delta^{*}$
+\end_inset
+
+ שפה ותהא 
+\begin_inset Formula $f:\Sigma^{*}\to\Delta^{*}$
+\end_inset
+
+ רדוקציית מיפוי במקום לוגריתמי אזי 
+\begin_inset Formula $A\le_{\Log}B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+:
+ תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ שפות עבורן 
+\begin_inset Formula $A\le_{\Log}B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\le_{p}B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ph}{\mathcal{PH}}
+{\mathcal{PH}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\pc}{\mathcal{PC}}
+{\mathcal{PC}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+שפה קשה ביחס למחלקה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קבוצה של שפות אזי שפה 
+\begin_inset Formula $\l$
+\end_inset
+
+ עבורה לכל שפה 
+\begin_inset Formula $L\in\mathcal{C}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $L\le_{\Log}\l$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+שפה שלמה ביחס למחלקה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קבוצה של שפות אזי שפה 
+\begin_inset Formula $\l\in\mathcal{C}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\l$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+־קשה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ חשיבה במקום 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ תהא 
+\begin_inset Formula $g$
+\end_inset
+
+ חשיבה במקום 
+\begin_inset Formula $R:\bbn\to\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $m:\bbn\to\bbn$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|f\left(x\right)\right|\le m\left(n\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ חשיבה במקום 
+\begin_inset Formula $\O\left(S\left(n\right)+\log\left(m\left(n\right)\right)+R\left(m\left(n\right)\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ חשיבה במקום תהא 
+\begin_inset Formula $f$
+\end_inset
+
+ חשיבה במקום 
+\begin_inset Formula $S$
+\end_inset
+
+ תהא 
+\begin_inset Formula $g$
+\end_inset
+
+ חשיבה במקום 
+\begin_inset Formula $R:\bbn\to\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $m:\bbn\to\bbn$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|f\left(x\right)\right|\le m\left(n\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ חשיבה במקום 
+\begin_inset Formula $\O\left(S\left(n\right)+R\left(m\left(n\right)\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+:
+ תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ שפות באשר 
+\begin_inset Formula $B\in\LOG$
+\end_inset
+
+ וכן 
+\begin_inset Formula $A\le_{L}B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\in\LOG$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+מסקנה
+\series default
+\color inherit
+:
+ תהיינה 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ שפות באשר 
+\begin_inset Formula $A\le_{\Log}B$
+\end_inset
+
+ וכן 
+\begin_inset Formula $B\le_{\Log}C$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\le_{\Log}C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $A\in\LOG$
+\end_inset
+
+ באשר 
+\begin_inset Formula $A$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\P$
+\end_inset
+
+־שלמה אזי 
+\begin_inset Formula $\P=\LOG$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\cval}{\text{CVAL}}
+{\text{CVAL}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הגדרה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\cval=\left\{ \left<C,x\right>\mid\left(\text{ מעגל בוליאני}C\right)\land\left(C\left(x\right)=1\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+למה קוק־לוין
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $M$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט רצה בזמן פולינומי אזי קיימת פונקציה חשיבה 
+\begin_inset Formula $f$
+\end_inset
+
+ במקום לוגריתמי עבורה 
+\begin_inset Formula $f\left(1^{n}\right)=\left<C_{M,n}\right>$
+\end_inset
+
+ באשר 
+\begin_inset Formula $C_{M,n}$
+\end_inset
+
+ מעגל עבורו לכל 
+\begin_inset Formula $z\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ מתקיים (
+\begin_inset Formula $M\left(z\right)$
+\end_inset
+
+ מקבלת)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $C_{M,n}\left(z\right)=1$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\cval$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\P$
+\end_inset
+
+־שלמה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\tqbf}{\text{TQBF}}
+{\text{TQBF}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\fv}{\text{FV}}
+{\text{FV}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+נוסחה מכומתת לחלוטין
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ נוסחה באשר 
+\begin_inset Formula $\fv\left(\varphi\right)=\left\{ x_{1}\ldots x_{n}\right\} $
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $Q_{1}\ldots Q_{n}\in\left\{ \forall,\exists\right\} $
+\end_inset
+
+ כמתים אזי 
+\begin_inset Formula $Q_{1}x_{1}\ldots Q_{n}x_{n}\left(\varphi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הגדרה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\tqbf=\left\{ \left<\varphi\right>\mid\left(\text{ נוסחה מכומתת לחלוטין}\varphi\right)\land\left(\text{ ספיקה}\varphi\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\cval\in\pspace$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\tqbf$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\pspace$
+\end_inset
+
+־שלמה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מילה בעלת ייצוג
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ עבורה קיימת מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $M$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left|\left<M\right>\right|=k$
+\end_inset
+
+ וכן 
+\begin_inset Formula $M\left(i\right)=x_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מעגל מיוצג על ידי מעגל
+\series default
+:
+ יהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל בגודל 
+\begin_inset Formula $s$
+\end_inset
+
+ אזי מעגל 
+\begin_inset Formula $A$
+\end_inset
+
+ המקבל 
+\begin_inset Formula $\log\left(s\right)$
+\end_inset
+
+ ביטים עבורו קיימת 
+\begin_inset Formula $f:V\left(C\right)\to\left[s\right]$
+\end_inset
+
+ הפיכה המקיימת 
+\begin_inset Formula $A\left(i\right)=\left<f\left(i\right),\adj^{-}\left(f\left(i\right)\right),\adj^{+}\left(f\left(i\right)\right)\right>$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[s\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $C$
+\end_inset
+
+ מעגל ויהי 
+\begin_inset Formula $A$
+\end_inset
+
+ מעגל המייצג את 
+\begin_inset Formula $C$
+\end_inset
+
+ אזי 
+\begin_inset Formula $C=\left[A\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\scval}{\text{succ-CVAL}}
+{\text{succ-CVAL}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ 
+\begin_inset Formula $\scval=\left\{ \left<A,x\right>\mid\left(\text{ מעגל המייצג מעגל}A\right)\land\left(\left<\left[A\right],x\right>\in\cval\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\scval\in\ex$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\scval$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\ex$
+\end_inset
+
+־שלמה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סדרת מעגלים 
+\begin_inset Formula $\Log$
+\end_inset
+
+־יוניפורמית
+\series default
+:
+ משפחת מעגלים 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ עבורה קיימת מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $M$
+\end_inset
+
+ באשר 
+\begin_inset Formula $M$
+\end_inset
+
+ רצה במקום 
+\begin_inset Formula $\O\left(\log\left(n\right)\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $M\left(1^{n}\right)=\left<C_{n}\right>$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\uac}{\text{u-}\mathsf{AC}}
+{\text{u-AC}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\unc}{\text{u-}\mathsf{NC}}
+{\text{u-NC}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $s,d:\bbn\to\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\uac\left(s,d\right)={\scriptsize \left\{ L\subseteq\left\{ 0,1\right\} ^{*}\bmid\begin{smallmatrix}L\left(C\right)=L\\
+\size\left(C_{n}\right)\le s\left(n\right)\\
+\depth\left(C_{n}\right)\le d\left(n\right)
+\end{smallmatrix}\text{ בעלת fan-in לא מוגבל עבורה }C\text{קיימת משפחת מעגלים יוניפורמית }\right\} }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\uac^{k}=\bigcup_{c\in\bbn}\uac\left(n^{c},\log^{k}\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $s,d:\bbn\to\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\unc\left(s,d\right)=\left\{ L\subseteq\left\{ 0,1\right\} ^{*}\bmid\begin{smallmatrix}L\left(C\right)=L\\
+\size\left(C_{n}\right)\le s\left(n\right)\\
+\depth\left(C_{n}\right)\le d\left(n\right)
+\end{smallmatrix}\text{ עבורה }C\text{קיימת משפחת מעגלים יוניפורמית }\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\unc^{k}=\bigcup_{c\in\bbn}\unc\left(n^{c},\log^{k}\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ac}{\mathsf{AC}}
+{\text{AC}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\nc}{\mathsf{NC}}
+{\text{NC}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ac^{k}=\uac^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nc^{k}=\unc^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nc^{k}\subseteq\ac^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ac^{k}\subseteq\nc^{k+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ 
+\begin_inset Formula $\ac=\bigcup_{k=0}^{\infty}\ac^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ 
+\begin_inset Formula $\nc=\bigcup_{k=0}^{\infty}\nc^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ 
+\begin_inset Formula $\ac=\nc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\LOG\subseteq\ac^{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nc^{k}\subseteq\dspace\left(\O\left(\log^{k}\left(n\right)\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ יהי 
+\begin_inset Formula $M$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט רץ בזמן 
+\begin_inset Formula $S$
+\end_inset
+
+ יהי 
+\begin_inset Formula $x\in\Sigma^{*}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $G$
+\end_inset
+
+ מטריצה המייצגת את עץ הקונפיגורציות אזי (
+\begin_inset Formula $M\left(x\right)$
+\end_inset
+
+ מקבלת)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\left(\left(I+G\right)^{S\left(\left|x\right|\right)}\right)_{x,y}\ge1$
+\end_inset
+
+ באשר 
+\begin_inset Formula $y$
+\end_inset
+
+ קונפיגורציה במצב מקבל).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+השערה
+\series default
+:
+ קיימת מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $M$
+\end_inset
+
+ הרצה בזמן פולינומי ובזיכרון 
+\begin_inset Formula $o\left(n\right)$
+\end_inset
+
+ עבורה לכל מטריצה 
+\begin_inset Formula $A$
+\end_inset
+
+ המייצגת גרף מכוון בעל 
+\begin_inset Formula $n$
+\end_inset
+
+ קודקודים ולכל קודקודים 
+\begin_inset Formula $s,t$
+\end_inset
+
+ מתקיים (
+\begin_inset Formula $M\left(\left<A,s,t\right>\right)$
+\end_inset
+
+ מקבלת)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיים מסלול מ־
+\begin_inset Formula $s$
+\end_inset
+
+ ל־
+\begin_inset Formula $t$
+\end_inset
+
+).
+ 
+\color lightgray
+השערה פתוחה
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מודל 
+\begin_inset Formula $\text{PRAM}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(k,\Pi\right)$
+\end_inset
+
+ מודל 
+\begin_inset Formula $\text{RAM}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(p,k,\Pi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מספר המעבדים במודל 
+\begin_inset Formula $\text{PRAM}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(p,k,\Pi\right)$
+\end_inset
+
+ מודל 
+\begin_inset Formula $\text{PRAM}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קונפיגורציה במודל 
+\begin_inset Formula $\text{PRAM}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(k,\Pi\right)$
+\end_inset
+
+ מודל 
+\begin_inset Formula $\text{RAM}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left(T,R,\text{PC}\right)$
+\end_inset
+
+ קונפיגורציה במודל 
+\begin_inset Formula $\text{RAM}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(T,R,\text{PC}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קונפיגורציה עוברת במודל 
+\begin_inset Formula $\text{PRAM}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(k,\Pi\right)$
+\end_inset
+
+ מודל 
+\begin_inset Formula $\text{RAM}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left(T,R,\text{PC}\right)$
+\end_inset
+
+ קונפיגורציה אזי קונפיגורציה 
+\begin_inset Formula $\left(T^{\prime},R^{\prime},\text{PC}^{\prime}\right)$
+\end_inset
+
+ באשר
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{PC}^{\prime}=\text{PC}+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיימים 
+\begin_inset Formula $i_{1}\ldots i_{p}\in\left[k\right]$
+\end_inset
+
+ עבורם לכל 
+\begin_inset Formula $j\in\left[k\right]\backslash\left\{ i_{1}\ldots i_{p}\right\} $
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $R_{j}^{\prime}=R_{j}$
+\end_inset
+
+ וכן קיימים 
+\begin_inset Formula $\pi_{1}\ldots\pi_{p}\in\Pi\cup\left\{ \id\right\} $
+\end_inset
+
+ עבורם לכל 
+\begin_inset Formula $\ell\in\left[p\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $R_{i_{\ell}}^{\prime}=\pi_{i_{\ell}}\left(R_{i_{\ell}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיימים 
+\begin_inset Formula $i_{1}\ldots i_{p}\in\bbn$
+\end_inset
+
+ עבורם לכל 
+\begin_inset Formula $j\in\bbn\backslash\left\{ i_{1}\ldots i_{p}\right\} $
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $T^{\prime}\left(j\right)=T\left(j\right)$
+\end_inset
+
+ וכן קיימים 
+\begin_inset Formula $\pi_{1}\ldots\pi_{p}\in\Pi\cup\left\{ \id\right\} $
+\end_inset
+
+ עבורם לכל 
+\begin_inset Formula $\ell\in\left[p\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $T^{\prime}\left(\ell\right)=\pi\left(T\left(\ell\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם במודל 
+\begin_inset Formula $\text{PRAM}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(p,k,\Pi\right)$
+\end_inset
+
+ מודל 
+\begin_inset Formula $\text{PRAM}$
+\end_inset
+
+ אזי פונקציה 
+\begin_inset Formula $\d$
+\end_inset
+
+ מקונפיגורציות לקונפיגורציות עבורה לכל קונפיגורציה 
+\begin_inset Formula $C$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $C$
+\end_inset
+
+ עוברת ל־
+\begin_inset Formula $\d\left(C\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(p,k,\Pi\right)$
+\end_inset
+
+ מודל 
+\begin_inset Formula $\text{PRAM}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in\bbn$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $T:\bbn\to\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $T\left(n\right)=\left\{ \begin{smallmatrix}x &  & n=0\\
+0 &  & \text{else}
+\end{smallmatrix}\right.$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{Start}_{x}=\left(T,\left\{ 0\right\} ,0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(p,k,\Pi\right)$
+\end_inset
+
+ מודל 
+\begin_inset Formula $\text{PRAM}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ אלגוריתם ויהי 
+\begin_inset Formula $x\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A_{\text{stop}}=\min\left\{ n\in\bbn\mid A^{\left(n+1\right)}\left(\text{Start}_{x}\right)=A^{\left(n\right)}\left(\text{Start}_{x}\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ריצה של מודל 
+\begin_inset Formula $\text{PRAM}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(p,k,\Pi\right)$
+\end_inset
+
+ מודל 
+\begin_inset Formula $\text{PRAM}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ אלגוריתם ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A^{\left(A_{\text{stop}}\right)}\left(\text{Start}_{x}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+זמן ריצה במודל 
+\begin_inset Formula $\text{PRAM}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(p,k,\Pi\right)$
+\end_inset
+
+ מודל 
+\begin_inset Formula $\text{PRAM}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ אלגוריתם ויהי 
+\begin_inset Formula $x\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(A^{\left(A_{\text{stop}}\right)}\left(\text{Start}_{x}\right)\right)_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $L\in\nc^{k}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $L\cap\Sigma^{n}$
+\end_inset
+
+ ניתנת לחישוב במודל 
+\begin_inset Formula $\text{PRAM}$
+\end_inset
+
+ בעל 
+\begin_inset Formula $\poly\left(n\right)$
+\end_inset
+
+ מעבדים בזמן 
+\begin_inset Formula $\O\left(\log^{k}\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מקום ריצה במודל 
+\begin_inset Formula $\text{PRAM}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(p,k,\Pi\right)$
+\end_inset
+
+ מודל 
+\begin_inset Formula $\text{PRAM}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ אלגוריתם ויהי 
+\begin_inset Formula $x\in\bbn$
+\end_inset
+
+ אזי 
+\size footnotesize
+
+\begin_inset Formula $\max\left\{ \min\left\{ \left(A^{\left(i\right)}\left(\text{Start}_{x}\right)\right)_{1}^{-1}\left[\left\{ 0\right\} \right]\right\} \bmid i\in\left[A_{\text{stop}}\right]\right\} $
+\end_inset
+
+
+\size default
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+השערה
+\series default
+:
+ קיים מודל 
+\begin_inset Formula $\text{PRAM}$
+\end_inset
+
+ 
+\begin_inset Formula $\left(p,k,\Pi\right)$
+\end_inset
+
+ וקיים אלגוריתם 
+\begin_inset Formula $A$
+\end_inset
+
+ הפותר את 
+\begin_inset Formula $\cval$
+\end_inset
+
+ בזמן 
+\begin_inset Formula $\text{polylog}\left(n\right)$
+\end_inset
+
+ ובמקום 
+\begin_inset Formula $\poly\left(n\right)$
+\end_inset
+
+.
+ 
+\color lightgray
+השערה פתוחה
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+השערה
+\series default
+:
+ 
+\begin_inset Formula $\P=\nc$
+\end_inset
+
+.
+ 
+\color lightgray
+השערה פתוחה
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\text{APSP}\in\nc$
 \end_inset
 
 .
