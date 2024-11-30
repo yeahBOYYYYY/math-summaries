@@ -15,5 +15,5 @@ Things that I still need to do
 | group theory | 						  | 27/11/24 | 8 | 3 | 2 |
 | set theory   | redo HW and Rec after AC | 28/11/24 | 4 | 0 | 0 |
 | cryptography | 						  | 06/11/24 | 1 | 2 | 0 |
-| complexity   | 						  | 12/11/24 | 4 | 2 | 0 |
+| complexity   | 						  | 30/11/24 | 4 | 4 | 0 |
 | game theory  | 						  | 14/11/24 | 3 | 1 | 1 |
