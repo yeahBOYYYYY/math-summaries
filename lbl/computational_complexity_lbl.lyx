@@ -5141,6 +5141,73 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+הערה
+\series default
+:
+ תהא 
+\begin_inset Formula $\O\subseteq\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אזי מכאן והלאה 
+\begin_inset Formula $M^{\O}$
+\end_inset
+
+ תסמן מ
+\begin_inset Quotes erd
+\end_inset
+
+ט עם אורקל 
+\begin_inset Formula $\O$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהא 
+\begin_inset Formula $\O\subseteq\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $T:\bbn\to\bbn$
+\end_inset
+
+ חשיבה בזמן אזי 
+\begin_inset Formula $\dtime^{\O}\left(T\left(n\right)\right)=\left\{ L\left(M\right)\mid T\left(n\right)\text{ מ"ט הרצה בזמן }M^{\O}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהא 
+\begin_inset Formula $\O\subseteq\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $T:\bbn\to\bbn$
+\end_inset
+
+ חשיבה במקום אזי 
+\begin_inset Formula $\dspace^{\O}\left(T\left(n\right)\right)=\left\{ L\left(M\right)\mid T\left(n\right)\text{ מ"ט הרצה במקום }M^{\O}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 הגדרה
 \series default
 :
@@ -5149,7 +5216,339 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\P^{\O}=\left\{ L\mid\right\} $
+\begin_inset Formula $\P^{\O}=\bigcup_{c=0}^{\infty}\dtime^{\O}\left(n^{c}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהא 
+\begin_inset Formula $\O\subseteq\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\pspace^{\O}=\bigcup_{c=0}^{\infty}\dspace^{\O}\left(n^{c}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהא 
+\begin_inset Formula $\O\subseteq\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $L$
+\end_inset
+
+ שפה עבורה קיימת מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $M^{\O}$
+\end_inset
+
+ שרצה בזמן 
+\begin_inset Formula $\poly\left(n\right)$
+\end_inset
+
+ באשר לכל 
+\begin_inset Formula $x\in\Sigma$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(x\in L\right)\iff\left(\exists y\in\Sigma^{\poly\left(\left|x\right|\right)}.M\left(x,y\right)=1\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $L\in\np^{\O}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $\mathcal{A},\mathcal{B}$
+\end_inset
+
+ משפחות של שפות אזי 
+\begin_inset Formula $\mathcal{A}^{\mathcal{B}}=\bigcup_{L\in\mathcal{B}}\mathcal{A}^{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\np^{\pspace}=\P^{\pspace}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ קיימת 
+\begin_inset Formula $\O\subseteq\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\np^{\O}\ne\P^{\O}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה משפט היררכיית הזמן עם אורקל
+\series default
+:
+ תהא 
+\begin_inset Formula $\O\subseteq\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $T:\bbn\to\bbn$
+\end_inset
+
+ חשיבה בזמן ותהא 
+\begin_inset Formula $t\left(n\right)=o\left(\frac{T\left(n\right)}{\log\left(T\left(n\right)\right)}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\dtime^{\O}\left(t\left(n\right)\right)\subsetneq\dtime^{\O}\left(T\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה משפט היררכיית הזמן עם אורקל
+\series default
+:
+ תהא 
+\begin_inset Formula $\O\subseteq\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $S:\bbn\to\bbn$
+\end_inset
+
+ חשיבה במקום ותהא 
+\begin_inset Formula $t\left(n\right)=o\left(S\left(n\right)\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\dspace^{\O}\left(t\left(n\right)\right)\subsetneq\dspace^{\O}\left(T\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהא 
+\begin_inset Formula $T:\bbn\to\bbn$
+\end_inset
+
+ תהא 
+\begin_inset Formula $L\in\dtime\left(T\left(n\right)\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע חשיבה בזמן באשר 
+\begin_inset Formula $f\left(n\right)\ge n$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $L_{\text{pad}}^{f}=\left\{ x||1^{f\left(\left|x\right|\right)-\left|x\right|-1}\bmid x\in L\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $T:\bbn\to\bbn$
+\end_inset
+
+ תהא 
+\begin_inset Formula $L\in\dtime\left(T\left(n\right)\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\bbn\to\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $L_{\text{pad}}^{f}\in\dtime\left(\poly\left(n\right)+T\left(f^{-1}\left(n\right)\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ 
+\begin_inset Formula $\P^{\ex}\ne\ex^{\ex}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ 
+\begin_inset Formula $2\ex=\bigcup_{c=0}^{\infty}\dtime\left(2^{2^{n^{c}}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\ex^{\ex}=2\ex$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\nex}{\mathcal{NEXP}}
+{\mathcal{NEXP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ אם 
+\begin_inset Formula $\P=\np$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ex=\nex$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ 
+\begin_inset Formula $\text{E}=\bigcup_{k=0}^{\infty}\dtime\left(2^{kn}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\text{E}\ne\ex$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\text{E}\ne\pspace$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 
