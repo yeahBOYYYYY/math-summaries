@@ -1458,7 +1458,7 @@ end{algorithm}
 \begin_layout Standard
 \begin_inset Branch NotSure
 inverted 0
-status collapsed
+status open
 
 \begin_layout Standard
 
@@ -1567,11 +1567,10 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch NotSure
-inverted 0
-status collapsed
+\begin_inset Note Note
+status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \series bold
 \color blue
@@ -1599,7 +1598,7 @@ status collapsed
 \begin_layout Standard
 \begin_inset Branch NotSure
 inverted 0
-status collapsed
+status open
 
 \begin_layout Standard
 
@@ -2112,7 +2111,7 @@ E\left(k,x_{n}\right)
 \end_inset
 
  קבוצות סופיות תהא 
-\begin_inset Formula $G:\l\to\left(\bbn\to\l\right)$
+\begin_inset Formula $G:\k\to\left(\bbn\to\l\right)$
 \end_inset
 
  תהא 
@@ -2132,15 +2131,11 @@ E\left(k,x_{n}\right)
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Branch NotSure
-inverted 0
+\begin_inset Note Note
 status open
 
-\begin_layout Standard
-מצגת
+\begin_layout Plain Layout
+עמוד
 \family roman
 \series medium
 \shape up
@@ -2169,7 +2164,7 @@ status open
 \uwave default
 \noun default
 \color inherit
-2
+35
 \family roman
 \series medium
 \shape up
@@ -2198,16 +2193,117 @@ status open
 \uwave default
 \noun default
 \color inherit
-הנושא של 
-\lang english
-Stream Ciphers
-\lang hebrew
- היה לא פורמלי ולכן יוסף רק בהמשך.
+בספר 
+\begin_inset Formula $\text{Stinson}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מרחב הצפנים
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\k,\m,\c,\l,E,D,G\right)$
+\end_inset
+
+ צופן זרם סינכרוני אזי 
+\begin_inset Formula $\l$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+גנרטור צפנים
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\k,\m,\c,\l,E,D,G\right)$
+\end_inset
+
+ צופן זרם סינכרוני אזי 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+צופן זרם סינכרוני עצמית/אסינכרוני
+\series default
+:
+ תהיינה 
+\begin_inset Formula $\m,\k,\c,\l$
+\end_inset
+
+ קבוצות סופיות תהא 
+\begin_inset Formula $G:\k\to\left(\l\to\l\right)$
+\end_inset
+
+ תהא 
+\begin_inset Formula $E:\l\times\m\to\c$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $D:\l\times\c\to\m$
+\end_inset
+
+ באשר 
+\begin_inset Formula $E,D$
+\end_inset
+
+ מקיימות שלמות אזי 
+\begin_inset Formula $\left(\k,\m,\c,\l,E,D,G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מרחב הצפנים
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\k,\m,\c,\l,E,D,G\right)$
+\end_inset
+
+ צופן זרם אסינכרוני אזי 
+\begin_inset Formula $\l$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+גנרטור צפנים
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\k,\m,\c,\l,E,D,G\right)$
+\end_inset
+
+ צופן זרם אסינכרוני אזי 
+\begin_inset Formula $G$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2250,12 +2346,827 @@ Stream Ciphers
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch NotSure
-inverted 0
-status open
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $L\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $c\in\left\{ 0,1\right\} ^{L}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $c_{L}=1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{LFRS}$
+\end_inset
+
+ הינו גנרטור צפנים בצופן זרם אסינכרוני.
+\end_layout
 
 \begin_layout Standard
-מצגת
+
+\series bold
+גנרטור צפנים 
+\begin_inset Formula $\text{RC4}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\left\{ 0,1\right\} ^{256}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{RC4}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{namet}{RC4Inner}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$k$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $(j,
+ i)
+\backslash
+gets 0$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $S
+\backslash
+gets 
+\backslash
+text{Id}_{
+\backslash
+{0
+\backslash
+ldots 255
+\backslash
+}}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$i
+\backslash
+gets [0
+\backslash
+ldots 255]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $j 
+\backslash
+gets (j + S_i + k_i)
+\backslash
+mod 256$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $(S_i ,
+ S_j) 
+\backslash
+gets (S_j ,
+ S_i)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return 
+\backslash
+Fn{
+\backslash
+namet{$S$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $i 
+\backslash
+gets (i + 1) 
+\backslash
+mod 256$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $j 
+\backslash
+gets (j + S_i) 
+\backslash
+mod 256$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $(S_i ,
+ S_j) 
+\backslash
+gets (S_j ,
+ S_i)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $r 
+\backslash
+gets (S_i + S_j) 
+\backslash
+mod 256$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $S_r$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\text{RC4}$
+\end_inset
+
+ הינו גנרטור צפנים בצופן זרם אסינכרוני.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+משפט
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\e\ge0$
+\end_inset
+
+ תהא 
+\begin_inset Formula $t:\bbn\to\hat{\bbn}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ הצפנה סימטרית אזי (
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ בעלת סודיות חישובית 
+\begin_inset Formula $\left(t,\e\right)$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(לכל יריב 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ בעל כוח חישוב 
+\begin_inset Formula $t$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\bbp\left(\text{ מנצחת במשחק חוסר ההבחנה}\mathcal{A}\right)\le\frac{1}{2}+\e$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+משחק חוסר ההבחנה
+\color inherit
+ תחת התקפת גלוי־נבחר (
+\lang english
+Chosen plaintext attack
+\lang hebrew
+)
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\mathcal{W},\mathcal{A}$
+\end_inset
+
+ שחקנים אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{CPA}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Gm}{game}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Gm{
+\backslash
+name{$
+\backslash
+left(E,D
+\backslash
+right),
+ 
+\backslash
+mathcal{W},
+ 
+\backslash
+mathcal{A}$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+mathcal{W}$ samples key $k
+\backslash
+gets 
+\backslash
+mathcal{K}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$i 
+\backslash
+in [ 1
+\backslash
+ldots n]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
+\backslash
+mathcal{A}$ chooses message $x_i
+\backslash
+in
+\backslash
+mathcal{M}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
+\backslash
+mathcal{W}$ sends $E_k(x_i)$ to $
+\backslash
+mathcal{A}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+mathcal{A}$ chooses messages $m_0,m_1
+\backslash
+in
+\backslash
+mathcal{M}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+mathcal{W}$ samples bit $b
+\backslash
+gets 
+\backslash
+{0,
+ 1
+\backslash
+}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+mathcal{W}$ sends $E_k(m_b)$ to $
+\backslash
+mathcal{A}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+mathcal{A}$ prints a bit $b^
+\backslash
+prime$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+uIf{$b^
+\backslash
+prime = b$}{
+\backslash
+Return $
+\backslash
+mathcal{A}$ won}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $
+\backslash
+mathcal{A}$ lost
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הצפנה סימטרית בעלת סודיות תחת התקפת גלוי־נבחר
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי הצפנה סימטרית 
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ עבורה לכל יריב 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ בעל כוח חישוב 
+\begin_inset Formula $t$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\bbp\left(\text{ מנצחת במשחק חוסר ההבחנה תחת התקפת גלוי־נבחר}\mathcal{A}\right)\le\frac{1}{2}+\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\e\ge0$
+\end_inset
+
+ תהא 
+\begin_inset Formula $t:\bbn\to\hat{\bbn}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ הצפנה סימטרית בעלת סודיות 
+\begin_inset Formula $\left(t,\e\right)$
+\end_inset
+
+ תחת התקפת גלוי־נבחר אזי 
+\begin_inset Formula $\left(E,D\right)$
+\end_inset
+
+ בעלת סודיות חישובית 
+\begin_inset Formula $\left(t,\e\right)$
+\end_inset
+
+ למספר הודעות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+צופן רנדומלי גנרי
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ הפיכה אזי נגדיר 
+\begin_inset Formula $E:\emptyset\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula $D:\emptyset\times\left(\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\right)\to\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(m\right)=\left(r,F\left(r\oplus m\right)\right)$
+\end_inset
+
+ עבור 
+\begin_inset Formula $r\gets\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D\left(\left(r,c\right)\right)=r\oplus F^{-1}\left(c\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ אקראית אזי צופן רנדומלי גנרי הינו בעל סודיות 
+\begin_inset Formula $\left(t,\e\right)$
+\end_inset
+
+ תחת התקפת גלוי־נבחר באשר 
+\begin_inset Formula $\e=\O\left(\frac{t\left(n\right)}{2^{n}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\poly}{\text{poly}}
+{\text{poly}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפחת תמורות
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי פונקציה 
+\begin_inset Formula $F:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $F_{k}$
+\end_inset
+
+ תמורה לכל 
+\begin_inset Formula $k\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפחת פונקציות פסודאו אקראיות
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי פונקציה 
+\begin_inset Formula $F:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ חשיבה בזמן 
+\begin_inset Formula $\text{poly}\left(n\right)$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F_{k}$
+\end_inset
+
+ הפיכה לכל 
+\begin_inset Formula $k\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F_{k}^{-1}$
+\end_inset
+
+ חשיבה בזמן 
+\begin_inset Formula $\text{poly}\left(n\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $k\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל יריב 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ בעל כוח חישוב 
+\begin_inset Formula $t$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|\bbp_{k\gets\left\{ 0,1\right\} ^{n}}\left(\mathcal{A}^{F_{k}\left(\cdot\right)}\left(1^{n}\right)=1\right)-\bbp_{f\gets\left(\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{n}\right)}\left(\mathcal{A}^{f\left(\cdot\right)}\left(1^{n}\right)=1\right)\right|\le\e$
+\end_inset
+
+.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+עמוד
 \family roman
 \series medium
 \shape up
@@ -2284,7 +3195,7 @@ status open
 \uwave default
 \noun default
 \color inherit
-2
+87
 \family roman
 \series medium
 \shape up
@@ -2299,8 +3210,22 @@ status open
 \uwave off
 \noun off
 \color none
- להוסיף 
-\begin_inset Formula $\text{RC4}$
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בספר 
+\begin_inset Formula $\text{KatzLindell}$
 \end_inset
 
 
@@ -2312,9 +3237,878 @@ status open
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ משמעות הביטוי 
+\begin_inset Formula $\mathcal{A}^{f\left(\cdot\right)}$
+\end_inset
+
+ היא שלמעגל 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ יש אורקל לחישוב 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפחת תמורות פסודאו אקראיות
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי משפחת פונקציות פסודאו אקראיות אשר הינה משפחת תמורות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משחק חוסר ההבחנה עבור משפחת פונקציות פסודאו אקראיות
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ תהא 
+\begin_inset Formula $F:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\mathcal{W},\mathcal{A}$
+\end_inset
+
+ שחקנים אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{PRF}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Gm}{game}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Gm{
+\backslash
+name{$
+\backslash
+left(E,D
+\backslash
+right),
+ 
+\backslash
+mathcal{W},
+ 
+\backslash
+mathcal{A}$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+mathcal{W}$ samples key $k
+\backslash
+gets 
+\backslash
+mathcal{K}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+mathcal{W}$ samples bit $b
+\backslash
+gets 
+\backslash
+{0,
+ 1
+\backslash
+}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+uIf{$b = 0$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $R 
+\backslash
+gets F_k$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\backslash
+uElse{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $R 
+\backslash
+gets (
+\backslash
+{0,
+ 1
+\backslash
+}^n 
+\backslash
+to 
+\backslash
+{0,
+ 1
+\backslash
+}^n)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$i 
+\backslash
+in [ 1
+\backslash
+ldots m]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
+\backslash
+mathcal{A}$ chooses message $x_i
+\backslash
+in
+\backslash
+mathcal{M}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
+\backslash
+mathcal{W}$ sends $E_k(x_i)$ to $
+\backslash
+mathcal{A}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+mathcal{A}$ prints a bit $b^
+\backslash
+prime$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+uIf{$b^
+\backslash
+prime = b$}{
+\backslash
+Return $
+\backslash
+mathcal{A}$ won}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $
+\backslash
+mathcal{A}$ lost
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ אזי (
+\begin_inset Formula $F$
+\end_inset
+
+ משפחת פונקציות פסודאו אקראיות 
+\begin_inset Formula $\left(t,\e\right)$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(לכל יריב 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ בעל כוח חישוב 
+\begin_inset Formula $t$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\bbp\left(\text{ מנצחת במשחק חוסר ההבחנה עבור משפחת פונקציות פסודאו אקראיות}\mathcal{A}\right)\le\frac{1}{2}+\e$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משחק חוסר ההבחנה עבור משפחת תמורות פסודאו אקראיות
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ תהא 
+\begin_inset Formula $F:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ משפחת תמורות ויהיו 
+\begin_inset Formula $\mathcal{W},\mathcal{A}$
+\end_inset
+
+ שחקנים אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{PRP}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Gm}{game}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Gm{
+\backslash
+name{$
+\backslash
+left(E,D
+\backslash
+right),
+ 
+\backslash
+mathcal{W},
+ 
+\backslash
+mathcal{A}$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+mathcal{W}$ samples key $k
+\backslash
+gets 
+\backslash
+mathcal{K}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+mathcal{W}$ samples bit $b
+\backslash
+gets 
+\backslash
+{0,
+ 1
+\backslash
+}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+uIf{$b = 0$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $R 
+\backslash
+gets F_k$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\backslash
+uElse{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $R 
+\backslash
+gets S
+\backslash
+left(
+\backslash
+{0,
+ 1
+\backslash
+}^n
+\backslash
+right)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$i 
+\backslash
+in [ 1
+\backslash
+ldots m]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
+\backslash
+mathcal{A}$ chooses message $x_i
+\backslash
+in
+\backslash
+mathcal{M}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
+\backslash
+mathcal{W}$ sends $E_k(x_i)$ to $
+\backslash
+mathcal{A}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+mathcal{A}$ prints a bit $b^
+\backslash
+prime$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+uIf{$b^
+\backslash
+prime = b$}{
+\backslash
+Return $
+\backslash
+mathcal{A}$ won}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $
+\backslash
+mathcal{A}$ lost
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ משפחת תמורות אזי (
+\begin_inset Formula $F$
+\end_inset
+
+ משפחת תמורות פסודאו אקראיות 
+\begin_inset Formula $\left(t,\e\right)$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(לכל יריב 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ בעל כוח חישוב 
+\begin_inset Formula $t$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\bbp\left(\text{ מנצחת במשחק חוסר ההבחנה עבור משפחת תמורות פסודאו אקראיות}\mathcal{A}\right)\le\frac{1}{2}+\e$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+צופן פסודאו רנדומלי גנרי
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $E:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula $D:\left\{ 0,1\right\} ^{n}\times\left(\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\right)\to\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E_{k}\left(m\right)=\left(r,F_{k}\left(r\oplus m\right)\right)$
+\end_inset
+
+ עבור 
+\begin_inset Formula $r\gets\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D\left(\left(r,c\right)\right)=r\oplus F_{k}^{-1}\left(c\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ משפחת פונקציות פסודאו אקראיות 
+\begin_inset Formula $\left(t,\e\right)$
+\end_inset
+
+ אזי צופן פסודאו רנדומלי גנרי הינו בעל סודיות 
+\begin_inset Formula $\left(\Omega\left(\frac{t\left(n\right)}{n}\right),2\e+\frac{t}{2^{n}}\right)$
+\end_inset
+
+ תחת התקפת גלוי־נבחר.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+החלק של 
+\begin_inset Formula $\text{Block Ciphers}$
+\end_inset
+
+ ומטה,
+ מצגת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\numeric off
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\mac}{\text{\ensuremath{\mathsf{MAC}}}}
+{\text{MAC}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קוד אימות מסרים
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,\ell\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\ell<n$
+\end_inset
+
+ תהא 
+\begin_inset Formula $\m$
+\end_inset
+
+ קבוצה יהי 
+\begin_inset Formula $k\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\mac_{k}:\m\to\left\{ 0,1\right\} ^{\ell}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\m,k,\mac\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מרחב ההודעות בקוד אימות מסרים
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\m,k,\mac\right)$
+\end_inset
+
+ קוד אימות מסרים אזי 
+\begin_inset Formula $\m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קוד אימות סודי בקוד אימות מסרים
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\m,k,\mac\right)$
+\end_inset
+
+ קוד אימות מסרים אזי 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם אימות בקוד אימות מסרים
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\m,k,\mac\right)$
+\end_inset
+
+ קוד אימות מסרים אזי 
+\begin_inset Formula $\mac$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
