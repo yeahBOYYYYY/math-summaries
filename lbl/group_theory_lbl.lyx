@@ -3662,6 +3662,49 @@ v_{\sigma\left(n\right)}
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\aut}{\text{Aut}}
+{\text{Aut}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $\aut\left(G\right)=\left\{ \varphi:G\to G\mid\text{ אוטומורפיזם}\varphi\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $\left(\aut\left(G\right),\circ\right)$
+\end_inset
+
+ חבורה.
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color magenta
@@ -3734,7 +3777,7 @@ v_{\sigma\left(n\right)}
 \end_inset
 
  המוגדרת 
-\begin_inset Formula $c_{g}\left(x\right)=g^{-1}xg$
+\begin_inset Formula $c_{g}\left(x\right)=gxg^{-1}$
 \end_inset
 
  לכל 
@@ -3764,7 +3807,58 @@ v_{\sigma\left(n\right)}
 \begin_inset Formula $c_{g}$
 \end_inset
 
- איזומורפיזם.
+ אוטומורפיזם.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אוטומורפיזם פנימי
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי אוטומורפיזם 
+\begin_inset Formula $\varphi:G\to G$
+\end_inset
+
+ עבורו קיים 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\varphi=c_{g}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\inn}{\text{Inn}}
+{\text{Inn}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $\inn\left(G\right)=\left\{ c_{g}\mid g\in G\right\} $
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3936,6 +4030,98 @@ v_{\sigma\left(n\right)}
 
  אזי 
 \begin_inset Formula $H\unlhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $\inn\left(G\right)\unlhd\aut\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תת־חבורה אופיינית
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $K\le G$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $\varphi\in\aut\left(G\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\varphi\left(K\right)=K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $K\le G$
+\end_inset
+
+ אופיינית אזי 
+\begin_inset Formula $K\unlhd G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה תהא 
+\begin_inset Formula $H\unlhd G$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $K\le H$
+\end_inset
+
+ אופיינית ב־
+\begin_inset Formula $H$
+\end_inset
+
+ אזי 
+\begin_inset Formula $K\unlhd G$
 \end_inset
 
 .
@@ -4318,7 +4504,7 @@ v_{\sigma\left(n\right)}
 \end_inset
 
  עבורו 
-\begin_inset Formula $G=\ker\left(\varphi\right)$
+\begin_inset Formula $H=\ker\left(\varphi\right)$
 \end_inset
 
 ).
@@ -4470,10 +4656,299 @@ v_{\sigma\left(n\right)}
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית תהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ מאינדקס 
+\begin_inset Formula $p$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $N\unlhd G$
+\end_inset
+
+ מאינדקס 
+\begin_inset Formula $p$
+\end_inset
+
+ באשר 
+\begin_inset Formula $H\ne N$
+\end_inset
+
+ אזי 
+\begin_inset Formula $G=HN$
+\end_inset
+
+ וכן 
+\begin_inset Formula $p^{2}|\ord\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורת המכפלה החצי ישרה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $H,K$
+\end_inset
+
+ חבורות ויהי 
+\begin_inset Formula $\varphi:K\to\aut\left(H\right)$
+\end_inset
+
+ הומומורפיזם נגדיר 
+\begin_inset Formula $\left(h,k\right)\cdot\left(h^{\prime},k^{\prime}\right)=\left(h\cdot\varphi\left(k\right)\left(h^{\prime}\right),k\cdot k^{\prime}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $h,h^{\prime}\in H$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $k,k^{\prime}\in K$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(H\times K,\cdot\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהיינה 
+\begin_inset Formula $H,K$
+\end_inset
+
+ חבורות ויהי 
+\begin_inset Formula $\varphi:K\to\aut\left(H\right)$
+\end_inset
+
+ אזי חבורת המכפלה החצי ישרה הינה 
+\begin_inset Formula $H\rtimes_{\varphi}K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $H,K$
+\end_inset
+
+ חבורות ויהי 
+\begin_inset Formula $\varphi:K\to\aut\left(H\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H\rtimes_{\varphi}K$
+\end_inset
+
+ הינה חבורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $H,K$
+\end_inset
+
+ חבורות נגדיר 
+\begin_inset Formula $\varphi:K\to\aut\left(H\right)$
+\end_inset
+
+ כך 
+\begin_inset Formula $\varphi\left(k\right)=\id_{H}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $k\in K$
+\end_inset
+
+ אזי 
+\begin_inset Formula $H\rtimes_{\varphi}K\cong H\times K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\aff}{\text{Aff}}
+{\text{Aff}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה אזי 
+\begin_inset Formula $\aff\left(\bbf\right)=\left\{ f:\bbf\to\bbf\mid\exists a\in\bbf^{\times}\left(\exists b\in\bbf\left(\forall x\in\bbf\left(f\left(x\right)=ax+b\right)\right)\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה אזי 
+\begin_inset Formula $\left(\aff\left(\bbf\right),\circ\right)$
+\end_inset
+
+ חבורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה נגדיר 
+\begin_inset Formula $\varphi:\bbf^{\times}\to\aut\left(\bbf\right)$
+\end_inset
+
+ כך 
+\begin_inset Formula $\varphi\left(a\right)\left(b\right)=ab$
+\end_inset
+
+ לכל 
+\begin_inset Formula $a\in\bbf^{\times}$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $b\in\bbf$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\aff\left(\bbf\right)\cong\bbf\rtimes_{\varphi}\bbf^{\times}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\iso}{\text{Iso}}
+{\text{Iso}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $P\subseteq\bbr^{2}$
+\end_inset
+
+ מצולע משוכלל אזי 
+\begin_inset Formula $\iso\left(P\right)=\left\{ \varphi:\bbr^{2}\to\bbr^{2}\mid\left(\text{ איזומטריה}\varphi\right)\land\left(\varphi\left(P\right)=P\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+החבורה הדיהדרלית
+\series default
+:
+ יהי 
+\begin_inset Formula $P\subseteq\bbr^{2}$
+\end_inset
+
+ מצולע משוכלל בעל 
+\begin_inset Formula $n$
+\end_inset
+
+ קודקודים אזי 
+\begin_inset Formula $D_{n}=\iso\left(P\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{\ge2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(D_{n},\circ\right)$
+\end_inset
+
+ חבורה.
 \end_layout
 
 \begin_layout Standard
@@ -4506,17 +4981,60 @@ v_{\sigma\left(n\right)}
 \begin_layout Standard
 
 \series bold
-\color brown
-החבורה הדיהדרלית
+טענה
 \series default
-\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{\ge2}$
 \end_inset
 
  אזי 
-\begin_inset Formula $D_{n}=\left<r,s\mid s^{2}=e,r^{n}=e,srs=r^{-1}\right>$
+\begin_inset Formula $D_{n}\cong\left<r,s\mid s^{2}=e,r^{n}=e,srs=r^{-1}\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{\ge2}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $n\in\bbn_{\text{even}}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ D_{n},\left<sr,r^{2}\right>,\left<s,r^{2}\right>\right\} \cup\left\{ H\le\left<r\right>\right\} $
+\end_inset
+
+ הן כל תתי החבורות הנורמליות של 
+\begin_inset Formula $D_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $n\in\bbn_{\text{odd}}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ D_{n}\right\} \cup\left\{ H\le\left<r\right>\right\} $
+\end_inset
+
+ הן כל תתי החבורות הנורמליות של 
+\begin_inset Formula $D_{n}$
 \end_inset
 
 .
@@ -4530,27 +5048,82 @@ v_{\sigma\left(n\right)}
 \series default
 \color inherit
 :
- יהי 
-\begin_inset Formula $n\in\bbn_{\ge2}$
+ 
+\begin_inset Formula $\mathcal{H}\left(\bbf_{2}\right)\cong D_{4}$
 \end_inset
 
- אזי 
-\begin_inset Formula $D_{n}$
-\end_inset
-
- חבורה.
+.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-\color brown
 טענה
 \series default
-\color inherit
 :
- 
-\begin_inset Formula $\mathcal{H}\left(\bbf_{2}\right)\cong D_{4}$
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה יהי 
+\begin_inset Formula $K\unlhd G$
+\end_inset
+
+ יהי 
+\begin_inset Formula $H\unlhd G$
+\end_inset
+
+ באשר 
+\begin_inset Formula $HK=G$
+\end_inset
+
+ וכן 
+\begin_inset Formula $H\cap K=\left\{ e\right\} $
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula $\varphi:K\to\aut\left(H\right)$
+\end_inset
+
+ כך 
+\begin_inset Formula $\varphi\left(k\right)=c_{k}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $k\in K$
+\end_inset
+
+ אזי 
+\begin_inset Formula $G\cong H\rtimes_{\varphi}K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{\ge2}$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula $\varphi:C_{2}\to\aut\left(C_{n}\right)$
+\end_inset
+
+ כך 
+\begin_inset Formula $\varphi\left(k\right)=c_{k}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $k\in K$
+\end_inset
+
+ אזי 
+\begin_inset Formula $D_{n}\cong C_{n}\rtimes_{\varphi}C_{2}$
 \end_inset
 
 .
@@ -4852,6 +5425,35 @@ v_{\sigma\left(n\right)}
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $N\unlhd G$
+\end_inset
+
+ אזי (
+\begin_inset Formula $N$
+\end_inset
+
+ נורמלית מקסימלית)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\nicefrac{G}{N}$
+\end_inset
+
+ פשוטה).
+\end_layout
+
+\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
@@ -4939,6 +5541,65 @@ v_{\sigma\left(n\right)}
 \begin_layout Standard
 
 \series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $G\curvearrowright X=\left\{ f:G\times X\to X\mid\text{ פעולה}f\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הפעולה השמאלית
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה נגדיר 
+\begin_inset Formula $f\in G\curvearrowright G$
+\end_inset
+
+ כך 
+\begin_inset Formula $f\left(g,x\right)=gx$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי הפעולה השמאלית הינה פעולה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 הפעולה הימנית
 \series default
 :
@@ -4946,11 +5607,1021 @@ v_{\sigma\left(n\right)}
 \begin_inset Formula $G$
 \end_inset
 
- חבורה אזי 
-\begin_inset Formula $f:G\times G\to G$
+ חבורה נגדיר 
+\begin_inset Formula $f\in G\curvearrowright G$
 \end_inset
 
- המוגדרת.
+ כך 
+\begin_inset Formula $f\left(g,x\right)=xg^{-1}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי הפעולה הימנית הינה פעולה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ מכאן והלאה נאמר כי 
+\begin_inset Formula $G$
+\end_inset
+
+ פועלת על 
+\begin_inset Formula $X$
+\end_inset
+
+ ונסמן 
+\begin_inset Formula $g.x$
+\end_inset
+
+ את הפעולה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסלולים
+\series default
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה הפועלת על 
+\begin_inset Formula $X$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $o\left(x\right)=\left\{ g.x\mid g\in X\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולה טרנזיטיבית
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $f\in G\curvearrowright X$
+\end_inset
+
+ עבורה קיים 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $o\left(x\right)=X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מייצב
+\series default
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה הפועלת על 
+\begin_inset Formula $X$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\stab_{G}\left(x\right)=\left\{ g\in G\mid g.x=x\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה הפועלת על 
+\begin_inset Formula $X$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\stab_{G}\left(x\right)\le G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולה חופשית
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $f\in G\curvearrowright X$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\stab_{G}\left(x\right)=\left\{ e\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה תהא 
+\begin_inset Formula $\a\in G\curvearrowright X$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\a\left(g\right)\in S\left(X\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $\a\in G\curvearrowright X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\varphi_{\a}:G\to S\left(X\right)$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\varphi_{\a}\left(g\right)\left(x\right)=\a\left(g,x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $\a\in G\curvearrowright X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\varphi_{\a}$
+\end_inset
+
+ הומומורפיזם.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה ויהי 
+\begin_inset Formula $\varphi:G\to S\left(X\right)$
+\end_inset
+
+ הומומורפיזם אזי 
+\begin_inset Formula $\a_{\varphi}:G\times X\to X$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\a_{\varphi}\left(g,x\right)=\varphi\left(g\right)\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה ויהי 
+\begin_inset Formula $\varphi:G\to S\left(X\right)$
+\end_inset
+
+ הומומורפיזם אזי 
+\begin_inset Formula $\a_{\varphi}$
+\end_inset
+
+ פעולה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה מסלול מייצב
+\series default
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה הפועלת על 
+\begin_inset Formula $X$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|o\left(x\right)\right|=\left[G:\stab_{G}\left(x\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה של ברנסייד
+\series default
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית הפועלת על 
+\begin_inset Formula $X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\left\{ o\left(x\right)\mid x\in X\right\} \right|=\frac{1}{\left|G\right|}\sum_{g\in G}\left|\left\{ x\in X\mid g.x=x\right\} \right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הפעולה על הקוסטים השמאליים
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\a\in G\curvearrowright\nicefrac{G}{H}$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\a\left(g,g^{\prime}H\right)=gg^{\prime}H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אזי הפעולה על הקוסטים השמאליים הינה פעולה טרנזיטיבית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולות אקווריאנטיות/שקולות
+\series default
+:
+ תהיינה 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ קבוצות ותהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $\left(\a,\b\right)\in\left(G\curvearrowright X\right)\times\left(G\curvearrowright Y\right)$
+\end_inset
+
+ עבורן קיימת
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $F:X\to Y$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל המקיימת 
+\begin_inset Formula $F\left(\a\left(g,x\right)\right)=\b\left(g,F\left(x\right)\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה תהא 
+\begin_inset Formula $\a\in G\curvearrowright X$
+\end_inset
+
+ טרנזיטיבית ויהי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $o\left(x\right)=X$
+\end_inset
+
+ אזי הפעולה על הקוסטים השמאליים של 
+\begin_inset Formula $\nicefrac{G}{\stab_{G}\left(x\right)}$
+\end_inset
+
+ אקווריאנטית ל־
+\begin_inset Formula $\a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $\a\in G\curvearrowright X$
+\end_inset
+
+ טרנזיטיבית אזי קיימת 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ עבורה הפעולה על הקוסטים השמאליים אקווריאנטית ל־
+\begin_inset Formula $\a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה הפועלת על 
+\begin_inset Formula $X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ o\left(x\right)\mid x\in X\right\} $
+\end_inset
+
+ חלוקה של 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $\a\in G\curvearrowright X$
+\end_inset
+
+ טרנזיטיבית אזי לכל 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $o\left(x\right)=X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $P\subseteq\bbr^{2}$
+\end_inset
+
+ מצולע משוכלל יהיו 
+\begin_inset Formula $\varphi_{1}\ldots\varphi_{n}$
+\end_inset
+
+ איזומטריות של 
+\begin_inset Formula $\bbr^{3}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $p\in\bigcup_{i=1}^{n}\varphi_{i}\left(P\times\left\{ 0\right\} \right)$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\text{Poly}\left(p\right)=\left|\left\{ \varphi_{i}\left(P\times\left\{ 0\right\} \right)\mid p\in\varphi_{i}\left(P\times\left\{ 0\right\} \right)\right\} \right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+גוף אפלטוני
+\series default
+:
+ קבוצה קמורה לא זניחה 
+\begin_inset Formula $K\subseteq\bbr^{3}$
+\end_inset
+
+ עבורה קיים מצולע משוכלל 
+\begin_inset Formula $P\subseteq\bbr^{2}$
+\end_inset
+
+ וקיימות איזומטריות 
+\begin_inset Formula $\varphi_{1}\ldots\varphi_{n}$
+\end_inset
+
+ של 
+\begin_inset Formula $\bbr^{3}$
+\end_inset
+
+ עבורן 
+\end_layout
+
+\begin_layout Itemize
+פאות איזומטריות:
+ 
+\begin_inset Formula $\partial K=\bigcup_{i=1}^{n}\varphi_{i}\left(P\times\left\{ 0\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קודקוד משותף זהה כמות:
+ לכל קודקודים 
+\begin_inset Formula $v_{1},v_{2}\in K$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\text{Poly}\left(v_{1}\right)=\text{Poly}\left(v_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מספר פאות של גוף אפלטוני
+\series default
+:
+ יהי 
+\begin_inset Formula $K\subseteq\bbr^{3}$
+\end_inset
+
+ גוף אפלטוני אזי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ מינימלי עבורו קיימות איזומטריות 
+\begin_inset Formula $\varphi_{1}\ldots\varphi_{n}$
+\end_inset
+
+ של 
+\begin_inset Formula $\bbr^{3}$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $\partial K=\bigcup_{i=1}^{n}\varphi_{i}\left(P\times\left\{ 0\right\} \right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $P\subseteq\bbr^{2}$
+\end_inset
+
+ מצולע משוכלל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $K\subseteq\bbr^{3}$
+\end_inset
+
+ גוף אפלטוני אזי 
+\begin_inset Formula $\iso\left(P\right)=\left\{ \varphi:\bbr^{3}\to\bbr^{3}\bmid\left(\text{ איזומטריה}\varphi\right)\land\left(\varphi\left(K\right)=K\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $K\subseteq\bbr^{3}$
+\end_inset
+
+ גוף אפלטוני אזי 
+\begin_inset Formula $\iso_{+}\left(P\right)=\left\{ \varphi:\bbr^{3}\to\bbr^{3}\bmid\left(\text{ איזומטריה משמרת אוריינטציה}\varphi\right)\land\left(\varphi\left(K\right)=K\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה סימון שלפלי
+\series default
+:
+ יהי 
+\begin_inset Formula $K\subseteq\bbr^{3}$
+\end_inset
+
+ גוף אפלטוני בעל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ פאות ויהי 
+\begin_inset Formula $v\in K$
+\end_inset
+
+ קודקוד אזי 
+\begin_inset Formula $\left\{ n,\text{Poly}\left(k\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ סימון שלפלי אינו קבוצה אלא סימון.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+דודקהדרון
+\series default
+:
+ גוף אפלטוני 
+\begin_inset Formula $K\subseteq\bbr^{3}$
+\end_inset
+
+ בעל סימון שלפלי 
+\begin_inset Formula $\left\{ 5,3\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $D$
+\end_inset
+
+ דודקהדרון אזי 
+\begin_inset Formula $\iso_{+}\left(D\right)\cong A_{5}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $D$
+\end_inset
+
+ דודקהדרון אזי 
+\begin_inset Formula $\ord\left(\iso_{+}\left(D\right)\right)=60$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט קיילי
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי קיימת קבוצה 
+\begin_inset Formula $X$
+\end_inset
+
+ וקיימת 
+\begin_inset Formula $H\le S\left(X\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $G\cong H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה באשר 
+\begin_inset Formula $\ord\left(G\right)=\aleph_{0}$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $H\le S\left(\bbn\right)$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $G\cong H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט קושי
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית ויהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $p|\ord\left(G\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\ord\left(g\right)=p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית ויהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $p|\ord\left(G\right)$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ ציקלית עבורה 
+\begin_inset Formula $\ord\left(H\right)=p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה באשר 
+\begin_inset Formula $\ord\left(G\right)=6$
+\end_inset
+
+ אזי 
+\begin_inset Formula $G\cong\bbz_{6}$
+\end_inset
+
+ או 
+\begin_inset Formula $G\cong S_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פעולת ההצמדה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $\a\in G\curvearrowright G$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\a\left(g,h\right)=ghg^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $\a$
+\end_inset
+
+ פעולת ההצמדה אזי 
+\begin_inset Formula $h^{g}=\a\left(g,h\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \end_body

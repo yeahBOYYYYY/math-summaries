@@ -12,7 +12,7 @@ Things that I still need to do
 
 | Name | Notes | Last lec updated | Lec | Rec | HW |
 |---|---|---|---|---|---|
-| group theory | | 03/12/24 | 9 | 4 | 4 |
+| group theory | | 14/12/24 | 12 | 6 | 6 |
 | set theory   | | 13/12/24 | 6 | 6 | 6 |
 | cryptography | | 06/11/24 | 1 | 2 | 0 |
 | complexity   | | 30/11/24 | 4 | 4 | 0 |
