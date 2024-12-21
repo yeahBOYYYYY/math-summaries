@@ -115,23 +115,23 @@ function createGenericButton(buttonText) {
 
 
 function whiteMode(){
-    const themeSwitch = document.getElementById('theme-switch')
-    const mdDis = document.getElementById('mdDis')
+    const themeSwitch = document.getElementById('theme-switch');
 
     const enableWhitemode = () => {
-    document.body.classList.add('whitemode')
-    localStorage.setItem('whitemode', 'active')
+    document.body.classList.add('whitemode');
+    localStorage.setItem('whitemode', 'active');
     }
 
     const disableWhitemode = () => {
-    document.body.classList.remove('whitemode')
-    localStorage.setItem('whitemode', null)
+    document.body.classList.remove('whitemode');
+    localStorage.setItem('whitemode', null);
     }
 
-    if(whitemode === "active") enableWhitemode()
+    if(whitemode === "active") enableWhitemode();
 
     themeSwitch.addEventListener("click", () => {
-    whitemode = localStorage.getItem('whitemode')
-    whitemode !== "active" ? enableWhitemode() : disableWhitemode()
-    })
+    whitemode = localStorage.getItem('whitemode');
+    location.reload();
+    whitemode !== "active" ? enableWhitemode() : disableWhitemode();
+    });
 }
