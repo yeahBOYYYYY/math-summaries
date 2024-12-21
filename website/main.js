@@ -31,8 +31,8 @@ function createPdfButtonContainer(buttonText, pdfLink, gradient, infoData) {
     return `
         <div class="pdf-button-container ${gradient}">
             <a class="pdf-button" href="${pdfLink}" target="_blank">${buttonText}</a>
-            <button class="info-button" data-info="./coursesInfo/${infoData}">
-                <img src="./info.png">
+            <button class="info-button" data-info=".website/coursesInfo/${infoData}">
+                <img src=".website/info.png">
             </button>
         </div>
     `;
