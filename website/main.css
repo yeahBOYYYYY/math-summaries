@@ -1,17 +1,42 @@
 /* general */
 
+:root{
+    --base-color: #070b1d;
+    --base-variant: #717997;
+    --container-color: #0d1117;
+    --text-color: #ffffff;
+    --secondary-text: #a4a5b8;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+
+.whitemode{
+    --base-color: #f7f7f7;
+    --base-variant: #e8e9ed;
+    --container-color: #fff;
+    --text-color: #000000;
+    --secondary-text: #232738;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    background-color: var(--base-color);
+    color: var(--text-color);
+}
+
+p {
+    color: var(--secondary-text);
 }
 
 .container {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--container-color);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: right;
@@ -21,6 +46,45 @@ body {
 .container + .container {
     margin-top: 20px; /* Adjust the margin between containers */
 }
+
+
+
+
+/* whitemode button */
+
+#theme-switch{
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-switch svg{
+    fill: var(--primary-color);
+}
+
+#theme-switch svg:last-child{
+    display: none;
+}
+
+.whitemode #theme-switch svg:first-child{
+    display: none;
+}
+
+.whitemode #theme-switch svg:last-child{
+    display: block;
+}
+
+
+
 
 
 /* Contact Buttons */

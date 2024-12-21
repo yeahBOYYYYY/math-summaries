@@ -1,3 +1,4 @@
+let whitemode = localStorage.getItem('whitemode')
 const COURSES_INFO_PATH = "website/coursesInfo"
 const INFO_IMG_PATH = "website/info.png"
 const LBL_SUMM_PATH = "lbl"
@@ -10,7 +11,9 @@ document.addEventListener('DOMContentLoaded', initialize);
 async function initialize(){
     await createButtons();
     infoButton();
+    whiteMode();
 }
+
 
 function infoButton(){
     // Select the overlay and content elements for displaying additional information
@@ -102,21 +105,33 @@ function getButtonCode(buttonText, pdfLink, gradient, infoData) {
     `;
 }
 
-function createPdfButtonContainer(buttonText, pdfLink, gradient, infoData) {
-    return `
-        <div class="pdf-button-container ${gradient}">
-            <a class="pdf-button" href="${pdfLink}" target="_blank">${buttonText}</a>
-            <button class="info-button" data-info="website/coursesInfo/${infoData}">
-                <img src="website/info.png">
-            </button>
-        </div>
-    `;
-}
-
-function createGenericContainer(buttonText) {
+function createGenericButton(buttonText) {
     return `
         <div class="pdf-button-container gradient-generic">
             <a class="pdf-button" target="_blank">${buttonText}</a>
         </div>
     `;
+}
+
+
+function whiteMode(){
+    const themeSwitch = document.getElementById('theme-switch')
+    const mdDis = document.getElementById('mdDis')
+
+    const enableWhitemode = () => {
+    document.body.classList.add('whitemode')
+    localStorage.setItem('whitemode', 'active')
+    }
+
+    const disableWhitemode = () => {
+    document.body.classList.remove('whitemode')
+    localStorage.setItem('whitemode', null)
+    }
+
+    if(whitemode === "active") enableWhitemode()
+
+    themeSwitch.addEventListener("click", () => {
+    whitemode = localStorage.getItem('whitemode')
+    whitemode !== "active" ? enableWhitemode() : disableWhitemode()
+    })
 }
