@@ -1,3 +1,6 @@
+const lbl_summ_path = "../lbl"
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const infoButtons = document.querySelectorAll('.info-button');
     const infoBoxOverlay = document.querySelector('.info-box-overlay');
@@ -28,8 +31,8 @@ function createPdfButtonContainer(buttonText, pdfLink, gradient, infoData) {
     return `
         <div class="pdf-button-container ${gradient}">
             <a class="pdf-button" href="${pdfLink}" target="_blank">${buttonText}</a>
-            <button class="info-button" data-info="website/coursesInfo/${infoData}">
-                <img src="website/info.png">
+            <button class="info-button" data-info="./coursesInfo/${infoData}">
+                <img src="./info.png">
             </button>
         </div>
     `;
