@@ -45,3 +45,37 @@ function createGenericContainer(buttonText) {
         </div>
     `;
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Fetch the JSON file containing the PDF metadata
+    fetch('website/pdf_data.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Failed to load JSON: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(pdfData => {
+            // Find all divs with a title attribute matching a PDF name
+            document.querySelectorAll('div[title]').forEach(div => {
+                const pdfName = div.getAttribute('title');
+                
+                // Check if the PDF exists in the JSON
+                if (pdfData[pdfName]) {
+                    const { display_name, summary_type, button_color, course_info } = pdfData[pdfName];
+
+                    // Populate the div with the information
+                    div.innerHTML = `
+                        <div class="${button_color}">
+                            <strong>${display_name}</strong><br>
+                            Summary Type: ${summary_type}<br>
+                            Course Info: ${course_info}
+                        </div>
+                    `;
+                } else {
+                    console.warn(`No metadata found for PDF: ${pdfName}`);
+                }
+            });
+        })
+        .catch(error => console.error('Error fetching or processing JSON:', error));
+});
