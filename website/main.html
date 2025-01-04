@@ -9,7 +9,7 @@
     <script src="website/main.js"></script>
 
 
-    <!--- Make MD files dark mode --->
+    <!--- Make MD files dark/light mode --->
     <script type="module" id="mdDis">
         import ZeroMd, { STYLES } from 'https://cdn.jsdelivr.net/npm/zero-md@3'
       
@@ -20,15 +20,6 @@
           }
         })
       </script>
-
-    <!--- Last commit fetcher --->
-    <script>
-        fetch('https://api.github.com/repos/yeahBOYYYYY/math-summaries/commits?per_page=1')
-        .then(res => res.json())
-        .then(res => {
-            document.getElementById('lastCommitName').innerHTML = res[0].commit.message;
-        })
-    </script>
 
     <!--- MD in the HTML --->
     <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
@@ -87,7 +78,7 @@
 
     <div class="container">
         <h2>
-            סיכומי lbl
+            סיכומי lbl מתמטיקה
         </h2>
         <p>
             סיכומי lbl אלו סיכומים של החומר ללא הוכחות, דוגמאות וכדומה. הסיכום הוא בעצם רשימה של כל המשפטים ההגדרות וכדומה אשר נועד למי שלמד את הקורס או בעל רקע מתמטי מספק בשביל ללמוד אותו לבד מהצורה הזאת.
@@ -133,16 +124,6 @@
 
         <br><br>
         <h3>
-            מדעי המחשב
-        </h3>
-        <div title="computational_models_lbl"></div>
-        <div title="algorithms_lbl"></div>
-        <div title="numerical_analysis_lbl"></div>
-        <div title="computational_complexity_lbl"></div>
-        <div title="introduction_to_modern_cryptography_lbl"></div>
-
-        <br><br>
-        <h3>
             טופולוגיה וגאומטריה
         </h3>
         <div title="topology_lbl"></div>
@@ -156,11 +137,46 @@
 
 
     <div class="container">
+      <h2>
+        סיכומי lbl מדעי המחשב
+      </h2>
+      <p>
+          סיכומי lbl אלו סיכומים של החומר ללא הוכחות, דוגמאות וכדומה. הסיכום הוא בעצם רשימה של כל המשפטים ההגדרות וכדומה אשר נועד למי שלמד את הקורס או בעל רקע מתמטי מספק בשביל ללמוד אותו לבד מהצורה הזאת.
+      </p>
+      <p>
+          על מנת לראות עוד מידע על הקורס לחצו על לחצן המידע.
+      </p>
+      
+      <br>
+      <h3>
+          אלגוריתמיקה
+      </h3>
+      <div title="generic/מבני נתונים"></div>
+      <div title="algorithms_lbl"></div>
+
+      <br><br>
+      <h3>
+          תורת הסיבוכיות
+      </h3>
+      <div title="computational_models_lbl"></div>
+      <div title="computational_complexity_lbl"></div>
+
+      <br><br>
+      <h3>
+          שונות
+      </h3>
+      <div title="numerical_analysis_lbl"></div>
+      <div title="introduction_to_modern_cryptography_lbl"></div>
+    </div>
+
+
+    <div class="container">
         <h2>
             סיכומים נוספים
         </h2>
         <p>על מנת לראות עוד מידע על הקורס לחצו על לחצן המידע.</p>
-
+        
+        <br>
         <h3>
             סיכומים מלאים
         </h3>
@@ -192,6 +208,8 @@
             דפי נוסחאות
         </h2>
         <p>דפי נוסחאות למבחן, אם לקורס מסויים קיים סיכום lbl דף הנוסחאות הוא פשוט הסיכום בכמות הדפים המותרת לבחינה.</p>
+        
+        <br>
         <div title="calculus_3"></div>
         <div title="introduction_to_probability_theory"></div>
         <div title="probability_for_sciences"></div>
@@ -214,7 +232,10 @@
         <p style="direction: ltr; text-align: left;">
             Last commit: <span id="lastCommitName" style="display: inline;"></span>
         </p>
-        <p>© 2024 רון מיכלמן, כל הזכויות שמורות.</p>
+        <p>© 2025
+          רון מיכלמן, כל הזכויות שמורות כמפורט
+          <a href="https://github.com/yeahBOYYYYY/math-summaries/blob/main/LICENSE.md">בקישור זה.</a>
+        </p>
     </div>
 
 

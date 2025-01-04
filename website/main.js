@@ -1,17 +1,21 @@
 let whitemode = localStorage.getItem('whitemode')
+
 const COURSES_INFO_PATH = "website/coursesInfo"
 const INFO_IMG_PATH = "website/info.png"
 const LBL_SUMM_PATH = "lbl"
 const OTHER_SUMM_PATH = "other"
 const CHEATSHEET_SUMM_PATH = "cheatsheet"
 
+const GENERIC_BUTTON_PREFIX = "generic/"
 
 document.addEventListener('DOMContentLoaded', initialize);
 
 async function initialize(){
+    whiteMode();
+    lastCommitFetch();
     await createButtons();
     infoButton();
-    whiteMode();
+    createGenericButtons();
 }
 
 
@@ -75,7 +79,7 @@ async function parseJsonOFCourses() {
 function setButtonCode(pdfName, buttonText, summaryType, buttonColor, courseInfo) {
     try {
         const elem = document.querySelector(`[title="${pdfName}"]`);
-        const divTitle = elem.getAttribute('title');
+        // const divTitle = elem.getAttribute('title');
         const newElement = document.createElement('div');
         if (summaryType === "lbl"){
             newElement.innerHTML = getButtonCode(buttonText, `${LBL_SUMM_PATH}/${pdfName}.pdf`, buttonColor, courseInfo);
@@ -105,14 +109,6 @@ function getButtonCode(buttonText, pdfLink, gradient, infoData) {
     `;
 }
 
-function createGenericButton(buttonText) {
-    return `
-        <div class="pdf-button-container gradient-generic">
-            <a class="pdf-button" target="_blank">${buttonText}</a>
-        </div>
-    `;
-}
-
 
 function whiteMode(){
     const themeSwitch = document.getElementById('theme-switch');
@@ -133,5 +129,38 @@ function whiteMode(){
     whitemode = localStorage.getItem('whitemode');
     location.reload();
     whitemode !== "active" ? enableWhitemode() : disableWhitemode();
+    });
+}
+
+
+function lastCommitFetch(){
+    try {
+        fetch('https://api.github.com/repos/yeahBOYYYYY/math-summaries/commits?per_page=1')
+        .then(res => res.json())
+        .then(res => {
+            document.getElementById('lastCommitName').innerHTML = res[0].commit.message;
+        })
+    } catch (error) {
+        console.warn('Not found the last commit.');
+        document.getElementById('lastCommitName').innerHTML = "didn't found the last commit";
+    }
+}
+
+
+function createGenericButton(buttonText) {
+    return `
+        <div class="pdf-button-container gradient-generic">
+            <a class="pdf-button" target="_blank">${buttonText}</a>
+        </div>
+    `;
+}
+
+function createGenericButtons(){
+    generic_buttons = document.querySelectorAll(`[title^=generic\]`);
+    generic_buttons.forEach((button) => {
+        button_name = button.title.replace(GENERIC_BUTTON_PREFIX, "");
+        const newElement = document.createElement('div');
+        newElement.innerHTML = createGenericButton(button_name);
+        button.replaceWith(newElement.firstElementChild);
     });
 }
