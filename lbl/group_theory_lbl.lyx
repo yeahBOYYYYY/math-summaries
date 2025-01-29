@@ -4155,6 +4155,35 @@ v_{\sigma\left(n\right)}
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ch}{\text{ char }}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $K\le G$
+\end_inset
+
+ אופיינית אזי 
+\begin_inset Formula $K\ch G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color magenta
@@ -4167,10 +4196,10 @@ v_{\sigma\left(n\right)}
 \end_inset
 
  חבורה ותהא 
-\begin_inset Formula $K\le G$
+\begin_inset Formula $K\text{ char }G$
 \end_inset
 
- אופיינית אזי 
+ אזי 
 \begin_inset Formula $K\unlhd G$
 \end_inset
 
@@ -4194,11 +4223,7 @@ v_{\sigma\left(n\right)}
 \end_inset
 
  ותהא 
-\begin_inset Formula $K\le H$
-\end_inset
-
- אופיינית ב־
-\begin_inset Formula $H$
+\begin_inset Formula $K\ch H$
 \end_inset
 
  אזי 
@@ -5262,6 +5287,35 @@ v_{\sigma\left(n\right)}
 \begin_layout Standard
 
 \series bold
+סדרה נורמלית
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ויהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $G_{0}\ldots G_{n}\le G$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $G_{i+1}\unlhd G_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n-1\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 \color brown
 חבורה פתירה
 \series default
@@ -5981,7 +6035,7 @@ v_{\sigma\left(n\right)}
 
 \series bold
 \color orange
-סימון
+אוסף נקודות השבת
 \series default
 \color inherit
 :
@@ -5998,11 +6052,11 @@ v_{\sigma\left(n\right)}
 \end_inset
 
  ויהי 
-\begin_inset Formula $x\in X$
+\begin_inset Formula $g\in G$
 \end_inset
 
  אזי 
-\begin_inset Formula $\text{Fix}_{G}\left(x\right)=\stab_{G}\left(x\right)$
+\begin_inset Formula $\text{Fix}_{X}\left(g\right)=\left\{ x\in X\mid g.x=x\right\} $
 \end_inset
 
 .
@@ -6269,7 +6323,7 @@ v_{\sigma\left(n\right)}
 \end_inset
 
  אזי 
-\begin_inset Formula $\left|\left\{ o\left(x\right)\mid x\in X\right\} \right|=\frac{1}{\left|G\right|}\sum_{g\in G}\left|\left\{ x\in X\mid g.x=x\right\} \right|$
+\begin_inset Formula $\left|\left\{ o\left(x\right)\mid x\in X\right\} \right|=\frac{1}{\left|G\right|}\sum_{g\in G}\left|\text{Fix}_{X}\left(g\right)\right|$
 \end_inset
 
 .
@@ -10137,7 +10191,7 @@ v_{\sigma\left(n\right)}
 \begin_inset Formula $D,G$
 \end_inset
 
- חבורות אבליותת באשר 
+ חבורות אבליות באשר 
 \begin_inset Formula $D$
 \end_inset
 
@@ -10449,6 +10503,40 @@ v_{\sigma\left(n\right)}
 \begin_layout Standard
 
 \series bold
+משפט ארדש־טוראן
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית לא אבלית אזי 
+\begin_inset Formula $\bbp\left(xy=yx\right)\le\frac{5}{8}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ קיימת חבורה סופית לא אבלית 
+\begin_inset Formula $G$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\bbp\left(xy=yx\right)=\frac{5}{8}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 \color magenta
 קומוטטור
 \series default
@@ -10566,6 +10654,893 @@ v_{\sigma\left(n\right)}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה הפועלת על 
+\begin_inset Formula $X$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $g,h\in G$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left[g,h\right]=e$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g\cdot\text{Fix}\left(h\right)=\text{Fix}\left(h\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $\left[G,G\right]=\left\{ \left[g,h\right]\bmid g,h\in G\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורת הנגזרת
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $G^{\prime}=\left<\left[G,G\right]\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $X\subseteq G$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\varphi\left(X\right)=X$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\varphi\in\aut\left(G\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<X\right>\ch G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $G^{\prime}\ch G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אבליזציה של חבורה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $G^{ab}=\nicefrac{G}{G^{\prime}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורה מושלמת
+\series default
+:
+ חבורה 
+\begin_inset Formula $G$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $G=G^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה פשוטה לא אבלית אזי 
+\begin_inset Formula $G$
+\end_inset
+
+ מושלמת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{\ge5}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+ מושלמת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{\ge2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sl_{n}\left(\bbr\right)$
+\end_inset
+
+ מושלמת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה אור
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{\ge5}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in A_{n}$
+\end_inset
+
+ אזי קיימות 
+\begin_inset Formula $\pi,\sigma\in S_{n}$
+\end_inset
+
+ עבורן 
+\begin_inset Formula $x=\left[\pi,\sigma\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה אבליזציה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G^{ab}$
+\end_inset
+
+ אבלית.
+\end_layout
+
+\begin_layout Itemize
+לכל חבורה 
+\begin_inset Formula $H$
+\end_inset
+
+ ולכל אפימורפיזם 
+\begin_inset Formula $\varphi:G\to H$
+\end_inset
+
+ מתקיים (
+\begin_inset Formula $H$
+\end_inset
+
+ אבלית)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $G^{\prime}\le\ker\left(\varphi\right)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $N\unlhd G$
+\end_inset
+
+ מתקיים (
+\begin_inset Formula $\nicefrac{N}{G}$
+\end_inset
+
+ אבלית)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $G^{\prime}\le N$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה מושלמת תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ חבורה אבלית ויהי 
+\begin_inset Formula $\varphi:G\to A$
+\end_inset
+
+ הומומורפיזם אזי 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ טריוואלי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S_{n}^{\prime}=A_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S_{n}^{ab}\cong\left\{ \pm1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{\ge2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\gl_{n}\left(\bbr\right)\right)^{\prime}=\sl_{n}\left(\bbr\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{\ge2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\gl_{n}\left(\bbr\right)\right)^{ab}=\bbr^{\times}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סדרת הנגזרת
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $G^{\left(0\right)}=G$
+\end_inset
+
+ וכן 
+\begin_inset Formula $G^{\left(n+1\right)}=\left(G^{\left(n\right)}\right)^{\prime}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה עבורה קיים 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $G^{\left(n\right)}=\left\{ e\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $G$
+\end_inset
+
+ פתירה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי (
+\begin_inset Formula $G$
+\end_inset
+
+ פתירה)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיים 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $G^{\left(n\right)}=\left\{ e\right\} $
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{\ge2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $D_{n}$
+\end_inset
+
+ פתירה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורה מטאבלית
+\series default
+:
+ חבורה 
+\begin_inset Formula $G$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $G^{\left(2\right)}=\left\{ e\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי (
+\begin_inset Formula $G$
+\end_inset
+
+ מטאבלית)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיימת 
+\begin_inset Formula $N\unlhd G$
+\end_inset
+
+ אבלית עבורה 
+\begin_inset Formula $\nicefrac{G}{N}$
+\end_inset
+
+ אבלית).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תת־חבורה מקסימלית
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $M\lneq G$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $N\le G$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $M\not\le N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תת־חבורת פרטיני
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $\Phi\left(G\right)=\bigcap_{\substack{M\le G\\
+\text{ מקסימלית}M
+}
+}M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+איבר לא־יוצר
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $X\subseteq G$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left<X\cup\left\{ g\right\} \right>=G$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left<X\right>=G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $\Phi\left(G\right)=\left\{ g\in G\bmid\text{ לא־יוצר}g\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $\Phi\left(G\right)\ch G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה באשר 
+\begin_inset Formula $\nicefrac{G}{\mathcal{Z}\left(G\right)}$
+\end_inset
+
+ ציקלית אזי 
+\begin_inset Formula $G$
+\end_inset
+
+ אבלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הרחבה של חבורה אבלית בחבורה אבלית
+\series default
+:
+ תהא 
+\begin_inset Formula $K$
+\end_inset
+
+ חבורה אבלית ותהא 
+\begin_inset Formula $L$
+\end_inset
+
+ חבורה אבלית אזי חבורה 
+\begin_inset Formula $G$
+\end_inset
+
+ עבורה קיים אפימורפיזם 
+\begin_inset Formula $\varphi:G\to K$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\ker\left(\varphi\right)\cong L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הרחבה של חבורה בחבורה
+\series default
+:
+ תהא 
+\begin_inset Formula $Q$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $N$
+\end_inset
+
+ חבורה אזי חבורה 
+\begin_inset Formula $G$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $N\unlhd G$
+\end_inset
+
+ וכן 
+\begin_inset Formula $Q\cong\nicefrac{G}{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית אזי
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $H$
+\end_inset
+
+ סופית.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $N\unlhd G$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $\nicefrac{G}{N}$
+\end_inset
+
+ סופית.
+\end_layout
+
+\begin_layout Itemize
+לכל הרחבה 
+\begin_inset Formula $H$
+\end_inset
+
+ של 
+\begin_inset Formula $G$
+\end_inset
+
+ ב־
+\begin_inset Formula $N$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $H$
+\end_inset
+
+ סופית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורת פיתול אזי
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $H$
+\end_inset
+
+ פיתול.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $N\unlhd G$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $\nicefrac{G}{N}$
+\end_inset
+
+ פיתול.
+\end_layout
+
+\begin_layout Itemize
+לכל הרחבה 
+\begin_inset Formula $H$
+\end_inset
+
+ של 
+\begin_inset Formula $G$
+\end_inset
+
+ ב־
+\begin_inset Formula $N$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $H$
+\end_inset
+
+ פיתול.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה פתירה אזי
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $H$
+\end_inset
+
+ פתירה.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $N\unlhd G$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $\nicefrac{G}{N}$
+\end_inset
+
+ פתירה.
+\end_layout
+
+\begin_layout Itemize
+לכל הרחבה 
+\begin_inset Formula $H$
+\end_inset
+
+ של 
+\begin_inset Formula $G$
+\end_inset
+
+ ב־
+\begin_inset Formula $N$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $H$
+\end_inset
+
+ פתירה.
 \end_layout
 
 \end_body
