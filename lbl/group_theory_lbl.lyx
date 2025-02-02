@@ -277,7 +277,7 @@ literal "true"
 \begin_inset Formula $e\in G$
 \end_inset
 
- עבורו
+ המקיים
 \end_layout
 
 \begin_layout Itemize
@@ -373,7 +373,11 @@ literal "true"
 \begin_inset Formula $X$
 \end_inset
 
- קבוצה אזי חבורת התמורות הינה חבורה.
+ קבוצה אזי חבורת התמורות מעל 
+\begin_inset Formula $X$
+\end_inset
+
+ הינה חבורה.
 \end_layout
 
 \begin_layout Standard
@@ -436,7 +440,7 @@ literal "true"
 \end_inset
 
  שדה ויהי 
-\begin_inset Formula $n\in\bbn$
+\begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
  אזי 
@@ -459,10 +463,18 @@ literal "true"
 \end_inset
 
  שדה ויהי 
-\begin_inset Formula $n\in\bbn$
+\begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
- אזי חבורת המטריצות הינה חבורה.
+ אזי חבורת המטריצות בגודל 
+\begin_inset Formula $n$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ הינה חבורה.
 \end_layout
 
 \begin_layout Standard
@@ -473,7 +485,7 @@ literal "true"
 \series default
 \color inherit
 :
- יהי 
+ תהא 
 \begin_inset Formula $\bbf\in\left\{ \bbz,\bbq,\bbr,\bbc\right\} $
 \end_inset
 
@@ -511,12 +523,12 @@ literal "true"
 \series default
 \color inherit
 :
- יהי 
-\begin_inset Formula $\bbf\in\left\{ \bbq^{*},\bbr^{*},\bbc^{*}\right\} $
+ תהא 
+\begin_inset Formula $\bbf^{*}\in\left\{ \bbq^{*},\bbr^{*},\bbc^{*}\right\} $
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(\bbf,\cdot\right)$
+\begin_inset Formula $\left(\bbf^{*},\cdot\right)$
 \end_inset
 
 .
@@ -559,6 +571,23 @@ literal "true"
 
  המוגדרת 
 \begin_inset Formula $\left(x\sim_{n}y\right)\iff\left(n|\left(x-y\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbz_{n}=\nicefrac{\bbz^{2}}{\sim_{n}}$
 \end_inset
 
 .
@@ -637,7 +666,11 @@ literal "true"
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
- אזי חבורת שאריות החלוקה הינה חבורה.
+ אזי חבורת שאריות החלוקה ב־
+\begin_inset Formula $n$
+\end_inset
+
+ הינה חבורה.
 \end_layout
 
 \begin_layout Standard
@@ -654,6 +687,27 @@ literal "true"
 
  אזי 
 \begin_inset Formula $\left|C_{n}\right|=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי נשכן 
+\begin_inset Formula $\bbz_{n}\hookrightarrow\left\{ 0,\ldots,n-1\right\} $
+\end_inset
+
+ כך 
+\begin_inset Formula $\left[i\right]_{\sim_{n}}\mapsto\left(i\%n\right)$
 \end_inset
 
 .
@@ -1049,7 +1103,7 @@ literal "true"
 \color inherit
 :
  יהי 
-\begin_inset Formula $n\in\bbn$
+\begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
  ויהי 
@@ -1134,71 +1188,6 @@ literal "true"
 
  חבורה אזי 
 \begin_inset Formula $\left\{ e\right\} \le G$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color black
-איבר פיתול
-\series default
-\color inherit
-:
- תהא 
-\begin_inset Formula $\left(G,*\right)$
-\end_inset
-
- חבורה אזי 
-\begin_inset Formula $g\in G$
-\end_inset
-
- עבורו קיים 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- המקיים 
-\begin_inset Formula $g^{n}=e$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color black
-סימון
-\series default
-\color inherit
-:
- תהא 
-\begin_inset Formula $\left(G,*\right)$
-\end_inset
-
- חבורה אזי 
-\begin_inset Formula $T\left(G\right)=\left\{ g\in G\bmid\text{ איבר פיתול}g\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color black
-טענה
-\series default
-\color inherit
-:
- תהא 
-\begin_inset Formula $\left(G,*\right)$
-\end_inset
-
- חבורה אבלית אזי 
-\begin_inset Formula $T\left(G\right)\le G$
 \end_inset
 
 .
@@ -1365,7 +1354,7 @@ literal "true"
 \begin_inset Formula $\left(G,*\right)$
 \end_inset
 
- חבורה ויהי 
+ חבורה ויהיו 
 \begin_inset Formula $a,b,c\in G$
 \end_inset
 
@@ -1392,7 +1381,7 @@ literal "true"
 \begin_inset Formula $\left(G,*\right)$
 \end_inset
 
- חבורה ויהי 
+ חבורה ויהיו 
 \begin_inset Formula $a,b,c\in G$
 \end_inset
 
@@ -1554,7 +1543,11 @@ literal "true"
 \begin_inset Formula $\left(G,*\right),\left(H,\otimes\right)$
 \end_inset
 
- חבורות אזי חבורת המכפלה הינה חבורה.
+ חבורות אזי חבורת המכפלה של 
+\begin_inset Formula $G,H$
+\end_inset
+
+ הינה חבורה.
 \end_layout
 
 \begin_layout Standard
@@ -1569,7 +1562,11 @@ literal "true"
 \begin_inset Formula $\left(G,*\right),\left(H,\otimes\right)$
 \end_inset
 
- חבורות אזי (חבורת המכפלה אבלית)
+ חבורות אזי (חבורת המכפלה של 
+\begin_inset Formula $H,G$
+\end_inset
+
+ אבלית)
 \begin_inset Formula $\iff$
 \end_inset
 
@@ -1627,19 +1624,11 @@ literal "true"
 \begin_inset Formula $H,K\le G$
 \end_inset
 
- אזי (
-\begin_inset Formula $H\cup K\le G$
+ אזי 
+\begin_inset Formula $\left(\left(K\subseteq H\right)\lor\left(H\subseteq K\right)\right)\iff\left(H\cup K\le G\right)$
 \end_inset
 
-)
-\begin_inset Formula $\iff$
-\end_inset
-
-(
-\begin_inset Formula $H\cap K\in\left\{ H,K\right\} $
-\end_inset
-
-).
+.
 \end_layout
 
 \begin_layout Standard
@@ -1709,7 +1698,11 @@ literal "true"
 \begin_inset Formula $G$
 \end_inset
 
- חבורה ותהא 
+ חבורה תהא 
+\begin_inset Formula $I$
+\end_inset
+
+ ותהא 
 \begin_inset Formula $\left\{ H_{i}\right\} _{I\in I}\subseteq\P\left(G\right)$
 \end_inset
 
@@ -2100,33 +2093,6 @@ literal "true"
 
 \series bold
 \color red
-הערה
-\series default
-\color inherit
-:
- תהא 
-\begin_inset Formula $G$
-\end_inset
-
- חבורה ויהי 
-\begin_inset Formula $g\in G$
-\end_inset
-
- עבורו 
-\begin_inset Formula $\ord\left(g\right)$
-\end_inset
-
- לא קיים אזי 
-\begin_inset Formula $\ord\left(g\right)=\infty$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
 טענה
 \series default
 \color inherit
@@ -2448,7 +2414,7 @@ literal "true"
 \begin_inset Formula $Hg=H$
 \end_inset
 
-)
+).
 \end_layout
 
 \begin_layout Standard
@@ -4717,7 +4683,7 @@ v_{\sigma\left(n\right)}
 
 \series bold
 \color purple
-טענה
+טענה מכפלה פנימית
 \series default
 \color inherit
 :
@@ -4725,7 +4691,7 @@ v_{\sigma\left(n\right)}
 \begin_inset Formula $G$
 \end_inset
 
- חבורה ויהיו 
+ חבורה ותהיינה 
 \begin_inset Formula $H,K\unlhd G$
 \end_inset
 
@@ -5170,7 +5136,7 @@ v_{\sigma\left(n\right)}
 
 \series bold
 \color brown
-טענה
+טענה מכפלה חצי ישרה פנימית
 \series default
 \color inherit
 :
@@ -5178,11 +5144,11 @@ v_{\sigma\left(n\right)}
 \begin_inset Formula $G$
 \end_inset
 
- חבורה יהי 
+ חבורה תהא 
 \begin_inset Formula $K\le G$
 \end_inset
 
- יהי 
+ תהא 
 \begin_inset Formula $H\unlhd G$
 \end_inset
 
@@ -5499,7 +5465,7 @@ v_{\sigma\left(n\right)}
 \end_inset
 
  אזי 
-\begin_inset Formula $\nicefrac{N}{K}\unlhd\nicefrac{G}{N}$
+\begin_inset Formula $\nicefrac{N}{K}\unlhd\nicefrac{G}{K}$
 \end_inset
 
 .
@@ -5560,7 +5526,8 @@ v_{\sigma\left(n\right)}
 \end_layout
 
 \begin_layout Itemize
-לכל 
+משמרת נורמליות:
+ לכל 
 \begin_inset Formula $K\unlhd G$
 \end_inset
 
@@ -8605,7 +8572,7 @@ v_{\sigma\left(n\right)}
 
 \series bold
 \color red
-חבורת הסכום הישר החיצוני
+חבורת הסכום הישר
 \series default
 \color inherit
 :
@@ -8632,56 +8599,6 @@ v_{\sigma\left(n\right)}
 
 \series bold
 \color red
-חבורת סכום ישר פנימי
-\series default
-\color inherit
-:
- חבורה 
-\begin_inset Formula $G$
-\end_inset
-
- עבורה קיימת קבוצה 
-\begin_inset Formula $I$
-\end_inset
-
- באשר 
-\begin_inset Formula $\left|I\right|\ge2$
-\end_inset
-
- וקיימות 
-\begin_inset Formula $\left\{ G_{i}\unlhd G\bmid i\in I\right\} $
-\end_inset
-
- באשר 
-\begin_inset Formula $G_{i}\cap\left(\bigoplus_{j\ne i}G_{i}\right)=\left\{ e\right\} $
-\end_inset
-
- לכל 
-\begin_inset Formula $i\in I$
-\end_inset
-
- וכן 
-\begin_inset Formula $G=\bigoplus_{i\in I}G_{n}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-הערה
-\series default
-\color inherit
-:
- נקרא לחבורת סכום ישר חיצוני חבורת סכום ישר.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
 טענה
 \series default
 \color inherit
@@ -8696,6 +8613,71 @@ v_{\sigma\left(n\right)}
 
  חבורות אזי 
 \begin_inset Formula $\bigoplus_{i\in I}G_{n}\le\prod_{i\in I}G_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+איבר פיתול
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ עבורו קיים 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $g^{n}=e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אזי 
+\begin_inset Formula $T\left(G\right)=\left\{ g\in G\bmid\text{ איבר פיתול}g\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה אבלית אזי 
+\begin_inset Formula $T\left(G\right)\le G$
 \end_inset
 
 .
@@ -8732,7 +8714,7 @@ v_{\sigma\left(n\right)}
 \begin_inset Formula $G$
 \end_inset
 
- עבורה לכל 
+ עבורה 
 \begin_inset Formula $T\left(G\right)=\left\{ e\right\} $
 \end_inset
 
