@@ -352,18 +352,6 @@ literal "true"
 
 
 \begin_inset FormulaMacro
-\newcommand{\nph}{\mathcal{NPH}}
-{\mathcal{NPH}}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\npc}{\mathcal{NPC}}
-{\mathcal{NPC}}
-\end_inset
-
-
-\begin_inset FormulaMacro
 \newcommand{\sat}{\text{SAT}}
 {\text{SAT}}
 \end_inset
@@ -8331,8 +8319,16 @@ literal "true"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\nph=\left\{ \l\mid\forall L\in\np\left(L\le_{p}\l\right)\right\} $
+ שפה 
+\begin_inset Formula $\l$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $L\le_{p}\l$
+\end_inset
+
+ לכל 
+\begin_inset Formula $L\in\np$
 \end_inset
 
 .
@@ -8350,11 +8346,15 @@ literal "true"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\npc=\np\cap\nph$
+ שפה 
+\begin_inset Formula $\l\in\np$
 \end_inset
 
-.
+ אשר הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־קשה.
 \end_layout
 
 \begin_layout Standard
@@ -8366,10 +8366,14 @@ literal "true"
 \color inherit
 :
  תהא 
-\begin_inset Formula $\l\in\npc$
+\begin_inset Formula $\l$
 \end_inset
 
- אזי 
+ שפה 
+\begin_inset Formula $\np$
+\end_inset
+
+־שלמה אזי 
 \begin_inset Formula $\left(\P=\np\right)\iff\left(\l\in\P\right)$
 \end_inset
 
@@ -8400,10 +8404,14 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $\acc_{\np}\in\npc$
+\begin_inset Formula $\acc_{\np}$
 \end_inset
 
-.
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־שלמה.
 \end_layout
 
 \begin_layout Standard
@@ -8419,18 +8427,26 @@ literal "true"
 \end_inset
 
  שפות באשר 
-\begin_inset Formula $A\in\npc$
+\begin_inset Formula $A$
 \end_inset
 
- וכן 
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־שלמה וכן 
 \begin_inset Formula $A\le_{p}B$
 \end_inset
 
  אזי 
-\begin_inset Formula $B\in\npc$
+\begin_inset Formula $B$
 \end_inset
 
-.
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־שלמה.
 \end_layout
 
 \begin_layout Standard
@@ -8557,10 +8573,14 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $3\sat\in\npc$
+\begin_inset Formula $3\sat$
 \end_inset
 
-.
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־שלמה.
 \end_layout
 
 \begin_layout Standard
@@ -8599,10 +8619,14 @@ literal "true"
 \end_inset
 
  אזי 
-\begin_inset Formula $k\sat\in\npc$
+\begin_inset Formula $k\sat$
 \end_inset
 
-.
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־שלמה.
 \end_layout
 
 \begin_layout Standard
@@ -8629,10 +8653,14 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $\clique,\is\in\npc$
+\begin_inset Formula $\clique,\is$
 \end_inset
 
-.
+ הינן 
+\begin_inset Formula $\np$
+\end_inset
+
+־שלמות.
 \end_layout
 
 \begin_layout Standard
@@ -8690,10 +8718,14 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $C-\cnf\in\npc$
+\begin_inset Formula $C-\cnf$
 \end_inset
 
-.
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־שלמה.
 \end_layout
 
 \begin_layout Standard
@@ -8765,10 +8797,14 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $C-\dnf\in\npc$
+\begin_inset Formula $C-\dnf$
 \end_inset
 
-.
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־שלמה.
 \end_layout
 
 \begin_layout Standard
@@ -8804,10 +8840,14 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $\partition\in\npc$
+\begin_inset Formula $\partition$
 \end_inset
 
-.
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־שלמה.
 \end_layout
 
 \begin_layout Standard
@@ -8861,10 +8901,14 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $\vc\in\npc$
+\begin_inset Formula $\vc$
 \end_inset
 
-.
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־שלמה.
 \end_layout
 
 \begin_layout Standard
@@ -9384,10 +9428,14 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $\cirsat\in\npc$
+\begin_inset Formula $\cirsat$
 \end_inset
 
-.
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־שלמה.
 \end_layout
 
 \begin_layout Standard
@@ -9468,10 +9516,14 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $\subsetsum\in\npc$
+\begin_inset Formula $\subsetsum$
 \end_inset
 
-.
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־שלמה.
 \end_layout
 
 \begin_layout Standard
@@ -9498,10 +9550,14 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $\hampth\in\npc$
+\begin_inset Formula $\hampth$
 \end_inset
 
-.
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־שלמה.
 \end_layout
 
 \begin_layout Standard
@@ -9593,10 +9649,14 @@ literal "true"
 \color inherit
 :
  תהא 
-\begin_inset Formula $\l\in\npc$
+\begin_inset Formula $\l$
 \end_inset
 
- אזי 
+ שפה 
+\begin_inset Formula $\np$
+\end_inset
+
+־שלמה אזי 
 \begin_inset Formula $\left(\conp=\np\right)\iff\left(\l\in\conp\right)$
 \end_inset
 
@@ -9887,10 +9947,14 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $\overline{\ze_{\bbz_{2}}}\in\npc$
+\begin_inset Formula $\overline{\ze_{\bbz_{2}}}$
 \end_inset
 
-.
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־שלמה.
 \end_layout
 
 \begin_layout Standard
@@ -11533,21 +11597,6 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\ph}{\mathcal{PH}}
-{\mathcal{PH}}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\pc}{\mathcal{PC}}
-{\mathcal{PC}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 \color red
@@ -11559,8 +11608,16 @@ literal "true"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\ph=\left\{ \l\mid\forall L\in\P\left(L\le_{L}\l\right)\right\} $
+ שפה 
+\begin_inset Formula $\l$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $L\le_{L}\l$
+\end_inset
+
+ לכל 
+\begin_inset Formula $L\in\P$
 \end_inset
 
 .
@@ -11578,11 +11635,15 @@ literal "true"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\pc=\P\cap\ph$
+ שפה 
+\begin_inset Formula $\l\in\P$
 \end_inset
 
-.
+ אשר הינה 
+\begin_inset Formula $\P$
+\end_inset
+
+־קשה.
 \end_layout
 
 \begin_layout Standard
@@ -11699,10 +11760,14 @@ literal "true"
 \color inherit
 :
  תהא 
-\begin_inset Formula $A\in\pc\cap L$
+\begin_inset Formula $A\in\lspace$
 \end_inset
 
- אזי 
+ שפה 
+\begin_inset Formula $\P$
+\end_inset
+
+־שלמה אזי 
 \begin_inset Formula $\P=\lspace$
 \end_inset
 
@@ -11789,10 +11854,14 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $\cval\in\pc$
+\begin_inset Formula $\cval$
 \end_inset
 
-.
+ הינה 
+\begin_inset Formula $\P$
+\end_inset
+
+־שלמה.
 \end_layout
 
 \begin_layout Standard
@@ -12294,21 +12363,6 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\nlh}{\mathcal{NLH}}
-{\text{NLH}}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\nlc}{\mathcal{NLC}}
-{\text{NLC}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 \color green
@@ -12320,8 +12374,16 @@ literal "true"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\nlh=\left\{ \l\mid\forall L\in\nl\left(L\le_{L}\l\right)\right\} $
+ שפה 
+\begin_inset Formula $\l$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $L\le_{L}\l$
+\end_inset
+
+ לכל 
+\begin_inset Formula $L\in\nl$
 \end_inset
 
 .
@@ -12339,11 +12401,15 @@ literal "true"
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\nlc=\nl\cap\nlh$
+ שפה 
+\begin_inset Formula $\l\in\nl$
 \end_inset
 
-.
+ אשר הינה 
+\begin_inset Formula $\nl$
+\end_inset
+
+־קשה.
 \end_layout
 
 \begin_layout Standard
@@ -12355,10 +12421,14 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $\stcon\in\nlc$
+\begin_inset Formula $\stcon$
 \end_inset
 
-.
+ הינה 
+\begin_inset Formula $\nl$
+\end_inset
+
+־שלמה.
 \end_layout
 
 \begin_layout Standard
@@ -12828,10 +12898,14 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\text{E}k\sat\in\nph$
+\begin_inset Formula $\text{E}k\sat$
 \end_inset
 
-.
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־קשה.
 \end_layout
 
 \begin_layout Standard
