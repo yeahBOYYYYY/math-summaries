@@ -100,5 +100,5 @@ if __name__ == "__main__":
     # absulote_path = r"C:\Users\user\OneDrive\Documents\summaries\lbl\\"
     # absulote_path = r"./lbl/"
 
-    path = "discrete_math_1_lbl.lyx"
+    path = "computational_complexity_lbl.lyx"
     colorChanges(absulote_path + path)
