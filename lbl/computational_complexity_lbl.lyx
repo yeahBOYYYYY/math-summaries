@@ -1714,10 +1714,33 @@ status collapsed
 \end_inset
 
  אזי 
+\begin_inset Formula $\add_{n}:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{n+1}$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\add_{n}\left(x,y\right)=x+y$
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+הגדרה:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\add_{n}=\left\{ \left<x,y,z\right>\mid\left(x,y\in\left\{ 0,1\right\} ^{n}\right)\land\left(z\in\left\{ 0,1\right\} ^{n+1}\right)\land\left(x+y=z\right)\right\} $
 \end_inset
 
 .
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1750,11 +1773,27 @@ status collapsed
 \begin_layout Standard
 
 \series bold
-\color red
 הגדרה
 \series default
-\color inherit
 :
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\iteradd_{n}:\left(\left\{ 0,1\right\} ^{n}\right)^{n}\to\left\{ 0,1\right\} ^{2n}$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\iteradd_{n}\left(x_{1}\ldots x_{n}\right)=\sum_{i=1}^{n}x_{i}$
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+הגדרה:
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
@@ -1764,6 +1803,11 @@ status collapsed
 \end_inset
 
 .
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1792,11 +1836,27 @@ status collapsed
 \begin_layout Standard
 
 \series bold
-\color red
 הגדרה
 \series default
-\color inherit
 :
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mult_{n}:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} ^{2n}$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\mult_{n}\left(x,y\right)=x\cdot y$
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+הגדרה:
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
@@ -1806,6 +1866,11 @@ status collapsed
 \end_inset
 
 .
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8761,6 +8826,371 @@ status collapsed
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פרוטוקול תקשורת
+\series default
+:
+ יהי 
+\begin_inset Formula $t\in\bbn_{+}$
+\end_inset
+
+ תהיינה 
+\begin_inset Formula $S_{1}\ldots S_{t+1}:\left\{ 0,1\right\} ^{*}\to\left\{ A,B\right\} $
+\end_inset
+
+ תהיינה 
+\begin_inset Formula $C_{1}\ldots C_{t}:\left\{ A,B\right\} \times\left\{ 0,1\right\} ^{*}\to\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $R:\left\{ A,B\right\} \times\left\{ 0,1\right\} ^{*}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\left(S_{1},C_{1}\right)\ldots\left(S_{t},C_{t}\right),\left(S_{t+1},R\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סיבוב בפרוטוקול תקשורת
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\left(S_{1},C_{1}\right)\ldots\left(S_{t},C_{t}\right),\left(S_{t+1},R\right)\right)$
+\end_inset
+
+ פרוטוקול תקשורת אזי 
+\begin_inset Formula $\left(S_{i},C_{i}\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $i\in\left[t\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מספר הסיבובים בפרוטוקול תקשורת
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\left(S_{1},C_{1}\right)\ldots\left(S_{t},C_{t}\right),\left(S_{t+1},R\right)\right)$
+\end_inset
+
+ פרוטוקול תקשורת אזי 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הרצת פרוטוקול תקשורת
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\left(S_{1},C_{1}\right)\ldots\left(S_{t},C_{t}\right),\left(S_{t+1},R\right)\right)$
+\end_inset
+
+ פרוטוקול תקשורת ויהיו 
+\begin_inset Formula $x_{A},x_{B}\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $b_{1}\ldots b_{t+1}\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ המקיימים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $b_{1}=C_{1}\left(S_{1}\left(\e\right),x_{S_{1}\left(\e\right)}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $b_{i}=C_{i}\left(S_{i}\left(b_{1}\ldots b_{i-1}\right),x_{S_{i}\left(b_{1}\ldots b_{i-1}\right)},b_{1}\ldots b_{i-1}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left\{ 2,\ldots,t\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $b_{t+1}=R\left(S_{t+1}\left(b_{1}\ldots b_{t}\right),x_{S_{t+1}\left(b_{1}\ldots b_{t}\right)},b_{1}\ldots b_{t}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ מעתה והלאה נסמן 
+\begin_inset Formula $\left(b_{1}\ldots b_{t+1}\right)$
+\end_inset
+
+ עבור הרצה של פרוטוקול וכן נסמן 
+\begin_inset Formula $b_{i}\left(x_{A},x_{B}\right)$
+\end_inset
+
+ עבור ההרצה על 
+\begin_inset Formula $x_{A},x_{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פרוטוקול תקשורת מחשב פונקציה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי פרוטוקול תקשורת 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ עבורו מתקיים 
+\begin_inset Formula $b_{t+1}\left(x,y\right)=f\left(x,y\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x,y\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+עלות תקשורת של פרוטוקול
+\series default
+:
+ יהי 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ פרוטוקול אזי 
+\begin_inset Formula $\mathcal{C}\left(\Pi\right)=\max_{x,y\in\left\{ 0,1\right\} ^{n}}\sum_{i=1}^{t}\left|b_{t}\left(x,y\right)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סיבוכיות תקשורת
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{D}\left(f\right)=\min\left\{ \mathcal{C}\left(\Pi\right)\mid f\text{ פרוטוקול המחשב את }\Pi\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{D}\left(f\right)\le n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\eq}{\text{EQ}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\eq_{n}:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\eq_{n}\left(x,y\right)=\mathds{1}\left[x=y\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+המטריצה המייצג של פונקציה בוליאנית
+\series default
+:
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $M_{f}\in M_{n}\left(\bbz_{2}\right)$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\left(M_{f}\right)_{i,j}=f\left(i,j\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i,j\in\left[n\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מלבן קומבינטורי
+\series default
+:
+ תהיינה 
+\begin_inset Formula $S,T\subseteq\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S\times T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מלבן קומבינטורי מונוכרומטי
+\series default
+:
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי מלבן קומבינטורי 
+\begin_inset Formula $R$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left|\left\{ \left(M_{f}\right)_{i,j}\mid\left(i,j\right)\in R\right\} \right|=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי קיימת חלוקה של 
+\begin_inset Formula $\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ ל־
+\begin_inset Formula $2^{\mathcal{D}\left(f\right)}$
+\end_inset
+
+ מלבנים מונוכרומטיים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\rank\left(M_{f}\right)\le2^{\mathcal{D}\left(f\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{D}\left(\eq_{n}\right)=n$
+\end_inset
+
+.
 \end_layout
 
 \end_body
