@@ -1905,8 +1905,7 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\mc}{\text{MC}}
-{\text{MC}}
+\newcommand{\maxcut}{\text{maxCut}}
 \end_inset
 
 
@@ -1956,7 +1955,7 @@ status collapsed
 \end_inset
 
  חתך מקסימלי אזי 
-\begin_inset Formula $\mc\left(G\right)=\left|E\left(A,B\right)\right|$
+\begin_inset Formula $\maxcut\left(G\right)=\left|E\left(A,B\right)\right|$
 \end_inset
 
 .
@@ -2008,7 +2007,7 @@ status collapsed
 
 \series bold
 \color red
-מסקנה אלגוריתם איטי למציאת חתך גדול
+אלגוריתם חיפוש אלים למציאת חתך גדול
 \series default
 \color inherit
 :
@@ -2058,7 +2057,7 @@ DontPrintSemicolon
 
 
 \backslash
-SetKwFunction{name}{SlowBigCut}
+SetKwFunction{name}{BruteForceBigCut}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2200,7 +2199,7 @@ end{algorithm}
 \end_inset
 
  קבוצה אזי 
-\begin_inset Formula $\text{SlowBigCut}$
+\begin_inset Formula $\text{BruteForceBigCut}$
 \end_inset
 
  בעלת סיבוכיות זמן ריצה 
@@ -2395,7 +2394,7 @@ end{algorithm}
 
 \series bold
 \color red
-מסקנה אלגוריתם מהיר למציאת חתך גדול
+אלגוריתם בעל משתנים מקריים למציאת חתך גדול
 \series default
 \color inherit
 :
@@ -2445,7 +2444,7 @@ DontPrintSemicolon
 
 
 \backslash
-SetKwFunction{name}{FastBigCut}
+SetKwFunction{name}{IndVarBigCut}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2602,7 +2601,7 @@ end{algorithm}
 \end_inset
 
  קבוצה אזי 
-\begin_inset Formula $\text{FastBigCut}$
+\begin_inset Formula $\text{IndVarBigCut}$
 \end_inset
 
  בעלת סיבוכיות זמן ריצה 
@@ -10329,6 +10328,31 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+הערה
+\series default
+:
+ תהא 
+\begin_inset Formula $L\subseteq\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $L\mapsto\left(L,\overline{L}\right)$
+\end_inset
+
+ הינו שיכון לבעיית הבטחה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\promise}{\text{Promise-}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 הגדרה
 \series default
 :
@@ -10337,7 +10361,7 @@ status collapsed
 \end_inset
 
  מחלקה אזי 
-\begin_inset Formula $\text{promise-}\mathcal{C}=\left\{ {\scriptsize \left(Y,N\right)\mid\left(\text{ בעיית הבטחה}\left(Y,N\right)\right)\land\left(Y\in\mathcal{C}\text{ עד להיות }A\text{ הפותר את בעיית ההבטחה וכן }A\text{קיים אלגוריתם }\right)}\right\} $
+\begin_inset Formula $\promise\mathcal{C}=\left\{ {\scriptsize \left(Y,N\right)\mid\left(\text{ בעיית הבטחה}\left(Y,N\right)\right)\land\left(Y\in\mathcal{C}\text{ עד להיות }A\text{ הפותר את בעיית ההבטחה וכן }A\text{קיים אלגוריתם }\right)}\right\} $
 \end_inset
 
 .
@@ -10419,8 +10443,17 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\gapvc}[2]{\text{GAP}_{\left[#1,#2\right]}\text{VC\min}}
-{\text{GAP}_{\left[#1,#2\right]}\text{ \min VC}}
+\newcommand{\gap}{\text{GAP}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\yes}{\text{Yes}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\no}{\text{No}}
 \end_inset
 
 
@@ -10430,7 +10463,145 @@ status collapsed
 
 \series bold
 הגדרה 
-\begin_inset Formula $\text{Min Vertex Cover Promise}$
+\lang english
+
+\begin_inset Formula $\text{Min Gap Problem}$
+\end_inset
+
+
+\series default
+\lang hebrew
+:
+ יהיו 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $f:X\to\P\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gap_{\left[a,b\right]}\min f=\left(\yes,\no\right)$
+\end_inset
+
+ באשר
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\yes=\left\{ \left<x\right>\mid\left(x\in X\right)\land\left(f\left(x\right)\le a\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\no=\left\{ \left<x\right>\mid\left(x\in X\right)\land\left(f\left(x\right)>b\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה 
+\lang english
+
+\begin_inset Formula $\text{Max Gap Problem}$
+\end_inset
+
+
+\series default
+\lang hebrew
+:
+ יהיו 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $f:X\to\P\left(\bbr\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gap_{\left[a,b\right]}\max f=\left(\yes,\no\right)$
+\end_inset
+
+ באשר
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\yes=\left\{ \left<x\right>\mid\left(x\in X\right)\land\left(f\left(x\right)\ge b\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\no=\left\{ \left<x\right>\mid\left(x\in X\right)\land\left(f\left(x\right)<a\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ אם 
+\begin_inset Formula $f$
+\end_inset
+
+ הינה פונקציית 
+\begin_inset Formula $\min,\max$
+\end_inset
+
+ בצורה טבעית אזי 
+\begin_inset Formula $\gap_{\left[a,b\right]}f$
+\end_inset
+
+ הינה בעיית המרווח המתאימה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\minvc}{\text{minVC}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ נגדיר 
+\begin_inset Formula $\minvc:\left\{ G\mid\text{ גרף}G\right\} \to\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $\minvc\left(G\right)=\min\left\{ \left|A\right|\mid\text{ כיסוי צמתים}A\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה 
+\begin_inset Formula $\text{Min Vertex Cover Gap Problem}$
 \end_inset
 
 
@@ -10441,10 +10612,1998 @@ status collapsed
 \end_inset
 
  אזי 
-\begin_inset Formula $\gapvc k{\ell}=\left(\left\{ \left<G\right>\mid\min\text{VC}\left(G\right)\le k\right\} ,\left\{ \left<G\right>\mid\min\text{VC}\left(G\right)\ge\ell\right\} \right)$
+\begin_inset Formula $\gap_{\left[k,\ell\right]}\minvc$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $c\ge1$
+\end_inset
+
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה תהא 
+\begin_inset Formula $f:X\to\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $A$
+\end_inset
+
+ אלגוריתם פולינומי 
+\begin_inset Formula $c$
+\end_inset
+
+־קירוב ל־
+\begin_inset Formula $\min f\left(X\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gap_{\left[k,ck\right]}f\in\promise\P$
+\end_inset
+
+ לכל 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ קיים אלגוריתם פולינומי 
+\begin_inset Formula $2$
+\end_inset
+
+־קירוב לבעייה 
+\begin_inset Formula $\minvc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ilpr}{\text{INT-LIN-PROG}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה 
+\begin_inset Formula $\text{Integer Linear Proggramming}$
+\end_inset
+
+
+\series default
+:
+ 
+\begin_inset Formula $\ilpr=\left\{ \left<A,b\right>\mid\left(A\in M_{m\times n}\left(\bbr\right)\right)\land\left(b\in\bbr^{m}\right)\land\left(\exists x\in\bbn^{n}.Ax\le b\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\ilpr$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־קשה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי הבעיה 
+\begin_inset Formula $\minvc\left(G\right)$
+\end_inset
+
+ הינה
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+abovedisplayskip{1pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{flalign*}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+min
+\backslash
+quad & C^T w &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+text{s.t.}
+\backslash
+quad &  w_v + w_u 
+\backslash
+ge 1 
+\backslash
+qquad,
+\backslash
+forall (v,
+ u)
+\backslash
+in E &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	& w_v 
+\backslash
+in 
+\backslash
+{0,
+ 1
+\backslash
+} 
+\backslash
+qquad,
+\backslash
+forall v
+\backslash
+in V
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{flalign*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם קירוב לבעיית הכיסוי המינימלי בעזרת תכנות לינארי
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{Approx-minVC}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$G$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $w 
+\backslash
+gets 
+\backslash
+text{solve} 
+\backslash
+left(
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+scalebox{0.5}{$
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+begin{aligned}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+min
+\backslash
+quad & C^T w &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+text{s.t.}
+\backslash
+quad &  w_v + w_u 
+\backslash
+ge 1 
+\backslash
+qquad,
+\backslash
+forall (v,
+ u)
+\backslash
+in E &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            & w_v 
+\backslash
+in [0,
+ 1] 
+\backslash
+qquad,
+\backslash
+forall v
+\backslash
+in V
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+end{aligned}
+\end_layout
+
+\begin_layout Plain Layout
+
+        $}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+right)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $
+\backslash
+{v
+\backslash
+in V
+\backslash
+mid w_v 
+\backslash
+ge 
+\backslash
+frac{1}{2}
+\backslash
+}$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי 
+\begin_inset Formula $\text{Approx-minVC}\left(G\right)$
+\end_inset
+
+ הינו כיסוי צמתים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי 
+\begin_inset Formula $\text{Approx-minVC}$
+\end_inset
+
+ בעל זמן ריצה פולינומי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי 
+\begin_inset Formula $\minvc\left(G\right)\le\left|\text{Approx-minVC}\left(G\right)\right|\le2\cdot\minvc\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי הבעיה 
+\begin_inset Formula $\maxcut\left(G\right)$
+\end_inset
+
+ הינה
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+abovedisplayskip{1pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{flalign*}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+max
+\backslash
+quad & 
+\backslash
+sum_{(u,v)
+\backslash
+in E}
+\backslash
+frac{1 - x_{u}x_{v}}{2} &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+text{s.t.}
+\backslash
+quad &  x_v
+\backslash
+in 
+\backslash
+{-1,
+ 1
+\backslash
+} 
+\backslash
+qquad,
+\backslash
+forall v
+\backslash
+in V &
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{flalign*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\maxcute}{\maxcut\text{Ext}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי נגדיר את 
+\begin_inset Formula $\maxcute_{1}$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+abovedisplayskip{1pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{flalign*}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+max
+\backslash
+quad & 
+\backslash
+sum_{(u,v)
+\backslash
+in E}
+\backslash
+frac{1 - x_{u}
+\backslash
+cdot x_{v}}{2} &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+text{s.t.}
+\backslash
+quad &  x_v
+\backslash
+in 
+\backslash
+mathbb{R}^n 
+\backslash
+qquad,
+\backslash
+forall v
+\backslash
+in V &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    &  x_v
+\backslash
+cdot x_v = 1 
+\backslash
+qquad,
+\backslash
+forall v
+\backslash
+in V &
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{flalign*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $v_{1}\ldots v_{n}\in\bbs^{n-1}$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula $A\in M_{n}\left(\bbr\right)$
+\end_inset
+
+ כך 
+\begin_inset Formula $A=\left(\begin{smallmatrix}- & v_{1} & -\\
+ & \vdots\\
+- & v_{n} & -
+\end{smallmatrix}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $AA^{T}$
+\end_inset
+
+ מוגדרת חיובית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ A\in M_{n}\left(\bbr\right)\mid\text{ מוגדרת חיובית}A\right\} $
+\end_inset
+
+ קמורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי נגדיר את 
+\begin_inset Formula $\maxcute_{2}$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+abovedisplayskip{1pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{flalign*}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+max
+\backslash
+quad & 
+\backslash
+sum_{(u,v)
+\backslash
+in E}
+\backslash
+frac{1 - (B)_{u,v}}{2} &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+text{s.t.}
+\backslash
+quad &  B
+\backslash
+in M_n(
+\backslash
+mathbb{R}) &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    &  (B)_{v,
+ v} = 1 
+\backslash
+qquad,
+\backslash
+forall v
+\backslash
+in V &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    &  (B)_{v,
+ u} = (B)_{u,
+ v} 
+\backslash
+qquad,
+\backslash
+forall v,
+ u
+\backslash
+in V &
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{flalign*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ קיים אלגוריתם הפותר את 
+\begin_inset Formula $\maxcute_{2}$
+\end_inset
+
+ בזמן פולינומי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי 
+\begin_inset Formula $\maxcute_{1}\left(G\right)=\maxcute_{2}\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי 
+\begin_inset Formula $\maxcute\left(G\right)=\maxcute_{1}\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי 
+\begin_inset Formula $\maxcut\left(G\right)\le\left|\maxcute\left(G\right)\right|\le\frac{1}{0.878}\maxcut\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\mincirc}{\text{MinCircuit}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית מרחק על גרף
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף לא מכוון אזי 
+\begin_inset Formula $d:V^{2}\to\bbn$
+\end_inset
+
+ עבורה
+\end_layout
+
+\begin_layout Itemize
+סימטריות:
+ לכל 
+\begin_inset Formula $u,v\in V$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $d\left(u,v\right)=d\left(v,u\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+חיוביות ממש:
+ לכל 
+\begin_inset Formula $u\in V$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $d\left(u,u\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אי־שיווין המשולש:
+ לכל 
+\begin_inset Formula $u,v,w\in V$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $d\left(u,v\right)\le d\left(u,w\right)+d\left(w,v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף תהא 
+\begin_inset Formula $d$
+\end_inset
+
+ פונקציית מרחק תהא 
+\begin_inset Formula $S\subseteq V$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $u\in V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $d\left(u,S\right)=\min_{v\in V}d\left(u,v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף תהא 
+\begin_inset Formula $d$
+\end_inset
+
+ פונקציית מרחק ותהא 
+\begin_inset Formula $S\subseteq V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $r\left(S\right)=\max_{u\in V}d\left(u,S\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\mincenter}{\text{minCenter}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה 
+\lang english
+
+\begin_inset Formula $\text{k-Center Problem}$
+\end_inset
+
+
+\series default
+\lang hebrew
+:
+ יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $\mincenter:\left\{ \left(G,d,k\right)\mid\left(\text{ גרף}G\right)\land\left(\text{ מרחק}d\right)\land\left(k\in\bbn\right)\right\} \to\bbn$
+\end_inset
+
+ כך
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mincenter\left(G,d,k\right)=\min\left\{ r\left(S\right)\mid S\in\P_{k}\left(V\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם קירוב למציאת 
+\begin_inset Formula $k$
+\end_inset
+
+־מרכז
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $d$
+\end_inset
+
+ מרחק אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{ApproxCenter}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$G,
+ d,
+ k$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $v
+\backslash
+gets V$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $S 
+\backslash
+gets 
+\backslash
+{v
+\backslash
+}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+While{$|S| < k$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $v 
+\backslash
+gets 
+\backslash
+arg
+\backslash
+max
+\backslash
+{ d(u,
+ S) 
+\backslash
+mid u
+\backslash
+in V
+\backslash
+}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $S 
+\backslash
+gets S 
+\backslash
+cup 
+\backslash
+{v
+\backslash
+}$
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $S$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $d$
+\end_inset
+
+ מרחק אזי 
+\begin_inset Formula $\text{ApproxCenter}$
+\end_inset
+
+ בעלת זמן ריצה פולינומי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $d$
+\end_inset
+
+ מרחק אזי 
+\begin_inset Formula $\mincenter\left(G\right)\le\left|\text{ApproxCenter}\left(G,d,k\right)\right|\le2\cdot\mincenter\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ds}{\text{DS}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה 
+\lang english
+
+\begin_inset Formula $\text{Dominating Set}$
+\end_inset
+
+
+\series default
+\lang hebrew
+:
+ 
+\begin_inset Formula $\ds=\left\{ \left<G,k\right>\mid\exists S\in\P_{k}\left(V\right).\forall v\in V.\left(\left(\text{adj}\left(v\right)\cup\left\{ v\right\} \right)\cap S\ne\emptyset\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\ds$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־שלמה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $c<2$
+\end_inset
+
+ אם קיים אלגוריתם פולינומי 
+\begin_inset Formula $A$
+\end_inset
+
+ אשר מהווה 
+\begin_inset Formula $c$
+\end_inset
+
+־קירוב לבעיית 
+\begin_inset Formula $\mincenter$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\P=\np$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רדוקציה פולינומית משמרת מרווח בין בעיות הבטחה
+\series default
+:
+ יהיו 
+\begin_inset Formula $\left(Y,N\right),\left(Y^{\prime},N^{\prime}\right)$
+\end_inset
+
+ בעיות הבטחה עבורן קיימת מ
+\begin_inset Quotes erd
+\end_inset
+
+ט פולינומית 
+\begin_inset Formula $M$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אם 
+\begin_inset Formula $x\in Y$
+\end_inset
+
+ אז 
+\begin_inset Formula $M\left(x\right)\in Y^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אם 
+\begin_inset Formula $x\in N$
+\end_inset
+
+ אז 
+\begin_inset Formula $M\left(x\right)\in N^{\prime}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אזי 
+\begin_inset Formula $\left(Y,N\right)\le_{p}\left(Y^{\prime},N^{\prime}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית הבטחה 
+\begin_inset Formula $\promise\np$
+\end_inset
+
+־קשה
+\series default
+:
+ בעיית הבטחה 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $L\in\np$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $L\le_{p}\Pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה תהא 
+\begin_inset Formula $f:X\to\bbr$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ אם 
+\begin_inset Formula $\P\ne\np$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\gap_{\left[a,b\right]}f$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\promise\np$
+\end_inset
+
+־קשה אז לכל 
+\begin_inset Formula $c<\frac{b}{a}$
+\end_inset
+
+ לא קיים אלגוריתם 
+\begin_inset Formula $c$
+\end_inset
+
+־קירוב פולינומי ל־
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ 
+\begin_inset Formula $\gap_{\left[1,2\right]}\mincenter$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\promise\np$
+\end_inset
+
+־קשה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה 
+\begin_inset Formula $\text{Minimal Circuit Problem}$
+\end_inset
+
+
+\series default
+:
+ 
+\begin_inset Formula $\mincirc=\left\{ \left<C\right>\mid\left(\text{ מעגל}C\right)\land\left(\left|D\right|\ge\left|C\right|\text{ אז }x\text{ לכל }C\left(x\right)=D\left(x\right)\text{ אם }D\text{לכל מעגל }\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\mincirc\in\pspace$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ אלגוריתם ויהי 
+\begin_inset Formula $x$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{Alt}_{k}^{\exists}\left(M,x\right)=Q_{1}w_{1}\ldots Q_{k}w_{k}\left(A\left(x,w_{1}\ldots w_{k}\right)\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $Q_{i}=\exists$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\bbn_{\text{odd}}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $Q_{i}=\forall$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\bbn_{\text{even}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $L$
+\end_inset
+
+ שפה עבורה קיימת מ
+\begin_inset Quotes erd
+\end_inset
+
+ט פולינומית 
+\begin_inset Formula $M$
+\end_inset
+
+ המקיים כי (
+\begin_inset Formula $x\in L$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\text{Alt}_{k}^{\exists}\left(M,x\right)$
+\end_inset
+
+ ספיקה) אזי 
+\begin_inset Formula $L\in\Sigma_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ אלגוריתם ויהי 
+\begin_inset Formula $x$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\text{Alt}_{k}^{\forall}\left(M,x\right)=Q_{1}w_{1}\ldots Q_{k}w_{k}\left(A\left(x,w_{1}\ldots w_{k}\right)\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $Q_{i}=\forall$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\bbn_{\text{odd}}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $Q_{i}=\exists$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\bbn_{\text{even}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $L$
+\end_inset
+
+ שפה עבורה קיימת מ
+\begin_inset Quotes erd
+\end_inset
+
+ט פולינומית 
+\begin_inset Formula $M$
+\end_inset
+
+ המקיים כי (
+\begin_inset Formula $x\in L$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\text{Alt}_{k}^{\forall}\left(M,x\right)$
+\end_inset
+
+ ספיקה) אזי 
+\begin_inset Formula $L\in\Pi_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Pi_{k}=\text{co}\Sigma_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\P=\Sigma_{0}=\Pi_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\np=\Sigma_{1}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\text{co}\np=\Pi_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\mincirc\in\Pi_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\tqbf\in\Sigma_{\poly}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Sigma_{k}\subseteq\Sigma_{k+1}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\Pi_{k}\subseteq\Pi_{k+1}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\Sigma_{k}\subseteq\Pi_{k+1}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\Pi_{k}\subseteq\Sigma_{k+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ph}{\mathcal{PH}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה 
+\lang english
+
+\begin_inset Formula $\text{Polynomial Hierarchy}$
+\end_inset
+
+
+\series default
+\lang hebrew
+:
+ 
+\begin_inset Formula $\ph=\bigcup_{k\in\bbn}\Sigma_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\ph\subseteq\pspace$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Sigma_{k+1}=\np^{\Sigma_{k}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\tqbf_{k}^{\exists}=\left\{ \left<\varphi\right>\mid\left(\varphi=\text{Alt}_{k}^{\exists}\left(\psi,\e\right)\text{ עבורה }\psi\text{קיימת נוסחה }\right)\land\left(\text{ ספיקה}\varphi\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Sigma_{k}=\left\{ L\mid L\le_{\LOG}\tqbf_{k}^{\exists}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\ell\in\bbn_{+}$
+\end_inset
+
+ אם 
+\begin_inset Formula $\Sigma_{\ell}=\Pi_{\ell}$
+\end_inset
+
+ אז 
+\begin_inset Formula $\ph=\Sigma_{\ell}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\maxclique}{\text{maxClique}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ נגדיר 
+\begin_inset Formula $\maxclique:\left\{ G\mid\text{ גרף}G\right\} \to\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $\maxclique\left(G\right)=\max\left\{ \left|K\right|\mid\left(G\text{ תת־גרף של }K\right)\land\left(\text{ קליקה}K\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ 
+\begin_inset Formula $\text{ExactClique}=\left\{ \left<G,k\right>\mid\maxclique\left(G\right)=k\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\text{ExactClique}\in\Sigma_{2}\cap\Pi_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \end_body
