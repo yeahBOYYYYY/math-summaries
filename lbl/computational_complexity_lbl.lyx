@@ -7748,6 +7748,67 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\time}{\text{Time}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\d>0$
+\end_inset
+
+ תהא 
+\begin_inset Formula $L\in\rp$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט העדה לכך באשר 
+\begin_inset Formula $V$
+\end_inset
+
+ מטילה 
+\begin_inset Formula $m$
+\end_inset
+
+ מטבעות אזי קיימת מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $M$
+\end_inset
+
+ המטילה 
+\begin_inset Formula $m\cdot\log\left(\frac{1}{\d}\right)$
+\end_inset
+
+ מטבעות הרצה בזמן 
+\begin_inset Formula $\time\left(V\right)\cdot\log\left(\frac{1}{\d}\right)$
+\end_inset
+
+ אשר עדה להיות 
+\begin_inset Formula $L\in\rp_{\left[\d\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color orange
@@ -7838,6 +7899,201 @@ status collapsed
 
  אזי 
 \begin_inset Formula $\bpp_{\left[p,p+\frac{1}{n^{c}}\right]}=\bpp_{\left[2^{-n^{d}},1-2^{-n^{d}}\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\zpp}{\mathcal{ZPP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ שפה עבורה קיים 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ וקיימת מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אקראית 
+\begin_inset Formula $M$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+זמן פולינומי בממוצע:
+ לכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\bbe_{r}\left(\time\left(M\left(x;r\right)\right)\right)=\O\left(\left|x\right|^{k}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+נכונות:
+ לכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ מתקיים (
+\begin_inset Formula $x\in L$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(לכל 
+\begin_inset Formula $r$
+\end_inset
+
+ אם 
+\begin_inset Formula $M\left(x;r\right)$
+\end_inset
+
+ עוצרת אז 
+\begin_inset Formula $M\left(x;r\right)=1$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+אזי 
+\begin_inset Formula $L\in\zpp_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\zpp_{1}=\rp\cap\text{co}\rp$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ שפה עבורה קיימת מ
+\begin_inset Quotes erd
+\end_inset
+
+ט אקראית 
+\begin_inset Formula $M$
+\end_inset
+
+ המחזירה 
+\begin_inset Formula $\left\{ \text{Accept},\text{Reject},\text{Quit}\right\} $
+\end_inset
+
+ עם זמן ריצה פולינומי המקיימת
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\bbp_{r}\left(M\left(x;r\right)=\text{Quit}\right)\le\frac{1}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+נכונות:
+ לכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $r$
+\end_inset
+
+ באשר 
+\begin_inset Formula $M\left(x;r\right)\ne\text{Quit}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(M\left(x;r\right)=1\right)\iff\left(x\in L\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אזי 
+\begin_inset Formula $L\in\zpp_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\zpp_{1}=\zpp_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה 
+\lang english
+
+\begin_inset Formula $\text{Zero-error Probabilistic Polynomial-time}$
+\end_inset
+
+
+\series default
+\lang hebrew
+:
+ 
+\begin_inset Formula $\zpp=\zpp_{1}$
 \end_inset
 
 .
@@ -8570,6 +8826,27 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $m\in\bbn_{+}$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $\a,\b\in\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Delta\left(\a,\b\right)=d\left(\a,\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 \color teal
 טענה
 \series default
@@ -8762,13 +9039,6 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 טענה
@@ -8829,6 +9099,13 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 פרוטוקול תקשורת
@@ -8855,6 +9132,29 @@ status collapsed
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ משמעות 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+ היא לאמר מי שולח בפרוטוקול,
+ משמעות 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+ היא לאמר מה שולח,
+ ומשמעות 
+\begin_inset Formula $R$
+\end_inset
+
+ היא להוציא פלט סופי.
 \end_layout
 
 \begin_layout Standard
@@ -8909,7 +9209,11 @@ status collapsed
 \begin_inset Formula $x_{A},x_{B}\in\left\{ 0,1\right\} ^{*}$
 \end_inset
 
- אזי 
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $b_{1}\ldots b_{t+1}\in\left\{ 0,1\right\} ^{*}$
 \end_inset
 
@@ -8944,19 +9248,19 @@ status collapsed
 \begin_layout Standard
 
 \series bold
-הערה
+סימון
 \series default
 :
- מעתה והלאה נסמן 
-\begin_inset Formula $\left(b_{1}\ldots b_{t+1}\right)$
+ יהי 
+\begin_inset Formula $\Pi$
 \end_inset
 
- עבור הרצה של פרוטוקול וכן נסמן 
-\begin_inset Formula $b_{i}\left(x_{A},x_{B}\right)$
+ פרוטוקול תקשורת ויהיו 
+\begin_inset Formula $x_{A},x_{B}\in\left\{ 0,1\right\} ^{*}$
 \end_inset
 
- עבור ההרצה על 
-\begin_inset Formula $x_{A},x_{B}$
+ אזי 
+\begin_inset Formula $\Pi\left(x_{A},x_{B}\right)=b_{t+1}$
 \end_inset
 
 .
@@ -8981,7 +9285,7 @@ status collapsed
 \end_inset
 
  עבורו מתקיים 
-\begin_inset Formula $b_{t+1}\left(x,y\right)=f\left(x,y\right)$
+\begin_inset Formula $\Pi\left(x,y\right)=f\left(x,y\right)$
 \end_inset
 
  לכל 
@@ -9002,7 +9306,7 @@ status collapsed
 \end_inset
 
  פרוטוקול אזי 
-\begin_inset Formula $\mathcal{C}\left(\Pi\right)=\max_{x,y\in\left\{ 0,1\right\} ^{n}}\sum_{i=1}^{t}\left|b_{t}\left(x,y\right)\right|$
+\begin_inset Formula $\mathcal{C}\left(\Pi\right)=\max_{x,y\in\left\{ 0,1\right\} ^{n}}\sum_{i=1}^{t}\left|b_{i}\left(x,y\right)\right|$
 \end_inset
 
 .
@@ -9188,6 +9492,956 @@ status collapsed
 
  אזי 
 \begin_inset Formula $\mathcal{D}\left(\eq_{n}\right)=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הרצת פרוטוקול תקשורת בעל מטבעות משותפים
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\left(S_{1},C_{1}\right)\ldots\left(S_{t},C_{t}\right),\left(S_{t+1},R\right)\right)$
+\end_inset
+
+ פרוטוקול תקשורת יהיו 
+\begin_inset Formula $x_{A},x_{B}\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $r\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $b_{1}\ldots b_{t+1}\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ המקיימים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $b_{1}=C_{1}\left(S_{1}\left(\e\right),x_{S_{1}\left(\e\right)},r\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $b_{i}=C_{i}\left(S_{i}\left(b_{1}\ldots b_{i-1}\right),x_{S_{i}\left(b_{1}\ldots b_{i-1}\right)},r,b_{1}\ldots b_{i-1}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left\{ 2,\ldots,t\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $b_{t+1}=R\left(S_{t+1}\left(b_{1}\ldots b_{t}\right),x_{S_{t+1}\left(b_{1}\ldots b_{t}\right)},r,b_{1}\ldots b_{t}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פרוטוקול תקשורת בעל מטבעות משותפים מחשב פונקציה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\e\in\left[0,1\right]$
+\end_inset
+
+ אזי פרוטוקול תקשורת בעל מטבעות פרטיים 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ עבורו מתקיים 
+\begin_inset Formula $\bbp_{r}\left(\Pi\left(x,y,r\right)=f\left(x,y\right)\right)\ge1-\e$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x,y\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הרצת פרוטוקול תקשורת בעל מטבעות פרטיים
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\left(S_{1},C_{1}\right)\ldots\left(S_{t},C_{t}\right),\left(S_{t+1},R\right)\right)$
+\end_inset
+
+ פרוטוקול תקשורת יהיו 
+\begin_inset Formula $x_{A},x_{B}\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $r_{A},r_{B}\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $b_{1}\ldots b_{t+1}\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ המקיימים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $b_{1}=C_{1}\left(S_{1}\left(\e\right),x_{S_{1}\left(\e\right)},r_{S_{1}\left(\e\right)}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $b_{i}=C_{i}\left(S_{i}\left(b_{1}\ldots b_{i-1}\right),x_{S_{i}\left(b_{1}\ldots b_{i-1}\right)},r_{S_{i}\left(b_{1}\ldots b_{i-1}\right)},b_{1}\ldots b_{i-1}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left\{ 2,\ldots,t\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $b_{t+1}=R\left(S_{t+1}\left(b_{1}\ldots b_{t}\right),x_{S_{t+1}\left(b_{1}\ldots b_{t}\right)},r_{S_{i+1}\left(b_{1}\ldots b_{t}\right)},b_{1}\ldots b_{t}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פרוטוקול תקשורת בעל מטבעות פרטיים מחשב פונקציה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\e\in\left[0,1\right]$
+\end_inset
+
+ אזי פרוטוקול תקשורת בעל מטבעות פרטיים 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ עבורו מתקיים 
+\begin_inset Formula $\bbp_{r_{A},r_{B}}\left(\Pi\left(x,y,r_{A},r_{B}\right)=f\left(x,y\right)\right)\ge1-\e$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x,y\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי נגדיר פרוטוקול בעל מטבעות פרטיים 
+\begin_inset Formula $\Pi_{r\eq}\left[n\right]$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+ מגרילה 
+\begin_inset Formula $p\in\left\{ 1,\ldots,n^{4}\right\} $
+\end_inset
+
+ ראשוני ושולחת את 
+\begin_inset Formula $p$
+\end_inset
+
+ ואת 
+\begin_inset Formula $x_{A}\mod p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B$
+\end_inset
+
+ עונה 
+\begin_inset Formula $\mathds{1}\left[x_{A}\mod p=x_{B}\mod p\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Pi_{r\eq}\left[n\right]$
+\end_inset
+
+ מחשבת את 
+\begin_inset Formula $\eq_{n}$
+\end_inset
+
+ בהסתברות 
+\begin_inset Formula $\frac{1}{n^{2}}$
+\end_inset
+
+ ובעלות 
+\begin_inset Formula $8\log\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קידוד לינארי
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה ויהיו 
+\begin_inset Formula $n,k,d\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $C:\bbf^{k}\to\bbf^{n}$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+לינאריות:
+ לכל 
+\begin_inset Formula $\a,\b\in\bbf$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $a,b\in\bbf^{k}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $C\left(\a a+\b b\right)=\a\cdot C\left(a\right)+\b\cdot C\left(b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+מרחק:
+ לכל 
+\begin_inset Formula $a,b\in\bbf^{k}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a\ne b$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\Delta\left(C\left(x\right),C\left(y\right)\right)\ge d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מימד של קידוד לינארי
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה יהיו 
+\begin_inset Formula $n,k,d\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $C:\bbf^{k}\to\bbf^{n}$
+\end_inset
+
+ קוד לינארי אזי 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מרחק של קידוד לינארי
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה יהיו 
+\begin_inset Formula $n,k,d\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $C:\bbf^{k}\to\bbf^{n}$
+\end_inset
+
+ קוד לינארי אזי 
+\begin_inset Formula $d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה יהיו 
+\begin_inset Formula $n,k,d\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $C:\bbf^{k}\to\bbf^{n}$
+\end_inset
+
+ אזי (
+\begin_inset Formula $C$
+\end_inset
+
+ קוד לינארי)
+\begin_inset Formula $\iff$
+\end_inset
+
+((
+\begin_inset Formula $\im\left(C\right)$
+\end_inset
+
+ תמ
+\begin_inset Quotes erd
+\end_inset
+
+ו של 
+\begin_inset Formula $\bbf^{n}$
+\end_inset
+
+)
+\begin_inset Formula $\land$
+\end_inset
+
+(לכל 
+\begin_inset Formula $x,y\in\im\left(C\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $x\ne y$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\Delta\left(x,y\right)\ge d$
+\end_inset
+
+)).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה יהיו 
+\begin_inset Formula $n,k,d\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $C:\bbf^{k}\to\bbf^{n}$
+\end_inset
+
+ קוד לינארי אזי 
+\begin_inset Formula $C$
+\end_inset
+
+ הינו 
+\begin_inset Formula $\left[n,k,d\right]_{\left|\bbf\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $n\le\left|\bbf\right|$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbf^{k}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $p_{a}\in\bbf\left[x\right]$
+\end_inset
+
+ המוגדר 
+\begin_inset Formula $p_{a}\left(x\right)=\sum_{i=0}^{k-1}a_{i+1}x^{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה קידוד ריד־סולומון
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $n\le\left|\bbf\right|$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $f_{1}\ldots f_{n}\in\bbf$
+\end_inset
+
+ אזי 
+\begin_inset Formula $C:\bbf^{k}\to\bbf^{n}$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $C\left(a\right)=\left(p_{a}\left(f_{1}\right)\ldots p_{a}\left(f_{n}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $n\le\left|\bbf\right|$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $f_{1}\ldots f_{n}\in\bbf$
+\end_inset
+
+ אזי קידוד ריד־סולומון הינו 
+\begin_inset Formula $\left[n,k,n-k\right]_{\left|\bbf\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,m\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה באשר 
+\begin_inset Formula $\left|\bbf\right|=m$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $C:\bbf^{n}\to\bbf^{m}$
+\end_inset
+
+ קידוד ריד־סולומון אזי נגדיר פרוטוקול בעל מטבעות פרטיים 
+\begin_inset Formula $\Pi_{r\eq}\left[n,m\right]$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+ מגרילה 
+\begin_inset Formula $i\in\left\{ 1,\ldots,m\right\} $
+\end_inset
+
+ ושולחת את 
+\begin_inset Formula $i$
+\end_inset
+
+ ואת 
+\begin_inset Formula $\left(C\left(x_{A}\right)\right)_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B$
+\end_inset
+
+ עונה 
+\begin_inset Formula $\mathds{1}\left[\left(C\left(x_{A}\right)\right)_{i}=\left(C\left(x_{B}\right)\right)_{i}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Pi_{r\eq}\left[n,m\right]$
+\end_inset
+
+ מחשבת את 
+\begin_inset Formula $\eq_{n}$
+\end_inset
+
+ בהסתברות 
+\begin_inset Formula $\frac{n}{m}$
+\end_inset
+
+ ובעלות 
+\begin_inset Formula $2\log\left(m\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהיינה 
+\begin_inset Formula $V,W$
+\end_inset
+
+ קבוצות יהי 
+\begin_inset Formula $D\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $C:V\times\left[D\right]\to W$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $A\subseteq V$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Gamma\left(A\right)=\left\{ C\left(a,i\right)\mid\left(a\in A\right)\land\left(i\in\left[D\right]\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מפזר
+\series default
+:
+ יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ תהיינה 
+\begin_inset Formula $V,W$
+\end_inset
+
+ קבוצות ויהי 
+\begin_inset Formula $D\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $C:V\times\left[D\right]\to W$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $A\subseteq V$
+\end_inset
+
+ באשר 
+\begin_inset Formula $2^{k}\le\left|A\right|$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|\Gamma\left(A\right)\right|\ge\left(1-\e\right)\left|W\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $k,t,m,D\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $2^{m}\le\frac{D\cdot2^{k}}{2\ln\left(\frac{e}{\e}\right)}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $D>\frac{2\cdot\ln\left(e\cdot\frac{2^{t}}{2^{k}}\right)}{\e}$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $C:\left\{ 0,1\right\} ^{t}\times\left[D\right]\to\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+ מפזר־
+\begin_inset Formula $\left(k,\e\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\d>0$
+\end_inset
+
+ תהא 
+\begin_inset Formula $L\in\rp$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $V$
+\end_inset
+
+ מ
+\begin_inset Quotes erd
+\end_inset
+
+ט העדה לכך באשר 
+\begin_inset Formula $V$
+\end_inset
+
+ מטילה 
+\begin_inset Formula $m$
+\end_inset
+
+ מטבעות אזי קיימת מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $M$
+\end_inset
+
+ המטילה 
+\begin_inset Formula $m+\log\left(\frac{1}{\d}\right)$
+\end_inset
+
+ מטבעות הרצה בזמן 
+\begin_inset Formula $\time\left(V\right)\cdot\O\left(\log\left(\frac{1}{\d}\right)\right)$
+\end_inset
+
+ אשר עדה להיות 
+\begin_inset Formula $L\in\rp_{\left[\d\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית הבטחה
+\series default
+:
+ תהיינה 
+\begin_inset Formula $N,Y\subseteq\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $N\cap Y=\emptyset$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(Y,N\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם פותר בעיית הבטחה
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(Y,N\right)$
+\end_inset
+
+ בעיית הבטחה ותהא 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ מחלקה אזי אלגוריתם 
+\begin_inset Formula $A:N\cup Y\to\left\{ 0,1\right\} $
+\end_inset
+
+ באשר 
+\begin_inset Formula $A$
+\end_inset
+
+ עדה להיות 
+\begin_inset Formula $Y\in\mathcal{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהא 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ מחלקה אזי 
+\begin_inset Formula $\text{promise-}\mathcal{C}=\left\{ {\scriptsize \left(Y,N\right)\mid\left(\text{ בעיית הבטחה}\left(Y,N\right)\right)\land\left(Y\in\mathcal{C}\text{ עד להיות }A\text{ הפותר את בעיית ההבטחה וכן }A\text{קיים אלגוריתם }\right)}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם קירוב בעיה מקסימלית
+\series default
+:
+ יהי 
+\begin_inset Formula $c\ge1$
+\end_inset
+
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $f:X\to\bbr$
+\end_inset
+
+ אזי אלגוריתם 
+\begin_inset Formula $A:X\to\bbr$
+\end_inset
+
+ המקיים
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\frac{\max f\left(X\right)}{c}\le A\left(x\right)\le\max f\left(X\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם קירוב בעיה מינימלית
+\series default
+:
+ יהי 
+\begin_inset Formula $c\ge1$
+\end_inset
+
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $f:X\to\bbr$
+\end_inset
+
+ אזי אלגוריתם 
+\begin_inset Formula $A:X\to\bbr$
+\end_inset
+
+ המקיים
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\min f\left(X\right)\le A\left(x\right)\le c\cdot\min f\left(X\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\gapvc}[2]{\text{GAP}_{\left[#1,#2\right]}\text{VC\min}}
+{\text{GAP}_{\left[#1,#2\right]}\text{ \min VC}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה 
+\begin_inset Formula $\text{Min Vertex Cover Promise}$
+\end_inset
+
+
+\series default
+:
+ יהיו 
+\begin_inset Formula $k,\ell\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gapvc k{\ell}=\left(\left\{ \left<G\right>\mid\min\text{VC}\left(G\right)\le k\right\} ,\left\{ \left<G\right>\mid\min\text{VC}\left(G\right)\ge\ell\right\} \right)$
 \end_inset
 
 .
