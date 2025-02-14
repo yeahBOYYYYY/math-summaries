@@ -1773,8 +1773,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color red
 הגדרה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -1836,8 +1838,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color red
 הגדרה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -3117,6 +3121,85 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\sat}{\text{SAT}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מספר הפסוקיות המסופקות
+\series default
+:
+ תהא 
+\begin_inset Formula $\varphi\in3\sat$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\varphi=\bigwedge_{i=1}^{m}C_{i}$
+\end_inset
+
+ בעלת 
+\begin_inset Formula $n$
+\end_inset
+
+ משתנים ותהא 
+\begin_inset Formula $\a\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ השמה אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\text{Cl}\left(\varphi,\a\right)=\left|\left\{ i\in\left[m\right]\bmid\a\left(C_{i}\right)=\text{True}\right\} \right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\maxtsat}{\text{max3SAT}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\fv}{\text{FV}}
+{\text{FV}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה 
+\lang english
+
+\begin_inset Formula $\text{Max 3SAT}$
+\end_inset
+
+
+\series default
+\lang hebrew
+:
+ נגדיר 
+\begin_inset Formula $\maxtsat:3\cnf\to\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $\maxtsat\left(\varphi\right)=\max\left\{ \text{Cl}\left(\varphi,\a\right)\mid\a\in\left\{ 0,1\right\} ^{\left|\fv\left(\varphi\right)\right|}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color red
@@ -3132,19 +3215,11 @@ end{algorithm}
 \begin_inset Formula $m$
 \end_inset
 
- פסוקיות ו־
-\begin_inset Formula $n$
+ פסוקיות אזי 
+\begin_inset Formula $\maxtsat\left(\varphi\right)\ge\frac{7}{8}\cdot m$
 \end_inset
 
- משתנים אזי קיימת השמה 
-\begin_inset Formula $\a\in\left\{ 0,1\right\} ^{n}$
-\end_inset
-
- המספקת 
-\begin_inset Formula $\frac{7}{8}\cdot m$
-\end_inset
-
- פסוקיות.
+.
 \end_layout
 
 \begin_layout Standard
@@ -4303,12 +4378,6 @@ status collapsed
 \end_inset
 
 
-\begin_inset FormulaMacro
-\newcommand{\fv}{\text{FV}}
-{\text{FV}}
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -5384,14 +5453,6 @@ status collapsed
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\sat}{\text{SAT}}
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -7757,8 +7818,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color orange
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\d>0$
@@ -7914,8 +7977,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color orange
 הגדרה
 \series default
+\color inherit
 :
  תהא 
 \begin_inset Formula $L$
@@ -7989,8 +8054,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color orange
 טענה
 \series default
+\color inherit
 :
  
 \begin_inset Formula $\zpp_{1}=\rp\cap\text{co}\rp$
@@ -8002,8 +8069,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color orange
 הגדרה
 \series default
+\color inherit
 :
  תהא 
 \begin_inset Formula $L$
@@ -8068,8 +8137,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color orange
 טענה
 \series default
+\color inherit
 :
  
 \begin_inset Formula $\zpp_{1}=\zpp_{2}$
@@ -8081,6 +8152,7 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color orange
 הגדרה 
 \lang english
 
@@ -8089,6 +8161,7 @@ status collapsed
 
 
 \series default
+\color inherit
 \lang hebrew
 :
  
@@ -8153,12 +8226,12 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\tis}{\text{Tree-IS}}
+\newcommand{\tis}{\text{Tree-ISO}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\rtis}{\text{RTree-IS}}
+\newcommand{\rtis}{\text{RTree-ISO}}
 \end_inset
 
 
@@ -8525,15 +8598,6 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
-\begin_inset FormulaMacro
-\renewcommand{\sat}{\text{SAT}}
-{\text{SAT}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 \color teal
@@ -8825,8 +8889,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color teal
 סימון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $m\in\bbn_{+}$
@@ -9040,8 +9106,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color teal
 טענה
 \series default
+\color inherit
 :
  
 \begin_inset Formula $\np=\bpp_{\left[0,\frac{1}{2^{n}}\right]}$
@@ -9053,8 +9121,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color teal
 השערה
 \series default
+\color inherit
 :
  
 \begin_inset Formula $\bpp\nsubseteq\np$
@@ -9077,8 +9147,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color teal
 השערה
 \series default
+\color inherit
 :
  
 \begin_inset Formula $\np\subseteq\bpp$
@@ -9107,8 +9179,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 פרוטוקול תקשורת
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $t\in\bbn_{+}$
@@ -9136,31 +9210,27 @@ status collapsed
 \begin_layout Standard
 
 \series bold
-הערה
+משתתפים בפרוטוקול תקשורת
 \series default
 :
- משמעות 
-\begin_inset Formula $S_{i}$
+ יהי 
+\begin_inset Formula $\Pi$
 \end_inset
 
- היא לאמר מי שולח בפרוטוקול,
- משמעות 
-\begin_inset Formula $C_{i}$
+ פרוטוקול תקשורת אזי 
+\begin_inset Formula $\left\{ A,B\right\} $
 \end_inset
 
- היא לאמר מה שולח,
- ומשמעות 
-\begin_inset Formula $R$
-\end_inset
-
- היא להוציא פלט סופי.
+.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
+\color black
 סיבוב בפרוטוקול תקשורת
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(\left(S_{1},C_{1}\right)\ldots\left(S_{t},C_{t}\right),\left(S_{t+1},R\right)\right)$
@@ -9180,8 +9250,52 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+פונקציית השחקן המדבר בסיבוב של פרוטוקול תקשורת
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\left(S_{1},C_{1}\right)\ldots\left(S_{t},C_{t}\right),\left(S_{t+1},R\right)\right)$
+\end_inset
+
+ פרוטוקול תקשורת ויהי 
+\begin_inset Formula $i\in\left[t\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית ההודעה הנשלחת בסיבוב של פרוטוקול תקשורת
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\left(S_{1},C_{1}\right)\ldots\left(S_{t},C_{t}\right),\left(S_{t+1},R\right)\right)$
+\end_inset
+
+ פרוטוקול תקשורת ויהי 
+\begin_inset Formula $i\in\left[t\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $C_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
 מספר הסיבובים בפרוטוקול תקשורת
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(\left(S_{1},C_{1}\right)\ldots\left(S_{t},C_{t}\right),\left(S_{t+1},R\right)\right)$
@@ -9195,10 +9309,20 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ans}{\text{ANS}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
+\color black
 הרצת פרוטוקול תקשורת
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(\left(S_{1},C_{1}\right)\ldots\left(S_{t},C_{t}\right),\left(S_{t+1},R\right)\right)$
@@ -9213,7 +9337,11 @@ status collapsed
 \end_inset
 
 
-\begin_inset Formula $b_{1}\ldots b_{t+1}\in\left\{ 0,1\right\} ^{*}$
+\begin_inset Formula $b_{1}\ldots b_{t}\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\ans\in\left\{ 0,1\right\} $
 \end_inset
 
  המקיימים
@@ -9238,7 +9366,7 @@ status collapsed
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $b_{t+1}=R\left(S_{t+1}\left(b_{1}\ldots b_{t}\right),x_{S_{t+1}\left(b_{1}\ldots b_{t}\right)},b_{1}\ldots b_{t}\right)$
+\begin_inset Formula $\ans=R\left(S_{t+1}\left(b_{1}\ldots b_{t}\right),x_{S_{t+1}\left(b_{1}\ldots b_{t}\right)},b_{1}\ldots b_{t}\right)$
 \end_inset
 
 .
@@ -9247,8 +9375,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 סימון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\Pi$
@@ -9259,7 +9389,7 @@ status collapsed
 \end_inset
 
  אזי 
-\begin_inset Formula $\Pi\left(x_{A},x_{B}\right)=b_{t+1}$
+\begin_inset Formula $\Pi\left(x_{A},x_{B}\right)=\ans$
 \end_inset
 
 .
@@ -9268,8 +9398,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 פרוטוקול תקשורת מחשב פונקציה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -9297,8 +9429,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 עלות תקשורת של פרוטוקול
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\Pi$
@@ -9314,8 +9448,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 סיבוכיות תקשורת
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -9335,8 +9471,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 טענה
 \series default
+\color inherit
 :
  תהא 
 \begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
@@ -9360,8 +9498,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 הגדרה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -9381,8 +9521,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 המטריצה המייצג של פונקציה בוליאנית
 \series default
+\color inherit
 :
  תהא 
 \begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
@@ -9406,8 +9548,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 מלבן קומבינטורי
 \series default
+\color inherit
 :
  תהיינה 
 \begin_inset Formula $S,T\subseteq\left\{ 0,1\right\} ^{n}$
@@ -9423,8 +9567,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 מלבן קומבינטורי מונוכרומטי
 \series default
+\color inherit
 :
  תהא 
 \begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
@@ -9444,8 +9590,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 טענה
 \series default
+\color inherit
 :
  תהא 
 \begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
@@ -9465,8 +9613,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 מסקנה
 \series default
+\color inherit
 :
  תהא 
 \begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
@@ -9482,8 +9632,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 מסקנה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -9499,8 +9651,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 הרצת פרוטוקול תקשורת בעל מטבעות משותפים
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(\left(S_{1},C_{1}\right)\ldots\left(S_{t},C_{t}\right),\left(S_{t+1},R\right)\right)$
@@ -9549,8 +9703,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 פרוטוקול תקשורת בעל מטבעות משותפים מחשב פונקציה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -9582,8 +9738,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 הרצת פרוטוקול תקשורת בעל מטבעות פרטיים
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(\left(S_{1},C_{1}\right)\ldots\left(S_{t},C_{t}\right),\left(S_{t+1},R\right)\right)$
@@ -9632,8 +9790,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 פרוטוקול תקשורת בעל מטבעות פרטיים מחשב פונקציה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -9665,8 +9825,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 הגדרה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -9712,8 +9874,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -9739,10 +9903,19 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
+\color black
 קידוד לינארי
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\bbf$
@@ -9796,8 +9969,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 מימד של קידוד לינארי
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\bbf$
@@ -9821,8 +9996,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 מרחק של קידוד לינארי
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\bbf$
@@ -9846,8 +10023,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\bbf$
@@ -9903,8 +10082,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 הגדרה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\bbf$
@@ -9932,8 +10113,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 הגדרה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\bbf$
@@ -9965,8 +10148,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 הגדרה קידוד ריד־סולומון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\bbf$
@@ -9998,8 +10183,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\bbf$
@@ -10027,8 +10214,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 הגדרה
 \series default
+\color inherit
 :
  יהיו 
 \begin_inset Formula $n,m\in\bbn_{+}$
@@ -10086,8 +10275,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -10115,8 +10306,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 סימון
 \series default
+\color inherit
 :
  תהיינה 
 \begin_inset Formula $V,W$
@@ -10144,8 +10337,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 מפזר
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\e>0$
@@ -10185,8 +10380,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\e>0$
@@ -10218,8 +10415,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\d>0$
@@ -10278,8 +10477,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color blue
 בעיית הבטחה
 \series default
+\color inherit
 :
  תהיינה 
 \begin_inset Formula $N,Y\subseteq\left\{ 0,1\right\} ^{*}$
@@ -10299,8 +10500,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color blue
 אלגוריתם פותר בעיית הבטחה
 \series default
+\color inherit
 :
  תהא 
 \begin_inset Formula $\left(Y,N\right)$
@@ -10328,8 +10531,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color blue
 הערה
 \series default
+\color inherit
 :
  תהא 
 \begin_inset Formula $L\subseteq\left\{ 0,1\right\} ^{*}$
@@ -10353,8 +10558,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color blue
 הגדרה
 \series default
+\color inherit
 :
  תהא 
 \begin_inset Formula $\mathcal{C}$
@@ -10370,8 +10577,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color blue
 אלגוריתם קירוב בעיה מקסימלית
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $c\ge1$
@@ -10407,8 +10616,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color blue
 אלגוריתם קירוב בעיה מינימלית
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $c\ge1$
@@ -10462,6 +10673,7 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color blue
 הגדרה 
 \lang english
 
@@ -10470,6 +10682,7 @@ status collapsed
 
 
 \series default
+\color inherit
 \lang hebrew
 :
  יהיו 
@@ -10508,6 +10721,7 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color blue
 הגדרה 
 \lang english
 
@@ -10516,6 +10730,7 @@ status collapsed
 
 
 \series default
+\color inherit
 \lang hebrew
 :
  יהיו 
@@ -10554,8 +10769,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color blue
 הערה
 \series default
+\color inherit
 :
  אם 
 \begin_inset Formula $f$
@@ -10583,7 +10800,14 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color blue
 הגדרה
+\color inherit
+ 
+\begin_inset Formula $\text{Min Vertex Cover}$
+\end_inset
+
+
 \series default
 :
  נגדיר 
@@ -10600,29 +10824,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
-הגדרה 
-\begin_inset Formula $\text{Min Vertex Cover Gap Problem}$
-\end_inset
-
-
-\series default
-:
- יהיו 
-\begin_inset Formula $k,\ell\in\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\gap_{\left[k,\ell\right]}\minvc$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
+\color blue
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $c\ge1$
@@ -10662,8 +10867,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color blue
 טענה
 \series default
+\color inherit
 :
  קיים אלגוריתם פולינומי 
 \begin_inset Formula $2$
@@ -10687,12 +10894,14 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color blue
 הגדרה 
 \begin_inset Formula $\text{Integer Linear Proggramming}$
 \end_inset
 
 
 \series default
+\color inherit
 :
  
 \begin_inset Formula $\ilpr=\left\{ \left<A,b\right>\mid\left(A\in M_{m\times n}\left(\bbr\right)\right)\land\left(b\in\bbr^{m}\right)\land\left(\exists x\in\bbn^{n}.Ax\le b\right)\right\} $
@@ -10704,8 +10913,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color blue
 טענה
 \series default
+\color inherit
 :
  
 \begin_inset Formula $\ilpr$
@@ -10721,8 +10932,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color blue
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -10740,15 +10953,6 @@ status collapsed
 \lang english
 \begin_inset ERT
 status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-setlength
-\backslash
-abovedisplayskip{1pt}
-\end_layout
 
 \begin_layout Plain Layout
 
@@ -10825,8 +11029,10 @@ end{flalign*}
 \begin_layout Standard
 
 \series bold
+\color blue
 אלגוריתם קירוב לבעיית הכיסוי המינימלי בעזרת תכנות לינארי
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -11025,8 +11231,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color blue
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -11042,8 +11250,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color blue
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -11059,8 +11269,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color blue
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -11076,8 +11288,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color blue
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -11095,15 +11309,6 @@ end{algorithm}
 \lang english
 \begin_inset ERT
 status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-setlength
-\backslash
-abovedisplayskip{1pt}
-\end_layout
 
 \begin_layout Plain Layout
 
@@ -11176,8 +11381,10 @@ end{flalign*}
 \begin_layout Standard
 
 \series bold
+\color blue
 הגדרה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -11195,15 +11402,6 @@ end{flalign*}
 \lang english
 \begin_inset ERT
 status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-setlength
-\backslash
-abovedisplayskip{1pt}
-\end_layout
 
 \begin_layout Plain Layout
 
@@ -11284,8 +11482,10 @@ end{flalign*}
 \begin_layout Standard
 
 \series bold
+\color blue
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -11316,8 +11516,10 @@ end{flalign*}
 \begin_layout Standard
 
 \series bold
+\color blue
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -11333,8 +11535,10 @@ end{flalign*}
 \begin_layout Standard
 
 \series bold
+\color blue
 הגדרה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -11352,15 +11556,6 @@ end{flalign*}
 \lang english
 \begin_inset ERT
 status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-setlength
-\backslash
-abovedisplayskip{1pt}
-\end_layout
 
 \begin_layout Plain Layout
 
@@ -11450,8 +11645,10 @@ end{flalign*}
 \begin_layout Standard
 
 \series bold
+\color blue
 טענה
 \series default
+\color inherit
 :
  קיים אלגוריתם הפותר את 
 \begin_inset Formula $\maxcute_{2}$
@@ -11463,8 +11660,10 @@ end{flalign*}
 \begin_layout Standard
 
 \series bold
+\color blue
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -11480,8 +11679,10 @@ end{flalign*}
 \begin_layout Standard
 
 \series bold
+\color blue
 סימון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -11497,8 +11698,10 @@ end{flalign*}
 \begin_layout Standard
 
 \series bold
+\color blue
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -11529,8 +11732,10 @@ end{flalign*}
 \begin_layout Standard
 
 \series bold
+\color red
 פונקציית מרחק על גרף
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -11585,8 +11790,10 @@ end{flalign*}
 \begin_layout Standard
 
 \series bold
+\color red
 סימון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -11614,8 +11821,10 @@ end{flalign*}
 \begin_layout Standard
 
 \series bold
+\color red
 סימון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -11647,6 +11856,7 @@ end{flalign*}
 \begin_layout Standard
 
 \series bold
+\color red
 הגדרה 
 \lang english
 
@@ -11655,6 +11865,7 @@ end{flalign*}
 
 
 \series default
+\color inherit
 \lang hebrew
 :
  יהי 
@@ -11679,12 +11890,14 @@ end{flalign*}
 \begin_layout Standard
 
 \series bold
+\color red
 אלגוריתם קירוב למציאת 
 \begin_inset Formula $k$
 \end_inset
 
 ־מרכז
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $k\in\bbn_{+}$
@@ -11863,8 +12076,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color red
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $k\in\bbn_{+}$
@@ -11888,8 +12103,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color red
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $k\in\bbn_{+}$
@@ -11921,6 +12138,7 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color red
 הגדרה 
 \lang english
 
@@ -11929,6 +12147,7 @@ end{algorithm}
 
 
 \series default
+\color inherit
 \lang hebrew
 :
  
@@ -11941,8 +12160,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color red
 טענה
 \series default
+\color inherit
 :
  
 \begin_inset Formula $\ds$
@@ -11958,8 +12179,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color red
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $c<2$
@@ -11987,8 +12210,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color red
 רדוקציה פולינומית משמרת מרווח בין בעיות הבטחה
 \series default
+\color inherit
 :
  יהיו 
 \begin_inset Formula $\left(Y,N\right),\left(Y^{\prime},N^{\prime}\right)$
@@ -12048,12 +12273,14 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color red
 בעיית הבטחה 
 \begin_inset Formula $\promise\np$
 \end_inset
 
 ־קשה
 \series default
+\color inherit
 :
  בעיית הבטחה 
 \begin_inset Formula $\Pi$
@@ -12073,8 +12300,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color red
 טענה
 \series default
+\color inherit
 :
  תהא 
 \begin_inset Formula $X$
@@ -12118,8 +12347,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color red
 מסקנה
 \series default
+\color inherit
 :
  
 \begin_inset Formula $\gap_{\left[1,2\right]}\mincenter$
@@ -12133,7 +12364,8 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Separator plain
+\begin_inset FormulaMacro
+\newcommand{\maxclique}{\text{maxClique}}
 \end_inset
 
 
@@ -12143,14 +12375,50 @@ end{algorithm}
 
 \series bold
 הגדרה 
-\begin_inset Formula $\text{Minimal Circuit Problem}$
+\begin_inset Formula $\text{Max Clique}$
 \end_inset
 
 
 \series default
 :
- 
-\begin_inset Formula $\mincirc=\left\{ \left<C\right>\mid\left(\text{ מעגל}C\right)\land\left(\left|D\right|\ge\left|C\right|\text{ אז }x\text{ לכל }C\left(x\right)=D\left(x\right)\text{ אם }D\text{לכל מעגל }\right)\right\} $
+ נגדיר 
+\begin_inset Formula $\maxclique:\left\{ G\mid\text{ גרף}G\right\} \to\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $\maxclique\left(G\right)=\max\left\{ \left|K\right|\mid\left(G\text{ תת־גרף של }K\right)\land\left(\text{ קליקה}K\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\maxis}{\text{maxIS}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה 
+\lang english
+
+\begin_inset Formula $\text{Max Independent Set}$
+\end_inset
+
+
+\series default
+\lang hebrew
+:
+ נגדיר 
+\begin_inset Formula $\maxis:\left\{ G\mid\text{ גרף}G\right\} \to\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $\maxis\left(G\right)=\max\left\{ \left|I\right|\mid\left(I\subseteq V\right)\land\left(\text{ בלתי תלויה}I\right)\right\} $
 \end_inset
 
 .
@@ -12162,6 +12430,114 @@ end{algorithm}
 טענה
 \series default
 :
+ יהיו 
+\begin_inset Formula $a,b\in\left(0,1\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a<b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gap_{\left[a,b\right]}\maxclique\le_{p}\gap_{\left[a,b\right]}\maxis$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $a,b\in\left(0,1\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a<b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gap_{\left[a,b\right]}\maxis\le_{p}\gap_{\left[1-b,1-a\right]}\minvc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $a,b\in\left(0,1\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a<b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gap_{\left[a,b\right]}\maxtsat\le_{p}\gap_{\left[\frac{a}{3},\frac{b}{3}\right]}\maxclique$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ משמעות 
+\begin_inset Formula $a,b\in\left(0,1\right)$
+\end_inset
+
+ היא אחוזים ביחס לטווח התוצאות האפשריות.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+הגדרה 
+\begin_inset Formula $\text{Minimal Circuit Problem}$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\mincirc=\left\{ \left<C\right>\mid\left(\text{ מעגל}C\right)\land\left(\left|D\right|\ge\left|C\right|\text{ אז }x\text{ לכל }C\left(x\right)=D\left(x\right)\text{ אם }D\text{לכל מעגל }\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+:
  
 \begin_inset Formula $\mincirc\in\pspace$
 \end_inset
@@ -12172,8 +12548,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color green
 סימון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $k\in\bbn$
@@ -12213,8 +12591,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color green
 הגדרה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $k\in\bbn$
@@ -12254,8 +12634,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color green
 סימון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $k\in\bbn$
@@ -12295,8 +12677,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color green
 הגדרה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $k\in\bbn$
@@ -12336,8 +12720,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color green
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $k\in\bbn$
@@ -12353,8 +12739,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color green
 טענה
 \series default
+\color inherit
 :
  
 \begin_inset Formula $\P=\Sigma_{0}=\Pi_{0}$
@@ -12366,8 +12754,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color green
 טענה
 \series default
+\color inherit
 :
  
 \begin_inset Formula $\np=\Sigma_{1}$
@@ -12383,8 +12773,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color green
 טענה
 \series default
+\color inherit
 :
  
 \begin_inset Formula $\mincirc\in\Pi_{2}$
@@ -12396,8 +12788,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color green
 טענה
 \series default
+\color inherit
 :
  
 \begin_inset Formula $\tqbf\in\Sigma_{\poly}$
@@ -12409,8 +12803,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color green
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $k\in\bbn$
@@ -12446,6 +12842,7 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color green
 הגדרה 
 \lang english
 
@@ -12454,6 +12851,7 @@ end{algorithm}
 
 
 \series default
+\color inherit
 \lang hebrew
 :
  
@@ -12466,8 +12864,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color green
 טענה
 \series default
+\color inherit
 :
  
 \begin_inset Formula $\ph\subseteq\pspace$
@@ -12479,8 +12879,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color green
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $k\in\bbn$
@@ -12496,8 +12898,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color green
 הגדרה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $k\in\bbn$
@@ -12513,8 +12917,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color green
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $k\in\bbn$
@@ -12530,8 +12936,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color green
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\ell\in\bbn_{+}$
@@ -12549,25 +12957,15 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\maxclique}{\text{maxClique}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
+\color green
 הגדרה
 \series default
+\color inherit
 :
- נגדיר 
-\begin_inset Formula $\maxclique:\left\{ G\mid\text{ גרף}G\right\} \to\bbn$
-\end_inset
-
- כך 
-\begin_inset Formula $\maxclique\left(G\right)=\max\left\{ \left|K\right|\mid\left(G\text{ תת־גרף של }K\right)\land\left(\text{ קליקה}K\right)\right\} $
+ 
+\begin_inset Formula $\text{ExactClique}=\left\{ \left<G,k\right>\mid\maxclique\left(G\right)=k\right\} $
 \end_inset
 
 .
@@ -12576,11 +12974,70 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
-הגדרה
+\color green
+טענה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\text{ExactClique}\in\Sigma_{2}\cap\Pi_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\giso}{\text{GISO}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה 
+\begin_inset Formula $\text{Graph Isomorphism}$
+\end_inset
+
+
 \series default
 :
  
-\begin_inset Formula $\text{ExactClique}=\left\{ \left<G,k\right>\mid\maxclique\left(G\right)=k\right\} $
+\begin_inset Formula $\giso=\left\{ \left<G,H\right>\mid\left(\text{ עצים}G,H\right)\land\left(G\cong H\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\gniso}{\text{GNISO}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה 
+\begin_inset Formula $\text{Graph Non Isomorphism}$
+\end_inset
+
+
+\series default
+:
+ 
+\begin_inset Formula $\gniso=\overline{\giso}$
 \end_inset
 
 .
@@ -12593,14 +13050,347 @@ end{algorithm}
 \series default
 :
  
-\begin_inset Formula $\text{ExactClique}\in\Sigma_{2}\cap\Pi_{2}$
+\begin_inset Formula $\giso\in\np$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-\begin_inset Separator plain
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\pspace=\text{co}\pspace$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\ph=\text{co}\ph$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+פרוטוקול 
+\color inherit
+אינטרקטיבי
+\series default
+:
+ יהיו 
+\begin_inset Formula $k,n,m,\ell\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $P:\bigcup_{i=1}^{k}\left(\left\{ 0,1\right\} ^{n}\times\left(\left\{ 0,1\right\} ^{m}\right)^{i}\right)\to\left\{ 0,1\right\} ^{\ell}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $V:\left\{ 0,1\right\} ^{n}\times\left(\left\{ 0,1\right\} ^{m}\right)^{k}\times\left(\left\{ 0,1\right\} ^{\ell}\right)^{k}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(P,V\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מוכיח בפרוטוקול אינטרקטיבי
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(P,V\right)$
+\end_inset
+
+ פרוטוקול אינטרקטיבי אזי 
+\begin_inset Formula $P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מוודא בפרוטוקול אינטרקטיבי
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(P,V\right)$
+\end_inset
+
+ פרוטוקול אינטרקטיבי אזי 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+סיבוב בפרוטוקול תקשורת
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\left(\left(S_{1},C_{1}\right)\ldots\left(S_{t},C_{t}\right),\left(S_{t+1},R\right)\right)$
+\end_inset
+
+ פרוטוקול תקשורת אזי 
+\begin_inset Formula $\left(S_{i},C_{i}\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $i\in\left[t\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מספר הסיבובים בפרוטוקול 
+\color inherit
+אינטרקטיבי
+\series default
+:
+ יהיו 
+\begin_inset Formula $k,n,m,\ell\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\left(P,V\right)$
+\end_inset
+
+ פרוטוקול תקשורת אזי 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+הרצת פרוטוקול 
+\color inherit
+אינטרקטיבי
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(P,V\right)$
+\end_inset
+
+ פרוטוקול אינטרקטיבי ויהי 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a_{1}\ldots a_{k+1}\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ המקיימים
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $y_{1}\gets\text{Uni}\left(\left\{ 0,1\right\} ^{m}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a_{1}=P\left(x,y_{1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $y_{i}\gets\text{Uni}\left(\left\{ 0,1\right\} ^{m}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a_{i}=P\left(x,y_{1},\ldots,y_{i}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left\{ 2,\ldots,k\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{k+1}=V\left(x,y_{1}\ldots y_{k},a_{1}\ldots a_{k}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\val}{\text{Val}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ערך של פרוטוקול אינטרקטיבי
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(P,V\right)$
+\end_inset
+
+ פרוטוקול אינטרקטיבי ויהי 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\val\left(\left(P,V\right),x\right)=\bbp_{y_{1}\ldots y_{k}}\left(a_{k+1}=1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ערך של מוודא
+\series default
+:
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מוודא בפרוטוקול אינטרקטיבי אזי 
+\begin_inset Formula $\val\left(V,x\right)=\max_{P}\val\left(\left(P,V\right),x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\am}{\text{AM}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה 
+\lang english
+
+\begin_inset Formula $\text{Arthur Merlin protocol}$
+\end_inset
+
+
+\series default
+\lang hebrew
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ שפה עבורה קיים מוודא פולינומי 
+\begin_inset Formula $V$
+\end_inset
+
+ של פרוטוקול אינטרקטיבי בעל 
+\begin_inset Formula $k$
+\end_inset
+
+ סיבובים המקיים
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ אם 
+\begin_inset Formula $x\in L$
+\end_inset
+
+ אז 
+\begin_inset Formula $\val\left(V,x\right)\ge\frac{2}{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ אם 
+\begin_inset Formula $x\notin L$
+\end_inset
+
+ אז 
+\begin_inset Formula $\val\left(V,x\right)\le\frac{2}{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אזי 
+\begin_inset Formula $L\in\am\left(k\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה 
+\lang english
+
+\begin_inset Formula $\text{Interactive Proof}$
+\end_inset
+
+
+\series default
+\lang hebrew
+:
+ 
+\begin_inset Formula $\ip=\am\left(\poly\left(n\right)\right)$
 \end_inset
 
 
