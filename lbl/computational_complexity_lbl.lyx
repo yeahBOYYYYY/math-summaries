@@ -157,17 +157,27 @@ PackageOptions algorithm2e vlined
 \use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
-\branch ComPro
+\branch CP_v1(AroraBarak)
 \selected 0
 \filename_suffix 0
 \color background background
 \end_branch
-\branch CommunicationProtocolAroraBarak
+\branch CP_v2(LikeIP)
 \selected 0
 \filename_suffix 0
 \color background background
 \end_branch
-\branch CommunicationProtocolLikeIP
+\branch CP_v3
+\selected 1
+\filename_suffix 0
+\color background background
+\end_branch
+\branch IP_v1
+\selected 0
+\filename_suffix 0
+\color background background
+\end_branch
+\branch IP_v2
 \selected 1
 \filename_suffix 0
 \color background background
@@ -8634,6 +8644,7 @@ status collapsed
 \end_inset
 
 .
+ 
 \begin_inset Note Greyedout
 status collapsed
 
@@ -8654,7 +8665,7 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch CommunicationProtocolAroraBarak
+\begin_inset Branch CP_v1(AroraBarak)
 inverted 0
 status collapsed
 
@@ -8692,8 +8703,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 משתתפים בפרוטוקול תקשורת
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\Pi$
@@ -8732,8 +8745,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 פונקציית השחקן המדבר בסיבוב של פרוטוקול תקשורת
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(\left(S_{1},C_{1}\right)\ldots\left(S_{t},C_{t}\right),\left(S_{t+1},R\right)\right)$
@@ -8753,8 +8768,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color black
 פונקציית ההודעה הנשלחת בסיבוב של פרוטוקול תקשורת
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(\left(S_{1},C_{1}\right)\ldots\left(S_{t},C_{t}\right),\left(S_{t+1},R\right)\right)$
@@ -9391,9 +9408,9 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Branch CommunicationProtocolLikeIP
+\begin_inset Branch CP_v2(LikeIP)
 inverted 0
-status open
+status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
@@ -9433,8 +9450,10 @@ status open
 \begin_layout Standard
 
 \series bold
+\color black
 משתתפים בפרוטוקול תקשורת
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\Pi$
@@ -10157,6 +10176,630 @@ status open
 
  עבורו מתקיים 
 \begin_inset Formula $\bbp_{r}\left(\Pi\left(x,y,r\right)=f\left(x,y\right)\right)\ge1-\e$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x,y\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch CP_v3
+inverted 0
+status open
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ret}{\text{Ret}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+פרוטוקול תקשורת
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $t\in\bbn_{+}$
+\end_inset
+
+ תהיינה 
+\begin_inset Formula $A,B:\left\{ 0,1\right\} ^{*}\times\left\{ 0,1\right\} ^{*}\to\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\ret\in\left\{ A,B\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(t,A,B,\ret\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+משתתפים בפרוטוקול תקשורת
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ פרוטוקול תקשורת אזי 
+\begin_inset Formula $\left\{ A,B\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ans}{\text{ANS}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+הרצת פרוטוקול תקשורת
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\left(t,A,B,\ret\right)$
+\end_inset
+
+ פרוטוקול תקשורת ויהיו 
+\begin_inset Formula $x,y\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $b_{1}\ldots b_{t}\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\ans\in\left\{ 0,1\right\} $
+\end_inset
+
+ המקיימים
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $i\in\left\{ 2\ldots t\right\} $
+\end_inset
+
+ אם 
+\begin_inset Formula $i\%2=1$
+\end_inset
+
+ אז 
+\begin_inset Formula $b_{i}=A\left(x,b_{1}\ldots b_{i-1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $i\in\left\{ 2\ldots t\right\} $
+\end_inset
+
+ אם 
+\begin_inset Formula $i\%2=0$
+\end_inset
+
+ אז 
+\begin_inset Formula $b_{i}=B\left(y,b_{1}\ldots b_{i-1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $\ret=A$
+\end_inset
+
+ אז 
+\begin_inset Formula $\ans=A\left(x,b_{1}\ldots b_{t}\right)$
+\end_inset
+
+ אחרת 
+\begin_inset Formula $\ans=B\left(y,b_{1}\ldots b_{t}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+סיבוב בפרוטוקול תקשורת
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ פרוטוקול תקשורת אזי 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $i\in\left[t\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מספר הסיבובים בפרוטוקול תקשורת
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\left(t,A,B,\ret\right)$
+\end_inset
+
+ פרוטוקול תקשורת אזי 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+סימון
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ פרוטוקול תקשורת ויהיו 
+\begin_inset Formula $x,y\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Pi\left(x,y\right)=\ans$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+פרוטוקול תקשורת מחשב פונקציה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי פרוטוקול תקשורת 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ עבורו מתקיים 
+\begin_inset Formula $\Pi\left(x,y\right)=f\left(x,y\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x,y\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+עלות תקשורת של פרוטוקול
+\color inherit
+ תקשורת
+\series default
+:
+ יהי 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ פרוטוקול תקשורת אזי 
+\begin_inset Formula $\mathcal{C}\left(\Pi\right)=\max_{x,y\in\left\{ 0,1\right\} ^{n}}\sum_{i=1}^{t}\left|b_{i}\left(x,y\right)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+סיבוכיות תקשורת
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{D}\left(f\right)=\min\left\{ \mathcal{C}\left(\Pi\right)\mid f\text{ פרוטוקול המחשב את }\Pi\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{D}\left(f\right)\le n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\eq}{\text{EQ}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+הגדרה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\eq_{n}:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\eq_{n}\left(x,y\right)=\mathds{1}\left[x=y\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+המטריצה המייצג של פונקציה בוליאנית
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $M_{f}\in M_{n}\left(\bbz_{2}\right)$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $\left(M_{f}\right)_{i,j}=f\left(i,j\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i,j\in\left[n\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מלבן קומבינטורי
+\series default
+\color inherit
+:
+ תהיינה 
+\begin_inset Formula $S,T\subseteq\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S\times T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מלבן קומבינטורי מונוכרומטי
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי מלבן קומבינטורי 
+\begin_inset Formula $R$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left|\left\{ \left(M_{f}\right)_{i,j}\mid\left(i,j\right)\in R\right\} \right|=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי קיימת חלוקה של 
+\begin_inset Formula $\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ ל־
+\begin_inset Formula $2^{\mathcal{D}\left(f\right)}$
+\end_inset
+
+ מלבנים מונוכרומטיים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מסקנה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\rank\left(M_{f}\right)\le2^{\mathcal{D}\left(f\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{D}\left(\eq_{n}\right)=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+פרוטוקול תקשורת בעל מטבעות פרטיים מחשב פונקציה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\e\in\left[0,1\right]$
+\end_inset
+
+ אזי פרוטוקול תקשורת 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ עבורו מתקיים 
+\begin_inset Formula $\bbp_{r_{1},r_{2}}\left(\Pi\left(\left(x;r_{1}\right),\left(y;r_{2}\right)\right)=f\left(x,y\right)\right)\ge1-\e$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x,y\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+הגדרה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי נגדיר פרוטוקול תקשורת בעל מטבעות פרטיים 
+\begin_inset Formula $\Pi_{r\eq}\left[n\right]$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Itemize
+בהינתן 
+\begin_inset Formula $x,y\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+ מגרילה 
+\begin_inset Formula $p\in\left\{ 1,\ldots,n^{4}\right\} $
+\end_inset
+
+ ראשוני ושולחת את 
+\begin_inset Formula $p$
+\end_inset
+
+ ואת 
+\begin_inset Formula $x\mod p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B$
+\end_inset
+
+ עונה 
+\begin_inset Formula $\mathds{1}\left[x\mod p=y\mod p\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Pi_{r\eq}\left[n\right]$
+\end_inset
+
+ מחשבת את 
+\begin_inset Formula $\eq_{n}$
+\end_inset
+
+ בהסתברות 
+\begin_inset Formula $\frac{1}{n^{2}}$
+\end_inset
+
+ ובעלות 
+\begin_inset Formula $8\log\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+פרוטוקול תקשורת בעל מטבעות פומביים מחשב פונקציה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:\left\{ 0,1\right\} ^{n}\times\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\e\in\left[0,1\right]$
+\end_inset
+
+ אזי פרוטוקול תקשורת 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ עבורו מתקיים 
+\begin_inset Formula $\bbp_{r}\left(\Pi\left(\left(x;r\right),\left(y;r\right)\right)=f\left(x,y\right)\right)\ge1-\e$
 \end_inset
 
  לכל 
@@ -13223,10 +13866,17 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
+\begin_inset Branch IP_v1
+inverted 0
+status collapsed
+
+\begin_layout Standard
 
 \series bold
+\color purple
 פרוטוקול אינטרקטיבי בעל מטבעות פרטיים
 \series default
+\color inherit
 :
  יהיו 
 \begin_inset Formula $k,n,m,\ell\in\bbn_{+}$
@@ -13254,8 +13904,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color purple
 מוכיח בפרוטוקול אינטרקטיבי
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(P,V,k,n,m,\ell\right)$
@@ -13271,8 +13923,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color purple
 מוודא בפרוטוקול אינטרקטיבי
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(P,V,k,n,m,\ell\right)$
@@ -13288,8 +13942,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color purple
 מספר הסיבובים בפרוטוקול אינטרקטיבי
 \series default
+\color inherit
 :
  יהיו 
 \begin_inset Formula $k,n,m,\ell\in\bbn_{+}$
@@ -13309,12 +13965,8 @@ status collapsed
 \begin_layout Standard
 
 \series bold
-\color black
-הרצת פרוטוקול 
-\color inherit
-אינטרקטיבי
-\color black
- בעל מטבעות פרטיים
+\color purple
+הרצת פרוטוקול אינטרקטיבי בעל מטבעות פרטיים
 \series default
 \color inherit
 :
@@ -13383,7 +14035,7 @@ status collapsed
 \begin_layout Standard
 
 \series bold
-\color black
+\color purple
 הגדרה
 \series default
 \color inherit
@@ -13459,8 +14111,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color purple
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -13484,8 +14138,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color purple
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -13509,8 +14165,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color purple
 פרוטוקול אינטרקטיבי בעל מטבעות פומביים
 \series default
+\color inherit
 :
  יהיו 
 \begin_inset Formula $k,n,m,\ell\in\bbn_{+}$
@@ -13538,8 +14196,37 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color purple
+פרוטוקול אינטרקטיבי בעל מטבעות פומביים
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $k,n,m,\ell\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $P:\bigcup_{i=1}^{k}\left(\left\{ 0,1\right\} ^{n}\times\left(\left\{ 0,1\right\} ^{m}\right)^{i}\right)\to\left\{ 0,1\right\} ^{\ell}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $V:\left\{ 0,1\right\} ^{n}\times\left(\left\{ 0,1\right\} ^{m}\right)^{k}\times\left(\left\{ 0,1\right\} ^{\ell}\right)^{k}\to\left\{ 0,1\right\} $
+\end_inset
+
+ ותהא 
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
 הערה
 \series default
+\color inherit
 :
  פרוטוקול אינטרקטיבי יתייחס לפרוטוקול אינטרקטיבי בעל מטבעות פומביים.
 \end_layout
@@ -13547,8 +14234,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color purple
 הרצת פרוטוקול אינטרקטיבי
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(P,V,k,n,m,\ell\right)$
@@ -13615,8 +14304,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color purple
 הערה
 \series default
+\color inherit
 :
  נסמן פרוטוקול אינטרקטיבי 
 \begin_inset Formula $\left(k,n,m,\ell,P,V\right)$
@@ -13632,8 +14323,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color purple
 הגדרה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -13726,8 +14419,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color purple
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -13751,8 +14446,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color purple
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -13784,8 +14481,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color purple
 ערך של פרוטוקול אינטרקטיבי
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(P,V\right)$
@@ -13805,8 +14504,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color purple
 ערך של מוודא
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $V$
@@ -13830,6 +14531,7 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color purple
 הגדרה 
 \lang english
 
@@ -13838,6 +14540,7 @@ status collapsed
 
 
 \series default
+\color inherit
 \lang hebrew
 :
  יהי 
@@ -13902,6 +14605,1030 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color purple
+הגדרה 
+\lang english
+
+\begin_inset Formula $\text{Interactive Proof}$
+\end_inset
+
+
+\series default
+\color inherit
+\lang hebrew
+:
+ 
+\begin_inset Formula $\ip=\am\left(\poly\left(n\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch IP_v2
+inverted 0
+status open
+
+\begin_layout Standard
+
+\series bold
+\color purple
+פרוטוקול אינטרקטיבי
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $k,n,m,\ell\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $P:\bigcup_{i=1}^{k}\left(\left\{ 0,1\right\} ^{n}\times\left(\left\{ 0,1\right\} ^{m}\right)^{i}\right)\to\left\{ 0,1\right\} ^{\ell}$
+\end_inset
+
+ תהא
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $V:\left\{ 0,1\right\} ^{n}\times\left(\left\{ 0,1\right\} ^{m}\right)^{k}\times\left(\left\{ 0,1\right\} ^{\ell}\right)^{k}\to\left\{ 0,1\right\} $
+\end_inset
+
+ ותהא 
+\begin_inset Formula $S:\left\{ 0,1\right\} ^{*}\to\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(P,S,V\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מוכיח בפרוטוקול אינטרקטיבי
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\left(P,S,V\right)$
+\end_inset
+
+ פרוטוקול אינטרקטיבי אזי 
+\begin_inset Formula $P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסווה בפרוטוקול אינטרקטיבי
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(P,S,V\right)$
+\end_inset
+
+ פרוטוקול אינטרקטיבי אזי 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מוודא בפרוטוקול אינטרקטיבי
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\left(P,S,V\right)$
+\end_inset
+
+ פרוטוקול אינטרקטיבי אזי 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+מספר הסיבובים בפרוטוקול אינטרקטיבי
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $k,n,m,\ell\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\left(P,S,V\right)$
+\end_inset
+
+ פרוטוקול אינטרקטיבי אזי 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+הרצת פרוטוקול אינטרקטיבי
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\left(P,S,V\right)$
+\end_inset
+
+ פרוטוקול אינטרקטיבי יהי 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $y_{1}\ldots y_{k}\in\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $a_{1}\ldots a_{k}\in\left\{ 0,1\right\} ^{\ell}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\ans\in\left\{ 0,1\right\} $
+\end_inset
+
+ המקיימים
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $i\in\left[t\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a_{i}=P\left(x,S\left(y_{1}\ldots y_{i-1}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\ans=V\left(x,y_{1}\ldots y_{k},b_{1}\ldots b_{t}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ פרוטוקול אינטרקטיבי יהי 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $y_{1}\ldots y_{k}\in\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Pi_{y_{1}\ldots y_{k}}\left(x\right)=\ans$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ נאמר כי 
+\begin_inset Formula $V$
+\end_inset
+
+ בוחרת את 
+\begin_inset Formula $y_{1}\ldots y_{k}$
+\end_inset
+
+ בפרוטוקול וכן 
+\begin_inset Formula $V$
+\end_inset
+
+ מחשבת את 
+\begin_inset Formula $S\left(y_{1}\ldots y_{i}\right)$
+\end_inset
+
+ בכל שלב.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פרוטוקול אינטרקטיבי בעל מטבעות פרטיים
+\series default
+:
+ פרוטוקול אינטרקטיבי 
+\begin_inset Formula $\left(P,S,V\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $S\ne\id$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+הגדרה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי נגדיר פרוטוקול אינטרקטיבי בעל מטבעות פרטיים 
+\begin_inset Formula $\Pi_{\gniso}^{\text{priv}}\left[n\right]$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Itemize
+בהינתן קלט 
+\begin_inset Formula $\left(G_{1},G_{2}\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $G_{1},G_{2}$
+\end_inset
+
+ גרפים על 
+\begin_inset Formula $n$
+\end_inset
+
+ קודקודים.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V$
+\end_inset
+
+ מגרילה 
+\begin_inset Formula $\sigma\in S_{n}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b\in\left\{ 1,2\right\} $
+\end_inset
+
+ ושולחת את 
+\begin_inset Formula $\sigma\left(G_{b}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P$
+\end_inset
+
+ שולח 
+\begin_inset Formula $c\in\left\{ 1,2\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V$
+\end_inset
+
+ עונה 
+\begin_inset Formula $\mathds{1}\left[b=c\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $G_{1},G_{2}$
+\end_inset
+
+ גרפים איזומורפיים על 
+\begin_inset Formula $n$
+\end_inset
+
+ קודקודים אזי 
+\begin_inset Formula $\bbp\left(\Pi_{\gniso}^{\text{priv}}\left[n\right]\left(G_{1},G_{2}\right)=1\right)=\frac{1}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $G_{1},G_{2}$
+\end_inset
+
+ גרפים לא איזומורפיים על 
+\begin_inset Formula $n$
+\end_inset
+
+ קודקודים אזי 
+\begin_inset Formula $\bbp\left(\Pi_{\gniso}^{\text{priv}}\left[n\right]\left(G_{1},G_{2}\right)=1\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פרוטוקול אינטרקטיבי בעל מטבעות פומביים
+\series default
+:
+ פרוטוקול אינטרקטיבי 
+\begin_inset Formula $\left(P,S,V\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $S=\id$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+הערה
+\series default
+\color inherit
+:
+ מכאן פרוטוקול אינטרקטיבי יתייחס לפרוטוקול אינטרקטיבי בעל מטבעות פומביים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+הערה
+\series default
+\color inherit
+:
+ נסמן פרוטוקול אינטרקטיבי 
+\begin_inset Formula $\left(P,\id,V\right)$
+\end_inset
+
+ כך 
+\begin_inset Formula $\left(P,V\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\val}{\text{Val}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+הגדרה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\ell\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $4n!\le2^{\ell}<8n!$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula $\mathcal{H}=\left\{ h:\left\{ 0,1\right\} ^{n^{2}}\to\left\{ 0,1\right\} ^{\ell}\mid\exists a,b\in\bbf_{2^{n^{2}}}.h=ax+b\right\} $
+\end_inset
+
+ אזי נגדיר פרוטוקול אינטרקטיבי 
+\begin_inset Formula $\Pi_{\gniso}^{\text{pub}}\left[n\right]$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Itemize
+בהינתן קלט 
+\begin_inset Formula $\left(G_{1},G_{2}\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $G_{1},G_{2}$
+\end_inset
+
+ גרפים על 
+\begin_inset Formula $n$
+\end_inset
+
+ קודקודים.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V$
+\end_inset
+
+ מגריל 
+\begin_inset Formula $h\in\mathcal{H}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $z\in\left\{ 0,1\right\} ^{\ell}$
+\end_inset
+
+ ושולח את 
+\begin_inset Formula $\left(h,z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P$
+\end_inset
+
+ שולח גרף 
+\begin_inset Formula $G$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\sigma\in S_{n}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b\in\left\{ 1,2\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V$
+\end_inset
+
+ עונה 
+\begin_inset Formula $\mathds{1}\left[\left(h\left(G\right)=z\right)\land\left(\sigma\left(G_{b}\right)=G\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $G_{1},G_{2}$
+\end_inset
+
+ גרפים איזומורפיים על 
+\begin_inset Formula $n$
+\end_inset
+
+ קודקודים אזי 
+\begin_inset Formula $\bbp\left(\Pi_{\gniso}^{\text{pub}}\left[n\right]\left(G_{1},G_{2}\right)=1\right)\le\frac{n!}{2^{\ell}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $G_{1},G_{2}$
+\end_inset
+
+ גרפים לא איזומורפיים על 
+\begin_inset Formula $n$
+\end_inset
+
+ קודקודים אזי 
+\begin_inset Formula $\bbp_{r}\left(\Pi_{\gniso}^{\text{pub}}\left[n\right]\left(G_{1},G_{2}\right)=1\right)\ge1.5\cdot\frac{n!}{2^{\ell}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ערך של פרוטוקול אינטרקטיבי בו ארתור מתחיל
+\series default
+:
+ יהי 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ פרוטוקול אינטרקטיבי ויהי 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\val_{A}\left(\Pi,x\right)=\bbp_{y_{1}\ldots y_{k}}\left(\Pi_{y_{1}\ldots y_{k}}\left(x\right)=1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ערך של פרוטוקול אינטרקטיבי בו מרלין מתחיל
+\series default
+:
+ יהי 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ פרוטוקול אינטרקטיבי ויהי 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\val_{M}\left(\Pi,x\right)=\bbp_{y_{2}\ldots y_{k}}\left(\Pi_{\e,y_{2}\ldots y_{k}}\left(x\right)=1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+ערך של מוודא
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $V$
+\end_inset
+
+ מוודא בפרוטוקול אינטרקטיבי ויהי 
+\begin_inset Formula $X\in\left\{ A,M\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\val_{X}\left(V,x\right)=\max_{P}\val_{X}\left(\left(P,V\right),x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\am}{\text{AM}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+הגדרה 
+\lang english
+
+\begin_inset Formula $\text{Arthur Merlin}$
+\end_inset
+
+
+\series default
+\color inherit
+\lang hebrew
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ תהיינה 
+\begin_inset Formula $s,c:\bbn\to\left[0,1\right]$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $L$
+\end_inset
+
+ שפה עבורה קיים מוודא פולינומי 
+\begin_inset Formula $V$
+\end_inset
+
+ של פרוטוקול אינטרקטיבי בעל 
+\begin_inset Formula $k$
+\end_inset
+
+ סיבובים המקיים
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $m,\ell=\poly\left(\left|x\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אם 
+\begin_inset Formula $x\in L$
+\end_inset
+
+ אז 
+\begin_inset Formula $\val_{A}\left(V,x\right)\ge c\left(\left|x\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אם 
+\begin_inset Formula $x\notin L$
+\end_inset
+
+ אז 
+\begin_inset Formula $\val_{A}\left(V,x\right)\le s\left(\left|x\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אזי 
+\begin_inset Formula $L\in\am_{\left[s,c\right]}\left(k\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ma}{\text{MA}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+הגדרה 
+\lang english
+
+\begin_inset Formula $\text{Merlin Arthur}$
+\end_inset
+
+
+\series default
+\color inherit
+\lang hebrew
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ תהיינה 
+\begin_inset Formula $s,c:\bbn\to\left[0,1\right]$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $L$
+\end_inset
+
+ שפה עבורה קיים מוודא פולינומי 
+\begin_inset Formula $V$
+\end_inset
+
+ של פרוטוקול אינטרקטיבי בעל 
+\begin_inset Formula $k$
+\end_inset
+
+ סיבובים המקיים
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $m,\ell=\poly\left(\left|x\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אם 
+\begin_inset Formula $x\in L$
+\end_inset
+
+ אז 
+\begin_inset Formula $\val_{M}\left(V,x\right)\ge c\left(\left|x\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $x\in\left\{ 0,1\right\} ^{*}$
+\end_inset
+
+ אם 
+\begin_inset Formula $x\notin L$
+\end_inset
+
+ אז 
+\begin_inset Formula $\val_{M}\left(V,x\right)\le s\left(\left|x\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אזי 
+\begin_inset Formula $L\in\ma_{\left[s,c\right]}\left(k\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\am\left(k\right)=\am_{\left[\frac{1}{3},\frac{2}{3}\right]}\left(k\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ 
+\begin_inset Formula $\am=\am\left(2\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ma\left(k\right)=\ma_{\left[\frac{1}{3},\frac{2}{3}\right]}\left(k\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ 
+\begin_inset Formula $\ma=\ma_{\left[\frac{1}{3},\frac{2}{3}\right]}\left(2\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\ma\subseteq\am$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+השערה
+\series default
+:
+ 
+\begin_inset Formula $\ma=\am$
+\end_inset
+
+.
+ 
+\begin_inset Note Greyedout
+status collapsed
+
+\begin_layout Plain Layout
+השערה פתוחה
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ 
+\begin_inset Formula $\gniso\in\am$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+השערה
+\series default
+:
+ 
+\begin_inset Formula $\gniso\in\ma$
+\end_inset
+
+.
+ 
+\begin_inset Note Greyedout
+status collapsed
+
+\begin_layout Plain Layout
+השערה פתוחה
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ip}{\text{IP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 הגדרה 
 \lang english
 
@@ -13914,6 +15641,315 @@ status collapsed
 :
  
 \begin_inset Formula $\ip=\am\left(\poly\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ משמעות 
+\begin_inset Formula $\exists$
+\end_inset
+
+ היא קיים עד,
+ משמעות 
+\begin_inset Formula $\forall$
+\end_inset
+
+ היא לכל עד,
+ משמעות 
+\begin_inset Formula $\$$
+\end_inset
+
+ היא באופן הסתברותי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ בהגדרות מלרע 
+\begin_inset Formula $M,x,w,r$
+\end_inset
+
+ פולינומיים,
+ משמע 
+\begin_inset Formula $\P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ 
+\begin_inset Formula $\exists\P=\left\{ L\mid\exists M.\left(x\in L\right)\iff\left(\exists w.M\left(x,w\right)=1\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\exists\P=\np$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ 
+\begin_inset Formula $\forall\P=\left\{ L\mid\exists M.\left(x\in L\right)\iff\left(\forall w.M\left(x,w\right)=1\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\forall\P=\text{co}\np$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ 
+\begin_inset Formula $\$_{\left[s,c\right]}\P=\left\{ L\mid\exists M.\left\{ \begin{smallmatrix}\left(x\in L\right)\implies\left(\bbp_{r}\left(M\left(x,r\right)=1\right)\ge c\right)\\
+\left(x\notin L\right)\implies\left(\bbp_{r}\left(M\left(x,r\right)=1\right)\le s\right)
+\end{smallmatrix}\right.\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ 
+\begin_inset Formula $\exists\$_{\left[s,c\right]}\P=\left\{ L\mid\exists M.\left\{ \begin{smallmatrix}\left(x\in L\right)\implies\left(\exists w.\bbp_{r}\left(M\left(x,w,r\right)=1\right)\ge c\right)\\
+\left(x\notin L\right)\implies\left(\forall w.\bbp_{r}\left(M\left(x,w,r\right)=1\right)\le s\right)
+\end{smallmatrix}\right.\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\exists\$\P=\ma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ 
+\begin_inset Formula $\$_{\left[s,c\right]}\exists\P=\left\{ L\mid\exists M.\left\{ \begin{smallmatrix}\left(x\in L\right)\implies\left(\bbp_{r}\left(\exists w.M\left(x,r,w\right)=1\right)\ge c\right)\\
+\left(x\notin L\right)\implies\left(\bbp_{r}\left(\exists w.M\left(x,r,w\right)=1\right)\le s\right)
+\end{smallmatrix}\right.\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\$\exists\P=\am$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ ניתן להמשיך בצורה רקורסיבית זו על מנת להגדיר רצף קומבינציות בכל אורך של הכמתים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\underbrace{\text{MAMA}...}_{k}=\ma\left(k\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\underbrace{\exists\$\exists\$\ldots}_{k}\P=\underbrace{\text{MAMA}...}_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\underbrace{\text{AMAM}...}_{k}=\am\left(k\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\underbrace{\$\exists\$\exists\ldots}_{k}\P=\underbrace{\text{AMAM}...}_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\underbrace{\exists\forall\exists\forall\ldots}_{k}\P=\Sigma_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\underbrace{\forall\exists\forall\exists\ldots}_{k}\P=\Pi_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ 
+\begin_inset Formula $\underbrace{\$\exists\$\exists\ldots}_{\poly\left(n\right)}\P=\ip$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ 
+\begin_inset Formula $\underbrace{\exists\forall\exists\forall\ldots}_{\poly\left(n\right)}\P=\pspace$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 
