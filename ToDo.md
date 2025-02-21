@@ -12,6 +12,5 @@ Things that I still need to do
 
 | Name | Notes | Last lec updated | Lec | Rec | HW |
 |---|---|---|---|---|---|
-| set theory   | | 30/12/24 | 8 | 8 | 8 |
 | cryptography | | 06/11/24 | 1 | 2 | 0 |
 | game theory  | | 14/11/24 | 3 | 1 | 1 |
