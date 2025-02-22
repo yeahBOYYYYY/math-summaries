@@ -15,7 +15,6 @@ async function initialize(){
     initMD();
     lastCommitFetch();
     await createButtons();
-    infoButton();
     createGenericButtons();
 }
 
@@ -54,40 +53,6 @@ function whiteMode(){
     themeSwitch.addEventListener("click", () => {
         whiteModeToggle();
         reloadMD();
-    });
-}
-
-function infoButton(){
-    // Select the overlay and content elements for displaying additional information
-    const infoBoxOverlay = document.querySelector('.info-box-overlay');
-    const infoContent = document.querySelector('.info-content');
-    const closeButton = document.querySelector('.close-button');
-
-    // Select all buttons that will trigger the display of additional information
-    const infoButtons = document.querySelectorAll('.info-button');
-
-    // Add click event listeners to each info button
-    infoButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            // Get the path to the info file from the button's data attribute
-            const infoFile = button.dataset.info;
-            
-            // Fetch the content of the info file
-            fetch(infoFile)
-                .then(response => response.text())
-                .then(data => {
-                    // Format the fetched data and display it in the info content area
-                    const formattedData = data.replace(/\n/g, '<br>');
-                    infoContent.innerHTML = formattedData;
-                    infoBoxOverlay.style.display = 'flex';
-                })
-                .catch(error => console.error('Error fetching info:', error));
-        });
-    });
-
-    // Add a click event listener to the close button to hide the overlay
-    closeButton.addEventListener('click', function() {
-        infoBoxOverlay.style.display = 'none';
     });
 }
 
