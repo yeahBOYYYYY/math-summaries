@@ -96,7 +96,8 @@ async function createButtons(){
     for (var i = 0; i < jsonRes.length; i++){
         const pdf_name = jsonRes[i][0];
         const { display_name, summary_type, button_color, course_info } = jsonRes[i][1];
-        setButtonCode(pdf_name, display_name, summary_type, button_color, course_info);
+        let courseInfo = await getCourseInfo(course_info);
+        setButtonCode(pdf_name, display_name, summary_type, button_color, courseInfo);
     }
 }
 
@@ -111,6 +112,20 @@ async function parseJsonOFCourses() {
     } catch (error) {
         console.error('Error fetching or processing JSON:', error);
         return null;
+    }
+}
+
+async function getCourseInfo(infoPath) {
+    let wholePath = COURSES_INFO_PATH + "/" + infoPath;
+
+    try {
+        let response = await fetch(wholePath);
+        let data = await response.text();
+        let formattedData = data.replace(/\n/g, '<br>');
+        
+        return formattedData;
+    } catch (error) {
+        return "Error";
     }
 }
 
@@ -136,13 +151,14 @@ function setButtonCode(pdfName, buttonText, summaryType, buttonColor, courseInfo
     }
 }
 
-function getButtonCode(buttonText, pdfLink, gradient, infoData) {
+function getButtonCode(buttonText, pdfLink, gradient, courseInfo) {
     return `
         <div class="pdf-button-container ${gradient}">
             <a class="pdf-button" href="${pdfLink}" target="_blank">${buttonText}</a>
-            <button class="info-button" data-info="${COURSES_INFO_PATH}/${infoData}">
-                <img src="${INFO_IMG_PATH}">
-            </button>
+            <div class="tooltip">
+            <img src="${INFO_IMG_PATH}">
+            <span class="tooltiptext">${courseInfo}</span>
+            </div>
         </div>
     `;
 }
