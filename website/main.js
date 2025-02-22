@@ -1,23 +1,61 @@
-let whitemode = localStorage.getItem('whitemode')
+let whitemode, mdRenderedAlready;
 
-const COURSES_INFO_PATH = "website/coursesInfo"
-const INFO_IMG_PATH = "website/info.png"
-const LBL_SUMM_PATH = "lbl"
-const OTHER_SUMM_PATH = "other"
-const CHEATSHEET_SUMM_PATH = "cheatsheet"
+const COURSES_INFO_PATH = "website/coursesInfo";
+const INFO_IMG_PATH = "website/info.png";
+const LBL_SUMM_PATH = "lbl";
+const OTHER_SUMM_PATH = "other";
+const CHEATSHEET_SUMM_PATH = "cheatsheet";
+const GENERIC_BUTTON_PREFIX = "generic/";
 
-const GENERIC_BUTTON_PREFIX = "generic/"
 
 document.addEventListener('DOMContentLoaded', initialize);
 
 async function initialize(){
     whiteMode();
+    initMD();
     lastCommitFetch();
     await createButtons();
     infoButton();
     createGenericButtons();
 }
 
+function reloadMD(){
+    const mdRender = document.getElementById('md-render');
+
+    mdRenderedAlready = JSON.parse(sessionStorage.getItem("renderedMD"));
+    if (mdRenderedAlready){
+        mdRender.render();
+    }
+}
+
+function initMD(){
+    sessionStorage.setItem('renderedMD', false);
+    addEventListener('zero-md-ready', (e) => {
+        e.target.render();
+        sessionStorage.setItem('renderedMD', true);
+    });
+}
+
+function whiteModeToggle(){
+    whitemode = JSON.parse(localStorage.getItem('whitemode'));
+    document.body.classList.toggle('whitemode');
+    localStorage.setItem('whitemode', !whitemode);
+}
+
+function whiteMode(){
+    const themeSwitch = document.getElementById('theme-switch');
+
+    whitemode = localStorage.getItem('whitemode');
+    if (whitemode == null) localStorage.setItem('whitemode', false);
+    whitemode = JSON.parse(localStorage.getItem('whitemode'));
+
+    if (whitemode) document.body.classList.toggle('whitemode');
+
+    themeSwitch.addEventListener("click", () => {
+        whiteModeToggle();
+        reloadMD();
+    });
+}
 
 function infoButton(){
     // Select the overlay and content elements for displaying additional information
@@ -108,30 +146,6 @@ function getButtonCode(buttonText, pdfLink, gradient, infoData) {
         </div>
     `;
 }
-
-
-function whiteMode(){
-    const themeSwitch = document.getElementById('theme-switch');
-
-    const enableWhitemode = () => {
-    document.body.classList.add('whitemode');
-    localStorage.setItem('whitemode', 'active');
-    }
-
-    const disableWhitemode = () => {
-    document.body.classList.remove('whitemode');
-    localStorage.setItem('whitemode', null);
-    }
-
-    if(whitemode === "active") enableWhitemode();
-
-    themeSwitch.addEventListener("click", () => {
-    whitemode = localStorage.getItem('whitemode');
-    location.reload();
-    whitemode !== "active" ? enableWhitemode() : disableWhitemode();
-    });
-}
-
 
 function lastCommitFetch(){
     try {
