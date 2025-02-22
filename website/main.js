@@ -60,9 +60,9 @@ async function createButtons(){
     const jsonRes = await parseJsonOFCourses();
     for (var i = 0; i < jsonRes.length; i++){
         const pdf_name = jsonRes[i][0];
-        const { display_name, summary_type, button_color, course_info, repair_needed } = jsonRes[i][1];
+        const { display_name, summary_type, button_color, course_info, repair_needed, under_construction } = jsonRes[i][1];
         let courseInfo = await getCourseInfo(course_info);
-        setButtonCode(pdf_name, display_name, summary_type, button_color, courseInfo, repair_needed);
+        setButtonCode(pdf_name, display_name, summary_type, button_color, courseInfo, repair_needed, under_construction);
     }
 }
 
@@ -92,7 +92,7 @@ async function getCourseInfo(infoPath) {
     }
 }
 
-function setButtonCode(pdfName, buttonText, summaryType, buttonColor, courseInfo, neededRepair) {
+function setButtonCode(pdfName, buttonText, summaryType, buttonColor, courseInfo, neededRepair, underConstruction) {
     try {
         const elem = document.querySelector(`[title="${pdfName}"]`);
 
@@ -109,45 +109,44 @@ function setButtonCode(pdfName, buttonText, summaryType, buttonColor, courseInfo
         }
 
         const newElement = document.createElement('div');
-
-        if (neededRepair == null) {
-            newElement.innerHTML = getButtonCode(buttonText, pdfLink, buttonColor, courseInfo);
-        } else {
-            newElement.innerHTML = getRepairButtonCode(buttonText, pdfLink, buttonColor, courseInfo, neededRepair);
-        }
-
+        newElement.innerHTML = getButtonCode(buttonText, pdfLink, buttonColor, courseInfo, neededRepair, underConstruction);
         elem.replaceWith(newElement.firstElementChild);
     } catch (error) {
         console.warn('Not found a button request for:', pdfName);
     }
 }
 
-function getRepairButtonCode(buttonText, pdfLink, gradient, courseInfo, neededRepair) {
-    return `
+function getButtonCode(buttonText, pdfLink, gradient, courseInfo, neededRepair, underConstruction) {
+    let prefix = `
         <div class="pdf-button-container ${gradient}">
-            <a class="pdf-button" href="${pdfLink}" target="_blank">${buttonText}</a>
+            <a class="pdf-button" href="${pdfLink}" target="_blank">${buttonText}</a>`;
+    let postfix = `
+                <div class="tooltip">
+                <img src="${INFO_IMG_PATH}">
+                <span class="tooltiptext">${courseInfo}</span>
+            </div>
+        </div>
+    `;
+
+    let additinal = "";
+    if (neededRepair != null){
+        additinal += `
             <div class="tooltip">
                 <img src="website/repair.png">
                 <span class="tooltiptext">${neededRepair}</span>
             </div>
+        `;
+    }
+    if (underConstruction != null){
+        additinal += `
             <div class="tooltip">
-                <img src="${INFO_IMG_PATH}">
-                <span class="tooltiptext">${courseInfo}</span>
+                <img src="website/construction.png">
+                <span class="tooltiptext">${underConstruction}</span>
             </div>
-        </div>
-    `;
-}
+        `;
+    }
 
-function getButtonCode(buttonText, pdfLink, gradient, courseInfo) {
-    return `
-        <div class="pdf-button-container ${gradient}">
-            <a class="pdf-button" href="${pdfLink}" target="_blank">${buttonText}</a>
-            <div class="tooltip">
-                <img src="${INFO_IMG_PATH}">
-                <span class="tooltiptext">${courseInfo}</span>
-            </div>
-        </div>
-    `;
+    return prefix + additinal + postfix;
 }
 
 function lastCommitFetch(){
