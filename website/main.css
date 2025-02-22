@@ -20,27 +20,41 @@
     --accent-color: #ff81df;
 }
 
-body {
+/* Ensure no unexpected margins or paddings */
+html, body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: var(--base-color);
     color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box;
 }
 
 p {
     color: var(--secondary-text);
 }
 
+/* Fix container centering on small screens */
 .container {
     max-width: 800px;
-    margin: 50px auto;
+    width: 90%; /* Make it responsive */
+    margin: 50px auto; /* Ensure horizontal centering */
     padding: 20px;
     background-color: var(--container-color);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: right;
-    margin-bottom: 10px; /* Adjust the margin between containers */
+    margin-bottom: 10px;
+}
+
+/* Further improvements for very narrow screens */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin: 20px auto; /* Adjust margins */
+    }
 }
 
 .container + .container {
