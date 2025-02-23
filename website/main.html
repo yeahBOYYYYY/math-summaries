@@ -6,7 +6,7 @@
     <title>Math Summaries</title>
     <link rel="stylesheet" href="website/main.css">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <script src="website/main.js"></script>
+    <script type="module" src="website/main.js"></script>
 
 
     <!--- Make MD files dark/light mode --->
@@ -15,7 +15,8 @@
 
       customElements.define('zero-md', class extends ZeroMd {
         async render() {
-          whitemode = JSON.parse(localStorage.getItem('whitemode'));
+          let whitemode = localStorage.getItem('whitemode');
+          whitemode = JSON.parse(whitemode);
           if (whitemode) this.template = STYLES.preset('light');
           else this.template = STYLES.preset('dark');
 
