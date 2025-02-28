@@ -1,9 +1,5 @@
 const JSON_PATH = "./website/pdf_data.json";
 
-const INFO_IMG_PATH = "website/info.png";
-const REAPIR_IMG_PATH = "website/repair.png";
-const CONSTRUCTION_IMG_PATH = "website/construction.png";
-
 
 async function parseJsonOFCourses() {
     try {
@@ -26,7 +22,7 @@ export async function createButtons() {
             newElement.innerHTML = getButtonCode(jsonRes[pdf_name]);
             elem.replaceWith(newElement.firstElementChild);
         } catch (error) {
-            // console.warn('Not found a button request for:', pdf_name);
+            console.warn('Not found a button request for:', pdf_name);
         }
     }
 }
