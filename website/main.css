@@ -7,7 +7,8 @@
     --text-color: #ffffff;
     --secondary-text: #a4a5b8;
     --primary-color: #3a435d;
-    --accent-color: #4b006e;
+    --tooltip-color: #4b006e;
+    --popup-color: #111a27;
 }
 
 .whitemode {
@@ -17,7 +18,8 @@
     --text-color: #000000;
     --secondary-text: #232738;
     --primary-color: #3a435d;
-    --accent-color: #ff81df;
+    --tooltip-color: #ff81df;
+    --popup-color: #d3c7c7;
 }
 
 /* Ensure no unexpected margins or paddings */
@@ -317,7 +319,7 @@ ul {
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    background-color: var(--accent-color);
+    background-color: var(--tooltip-color);
     text-align: center;
     border-radius: 6px;
     padding: 5px;
@@ -337,13 +339,43 @@ ul {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: var(--accent-color) transparent transparent transparent;
+    border-color: var(--tooltip-color) transparent transparent transparent;
 }
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
 
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: var(--popup-color);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+}
+
+.popup-close-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 
 /* colors for buttons */
@@ -366,8 +398,8 @@ ul {
     background: linear-gradient(45deg, #9e72cc, #8d60b9);
 }
 
-.gradient-purple-introduction_to_machine_learning { /* Not in use */
-    background: linear-gradient(45deg, #634186, #ae5eff);
+.gradient-purple-introduction_to_machine_learning {
+    background: linear-gradient(45deg, #cf7018, #c08f24);
 }
 
 .gradient-blue1 {
@@ -435,7 +467,7 @@ ul {
 }
 
 .gradient-red-introduction_to_modern_cryptography {
-    background: linear-gradient(45deg, #ff83bd, #ff2a2a);
+    background: linear-gradient(45deg, #ff83bd, #ff2af4);
 }
 
 .gradient-green-linear_algebra_1a {

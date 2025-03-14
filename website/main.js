@@ -1,7 +1,3 @@
-import * as buttonHandler from './pdfButtons.js';
-
-
-
 let whitemode, mdRenderedAlready;
 
 const GENERIC_BUTTON_PREFIX = "generic/";
@@ -13,7 +9,6 @@ async function initialize(){
     whiteMode();
     initMD();
     lastCommitFetch();
-    await buttonHandler.createButtons();
     createGenericButtons();
 }
 

@@ -1,20 +1,11 @@
-const JSON_PATH = "./website/pdf_data.json";
+const PDF_DATA_PATH = "./website/pdf_data.json";
 
 
-async function parseJsonOFCourses() {
-    try {
-        const response = await fetch(JSON_PATH);
-        if (!response.ok) throw new Error(`Failed to load JSON: ${response.statusText}`);
-        const pdfData = await response.json();
-        return pdfData;
-    } catch (error) {
-        console.error('Error fetching or processing JSON:', error);
-        return null;
-    }
-}
+document.addEventListener('DOMContentLoaded', createButtons);
 
-export async function createButtons() {
-    const jsonRes = await parseJsonOFCourses();
+
+async function createButtons() {
+    const jsonRes = await parseJson(PDF_DATA_PATH);
     for (let pdf_name in jsonRes){
         try {
             const elem = document.querySelector(`[title="${pdf_name}"]`);
