@@ -6829,7 +6829,7 @@ status collapsed
 \end_inset
 
 
-\begin_inset Formula $\left(x\in L\right)\iff\left(\exists y\in\Sigma^{\poly\left(\left|x\right|\right)}.M\left(x,y\right)=1\right)$
+\begin_inset Formula $\left(x\in L\right)\iff\left(\exists y\in\Sigma^{\poly\left(\left|x\right|\right)}.M^{\O}\left(x,y\right)=1\right)$
 \end_inset
 
  אזי 
@@ -6851,7 +6851,7 @@ status collapsed
 \begin_inset Formula $\mathcal{A},\mathcal{B}$
 \end_inset
 
- משפחות של שפות אזי 
+ מחלקות אזי 
 \begin_inset Formula $\mathcal{A}^{\mathcal{B}}=\bigcup_{L\in\mathcal{B}}\mathcal{A}^{L}$
 \end_inset
 
@@ -7035,36 +7035,6 @@ status collapsed
 
 \series bold
 \color brown
-מסקנה
-\series default
-\color inherit
-:
- 
-\begin_inset Formula $\P^{\ex}\ne\ex^{\ex}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-טענה
-\series default
-\color inherit
-:
- 
-\begin_inset Formula $\P^{\ex}=\np^{\ex}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
 הגדרה
 \series default
 \color inherit
@@ -7092,8 +7062,53 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\P^{\ex}=\ex$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\P^{\ex}\ne\ex^{\ex}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\P^{\ex}=\np^{\ex}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\nex}{\mathcal{NEXP}}
+\renewcommand{\nex}{\text{NEXP}}
 {\mathcal{NEXP}}
 \end_inset
 
@@ -7112,7 +7127,7 @@ status collapsed
 \begin_inset Formula $\P=\np$
 \end_inset
 
- אזי 
+ אז 
 \begin_inset Formula $\ex=\nex$
 \end_inset
 
@@ -7195,7 +7210,7 @@ status collapsed
 
 \series bold
 \color brown
-טענה
+מסקנה
 \series default
 \color inherit
 :
@@ -7453,7 +7468,8 @@ status collapsed
 \end_layout
 
 \begin_layout Itemize
-לכל 
+שלמות:
+ לכל 
 \begin_inset Formula $x\in\l\cap\Sigma^{n}$
 \end_inset
 
@@ -7465,7 +7481,8 @@ status collapsed
 \end_layout
 
 \begin_layout Itemize
-לכל 
+נאותות:
+ לכל 
 \begin_inset Formula $x\notin\l\cap\Sigma^{n}$
 \end_inset
 
@@ -11204,7 +11221,7 @@ status collapsed
 \color inherit
 :
  יהי 
-\begin_inset Formula $\Pi$
+\begin_inset Formula $\left(t,A,B,\ret\right)$
 \end_inset
 
  פרוטוקול תקשורת אזי 
@@ -11489,7 +11506,7 @@ status collapsed
 
 \series bold
 \color black
-המטריצה המייצג של פונקציה בוליאנית
+המטריצה המייצגת של פונקציה בוליאנית
 \series default
 \color inherit
 :
@@ -11939,11 +11956,7 @@ status collapsed
 \begin_inset Formula $x,y\in\im\left(C\right)$
 \end_inset
 
- באשר 
-\begin_inset Formula $x\ne y$
-\end_inset
-
- מתקיים 
+ שונים מתקיים 
 \begin_inset Formula $\Delta\left(x,y\right)\ge d$
 \end_inset
 
@@ -12839,7 +12852,7 @@ status collapsed
 \end_inset
 
  מחלקה אזי 
-\begin_inset Formula $\promise\mathcal{C}=\left\{ {\scriptsize \left(Y,N\right)\mid\left(\text{ בעיית הבטחה}\left(Y,N\right)\right)\land\left(Y\in\mathcal{C}\text{ עד להיות }A\text{ הפותר את בעיית ההבטחה וכן }A\text{קיים אלגוריתם }\right)}\right\} $
+\begin_inset Formula $\promise\mathcal{C}=\left\{ \left(Y,N\right)\mid\left(\text{ בעיית הבטחה}\left(Y,N\right)\right)\land\left(Y\in\mathcal{C}\text{ אשר עד להיות }A\text{קיים אלגוריתם }\right)\right\} $
 \end_inset
 
 .
