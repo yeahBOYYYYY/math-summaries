@@ -11679,6 +11679,10 @@ status collapsed
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
+ ויהיו 
+\begin_inset Formula $x,y\in\left\{ 0,1\right\} ^{n}$
+\end_inset
+
  אזי נגדיר פרוטוקול תקשורת בעל מטבעות פרטיים 
 \begin_inset Formula $\Pi_{r\eq}\left[n\right]$
 \end_inset
@@ -11686,42 +11690,124 @@ status collapsed
  כך
 \end_layout
 
-\begin_layout Itemize
-בהינתן 
-\begin_inset Formula $x,y\in\left\{ 0,1\right\} ^{n}$
-\end_inset
+\begin_layout Standard
 
-.
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $A$
-\end_inset
+\begin_layout Plain Layout
 
- מגרילה 
-\begin_inset Formula $p\in\left\{ 1,\ldots,n^{4}\right\} $
-\end_inset
 
- ראשוני ושולחת את 
-\begin_inset Formula $p$
-\end_inset
-
- ואת 
-\begin_inset Formula $x\mod p$
-\end_inset
-
-.
+\backslash
+SetAlgoLined
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $B$
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{$
+\backslash
+Pi_{r
+\backslash
+text{EQ}}[n]$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{Communication Protocol}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$x,
+ y$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $A$ draws $p
+\backslash
+gets
+\backslash
+{1,
+\backslash
+ldots,n^4
+\backslash
+}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $A$ sends $(p,
+ x
+\backslash
+mod p)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $B$ outputs $
+\backslash
+mathds{1}
+\backslash
+left[x
+\backslash
+mod p=y
+\backslash
+mod p
+\backslash
+right]$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
 \end_inset
 
- עונה 
-\begin_inset Formula $\mathds{1}\left[x\mod p=y\mod p\right]$
-\end_inset
 
-.
 \end_layout
 
 \begin_layout Standard
@@ -12057,7 +12143,11 @@ status collapsed
 \begin_inset Formula $C:\bbf^{k}\to\bbf^{n}$
 \end_inset
 
- המוגדרת 
+ המוגדרת
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $C\left(a\right)=\left(p_{a}\left(f_{1}\right)\ldots p_{a}\left(f_{n}\right)\right)$
 \end_inset
 
@@ -12126,34 +12216,143 @@ status collapsed
  כך
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $A$
-\end_inset
+\begin_layout Standard
 
- מגרילה 
-\begin_inset Formula $i\in\left\{ 1,\ldots,m\right\} $
-\end_inset
+\lang english
+\begin_inset ERT
+status collapsed
 
- ושולחת את 
-\begin_inset Formula $i$
-\end_inset
+\begin_layout Plain Layout
 
- ואת 
-\begin_inset Formula $\left(C\left(x\right)\right)_{i}$
-\end_inset
 
-.
+\backslash
+begin{algorithm}
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $B$
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{$
+\backslash
+Pi_{r
+\backslash
+text{EQ}}[n,
+ m]$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{Communication Protocol}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$x,
+ y$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $A$ draws $i
+\backslash
+gets
+\backslash
+{1,
+\backslash
+ldots,m
+\backslash
+}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $A$ sends $(i,
+ 
+\backslash
+left(C
+\backslash
+left(x
+\backslash
+right)
+\backslash
+right)_{i})$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $B$ outputs $
+\backslash
+mathds{1}
+\backslash
+left[
+\backslash
+left(C
+\backslash
+left(x
+\backslash
+right)
+\backslash
+right)_{i}=
+\backslash
+left(C
+\backslash
+left(y
+\backslash
+right)
+\backslash
+right)_{i}
+\backslash
+right]$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
 \end_inset
 
- עונה 
-\begin_inset Formula $\mathds{1}\left[\left(C\left(x\right)\right)_{i}=\left(C\left(y\right)\right)_{i}\right]$
-\end_inset
 
-.
 \end_layout
 
 \begin_layout Standard
@@ -12594,17 +12793,11 @@ status collapsed
 \begin_inset Formula $\left(k,\e\right)-\text{extractor}$
 \end_inset
 
- באשר
-\end_layout
-
-\begin_layout Itemize
+ באשר 
 \begin_inset Formula $m=k+d-2\log\left(\frac{1}{\e}\right)-\O\left(1\right)$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Itemize
+ וכן 
 \begin_inset Formula $d=\log\left(n-k\right)+2\log\left(\frac{1}{\e}\right)+\O\left(1\right)$
 \end_inset
 
@@ -16538,19 +16731,7 @@ status collapsed
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
- אזי נגדיר פרוטוקול אינטרקטיבי בעל מטבעות פרטיים 
-\begin_inset Formula $\Pi_{\gniso}^{\text{priv}}\left[n\right]$
-\end_inset
-
- כך
-\end_layout
-
-\begin_layout Itemize
-בהינתן קלט 
-\begin_inset Formula $\left(G_{1},G_{2}\right)$
-\end_inset
-
- באשר 
+ ויהיו 
 \begin_inset Formula $G_{1},G_{2}$
 \end_inset
 
@@ -16558,48 +16739,175 @@ status collapsed
 \begin_inset Formula $n$
 \end_inset
 
- קודקודים.
+ קודקודים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\nospellcheck off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\nospellcheck default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אזי נגדיר פרוטוקול אינטרקטיבי בעל מטבעות פרטיים 
+\begin_inset Formula $\Pi_{\gniso}^{\text{priv}}\left[n\right]$
+\end_inset
+
+ כך
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $V$
-\end_inset
+\begin_layout Standard
 
- מגרילה 
-\begin_inset Formula $\sigma\in S_{n}$
-\end_inset
+\lang english
+\begin_inset ERT
+status collapsed
 
- וכן 
-\begin_inset Formula $b\in\left\{ 1,2\right\} $
-\end_inset
+\begin_layout Plain Layout
 
- ושולחת את 
-\begin_inset Formula $\sigma\left(G_{b}\right)$
-\end_inset
 
-.
+\backslash
+begin{algorithm}
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $P$
-\end_inset
+\begin_layout Plain Layout
 
- שולח 
-\begin_inset Formula $c\in\left\{ 1,2\right\} $
-\end_inset
 
-.
+\backslash
+SetAlgoLined
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $V$
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{$
+\backslash
+Pi^{
+\backslash
+text{priv}}_{
+\backslash
+gniso}[n]$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{Interactive Proof}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$G_1,
+ G_2$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $V$ draws $
+\backslash
+sigma
+\backslash
+gets S_n$ and $b
+\backslash
+gets
+\backslash
+{1,
+ 2
+\backslash
+}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $V$ sends $
+\backslash
+sigma(G_b)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $P$ sends $c
+\backslash
+in
+\backslash
+{1,
+ 2
+\backslash
+}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $V$ outputs $
+\backslash
+mathds{1}
+\backslash
+left[b=c
+\backslash
+right]$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
 \end_inset
 
- עונה 
-\begin_inset Formula $\mathds{1}\left[b=c\right]$
-\end_inset
 
-.
 \end_layout
 
 \begin_layout Standard
@@ -16698,23 +17006,11 @@ status collapsed
 \begin_inset Formula $4n!\le2^{\ell}<8n!$
 \end_inset
 
- ונגדיר 
+ נגדיר 
 \begin_inset Formula $\mathcal{H}=\left\{ h:\left\{ 0,1\right\} ^{n^{2}}\to\left\{ 0,1\right\} ^{\ell}\mid\exists a,b\in\bbf_{2^{n^{2}}}.h=ax+b\right\} $
 \end_inset
 
- אזי נגדיר פרוטוקול אינטרקטיבי 
-\begin_inset Formula $\Pi_{\gniso}^{\text{pub}}\left[n\right]$
-\end_inset
-
- כך
-\end_layout
-
-\begin_layout Itemize
-בהינתן קלט 
-\begin_inset Formula $\left(G_{1},G_{2}\right)$
-\end_inset
-
- באשר 
+ ויהיו 
 \begin_inset Formula $G_{1},G_{2}$
 \end_inset
 
@@ -16722,56 +17018,182 @@ status collapsed
 \begin_inset Formula $n$
 \end_inset
 
- קודקודים.
+ קודקודים אזי נגדיר פרוטוקול אינטרקטיבי 
+\begin_inset Formula $\Pi_{\gniso}^{\text{pub}}\left[n\right]$
+\end_inset
+
+ כך
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $V$
-\end_inset
+\begin_layout Standard
 
- מגריל 
-\begin_inset Formula $h\in\mathcal{H}$
-\end_inset
+\lang english
+\begin_inset ERT
+status collapsed
 
- וכן 
-\begin_inset Formula $z\in\left\{ 0,1\right\} ^{\ell}$
-\end_inset
+\begin_layout Plain Layout
 
- ושולח את 
-\begin_inset Formula $\left(h,z\right)$
-\end_inset
 
-.
+\backslash
+begin{algorithm}
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $P$
-\end_inset
+\begin_layout Plain Layout
 
- שולח גרף 
-\begin_inset Formula $G$
-\end_inset
 
- וכן 
-\begin_inset Formula $\sigma\in S_{n}$
-\end_inset
-
- וכן 
-\begin_inset Formula $b\in\left\{ 1,2\right\} $
-\end_inset
-
-.
+\backslash
+SetAlgoLined
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $V$
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{$
+\backslash
+Pi^{
+\backslash
+text{pub}}_{
+\backslash
+gniso}[n]$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{Interactive Proof}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$G_1,
+ G_2$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $V$ draws $h
+\backslash
+gets
+\backslash
+mathcal{H}$ and $z
+\backslash
+gets
+\backslash
+{0,
+ 1
+\backslash
+}^
+\backslash
+ell$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $V$ sends $(h,
+ z)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $P$ sends $G
+\backslash
+in
+\backslash
+{
+\backslash
+text{Graph on }n 
+\backslash
+text{ vertices}
+\backslash
+}$ and $
+\backslash
+sigma
+\backslash
+in S_n$ and $b
+\backslash
+in
+\backslash
+{1,
+ 2
+\backslash
+}$ 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $V$ outputs $
+\backslash
+mathds{1}
+\backslash
+left[
+\backslash
+left(h
+\backslash
+left(G
+\backslash
+right)=z
+\backslash
+right)
+\backslash
+land
+\backslash
+left(
+\backslash
+sigma
+\backslash
+left(G_{b}
+\backslash
+right)=G
+\backslash
+right)
+\backslash
+right]$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
 \end_inset
 
- עונה 
-\begin_inset Formula $\mathds{1}\left[\left(h\left(G\right)=z\right)\land\left(\sigma\left(G_{b}\right)=G\right)\right]$
-\end_inset
 
-.
 \end_layout
 
 \begin_layout Standard
@@ -17344,134 +17766,329 @@ status collapsed
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
- ויהי 
-\begin_inset Formula $2^{n^{2}}<p<2^{n^{2}+1}$
+ יהי 
+\begin_inset Formula $q\in\bbp$
 \end_inset
 
- ראשוני אזי נגדיר פרוטוקול אינטרקטיבי 
+ באשר 
+\begin_inset Formula $2^{n^{2}}<q<2^{n^{2}+1}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $B_{0}\in M_{n}\left(\bbf_{q}\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $k\in\bbf_{q}$
+\end_inset
+
+ אזי נגדיר פרוטוקול אינטרקטיבי 
 \begin_inset Formula $\Pi_{\perm}\left[n\right]$
 \end_inset
 
  כך
 \end_layout
 
-\begin_layout Itemize
-בהינתן קלט 
-\begin_inset Formula $k\in\bbf_{p}$
-\end_inset
+\begin_layout Standard
 
- וכן 
-\begin_inset Formula $A\in M_{n}\left(\bbf_{p}\right)$
-\end_inset
+\lang english
+\begin_inset ERT
+status collapsed
 
-.
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
 \end_layout
 
-\begin_layout Itemize
-לכל 
-\begin_inset Formula $i\in\left[n-3\right]$
-\end_inset
+\begin_layout Plain Layout
 
-,
+
+\backslash
+SetAlgoLined
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-\begin_inset Formula $P$
-\end_inset
+\begin_layout Plain Layout
 
- שולח פולינום 
-\begin_inset Formula $g_{i}\in\bbf_{q}\left[x\right]$
-\end_inset
 
- באשר 
-\begin_inset Formula $\deg\left(g_{i}\right)\le\left(n-i\right)^{2}$
-\end_inset
-
-.
+\backslash
+DontPrintSemicolon
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $V$
-\end_inset
+\begin_layout Plain Layout
 
- מגריל 
-\begin_inset Formula $y_{i}\in\bbf_{q}$
-\end_inset
 
- ושולח אותו.
+\backslash
+SetKwFunction{name}{$
+\backslash
+Pi_{
+\backslash
+perm}[n]$}
 \end_layout
 
-\end_deeper
-\begin_layout Itemize
-\begin_inset Formula $P$
-\end_inset
+\begin_layout Plain Layout
 
- שולח פולינום 
-\begin_inset Formula $g_{n-2}\in\bbf_{q}\left[x\right]$
-\end_inset
 
- באשר 
-\begin_inset Formula $\deg\left(g_{i}\right)\le4$
-\end_inset
-
-.
+\backslash
+SetKwProg{Fn}{Interactive Proof}{:}{}
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $V$
-\end_inset
+\begin_layout Plain Layout
 
- מחשב 
-\begin_inset Formula $B_{1}=D_{A}\left(y_{1}\right)$
-\end_inset
-
-.
 \end_layout
 
-\begin_layout Itemize
-לכל 
-\begin_inset Formula $i\in\left\{ 2,\ldots,n-3\right\} $
-\end_inset
+\begin_layout Plain Layout
 
-,
- 
-\begin_inset Formula $V$
-\end_inset
 
- מחשב את 
-\begin_inset Formula $B_{i}=D_{B_{i-1}}\left(y_{i}\right)$
-\end_inset
-
-.
+\backslash
+Fn{
+\backslash
+name{$B_0,
+ p,
+ k$}}{
 \end_layout
 
-\begin_layout Itemize
-לכל 
-\begin_inset Formula $i\in\left[n-1\right]$
-\end_inset
+\begin_layout Plain Layout
 
-,
- 
-\begin_inset Formula $V$
-\end_inset
+    $P$ sends $g_1
+\backslash
+in
+\backslash
+mathbb{F}_q[x]$ such that $
+\backslash
+deg(g_1)
+\backslash
+le (n-1)^2$
+\backslash
 
- מחשב את 
-\begin_inset Formula $t_{i}=\mathds{1}\left[g_{i}\left(y_{i}\right)=\sum_{i=1}^{n}\left(B_{i}\right)_{i,1}\cdot g_{i+1}\left(i\right)\right]$
-\end_inset
+\backslash
 
-.
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $V$
+\begin_layout Plain Layout
+
+    $V$ computes $t_1 = 
+\backslash
+mathds{1}
+\backslash
+left[k=
+\backslash
+sum_{i=1}^{n}
+\backslash
+left(B_0
+\backslash
+right)_{i,1}
+\backslash
+cdot g_{1}
+\backslash
+left(i
+\backslash
+right)
+\backslash
+right]$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $V$ draws $y_1 
+\backslash
+gets
+\backslash
+mathbb{F}_q$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $V$ sends $y_1$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$m
+\backslash
+in 
+\backslash
+{2,
+\backslash
+ldots,n-3
+\backslash
+}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $P$ sends $g_m
+\backslash
+in
+\backslash
+mathbb{F}_q[x]$ such that $
+\backslash
+deg(g_m)
+\backslash
+le (n-m)^2$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $V$ computes $B_{m-1} = D_{B_{m-2}}(y_{m-1})$ and $t_{m}=
+\backslash
+mathds{1}
+\backslash
+left[g_{m-1}
+\backslash
+left(y_{m-1}
+\backslash
+right)=
+\backslash
+sum_{i=1}^{n-m+1}
+\backslash
+left(
+\backslash
+left(B_{m-1}
+\backslash
+right)_{i,1}
+\backslash
+cdot g_{m}
+\backslash
+left(i
+\backslash
+right)
+\backslash
+right)
+\backslash
+right]$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $V$ draws $y_m 
+\backslash
+gets
+\backslash
+mathbb{F}_q$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $V$ sends $y_m$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+    $P$ sends $g_{n-2}
+\backslash
+in
+\backslash
+mathbb{F}_q[x]$ such that $
+\backslash
+deg(g_{n-2})
+\backslash
+le 4$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $V$ computes $B_{n-3} = D_{B_{n-4}}(y_{n-3})$ and $t_{n-2}=
+\backslash
+mathds{1}
+\backslash
+left[g_{n-2}=
+\backslash
+perm
+\backslash
+left(D_{B_{n-3}}
+\backslash
+right)
+\backslash
+right]$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+    $V$ outputs $
+\backslash
+mathds{1}
+\backslash
+left[
+\backslash
+bigwedge_{i=1}^{n-2}t_{i}
+\backslash
+right]$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
 \end_inset
 
- עונה 
-\begin_inset Formula $\mathds{1}\left[\left(k=\sum_{i=1}^{n}\left(A\right)_{i,1}\cdot g_{1}\left(i\right)\right)\land\left(\bigwedge_{i=1}^{n-1}t_{i}\right)\land\left(g_{n-2}=\perm\left(D_{B_{n-3}}\right)\right)\right]$
-\end_inset
 
-.
 \end_layout
 
 \begin_layout Standard
@@ -18348,15 +18965,7 @@ status collapsed
 \begin_inset Formula $k\in\left\{ 0\ldots2^{n}\right\} $
 \end_inset
 
- נגדיר פרוטוקול אינטרקטיבי 
-\begin_inset Formula $\Pi_{3\sat}$
-\end_inset
-
- כך
-\end_layout
-
-\begin_layout Itemize
-בהינתן קלט 
+ ויהי 
 \begin_inset Formula $\varphi\in3\cnf$
 \end_inset
 
@@ -18368,65 +18977,229 @@ status collapsed
 \begin_inset Formula $\varphi=\bigwedge_{i=1}^{m}C_{i}$
 \end_inset
 
-.
+ נגדיר פרוטוקול אינטרקטיבי 
+\begin_inset Formula $\Pi_{3\sat}\left[n,m\right]$
+\end_inset
+
+ כך
 \end_layout
 
-\begin_layout Itemize
-לכל 
-\begin_inset Formula $i\in\left[n\right]$
-\end_inset
+\begin_layout Standard
 
-,
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-\begin_inset Formula $P$
-\end_inset
+\begin_layout Plain Layout
 
- שולח פולינום 
-\begin_inset Formula $A_{i}\in\bbf_{q}\left[x\right]$
-\end_inset
 
- באשר 
-\begin_inset Formula $\deg\left(A_{i}\right)\le3m$
-\end_inset
-
-.
+\backslash
+SetAlgoLined
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $V$
-\end_inset
+\begin_layout Plain Layout
 
- מגריל 
-\begin_inset Formula $y_{i}\in\bbf_{q}$
-\end_inset
 
- ושולח אותו.
+\backslash
+DontPrintSemicolon
 \end_layout
 
-\end_deeper
-\begin_layout Itemize
-\begin_inset Formula $P$
-\end_inset
+\begin_layout Plain Layout
 
- שולח 
-\begin_inset Formula $A_{n+1}\in\bbf_{q}$
-\end_inset
 
-.
+\backslash
+SetKwFunction{name}{$
+\backslash
+Pi_{
+\backslash
+perm}[n,
+ m]$}
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $V$
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{Interactive Proof}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$q,
+ 
+\backslash
+varphi,
+ k$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$i
+\backslash
+in [n]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $P$ sends $A_i
+\backslash
+in
+\backslash
+mathbb{F}_q[x]$ such that $
+\backslash
+deg(A_i)
+\backslash
+le 3m$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $V$ draws $y_i 
+\backslash
+gets
+\backslash
+mathbb{F}_q$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $V$ sends $y_i$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+    $P$ sends $A_{n+1}
+\backslash
+in
+\backslash
+mathbb{F}_q[x]$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $V$ outputs $
+\backslash
+mathds{1}
+\backslash
+left[
+\backslash
+left(A_{1}
+\backslash
+left(0
+\backslash
+right)+A_{1}
+\backslash
+left(1
+\backslash
+right)=k
+\backslash
+right)
+\backslash
+land
+\backslash
+left(
+\backslash
+forall i
+\backslash
+in
+\backslash
+left[n-1
+\backslash
+right].A_{i+1}
+\backslash
+left(0
+\backslash
+right)+A_{i+1}
+\backslash
+left(1
+\backslash
+right)=A_{i}
+\backslash
+left(y_{i}
+\backslash
+right)
+\backslash
+right)
+\backslash
+land
+\backslash
+left(A_{n+1}=P_{
+\backslash
+varphi}
+\backslash
+left(y_{1}
+\backslash
+ldots y_{n}
+\backslash
+right)
+\backslash
+right)
+\backslash
+right]$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
 \end_inset
 
- עונה 
-\begin_inset Formula $\mathds{1}\left[\left(A_{1}\left(0\right)+A_{1}\left(1\right)=k\right)\land\left(\forall i\in\left[n-1\right].A_{i+1}\left(0\right)+A_{i+1}\left(1\right)=A_{i}\left(y_{i}\right)\right)\land\left(A_{n+1}=P_{\varphi}\left(y_{1}\ldots y_{n}\right)\right)\right]$
-\end_inset
 
-.
 \end_layout
 
 \begin_layout Standard
