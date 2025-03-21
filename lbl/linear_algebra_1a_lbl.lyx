@@ -150,6 +150,11 @@ PackageOptions algorithm2e vlined
 \use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
+\branch IsItInTheMaterial?
+\selected 0
+\filename_suffix 0
+\color background background
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -244,8 +249,20 @@ literal "true"
 אסוציטיביות/קיבוציות
 \series default
 :
- 
-\begin_inset Formula $\forall a,b,c\in A.a*\left(b*c\right)=\left(a*b\right)*c$
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה אזי פעולה בינארית 
+\begin_inset Formula $*$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $a*\left(b*c\right)=\left(a*b\right)*c$
+\end_inset
+
+ לכל 
+\begin_inset Formula $a,b,c\in A$
 \end_inset
 
 .
@@ -257,8 +274,20 @@ literal "true"
 קומוטטיביות/חילופיות/אבליות
 \series default
 :
- 
-\begin_inset Formula $\forall a,b\in A.a*b=b*a$
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה אזי פעולה בינארית 
+\begin_inset Formula $*$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $a*b=b*a$
+\end_inset
+
+ לכל 
+\begin_inset Formula $a,b\in A$
 \end_inset
 
 .
@@ -270,12 +299,24 @@ literal "true"
 איבר יחידה
 \series default
 :
- 
-\begin_inset Formula $e\in G$
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $*$
+\end_inset
+
+ פעולה בינארית אזי 
+\begin_inset Formula $e\in A$
 \end_inset
 
  המקיים 
-\begin_inset Formula $\forall g\in G.e*g=g*e=g$
+\begin_inset Formula $e*g=g*e=g$
+\end_inset
+
+ לכל 
+\begin_inset Formula $g\in A$
 \end_inset
 
 .
@@ -287,16 +328,28 @@ literal "true"
 איבר הופכי/נגדי
 \series default
 :
- יהי 
-\begin_inset Formula $g\in G$
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה תהא 
+\begin_inset Formula $*$
+\end_inset
+
+ פעולה בינארית יהי 
+\begin_inset Formula $e\in A$
+\end_inset
+
+ איבר יחידה ויהי 
+\begin_inset Formula $g\in A$
 \end_inset
 
  אזי 
-\begin_inset Formula $h\in G$
+\begin_inset Formula $h\in A$
 \end_inset
 
  המקיים 
-\begin_inset Formula $g*h=h*g=e_{G}$
+\begin_inset Formula $g*h=h*g=e$
 \end_inset
 
 .
@@ -308,44 +361,23 @@ literal "true"
 מונואיד
 \series default
 :
- תהא קבוצה 
-\begin_inset Formula $G$
+ תהא 
+\begin_inset Formula $A$
 \end_inset
 
- ופעולה בינארית 
+ קבוצה ותהא 
 \begin_inset Formula $*$
 \end_inset
 
- אזי זוג סדור 
-\begin_inset Formula $\left<G,*\right>$
+ פעולה בינארית אזי 
+\begin_inset Formula $\left<A,*\right>$
 \end_inset
 
- המקיים (
+ באשר 
 \begin_inset Formula $*$
 \end_inset
 
- אסוציטיבית)
-\begin_inset Formula $\land$
-\end_inset
-
-(קיים איבר יחידה).
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-חבורה
-\series default
-:
- 
-\begin_inset Formula $\left<G,*\right>$
-\end_inset
-
- המקיים (מונואיד)
-\begin_inset Formula $\land$
-\end_inset
-
-(קיים איבר הופכי).
+ אסוציטיבית וכן קיים איבר יחידה.
 \end_layout
 
 \begin_layout Standard
@@ -354,29 +386,40 @@ literal "true"
 סימון
 \series default
 :
- 
-\begin_inset Formula $e_{G}$
+ יהי 
+\begin_inset Formula $\left<A,*\right>$
 \end_inset
 
- איבר יחידה בחבורה כללית,
- 
-\begin_inset Formula $1_{G}$
+ מונואיד ויהי 
+\begin_inset Formula $e\in A$
 \end_inset
 
- אם הפעולה מסומנת ב־
-\begin_inset Formula $*$
+ איבר היחידה של 
+\begin_inset Formula $A$
 \end_inset
 
-,
- 
-\begin_inset Formula $0_{G}$
-\end_inset
-
- אם הפעולה מסומנת ב־
-\begin_inset Formula $+$
+ אזי 
+\begin_inset Formula $e_{A}=e$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורה
+\series default
+:
+ מונואיד 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ המקיים כי לכל 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ קיים קיים איבר הופכי.
 \end_layout
 
 \begin_layout Standard
@@ -402,8 +445,63 @@ literal "true"
 טענה
 \series default
 :
- 
+ יהי 
+\begin_inset Formula $\left<A,*\right>$
+\end_inset
+
+ מונואיד אזי 
 \begin_inset Formula $\left<A^{\times},*_{\upharpoonright_{A^{\times}\times A^{\times}}}\right>$
+\end_inset
+
+ חבורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $S_{A}=\left\{ f:A\to A\mid\text{ חח"ע ועל}f\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S_{n}=S_{\left[n\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה חבורת התמורות
+\series default
+:
+ תהא 
+\begin_inset Formula $A$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\left<S_{A},\circ\right>$
 \end_inset
 
  חבורה.
@@ -415,8 +513,16 @@ literal "true"
 הגדרה
 \series default
 :
- 
-\begin_inset Formula $\left(S_{A}=A\stackrel[onto]{1-1}{\to}A\right)\land\left(S_{n}=S_{\left[n\right]}\right)$
+ יהי 
+\begin_inset Formula $n\in\bbn_{\ge2}$
+\end_inset
+
+ נגדיר 
+\begin_inset Formula $\sim_{n}\subseteq\bbz^{2}$
+\end_inset
+
+ כך 
+\begin_inset Formula $\sim_{n}=\left\{ \left<x,y\right>\in\bbz^{2}\mid\left(n|\left(x-y\right)\right)\right\} $
 \end_inset
 
 .
@@ -425,11 +531,19 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-חבורת התמורות
+טענה
 \series default
 :
- 
-\begin_inset Formula $\left<S_{A},\circ\right>$
+ יהי 
+\begin_inset Formula $n\in\bbn_{\ge2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sim_{n}$
+\end_inset
+
+ יחס שקילות מעל 
+\begin_inset Formula $\bbz$
 \end_inset
 
 .
@@ -445,12 +559,12 @@ literal "true"
 \begin_inset Formula $n\in\bbn_{\ge2}$
 \end_inset
 
- אזי 
-\begin_inset Formula $x\sim_{n}y\iff n\mid x-y$
+ ויהיו 
+\begin_inset Formula $x,y\in\bbz$
 \end_inset
 
- יחס שקילות מעל 
-\begin_inset Formula $\bbz$
+ אזי 
+\begin_inset Formula $\left[x\right]_{\sim_{n}}+\left[y\right]_{\sim_{n}}=\left[x+y\right]_{\sim_{n}}$
 \end_inset
 
 .
@@ -462,8 +576,12 @@ literal "true"
 טענה
 \series default
 :
- 
-\begin_inset Formula $\left(\nicefrac{\bbz}{\sim_{n}}=\left\{ \left[0\right]_{\sim_{n}},\ldots,\left[n-1\right]_{\sim_{n}}\right\} \right)\land\left(\left[x\right]_{\sim_{n}}+\left[y\right]_{\sim_{n}}=\left[x+y\right]_{\sim_{n}}\right)$
+ יהי 
+\begin_inset Formula $n\in\bbn_{\ge2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nicefrac{\bbz}{\sim_{n}}=\left\{ \left[0\right]_{\sim_{n}},\ldots,\left[n-1\right]_{\sim_{n}}\right\} $
 \end_inset
 
 .
@@ -472,15 +590,24 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-חבורת השאריות
+טענה חבורת השאריות
 \series default
 :
- 
+ יהי 
+\begin_inset Formula $n\in\bbn_{\ge2}$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\left<\nicefrac{\bbz}{\sim_{n}},+\right>$
 \end_inset
 
-.
+ חבורה.
 \end_layout
+
+\begin_layout Standard
+\begin_inset Branch IsItInTheMaterial?
+inverted 0
+status collapsed
 
 \begin_layout Standard
 
@@ -499,14 +626,23 @@ literal "true"
 .
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 
 \series bold
-טענה
+טענה יחידות איבר היחידה
 \series default
 :
- יהיו 
-\begin_inset Formula $e_{1},e_{2}\in G$
+ יהי 
+\begin_inset Formula $\left<A,*\right>$
+\end_inset
+
+ מונואיד ויהיו 
+\begin_inset Formula $e_{1},e_{2}\in A$
 \end_inset
 
  איברי יחידה אזי 
@@ -522,8 +658,20 @@ literal "true"
 טענה
 \series default
 :
- 
-\begin_inset Formula $\left(\forall a,b,c\in G.a*b=e_{G}=c*a\right)\implies\left(b=c\right)$
+ תהא 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ חבורה ויהיו 
+\begin_inset Formula $a,b,c\in G$
+\end_inset
+
+ באשר 
+\begin_inset Formula $b*a=c*a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $b=c$
 \end_inset
 
 .
@@ -532,23 +680,27 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-מסקנה
+מסקנה יחידות איבר הופכי
 \series default
 :
- יהי 
-\begin_inset Formula $a\in G$
+ תהא 
+\begin_inset Formula $\left<G,*\right>$
 \end_inset
 
- וכן 
-\begin_inset Formula $h_{1},h_{2}\in G$
+ חבורה ויהיו 
+\begin_inset Formula $a,b,c\in G$
 \end_inset
 
- הופכיים אל 
+ באשר 
+\begin_inset Formula $b,c$
+\end_inset
+
+ הופכיים ל־
 \begin_inset Formula $a$
 \end_inset
 
  אזי 
-\begin_inset Formula $h_{1}=h_{2}$
+\begin_inset Formula $b=c$
 \end_inset
 
 .
@@ -560,12 +712,24 @@ literal "true"
 סימון
 \series default
 :
- יהי 
+ תהא 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ חבורה יהי 
 \begin_inset Formula $a\in G$
 \end_inset
 
- אזי ההופכי שלו הינו 
-\begin_inset Formula $a^{-1}$
+ ויהי 
+\begin_inset Formula $b\in G$
+\end_inset
+
+ הופכי ל־
+\begin_inset Formula $a$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a^{-1}=b$
 \end_inset
 
 .
@@ -577,8 +741,32 @@ literal "true"
 הגדרה
 \series default
 :
- 
-\begin_inset Formula $\left(a^{0}=e_{G}\right)\land\left(a^{n+1}=a*a^{n}\right)\land\left(a^{-n}=\left(a^{-1}\right)^{n}\right)$
+ תהא 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $a\in G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a^{0}=e_{G}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a^{n+1}=a*a^{n}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a^{-n}=\left(a^{-1}\right)^{n}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
 \end_inset
 
 .
@@ -587,10 +775,18 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-סדר
+סדר של איבר
 \series default
 :
- 
+ תהא 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ חבורה ויהי 
+\begin_inset Formula $a\in G$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\ord\left(a\right)=\min\left\{ n\in\bbn_{+}\mid a^{n}=e_{G}\right\} $
 \end_inset
 
@@ -603,11 +799,36 @@ literal "true"
 משפט
 \series default
 :
- 
-\begin_inset Formula $\left|G\right|<\aleph_{0}\implies\exists a\in G.\text{ord}\left(a\right)\le\left|G\right|$
+ תהא 
+\begin_inset Formula $\left<G,*\right>$
+\end_inset
+
+ חבורה באשר 
+\begin_inset Formula $\left|G\right|<\aleph_{0}$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $a\in G$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\text{ord}\left(a\right)\le\left|G\right|$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+לתקן מכאן!
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
