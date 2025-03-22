@@ -1062,5 +1062,390 @@ literal "true"
 
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+מחלק משותף מירבי
+\series default
+:
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $d\bbz=\sum_{i=1}^{n}a_{i}\bbz$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbz$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ המחלק המשותף המירבי של 
+\begin_inset Formula $a_{1}\ldots a_{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gcd\left(a_{1}\ldots a_{n}\right)=d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gcd\left(a_{1}\ldots a_{n}\right)|a_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbz$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $m\in\bbz^{n}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\gcd\left(a_{1}\ldots a_{n}\right)=\sum_{i=1}^{n}m_{i}\cdot a_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n},d\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d|a_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $d|\gcd\left(a_{1}\ldots a_{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $b\in\bbn_{\ge2}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי קיים ויחיד 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ וקיים ויחיד 
+\begin_inset Formula $d\in\left\{ 0,\ldots,b-1\right\} ^{k}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d_{k}>0$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $n=\sum_{i=1}^{k}d_{i}b^{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ייצוג ספרתי בבסיס
+\series default
+:
+ יהי 
+\begin_inset Formula $b\in\bbn_{\ge2}$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $n,k\in\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $d\in\left\{ 0,\ldots,b-1\right\} ^{k}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d_{k}>0$
+\end_inset
+
+ וכן 
+\begin_inset Formula $n=\sum_{i=1}^{k}d_{i}b^{i}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(n\right)_{b}=d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ כאשר לא כתוב בסיס בייצוג נתייחס לבסיס עשרוני.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\len}{\text{len}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $b\in\bbn_{\ge2}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\len\left(\left(n\right)_{b}\right)=\floor{\log_{b}\left(n\right)}+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מספר הביטים לייצוג מספר
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\len\left(\left(n\right)_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $a,b\in\bbn$
+\end_inset
+
+ באורך 
+\begin_inset Formula $n$
+\end_inset
+
+ ביטים אזי קיים אלגוריתם המחשב את 
+\begin_inset Formula $a+b$
+\end_inset
+
+ בסיבוכיות 
+\begin_inset Formula $\O\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $a,b\in\bbn$
+\end_inset
+
+ באורך 
+\begin_inset Formula $n$
+\end_inset
+
+ ביטים אזי קיים אלגוריתם המחשב את 
+\begin_inset Formula $ab$
+\end_inset
+
+ בסיבוכיות 
+\begin_inset Formula $\O\left(n^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם קרטסובה
+\series default
+:
+ ...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה קרטסובה
+\series default
+:
+ יהיו 
+\begin_inset Formula $a,b\in\bbn$
+\end_inset
+
+ באורך 
+\begin_inset Formula $n$
+\end_inset
+
+ ביטים אזי קיים אלגוריתם המחשב את 
+\begin_inset Formula $ab$
+\end_inset
+
+ בסיבוכיות 
+\begin_inset Formula $\O\left(n^{\log_{2}\left(3\right)}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה קולי־טוקי
+\series default
+:
+ יהיו 
+\begin_inset Formula $a,b\in\bbn$
+\end_inset
+
+ באורך 
+\begin_inset Formula $n$
+\end_inset
+
+ ביטים אזי קיים אלגוריתם המחשב את 
+\begin_inset Formula $ab$
+\end_inset
+
+ בסיבוכיות 
+\begin_inset Formula $\O\left(n\log\left(n\right)\log\log\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהיו 
+\begin_inset Formula $a,b,q\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gcd\left(a,b\right)=\gcd\left(a+qb,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם אוקלידס
+\series default
+:
+ ...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
