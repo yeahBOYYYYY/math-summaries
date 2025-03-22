@@ -191,7 +191,7 @@ PackageOptions algorithm2e vlined
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "E:/University/macros.lyx"
+filename "C:/Users/user/OneDrive/Documents/summaries/macros.lyx"
 literal "true"
 
 \end_inset
@@ -819,37 +819,37 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-לתקן מכאן!
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
-תת חבורה
+תת־חבורה
 \series default
 :
  תהא 
 \begin_inset Formula $\left<G,*\right>$
 \end_inset
 
- חבורה אזי 
+ חבורה ותהא 
 \begin_inset Formula $H\subseteq G$
 \end_inset
 
- המקיימת 
+ עבורה 
 \begin_inset Formula $\left<H,*_{\upharpoonright_{H\times H}}\right>$
 \end_inset
 
- חבורה.
+ חבורה אזי 
+\begin_inset Formula $\left<H,*_{\upharpoonright_{H\times H}}\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ מכאן והלאה כאשר ברור מהי הפעולה של החבורה נסמנה על ידי הקבוצה בלבד.
 \end_layout
 
 \begin_layout Standard
@@ -862,11 +862,11 @@ status open
 \begin_inset Formula $G$
 \end_inset
 
- חבורה וכן 
+ חבורה ותהא 
 \begin_inset Formula $H\subseteq G$
 \end_inset
 
- תת חבורה אזי 
+ תת־חבורה אזי 
 \begin_inset Formula $H\le G$
 \end_inset
 
@@ -876,10 +876,14 @@ status open
 \begin_layout Standard
 
 \series bold
-בוחן תת חבורה
+טענה בוחן תת־חבורה
 \series default
 :
  תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
 \begin_inset Formula $H\subseteq G$
 \end_inset
 
@@ -892,27 +896,23 @@ status open
 \end_inset
 
 (
-\begin_inset Formula $H$
-\end_inset
-
- סגורה לפעולה 
-\begin_inset Formula $*$
-\end_inset
-
-)
-\begin_inset Formula $\land$
-\end_inset
-
-(
 \begin_inset Formula $e_{G}\in H$
 \end_inset
 
-)
-\begin_inset Formula $\land$
+ וכן 
+\begin_inset Formula $h^{-1}\in H$
 \end_inset
 
-(
-\begin_inset Formula $\forall h\in H.h^{-1}\in H$
+ לכל 
+\begin_inset Formula $h\in H$
+\end_inset
+
+ וכן 
+\begin_inset Formula $g*h\in H$
+\end_inset
+
+ לכל 
+\begin_inset Formula $g,h\in H$
 \end_inset
 
 ).
@@ -924,121 +924,24 @@ status open
 איזומורפיזם בין חבורות
 \series default
 :
- 
-\begin_inset Formula $f:G\stackrel[\text{onto}]{1-1}{\to}H$
+ תהיינה 
+\begin_inset Formula $G,H$
 \end_inset
 
- המקיימת 
+ חבורות אזי 
+\begin_inset Formula $f:G\to H$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל המקיימת 
 \begin_inset Formula $f\left(\a*\b\right)=f\left(\a\right)*f\left(\b\right)$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-חוק הפילוג
-\series default
-:
- 
-\begin_inset Formula $\left(\left(b+c\right)*a=b*a+c*a\right)\land\left(a*\left(b+c\right)=a*b+a*c\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-חוג עם יחידה
-\series default
-:
- 
-\begin_inset Formula $\left<R,+,*\right>$
-\end_inset
-
- המקיים (
-\begin_inset Formula $\left<R,+\right>$
-\end_inset
-
- חבורה אבלית)
-\begin_inset Formula $\land$
-\end_inset
-
-(
-\begin_inset Formula $\left<R,*\right>$
-\end_inset
-
- מונואיד)
-\begin_inset Formula $\land$
-\end_inset
-
-(חוק הפילוג).
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-איזומורפיזם בין חוגים
-\series default
-:
- 
-\begin_inset Formula $f:R\stackrel[\text{onto}]{1-1}{\to}F$
-\end_inset
-
- המקיימת (
-\begin_inset Formula $f\left(\a*\b\right)=f\left(\a\right)*f\left(\b\right)$
-\end_inset
-
-)
-\begin_inset Formula $\land$
-\end_inset
-
-(
-\begin_inset Formula $f\left(\a+\b\right)=f\left(\a\right)+f\left(\b\right)$
-\end_inset
-
-)
-\begin_inset Formula $\land$
-\end_inset
-
-(
-\begin_inset Formula $f\left(1_{R}\right)=1_{F}$
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-חוג הפולינומים
-\series default
-:
- יהי 
-\begin_inset Formula $\left<R,+,\cdot\right>$
-\end_inset
-
- חוג חילופי אזי 
-\begin_inset Formula $\left<R\left[x\right],+,\cdot\right>$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-נוסחאת המעלות
-\series default
-:
- 
-\begin_inset Formula $\deg\left(p+q\right)\le\max\left(\deg\left(p\right),\deg\left(q\right)\right)$
-\end_inset
-
- וגם 
-\begin_inset Formula $\deg\left(p\cdot q\right)\le\deg\left(p\right)+\deg\left(q\right)$
+ לכל 
+\begin_inset Formula $\a,\b\in G$
 \end_inset
 
 .
@@ -1055,12 +958,40 @@ status open
 
 \series bold
 \color blue
-הגדרה
+דו־מונואיד בעל חוק הפילוג
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $T^{-1}=\left\{ t^{-1}\mid t\in T\right\} $
+ תהא 
+\begin_inset Formula $R$
+\end_inset
+
+ קבוצה ותהיינה 
+\begin_inset Formula $+,*$
+\end_inset
+
+ פעולות בינאריות באשר 
+\begin_inset Formula $\left<R,+\right>$
+\end_inset
+
+ מונואיד וכן 
+\begin_inset Formula $\left<R,*\right>$
+\end_inset
+
+ מונואיד אזי 
+\begin_inset Formula $\left<R,+,*\right>$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $a*\left(b+c\right)=a*b+a*c$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left(b+c\right)*a=b*a+c*a$
+\end_inset
+
+ לכל 
+\begin_inset Formula $a,b,c\in R$
 \end_inset
 
 .
@@ -1070,16 +1001,85 @@ status open
 
 \series bold
 \color blue
-תת החבורה שנוצרת על ידי 
-\begin_inset Formula $T$
-\end_inset
-
-
+חוג עם יחידה
 \series default
 \color inherit
 :
+ דו־מונואיד בעל חוג הפילוג 
+\begin_inset Formula $\left<R,+,*\right>$
+\end_inset
+
+ המקיים כי 
+\begin_inset Formula $+$
+\end_inset
+
+ אבלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הערה
+\series default
+\color inherit
+:
+ כל החוגים בקורס זה הם בעלי יחידה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+איזומורפיזם בין חוגים
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $R,F$
+\end_inset
+
+ חוגים אזי 
+\begin_inset Formula $f:R\to F$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל המקיימת
+\end_layout
+
+\begin_layout Itemize
+משמרת יחידה:
  
-\begin_inset Formula ${\displaystyle \left<T\right>=\bigcup_{n=0}^{\infty}\left\{ \stackrel[i=1]{n}{*}a_{i}\mid a\in\left(T\cup T^{-1}\right)^{n}\right\} =\left\{ a_{1}*\ldots*a_{n}\mid a_{1},\ldots,a_{n}\in T\cup T^{-1}\right\} }$
+\begin_inset Formula $f\left(1_{R}\right)=1_{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+משמרת כפל:
+ 
+\begin_inset Formula $f\left(\a*\b\right)=f\left(\a\right)*f\left(\b\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\a,\b\in R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+משמרת חיבור:
+ 
+\begin_inset Formula $f\left(\a+\b\right)=f\left(\a\right)+f\left(\b\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $\a,\b\in R$
 \end_inset
 
 .
@@ -1089,21 +1089,116 @@ status open
 
 \series bold
 \color blue
-משפט
+חוג עם יחידה אבלי
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\forall H\ge T.\left<T\right>\le H$
+ חוג 
+\begin_inset Formula $\left<R,+,\cdot\right>$
 \end_inset
 
-,
- במילים אחרות 
-\begin_inset Formula $\left<T\right>$
+ המקיים כי 
+\begin_inset Formula $*$
 \end_inset
 
- תת החבורה הקטנה ביותר ביחס ההכלה שמכילה את 
-\begin_inset Formula $T$
+ אבלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+חוג הפולינומים
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\left<R,+,\cdot\right>$
+\end_inset
+
+ חוג אבלי אזי 
+\begin_inset Formula $\left<R\left[x\right],+,\cdot\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה נוסחאת המעלות
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\left<R\left[x\right],+,\cdot\right>$
+\end_inset
+
+ חוג פולינומים אזי לכל 
+\begin_inset Formula $p,q\in R\left[x\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\deg\left(p+q\right)\le\max\left(\deg\left(p\right),\deg\left(q\right)\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\deg\left(p\cdot q\right)\le\deg\left(p\right)+\deg\left(q\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+תת־חבורה נוצרת
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $T\subseteq G$
+\end_inset
+
+ אזי 
+\begin_inset Formula ${\displaystyle \left<T\right>=\bigcup_{n=0}^{\infty}\left\{ \stackrel[i=1]{n}{\prod}a_{i}^{\e_{i}}\mid\left(a\in T^{n}\right)\land\left(\e\in\left\{ \pm1\right\} ^{n}\right)\right\} }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט מינימליות התת־חבורה הנוצרת
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה תהא 
+\begin_inset Formula $T\subseteq G$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ באשר 
+\begin_inset Formula $T\subseteq H$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<T\right>\le H$
 \end_inset
 
 .
@@ -1122,7 +1217,11 @@ status open
 \end_inset
 
  חבורה סופית אזי 
-\begin_inset Formula $\forall g\in G.\left|\left<g\right>\right|=\ord\left(g\right)$
+\begin_inset Formula $\left|\left<g\right>\right|=\ord\left(g\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $g\in G$
 \end_inset
 
 .
@@ -1136,12 +1235,20 @@ status open
 \series default
 \color inherit
 :
- יהיו 
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ויהיו 
 \begin_inset Formula $H\le G$
 \end_inset
 
  אזי 
-\begin_inset Formula $g_{1}\sim_{H}g_{2}\iff g_{1}*g_{2}^{-1}\in H$
+\begin_inset Formula $\left(g_{1}\sim_{H}g_{2}\right)\iff\left(g_{1}*g_{2}^{-1}\in H\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $g_{1},g_{2}\in G$
 \end_inset
 
 .
@@ -1155,7 +1262,11 @@ status open
 \series default
 \color inherit
 :
- יהיו 
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
 \begin_inset Formula $H\le G$
 \end_inset
 
@@ -1179,7 +1290,19 @@ status open
 \end_inset
 
  חבורה אזי 
-\begin_inset Formula $\left(\left|G\right|=\left|\nicefrac{G}{H}\right|\cdot\left|H\right|\right)\land\left(\forall g\in G.\ord\left(g\right)|\left|G\right|\right)$
+\begin_inset Formula $\ord\left(g\right)|\left|G\right|$
+\end_inset
+
+ לכל 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left|G\right|=\left|\nicefrac{G}{H}\right|\cdot\left|H\right|$
+\end_inset
+
+ לכל 
+\begin_inset Formula $H\le G$
 \end_inset
 
 .
@@ -1197,16 +1320,20 @@ status open
 \begin_inset Formula $G$
 \end_inset
 
- חבורה עבורה 
+ חבורה באשר 
 \begin_inset Formula $\left|G\right|\in\bbp$
 \end_inset
 
- אזי (
+ אזי 
 \begin_inset Formula $G$
 \end_inset
 
- אבלית)
-\begin_inset Formula $\left(\forall g\ne e_{G}.\left<g\right>=G\right)\land$
+ אבלית וכן 
+\begin_inset Formula $\left<g\right>=G$
+\end_inset
+
+ לכל 
+\begin_inset Formula $g\in G\backslash\left\{ e_{G}\right\} $
 \end_inset
 
 .
@@ -1228,8 +1355,12 @@ status open
 \begin_inset Formula $a\in R\backslash\left\{ 0\right\} $
 \end_inset
 
+ עבורו קיים 
+\begin_inset Formula $b\in R\backslash\left\{ 0\right\} $
+\end_inset
+
  המקיים 
-\begin_inset Formula $\exists b\in R\backslash\left\{ 0\right\} .a*b=0_{G}$
+\begin_inset Formula $a*b=0_{G}$
 \end_inset
 
 .
@@ -1243,19 +1374,19 @@ status open
 \series default
 \color inherit
 :
- 
+ חוג אבלי 
 \begin_inset Formula $\left<R,+,*\right>$
 \end_inset
 
- המקיים ((
-\begin_inset Formula $\left<R,+,*\right>$
+ עבורו לכל 
+\begin_inset Formula $a\in R$
 \end_inset
 
- חוג אבלי)
-\begin_inset Formula $\land$
+ מתקיים כי 
+\begin_inset Formula $a$
 \end_inset
 
-(לא קיימים מחלקי אפס).
+ אינו מחלק אפס.
 \end_layout
 
 \begin_layout Standard
@@ -1270,8 +1401,20 @@ status open
 \begin_inset Formula $R$
 \end_inset
 
- תחום שלמות אזי 
-\begin_inset Formula $\forall a\ne0_{R}.\forall b,c\in R.\left(a*c=a*b\right)\implies\left(c=b\right)$
+ תחום שלמות יהי 
+\begin_inset Formula $a\in R\backslash\left\{ 0\right\} $
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $b,c\in R$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a*c=a*b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $c=b$
 \end_inset
 
 .
@@ -1285,31 +1428,19 @@ status open
 \series default
 \color inherit
 :
- 
+ חוג 
 \begin_inset Formula $\left<\bbf,+,*\right>$
 \end_inset
 
- המקיים (
-\begin_inset Formula $\left<\bbf,+,*\right>$
-\end_inset
-
- חוג)
-\begin_inset Formula $\land$
-\end_inset
-
-(
+ המקיים כי 
 \begin_inset Formula $\left<\bbf\backslash\left\{ 0_{\bbf}\right\} ,*\right>$
 \end_inset
 
- חבורה אבלית)
-\begin_inset Formula $\land$
-\end_inset
-
-(
+ חבורה אבלית וכן 
 \begin_inset Formula $0_{\bbf}\ne1_{\bbf}$
 \end_inset
 
-).
+.
 \end_layout
 
 \begin_layout Standard
@@ -1320,19 +1451,15 @@ status open
 \series default
 \color inherit
 :
- (
+ יהי 
 \begin_inset Formula $\bbf$
 \end_inset
 
- שדה)
-\begin_inset Formula $\impliedby$
-\end_inset
-
-(
+ שדה אזי 
 \begin_inset Formula $\bbf$
 \end_inset
 
- תחום שלמות).
+ תחום שלמות.
 \end_layout
 
 \begin_layout Standard
@@ -1343,19 +1470,15 @@ status open
 \series default
 \color inherit
 :
- (
+ יהי 
 \begin_inset Formula $R$
 \end_inset
 
- תחום שלמות סופי)
-\begin_inset Formula $\impliedby$
-\end_inset
-
-(
+ תחום שלמות סופי אזי 
 \begin_inset Formula $R$
 \end_inset
 
- שדה).
+ שדה.
 \end_layout
 
 \begin_layout Standard
@@ -1370,8 +1493,12 @@ status open
 \begin_inset Formula $n\in\bbn$
 \end_inset
 
- אזי 
-\begin_inset Formula $\iff\left(n\in\bbp\right)$
+ אזי (
+\begin_inset Formula $n\in\bbp$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
 \end_inset
 
 (
@@ -1382,6 +1509,14 @@ status open
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\char}{\text{char}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color blue
@@ -1389,11 +1524,30 @@ status open
 \series default
 \color inherit
 :
- 
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה אזי 
 \begin_inset Formula $\char\left(\bbf\right)=\min\left\{ n\in\bbn\mid\sum_{i=1}^{n}1_{\bbf}=0_{\bbf}\right\} $
 \end_inset
 
- ואחרת 
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הערה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה עבורו המציין לא קיים אזי 
 \begin_inset Formula $\char\left(\bbf\right)=0$
 \end_inset
 
@@ -1408,7 +1562,11 @@ status open
 \series default
 \color inherit
 :
- 
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה אזי 
 \begin_inset Formula $\char\left(\bbf\right)\in\bbp\cup\left\{ 0\right\} $
 \end_inset
 
@@ -1417,6 +1575,19 @@ status open
 
 \begin_layout Standard
 \begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+לתקן מכאן!
+\end_layout
+
 \end_inset
 
 
