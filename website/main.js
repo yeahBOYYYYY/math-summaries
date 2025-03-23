@@ -81,3 +81,15 @@ function createGenericButtons(){
         button.replaceWith(newElement.firstElementChild);
     });
 }
+
+async function parseJson(json_path) {
+    try {
+        const response = await fetch(json_path);
+        if (!response.ok) throw new Error(`Failed to load ${json_path} JSON: ${response.statusText}`);
+        const pdfData = await response.json();
+        return pdfData;
+    } catch (error) {
+        console.error('Error fetching or processing JSON:', error);
+        return null;
+    }
+}

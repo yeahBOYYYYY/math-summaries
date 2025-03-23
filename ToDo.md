@@ -1,11 +1,6 @@
-# ToDo
+# Progress
 
-Things that I still need to do
-
-### general
-
- - להשלים באלגו את אלגוריתם סימפלקס, עמוד 885 בספר [הזה](https://enos.itcollege.ee/~japoia/algorithms/GT/Introduction_to_algorithms-3rd%20Edition.pdf).
- - להשלים במד"ר מהמודל.
+Courses I still need to do.
 
 ### 25B
 

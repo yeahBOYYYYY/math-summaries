@@ -1,3 +1,5 @@
+import {createButtons} from "./pdfButtons.js";
+
 const POPUP_DATA_PATH = "./website/popup_data.json";
 const POPUP_PRE = "popup";
 
@@ -5,24 +7,14 @@ const POPUP_PRE = "popup";
 document.addEventListener('DOMContentLoaded', mainPopups);
 
 
-async function parseJson(json_path) {
-    try {
-        const response = await fetch(json_path);
-        if (!response.ok) throw new Error(`Failed to load ${json_path} JSON: ${response.statusText}`);
-        const pdfData = await response.json();
-        return pdfData;
-    } catch (error) {
-        console.error('Error fetching or processing JSON:', error);
-        return null;
-    }
-}
-
 async function mainPopups(){
     const popups_tmp = document.querySelector(`[id="popups_tmp"]`);
     let popups_code = await createPopups();
     const new_popups = document.createElement('div');
     new_popups.innerHTML = popups_code;
     popups_tmp.replaceWith(...new_popups.children);
+
+    createButtons();
 }
 
 async function createPopups(){

@@ -1,10 +1,7 @@
 const PDF_DATA_PATH = "./website/pdf_data.json";
 
 
-document.addEventListener('DOMContentLoaded', createButtons);
-
-
-async function createButtons() {
+export async function createButtons() {
     const jsonRes = await parseJson(PDF_DATA_PATH);
     for (let pdf_name in jsonRes){
         try {
