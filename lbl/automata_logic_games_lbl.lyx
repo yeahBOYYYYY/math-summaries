@@ -194,5 +194,1842 @@ literal "true"
 
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+\color black
+מערכת מעברים מסומנת (
+\begin_inset Formula $\text{LTS}$
+\end_inset
+
+)
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ותהא 
+\begin_inset Formula $V$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\Delta\subseteq Q\times\Sigma\times V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Graph}{\text{Graph}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\LGraph}{\text{LabelledGraph}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+גרפים מסומנים
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ותהא 
+\begin_inset Formula $V$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\LGraph\left(V\right)=\left\{ \left(G,f\right)\mid\left(G\in\Graph\left(V\right)\right)\land\left(f:E\left(G\right)\to\Sigma\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית תהא 
+\begin_inset Formula $V$
+\end_inset
+
+ קבוצה ונגדיר 
+\begin_inset Formula $\Psi:\LGraph\left(V\right)\to\text{LTS}$
+\end_inset
+
+ כך 
+\begin_inset Formula $\Psi\left(G,f\right)=\left\{ \left(v,f\left(v,u\right),u\right)\mid\left(v,u\right)\in E\left(G\right)\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ הפיכה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+סימון
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית תהא 
+\begin_inset Formula $V$
+\end_inset
+
+ קבוצה תהא 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ מערכת מעברים מסומנת ויהי 
+\begin_inset Formula $\left(v,\sigma,u\right)\in\Delta$
+\end_inset
+
+ אזי 
+\begin_inset Formula $v\xrightarrow{\sigma}u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מצבים של מערכת מעברים מסומנת
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ מערכת מעברים מסומנת אזי 
+\begin_inset Formula $Q_{\Delta}=\left\{ u\in V\mid\exists\d\in\Delta.\left(\d_{1}=u\right)\lor\left(\d_{3}=u\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+הערה
+\series default
+\color inherit
+:
+ מכאן והלאה נניח כי הקבוצה עליה מערכת מעברים מסומנת מוגדרת היא קבוצת המצבים שלה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מערכת מעברים מסומנת דטרמיניסטית
+\series default
+\color inherit
+:
+ מערכת מעברים מסומנת 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left|\left\{ u\in Q\mid v\xrightarrow{\sigma}u\right\} \right|\le1$
+\end_inset
+
+ לכל 
+\begin_inset Formula $v\in Q$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\sigma\in\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מערכת מעברים מסומנת שלמה
+\series default
+\color inherit
+:
+ מערכת מעברים מסומנת 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left|\left\{ u\in Q\mid v\xrightarrow{\sigma}u\right\} \right|\ge1$
+\end_inset
+
+ לכל 
+\begin_inset Formula $v\in Q$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\sigma\in\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+ריצה/מסלול
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ מערכת מעברים מסומנת אזי 
+\begin_inset Formula $\rho\in Q\times\left(\Sigma\times Q\right)^{n}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left(\rho_{i},\rho_{i+1},\rho_{i+2}\right)\in\Delta$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[2n-1\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+הטלה של ריצה על קבוצת המצבים
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ מערכת מעברים מסומנת ותהא 
+\begin_inset Formula $\rho\in Q\times\left(\Sigma\times Q\right)^{n}$
+\end_inset
+
+ ריצה אזי 
+\begin_inset Formula $p\in Q^{n+1}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $p_{i}=\rho_{2i-1}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n+1\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+הטלה של ריצה על האלפבית
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ מערכת מעברים מסומנת ותהא 
+\begin_inset Formula $\rho\in Q\times\left(\Sigma\times Q\right)^{n}$
+\end_inset
+
+ ריצה אזי 
+\begin_inset Formula $p\in\Sigma^{n}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $p_{i}=\rho_{2i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+ריצה על מחרוזת
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ מערכת מעברים מסומנת ותהא 
+\begin_inset Formula $w\in\Sigma^{*}$
+\end_inset
+
+ אזי ריצה 
+\begin_inset Formula $\rho$
+\end_inset
+
+ עבורה ההטלה של 
+\begin_inset Formula $\rho$
+\end_inset
+
+ על 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ הינה 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+אוטומט סופי
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית תהא 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ מערכת מעברים מסומנת באשר 
+\begin_inset Formula $\left|\Delta\right|<\aleph_{0}$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $S,F\subseteq Q$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(Q,\Sigma,\Delta,S,F\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\len}{\text{len}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+ריצה מתקבלת על ידי אוטומט סופי
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אוטומט סופי אזי ריצה 
+\begin_inset Formula $\rho$
+\end_inset
+
+ של 
+\begin_inset Formula $\Delta_{\mathcal{A}}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\rho_{1}\in S_{\mathcal{A}}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\rho_{\len\left(\rho\right)}\in F_{\mathcal{A}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מחרוזת מתקבלת על ידי אוטומט סופי
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אוטומט סופי אזי 
+\begin_inset Formula $w\in\Sigma_{\mathcal{A}}$
+\end_inset
+
+ עבורו קיימת ריצה 
+\begin_inset Formula $\rho$
+\end_inset
+
+ על 
+\begin_inset Formula $w$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\rho$
+\end_inset
+
+ מתקבלת.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\lan}{\text{Lan}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+שפה של אוטומט סופי
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אוטומט סופי אזי 
+\begin_inset Formula $\lan\left(\mathcal{A}\right)=\left\{ w\in\Sigma_{\mathcal{A}}\bmid\mathcal{A}\text{ מתקבלת על ידי }w\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+אוטומטים סופיים שקולים
+\series default
+\color inherit
+:
+ אוטומטיים סופיים 
+\begin_inset Formula $\mathcal{A},\mathcal{B}$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\lan\left(\mathcal{A}\right)=\lan\left(\mathcal{B}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+אוטומט סופי דטרמיניסטי (אס
+\begin_inset Quotes erd
+\end_inset
+
+ד)
+\series default
+\color inherit
+:
+ אוטומט סופי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\left|S_{\mathcal{A}}\right|=1$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\Delta_{\mathcal{A}}$
+\end_inset
+
+ דטרמיניסטית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+אוטומט סופי לא־דטרמיניסטי (אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד)
+\series default
+\color inherit
+:
+ אוטומט סופי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אינו דטרמיניסטי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מודלים שקולים
+\series default
+\color inherit
+:
+ מודליי חישוב 
+\begin_inset Formula $M,N$
+\end_inset
+
+ עבורם לכל שפה 
+\begin_inset Formula $L$
+\end_inset
+
+ מתקיים (קיים 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ מסוג 
+\begin_inset Formula $M$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\lan\left(\mathcal{M}\right)=L$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיים 
+\begin_inset Formula $\mathcal{N}$
+\end_inset
+
+ מסוג 
+\begin_inset Formula $N$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\lan\left(\mathcal{N}\right)=L$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+:
+ אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד ואס
+\begin_inset Quotes erd
+\end_inset
+
+ד הינם מודלים שקולים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+משפט
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי קיימת שפה 
+\begin_inset Formula $L$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+קיים אסל
+\begin_inset Quotes erd
+\end_inset
+
+ד 
+\begin_inset Formula $\mathcal{N}$
+\end_inset
+
+ בעל 
+\begin_inset Formula $\O\left(n\right)$
+\end_inset
+
+ מצבים עבורו 
+\begin_inset Formula $\lan\left(\mathcal{N}\right)=L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל אס
+\begin_inset Quotes erd
+\end_inset
+
+ד 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\lan\left(\mathcal{N}\right)=L$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ בעל 
+\begin_inset Formula $\Omega\left(2^{n}\right)$
+\end_inset
+
+ מצבים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+שפה רגולרית
+\series default
+\color inherit
+:
+ שפה 
+\begin_inset Formula $L$
+\end_inset
+
+ עבורה קיים אוטומט סופי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\lan\left(\mathcal{A}\right)=L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+משפט
+\series default
+\color inherit
+:
+ תהיינה 
+\begin_inset Formula $L_{1},L_{2}$
+\end_inset
+
+ שפות רגולריות אזי 
+\begin_inset Formula $L_{1}\cup L_{2}$
+\end_inset
+
+ רגולרית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+משפט
+\series default
+\color inherit
+:
+ קיים אלגוריתם 
+\begin_inset Formula $A$
+\end_inset
+
+ עבורו לכל אוטומטים סופיים 
+\begin_inset Formula $\mathcal{A},\mathcal{B}$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $A\left(\mathcal{A},\mathcal{B}\right)$
+\end_inset
+
+ אוטומט סופי וכן
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\lan\left(A\left(\mathcal{A},\mathcal{B}\right)\right)=\lan\left(\mathcal{A}\right)\cup\lan\left(\mathcal{B}\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $A\left(\mathcal{A},\mathcal{B}\right)$
+\end_inset
+
+ בעלת 
+\begin_inset Formula $\left|Q_{\mathcal{A}}\right|+\left|Q_{\mathcal{B}}\right|$
+\end_inset
+
+ מצבים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+משפט
+\series default
+\color inherit
+:
+ תהיינה 
+\begin_inset Formula $L_{1},L_{2}$
+\end_inset
+
+ שפות רגולריות אזי 
+\begin_inset Formula $L_{1}\cap L_{2}$
+\end_inset
+
+ רגולרית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+משפט
+\series default
+\color inherit
+:
+ קיים אלגוריתם 
+\begin_inset Formula $A$
+\end_inset
+
+ עבורו לכל אוטומטים סופיים 
+\begin_inset Formula $\mathcal{A},\mathcal{B}$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $A\left(\mathcal{A},\mathcal{B}\right)$
+\end_inset
+
+ אוטומט סופי וכן
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\lan\left(A\left(\mathcal{A},\mathcal{B}\right)\right)=\lan\left(\mathcal{A}\right)\cap\lan\left(\mathcal{B}\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $A\left(\mathcal{A},\mathcal{B}\right)$
+\end_inset
+
+ בעלת 
+\begin_inset Formula $\left|Q_{\mathcal{A}}\right|\cdot\left|Q_{\mathcal{B}}\right|$
+\end_inset
+
+ מצבים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+משפט
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $\Sigma_{1},\Sigma_{2}$
+\end_inset
+
+ אלפביתים תהא 
+\begin_inset Formula $f:\Sigma_{1}\to\Sigma_{2}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $L$
+\end_inset
+
+ שפה רגולרית מעל 
+\begin_inset Formula $\Sigma_{1}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(L\right)$
+\end_inset
+
+ רגולרית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+משפט
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $\Sigma_{1},\Sigma_{2}$
+\end_inset
+
+ אלפביתים תהא 
+\begin_inset Formula $f:\Sigma_{1}\to\Sigma_{2}$
+\end_inset
+
+ אזי קיים אלגוריתם 
+\begin_inset Formula $A$
+\end_inset
+
+ עבורו לכל אוטומט סופי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\Sigma_{1}$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $A\left(\mathcal{A}\right)$
+\end_inset
+
+ אוטומט סופי מעל 
+\begin_inset Formula $\Sigma_{2}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\lan\left(A\left(\mathcal{A}\right)\right)=\lan\left(f\left(\mathcal{A}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+משפט
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $\Sigma_{1},\Sigma_{2}$
+\end_inset
+
+ אלפביתים ותהא 
+\begin_inset Formula $L$
+\end_inset
+
+ שפה רגולרית מעל 
+\begin_inset Formula $\Sigma_{1}\times\Sigma_{2}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\pi_{1}\left(L\right),\pi_{2}\left(L\right)$
+\end_inset
+
+ רגולריות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+משפט
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ שפה רגולרית אזי 
+\begin_inset Formula $\text{co}L$
+\end_inset
+
+ רגולרית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+משפט
+\series default
+\color inherit
+:
+ קיים אלגוריתם 
+\begin_inset Formula $A$
+\end_inset
+
+ עבורו לכל אוטומט סופי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $A\left(\mathcal{A}\right)$
+\end_inset
+
+ אוטומט סופי וכן 
+\begin_inset Formula $\lan\left(A\left(\mathcal{A}\right)\right)=\lan\left(\text{co}\mathcal{A}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+:
+ קיימת שפה 
+\begin_inset Formula $L$
+\end_inset
+
+ עבורה לכל אוטומט סופי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\lan\left(\mathcal{A}\right)=\text{co}L$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ בעלת 
+\begin_inset Formula $2^{\min\left\{ \left|Q_{\mathcal{B}}\right|\mid\lan\left(\mathcal{B}\right)=L\right\} }$
+\end_inset
+
+ מצבים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+\begin_inset Formula $\omega$
+\end_inset
+
+־ריצה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ מערכת מעברים מסומנת אזי 
+\begin_inset Formula $\rho\in Q\times\left(\Sigma\times Q\right)^{\omega}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left(\rho_{i},\rho_{i+1},\rho_{i+2}\right)\in\Delta$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i<\omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הטלה של 
+\begin_inset Formula $\omega$
+\end_inset
+
+־ריצה על קבוצת המצבים
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ מערכת מעברים מסומנת ותהא 
+\begin_inset Formula $\rho$
+\end_inset
+
+ 
+\begin_inset Formula $\omega$
+\end_inset
+
+־ריצה אזי 
+\begin_inset Formula $p\in Q^{\omega}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $p_{i}=\rho_{2i-1}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i<\omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הטלה של 
+\begin_inset Formula $\omega$
+\end_inset
+
+־ריצה על האלפבית
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ מערכת מעברים מסומנת ותהא 
+\begin_inset Formula $\rho$
+\end_inset
+
+ 
+\begin_inset Formula $\omega$
+\end_inset
+
+־ריצה אזי 
+\begin_inset Formula $p\in\Sigma^{\omega}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $p_{i}=\rho_{2i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i<\omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+\begin_inset Formula $\omega$
+\end_inset
+
+־ריצה על מחרוזת
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ מערכת מעברים מסומנת ותהא 
+\begin_inset Formula $w\in\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\omega$
+\end_inset
+
+־ריצה 
+\begin_inset Formula $\rho$
+\end_inset
+
+ עבורה ההטלה של 
+\begin_inset Formula $\rho$
+\end_inset
+
+ על 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ הינה 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\buchi}{\text{\textsf{Büchi}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+אוטומט 
+\begin_inset Formula $\buchi$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית תהא 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ מערכת מעברים מסומנת באשר 
+\begin_inset Formula $\left|\Delta\right|<\aleph_{0}$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $S,F\subseteq Q$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(Q,\Sigma,\Delta,S,F\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+\begin_inset Formula $\omega$
+\end_inset
+
+־ריצה מתקבלת על ידי אוטומט 
+\begin_inset Formula $\buchi$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אוטומט 
+\begin_inset Formula $\buchi$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\omega$
+\end_inset
+
+־ריצה 
+\begin_inset Formula $\rho$
+\end_inset
+
+ של 
+\begin_inset Formula $\Delta_{\mathcal{A}}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\rho_{1}\in S_{\mathcal{A}}$
+\end_inset
+
+ וכן
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left|\left\{ i<\omega\mid\rho_{i}\in F_{\mathcal{A}}\right\} \right|=\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מחרוזת מתקבלת על ידי אוטומט 
+\begin_inset Formula $\buchi$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אוטומט 
+\begin_inset Formula $\buchi$
+\end_inset
+
+ אזי 
+\begin_inset Formula $w\in\Sigma_{\mathcal{A}}^{\omega}$
+\end_inset
+
+ עבורו קיימת 
+\begin_inset Formula $\omega$
+\end_inset
+
+־ריצה 
+\begin_inset Formula $\rho$
+\end_inset
+
+ על 
+\begin_inset Formula $w$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\rho$
+\end_inset
+
+ מתקבלת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+שפה של אוטומט 
+\begin_inset Formula $\buchi$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אוטומט 
+\begin_inset Formula $\buchi$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lan\left(\mathcal{A}\right)=\left\{ w\in\Sigma_{\mathcal{A}}^{\omega}\bmid\mathcal{A}\text{ מתקבלת על ידי }w\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+אוטומטיי 
+\begin_inset Formula $\buchi$
+\end_inset
+
+ שקולים
+\series default
+\color inherit
+:
+ אוטומטיי 
+\begin_inset Formula $\buchi$
+\end_inset
+
+ 
+\begin_inset Formula $\mathcal{A},\mathcal{B}$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\lan\left(\mathcal{A}\right)=\lan\left(\mathcal{B}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+אוטומט 
+\begin_inset Formula $\buchi$
+\end_inset
+
+ דטרמיניסטי (אב
+\begin_inset Quotes erd
+\end_inset
+
+ד)
+\series default
+\color inherit
+:
+ אוטומט 
+\begin_inset Formula $\buchi$
+\end_inset
+
+ 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\left|S_{\mathcal{A}}\right|=1$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\Delta_{\mathcal{A}}$
+\end_inset
+
+ דטרמיניסטית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+אוטומט 
+\begin_inset Formula $\buchi$
+\end_inset
+
+ לא־דטרמיניסטי (אבל
+\begin_inset Quotes erd
+\end_inset
+
+ד)
+\series default
+\color inherit
+:
+ אוטומט 
+\begin_inset Formula $\buchi$
+\end_inset
+
+ 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אינו דטרמיניסטי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הגדרה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $L_{\text{fin},a}=\left\{ w\in\left\{ a,b\right\} ^{\omega}\bmid\left|w^{-1}\left[\left\{ a\right\} \right]\right|<\omega\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+:
+ קיים אבל
+\begin_inset Quotes erd
+\end_inset
+
+ד 
+\begin_inset Formula $\mathcal{N}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\lan\left(\mathcal{N}\right)=L_{\text{fin},a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+:
+ לא קיים אב
+\begin_inset Quotes erd
+\end_inset
+
+ד 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\lan\left(\mathcal{D}\right)=L_{\text{fin},a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+מה אומר המשפט 
+\begin_inset Quotes eld
+\end_inset
+
+
+\lang english
+NBA are closed under Boolean operations and projection.
+\lang hebrew
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\muller}{\text{\textsf{Muller}}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\Inf}{\text{Inf}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+אוטומט 
+\begin_inset Formula $\muller$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית תהא 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ מערכת מעברים מסומנת באשר 
+\begin_inset Formula $\left|\Delta\right|<\aleph_{0}$
+\end_inset
+
+ תהיינה 
+\begin_inset Formula $S,F\subseteq Q$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\mathfrak{J}\subseteq2^{Q_{\mathcal{A}}}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(Q,\Sigma,\Delta,S,F,\mathfrak{J}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הגדרה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אוטומט 
+\begin_inset Formula $\muller$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\rho$
+\end_inset
+
+ 
+\begin_inset Formula $\omega$
+\end_inset
+
+־ריצה אזי 
+\begin_inset Formula $\Inf\left(\rho\right)=\left\{ q\in Q_{\mathcal{A}}\mid\left|\rho^{-1}\left[\left\{ q\right\} \right]\right|=\omega\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+\begin_inset Formula $\omega$
+\end_inset
+
+־ריצה מתקבלת על ידי אוטומט 
+\begin_inset Formula $\muller$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אוטומט 
+\begin_inset Formula $\muller$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\omega$
+\end_inset
+
+־ריצה 
+\begin_inset Formula $\rho$
+\end_inset
+
+ של 
+\begin_inset Formula $\Delta_{\mathcal{A}}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\rho_{1}\in S_{\mathcal{A}}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\Inf\left(\rho\right)\in\mathfrak{J}_{\mathcal{A}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מחרוזת מתקבלת על ידי אוטומט 
+\begin_inset Formula $\muller$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אוטומט 
+\begin_inset Formula $\muller$
+\end_inset
+
+ אזי 
+\begin_inset Formula $w\in\Sigma_{\mathcal{A}}^{\omega}$
+\end_inset
+
+ עבורו קיימת 
+\begin_inset Formula $\omega$
+\end_inset
+
+־ריצה 
+\begin_inset Formula $\rho$
+\end_inset
+
+ על 
+\begin_inset Formula $w$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\rho$
+\end_inset
+
+ מתקבלת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+שפה של אוטומט 
+\begin_inset Formula $\muller$
+\end_inset
+
+
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אוטומט 
+\begin_inset Formula $\muller$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lan\left(\mathcal{A}\right)=\left\{ w\in\Sigma_{\mathcal{A}}^{\omega}\bmid\mathcal{A}\text{ מתקבלת על ידי }w\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+אוטומטיי 
+\begin_inset Formula $\muller$
+\end_inset
+
+ שקולים
+\series default
+\color inherit
+:
+ אוטומטיי 
+\begin_inset Formula $\muller$
+\end_inset
+
+ 
+\begin_inset Formula $\mathcal{A},\mathcal{B}$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\lan\left(\mathcal{A}\right)=\lan\left(\mathcal{B}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+אוטומט 
+\begin_inset Formula $\muller$
+\end_inset
+
+ דטרמיניסטי (אמ
+\begin_inset Quotes erd
+\end_inset
+
+ד)
+\series default
+\color inherit
+:
+ אוטומט 
+\begin_inset Formula $\muller$
+\end_inset
+
+ 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\left|S_{\mathcal{A}}\right|=1$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\Delta_{\mathcal{A}}$
+\end_inset
+
+ דטרמיניסטית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+אוטומט 
+\begin_inset Formula $\muller$
+\end_inset
+
+ לא־דטרמיניסטי (אמל
+\begin_inset Quotes erd
+\end_inset
+
+ד)
+\series default
+\color inherit
+:
+ אוטומט 
+\begin_inset Formula $\muller$
+\end_inset
+
+ 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אינו דטרמיניסטי.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+מה אומר המשפט 
+\begin_inset Quotes eld
+\end_inset
+
+
+\lang english
+NMA are closed under Boolean operations and projection.
+\lang hebrew
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+:
+ אמל
+\begin_inset Quotes erd
+\end_inset
+
+ד ואמ
+\begin_inset Quotes erd
+\end_inset
+
+ד הינם מודלים שקולים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+:
+ אמל
+\begin_inset Quotes erd
+\end_inset
+
+ד ואבל
+\begin_inset Quotes erd
+\end_inset
+
+ד הינם מודלים שקולים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
