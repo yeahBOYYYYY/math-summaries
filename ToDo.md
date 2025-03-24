@@ -8,8 +8,8 @@ Courses I still need to do.
 |--------------------|-------|------------------|-----|-----|----|
 | number theory      |       | 22/03/25         | 2   | 1   | 0  |
 | complex analysis 2 |       | 23/03/25         | 2   | -   | 0  |
-| galois, fields     |       | 22/03/25         | 2   | 1   | 0  |
-| auto, logic, games |       | 16/03/25         | 0   | -   | 0  |
+| galois, fields     |       | 24/03/25         | 3   | 1   | 0  |
+| auto, logic, games |       | 24/03/25         | 1   | -   | 0  |
 | computation by lin |       | 16/03/25         | 0   | 0   | 0  |
 | machine learning   |       | 16/03/25         | 0   | 0   | 0  |
 
