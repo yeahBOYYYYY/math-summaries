@@ -1,4 +1,5 @@
 from enum import StrEnum
+from tkinter import filedialog
 
 
 BOLD = "\\begin_layout Standard\n\n\\series bold"
@@ -88,17 +89,17 @@ def colorChanges(path: str, from_color: Color = Color.BLACK, from_line: int = 0,
     open(path, 'w', encoding='utf-8').write(res)
 
 
+def open_file_selection() -> str:
+    """
+    This function opens file selctor panel.
+    """
+    file = filedialog.askopenfile()
+    if file:
+        return file.name
+    else:
+        raise ValueError("File not selcted")
+
+
 if __name__ == "__main__":
-    # path = 'calculus_4_lbl.lyx'
-    # color = 'teal'
-    # from_line = 10281
-    # to_line = 11306
-
-    # colorAbsolute(path, color, from_line, to_line)
-
-    absulote_path = r"E:\University\!Summaries\lbl\\"
-    # absulote_path = r"C:\Users\user\OneDrive\Documents\summaries\lbl\\"
-    # absulote_path = r"./lbl/"
-
-    path = "fields_galois_lbl.lyx"
-    colorChanges(absulote_path + path)
+    path: str = open_file_selection()
+    colorChanges(path)
