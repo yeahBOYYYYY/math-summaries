@@ -67,11 +67,11 @@ function getPopupCode(popup_name, display_name, courses){
     return pre + pdf_button_envoke + post;
 }
 
-function openPopup(popupId) {
+export function openPopup(popupId) {
     document.getElementById(popupId).style.display = "flex";
 }
 
-function closePopup(event, popupId) {
+export function closePopup(event, popupId) {
     if (!event || event.target === document.getElementById(popupId)) {
         document.getElementById(popupId).style.display = "none";
     }
