@@ -215,7 +215,7 @@ literal "true"
 \end_inset
 
  קבוצה אזי 
-\begin_inset Formula $\Delta\subseteq Q\times\Sigma\times V$
+\begin_inset Formula $\Delta\subseteq V\times\Sigma\times V$
 \end_inset
 
 .
@@ -1706,8 +1706,8 @@ NBA are closed under Boolean operations and projection.
 \begin_inset Formula $\left|\Delta\right|<\aleph_{0}$
 \end_inset
 
- תהיינה 
-\begin_inset Formula $S,F\subseteq Q$
+ תהא 
+\begin_inset Formula $S\subseteq Q$
 \end_inset
 
  ותהא 
@@ -1715,7 +1715,7 @@ NBA are closed under Boolean operations and projection.
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(Q,\Sigma,\Delta,S,F,\mathfrak{J}\right)$
+\begin_inset Formula $\left(Q,\Sigma,\Delta,S,\mathfrak{J}\right)$
 \end_inset
 
 .
@@ -1998,7 +1998,7 @@ NMA are closed under Boolean operations and projection.
 \begin_inset Quotes erd
 \end_inset
 
-ד ואמ
+ד ואבל
 \begin_inset Quotes erd
 \end_inset
 
@@ -2017,7 +2017,7 @@ NMA are closed under Boolean operations and projection.
 \begin_inset Quotes erd
 \end_inset
 
-ד ואבל
+ד ואמ
 \begin_inset Quotes erd
 \end_inset
 
@@ -2029,6 +2029,361 @@ NMA are closed under Boolean operations and projection.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\emp}{\text{Emp}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית הריקנות
+\series default
+:
+ 
+\begin_inset Formula $\emp=\left\{ \left<\mathcal{A}\right>\mid\left(\text{\buchi\ אוטומט }\mathcal{A}\right)\land\left(\lan\left(\mathcal{A}\right)=\emptyset\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\poly}{\text{poly}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ קיים אלגוריתם דטרמיניסטי המכריע את 
+\begin_inset Formula $\emp$
+\end_inset
+
+ בעל סיבוכיות ריצה 
+\begin_inset Formula $\poly\left(n\right)$
+\end_inset
+
+ וסיבוכיות מקום 
+\begin_inset Formula $\poly\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ קיים אלגוריתם לא־דטרמיניסטי המכריע את 
+\begin_inset Formula $\emp$
+\end_inset
+
+ בעל סיבוכיות ריצה 
+\begin_inset Formula $\poly\left(n\right)$
+\end_inset
+
+ וסיבוכיות מקום 
+\begin_inset Formula $\log^{2}\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מחרוזת מחזורית החל ממקום מסויים
+\series default
+:
+ מחרוזת 
+\begin_inset Formula $s\in\Sigma^{\omega}$
+\end_inset
+
+ עבורה קיימים 
+\begin_inset Formula $p,N\in\bbn$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $s\left(i\right)=s\left(i+p\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i>N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אוטומט 
+\begin_inset Formula $\buchi$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\lan\left(\mathcal{A}\right)\ne\emptyset$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $s\in\Sigma^{\omega}$
+\end_inset
+
+ מחזורית החל ממקום מסויים המקיימת 
+\begin_inset Formula $s\in\lan\left(\mathcal{A}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\uni}{\text{Uni}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\inc}{\text{Inc}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית האוניברסיליות
+\series default
+:
+ 
+\begin_inset Formula $\uni=\left\{ \left<\mathcal{A}\right>\mid\left(\buchi\text{ אוטומט }\mathcal{A}\right)\land\left(\lan\left(\mathcal{A}\right)=\Sigma^{\omega}\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית ההכלה
+\series default
+:
+ 
+\begin_inset Formula $\inc=\left\{ \left<\mathcal{A},\mathcal{B}\right>\mid\left(\buchi\text{ אוטומטיי }\mathcal{A},\mathcal{B}\right)\land\left(\lan\left(\mathcal{A}\right)\subseteq\lan\left(\mathcal{B}\right)\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\pspace}{\text{PSPACE}}
+{\text{PSPACE}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ 
+\begin_inset Formula $\uni,\inc$
+\end_inset
+
+ הינן 
+\begin_inset Formula $\pspace$
+\end_inset
+
+־שלמות.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\rabin}{\text{Rabin}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תנאי 
+\begin_inset Formula $\rabin$
+\end_inset
+
+
+\series default
+:
+ תהיינה 
+\begin_inset Formula $F_{1}\ldots F_{n},G_{1}\ldots G_{n}\subseteq Q$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $\mathfrak{J}_{\rabin}=\left\{ P\subseteq Q\mid\exists i\in\left[n\right].\left(P\cap F_{i}\ne\emptyset\right)\land\left(P\cap G_{i}=\emptyset\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אוטומט 
+\begin_inset Formula $\rabin$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית תהא 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ מערכת מעברים מסומנת באשר 
+\begin_inset Formula $\left|\Delta\right|<\aleph_{0}$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $S,F_{1}\ldots F_{n},G_{1}\ldots G_{n}\subseteq Q$
+\end_inset
+
+ אזי אוטומט 
+\begin_inset Formula $\muller$
+\end_inset
+
+ 
+\begin_inset Formula $\left(Q,\Sigma,\Delta,S,\mathfrak{J}_{\rabin}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\street}{\text{Street}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תנאי 
+\begin_inset Formula $\street$
+\end_inset
+
+
+\series default
+:
+ תהיינה 
+\begin_inset Formula $F_{1}\ldots F_{n},G_{1}\ldots G_{n}\subseteq Q$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $\mathfrak{J}_{\street}=\left\{ P\subseteq Q\mid\forall i\in\left[n\right].\left(P\cap F_{i}=\emptyset\right)\lor\left(P\cap G_{i}\ne\emptyset\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אוטומט 
+\begin_inset Formula $\street$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית תהא 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ מערכת מעברים מסומנת באשר 
+\begin_inset Formula $\left|\Delta\right|<\aleph_{0}$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $S,F_{1}\ldots F_{n},G_{1}\ldots G_{n}\subseteq Q$
+\end_inset
+
+ אזי אוטומט 
+\begin_inset Formula $\muller$
+\end_inset
+
+ 
+\begin_inset Formula $\left(Q,\Sigma,\Delta,S,\mathfrak{J}_{\street}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מתמר/
+\begin_inset Formula $\text{Transducer}$
+\end_inset
+
+
+\series default
+:
+ יהיו 
+\begin_inset Formula $\Sigma,\Pi$
+\end_inset
+
+ אלפביתים תהא 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ מערכת מעברים מסומנת שלמה ודטרמיניסטית מעל 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ יהי 
+\begin_inset Formula $s\in Q_{\Delta}$
+\end_inset
+
+ ...
+\end_layout
+
+\begin_layout Standard
+...
 \end_layout
 
 \end_body
