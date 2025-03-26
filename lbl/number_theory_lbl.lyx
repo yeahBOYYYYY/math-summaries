@@ -1393,6 +1393,15 @@ literal "true"
 \begin_layout Standard
 
 \series bold
+הערה
+\series default
+:
+ בסיבוכיות של אלגוריתמים מספריים נתייחס לסיבוכיות כפונקציה של אורך המספר בבינארי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 \color blue
 טענה
 \series default
@@ -1402,19 +1411,7 @@ literal "true"
 \begin_inset Formula $A$
 \end_inset
 
- עבורו לכל 
-\begin_inset Formula $a,b\in\bbn$
-\end_inset
-
- מתקיים 
-\begin_inset Formula $A\left(a,b\right)=a+b$
-\end_inset
-
- וכן 
-\begin_inset Formula $A$
-\end_inset
-
- רץ בסיבוכיות 
+ המחשב חיבור מספרים בסיבוכיות ריצה 
 \begin_inset Formula $\O\left(n\right)$
 \end_inset
 
@@ -1433,19 +1430,7 @@ literal "true"
 \begin_inset Formula $A$
 \end_inset
 
- עבורו לכל 
-\begin_inset Formula $a,b\in\bbn$
-\end_inset
-
- מתקיים 
-\begin_inset Formula $A\left(a,b\right)=ab$
-\end_inset
-
- וכן 
-\begin_inset Formula $A$
-\end_inset
-
- רץ בסיבוכיות 
+ המחשב כפל מספרים בסיבוכיות ריצה 
 \begin_inset Formula $\O\left(n^{2}\right)$
 \end_inset
 
@@ -1726,19 +1711,7 @@ end{algorithm}
 \begin_inset Formula $A$
 \end_inset
 
- עבורו לכל 
-\begin_inset Formula $a,b\in\bbn$
-\end_inset
-
- מתקיים 
-\begin_inset Formula $A\left(a,b\right)=ab$
-\end_inset
-
- וכן 
-\begin_inset Formula $A$
-\end_inset
-
- רץ בסיבוכיות 
+ המחשב כפל מספרים בסיבוכיות ריצה 
 \begin_inset Formula $\O\left(n\log\left(n\right)\log\log\left(n\right)\right)$
 \end_inset
 
@@ -1985,10 +1958,710 @@ end{algorithm}
 \end_inset
 
  הינה 
-\begin_inset Formula $\O\left(\min\left\{ \log\left(\left|a\right|\right),\log\left(\left|b\right|\right)\right\} \right)$
+\begin_inset Formula $\O\left(n^{2}\right)$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $k\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(-1\right)^{k}F_{k-1}\cdot F_{k+1}+\left(-1\right)^{k+1}F_{k}F_{k}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ קיים אלגוריתם 
+\begin_inset Formula $A$
+\end_inset
+
+ המחשב 
+\begin_inset Formula $\gcd$
+\end_inset
+
+ בסיבוכיות ריצה 
+\begin_inset Formula $\O\left(n\log^{2}\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+כפולה משותפת 
+\color inherit
+מזערית
+\series default
+:
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $d\bbz=\bigcap_{i=1}^{n}a_{i}\bbz$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+סימון
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbz$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ הכפולה המשותפת המזערית של 
+\begin_inset Formula $a_{1}\ldots a_{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lcm\left(a_{1}\ldots a_{n}\right)=d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+סימון
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a_{1}\ldots a_{n}\right]=\lcm\left(a_{1}\ldots a_{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a_{i}|\lcm\left(a_{1}\ldots a_{n}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n},m\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a_{i}|m$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lcm\left(a_{1}\ldots a_{n}\right)|m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbz\backslash\left\{ 0\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lcm\left(a_{1}\ldots a_{n}\right)=\min\left\{ m\in\bbn_{+}\mid\forall i\in\left[n\right].\left(a_{i}|m\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהיו 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a\ne0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(a|b\right)\iff\left(\frac{b}{a}\in\bbz\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהיו 
+\begin_inset Formula $a,b,c\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(a|b\right)\iff\left(ac|bc\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $a,b\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a,b\right]=\frac{ab}{\left(a,b\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a_{1},\ldots,a_{n}\right]=\left[\left|a_{1}\right|,\ldots,\left|a_{n}\right|\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מספרים זרים
+\series default
+:
+ מספרים 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\left(a,b\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ זרים אזי 
+\begin_inset Formula $\left[a,b\right]=\left|ab\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbz$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a_{1}\ldots a_{n}\right]=\left[\left[a_{1}\ldots a_{n-1}\right],a_{n}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מספר ראשוני
+\series default
+:
+ מספר 
+\begin_inset Formula $p\in\bbn_{\ge2}$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $a,b\in\bbn_{\ge2}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $ab\ne p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ 
+\begin_inset Formula $\bbp=\left\{ p\in\bbn\mid\text{ ראשוני}p\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מספר פריק
+\series default
+:
+ מספר 
+\begin_inset Formula $m\in\bbn_{\ge2}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $m\notin\bbp$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $p|ab$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(p|a\right)\lor\left(p|b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $a,b\in\bbz$
+\end_inset
+
+ אם 
+\begin_inset Formula $n|ab$
+\end_inset
+
+ אז 
+\begin_inset Formula $\left(n|a\right)\lor\left(n|b\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $n\in\left\{ 0,\pm1\right\} \cup\left(\pm\bbp\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $p|\prod_{i=1}^{n}a_{i}$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $p|a_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{\ge2}$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $p|n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם הנפה של ארטוסתנס
+\series default
+:
+ ...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $N\in\bbn$
+\end_inset
+
+ אזי אלגוריתם ארטוסתנס מחשב את הראשוניים עד 
+\begin_inset Formula $N$
+\end_inset
+
+ בסיבוכיות 
+\begin_inset Formula $\O\left(\left(\sum_{p\in\bbp_{\le N}}\frac{1}{p}\right)\cdot N\right)$
+\end_inset
+
+.
+ ...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה אטקין־ברנסטיין
+\series default
+:
+ קיים אלגוריתם 
+\begin_inset Formula $\O\left(N\right)$
+\end_inset
+
+ שעושה אותו דבר.
+ ...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט היסודי של האריתמטיקה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי קיימים ויחידים 
+\begin_inset Formula $p_{1}\ldots p_{k}\in\bbp$
+\end_inset
+
+ באשר 
+\begin_inset Formula $p_{i}<p_{i+1}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[k-1\right]$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $n=\prod_{i=1}^{k}p_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ אזי 
+\begin_inset Formula $e_{p}\left(n\right)=\max\left\{ m\in\bbn\mid\left(p^{m}|n\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ אזי 
+\begin_inset Formula $p^{e_{p}\left(n\right)}\|n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $n=\prod_{p\in\bbp}p^{e_{p}\left(n\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,m\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ אזי 
+\begin_inset Formula $e_{p}\left(mn\right)=e_{p}\left(m\right)+e_{p}\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,m\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(m|n\right)\iff\left(\forall p\in\bbp.e_{p}\left(m\right)\le e_{p}\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(a_{1}\ldots a_{n}\right)=\prod_{p\in\bbp}p^{\min\left\{ e_{p}\left(a_{i}\right)\mid i\in\left[n\right]\right\} }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a_{1}\ldots a_{n}\right]=\prod_{p\in\bbp}p^{\max\left\{ e_{p}\left(a_{i}\right)\mid i\in\left[n\right]\right\} }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,m\in\bbn_{+}$
+\end_inset
+
+ אזי (
+\begin_inset Formula $m,n$
+\end_inset
+
+ זרים)
+\begin_inset Formula $\iff$
+\end_inset
+
+(לא קיים 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $p|m$
+\end_inset
+
+ וכן 
+\begin_inset Formula $p|n$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
