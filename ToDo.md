@@ -6,11 +6,11 @@ Courses I still need to do.
 
 | Name               | Notes | Last lec updated | Lec | Rec | HW |
 |--------------------|-------|------------------|-----|-----|----|
-| number theory      |       | 22/03/25         | 2   | 1   | 0  |
-| complex analysis 2 |       | 27/03/25         | 4   | -   | 0  |
-| galois, fields     |       | 25/03/25         | 3   | 2   | 0  |
-| auto, logic, games |       | 27/03/25         | 2   | -   | 0  |
+| number theory      |       | 29/03/25         | 4   | 2   | 1  |
+| galois, fields     |       | 29/03/25         | 3   | 2   | 0  |
+| auto, logic, games |       | 29/03/25         | 2   | -   | 0  |
 | computation by lin |       | 16/03/25         | 0   | 0   | 0  |
+| complex analysis 2 |       | 29/03/25         | 4   | -   | 0  |
 | machine learning   |       | 16/03/25         | 0   | 0   | 0  |
 
 ### 25A
