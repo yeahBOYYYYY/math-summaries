@@ -7,7 +7,7 @@ Courses I still need to do.
 | Name               | Notes | Last lec updated | Lec | Rec | HW |
 |--------------------|-------|------------------|-----|-----|----|
 | number theory      |       | 29/03/25         | 4   | 2   | 1  |
-| galois, fields     |       | 29/03/25         | 3   | 2   | 0  |
+| galois, fields     |       | 04/04/25         | 6   | 3   | 2  |
 | auto, logic, games |       | 29/03/25         | 2   | -   | 0  |
 | computation by lin |       | 16/03/25         | 0   | 0   | 0  |
 | complex analysis 2 |       | 29/03/25         | 4   | -   | 0  |
