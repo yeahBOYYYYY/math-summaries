@@ -75,6 +75,9 @@
 \usepackage{color}
 \setlength{\columnseprule}{1pt}
 \def\columnseprulecolor{\color{black}}
+
+
+\DeclareMathOperator{\degtr}{\mathrm{degtr}}
 \end_preamble
 \options no-math
 \use_default_options true
@@ -1029,6 +1032,19 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+חוג השלמים של גאוס
+\series default
+:
+ 
+\begin_inset Formula $\bbz\left[i\right]=\bbz+i\bbz$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
@@ -1362,6 +1378,19 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\nicefrac{\bbz\left[x\right]}{\left(x^{2}+1\right)}\simeq\bbz\left[i\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 \color blue
 אידאל אמיתי
 \series default
@@ -1538,7 +1567,7 @@ status collapsed
 \end_inset
 
  לא מתקיים 
-\begin_inset Formula $I\subseteq J$
+\begin_inset Formula $I\subsetneq J$
 \end_inset
 
 .
@@ -3190,7 +3219,7 @@ g\left(s_{1}\ldots s_{n}\right)\ne0
 \begin_inset Formula $\bbl/\bbk$
 \end_inset
 
- הרבה ויהי 
+ הרחבה ויהי 
 \begin_inset Formula $\a\in\bbl$
 \end_inset
 
@@ -3322,7 +3351,7 @@ g\left(s_{1}\ldots s_{n}\right)\ne0
 
 \series bold
 \color green
-דרגת הרחבה
+דרגה של הרחבה
 \series default
 \color inherit
 :
@@ -4164,7 +4193,7 @@ status collapsed
 \begin_layout Standard
 
 \series bold
-הרחבה טרנסצנדנטית
+הרחבה טרנסצנדנטית פשוטה
 \series default
 :
  הרחבה 
@@ -4175,12 +4204,8 @@ status collapsed
 \begin_inset Formula $\a\in\bbl$
 \end_inset
 
- באשר 
-\begin_inset Formula $\a$
-\end_inset
-
- אינו אלגברי מעל 
-\begin_inset Formula $\bbk$
+ טרנסצנדטי המקיים 
+\begin_inset Formula $\bbl=\bbk\left(\a\right)$
 \end_inset
 
 .
@@ -4336,11 +4361,7 @@ status collapsed
 \end_inset
 
  הרחבה יהיו 
-\begin_inset Formula $u_{1}\ldots u_{m}\in\bbl$
-\end_inset
-
- ויהי 
-\begin_inset Formula $v\in\bbl$
+\begin_inset Formula $u_{1}\ldots u_{m},v\in\bbl$
 \end_inset
 
  באשר 
@@ -4381,6 +4402,637 @@ status collapsed
 
  מעל 
 \begin_inset Formula $\bbk$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה יהיו 
+\begin_inset Formula $u_{1}\ldots u_{m},v_{1}\ldots v_{n},w\in\bbl$
+\end_inset
+
+ באשר 
+\begin_inset Formula $w$
+\end_inset
+
+ תלוי אלגברית ב־
+\begin_inset Formula $v_{1}\ldots v_{n}$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ וכן 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+ תלוי אלגברית ב־
+\begin_inset Formula $u_{1}\ldots u_{m}$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ לכל 
+\begin_inset Formula $j\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $w$
+\end_inset
+
+ תלוי אלגברית ב־
+\begin_inset Formula $u_{1}\ldots u_{m}$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbk$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קבוצה בלתי תלויה אלגברית/טרנסצנדנטיים בלתי תלויים אלגברית זה בזה (בת
+\begin_inset Quotes erd
+\end_inset
+
+א)
+\series default
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה אזי 
+\begin_inset Formula $u_{1}\ldots u_{m}\in\bbl$
+\end_inset
+
+ עבורם לכל 
+\begin_inset Formula $f\in\bbk\left[x_{1}\ldots x_{m}\right]$
+\end_inset
+
+ מתקיים כי אם 
+\begin_inset Formula $f\left(u_{1}\ldots u_{m}\right)=0$
+\end_inset
+
+ אז 
+\begin_inset Formula $f=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה ויהיו 
+\begin_inset Formula $u_{1}\ldots u_{m}\in\bbl$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+א מעל 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbk\left(u_{1}\ldots u_{m}\right)\simeq\bbk\left(x_{1}\ldots x_{m}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קבוצה בלתי תלויה אלגברית (בת
+\begin_inset Quotes erd
+\end_inset
+
+א)
+\series default
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה אזי 
+\begin_inset Formula $\mathcal{B}\subseteq\bbl$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $S\subseteq\mathcal{B}$
+\end_inset
+
+ סופית ולכל 
+\begin_inset Formula $f\in\bbk\left[x_{1},\ldots,x_{\left|S\right|}\right]$
+\end_inset
+
+ מתקיים כי אם 
+\begin_inset Formula $f\left(S\right)=0$
+\end_inset
+
+ אז 
+\begin_inset Formula $f=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה תהא 
+\begin_inset Formula $\mathcal{I}$
+\end_inset
+
+ קבוצה ותהא 
+\begin_inset Formula $\left\{ u_{\a}\right\} _{\a\in\mathcal{I}}\subseteq\bbl$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+א מעל 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbk\left(\left\{ u_{\a}\right\} _{\a\in\mathcal{I}}\right)\simeq\bbk\left(\left\{ x_{\a}\right\} _{\a\in\mathcal{I}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בסיס טרנסצנדנטי של הרחבה
+\series default
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה שאינה אלגברית אזי 
+\begin_inset Formula $\mathcal{B}\subseteq\bbl$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+א מעל 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $\mathcal{A}\subseteq\bbl$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+א מעל 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\mathcal{B}\not\subset\mathcal{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה שאינה אלגברית אזי קיים ל־
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ בסיס טרנסצנדנטי.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\degtr}{\mathrm{degtr}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הרחבה טרנסצנדנטית
+\series default
+:
+ הרחבה 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ עבורה קיימת קבוצה 
+\begin_inset Formula $\mathcal{I}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\bbl/\bbk\simeq\bbk\left(\left\{ x_{\a}\right\} _{\a\in\mathcal{I}}\right)/\bbk$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה משפט הפיצול
+\series default
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה אזי קיים שדה 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbl/\bbf,\bbf/\bbk$
+\end_inset
+
+ הרחבות המקיים כי 
+\begin_inset Formula $\bbf/\bbk$
+\end_inset
+
+ הרחבה טרנסצנדנטית וכן 
+\begin_inset Formula $\bbl/\bbf$
+\end_inset
+
+ הרחבה אלגברית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קבוצות שקולות אלגברית
+\series default
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה אזי 
+\begin_inset Formula $A,B\subseteq\bbl$
+\end_inset
+
+ עבורן לכל 
+\begin_inset Formula $\a\in A$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $\a$
+\end_inset
+
+ אלגברי מעל 
+\begin_inset Formula $\bbk\left(B\right)$
+\end_inset
+
+ וכן לכל 
+\begin_inset Formula $\b\in B$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $\b$
+\end_inset
+
+ אלגברי מעל 
+\begin_inset Formula $\bbk\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה ותהא 
+\begin_inset Formula $A\subseteq\bbl$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $M\subseteq A$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+א מעל 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ באשר 
+\begin_inset Formula $A,M$
+\end_inset
+
+ שקולות אלגברית מעל 
+\begin_inset Formula $\bbk$
+\end_inset
+
+.
+ 
+\begin_inset Note Greyedout
+status collapsed
+
+\begin_layout Plain Layout
+דורש 
+\begin_inset Formula $\text{AC}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה ותהיינה 
+\begin_inset Formula $A,B\subseteq\bbl$
+\end_inset
+
+ באשר 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+ וכן 
+\begin_inset Formula $B$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+א אזי קיימת 
+\begin_inset Formula $M\subseteq A$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+א מעל 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ באשר 
+\begin_inset Formula $B\subseteq M$
+\end_inset
+
+ וכן 
+\begin_inset Formula $A,M$
+\end_inset
+
+ שקולות אלגברית מעל 
+\begin_inset Formula $\bbk$
+\end_inset
+
+.
+ 
+\begin_inset Note Greyedout
+status collapsed
+
+\begin_layout Plain Layout
+דורש 
+\begin_inset Formula $\text{AC}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה משפט ההחלפה
+\series default
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה ויהיו 
+\begin_inset Formula $a_{1}\ldots a_{r},b_{1}\ldots b_{s}\in\bbl$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left\{ b_{1}\ldots b_{s}\right\} $
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+א מעל 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b_{j}$
+\end_inset
+
+ תלוי אלגברית ב־
+\begin_inset Formula $a_{1}\ldots a_{r}$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ לכל 
+\begin_inset Formula $j\in\left[s\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $r\ge s$
+\end_inset
+
+ וכן קיימת 
+\begin_inset Formula $S\subseteq\left\{ a_{1}\ldots a_{r}\right\} $
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left|S\right|=s$
+\end_inset
+
+ עבורה 
+\begin_inset Formula $\left\{ a_{1}\ldots a_{r},b_{1}\ldots b_{s}\right\} \backslash S$
+\end_inset
+
+ שקולה אלגברית ל־
+\begin_inset Formula $\left\{ a_{1}\ldots a_{r}\right\} $
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbk$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה ותהיינה 
+\begin_inset Formula $A,B\subseteq\bbl$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+א שקולות אלגברית מעל 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|A\right|=\left|B\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה ויהיו 
+\begin_inset Formula $\mathcal{A},\mathcal{B}\subseteq\bbl$
+\end_inset
+
+ בסיסים טרנסצנדנטיים של 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|A\right|=\left|B\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+דרגה טרנסצנדנטית של הרחבה
+\series default
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה שאינה אלגברית ויהי 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ בסיס טרנסצנדנטי של 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\degtr_{\bbk}\left(\bbl\right)=\left|\mathcal{B}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהיינה 
+\begin_inset Formula $\bbf/\bbk,\bbl/\bbf$
+\end_inset
+
+ הרחבות אזי 
+\begin_inset Formula $\degtr_{\bbk}\left(\bbl\right)=\degtr_{\bbk}\left(\bbf\right)+\degtr_{\bbf}\left(\bbl\right)$
 \end_inset
 
 .
