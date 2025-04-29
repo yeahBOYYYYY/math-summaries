@@ -93,7 +93,7 @@ def open_file_selection() -> str:
     """
     This function opens file selctor panel.
     """
-    file = filedialog.askopenfile()
+    file = filedialog.askopenfile(filetypes=[("LyX files", "*.lyx")])
     if file:
         return file.name
     else:

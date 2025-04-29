@@ -474,6 +474,25 @@ literal "true"
 \begin_inset Formula $R$
 \end_inset
 
+ חוג אבלי בעל יחידה אזי 
+\begin_inset Formula $R\left[x_{1}\ldots x_{n+1}\right]=\left(R\left[x_{1}\ldots x_{n}\right]\right)\left[x_{n+1}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $R$
+\end_inset
+
  תחום שלמות ויהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
@@ -2123,6 +2142,53 @@ status collapsed
 
 \series bold
 \color red
+טענה קריטריון אייזנשטיין המוכלל
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה יהיו 
+\begin_inset Formula $a_{0}\ldots a_{n}\in\bbf\left[x_{1}\ldots x_{m}\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p\in\bbf\left[x_{1}\ldots x_{m}\right]$
+\end_inset
+
+ אי־פריק המקיים 
+\begin_inset Formula $p\nmid a_{n}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $p|a_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i<n$
+\end_inset
+
+ וכן 
+\begin_inset Formula $p^{2}\nmid a_{0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum_{i=0}^{n}a_{i}x^{i}$
+\end_inset
+
+ אי־פריק מעל 
+\begin_inset Formula $\bbf\left(x_{1}\ldots x_{m}\right)\left[x\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
 שורש של פולינום
 \series default
 \color inherit
@@ -2613,7 +2679,7 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\ch}{\text{char}}
+\renewcommand{\ch}{\text{char}}
 \end_inset
 
 
@@ -2699,6 +2765,37 @@ status collapsed
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ שדה המקיים 
+\begin_inset Formula $\ch\left(\bbk\right)=p$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(x+y\right)^{p}=x^{p}+y^{p}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x,y\in\bbk$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3708,6 +3805,21 @@ g\left(s_{1}\ldots s_{n}\right)\ne0
 
 \series bold
 \color magenta
+טענה המשפט היסודי של האלגברה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\bbc$
+\end_inset
+
+ שדה סגור אלגברית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
 הרחבה סגורה אלגברית
 \series default
 \color inherit
@@ -3878,7 +3990,11 @@ g\left(s_{1}\ldots s_{n}\right)\ne0
 \begin_inset Formula $\a_{0},\a_{1}\ldots\a_{n}\in\bbl$
 \end_inset
 
- המקיימים 
+ המקיימים
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $f=\a_{0}\cdot\prod_{i=1}^{n}\left(x-\a_{i}\right)$
 \end_inset
 
@@ -4041,7 +4157,7 @@ status collapsed
 \end_inset
 
  הרחבות סגורות אלגברית אזי 
-\begin_inset Formula $\bbf\simeq\bbl$
+\begin_inset Formula $\bbf/\bbk\simeq\bbl/\bbk$
 \end_inset
 
 .
@@ -4084,6 +4200,21 @@ status collapsed
 
  הרחבה אלגברית אזי קיים מונומורפיזם 
 \begin_inset Formula $\nu:\bbl/\bbk\to\overline{\bbk}/\bbk$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+טענה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\overline{\bbq_{\bbc}}=\overline{\bbq}$
 \end_inset
 
 .
@@ -5526,6 +5657,705 @@ status collapsed
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+איבר ספרבילי מעל שדה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה אלגברית אזי 
+\begin_inset Formula $\a\in\bbl$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $f_{\a}$
+\end_inset
+
+ בעלת שורשים פשוטים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+הרחבה ספרבילית
+\series default
+\color inherit
+:
+ הרחבה אלגברית 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $\a\in\bbl$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $\a$
+\end_inset
+
+ ספרבילי מעל 
+\begin_inset Formula $\bbk$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה אלגברית יהי 
+\begin_inset Formula $\a\in\bbl$
+\end_inset
+
+ ספרבילי מעל 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\bbf\subseteq\bbl$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbk\subseteq\bbf$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\a$
+\end_inset
+
+ ספרבילי מעל 
+\begin_inset Formula $\bbf$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה אלגברית באשר 
+\begin_inset Formula $\ch\left(\bbk\right)=0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה ספרבילית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה אלגברית באשר 
+\begin_inset Formula $\ch\left(\bbk\right)=p$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\a\in\bbl$
+\end_inset
+
+ אזי (
+\begin_inset Formula $f_{\a}$
+\end_inset
+
+ בעל שורש מרובה)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיים 
+\begin_inset Formula $g\in\bbk\left[x\right]$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $f_{\a}\left(x\right)=g\left(x^{p}\right)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה סופית באשר 
+\begin_inset Formula $\left[\bbl:\bbk\right]=n$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|\left\{ f:\bbl\to\overline{\bbk}\bmid\text{ מונומורפיזם}f\right\} \right|\le n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+(
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ ספרבילית)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\left|\left\{ f:\bbl\to\overline{\bbk}\bmid\text{ מונומורפיזם}f\right\} \right|=n$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה סופית ויהי 
+\begin_inset Formula $\bbf\subseteq\bbl$
+\end_inset
+
+ שדה באשר 
+\begin_inset Formula $\bbk\subseteq\bbf$
+\end_inset
+
+ אזי (
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ ספרבילית)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\bbl/\bbf,\bbf/\bbk$
+\end_inset
+
+ ספרביליות).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $\a_{1}\ldots\a_{m}\in\overline{\bbk}$
+\end_inset
+
+ אזי (
+\begin_inset Formula $\bbk\left(\a_{1}\ldots\a_{m}\right)/\bbk$
+\end_inset
+
+ ספרבילית)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\a_{1}\ldots\a_{m}$
+\end_inset
+
+ ספרביליים מעל 
+\begin_inset Formula $\bbk$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+שדה פריק
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $\bbl,\bbk$
+\end_inset
+
+ שדות אזי 
+\begin_inset Formula $\bbl\cdot\bbk=\bbl\left(\bbk\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ שדה ותהיינה 
+\begin_inset Formula $\bbl/\bbk,\bbf/\bbk$
+\end_inset
+
+ הרחבות ספרביליות אזי 
+\begin_inset Formula $\left(\bbl\cdot\bbf\right)/\bbk$
+\end_inset
+
+ ספרבילית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה סגור ספרבילי בשדה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה אזי 
+\begin_inset Formula $\left\{ \a\in\bbl\mid\bbk\text{ ספרבילי מעל }\a\right\} $
+\end_inset
+
+ שדה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+סגור ספרבילי
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ שדה אזי 
+\begin_inset Formula $\overline{\bbk}_{s}=\left\{ \a\in\overline{\bbk}\mid\bbk\text{ ספרבילי מעל }\a\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+שדה משוכלל
+\series default
+\color inherit
+:
+ שדה 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ עבורו לכל הרחבה 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $\bbl$
+\end_inset
+
+ ספרבילי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ שדה ויהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $\ch\left(\bbk\right)=0$
+\end_inset
+
+ אז 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ שדה משוכלל.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $\ch\left(\bbk\right)=p$
+\end_inset
+
+ אז (
+\begin_inset Formula $\bbk$
+\end_inset
+
+ שדה משוכלל)
+\begin_inset Formula $\iff$
+\end_inset
+
+(לכל 
+\begin_inset Formula $\a\in\bbk$
+\end_inset
+
+ קיים 
+\begin_inset Formula $\b\in\bbk$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\b^{p}=\a$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה סופי אזי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה משוכלל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+איבר פרימיטיבי
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה אזי 
+\begin_inset Formula $\a\in\bbl$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\bbl=\bbk\left(\a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט האיבר הפרימטיבי
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ שדה אינסופי ותהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה סופית ספרבילית אזי קיים 
+\begin_inset Formula $\a\in\bbl$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\bbl=\bbk\left(\a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+למה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ שדה ותהא 
+\begin_inset Formula $G\subseteq\bbk^{\times}$
+\end_inset
+
+ חבורה סופית אזי 
+\begin_inset Formula $G$
+\end_inset
+
+ ציקלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה סופי אזי 
+\begin_inset Formula $\bbf^{\times}$
+\end_inset
+
+ ציקלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+משפט האיבר הפרימיטיבי
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ שדה סופי ותהא 
+\begin_inset Formula $\bbl/\bbk$
+\end_inset
+
+ הרחבה סופית אזי קיים 
+\begin_inset Formula $\a\in\bbl$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\bbl=\bbk\left(\a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שורשי היחידה
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ שדה באשר 
+\begin_inset Formula $\ch\left(\bbk\right)=p$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\gcd\left(n,p\right)=1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu_{n}=\sols_{\overline{\bbk}}\left(x^{n}-1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ שדה באשר 
+\begin_inset Formula $\ch\left(\bbk\right)=p$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\gcd\left(n,p\right)=1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mu_{n}$
+\end_inset
+
+ חבורה ציקלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שורש יחידה פרימיטיבי
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ שדה באשר 
+\begin_inset Formula $\ch\left(\bbk\right)=p$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\gcd\left(n,p\right)=1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g\in\mu_{n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $g$
+\end_inset
+
+ יוצר של 
+\begin_inset Formula $\mu_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הרחבת גלואה
+\series default
+:
+ הרחבה סופית נורמלית וספרבילית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ ...
 \end_layout
 
 \end_body
