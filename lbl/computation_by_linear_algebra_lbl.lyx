@@ -196,6 +196,341 @@ literal "true"
 
 \begin_layout Standard
 
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה ויהיו 
+\begin_inset Formula $m,n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbf^{m\times n}=M_{m\times n}\left(\bbf\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מערכת משוואות לינארית
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה יהיו 
+\begin_inset Formula $m,n\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $M\in\bbf^{m\times n}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $t\in\bbf^{m}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(M,t,\bbf\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מרחק האמינג
+\series default
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה אזי נגדיר 
+\begin_inset Formula $\Delta:X^{n}\times X^{n}\to\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $\Delta\left(x,y\right)=\left|\left\{ i\in\left[m\right]\mid x_{i}\ne y_{i}\right\} \right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משקל האמינג
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה אזי נגדיר 
+\begin_inset Formula $w:\bbf^{n}\to\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $w\left(x\right)=\Delta\left(x,0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משקל האמינג יחסי
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה אזי נגדיר 
+\begin_inset Formula $rw:\bbf^{n}\to\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $rw\left(x\right)=\frac{1}{n}\cdot w\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\val}{\mathrm{Val}}
+{\text{Val}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ערך של מערכת משוואות לינארית
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(M,t,\bbf\right)$
+\end_inset
+
+ מערכת משוואות לינאריות אזי 
+\begin_inset Formula $\val\left(\left(M,t,\bbf\right)\right)=\min_{x\in\bbf^{n}}\left(\frac{1}{m}\cdot\Delta\left(Mx,t\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\cvpcs}{\mathrm{CVP\textrm{-}code\textrm{-}search}}
+{\text{CVP-code-search}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית חיפוש הוקטור הקרוב ביותר
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(M,t,\bbf\right)$
+\end_inset
+
+ מערכת משוואות לינאריות ויהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\cvpcs\left(\left(M,t,\bbf\right),\e\right)=v$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\norm{Mv-t}_{0}\le\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\cvpc}{\mathrm{CVP\textrm{-}code}}
+{\text{CVP-code}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית הוקטור הקרוב ביותר
+\series default
+:
+ 
+\begin_inset Formula $\cvpc=\left\{ \left<\left(M,t,\bbf\right),\e\right>\mid\val\left(\left(M,t,\bbf\right)\right)\le\e\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+טענה
+\series default
+:
+ הבעיות הן 
+\begin_inset Formula $\np$
+\end_inset
+
+־קשות עבור 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ כלשהו ...,
+ מוכח בהמשך על ידי רדוקציה מחתך מקסימלי.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\svpc}{\mathrm{SVP\textrm{-}code}}
+{\text{SVP-code}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית הוקטור הקצר ביותר
+\series default
+:
+ 
+\begin_inset Formula $\svpc=\left\{ \left<\left(M,0,\bbf\right),\e\right>\mid\exists v\ne0.\norm{Mv}_{0}\le\e\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\maxcut}{\mathrm{MaxCut}}
+{\text{MaxCut}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה ויהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $\vec{1}\in\bbf^{n}$
+\end_inset
+
+ כך 
+\begin_inset Formula $\left(\vec{1}\right)_{i}=1$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית החתך המקסימלי
+\series default
+:
+ 
+\begin_inset Formula $\maxcut=\left\{ \left<\left(M,\vec{1},\bbf_{2}\right),\e\right>\mid\left(\forall i\left(w\left(R_{i}\left(M\right)\right)=2\right)\right)\land\left(\left<\left(M,\vec{1},\bbf_{2}\right),\e\right>\in\cvpc\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\gap}{\text{GAP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+טענה
+\series default
+:
+ ...
+ הבעיה 
+\begin_inset Formula $\gap_{\left[\e,1-\e\right]}\cvpc$
+\end_inset
+
+ היא 
+\begin_inset Formula $\np$
+\end_inset
+
+־קשה.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+מסקנה
+\series default
+:
+ קירוב ...
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
