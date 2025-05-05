@@ -150,6 +150,11 @@ PackageOptions algorithm2e vlined
 \use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
+\branch Lec1
+\selected 0
+\filename_suffix 0
+\color background background
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -193,6 +198,11 @@ literal "true"
 
 
 \end_layout
+
+\begin_layout Standard
+\begin_inset Branch Lec1
+inverted 0
+status collapsed
 
 \begin_layout Standard
 
@@ -391,7 +401,7 @@ literal "true"
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -495,11 +505,33 @@ status open
 \end_inset
 
 
+\begin_inset FormulaMacro
+\newcommand{\promise}{\text{Promise-}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית המרווח לוקטור הקרוב ביותר
+\series default
+:
+ יהיו 
+\begin_inset Formula $a,b\in\left[0,1\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gap_{\left[a,b\right]}\cvpc=\gap_{\left[a,b\right]}\val$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -507,13 +539,20 @@ status open
 טענה
 \series default
 :
- ...
- הבעיה 
-\begin_inset Formula $\gap_{\left[\e,1-\e\right]}\cvpc$
+ לכל 
+\begin_inset Formula $\e>0$
 \end_inset
 
- היא 
-\begin_inset Formula $\np$
+ קיים שדה 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ בו 
+\begin_inset Formula $\gap_{\left[\e,1-\e\right]}\cvpc_{\bbf}$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\promise\np$
 \end_inset
 
 ־קשה.
@@ -531,6 +570,1432 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מטריצת משחק
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה אזי 
+\begin_inset Formula $M\in\bbf^{n\times m}$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $w\left(R_{i}\left(M\right)\right)=2$
+\end_inset
+
+ וכן קיים 
+\begin_inset Formula $j\in\left[m\right]$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\left(M\right)_{i,j}=1$
+\end_inset
+
+ וכן 
+\begin_inset Formula $R_{i}\left(M\right)\cdot\vec{1}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה תהא 
+\begin_inset Formula $M\in\bbf^{n\times m}$
+\end_inset
+
+ מטריצת משחק ויהי 
+\begin_inset Formula $t\in\bbf^{m}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\val_{1\leftrightarrow1}\left(\left(M,t,\bbf\right)\right)=\val\left(\left(M,t,\bbf\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\pcp}{\mathrm{PCP}}
+{\text{PCP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית המשחקים אחד על אחד
+\series default
+:
+ יהיו 
+\begin_inset Formula $a,b\in\left[0,1\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\pcp_{1\leftrightarrow1}\left[a,b\right]=\gap_{\left[a,b\right]}\val_{1\leftrightarrow1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ug}{\mathrm{UG}}
+{\text{UG}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית המשחקים היחודיים
+\series default
+:
+ יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ug\left(\e\right)=\pcp_{1\leftrightarrow1}\left[\e,1-\e\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+השערת המשחקים היחודיים
+\series default
+:
+ יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ug\left(\e\right)$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\promise\np$
+\end_inset
+
+־קשה.
+ 
+\begin_inset Note Greyedout
+status collapsed
+
+\begin_layout Plain Layout
+השערה פתוחה
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\interpol}{\mathrm{Interpol}}
+{\text{Interpol}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $m\in\bbn_{+}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $v,u\in\bbf^{m}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\interpol\left(u,v\right)=\left\{ t\in\bbf^{m}\mid\forall i\in\left[m\right].t_{i}\in\left\{ u_{i},v_{i}\right\} \right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה תהא 
+\begin_inset Formula $M\in\bbf^{n\times m}$
+\end_inset
+
+ מטריצת משחק ויהיו 
+\begin_inset Formula $u,v\in\bbf^{m}$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\val_{2\to1}\left(\left(M,\left\{ u,v\right\} ,\bbf\right)\right)=\min_{t\in\interpol\left(u,v\right)}\val\left(\left(M,t,\bbf\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית המשחקים שניים על אחד
+\series default
+:
+ יהיו 
+\begin_inset Formula $a,b\in\left[0,1\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\pcp_{2\to1}\left[a,b\right]=\gap_{\left[a,b\right]}\val_{2\to1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+משפט חות־מינזר־ספרא
+\series default
+:
+ יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\pcp_{2\to1}\left[\e,1-\e\right]$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\promise\np$
+\end_inset
+
+־קשה.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{1}{2}\ug\left(\e\right)=\pcp_{1\leftrightarrow1}\left[\frac{1}{2},1-\e\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{1}{2}\ug\left(\e\right)$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\promise\np$
+\end_inset
+
+־קשה.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מרחק האמינג
+\series default
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה אזי נגדיר 
+\begin_inset Formula $\Delta:X^{n}\times X^{n}\to\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $\Delta\left(x,y\right)=\left|\left\{ i\in\left[m\right]\mid x_{i}\ne y_{i}\right\} \right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משקל האמינג
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה אזי נגדיר 
+\begin_inset Formula $w:\bbf^{n}\to\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $w\left(x\right)=\Delta\left(x,0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קוד לתיקון שגיאות
+\series default
+:
+ יהיו 
+\begin_inset Formula $q,m\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{C}\subseteq\left[q\right]^{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+גודל האלפבית בקוד לתיקון שגיאות
+\series default
+:
+ יהיו 
+\begin_inset Formula $q,m\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\mathcal{C}\subseteq\left[q\right]^{m}$
+\end_inset
+
+ קוד לתיקון שגיאות אזי 
+\begin_inset Formula $q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+גודל הבלוק בקוד לתיקון שגיאות
+\series default
+:
+ יהיו 
+\begin_inset Formula $q,m\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\mathcal{C}\subseteq\left[q\right]^{m}$
+\end_inset
+
+ קוד לתיקון שגיאות אזי 
+\begin_inset Formula $m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מרחק בקוד לתיקון שגיאות
+\series default
+:
+ יהיו 
+\begin_inset Formula $q,m\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\mathcal{C}\subseteq\left[q\right]^{m}$
+\end_inset
+
+ קוד לתיקון שגיאות אזי 
+\begin_inset Formula $d\left[\mathcal{C}\right]=\min_{x\ne y}\Delta\left(x,y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מימד/קצב בקוד לתיקון שגיאות
+\series default
+:
+ יהיו 
+\begin_inset Formula $q,m\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\mathcal{C}\subseteq\left[q\right]^{m}$
+\end_inset
+
+ קוד לתיקון שגיאות אזי 
+\begin_inset Formula $r\left[\mathcal{C}\right]=\log_{q}\left|\mathcal{C}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ יהיו 
+\begin_inset Formula $q,m\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\mathcal{C}\subseteq\left[q\right]^{m}$
+\end_inset
+
+ קוד לתיקון שגיאות אזי נאמר כי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ הינו קוד 
+\begin_inset Formula $\left[m,r\left[\mathcal{C}\right],d\left[\mathcal{C}\right],q\right]$
+\end_inset
+
+ לתיקון שגיאות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות יהי 
+\begin_inset Formula $w\in\mathcal{C}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $w^{\prime}\in\left[q\right]^{m}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\Delta\left(w,w^{\prime}\right)\le d-1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $w^{\prime}\notin\mathcal{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות יהי 
+\begin_inset Formula $w\in\mathcal{C}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $w^{\prime}\in\left[q\right]^{m}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\Delta\left(w,w^{\prime}\right)\le\floor{\frac{d-1}{2}}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\arg\min_{v\in\mathcal{C}}\Delta\left(v,w^{\prime}\right)=w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט חסם הסינגלטון
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות אזי 
+\begin_inset Formula $r\le m-d+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קוד חזרות
+\series default
+:
+ יהיו 
+\begin_inset Formula $q,m,k\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{C}_{k\text{-rep}}=\left\{ w\in\left[q\right]^{mk}\bmid\forall i\in\left[mk\right].w_{i}=w_{i\mod m}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $q,m,k\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{C}_{k\text{-rep}}$
+\end_inset
+
+ הינו קוד 
+\begin_inset Formula $\left[mk,m,k,q\right]$
+\end_inset
+
+ לתיקון שגיאות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קוד שארית
+\series default
+:
+ יהיו 
+\begin_inset Formula $q,m\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{C}_{\text{parity}}=\left\{ w\in\left[q\right]^{m+1}\bmid w_{m+1}=\left(\sum_{i=1}^{n}w_{i}\mod q\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $q,m\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{C}_{\text{parity}}$
+\end_inset
+
+ הינו קוד 
+\begin_inset Formula $\left[m+1,m,2,q\right]$
+\end_inset
+
+ לתיקון שגיאות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קוד האמינג
+\series default
+:
+ יהי 
+\begin_inset Formula $m\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{C}_{\text{Hamming}}=\left\{ x\in\bbf_{2}^{2^{m}-1}\bmid\forall i\in\left[m\right].\left(\bigoplus_{\substack{k\in\left[2^{m}-1\right]\\
+\left(\left(k\right)_{2}\right)_{i}=1
+}
+}x_{k}=0\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $m\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{C}_{\text{Hamming}}$
+\end_inset
+
+ הינו קוד 
+\begin_inset Formula $\left[2^{m}-1,2^{m}-m-1,3,2\right]$
+\end_inset
+
+ לתיקון שגיאות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $m,r,d,q\in\bbn_{+}$
+\end_inset
+
+ עבורם קיים קוד 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות אזי קיים 
+\begin_inset Formula $d^{\prime}\ge d$
+\end_inset
+
+ עבורו קיים קוד
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left[m\ceil{\log\left(q\right)},r\log\left(q\right),d^{\prime},2\right]$
+\end_inset
+
+ לתיקון שגיאות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $m,r,d,q\in\bbn_{+}$
+\end_inset
+
+ עבורם קיים קוד 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות ויהי 
+\begin_inset Formula $\ell\in\bbn_{+}$
+\end_inset
+
+ אזי קיים קוד 
+\begin_inset Formula $\left[\ell m,\ell r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $d\in\bbn_{\text{odd}}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $m,r\in\bbn_{+}$
+\end_inset
+
+ עבורם קיים קוד 
+\begin_inset Formula $\left[m,r,d,2\right]$
+\end_inset
+
+ לתיקון שגיאות אזי קיים קוד 
+\begin_inset Formula $\left[m+1,r,d+1,2\right]$
+\end_inset
+
+ לתיקון שגיאות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט האמינג
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות אזי 
+\begin_inset Formula $\left|\mathcal{C}\right|\le q^{m}\cdot\left(\sum_{i=0}^{\floor{\frac{d-1}{2}}}\left({m \choose i}\cdot\left(q-1\right)^{i}\right)\right)^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה פלוטקין
+\series default
+:
+ יהיו 
+\begin_inset Formula $d,q,m\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ge\left(1-\frac{1}{q}\right)m$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות אזי 
+\begin_inset Formula $\left|\mathcal{C}\right|\le\frac{d}{d+\frac{m}{q}-m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $d,m\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\le\frac{m}{2}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד 
+\begin_inset Formula $\left[m,r,d,2\right]$
+\end_inset
+
+ לתיקון שגיאות אזי 
+\begin_inset Formula $\left|\mathcal{C}\right|\le d\cdot2^{m-2d+2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קוד לינארי לתיקון שגיאות
+\series default
+:
+ יהיו 
+\begin_inset Formula $q,m\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה אזי קוד לתיקון שגיאות 
+\begin_inset Formula $\mathcal{C}\subseteq\bbf_{q}^{m}$
+\end_inset
+
+ המקיים כי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ מרחב וקטורי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד לינארי 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות אזי 
+\begin_inset Formula $\dim\left(\mathcal{C}\right)=r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מטריצה יוצרת
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד לינארי 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות ויהי 
+\begin_inset Formula $b_{1}\ldots b_{r}\in\mathcal{C}$
+\end_inset
+
+ בסיס אזי 
+\begin_inset Formula $M_{\mathcal{C}}\in\bbf_{q}^{m\times r}$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $C_{i}\left(M_{\mathcal{C}}\right)=b_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[r\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד לינארי 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות אזי 
+\begin_inset Formula $\mathcal{C}=\left\{ M_{\mathcal{C}}\cdot v\bmid v\in\bbf_{q}^{r}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $q,m,k\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{C}_{k\text{-rep}}$
+\end_inset
+
+ קוד לינארי לתיקון שגיאות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $q,m,k\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $M_{\mathcal{C}_{k\text{-rep}}}=\left(\begin{smallmatrix}I_{m}\\
+\vdots\\
+I_{m}
+\end{smallmatrix}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $q,m\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{C}_{\text{parity}}$
+\end_inset
+
+ קוד לינארי לתיקון שגיאות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $q,m\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $M_{\mathcal{C}_{\text{parity}}}=\left(\begin{smallmatrix}I_{m}\\
+\vec{1}^{T}
+\end{smallmatrix}\right)=\left(\begin{smallmatrix}I_{m}\\
+\left(\vec{1}\right)^{T}
+\end{smallmatrix}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד לינארי 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות אזי 
+\begin_inset Formula $d=\min_{v\in\mathcal{C}}\Delta\left(v,0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד לינארי 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות אזי קיים קוד לינארי 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ עבורו קיימת 
+\begin_inset Formula $A\in\bbf_{q}^{\left(m-r\right)\times r}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $M_{\mathcal{D}}=\left(\begin{smallmatrix}I_{r}\\
+A
+\end{smallmatrix}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד לינארי 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות אזי
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $V\subseteq\mathcal{C}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\dim\left(V\right)=r-1$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|\left\{ R_{i}\left(M_{\mathcal{C}}\right)\bmid i\in\left[m\right]\right\} \cap V\right|\le m-d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיים 
+\begin_inset Formula $V\subseteq\mathcal{C}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\dim\left(V\right)=r-1$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left|\left\{ R_{i}\left(M_{\mathcal{C}}\right)\bmid i\in\left[m\right]\right\} \cap V\right|=m-d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד לינארי 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות אזי קיים 
+\begin_inset Formula $d^{\prime}\ge\ceil{\frac{d}{q}}$
+\end_inset
+
+ עבורו קיים קוד לינארי 
+\begin_inset Formula $\left[m-d,r-1,d^{\prime},q\right]$
+\end_inset
+
+ לתיקון שגיאות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט גרייסמר
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד לינארי 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות אזי 
+\begin_inset Formula $m\ge\sum_{i=0}^{r-1}\ceil{\frac{d}{q^{i}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהי 
+\begin_inset Formula $q\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהיו 
+\begin_inset Formula $m,r\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $m>r$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in\bbf_{q}^{r}\backslash\left\{ 0\right\} $
+\end_inset
+
+ אזי לכל 
+\begin_inset Formula $b\in\bbf_{q}^{m}$
+\end_inset
+
+ מתקיים
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bbp_{M\in\bbf_{q}^{m\times r}}\left(Mx=b\right)=\frac{1}{q^{m}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $q\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהיו 
+\begin_inset Formula $m,r\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $m>r$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $M\in\bbf_{q}^{m\times r}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{C}_{M}=\left\{ M\cdot v\mid v\in\bbf_{q}^{r}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ יהי 
+\begin_inset Formula $q\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה ויהיו 
+\begin_inset Formula $m,r\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $m>r$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbp_{M\in\bbf_{q}^{m\times r}}\left(\mathcal{C}_{M}\text{קוד לינארי }\right)\ge1-\frac{q^{r}-1}{q^{m}\left(q-1\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ יהי 
+\begin_inset Formula $q\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהיו 
+\begin_inset Formula $m,r\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $m>r$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\d\in\left(0,1\right)$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bbp_{\substack{M\in\bbf_{q}^{m\times r}\\
+\mathcal{C}_{M}\text{קוד לינארי }
+}
+}\left(d\left[\mathcal{C}_{M}\right]\le\left(1-\d\right)\left(m-\frac{m}{q}\right)\right)\le\left|\mathcal{C}_{M}\right|\cdot\exp\left(-\frac{\d^{2}}{2}\left(m-\frac{m}{q}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הקוד הדואלי
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד לינארי 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות אזי 
+\begin_inset Formula $\mathcal{C}^{\lor}=\left\{ w\in\left[q\right]^{m}\bmid\forall c\in\mathcal{C}.\left<w,c\right>=0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד לינארי 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות אזי קיים 
+\begin_inset Formula $d^{\prime}\in\bbn_{+}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\mathcal{C}^{\lor}$
+\end_inset
+
+ הינו קוד לינארי 
+\begin_inset Formula $\left[m,m-r,d^{\prime},q\right]$
+\end_inset
+
+ לתיקון שגיאות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מטריצת בדיקת שאריות
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד לינארי לבדיקת שגיאות אזי 
+\begin_inset Formula $H_{\mathcal{C}}=M_{\mathcal{C}^{\lor}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד לינארי לתיקון שגיאות אזי 
+\begin_inset Formula $\mathcal{C}=\ker\left(H_{\mathcal{C}}^{T}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט האמינג
+\series default
+:
+ יהיו 
+\begin_inset Formula $d,m\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\le m$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $q\in\bbp$
+\end_inset
+
+ אזי קיים קוד לינארי 
+\begin_inset Formula $\left[m,r,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\left|\mathcal{C}\right|\ge q^{m}\cdot\left(\sum_{i=0}^{d-1}\left({m \choose i}\cdot\left(q-1\right)^{i}\right)\right)^{-1}$
+\end_inset
+
+.
 \end_layout
 
 \end_body

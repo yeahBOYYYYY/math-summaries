@@ -723,7 +723,7 @@ literal "true"
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\poly}{\text{poly}}
+\renewcommand{\poly}{\text{poly}}
 \end_inset
 
 
@@ -3883,7 +3883,7 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\np}{\mathcal{NP}}
+\renewcommand{\np}{\mathcal{NP}}
 {\mathcal{NP}}
 \end_inset
 
@@ -13182,14 +13182,14 @@ end{algorithm}
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\yes=\left\{ \left<x\right>\mid\left(x\in X\right)\land\left(f\left(x\right)\le a\right)\right\} $
+\begin_inset Formula $\yes=\left\{ \left<x\right>\mid\left(x\in X\right)\land\left(\min f\left(x\right)\le a\right)\right\} $
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\no=\left\{ \left<x\right>\mid\left(x\in X\right)\land\left(f\left(x\right)>b\right)\right\} $
+\begin_inset Formula $\no=\left\{ \left<x\right>\mid\left(x\in X\right)\land\left(\min f\left(x\right)>b\right)\right\} $
 \end_inset
 
 .
@@ -13219,7 +13219,7 @@ end{algorithm}
 \end_inset
 
  קבוצה ותהא 
-\begin_inset Formula $f:X\to\P\left(\bbr\right)$
+\begin_inset Formula $f:X\to\bbr$
 \end_inset
 
  אזי 
@@ -13230,14 +13230,14 @@ end{algorithm}
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\yes=\left\{ \left<x\right>\mid\left(x\in X\right)\land\left(f\left(x\right)\ge b\right)\right\} $
+\begin_inset Formula $\yes=\left\{ \left<x\right>\mid\left(x\in X\right)\land\left(\max f\left(x\right)\ge b\right)\right\} $
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\no=\left\{ \left<x\right>\mid\left(x\in X\right)\land\left(f\left(x\right)<a\right)\right\} $
+\begin_inset Formula $\no=\left\{ \left<x\right>\mid\left(x\in X\right)\land\left(\max f\left(x\right)<a\right)\right\} $
 \end_inset
 
 .
