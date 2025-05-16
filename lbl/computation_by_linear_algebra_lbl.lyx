@@ -248,6 +248,27 @@ literal "true"
 \begin_layout Standard
 
 \series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה אזי 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ משרה את נורמת 
+\begin_inset Formula $\ell_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 \color black
 משקל האמינג
 \series default
@@ -382,10 +403,8 @@ literal "true"
 \begin_layout Standard
 
 \series bold
-\color black
-הערה
+סימון
 \series default
-\color inherit
 :
  יהיו 
 \begin_inset Formula $q,m\in\bbn_{+}$
@@ -395,7 +414,7 @@ literal "true"
 \begin_inset Formula $\mathcal{C}\subseteq\left[q\right]^{m}$
 \end_inset
 
- קוד לתיקון שגיאות אזי נאמר כי 
+ קוד לתיקון שגיאות אזי 
 \begin_inset Formula $\mathcal{C}$
 \end_inset
 
@@ -2585,16 +2604,131 @@ A
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+כדור
+\series default
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה יהי 
+\begin_inset Formula $r\in\bbr_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $B_{r}\left(x\right)=\left\{ y\in X\bmid\Delta\left(x,y\right)\le r\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+קוד לתיקון שגיאות
+\color inherit
+ רשימתי
+\series default
+:
+ יהיו 
+\begin_inset Formula $r,\ell\in\bbn_{+}$
+\end_inset
+
+ אזי קוד 
+\begin_inset Formula $\left[m,k,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $w\in\left[q\right]^{m}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|B_{r}\left(w\right)\cap\mathcal{C}\right|\le\ell$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהיו 
+\begin_inset Formula $r,\ell\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד 
+\begin_inset Formula $\left[m,k,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות רשימתי אזי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ הינו קוד 
+\begin_inset Formula $\left(m,k,r,\ell,q\right)$
+\end_inset
+
+ לתיקון שגיאות רשימתי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד 
+\begin_inset Formula $\left[m,k,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות אזי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ הינו קוד 
+\begin_inset Formula $\left(m,k,\frac{d}{2},1,q\right)$
+\end_inset
+
+ לתיקון שגיאות רשימתי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם סודן
+\series default
+:
+ ...
+\end_layout
+
+\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
 
 \end_layout
-
-\begin_layout Standard
-\begin_inset Branch Lec1
-inverted 0
-status collapsed
 
 \begin_layout Standard
 
@@ -2716,33 +2850,6 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\series bold
-טענה
-\series default
-:
- הבעיות הן 
-\begin_inset Formula $\np$
-\end_inset
-
-־קשות עבור 
-\begin_inset Formula $\e>0$
-\end_inset
-
- כלשהו ...,
- מוכח בהמשך על ידי רדוקציה מחתך מקסימלי.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\svpc}{\mathrm{SVP\textrm{-}code}}
 {\text{SVP-code}}
@@ -2807,21 +2914,6 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-\color black
-בעיית החתך המקסימלי
-\series default
-\color inherit
-:
- 
-\begin_inset Formula $\maxcut=\left\{ \left<\left(M,\vec{1},\bbf_{2}\right),\e\right>\mid\left(\forall i\left(w\left(R_{i}\left(M\right)\right)=2\right)\right)\land\left(\left<\left(M,\vec{1},\bbf_{2}\right),\e\right>\in\cvpc\right)\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\gap}{\text{GAP}}
 \end_inset
@@ -2832,6 +2924,105 @@ status collapsed
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+בעיית החתך המקסימלי
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\maxcut=\left\{ \left<\left(M,\vec{1},\bbf_{2}\right),\e\right>\mid\left(\forall i\left(w\left(R_{i}\left(M\right)\right)=2\right)\right)\land\left(\val\left(\left(M,\vec{1},\bbf\right)\right)\le\e\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ קיים 
+\begin_inset Formula $\e\in\left(0,1\right)$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\gap_{\left[1-\e,1-\e\right]}\maxcut$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\promise\np$
+\end_inset
+
+־קשה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ קיים 
+\begin_inset Formula $\e\in\left(0,1\right)$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\cvpc_{\e}$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־קשה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ קיים 
+\begin_inset Formula $\e\in\left(0,1\right)$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\cvpcs_{\e}$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־קשה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ קיימים 
+\begin_inset Formula $\e,\d\in\left(0,1\right)$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\gap_{\left[1-\e,1-\left(1+\d\right)\e\right]}\maxcut$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\promise\np$
+\end_inset
+
+־קשה.
 \end_layout
 
 \begin_layout Standard
@@ -2854,24 +3045,20 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
 
 \series bold
-טענה
+מסקנה
 \series default
 :
- לכל 
+ יהי 
 \begin_inset Formula $\e>0$
 \end_inset
 
- קיים שדה 
+ אזי קיים שדה סופי 
 \begin_inset Formula $\bbf$
 \end_inset
 
- בו 
+ עבורו 
 \begin_inset Formula $\gap_{\left[\e,1-\e\right]}\cvpc_{\bbf}$
 \end_inset
 
@@ -2882,18 +3069,29 @@ status collapsed
 ־קשה.
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 מסקנה
 \series default
 :
- קירוב ...
-\end_layout
-
+ אם קיים אלגוריתם פולינומי 
+\begin_inset Formula $A$
 \end_inset
 
+ אשר מהווה 
+\begin_inset Formula $\frac{1-\e}{\e}$
+\end_inset
 
+־קירוב לבעיית 
+\begin_inset Formula $\cvpcs$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\P=\np$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3139,10 +3337,6 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
 
 \series bold
 משפט חות־מינזר־ספרא
@@ -3161,11 +3355,6 @@ status collapsed
 \end_inset
 
 ־קשה.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -3208,11 +3397,6 @@ status collapsed
 \end_inset
 
 ־קשה.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_body
