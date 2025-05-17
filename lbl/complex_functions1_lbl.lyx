@@ -226,25 +226,8 @@ literal "true"
 מרוכבים
 \series default
 :
- מרחב וקטורי 
-\begin_inset Formula $\bbr^{2}$
-\end_inset
-
- מעל 
-\begin_inset Formula $\bbr$
-\end_inset
-
- עם הפעולות הסטנדרטיות.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-סימון
-\series default
-:
- נסמן את המרוכבים בעזרת 
-\begin_inset Formula $\bbc$
+ 
+\begin_inset Formula $\bbc=\bbr^{2}$
 \end_inset
 
 .
@@ -256,15 +239,28 @@ literal "true"
 הערה
 \series default
 :
- נשתמש ב־
-\begin_inset Formula $\bbc$
+ יהי 
+\begin_inset Formula $\a\in\bbr$
 \end_inset
 
- בהתאמה 
-\begin_inset Formula $1\mapsto\left(1,0\right)$
+ אזי נשכן 
+\begin_inset Formula $\a\mapsto\left(\a,0\right)$
 \end_inset
 
- וכן ההגדרה 
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ נגדיר 
+\begin_inset Formula $i\in\bbc$
+\end_inset
+
+ כך 
 \begin_inset Formula $i=\left(0,1\right)$
 \end_inset
 
@@ -298,12 +294,16 @@ literal "true"
 מטריצה קונפורמית
 \series default
 :
- 
-\begin_inset Formula $0\ne A\in M_{2}\left(\bbr\right)$
+ מטריצה 
+\begin_inset Formula $A\in M_{2}\left(\bbr\right)\backslash\left\{ 0\right\} $
 \end_inset
 
- המקיימת 
-\begin_inset Formula $\exists a,b\in\bbr.A=\left(\begin{smallmatrix}a & -b\\
+ עבורה קיימים 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $A=\left(\begin{smallmatrix}a & -b\\
 b & a
 \end{smallmatrix}\right)$
 \end_inset
@@ -317,7 +317,11 @@ b & a
 סימון
 \series default
 :
- 
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
 \begin_inset Formula $O\left(n\right)=\left\{ A\in M_{n}\left(\bbr\right)\mid\text{ קונפורמית}A\right\} $
 \end_inset
 
@@ -330,17 +334,25 @@ b & a
 טענה
 \series default
 :
- ההעתקה 
-\begin_inset Formula $T\in\Hom\left(\bbc,O\left(2\right)\right)$
+ נגדיר 
+\begin_inset Formula $T:\bbc\to O\left(2\right)$
 \end_inset
 
- המוגדרת 
+ כך 
 \begin_inset Formula $T\left(a+ib\right)=\left(\begin{smallmatrix}a & -b\\
 b & a
 \end{smallmatrix}\right)$
 \end_inset
 
- היא איזומורפיזם.
+ אזי 
+\begin_inset Formula $T\in\Hom\left(\bbc,O\left(2\right)\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $T$
+\end_inset
+
+ הינה איזומורפיזם.
 \end_layout
 
 \begin_layout Standard
@@ -374,12 +386,16 @@ b & a
 מטריצה אנטי־קונפורמית
 \series default
 :
- 
-\begin_inset Formula $0\ne A\in M_{2}\left(\bbr\right)$
+ מטריצה 
+\begin_inset Formula $A\in M_{2}\left(\bbr\right)\backslash\left\{ 0\right\} $
 \end_inset
 
- המקיימת 
-\begin_inset Formula $\exists a,b\in\bbr.A=\left(\begin{smallmatrix}a & b\\
+ עבורה קיימים 
+\begin_inset Formula $a,b\in\bbr$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $A=\left(\begin{smallmatrix}a & b\\
 b & -a
 \end{smallmatrix}\right)$
 \end_inset
@@ -393,7 +409,11 @@ b & -a
 סימון
 \series default
 :
- 
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
 \begin_inset Formula $\overline{O\left(n\right)}=\left\{ A\in M_{n}\left(\bbr\right)\mid\text{אנטי־קונפורמית}A\right\} $
 \end_inset
 
@@ -465,6 +485,19 @@ b & -a
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ מכאן והלאה 
+\begin_inset Formula $\bbc$
+\end_inset
+
+ תמיד מצויידת במכפלת מרוכבים.
 \end_layout
 
 \begin_layout Standard
@@ -554,11 +587,11 @@ b & -a
 מספר מדומה טהור
 \series default
 :
- 
+ מספר 
 \begin_inset Formula $z\in\bbc$
 \end_inset
 
- עבורו 
+ המקיים 
 \begin_inset Formula $\re\left(z\right)=0$
 \end_inset
 
@@ -571,11 +604,11 @@ b & -a
 מספר ממשי טהור
 \series default
 :
- 
+ מספר 
 \begin_inset Formula $z\in\bbc$
 \end_inset
 
- עבורו 
+ המקיים 
 \begin_inset Formula $\im\left(z\right)=0$
 \end_inset
 
@@ -592,28 +625,19 @@ b & -a
 \begin_inset Formula $z\in\bbc$
 \end_inset
 
- אזי
-\end_layout
-
-\begin_layout Itemize
+ אזי 
 \begin_inset Formula $\overline{\left(\overline{z}\right)}=z$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Itemize
+ וכן 
 \begin_inset Formula $\left|\overline{z}\right|=\left|z\right|$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Itemize
+ וכן 
 \begin_inset Formula $z\overline{z}=\left|z\right|^{2}$
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -636,14 +660,18 @@ b & -a
 \begin_layout Standard
 
 \series bold
-מסקנה
+טענה
 \series default
 :
  
 \begin_inset Formula $\bbc$
 \end_inset
 
- עם הפעולות שהוגדרו מלעיל הינו שדה.
+ המצויידת במכפלת מרוכבים הינה אלגברה מעל 
+\begin_inset Formula $\bbr$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -663,10 +691,7 @@ b & -a
 \begin_inset Formula $\re\left(z\right)=\frac{z+\overline{z}}{2}$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Itemize
+ וכן 
 \begin_inset Formula $\im\left(z\right)=\frac{z-\overline{z}}{2i}$
 \end_inset
 
@@ -677,10 +702,7 @@ b & -a
 \begin_inset Formula $\overline{z+w}=\overline{z}+\overline{w}$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Itemize
+ וכן 
 \begin_inset Formula $\overline{z\cdot w}=\overline{z}\cdot\overline{w}$
 \end_inset
 
@@ -722,10 +744,7 @@ b & -a
 \begin_inset Formula $-\left|z\right|\le\re\left(z\right)\le\left|z\right|$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Itemize
+ וכן 
 \begin_inset Formula $-\left|z\right|\le\im\left(z\right)\le\left|z\right|$
 \end_inset
 
@@ -735,7 +754,7 @@ b & -a
 \begin_layout Standard
 
 \series bold
-טענה אי שיוויון המשולש
+טענה אי־שיוויון המשולש
 \series default
 :
  יהיו 
@@ -752,7 +771,7 @@ b & -a
 \begin_layout Standard
 
 \series bold
-טענה אי שיוויון קושי שוורץ
+טענה אי־שיוויון קושי שוורץ
 \series default
 :
  יהיו 
@@ -876,23 +895,31 @@ b & -a
 \begin_layout Standard
 
 \series bold
-הערה
+מסקנה
 \series default
 :
  יהי 
 \begin_inset Formula $z\in\bbc\backslash\left\{ 0\right\} $
 \end_inset
 
- אזי הארגומנט העיקרי קיים ויחיד.
+ אזי 
+\begin_inset Formula $\Arg\left(z\right)$
+\end_inset
+
+ קיים ויחיד.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-הערה
+טענה
 \series default
 :
- 
+ יהי 
+\begin_inset Formula $z\in\bbc\backslash\left\{ 0\right\} $
+\end_inset
+
+ אזי 
 \begin_inset Formula $\arg\left(z\right)=\left\{ \Arg\left(z\right)+2k\pi\mid k\in\bbz\right\} $
 \end_inset
 
@@ -913,17 +940,11 @@ b & -a
 \begin_inset Formula $r,s\ge0$
 \end_inset
 
- אזי
-\end_layout
-
-\begin_layout Itemize
+ אזי 
 \begin_inset Formula $\overline{r\cdot e^{i\theta}}=r\cdot e^{-i\theta}$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Itemize
+ וכן 
 \begin_inset Formula $\left(r\cdot e^{i\theta}\right)\cdot\left(s\cdot e^{i\phi}\right)=rs\cdot e^{i\left(\theta+\phi\right)}$
 \end_inset
 
@@ -1059,7 +1080,7 @@ b & -a
 \begin_layout Standard
 
 \series bold
-המשפט היסודי של האלגברה
+משפט המשפט היסודי של האלגברה
 \series default
 :
  יהי 
@@ -1099,19 +1120,32 @@ b & -a
 \end_layout
 
 \begin_layout Standard
-
-\series bold
-\color blue
-הקוטב הצפוני
-\series default
-\color inherit
-:
- נסמן ב־
-\begin_inset Formula $\bbr^{3}$
+\begin_inset Separator plain
 \end_inset
 
- את 
-\begin_inset Formula $N=\left(0,0,1\right)$
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כדור
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $r\in\bbr_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $a\in\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $B_{r}^{n}\left(a\right)=\left\{ x\in\bbr^{n}\mid\norm{x-a}<r\right\} $
 \end_inset
 
 .
@@ -1126,11 +1160,47 @@ b & -a
 \color inherit
 :
  יהי 
-\begin_inset Formula $n\in\bbn_{+}$
+\begin_inset Formula $n\in\bbn$
 \end_inset
 
  אזי 
 \begin_inset Formula $\bbs^{n}=\left\{ x\in\bbr^{n+1}\mid\norm x=1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\partial B_{1}^{n+1}\left(0\right)=\bbs^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הקוטב הצפוני
+\series default
+\color inherit
+:
+ נגדיר 
+\begin_inset Formula $N\in\bbs^{2}$
+\end_inset
+
+ כך 
+\begin_inset Formula $N=\left(0,0,1\right)$
 \end_inset
 
 .
@@ -1144,12 +1214,8 @@ b & -a
 \series default
 \color inherit
 :
- כל הנקודות 
-\begin_inset Formula $\left(x,y,z\right)\in\bbs^{2}$
-\end_inset
-
- המקיימות 
-\begin_inset Formula $z>0$
+ 
+\begin_inset Formula $\bbh^{+}=\left\{ \left(x,y,z\right)\in\bbs^{2}\bmid z>0\right\} $
 \end_inset
 
 .
@@ -1163,12 +1229,8 @@ b & -a
 \series default
 \color inherit
 :
- כל הנקודות 
-\begin_inset Formula $\left(x,y,z\right)\in\bbs^{2}$
-\end_inset
-
- המקיימות 
-\begin_inset Formula $z<0$
+ 
+\begin_inset Formula $\bbh^{-}=\left\{ \left(x,y,z\right)\in\bbs^{2}\bmid z<0\right\} $
 \end_inset
 
 .
@@ -1209,8 +1271,7 @@ b & -a
 \begin_inset Formula $\bbc$
 \end_inset
 
- להיות שני הצירים הראשונים,
- אז ההטלה הסטריאוגרפית היא מבחינה מעשית 
+ להיות שני הצירים הראשונים אזי 
 \begin_inset Formula $f\left(p\right)=\text{line}_{p,N}\cap\bbs^{1}$
 \end_inset
 
@@ -1255,43 +1316,17 @@ b & -a
 \end_layout
 
 \begin_layout Itemize
-(
-\begin_inset Formula $f\left(z\right)$
+\begin_inset Formula $\left(\left|z\right|>1\right)\iff\left(f\left(z\right)\in\bbh^{+}\right)$
 \end_inset
 
- בהמיספרה העליונה)
-\begin_inset Formula $\iff$
-\end_inset
-
-(
-\begin_inset Formula $z$
-\end_inset
-
- מחוץ ל־
-\begin_inset Formula $\bbs^{1}$
-\end_inset
-
-).
+.
 \end_layout
 
 \begin_layout Itemize
-(
-\begin_inset Formula $f\left(z\right)$
+\begin_inset Formula $\left(\left|z\right|<1\right)\iff\left(f\left(z\right)\in\bbh^{-}\right)$
 \end_inset
 
- בהמיספרה התחתונה)
-\begin_inset Formula $\iff$
-\end_inset
-
-(
-\begin_inset Formula $z$
-\end_inset
-
- בתוך 
-\begin_inset Formula $\bbs^{1}$
-\end_inset
-
-).
+.
 \end_layout
 
 \begin_layout Standard
@@ -1302,16 +1337,16 @@ b & -a
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $f$
-\end_inset
-
- הפיכה ומתקיים 
-\begin_inset Formula $f^{-1}:\bbs^{2}\backslash\left\{ N\right\} \to\bbc$
+ נגדיר 
+\begin_inset Formula $g:\bbs^{2}\backslash\left\{ N\right\} \to\bbc$
 \end_inset
 
  כך 
-\begin_inset Formula $f^{-1}\left(x,y,z\right)=\frac{x}{1-z}+i\frac{y}{1-z}$
+\begin_inset Formula $g\left(x,y,z\right)=\frac{x}{1-z}+i\frac{y}{1-z}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g=f^{-1}$
 \end_inset
 
 .
@@ -1340,16 +1375,33 @@ b & -a
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $f$
+ נגדיר 
+\begin_inset Formula $\hat{f}:\hat{\bbc}\to\bbs^{2}$
 \end_inset
 
- ניתנת להרחבה רציפה 
-\begin_inset Formula $f:\widehat{\bbc}\to\bbs^{2}$
+ כך 
+\begin_inset Formula $\hat{f}_{\upharpoonright_{\bbc}}=f$
 \end_inset
 
  וכן 
-\begin_inset Formula $f\left(\infty\right)=N$
+\begin_inset Formula $\hat{f}\left(\infty\right)=N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ נסמן את ההרחבה של 
+\begin_inset Formula $f$
+\end_inset
+
+ לקוטב הצפוני כך 
+\begin_inset Formula $f=\hat{f}$
 \end_inset
 
 .
@@ -1415,6 +1467,13 @@ b & -a
 \end_inset
 
 ).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1986,10 +2045,8 @@ b & -a
 \begin_layout Standard
 
 \series bold
-\color red
-מסקנה
+הערה
 \series default
-\color inherit
 :
  כל מניפולציות הרציפות של פונקציה מחדו
 \begin_inset Quotes erd
@@ -2000,6 +2057,13 @@ b & -a
 \end_inset
 
  מתקיימות.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2416,6 +2480,13 @@ b & -a
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color magenta
@@ -2493,11 +2564,11 @@ b & -a
 \end_inset
 
  אזי 
-\begin_inset Formula $f\in\left(\bbc^{\mathcal{U}}\right)^{\bbn}$
+\begin_inset Formula $\left<f_{n}:\mathcal{U}\to\bbc\mid n\in\bbn\right>$
 \end_inset
 
  עבורה 
-\begin_inset Formula $f_{n}\left(a\right)$
+\begin_inset Formula $\left<f_{n}\left(a\right)\mid n\in\bbn\right>$
 \end_inset
 
  מתכנסת.
@@ -2520,7 +2591,7 @@ b & -a
 \end_inset
 
  פתוחה ותהא 
-\begin_inset Formula $f\in\left(\bbc^{\mathcal{U}}\right)^{\bbn}$
+\begin_inset Formula $\left<f_{n}:\mathcal{U}\to\bbc\mid n\in\bbn\right>$
 \end_inset
 
  אזי 
@@ -2541,7 +2612,6 @@ b & -a
 \begin_layout Standard
 
 \series bold
-\size small
 \color magenta
 טענה
 \series default
@@ -2552,7 +2622,7 @@ b & -a
 \end_inset
 
  פתוחה ותהא 
-\begin_inset Formula $f\in\left(\bbc^{\mathcal{U}}\right)^{\bbn}$
+\begin_inset Formula $\left<f_{n}:\mathcal{U}\to\bbc\mid n\in\bbn\right>$
 \end_inset
 
  אזי (
@@ -2565,6 +2635,10 @@ b & -a
 
 ש)
 \begin_inset Formula $\iff$
+\end_inset
+
+
+\begin_inset Newline newline
 \end_inset
 
 (
@@ -2587,23 +2661,27 @@ b & -a
 \color inherit
 :
  תהא 
-\begin_inset Formula $f\in\left(\bbc^{\mathcal{U}}\right)^{\bbn}$
+\begin_inset Formula $\mathcal{U}\subseteq\bbc$
+\end_inset
+
+ פתוחה תהא 
+\begin_inset Formula $\left<u_{n}:\mathcal{U}\to\bbc\mid n\in\bbn\right>$
 \end_inset
 
  ותהא 
-\begin_inset Formula $M\in\bbr^{\bbn}$
+\begin_inset Formula $M:\bbn\to\bbc$
 \end_inset
 
- עבורה 
-\begin_inset Formula $\sum_{n=1}^{\infty}M_{n}<\infty$
-\end_inset
-
- וכן
+ באשר
 \begin_inset Newline newline
 \end_inset
 
 
-\begin_inset Formula $\forall x\in\bbr.\forall n\in\bbn.\left|u_{n}\left(x\right)\right|\le M_{n}$
+\begin_inset Formula $\sum_{n=1}^{\infty}M_{n}<\infty$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\forall z\in\bbc.\forall n\in\bbn.\left|u_{n}\left(z\right)\right|\le M_{n}$
 \end_inset
 
  אזי 
@@ -2630,14 +2708,10 @@ b & -a
 \end_inset
 
  ותהא 
-\begin_inset Formula $f\in\left(\bbc^{\mathcal{U}}\right)^{\bbn}$
+\begin_inset Formula $\left<f_{n}\in C\left(\mathcal{U}\right)\mid n\in\bbn\right>$
 \end_inset
 
- עבורה 
-\begin_inset Formula $\forall n\in\bbn.f_{n}\in C\left(\mathcal{U}\right)$
-\end_inset
-
- וכן 
+ המקיימת 
 \begin_inset Formula $f_{n}\limu g$
 \end_inset
 
@@ -2738,15 +2812,15 @@ b & -a
 \begin_inset Formula $\sum_{i=0}^{\infty}a_{i}z^{i}$
 \end_inset
 
- טור חזקות אזי הפונקציה 
-\begin_inset Formula $\sum a_{n}z^{n}$
+ טור חזקות אזי 
+\begin_inset Formula $\sum_{i=0}^{\infty}a_{i}z^{i}$
 \end_inset
 
  הולומורפית על 
-\begin_inset Formula $\left|z\right|<R$
+\begin_inset Formula $\left\{ \left|z\right|<R\right\} $
 \end_inset
 
- ובפרט 
+ וכן 
 \begin_inset Formula $\left(\sum_{i=1}^{\infty}a_{i}z^{i}\right)^{\prime}=\sum_{i=1}^{\infty}ia_{i}z^{i-1}$
 \end_inset
 
@@ -3020,6 +3094,13 @@ b & -a
 \end_inset
 
 ־מחזוריות.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3636,6 +3717,13 @@ b & -a
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color brown
@@ -3946,6 +4034,13 @@ b & -a
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4315,6 +4410,13 @@ b & -a
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color teal
@@ -4470,6 +4572,13 @@ b & -a
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 טענה
@@ -4575,6 +4684,13 @@ b & -a
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4804,6 +4920,13 @@ b & -a
 \end_inset
 
  קבועה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5114,6 +5237,13 @@ b & -a
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5526,6 +5656,13 @@ b & -a
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color magenta
@@ -5885,6 +6022,13 @@ b & -a
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color purple
@@ -6196,6 +6340,13 @@ b & -a
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color brown
@@ -6475,6 +6626,13 @@ b & -a
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6837,6 +6995,13 @@ b & -a
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color teal
@@ -6997,6 +7162,13 @@ b & -a
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7261,6 +7433,13 @@ b & -a
 \end_inset
 
  פתוחה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7533,6 +7712,13 @@ b & -a
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Branch bonus
 inverted 0
 status collapsed
@@ -7544,7 +7730,10 @@ status collapsed
 
 \end_layout
 
-\begin_layout Title
+\begin_layout Standard
+\align center
+
+\size huge
 בונוסים
 \end_layout
 
@@ -8349,12 +8538,7 @@ status collapsed
 \begin_inset Formula $\bbc$
 \end_inset
 
- להיות שני הצירים הראשונים,
- אז ההטלה הסטריאוגרפית מהדרום היא מבחינה מעשית
-\begin_inset Newline newline
-\end_inset
-
-
+ להיות שני הצירים הראשונים אזי 
 \begin_inset Formula $T\left(p\right)=\text{line}_{p,S}\cap\bbs^{1}$
 \end_inset
 
