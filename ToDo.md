@@ -7,14 +7,14 @@ Courses I still need to do.
 | Name               | Notes | Last lec updated | Lec | Rec | HW |
 |--------------------|-------|------------------|-----|-----|----|
 | number theory      |       | 26/05/25         | 16  | 8   | 7  |
-| galois, fields     |       | 27/04/25         | 9   | 5   | 5  |
+| galois, fields     |       | 07/05/25         | 12  | 10  | 9  |
 | auto, logic, games |       | 29/03/25         | 2   | -   | 0  |
 | computation by lin |       | 16/03/25         | 0   | 0   | 0  |
 | complex analysis 2 |       | 29/03/25         | 4   | -   | 0  |
 
 ### 25A
 
-| Name | Notes | Last lec updated | Lec | Rec | HW |
-|---|---|---|---|---|---|
-| cryptography | | 06/11/24 | 1 | 2 | 0 |
-| game theory  | | 14/11/24 | 3 | 1 | 1 |
+| Name         | Notes | Last lec updated | Lec | Rec | HW |
+|--------------|-------|------------------|-----|-----|----|
+| cryptography |       | 06/11/24         | 1   | 2   | 0  |
+| game theory  |       | 14/11/24         | 3   | 1   | 1  |
