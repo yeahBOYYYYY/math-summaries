@@ -1572,7 +1572,7 @@ SetKwFunction{name}{KaratsubaMult}
 
 
 \backslash
-SetKwProg{Fn}{Algorithm}{:}{}
+SetKwProg{Fn}{Function}{:}{}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1587,6 +1587,17 @@ Fn{
 \backslash
 name{$a,
  b$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+lIf{$n = 1$}{
+\backslash
+Return $a_1 
+\backslash
+cdot b_1$}
 \end_layout
 
 \begin_layout Plain Layout
@@ -4602,7 +4613,7 @@ end{algorithm}
 \begin_inset Formula $k\in\bbn_{+}$
 \end_inset
 
- נגדיר 
+ ונגדיר 
 \begin_inset Formula $f:\bbn_{+}\to\bbr$
 \end_inset
 
@@ -13048,6 +13059,89 @@ x+\sqrt{d}y=v
 \begin_layout Standard
 
 \series bold
+העתקת המקדמים
+\series default
+:
+ יהי 
+\begin_inset Formula $d\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $\varphi:\bbz\left[\sqrt{d}\right]\to\bbz^{2}$
+\end_inset
+
+ כך 
+\begin_inset Formula $\varphi\left(\a+\b\sqrt{d}\right)=\left(\a,\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $d\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ העתקת המקדמים אזי 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ יהי 
+\begin_inset Formula $d\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ נשכן את 
+\begin_inset Formula $\bbz^{2}$
+\end_inset
+
+ בתוך 
+\begin_inset Formula $\bbz\left[\sqrt{d}\right]$
+\end_inset
+
+ כך 
+\begin_inset Formula $\left(\a,\b\right)\mapsto\a+\b\sqrt{d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 \color orange
 הצמדה
 \series default
@@ -13266,6 +13360,769 @@ x+\sqrt{d}y=v
 \begin_inset Formula $\bbz\left[\sqrt{d}\right]^{\times}=\left\{ \begin{smallmatrix}\left\{ \pm1,\pm i\right\}  &  & d=-1\\
 \left\{ \pm1\right\}  &  & d<-1
 \end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $a\in\bbz\backslash\left\{ 0\right\} $
+\end_inset
+
+ ויהי 
+\begin_inset Formula $d\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sols_{\bbz}\left(x^{2}-dy^{2}=a\right)=\left\{ g\in\bbz\left[\sqrt{d}\right]\bmid N\left(g\right)=a\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהיו 
+\begin_inset Formula $a,b\in\bbz\backslash\left\{ 0\right\} $
+\end_inset
+
+ יהי 
+\begin_inset Formula $d\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\a,\b,\g,\d\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\a^{2}-d\b^{2}=a$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\g^{2}-d\d^{2}=b$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\a\g+d\b\d\right)^{2}-d\left(\a\d+\b\g\right)^{2}=ab$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\sg}{\mathrm{SG}}
+{\text{SG}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $d\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $\sg:\sols_{\bbz}\left(x^{2}-dy^{2}=1\right)^{2}\to\sols_{\bbz}\left(x^{2}-dy^{2}=1\right)$
+\end_inset
+
+ כך
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\sg\left(\left(\a,\b\right),\left(\g,\d\right)\right)=\left(\a\g+d\b\d,\a\d+\b\g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $d\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ ןיהיו 
+\begin_inset Formula $\left(\a,\b\right),\left(\g,\d\right)\in\sols_{\bbz}\left(x^{2}-dy^{2}=1\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sg\left(\left(\a,\b\right),\left(\g,\d\right)\right)=\left(\a+\b\sqrt{d}\right)\left(\g+\d\sqrt{d}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $d\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\sols_{\bbz}\left(x^{2}-dy^{2}=1\right),\sg\right)$
+\end_inset
+
+ חבורה אבלית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbz\left[\sqrt{d}\right]_{1}^{\times}=\left\{ \a\in\bbz\left[\sqrt{d}\right]\mid N\left(\a\right)=1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sols_{\bbz}\left(x^{2}-dy^{2}=1\right)=\bbz\left[\sqrt{d}\right]_{1}^{\times}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbz\left[\sqrt{d}\right]_{1+}^{\times}=\left\{ \a\in\bbz\left[\sqrt{d}\right]_{1}^{\times}\mid\a>0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\a\in\bbz\left[\sqrt{d}\right]_{1}^{\times}$
+\end_inset
+
+ אזי קיים ויחיד 
+\begin_inset Formula $\b\in\bbz\left[\sqrt{d}\right]_{1+}^{\times}$
+\end_inset
+
+ וקיים ויחיד 
+\begin_inset Formula $s\in\left\{ \pm1\right\} $
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\a=s\b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbz\left[\sqrt{d}\right]_{1}^{\times}\simeq\bbz\left[\sqrt{d}\right]_{1+}^{\times}\times\left\{ \pm1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $a\in\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a\right]=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שבר משולב
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ יהי 
+\begin_inset Formula $a_{0}\in\bbr$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbr_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a_{0},\ldots,a_{n}\right]=a_{0}+\frac{1}{\left[a_{1},\ldots,a_{n}\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהי 
+\begin_inset Formula $a_{0}\in\bbr$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbr_{+}$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula $M\in M_{2\times2}\left(\bbr\right)$
+\end_inset
+
+ כך 
+\begin_inset Formula $M=\prod_{i=0}^{n}\left(\begin{smallmatrix}a_{i} & 1\\
+1 & 0
+\end{smallmatrix}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a_{0},\ldots,a_{n},x\right]=\frac{\left(M\right)_{1,1}\cdot x+\left(M\right)_{1,2}}{\left(M\right)_{2,1}\cdot x+\left(M\right)_{2,2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $a_{0}\in\bbr$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbr_{+}$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula $p_{-1},\ldots,p_{n},q_{-1},\ldots,q_{n}\in\bbr$
+\end_inset
+
+ כך 
+\begin_inset Formula $\left(\begin{smallmatrix}p_{k}\\
+q_{k}
+\end{smallmatrix}\right)=\left(\prod_{i=0}^{k}\left(\begin{smallmatrix}a_{i} & 1\\
+1 & 0
+\end{smallmatrix}\right)\right)\cdot\left(\begin{smallmatrix}1\\
+0
+\end{smallmatrix}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left\{ -1,\ldots,n\right\} $
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $k\in\bbn_{\le n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\frac{p_{k}}{q_{k}}=\left[a_{0},\ldots,a_{k}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $k\in\bbn_{\le n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(\begin{smallmatrix}p_{k} & p_{k-1}\\
+q_{k} & q_{k-1}
+\end{smallmatrix}\right)=\prod_{i=0}^{k}\left(\begin{smallmatrix}a_{i} & 1\\
+1 & 0
+\end{smallmatrix}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $k\in\bbn_{\le n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $p_{k}=a_{k}p_{k-1}+p_{k-2}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $q_{k}=a_{k}q_{k-1}+q_{k-2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $k\in\bbn_{\le n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $p_{k}q_{k-1}-q_{k}p_{k-1}=\left(-1\right)^{k+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $a_{0}\in\bbr$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbr_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $i\in\bbn_{\text{even}}\cap\bbn_{\le n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a_{0},\ldots,a_{i-1},x,a_{i+1},\ldots a_{n}\right]$
+\end_inset
+
+ מונוטונית עולה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $a_{0}\in\bbr$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbr_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $i\in\bbn_{\text{odd}}\cap\bbn_{\le n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a_{0},\ldots,a_{i-1},x,a_{i+1},\ldots a_{n}\right]$
+\end_inset
+
+ מונוטונית יורדת.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שבר משולב פשוט
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ יהי 
+\begin_inset Formula $a_{0}\in\bbz$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a_{0},\ldots,a_{n}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,m\in\bbn$
+\end_inset
+
+ יהי 
+\begin_inset Formula $a_{0},b_{0}\in\bbz$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $a_{1}\ldots a_{n},b_{1}\ldots b_{m}\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left[a_{0},\ldots,a_{n}\right]=\left[b_{0},\ldots,b_{m}\right]$
+\end_inset
+
+ אזי אחד מהבאים נכון
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $n=m$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a_{i}=b_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\bbn_{\le n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $n=m+1$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a_{i}=b_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\bbn_{\le m-1}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b_{m}-1=a_{m}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a_{n}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $n+1=m$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a_{i}=b_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\bbn_{\le n-1}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a_{n}-1=b_{n}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $b_{m}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\a\in\bbq$
+\end_inset
+
+ אזי קיים ויחיד 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ וכן קיים ויחיד 
+\begin_inset Formula $a_{0}\in\bbz$
+\end_inset
+
+ וכן קיימים ויחידים 
+\begin_inset Formula $a_{1}\ldots a_{n}\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a_{n}>1$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\a=\left[a_{0},\ldots,a_{n}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שבר משולב אינסופי
+\series default
+:
+ תהא 
+\begin_inset Formula $a:\bbn\to\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a_{i}>0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a\right]=\lim_{n\to\infty}\left[a_{0},\ldots,a_{n}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ תהא 
+\begin_inset Formula $a:\bbn\to\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a_{i}\ge1$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a\right]$
+\end_inset
+
+ קיים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שבר משולב פשוט אינסופי
+\series default
+:
+ תהא 
+\begin_inset Formula $a:\bbn\to\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $a_{i}\in\bbn_{+}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left[a\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+גלגול
+\series default
+:
+ נגדיר 
+\begin_inset Formula $f:\left(1,\infty\right)\backslash\bbq\to\bbr$
+\end_inset
+
+ כך 
+\begin_inset Formula $f\left(x\right)=\frac{1}{x-\floor x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ יהי 
+\begin_inset Formula $\a\in\bbr\backslash\bbq$
+\end_inset
+
+ אזי קיים ויחיד שבר משולב פשוט אינסופי 
+\begin_inset Formula $\left[a\right]$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\a=\left[a\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט לגראנז'
+\series default
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sols_{\bbz}\left(x^{2}-dy^{2}=1\right)\backslash\left\{ \left(1,0\right),\left(-1,0\right)\right\} \ne\emptyset$
 \end_inset
 
 .
