@@ -12792,7 +12792,7 @@ status open
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(\sols_{\bbz}\left(x^{2}=0\right)\ne\emptyset\right)\iff\left(a=\square\right)$
+\begin_inset Formula $\left(\sols_{\bbz}\left(x^{2}=a\right)\ne\emptyset\right)\iff\left(a=\square\right)$
 \end_inset
 
 .
@@ -12815,7 +12815,7 @@ status open
 \end_inset
 
  אזי 
-\begin_inset Formula $\sols_{\bbz}\left(x^{2}=0\right)=\left\{ \pm\sqrt{a}\right\} $
+\begin_inset Formula $\sols_{\bbz}\left(x^{2}=a\right)=\left\{ \pm\sqrt{a}\right\} $
 \end_inset
 
 .
@@ -13670,11 +13670,11 @@ x+\sqrt{d}y=v
 \color inherit
 :
  יהי 
-\begin_inset Formula $a\in\bbr$
+\begin_inset Formula $\a\in\bbr$
 \end_inset
 
  אזי 
-\begin_inset Formula $\left[a\right]=a$
+\begin_inset Formula $\left[\a\right]=\a$
 \end_inset
 
 .
@@ -14037,6 +14037,17 @@ q_{k} & q_{k-1}
 
 \series bold
 \color teal
+אלגוריתם שבר משולב פשוט למספר רציונלי
+\series default
+\color inherit
+:
+ ...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
 שבר משולב אינסופי
 \series default
 \color inherit
@@ -14115,6 +14126,15 @@ q_{k} & q_{k-1}
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\cycling}{\mathrm{Cycling}}
+{\text{Cycling}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color teal
@@ -14123,11 +14143,11 @@ q_{k} & q_{k-1}
 \color inherit
 :
  נגדיר 
-\begin_inset Formula $f:\left(1,\infty\right)\backslash\bbq\to\bbr$
+\begin_inset Formula $\cycling:\bbr\backslash\bbq\to\left(1,\infty\right)\backslash\bbq$
 \end_inset
 
  כך 
-\begin_inset Formula $f\left(x\right)=\frac{1}{x-\floor x}$
+\begin_inset Formula $\cycling\left(x\right)=\frac{1}{x-\floor x}$
 \end_inset
 
 .
@@ -14160,6 +14180,17 @@ q_{k} & q_{k-1}
 
 \series bold
 \color teal
+אלגוריתם שבר משולב פשוט אינסופי למספר אי־רציונלי
+\series default
+\color inherit
+:
+ ...
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color teal
 ייצוג שברי של שבר משולב פשוט אינסופי
 \series default
 \color inherit
@@ -14169,7 +14200,7 @@ q_{k} & q_{k-1}
 \end_inset
 
  שבר משולב פשוט אינסופי ונגדיר 
-\begin_inset Formula $p,q:\bbn\to\bbz$
+\begin_inset Formula $p,q:\bbz_{\ge-1}\to\bbz$
 \end_inset
 
  כך 
@@ -14177,7 +14208,7 @@ q_{k} & q_{k-1}
 q_{k}
 \end{smallmatrix}\right)=\left(\prod_{i=0}^{k}\left(\begin{smallmatrix}a_{i} & 1\\
 1 & 0
-\end{smallmatrix}\right)\right)\cdot\left(\begin{smallmatrix}1\\
+\end{smallmatrix}\right)\right)\left(\begin{smallmatrix}1\\
 0
 \end{smallmatrix}\right)$
 \end_inset
@@ -14381,9 +14412,16 @@ q_{k}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
-\color teal
+\color black
 פונקציה מחזורית החל ממקום מסויים
 \series default
 \color inherit
@@ -14410,7 +14448,7 @@ q_{k}
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 סימון
 \series default
 \color inherit
@@ -14441,7 +14479,7 @@ q_{k}
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 שבר משולב פשוט מחזורי
 \series default
 \color inherit
@@ -14460,79 +14498,13 @@ q_{k}
 \begin_layout Standard
 
 \series bold
-\color teal
-מספר ריבועי
-\series default
-\color inherit
-:
- מספר 
-\begin_inset Formula $\a\in\bbr$
-\end_inset
-
- עבורו קיים 
-\begin_inset Formula $a\in\bbz\backslash\left\{ 0\right\} $
-\end_inset
-
- וקיימים 
-\begin_inset Formula $b,c\in\bbz$
-\end_inset
-
- עבורם 
-\begin_inset Formula $a\a^{2}+b\a+c=0$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color teal
-טענה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $\a\in\bbr$
-\end_inset
-
- אזי (
-\begin_inset Formula $\a$
-\end_inset
-
- ריבועי)
-\begin_inset Formula $\iff$
-\end_inset
-
-(קיימים 
-\begin_inset Formula $A,B\in\bbz$
-\end_inset
-
- וקיים 
-\begin_inset Formula $d\in\bbn$
-\end_inset
-
- עבורם 
-\begin_inset Formula $\a=\frac{B+\sqrt{d}}{A}$
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color teal
+\color black
 הגדרה
 \series default
 \color inherit
 :
  יהי 
 \begin_inset Formula $d\in\bbr$
-\end_inset
-
- באשר 
-\begin_inset Formula $\sqrt{d}\notin\bbq$
 \end_inset
 
  אזי 
@@ -14545,17 +14517,13 @@ q_{k}
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 טענה
 \series default
 \color inherit
 :
  יהי 
 \begin_inset Formula $d\in\bbr$
-\end_inset
-
- באשר 
-\begin_inset Formula $\sqrt{d}\notin\bbq$
 \end_inset
 
  אזי 
@@ -14568,8 +14536,8 @@ q_{k}
 \begin_layout Standard
 
 \series bold
-\color teal
-הצמדה
+\color black
+טענה
 \series default
 \color inherit
 :
@@ -14579,6 +14547,95 @@ q_{k}
 
  באשר 
 \begin_inset Formula $\sqrt{d}\notin\bbq$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\a,\b,\g,\d\in\bbq$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\a+\b\sqrt{d}=\g+\d\sqrt{d}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\a=\g$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\b=\d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+העתקת המקדמים
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $d\in\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\sqrt{d}\notin\bbq$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $\varphi:\bbq\left(\sqrt{d}\right)\to\bbq^{2}$
+\end_inset
+
+ כך 
+\begin_inset Formula $\varphi\left(\a+\b\sqrt{d}\right)=\left(\a,\b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $d\in\bbr$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\sqrt{d}\notin\bbq$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ העתקת המקדמים אזי 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ועל.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+הצמדה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $d\in\bbr$
 \end_inset
 
  ויהיו 
@@ -14595,7 +14652,7 @@ q_{k}
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 טענה
 \series default
 \color inherit
@@ -14626,7 +14683,502 @@ q_{k}
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
+מספר ריבועי
+\series default
+\color inherit
+:
+ מספר 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ עבורו קיים 
+\begin_inset Formula $d\in\bbq$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\a\in\bbq\left(\sqrt{d}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ ריבועי ויהי 
+\begin_inset Formula $d\in\bbq$
+\end_inset
+
+ עד להיות 
+\begin_inset Formula $\a$
+\end_inset
+
+ ריבועי אזי 
+\begin_inset Formula $\cycling\left(\a\right)$
+\end_inset
+
+ ריבועי וכן 
+\begin_inset Formula $d$
+\end_inset
+
+ עד להיות 
+\begin_inset Formula $\cycling\left(\a\right)$
+\end_inset
+
+ ריבועי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ אזי (
+\begin_inset Formula $\a$
+\end_inset
+
+ ריבועי)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיים 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ וקיימים 
+\begin_inset Formula $A,B\in\bbz$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\a=\frac{B+\sqrt{d}}{A}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\a\in\bbr\backslash\bbq$
+\end_inset
+
+ אזי (
+\begin_inset Formula $\a$
+\end_inset
+
+ ריבועי)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיים 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ וקיימים 
+\begin_inset Formula $A,B\in\bbz$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\a=\frac{B+\sqrt{d}}{A}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ אזי (
+\begin_inset Formula $\a$
+\end_inset
+
+ ריבועי)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיים 
+\begin_inset Formula $a\in\bbz\backslash\left\{ 0\right\} $
+\end_inset
+
+ וקיימים 
+\begin_inset Formula $b,c\in\bbz$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $a\a^{2}+b\a+c=0$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ אזי (
+\begin_inset Formula $\a$
+\end_inset
+
+ ריבועי)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיים 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ וקיימים 
+\begin_inset Formula $A,B\in\bbz$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $B^{2}\equiv d\mod A$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\a=\frac{B+\sqrt{d}}{A}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מספר ריבועי מצומצם
+\series default
+\color inherit
+:
+ מספר ריבועי 
+\begin_inset Formula $\a\in\bbr_{>1}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\overline{\a}\in\left(-1,0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\floor{\sqrt{d}}+\sqrt{d}$
+\end_inset
+
+ ריבועי מצומצם.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\a\in\bbr$
+\end_inset
+
+ ריבועי מצומצם אזי 
+\begin_inset Formula $\cycling\left(\a\right)$
+\end_inset
+
+ ריבועי מצומצם.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $\a,\b\in\bbr$
+\end_inset
+
+ ריבועיים מצומצמים באשר 
+\begin_inset Formula $\cycling\left(\a\right)=\cycling\left(\b\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\a=\b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $A,B\in\bbz$
+\end_inset
+
+ באשר 
+\begin_inset Formula $B^{2}\equiv d\mod A$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\frac{B+\sqrt{d}}{A}$
+\end_inset
+
+ ריבועי מצומצם אזי 
+\begin_inset Formula $A\in\left(0,d\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $B\in\left(0,\sqrt{d}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\left\{ \a\in\bbq\left(\sqrt{d}\right)\bmid\text{ ריבועי מצומצם}\a\right\} \right|<\aleph_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+פונקציה מחזורית טהורה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $T\in\bbn$
+\end_inset
+
+ אזי פונקציה 
+\begin_inset Formula $a:\bbn\to\bbr$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $a_{n}=a_{n+T}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+שבר משולב פשוט מחזורי טהור
+\series default
+\color inherit
+:
+ שבר משולב פשוט מחזורי 
+\begin_inset Formula $\left[a\right]$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $a$
+\end_inset
+
+ מחזורית טהורה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+משפט
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\a\in\bbr\backslash\bbq$
+\end_inset
+
+ אזי (קיים שבר משולב פשוט מחזורי טהור 
+\begin_inset Formula $\left[a\right]$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\a=\left[a\right]$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\a$
+\end_inset
+
+ ריבועי מצומצם).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ וקיימים 
+\begin_inset Formula $a_{0}\ldots a_{n-1}\in\bbn$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\sqrt{d}=\left[a_{0},\overline{a_{1},\ldots,a_{n-1},2a_{0}}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\a\in\bbr\backslash\bbq$
+\end_inset
+
+ ריבועי נגדיר 
+\begin_inset Formula $a:\bbn\to\bbr\backslash\bbq$
+\end_inset
+
+ כך 
+\begin_inset Formula $a_{0}=\a$
+\end_inset
+
+ וכן 
+\begin_inset Formula $a_{n+1}=\cycling\left(a_{n}\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $m\in\bbn$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $a_{m}$
+\end_inset
+
+ ריבועי מצומצם וכן 
+\begin_inset Formula $a$
+\end_inset
+
+ מחזורית החל מ־
+\begin_inset Formula $m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
 משפט
 \series default
 \color inherit
@@ -14664,8 +15216,218 @@ q_{k}
 \begin_layout Standard
 
 \series bold
-\color black
-משפט לגראנז'
+\color blue
+משפט
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ תהא 
+\begin_inset Formula $a:\bbn\to\bbn$
+\end_inset
+
+ מחזורית בעלת מחזור 
+\begin_inset Formula $n$
+\end_inset
+
+ החל מ־
+\begin_inset Formula $1$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\sqrt{d}=\left[a\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\left(p,q\right)$
+\end_inset
+
+ ייצוג שברי של 
+\begin_inset Formula $\left[a\right]$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $p_{kn-1}^{2}-dq_{kn-1}^{2}=\left(-1\right)^{kn}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sols_{\bbn}\left(x^{2}-dy^{2}\in\left\{ \pm1\right\} \right)=\left\{ \left(p_{kn-1},q_{kn-1}\right)\bmid k\in\bbn\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ תהא 
+\begin_inset Formula $a:\bbn\to\bbn$
+\end_inset
+
+ מחזורית בעלת מחזור 
+\begin_inset Formula $n$
+\end_inset
+
+ החל מ־
+\begin_inset Formula $1$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\sqrt{d}=\left[a\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\left(p,q\right)$
+\end_inset
+
+ ייצוג שברי של 
+\begin_inset Formula $\left[a\right]$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\sols_{\bbz}\left(x^{2}-dy^{2}=-1\right)\ne\emptyset\right)\iff\left(n\in\bbn_{\text{odd}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $n\in\bbn_{\text{odd}}$
+\end_inset
+
+ אז 
+\begin_inset Formula $\min_{\pi_{2}}\left(\sols_{\bbn}\left(x^{2}-dy^{2}=-1\right)\right)=\left(p_{n-1},q_{n-1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ תהא 
+\begin_inset Formula $a:\bbn\to\bbn$
+\end_inset
+
+ מחזורית בעלת מחזור 
+\begin_inset Formula $n$
+\end_inset
+
+ החל מ־
+\begin_inset Formula $1$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\sqrt{d}=\left[a\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\left(p,q\right)$
+\end_inset
+
+ ייצוג שברי של 
+\begin_inset Formula $\left[a\right]$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sols_{\bbz}\left(x^{2}-dy^{2}=1\right)\backslash\left\{ \left(1,0\right),\left(-1,0\right)\right\} \ne\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $n\in\bbn_{\text{even}}$
+\end_inset
+
+ אז 
+\begin_inset Formula $\min_{\pi_{2}}\left(\sols_{\bbn}\left(x^{2}-dy^{2}=1\right)\backslash\left\{ \left(1,0\right),\left(-1,0\right)\right\} \right)=\left(p_{n-1},q_{n-1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $n\in\bbn_{\text{odd}}$
+\end_inset
+
+ אז 
+\begin_inset Formula $\min_{\pi_{2}}\left(\sols_{\bbn}\left(x^{2}-dy^{2}=1\right)\backslash\left\{ \left(1,0\right),\left(-1,0\right)\right\} \right)=\left(p_{2n-1},q_{2n-1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+הפתרון היסודי למשוואת פל
 \series default
 \color inherit
 :
@@ -14678,10 +15440,346 @@ q_{k}
 \end_inset
 
  אזי 
-\begin_inset Formula $\sols_{\bbz}\left(x^{2}-dy^{2}=1\right)\backslash\left\{ \left(1,0\right),\left(-1,0\right)\right\} \ne\emptyset$
+\begin_inset Formula $\min_{\pi_{2}}\left(\sols_{\bbn}\left(x^{2}-dy^{2}=1\right)\backslash\left\{ \left(1,0\right),\left(-1,0\right)\right\} \right)$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+סימון
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\left(u,v\right)$
+\end_inset
+
+ הפתרון היסודי של 
+\begin_inset Formula $x^{2}-dy^{2}=1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\e=u+v\sqrt{d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\e$
+\end_inset
+
+ הפתרון היסודי של 
+\begin_inset Formula $x^{2}-dy^{2}=1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<\e\right>=\bbz\left[\sqrt{d}\right]_{1+}^{\times}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\e$
+\end_inset
+
+ הפתרון היסודי של 
+\begin_inset Formula $x^{2}-dy^{2}=1$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\left(\a,\b\right)\in\sols_{\bbz}\left(x^{2}-dy^{2}=1\right)$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $n\in\bbz$
+\end_inset
+
+ וקיים 
+\begin_inset Formula $s\in\left\{ \pm1\right\} $
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\a+\b\sqrt{d}=s\cdot\e^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbz\backslash\left\{ 0\right\} $
+\end_inset
+
+ באשר 
+\begin_inset Formula $\sols_{\bbz}\left(x^{2}-dy^{2}\right)\ne\emptyset$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a\in\qr_{d}\cup\left\{ 0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbz\backslash\left\{ 0\right\} $
+\end_inset
+
+ באשר 
+\begin_inset Formula $\sols_{\bbz}\left(x^{2}-dy^{2}\right)\ne\emptyset$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $p\in\bbp_{>2}$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $p|d$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left(\frac{a}{p}\right)\in\left\{ 0,1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $4|d$
+\end_inset
+
+ אז 
+\begin_inset Formula $a\mod 4\in\left\{ 0,1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $8|d$
+\end_inset
+
+ אז 
+\begin_inset Formula $a\mod 8\in\left\{ 0,1,4\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+משפט
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\ne\square$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\e$
+\end_inset
+
+ הפתרון היסודי של 
+\begin_inset Formula $x^{2}-dy^{2}=1$
+\end_inset
+
+ יהי 
+\begin_inset Formula $a\in\bbz\backslash\left\{ 0\right\} $
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\left(\a,\b\right)\in\sols_{\bbz}\left(x^{2}-dy^{2}=a\right)$
+\end_inset
+
+ אזי קיימים 
+\begin_inset Formula $z,w\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $z+w\sqrt{d}<\sqrt{\left|a\right|}\e$
+\end_inset
+
+ וקיים 
+\begin_inset Formula $n\in\bbz$
+\end_inset
+
+ וקיים 
+\begin_inset Formula $s\in\left\{ \pm1\right\} $
+\end_inset
+
+ עבורם 
+\begin_inset Formula $\a+\b\sqrt{d}=s\cdot\e^{n}\cdot\left(z+w\sqrt{d}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color blue
+מסקנה
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\left\{ \left<f\right>\bmid\left(f\in\bbz_{\le2}\left[x,y\right]\right)\land\left(\sols_{\bbz}\left(f=0\right)\ne\emptyset\right)\right\} \in\mathcal{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מספרי גאוס
+\series default
+:
+ 
+\begin_inset Formula $\bbq\left(i\right)=\bbq+i\cdot\bbq$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\bbq\left(i\right)$
+\end_inset
+
+ שדה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שלמי גאוס
+\series default
+:
+ 
+\begin_inset Formula $\bbz\left[i\right]=\bbz+i\cdot\bbz$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\bbz\left[i\right]$
+\end_inset
+
+ חוג אבלי בעל יחידה.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body
