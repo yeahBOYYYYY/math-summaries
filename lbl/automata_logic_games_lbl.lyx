@@ -5749,11 +5749,38 @@ status collapsed
 \end_inset
 
  ותהא 
-\begin_inset Formula $\mathcal{I}:P_{\sigma}\to\P\left(\mathcal{T}\right)$
+\begin_inset Formula $\mathcal{I}:\sigma\to\P\left(\mathcal{T}^{*}\right)$
 \end_inset
 
- אזי 
-\begin_inset Formula $\left(\mathcal{T},<,\mathcal{I}\right)$
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $p\in P_{\sigma}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\mathcal{I}\left(p\right)\in\P\left(\mathcal{T}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{I}\left(=\right)=\id_{\mathcal{T}}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\mathcal{I}\left(<\right)=<_{\mathcal{T}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אזי 
+\begin_inset Formula $\left(\mathcal{T},<_{\mathcal{T}},\mathcal{I}\right)$
 \end_inset
 
 .
@@ -5940,6 +5967,290 @@ status collapsed
 
 \begin_layout Standard
 
+\series bold
+שפה של נוסחה בלוגיקה מונאדית מסדר ראשון
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ 
+\begin_inset Formula $\fomlo$
+\end_inset
+
+ באשר 
+\begin_inset Formula $P_{\sigma_{L}}=\left\{ P_{\ell}\mid\ell\in\Sigma\right\} $
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ פסוק מעל 
+\begin_inset Formula $L$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lan\left(\varphi\right)=\left\{ s\in\Sigma^{*}\mid s\vDash\varphi\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שפה גדירה בלוגיקה מונאדית מסדר ראשון
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית אזי שפה 
+\begin_inset Formula $\mathcal{L}\subseteq\Sigma^{*}$
+\end_inset
+
+ עבורה קיימת 
+\begin_inset Formula $\fomlo$
+\end_inset
+
+ 
+\begin_inset Formula $L$
+\end_inset
+
+ המקיימת
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $P_{\sigma_{L}}=\left\{ P_{\ell}\mid\ell\in\Sigma\right\} $
+\end_inset
+
+ וכן קיים פסוק 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ מעל 
+\begin_inset Formula $L$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\lan\left(\varphi\right)=\mathcal{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\suc}{\mathrm{suc}}
+{\text{suc}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מילון של לוגיקה מונאדית מסדר ראשון עם סוכר תחבירי
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ותהא 
+\begin_inset Formula $P\subseteq\P\left(\Sigma\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\left\{ \min,\max\right\} ,P\cup\left\{ <,=,\suc\right\} ,\emptyset\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מבנה של מילון של לוגיקה מונאדית מסדר ראשון עם סוכר תחבירי
+\series default
+:
+ יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון של לוגיקה מונאדית מסדר ראשון עם סוכר תחבירי תהא 
+\begin_inset Formula $\mathcal{T}\ne\emptyset$
+\end_inset
+
+ קבוצה יהי 
+\begin_inset Formula $<_{\mathcal{T}}$
+\end_inset
+
+ יחס סדר חזק לינארי מעל 
+\begin_inset Formula $\mathcal{T}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\mathcal{I}:\sigma\to\P\left(\mathcal{T}^{*}\right)\cup\mathcal{T}$
+\end_inset
+
+ המקיימת
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{I}\left(\min\right)=\min_{<_{\mathcal{T}}}\left(\mathcal{T}\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\mathcal{I}\left(\max\right)=\max_{<_{\mathcal{T}}}\left(\mathcal{T}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $p\in P_{\sigma}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\mathcal{I}\left(p\right)\in\P\left(\mathcal{T}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{I}\left(=\right)=\id_{\mathcal{T}}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\mathcal{I}\left(<\right)=<_{\mathcal{T}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{I}\left(\suc\right)=\left\{ \left(a,b\right)\bmid\left(a<_{\mathcal{T}}b\right)\land\left(\forall x\in\mathcal{T}:\neg\left(a<_{\mathcal{T}}x<_{\mathcal{T}}b\right)\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אזי 
+\begin_inset Formula $\left(\mathcal{T},<_{\mathcal{T}},\mathcal{I}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ נרחיב את מבנה המחרוזת לעבוד גם עם לוגיקה מונאדית מסדר ראשון עם סוכר תחבירי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ 
+\begin_inset Formula $\fomlo$
+\end_inset
+
+ באשר 
+\begin_inset Formula $P_{\sigma_{L}}=\left\{ P_{\ell}\mid\ell\in\Sigma\right\} $
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ לוגיקה מונאדית מסדר ראשון עם סוכר תחבירי באשר 
+\begin_inset Formula $P_{\sigma_{\mathcal{L}}}=\left\{ P_{\ell}\mid\ell\in\Sigma\right\} $
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+לכל נוסחה 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ב־
+\begin_inset Formula $L$
+\end_inset
+
+ קיימת נוסחה 
+\begin_inset Formula $\psi$
+\end_inset
+
+ ב־
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left(s\vDash\varphi\right)\iff\left(s\vDash\psi\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $s\in\Sigma^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל נוסחה 
+\begin_inset Formula $\psi$
+\end_inset
+
+ ב־
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ קיימת נוסחה 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ב־
+\begin_inset Formula $L$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\left(s\vDash\varphi\right)\iff\left(s\vDash\psi\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $s\in\Sigma^{*}$
+\end_inset
+
+.
 \end_layout
 
 \end_body
