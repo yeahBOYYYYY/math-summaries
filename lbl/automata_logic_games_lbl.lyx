@@ -5665,7 +5665,7 @@ status collapsed
 \begin_inset Formula $L$
 \end_inset
 
- לוגיקה מסדר ראשון ותהא 
+ לוגיקה ותהא 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6165,6 +6165,38 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\formula}{\mathrm{Formula}}
+{\text{Formula}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\Tr}{\mathrm{Tr}}
+{\text{Tr}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ לוגיקה אזי 
+\begin_inset Formula $\formula\left(L\right)=\left\{ \varphi\mid L\text{ פורמולה ב־}\varphi\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 טענה
@@ -6226,6 +6258,30 @@ status collapsed
 \end_layout
 
 \begin_layout Itemize
+קיימת 
+\begin_inset Formula $\Tr:\formula\left(L\right)\to\formula\left(\mathcal{L}\right)$
+\end_inset
+
+ חשיבה בזמן לינארי המקיימת 
+\begin_inset Formula $\left(s\vDash\varphi\right)\iff\left(s\vDash\Tr\left(\varphi\right)\right)$
+\end_inset
+
+ לכל נוסחה 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ב־
+\begin_inset Formula $L$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $s\in\Sigma^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
 לכל נוסחה 
 \begin_inset Formula $\psi$
 \end_inset
@@ -6248,6 +6304,92 @@ status collapsed
 
  לכל 
 \begin_inset Formula $s\in\Sigma^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קיימת 
+\begin_inset Formula $\Tr:\formula\left(\mathcal{L}\right)\to\formula\left(L\right)$
+\end_inset
+
+ חשיבה בזמן לינארי המקיימת 
+\begin_inset Formula $\left(s\vDash\varphi\right)\iff\left(s\vDash\Tr\left(\varphi\right)\right)$
+\end_inset
+
+ לכל נוסחה 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ב־
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $s\in\Sigma^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $\Sigma,\Gamma$
+\end_inset
+
+ אלפביתים תהא 
+\begin_inset Formula $f:\Sigma\to\Gamma^{*}$
+\end_inset
+
+ חח
+\begin_inset Quotes erd
+\end_inset
+
+ע ותהא 
+\begin_inset Formula $L\subseteq\Sigma^{*}$
+\end_inset
+
+ אזי (
+\begin_inset Formula $L$
+\end_inset
+
+ גדירה ב־
+\begin_inset Formula $\fomlo$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $f\left(L\right)$
+\end_inset
+
+ גדירה ב־
+\begin_inset Formula $\fomlo$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\left\{ s\in\left\{ 0,1\right\} ^{*}\bmid\len\left(s\right)\in\bbn_{\mathrm{even}}\right\} $
+\end_inset
+
+ אינה גדירה ב־
+\begin_inset Formula $\fomlo$
 \end_inset
 
 .
