@@ -150,6 +150,11 @@ PackageOptions algorithm2e vlined
 \use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
+\branch LogicRep
+\selected 1
+\filename_suffix 0
+\color background background
+\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -5189,31 +5194,83 @@ end{minipage}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
+\begin_inset FormulaMacro
+\newcommand{\ind}{\mathrm{Ind}}
+{\text{Ind}}
+\end_inset
 
-\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
-מילון
+\color purple
+אינדוקציה מבנית
 \series default
+\color inherit
 :
- יהי 
+ תהא 
 \begin_inset Formula $\Sigma$
 \end_inset
 
- אלפבית אזי 
-\begin_inset Formula $\left(\left\{ c_{i}\in\Sigma\mid i\in\bbn\right\} ,\left\{ R_{n,i}\subseteq\Sigma^{n}\mid i,n\in\bbn\right\} ,\left\{ f_{n,i}\subseteq\Sigma^{n}\to\Sigma\mid i,n\in\bbn\right\} \right)$
+ קבוצה תהא 
+\begin_inset Formula $B\subseteq\Sigma^{*}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F\subseteq\bigcup_{n=0}^{\infty}\left(\left(\Sigma^{*}\right)^{n}\to\Sigma^{*}\right)$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\ind\left(B,F\right)=\min_{\subseteq}\left\{ X\subseteq\Sigma^{*}\bmid\left(B\subseteq X\right)\land\left(\forall f\in F:f\left(X\cap\dom\left(f\right)\right)\subseteq X\right)\right\} $
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
+\color purple
+מילון
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית תהא 
+\begin_inset Formula $C\subseteq\Sigma$
+\end_inset
+
+ תהא 
+\begin_inset Formula $R\subseteq\bigcup_{n=0}^{\infty}\P\left(\Sigma^{n}\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $F\subseteq\bigcup_{n=0}^{\infty}\left(\Sigma^{n}\to\Sigma\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(C,R,F\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
 סימני קבוע במילון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(C,R,F\right)$
@@ -5226,11 +5283,13 @@ status collapsed
 .
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
+\color purple
 סימני יחס במילון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(C,R,F\right)$
@@ -5243,11 +5302,13 @@ status collapsed
 .
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
+\color purple
 סימני פונקציה במילון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\left(C,R,F\right)$
@@ -5260,7 +5321,7 @@ status collapsed
 .
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 \color purple
@@ -5297,7 +5358,7 @@ status collapsed
 \end_inset
 
  תהא 
-\begin_inset Formula $\mathcal{F}:F\to\left(D^{n}\to D\right)$
+\begin_inset Formula $\mathcal{F}:F\to\bigcup_{n=1}^{\infty}\left(D^{n}\to D\right)$
 \end_inset
 
  המקיימת 
@@ -5313,13 +5374,13 @@ status collapsed
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(D,\mathcal{C}\left(C\right),\mathcal{R}\left(R\right),\mathcal{F}\left(F\right)\right)$
+\begin_inset Formula $\left(D,\mathcal{C},\mathcal{R},\mathcal{F}\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 \color purple
@@ -5332,17 +5393,21 @@ status collapsed
 \end_inset
 
  מילון ויהי 
-\begin_inset Formula $\left(D,\mathcal{C}\left(C\right),\mathcal{R}\left(R\right),\mathcal{F}\left(F\right)\right)$
+\begin_inset Formula $\left(D,\mathcal{C},\mathcal{R},\mathcal{F}\right)$
 \end_inset
 
- מבנה אזי 
-\begin_inset Formula $D$
+ מבנה על 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\dom\left(D,\mathcal{C},\mathcal{R},\mathcal{F}\right)=D$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 \color purple
@@ -5362,18 +5427,46 @@ status collapsed
 \begin_inset Formula $\sigma$
 \end_inset
 
- בעל תחום 
-\begin_inset Formula $D$
+ אזי
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $c\in\sigma_{C}$
 \end_inset
 
- אזי 
-\begin_inset Formula $D^{M}=D$
+ מתקיים 
+\begin_inset Formula $c^{M}=M_{\mathcal{C}}\left(c\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $r\in\sigma_{R}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $r^{M}=M_{\mathcal{R}}\left(r\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $f\in\sigma_{F}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $f^{M}=M_{\mathcal{F}}\left(f\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color purple
@@ -5386,56 +5479,23 @@ status collapsed
 \end_inset
 
  מילון ויהי 
-\begin_inset Formula $\left(D,\mathcal{C}\left(C\right),\mathcal{R}\left(R\right),\mathcal{F}\left(F\right)\right)$
+\begin_inset Formula $\left(D,\mathcal{C},\mathcal{R},\mathcal{F}\right)$
 \end_inset
 
  מבנה אזי 
-\begin_inset Formula $\left(\mathcal{C}\left(C\right),\mathcal{R}\left(R\right),\mathcal{F}\left(F\right)\right)$
+\begin_inset Formula $\left(\mathcal{C},\mathcal{R},\mathcal{F}\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 \color purple
-סימון
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $\sigma$
-\end_inset
-
- מילון ויהי 
-\begin_inset Formula $M$
-\end_inset
-
- מבנה על 
-\begin_inset Formula $\sigma$
-\end_inset
-
- אזי 
-\begin_inset Formula $c^{M}=\mathcal{C}\left(c\right)$
-\end_inset
-
- וכן 
-\begin_inset Formula $r^{M}=\mathcal{R}\left(r\right)$
-\end_inset
-
- וכן 
-\begin_inset Formula $f^{M}=\mathcal{F}\left(f\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Plain Layout
-
-\series bold
 לוגיקה מסדר ראשון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\Sigma$
@@ -5452,31 +5512,35 @@ status collapsed
 .
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
+\color purple
 משתנים בלוגיקה מסדר ראשון
 \series default
+\color inherit
 :
  תהא 
-\begin_inset Formula $\left(X,P,C,A,\sigma\right)$
+\begin_inset Formula $\left(V,P,C,A,\sigma\right)$
 \end_inset
 
  לוגיקה מסדר ראשון אזי 
-\begin_inset Formula $X$
+\begin_inset Formula $V$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
+\color purple
 סימני עזר בלוגיקה מסדר ראשון
 \series default
+\color inherit
 :
  תהא 
-\begin_inset Formula $\left(X,P,C,A,\sigma\right)$
+\begin_inset Formula $\left(V,P,C,A,\sigma\right)$
 \end_inset
 
  לוגיקה מסדר ראשון אזי 
@@ -5486,14 +5550,16 @@ status collapsed
 .
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
+\color purple
 קשרים בוליאניים בלוגיקה מסדר ראשון
 \series default
+\color inherit
 :
  תהא 
-\begin_inset Formula $\left(X,P,C,A,\sigma\right)$
+\begin_inset Formula $\left(V,P,C,A,\sigma\right)$
 \end_inset
 
  לוגיקה מסדר ראשון אזי 
@@ -5503,14 +5569,16 @@ status collapsed
 .
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
+\color purple
 כמתים בלוגיקה מסדר ראשון
 \series default
+\color inherit
 :
  תהא 
-\begin_inset Formula $\left(X,P,C,A,\sigma\right)$
+\begin_inset Formula $\left(V,P,C,A,\sigma\right)$
 \end_inset
 
  לוגיקה מסדר ראשון אזי 
@@ -5520,14 +5588,16 @@ status collapsed
 .
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
+\color purple
 סיגנטורה של לוגיקה מסדר ראשון
 \series default
+\color inherit
 :
  תהא 
-\begin_inset Formula $\left(X,P,C,A,\sigma\right)$
+\begin_inset Formula $\left(V,P,C,A,\sigma\right)$
 \end_inset
 
  לוגיקה מסדר ראשון אזי 
@@ -5537,102 +5607,166 @@ status collapsed
 .
 \end_layout
 
-\begin_layout Plain Layout
-
-\series bold
-\color black
-אינדוקציה מבנית
-\series default
-\color inherit
-:
- תהא 
-\begin_inset Formula $\Sigma$
-\end_inset
-
- קבוצה תהא 
-\begin_inset Formula $B\subseteq\Sigma^{*}$
-\end_inset
-
- ותהא 
-\begin_inset Formula $F=\left\{ f_{i}:\left(\Sigma^{*}\right)^{n_{i}}\to\Sigma^{*}\mid i\in I\right\} $
-\end_inset
-
- אזי 
-\begin_inset Formula $X_{B,F}\subseteq\Sigma^{*}$
-\end_inset
-
- מינימלית סגורה להפעלת 
-\begin_inset Formula $F$
-\end_inset
-
- עבורה 
-\begin_inset Formula $B\subseteq X_{B,F}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Plain Layout
-
-\series bold
-שמות עצם מעל מילון
-\series default
-:
- יהי 
-\begin_inset Formula $\sigma$
-\end_inset
-
- מילון אזי 
-\begin_inset Formula $X_{\left\{ x_{i}\mid i\in\bbn\right\} \cup\left\{ c_{i}\mid i\in\bbn\right\} ,\left\{ f_{i,n}\mid i,n\in\bbn\right\} }$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Plain Layout
-
-\series bold
-נוסחאות אטומיות
-\series default
-:
- יהי 
-\begin_inset Formula $\sigma$
-\end_inset
-
- מילון אזי 
-\begin_inset Formula $\left\{ R_{n,i}\left(t_{1}\ldots t_{n}\right)\mid\left(i,n\in\bbn\right)\land\left(\text{ שמות עצם}t_{1}\ldots t_{n}\right)\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Plain Layout
-
-\series bold
-נוסחאות מעל מילון
-\series default
-:
- יהי 
-\begin_inset Formula $\sigma$
-\end_inset
-
- מילון אזי 
-\begin_inset Formula $X_{\left\{ R_{n,i}\left(t_{1}\ldots t_{n}\right)\mid\left(i,n\in\bbn\right)\land\left(\text{ שמות עצם}t_{1}\ldots t_{n}\right)\right\} ,\left\{ \land,\lor,\neg,\implies,\forall,\exists\right\} }$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 \color purple
-השמה
+שמות עצם של לוגיקה מסדר ראשון
 \series default
 \color inherit
 :
  תהא 
-\begin_inset Formula $\left(X,P,C,A,\sigma\right)$
+\begin_inset Formula $L$
+\end_inset
+
+ לוגיקה מסדר ראשון אזי 
+\begin_inset Formula $\ind\left(V_{L}\cup C_{\sigma_{L}},F_{\sigma_{L}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+נוסחאות אטומיות של לוגיקה מסדר ראשון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ לוגיקה מסדר ראשון אזי 
+\begin_inset Formula $\left\{ P\left(t_{1}\ldots t_{n}\right)\mid\left(P\in R_{\sigma_{L}}\right)\land\left(\text{ שמות עצם}t_{1}\ldots t_{n}\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\atomicformula}{\mathrm{AFormula}}
+{\text{AFormula}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ לוגיקה אזי 
+\begin_inset Formula $\atomicformula\left(L\right)=\left\{ \varphi\mid L\text{ נוסחה אטומית ב־}\varphi\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+הגדרה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ לוגיקה מסדר ראשון יהי 
+\begin_inset Formula $x\in V_{L}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\varphi\in\ind\left(\atomicformula\left(L\right),C_{L}\right)$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall\left(\varphi,x\right)="\forall x\a"$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\exists\left(\varphi,x\right)="\exists x\a"$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+נוסחאות של לוגיקה מסדר ראשון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ לוגיקה מסדר ראשון אזי 
+\begin_inset Formula $\ind\left(\atomicformula\left(L\right),C_{L}\cup A_{L}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\formula}{\mathrm{Formula}}
+{\text{Formula}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+סימון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ לוגיקה אזי 
+\begin_inset Formula $\formula\left(L\right)=\left\{ \varphi\mid L\text{ נוסחה ב־}\varphi\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+השמה של לוגיקה מסדר ראשון
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $L$
 \end_inset
 
  לוגיקה מסדר ראשון ויהי 
@@ -5640,41 +5774,190 @@ status collapsed
 \end_inset
 
  מבנה על 
-\begin_inset Formula $\sigma$
+\begin_inset Formula $\sigma_{L}$
 \end_inset
 
  אזי 
-\begin_inset Formula $v:X\to D^{M}$
+\begin_inset Formula $v:V_{L}\to\dom\left(M\right)$
 \end_inset
 
 .
 \end_layout
 
+\begin_layout Standard
+
+\series bold
+\color purple
+לוגיקה מסדר שני
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ויהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון אזי 
+\size small
+
+\begin_inset Formula $\left(\left\{ x_{i}\mid i\in\bbn\right\} ,\left\{ X_{i}\mid i\in\bbn\right\} ,\left\{ f_{i}\mid i\in\bbn\right\} ,\left\{ "(",")"\right\} ,\left\{ \neg,\lor,\land,\implies\right\} ,\left\{ \forall,\exists\right\} ,\sigma\right)$
 \end_inset
 
 
+\size default
+.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-סימון
+\color purple
+משתנה יחיד בלוגיקה מסדר שני
 \series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\left(V,S,F,P,C,A,\sigma\right)$
+\end_inset
+
+ לוגיקה מסדר שני אזי 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משתנה יחס בלוגיקה מסדר שני
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\left(V,S,F,P,C,A,\sigma\right)$
+\end_inset
+
+ לוגיקה מסדר שני אזי 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+משתנה פונקציה בלוגיקה מסדר שני
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\left(V,S,F,P,C,A,\sigma\right)$
+\end_inset
+
+ לוגיקה מסדר שני אזי 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+סימני עזר בלוגיקה מסדר שני
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\left(V,S,F,P,C,A,\sigma\right)$
+\end_inset
+
+ לוגיקה מסדר שני אזי 
+\begin_inset Formula $P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+קשרים בוליאניים בלוגיקה מסדר שני
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\left(V,S,F,P,C,A,\sigma\right)$
+\end_inset
+
+ לוגיקה מסדר שני אזי 
+\begin_inset Formula $C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+כמתים בלוגיקה מסדר שני
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\left(V,S,F,P,C,A,\sigma\right)$
+\end_inset
+
+ לוגיקה מסדר שני אזי 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+סיגנטורה של לוגיקה מסדר שני
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $\left(V,S,F,P,C,A,\sigma\right)$
+\end_inset
+
+ לוגיקה מסדר שני אזי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+שמות עצם של לוגיקה מסדר שני
+\series default
+\color inherit
 :
  תהא 
 \begin_inset Formula $L$
 \end_inset
 
- לוגיקה ותהא 
-\begin_inset Formula $X$
-\end_inset
-
- קבוצת המשתנים של 
-\begin_inset Formula $L$
-\end_inset
-
- אזי 
-\begin_inset Formula $\var_{L}=X$
+ לוגיקה מסדר שני אזי 
+\begin_inset Formula $\ind\left(V_{L}\cup C_{\sigma_{L}},F_{L}\cup F_{\sigma_{L}}\right)$
 \end_inset
 
 .
@@ -5683,8 +5966,146 @@ status collapsed
 \begin_layout Standard
 
 \series bold
-מילון של לוגיקה מונאדית מסדר ראשון
+\color purple
+נוסחאות אטומיות של לוגיקה מסדר שני
 \series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ לוגיקה מסדר שני אזי 
+\begin_inset Formula $\left\{ P\left(t_{1}\ldots t_{n}\right)\mid\left(P\in R_{\sigma_{L}}\cup S_{L}\right)\land\left(\text{ שמות עצם}t_{1}\ldots t_{n}\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+הגדרה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ לוגיקה מסדר שני יהי 
+\begin_inset Formula $v\in V_{L}\cup S_{L}\cup F_{L}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $\varphi\in\ind\left(\atomicformula\left(L\right),C_{L}\right)$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall\left(\varphi,v\right)="\forall v\a"$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\exists\left(\varphi,v\right)="\exists v\a"$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+נוסחאות של לוגיקה מסדר שני
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ לוגיקה מסדר שני אזי 
+\begin_inset Formula $\ind\left(\atomicformula\left(L\right),C_{L}\cup A_{L}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+השמה של לוגיקה מסדר שני
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ לוגיקה מסדר שני יהי 
+\begin_inset Formula $M$
+\end_inset
+
+ מבנה על 
+\begin_inset Formula $\sigma_{L}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $v_{V}:V_{L}\to\dom\left(M\right)$
+\end_inset
+
+ תהא
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $v_{S}:S_{L}\to\bigcup_{i=1}^{\infty}\P\left(\dom\left(M\right)^{n}\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $v_{F}:F_{L}\to\bigcup_{n=1}^{\infty}\left(\dom\left(M\right)^{n}\to\dom\left(M\right)\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(v_{V},v_{S},v_{F}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color purple
+הערה
+\series default
+\color inherit
+:
+ לכל משתנה יחס ולכל משתנה פונקציה נשייך מספר טבעי המתאר את מספר הקלטים המתאימים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מילון של לוגיקה מונאדית
+\series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\Sigma$
@@ -5704,39 +6125,16 @@ status collapsed
 \begin_layout Standard
 
 \series bold
-סימון
-\series default
-:
- יהי 
-\begin_inset Formula $\sigma$
-\end_inset
-
- מילון של לוגיקה מונאדית מסדר ראשון ותהא 
-\begin_inset Formula $P$
-\end_inset
-
- קבוצת סימני היחס של 
-\begin_inset Formula $\sigma$
-\end_inset
-
- אזי 
-\begin_inset Formula $P_{\sigma}=P$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
+\color brown
 מבנה של מילון של לוגיקה מונאדית מסדר ראשון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
- מילון של לוגיקה מונאדית מסדר ראשון תהא 
+ מילון של לוגיקה מונאדית תהא 
 \begin_inset Formula $\mathcal{T}\ne\emptyset$
 \end_inset
 
@@ -5798,71 +6196,25 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color brown
 לוגיקה מונאדית מסדר ראשון (
 \begin_inset Formula $\fomlo$
 \end_inset
 
 )
 \series default
+\color inherit
 :
- לוגיקה מסדר ראשון מצויידת עם מילון של לוגיקה מונאדית מסדר ראשון.
+ לוגיקה מסדר ראשון מצויידת עם מילון של לוגיקה מונאדית.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
-סימון
-\series default
-:
- יהי 
-\begin_inset Formula $\sigma$
-\end_inset
-
- מילון של לוגיקה מונאדית מסדר ראשון ותהא 
-\begin_inset Formula $P$
-\end_inset
-
- קבוצת סימני היחס של 
-\begin_inset Formula $\sigma$
-\end_inset
-
- אזי 
-\begin_inset Formula $P_{\sigma}=P$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-סימון
-\series default
-:
- תהא 
-\begin_inset Formula $L$
-\end_inset
-
- לוגיקה מונאדית מסדר ראשון ותהא 
-\begin_inset Formula $\sigma$
-\end_inset
-
- הסיגנטורה של 
-\begin_inset Formula $L$
-\end_inset
-
- אזי 
-\begin_inset Formula $\sigma_{L}=\sigma$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
+\color brown
 השמה של לוגיקה מונאדית מסדר ראשון
 \series default
+\color inherit
 :
  תהא 
 \begin_inset Formula $L$
@@ -5877,7 +6229,7 @@ status collapsed
 \end_inset
 
  אזי 
-\begin_inset Formula $v:\var_{L}\to\mathcal{T}_{\mathcal{M}}$
+\begin_inset Formula $v:V_{L}\to\mathcal{T}_{\mathcal{M}}$
 \end_inset
 
 .
@@ -5886,8 +6238,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color brown
 מבנה מחרוזת
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\Sigma$
@@ -5927,8 +6281,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color brown
 סימון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\Sigma$
@@ -5968,8 +6324,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color brown
 שפה של נוסחה בלוגיקה מונאדית מסדר ראשון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\Sigma$
@@ -6005,8 +6363,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color brown
 שפה גדירה בלוגיקה מונאדית מסדר ראשון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\Sigma$
@@ -6059,8 +6419,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color brown
 מילון של לוגיקה מונאדית מסדר ראשון עם סוכר תחבירי
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\Sigma$
@@ -6080,14 +6442,16 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color brown
 מבנה של מילון של לוגיקה מונאדית מסדר ראשון עם סוכר תחבירי
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\sigma$
 \end_inset
 
- מילון של לוגיקה מונאדית מסדר ראשון עם סוכר תחבירי תהא 
+ מילון של לוגיקה מונאדית עם סוכר תחבירי תהא 
 \begin_inset Formula $\mathcal{T}\ne\emptyset$
 \end_inset
 
@@ -6158,19 +6522,15 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color brown
 הערה
 \series default
+\color inherit
 :
  נרחיב את מבנה המחרוזת לעבוד גם עם לוגיקה מונאדית מסדר ראשון עם סוכר תחבירי.
 \end_layout
 
 \begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\formula}{\mathrm{Formula}}
-{\text{Formula}}
-\end_inset
-
-
 \begin_inset FormulaMacro
 \newcommand{\Tr}{\mathrm{Tr}}
 {\text{Tr}}
@@ -6182,25 +6542,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
-סימון
-\series default
-:
- תהא 
-\begin_inset Formula $L$
-\end_inset
-
- לוגיקה אזי 
-\begin_inset Formula $\formula\left(L\right)=\left\{ \varphi\mid L\text{ פורמולה ב־}\varphi\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
+\color brown
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\Sigma$
@@ -6336,8 +6681,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color brown
 טענה
 \series default
+\color inherit
 :
  יהיו 
 \begin_inset Formula $\Sigma,\Gamma$
@@ -6381,8 +6728,10 @@ status collapsed
 \begin_layout Standard
 
 \series bold
+\color brown
 טענה
 \series default
+\color inherit
 :
  
 \begin_inset Formula $\left\{ s\in\left\{ 0,1\right\} ^{*}\bmid\len\left(s\right)\in\bbn_{\mathrm{even}}\right\} $
@@ -6393,6 +6742,13 @@ status collapsed
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \end_body
