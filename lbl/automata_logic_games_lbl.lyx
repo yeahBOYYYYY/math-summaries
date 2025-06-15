@@ -646,7 +646,7 @@ literal "true"
 \end_inset
 
  אוטומט סופי אזי 
-\begin_inset Formula $\lan\left(\mathcal{A}\right)=\left\{ w\in\Sigma_{\mathcal{A}}\bmid\mathcal{A}\text{ מתקבלת על ידי }w\right\} $
+\begin_inset Formula $\lan\left(\mathcal{A}\right)=\left\{ w\in\Sigma_{\mathcal{A}}^{*}\bmid\mathcal{A}\text{ מתקבלת על ידי }w\right\} $
 \end_inset
 
 .
@@ -6109,37 +6109,6 @@ end{minipage}
 
 \series bold
 \color brown
-השמה של לוגיקה מונאדית מסדר ראשון
-\series default
-\color inherit
-:
- תהא 
-\begin_inset Formula $L$
-\end_inset
-
- 
-\begin_inset Formula $\fomlo$
-\end_inset
-
- ויהי 
-\begin_inset Formula $\mathcal{M}$
-\end_inset
-
- מבנה של 
-\begin_inset Formula $\sigma_{L}$
-\end_inset
-
- אזי 
-\begin_inset Formula $v:V_{L}\to\mathcal{T}_{\mathcal{M}}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
 מבנה מחרוזת
 \series default
 \color inherit
@@ -6160,8 +6129,12 @@ end{minipage}
 \begin_inset Formula $s\in\Sigma^{*}$
 \end_inset
 
- ונגדיר 
-\begin_inset Formula $\mathcal{I}:R_{\sigma}\to\P\left(\mathcal{T}\right)$
+ ונגדיר
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{I}:R_{\sigma}\to\P\left(\left[\len\left(s\right)\right]\right)$
 \end_inset
 
  כך 
@@ -6169,7 +6142,7 @@ end{minipage}
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(\left\{ 1,\ldots,\len\left(s\right)\right\} ,<_{\bbn},\mathcal{I}\right)$
+\begin_inset Formula $\left(\left[\len\left(s\right)\right],<_{\bbn},\mathcal{I}\right)$
 \end_inset
 
 .
@@ -6234,10 +6207,6 @@ end{minipage}
 \begin_inset Formula $\fomlo$
 \end_inset
 
- באשר 
-\begin_inset Formula $R_{\sigma_{L}}=\left\{ P_{\ell}\mid\ell\in\Sigma\right\} $
-\end_inset
-
  ויהי 
 \begin_inset Formula $\varphi$
 \end_inset
@@ -6246,7 +6215,11 @@ end{minipage}
 \begin_inset Formula $L$
 \end_inset
 
- אזי 
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\lan\left(\varphi\right)=\left\{ s\in\Sigma^{*}\mid s\vDash\varphi\right\} $
 \end_inset
 
@@ -6277,15 +6250,7 @@ end{minipage}
 \begin_inset Formula $L$
 \end_inset
 
- המקיימת
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula $R_{\sigma_{L}}=\left\{ P_{\ell}\mid\ell\in\Sigma\right\} $
-\end_inset
-
- וכן קיים פסוק 
+ וקיים פסוק 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -6452,19 +6417,11 @@ end{minipage}
 \begin_inset Formula $\fomlo$
 \end_inset
 
- באשר 
-\begin_inset Formula $R_{\sigma_{L}}=\left\{ P_{\ell}\mid\ell\in\Sigma\right\} $
-\end_inset
-
  ותהא 
 \begin_inset Formula $\mathcal{L}$
 \end_inset
 
- לוגיקה מונאדית מסדר ראשון עם סוכר תחבירי באשר 
-\begin_inset Formula $R_{\sigma_{L}}=\left\{ P_{\ell}\mid\ell\in\Sigma\right\} $
-\end_inset
-
- אזי
+ לוגיקה מונאדית מסדר ראשון עם סוכר תחבירי אזי
 \end_layout
 
 \begin_layout Itemize
@@ -6638,13 +6595,6 @@ end{minipage}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\mlo}{\mathrm{MLO}}
 {\text{MLO}}
@@ -6692,42 +6642,9 @@ end{minipage}
 
 \series bold
 \color brown
-השמה של לוגיקה מונאדית מסדר 
-\color inherit
-שני
+שפה של נוסחה בלוגיקה מונאדית מסדר שני
 \series default
-:
- תהא 
-\begin_inset Formula $L$
-\end_inset
-
- 
-\begin_inset Formula $\mlo$
-\end_inset
-
- ויהי 
-\begin_inset Formula $\mathcal{M}$
-\end_inset
-
- מבנה של 
-\begin_inset Formula $\sigma_{L}$
-\end_inset
-
- אזי 
-\begin_inset Formula $v:V_{L}\cup S_{L}\to\mathcal{T}_{\mathcal{M}}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-שפה של נוסחה בלוגיקה מונאדית מסדר 
 \color inherit
-שני
-\series default
 :
  יהי 
 \begin_inset Formula $\Sigma$
@@ -6739,10 +6656,6 @@ end{minipage}
 
  
 \begin_inset Formula $\mlo$
-\end_inset
-
- באשר 
-\begin_inset Formula $R_{\sigma_{L}}=\left\{ P_{\ell}\mid\ell\in\Sigma\right\} $
 \end_inset
 
  ויהי 
@@ -6764,10 +6677,9 @@ end{minipage}
 
 \series bold
 \color brown
-שפה גדירה בלוגיקה מונאדית מסדר 
-\color inherit
-שני
+שפה גדירה בלוגיקה מונאדית מסדר שני
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\Sigma$
@@ -6785,15 +6697,7 @@ end{minipage}
 \begin_inset Formula $L$
 \end_inset
 
- המקיימת
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula $R_{\sigma_{L}}=\left\{ P_{\ell}\mid\ell\in\Sigma\right\} $
-\end_inset
-
- וכן קיים פסוק 
+ וקיים פסוק 
 \begin_inset Formula $\varphi$
 \end_inset
 
@@ -6803,6 +6707,668 @@ end{minipage}
 
  המקיים 
 \begin_inset Formula $\lan\left(\varphi\right)=\mathcal{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+משפט 
+\begin_inset Formula $\buchi$
+\end_inset
+
+־אלגוט־טרכטנברוט
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ותהא 
+\begin_inset Formula $L\subseteq\Sigma^{*}$
+\end_inset
+
+ אזי (
+\begin_inset Formula $L$
+\end_inset
+
+ גדירה ב־
+\begin_inset Formula $\mlo$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $L$
+\end_inset
+
+ רגולרית).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ותהא 
+\begin_inset Formula $L$
+\end_inset
+
+ 
+\begin_inset Formula $\mlo$
+\end_inset
+
+ אזי קיים אלגוריתם 
+\begin_inset Formula $A$
+\end_inset
+
+ עבורו לכל אוטומט סופי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $A\left(\mathcal{A}\right)$
+\end_inset
+
+ נוסחה ב־
+\begin_inset Formula $L$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\lan\left(A\left(\mathcal{A}\right)\right)=\lan\left(\mathcal{A}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ותהא 
+\begin_inset Formula $L$
+\end_inset
+
+ 
+\begin_inset Formula $\mlo$
+\end_inset
+
+ אזי קיים אלגוריתם 
+\begin_inset Formula $A$
+\end_inset
+
+ עבורו לכל נוסחה 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ב־
+\begin_inset Formula $L$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $A\left(\varphi\right)$
+\end_inset
+
+ אוטומט סופי וכן 
+\begin_inset Formula $\lan\left(A\left(\varphi\right)\right)=\lan\left(\varphi\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+בעיית הספיקות של לוגיקה מונאדית מסדר שני מעל מחרוזות
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ותהא 
+\begin_inset Formula $L$
+\end_inset
+
+ 
+\begin_inset Formula $\mlo$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mlo\text{-}\sat=\left\{ \left<\varphi\right>\mid\left(\varphi\in\formula\left(L\right)\right)\land\left(\exists s\in\Sigma^{*}:s\vDash\varphi\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+משפט
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ותהא 
+\begin_inset Formula $L$
+\end_inset
+
+ 
+\begin_inset Formula $\mlo$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mlo\text{-}\sat$
+\end_inset
+
+ כריעה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+מבנה 
+\begin_inset Formula $\omega$
+\end_inset
+
+־מחרוזת
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון של לוגיקה מונאדית באשר 
+\begin_inset Formula $R_{\sigma}=\left\{ P_{\ell}\mid\ell\in\Sigma\right\} $
+\end_inset
+
+ תהא 
+\begin_inset Formula $s\in\Sigma^{\omega}$
+\end_inset
+
+ ונגדיר
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{I}:R_{\sigma}\to\P\left(\bbn_{+}\right)$
+\end_inset
+
+ כך 
+\begin_inset Formula $\mathcal{I}\left(P_{\ell}\right)=s^{-1}\left[\ell\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(\bbn_{+},<_{\bbn+_{+}},\mathcal{I}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+סימון
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית יהי 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ מילון של לוגיקה מונאדית באשר 
+\begin_inset Formula $R_{\sigma}=\left\{ P_{\ell}\mid\ell\in\Sigma\right\} $
+\end_inset
+
+ תהא 
+\begin_inset Formula $s\in\Sigma^{\omega}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ מבנה 
+\begin_inset Formula $\omega$
+\end_inset
+
+־מחרוזת של 
+\begin_inset Formula $s$
+\end_inset
+
+ אזי 
+\begin_inset Formula $s=\mathcal{M}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+\begin_inset Formula $\omega$
+\end_inset
+
+־שפה של נוסחה בלוגיקה מונאדית מסדר ראשון
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ 
+\begin_inset Formula $\fomlo$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ פסוק מעל 
+\begin_inset Formula $L$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\omega\lan\left(\varphi\right)=\left\{ s\in\Sigma^{\omega}\mid s\vDash\varphi\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+\begin_inset Formula $\omega$
+\end_inset
+
+־שפה גדירה בלוגיקה מונאדית מסדר ראשון
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית אזי 
+\begin_inset Formula $\omega$
+\end_inset
+
+־שפה 
+\begin_inset Formula $\mathcal{L}\subseteq\Sigma^{\omega}$
+\end_inset
+
+ עבורה קיימת 
+\begin_inset Formula $\fomlo$
+\end_inset
+
+ 
+\begin_inset Formula $L$
+\end_inset
+
+ וקיים פסוק 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ מעל 
+\begin_inset Formula $L$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\omega\lan\left(\varphi\right)=\mathcal{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+\begin_inset Formula $\omega$
+\end_inset
+
+־שפה של נוסחה בלוגיקה מונאדית מסדר שני
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ 
+\begin_inset Formula $\mlo$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ פסוק מעל 
+\begin_inset Formula $L$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\omega\lan\left(\varphi\right)=\left\{ s\in\Sigma^{*}\mid s\vDash\varphi\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color orange
+\begin_inset Formula $\omega$
+\end_inset
+
+־שפה גדירה בלוגיקה מונאדית מסדר שני
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית אזי 
+\begin_inset Formula $\omega$
+\end_inset
+
+־שפה 
+\begin_inset Formula $\mathcal{L}\subseteq\Sigma^{\omega}$
+\end_inset
+
+ עבורה קיימת 
+\begin_inset Formula $\mlo$
+\end_inset
+
+ 
+\begin_inset Formula $L$
+\end_inset
+
+ וקיים פסוק 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ מעל 
+\begin_inset Formula $L$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\omega\lan\left(\varphi\right)=\mathcal{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט 
+\begin_inset Formula $\buchi$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ותהא 
+\begin_inset Formula $L\subseteq\Sigma^{\omega}$
+\end_inset
+
+ אזי (
+\begin_inset Formula $L$
+\end_inset
+
+ גדירה ב־
+\begin_inset Formula $\mlo$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $L$
+\end_inset
+
+ 
+\begin_inset Formula $\omega$
+\end_inset
+
+־רגולרית).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ותהא 
+\begin_inset Formula $L$
+\end_inset
+
+ 
+\begin_inset Formula $\mlo$
+\end_inset
+
+ אזי קיים אלגוריתם 
+\begin_inset Formula $A$
+\end_inset
+
+ עבורו לכל אוטומט 
+\begin_inset Formula $\buchi$
+\end_inset
+
+ 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $A\left(\mathcal{A}\right)$
+\end_inset
+
+ נוסחה ב־
+\begin_inset Formula $L$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\lan\left(A\left(\mathcal{A}\right)\right)=\lan\left(\mathcal{A}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נוסחה יישית בלוגיקה מונאדית מסדר שני
+\series default
+:
+ תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ 
+\begin_inset Formula $\mlo$
+\end_inset
+
+ אזי נוסחה 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ב־
+\begin_inset Formula $L$
+\end_inset
+
+ עבורה קיימת נוסחה 
+\begin_inset Formula $\psi$
+\end_inset
+
+ ב־
+\begin_inset Formula $\fomlo$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\varphi=\exists X_{1}\ldots\exists X_{k}\psi$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ותהא 
+\begin_inset Formula $\mathcal{L}\subseteq\Sigma^{\omega}$
+\end_inset
+
+ שפה 
+\begin_inset Formula $\omega$
+\end_inset
+
+־רגולרית אזי קיימת 
+\begin_inset Formula $\mlo$
+\end_inset
+
+ 
+\begin_inset Formula $L$
+\end_inset
+
+ וקיים פסוק יישי 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ מעל 
+\begin_inset Formula $L$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\omega\lan\left(\varphi\right)=\mathcal{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ותהא 
+\begin_inset Formula $L$
+\end_inset
+
+ 
+\begin_inset Formula $\mlo$
+\end_inset
+
+ אזי קיים אלגוריתם 
+\begin_inset Formula $A$
+\end_inset
+
+ עבורו לכל נוסחה 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ ב־
+\begin_inset Formula $L$
+\end_inset
+
+ מתקיים כי 
+\begin_inset Formula $A\left(\varphi\right)$
+\end_inset
+
+ אוטומט 
+\begin_inset Formula $\buchi$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\lan\left(A\left(\varphi\right)\right)=\lan\left(\varphi\right)$
 \end_inset
 
 .
