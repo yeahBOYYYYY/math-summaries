@@ -7244,7 +7244,7 @@ end{minipage}
 \end_inset
 
  וכן 
-\begin_inset Formula $\lan\left(A\left(\mathcal{A}\right)\right)=\lan\left(\mathcal{A}\right)$
+\begin_inset Formula $\omega\lan\left(A\left(\mathcal{A}\right)\right)=\omega\lan\left(\mathcal{A}\right)$
 \end_inset
 
 .
@@ -7368,10 +7368,94 @@ end{minipage}
 \end_inset
 
  וכן 
-\begin_inset Formula $\lan\left(A\left(\varphi\right)\right)=\lan\left(\varphi\right)$
+\begin_inset Formula $\omega\lan\left(A\left(\varphi\right)\right)=\omega\lan\left(\varphi\right)$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\tower}{\mathrm{Tower}}
+{\text{Tower}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ נגדיר 
+\begin_inset Formula $\tower:\bbn\times\bbn\to\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $\tower\left(0,n\right)=n$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\tower\left(i+1,n\right)=2^{\tower\left(i,n\right)}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i,n\in\bbn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציה אלמנטרית
+\series default
+:
+ פונקציה 
+\begin_inset Formula $f:\bbn\to\bbn$
+\end_inset
+
+ עבורה קיים 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ המקיים 
+\begin_inset Formula $f\left(n\right)=\O\left(\tower\left(k,n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית תהא 
+\begin_inset Formula $L$
+\end_inset
+
+ 
+\begin_inset Formula $\mlo$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $A$
+\end_inset
+
+ אלגוריתם עבורו לכל 
 \end_layout
 
 \end_body
