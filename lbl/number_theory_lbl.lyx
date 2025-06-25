@@ -1505,7 +1505,7 @@ literal "true"
 \color inherit
 :
  קיים אלגוריתם 
-\begin_inset Formula $\mathcal{A}$
+\begin_inset Formula $\mathrm{NaiveMul}$
 \end_inset
 
  המחשב כפל מספרים בסיבוכיות ריצה 
@@ -1789,7 +1789,7 @@ end{algorithm}
 \color inherit
 :
  קיים אלגוריתם 
-\begin_inset Formula $\mathcal{A}$
+\begin_inset Formula $\mathrm{CooleyTukeyMul}$
 \end_inset
 
  המחשב כפל מספרים בסיבוכיות ריצה 
@@ -2069,7 +2069,7 @@ end{algorithm}
 \color inherit
 :
  קיים אלגוריתם 
-\begin_inset Formula $\mathcal{A}$
+\begin_inset Formula $\mathrm{FastGCD}$
 \end_inset
 
  המחשב 
@@ -7007,16 +7007,20 @@ end{algorithm}
 
 \series bold
 \color teal
-אלגוריתם כפל איטרטיבי
+אלגוריתם ריבוע איטרטיבי
 \series default
 \color inherit
 :
  יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ חוג יהי 
 \begin_inset Formula $\mathcal{A}$
 \end_inset
 
- אלגוריתם כפל מספרים יהי 
-\begin_inset Formula $N\in\bbn$
+ אלגוריתם כפל מעל 
+\begin_inset Formula $R$
 \end_inset
 
  יהיו 
@@ -7024,7 +7028,7 @@ end{algorithm}
 \end_inset
 
  ויהי 
-\begin_inset Formula $a\in\nicefrac{\bbz}{N\bbz}$
+\begin_inset Formula $a\in R$
 \end_inset
 
  אזי
@@ -7061,7 +7065,7 @@ DontPrintSemicolon
 
 
 \backslash
-SetKwFunction{name}{ModIteratedSquaring[$
+SetKwFunction{name}{IteratedSquaring$_{R}$[$
 \backslash
 mathcal{A}$]}
 \end_layout
@@ -7083,8 +7087,7 @@ SetKwProg{Fn}{Algorithm}{:}{}
 \backslash
 Fn{
 \backslash
-name{$N,
- a,
+name{$a,
  m$}}{
 \end_layout
 
@@ -7133,9 +7136,7 @@ mathcal{A}
 left(a_{i-1},
  a_{i-1}
 \backslash
-right) 
-\backslash
-mod{N}$
+right)$
 \backslash
 
 \backslash
@@ -7160,9 +7161,7 @@ mathcal{A}
 left(r,
  a_i^{m_i}
 \backslash
-right) 
-\backslash
-mod{N}$
+right)$
 \end_layout
 
 \begin_layout Plain Layout
@@ -7195,16 +7194,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
-\color teal
-טענה
+סימון
 \series default
-\color inherit
 :
- יהי 
-\begin_inset Formula $\mathcal{A}$
-\end_inset
-
- אלגוריתם כפל מספרים יהיו 
+ יהיו 
 \begin_inset Formula $N,m\in\bbn$
 \end_inset
 
@@ -7212,12 +7205,31 @@ end{algorithm}
 \begin_inset Formula $a\in\nicefrac{\bbz}{N\bbz}$
 \end_inset
 
- אזי
-\begin_inset Newline newline
+ אזי 
+\begin_inset Formula $\mathrm{ModIteratedSquaring}\left(N,a,m\right)=\mathrm{IteratedSquaring}_{\nicefrac{\bbz}{N\bbz}}\left(a,m\right)$
 \end_inset
 
+.
+\end_layout
 
-\begin_inset Formula $\mathrm{ModIteratedSquaring}\left[\mathcal{A}\right]\left(N,a,\left(m\right)_{2}\right)=\left(a^{m}\mod N\right)$
+\begin_layout Standard
+
+\series bold
+\color teal
+טענה
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $N,m\in\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\nicefrac{\bbz}{N\bbz}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathrm{ModIteratedSquaring}\left(N,a,\left(m\right)_{2}\right)=\left(a^{m}\mod N\right)$
 \end_inset
 
 .
@@ -19098,569 +19110,6 @@ status open
 
 \series bold
 \color brown
-טענה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- ויהי 
-\begin_inset Formula $f\in\bbf_{p}\left[x\right]$
-\end_inset
-
- ראשוני אזי 
-\begin_inset Formula $\nicefrac{\bbf_{p}\left[x\right]}{f\cdot\bbf_{p}\left[x\right]}$
-\end_inset
-
- שדה וכן 
-\begin_inset Formula $\left|\nicefrac{\bbf_{p}\left[x\right]}{f\cdot\bbf_{p}\left[x\right]}\right|=p^{\deg\left(f\right)}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-גודל של פולינום
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- אזי נגדיר 
-\begin_inset Formula $\left|\cdot\right|:\bbf_{p}\left[x\right]\to\bbn$
-\end_inset
-
- כך 
-\begin_inset Formula $\left|f\right|=p^{\deg\left(f\right)}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-מסקנה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left|\cdot\right|$
-\end_inset
-
-הינה נורמה אוקלידית מעל 
-\begin_inset Formula $\bbf_{p}\left[x\right]$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-מסקנה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- ויהי 
-\begin_inset Formula $f\in\bbf_{p}\left[x\right]$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left|f\right|=\left|\nicefrac{\bbf_{p}\left[x\right]}{f\cdot\bbf_{p}\left[x\right]}\right|$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-טענה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- ויהיו 
-\begin_inset Formula $f,g\in\bbf_{p}\left[x\right]$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left|f\cdot g\right|=\left|f\right|\cdot\left|g\right|$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-טענה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- יהי 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $x^{p^{n}}-x$
-\end_inset
-
- חסר ריבועים מעל 
-\begin_inset Formula $\bbf_{p}\left[x\right]$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-טענה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- יהיו 
-\begin_inset Formula $n,m\in\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\gcd\left(x^{p^{n}}-x,x^{p^{m}}-x\right)=x^{p^{\gcd\left(n,m\right)}}-x$
-\end_inset
-
- מעל 
-\begin_inset Formula $\bbf_{p}\left[x\right]$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-טענה זהות פרובניוס
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- יהי 
-\begin_inset Formula $\bbf$
-\end_inset
-
- שדה באשר 
-\begin_inset Formula $\ch\left(\bbf\right)=p$
-\end_inset
-
- ויהיו 
-\begin_inset Formula $a,b\in\bbf$
-\end_inset
-
- אזי 
-\begin_inset Formula $\left(a+b\right)^{p}=a^{p}+b^{p}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-מסקנה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- יהי 
-\begin_inset Formula $f\in\bbf_{p}\left[x\right]$
-\end_inset
-
- ויהי 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $g\left(x\right)^{p^{n}}=g\left(x^{p^{n}}\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-טענה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- יהי 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- ויהי 
-\begin_inset Formula $P\in\bbf_{p}\left[x\right]$
-\end_inset
-
- ראשוני אזי 
-\begin_inset Formula $\left(P|\left(x^{p^{n}}-x\right)\right)\iff\left(\deg\left(P\right)|n\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-סימון
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- ויהי 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\P_{p,n}=\left\{ f\in\bbf_{p}\left[x\right]\bmid\left(\deg\left(f\right)=n\right)\land\left(\text{ מתוקן וראשוני}f\right)\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-הגדרה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- אזי נגדיר 
-\begin_inset Formula $\pi_{p}:\bbn_{+}\to\bbn$
-\end_inset
-
- כך 
-\begin_inset Formula $\pi_{p}\left(n\right)=\left|\P_{p,n}\right|$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-מסקנה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- ויהי 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $x^{p^{n}}-x=\prod_{\substack{d\in\bbn\\
-d|n
-}
-}\prod_{f\in\P_{p,d}}f$
-\end_inset
-
- מעל 
-\begin_inset Formula $\bbf_{p}\left[x\right]$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-טענה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- ויהי 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $p^{n}=\sum_{\substack{d\in\bbn\\
-d|n
-}
-}\left(d\cdot\pi_{p}\left(d\right)\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-מסקנה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- ויהי 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\pi_{p}\left(n\right)=\frac{1}{n}\left(p^{n}-\sum_{\substack{d\in\bbn_{<n}\\
-d|n
-}
-}\left(d\cdot\pi_{p}\left(d\right)\right)\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-מסקנה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- ויהי 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\frac{p^{n}}{n}-\frac{p}{p-1}\cdot\frac{p^{\floor{\frac{n}{2}}}}{n}\le\pi_{p}\left(n\right)\le\frac{p^{n}}{n}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-מסקנה משפט הפולינומים הראשוניים
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- אזי 
-\begin_inset Formula $\pi_{p}\left(n\right)\sim\frac{p^{n}}{n}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-פונקציית מוביוס
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $k\in\bbn$
-\end_inset
-
- יהיו 
-\begin_inset Formula $p_{1}\ldots p_{k}\in\bbp$
-\end_inset
-
- שונים ויהי 
-\begin_inset Formula $e\in\bbn_{+}^{k}$
-\end_inset
-
- אזי נגדיר 
-\begin_inset Formula $\mu:\bbn\to\left\{ 0,\pm1\right\} $
-\end_inset
-
- כך 
-\begin_inset Formula $\mu\left(\prod_{i=1}^{k}p_{i}^{e_{i}}\right)=\left\{ \begin{smallmatrix}\left(-1\right)^{k} &  & e=\mathds{1}\\
-0 &  & \text{else}
-\end{smallmatrix}\right.$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-טענה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\sum_{\substack{d\in\bbn\\
-d|n
-}
-}\mu\left(d\right)=\left\{ \begin{smallmatrix}1 &  & n=1\\
-0 &  & n>1
-\end{smallmatrix}\right.$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-טענה נוסחת ההיפוך של מוביוס
-\series default
-\color inherit
-:
- תהא 
-\begin_inset Formula $f:\bbn_{+}\to\bbc$
-\end_inset
-
- ויהי 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $f\left(n\right)=\sum_{\substack{d\in\bbn\\
-d|n
-}
-}\left(\mu\left(d\right)\cdot\left(\sum_{\substack{a\in\bbn\\
-a|\frac{n}{d}
-}
-}f\left(a\right)\right)\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-טענה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- ויהי 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\pi_{p}\left(n\right)=\frac{1}{n}\sum_{\substack{d\in\bbn\\
-d|n
-}
-}\left(\mu\left(\frac{n}{d}\right)\cdot p^{d}\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
-מסקנה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $p\in\bbp$
-\end_inset
-
- ויהי 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- אזי 
-\begin_inset Formula $\pi_{p}\left(n\right)>0$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color brown
 משפט
 \series default
 \color inherit
@@ -19786,10 +19235,2031 @@ d|n
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה ויהי 
+\begin_inset Formula $f\in\bbf_{q}\left[x\right]$
+\end_inset
+
+ ראשוני אזי 
+\begin_inset Formula $\nicefrac{\bbf_{q}\left[x\right]}{f\cdot\bbf_{q}\left[x\right]}$
+\end_inset
+
+ שדה וכן 
+\begin_inset Formula $\left|\nicefrac{\bbf_{q}\left[x\right]}{f\cdot\bbf_{q}\left[x\right]}\right|=q^{\deg\left(f\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+גודל של פולינום
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה אזי נגדיר 
+\begin_inset Formula $\left|\cdot\right|:\bbf_{q}\left[x\right]\to\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $\left|f\right|=q^{\deg\left(f\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה אזי 
+\begin_inset Formula $\left|\cdot\right|$
+\end_inset
+
+הינה נורמה אוקלידית מעל 
+\begin_inset Formula $\bbf_{q}\left[x\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+:יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה ויהי 
+\begin_inset Formula $f\in\bbf_{q}\left[x\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|f\right|=\left|\nicefrac{\bbf_{q}\left[x\right]}{f\cdot\bbf_{q}\left[x\right]}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה ויהיו 
+\begin_inset Formula $f,g\in\bbf_{q}\left[x\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|f\cdot g\right|=\left|f\right|\cdot\left|g\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $x^{q^{n}}-x$
+\end_inset
+
+ חסר ריבועים מעל 
+\begin_inset Formula $\bbf_{q}\left[x\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהיו 
+\begin_inset Formula $n,m\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gcd\left(x^{q^{n}}-x,x^{q^{m}}-x\right)=x^{q^{\gcd\left(n,m\right)}}-x$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbf_{q}\left[x\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\fr}{\text{Fr}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+מורפיזם פרובניוס
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ שדה המקיים 
+\begin_inset Formula $\ch\left(\bbk\right)=p$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $\fr_{p}:\bbk\to\bbk$
+\end_inset
+
+ כך 
+\begin_inset Formula $\fr_{p}\left(a\right)=a^{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה זהות פרובניוס
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\bbk$
+\end_inset
+
+ שדה סופי באשר 
+\begin_inset Formula $\ch\left(\bbk\right)=p$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\fr_{p}$
+\end_inset
+
+ אוטומורפיזם של 
+\begin_inset Formula $\bbk$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה באשר 
+\begin_inset Formula $\ch\left(\bbf\right)=p$
+\end_inset
+
+ יהי 
+\begin_inset Formula $f\in\bbf\left[x\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $g\left(x\right)^{p^{n}}=g\left(x^{p^{n}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $P\in\bbf_{q}\left[x\right]$
+\end_inset
+
+ ראשוני אזי 
+\begin_inset Formula $\left(P|\left(x^{q^{n}}-x\right)\right)\iff\left(\deg\left(P\right)|n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+סימון
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה ויהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\P_{q,n}=\left\{ f\in\bbf_{q}\left[x\right]\bmid\left(\deg\left(f\right)=n\right)\land\left(\text{ מתוקן וראשוני}f\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+הגדרה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה אזי נגדיר 
+\begin_inset Formula $\pi_{q}:\bbn_{+}\to\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $\pi_{q}\left(n\right)=\left|\P_{q,n}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה ויהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $x^{q^{n}}-x=\prod_{\substack{d\in\bbn\\
+d|n
+}
+}\prod_{f\in\P_{q,d}}f$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbf_{q}\left[x\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה ויהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $q^{n}=\sum_{\substack{d\in\bbn\\
+d|n
+}
+}\left(d\cdot\pi_{q}\left(d\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה ויהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\pi_{q}\left(n\right)=\frac{1}{n}\left(q^{n}-\sum_{\substack{d\in\bbn_{<n}\\
+d|n
+}
+}\left(d\cdot\pi_{q}\left(d\right)\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה ויהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\frac{q^{n}}{n}-\frac{q}{q-1}\cdot\frac{q^{\floor{\frac{n}{2}}}}{n}\le\pi_{q}\left(n\right)\le\frac{q^{n}}{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה משפט הפולינומים הראשוניים
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה אזי 
+\begin_inset Formula $\pi_{q}\left(n\right)\sim\frac{q^{n}}{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+מסקנה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה ויהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\pi_{q}\left(n\right)>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+פונקציית מוביוס
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $k\in\bbn$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $p_{1}\ldots p_{k}\in\bbp$
+\end_inset
+
+ שונים ויהי 
+\begin_inset Formula $e\in\bbn_{+}^{k}$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $\mu:\bbn\to\left\{ 0,\pm1\right\} $
+\end_inset
+
+ כך 
+\begin_inset Formula $\mu\left(\prod_{i=1}^{k}p_{i}^{e_{i}}\right)=\left\{ \begin{smallmatrix}\left(-1\right)^{k} &  & e=\mathds{1}\\
+0 &  & \text{else}
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sum_{\substack{d\in\bbn\\
+d|n
+}
+}\mu\left(d\right)=\left\{ \begin{smallmatrix}1 &  & n=1\\
+0 &  & n>1
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה נוסחת ההיפוך של מוביוס
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $f:\bbn_{+}\to\bbc$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(n\right)=\sum_{\substack{d\in\bbn\\
+d|n
+}
+}\left(\mu\left(d\right)\cdot\left(\sum_{\substack{a\in\bbn\\
+a|\frac{n}{d}
+}
+}f\left(a\right)\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color brown
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה ויהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\pi_{q}\left(n\right)=\frac{1}{n}\sum_{\substack{d\in\bbn\\
+d|n
+}
+}\left(\mu\left(\frac{n}{d}\right)\cdot q^{d}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $f\in\bbf_{q}\left[x\right]$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\deg\left(f\right)=n$
+\end_inset
+
+ אזי (
+\begin_inset Formula $f$
+\end_inset
+
+ ראשוני)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $f|\left(x^{q^{n}}-x\right)$
+\end_inset
+
+ וכן לכל 
+\begin_inset Formula $\ell\in\bbn_{<n}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\gcd\left(f,x^{q^{\ell}}-x\right)=1$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם מבחן ראשוניות לפולינום
+\series default
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $f\in\bbf_{q}\left[x\right]$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\deg\left(f\right)=n$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אלגוריתם חזקה מעל 
+\begin_inset Formula $\nicefrac{\bbf_{q}\left[x\right]}{f\cdot\bbf_{q}\left[n\right]}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ אלגוריתם 
+\begin_inset Formula $\gcd$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbf_{q}\left[x\right]$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{PolynomialPrimality[$
+\backslash
+mathcal{A},
+ 
+\backslash
+mathcal{B}$]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{Algorithm}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$q,
+ n,
+ f$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $L 
+\backslash
+in 
+\backslash
+left(
+\backslash
+nicefrac{
+\backslash
+bbf_{q}
+\backslash
+left[x
+\backslash
+right]}{f
+\backslash
+cdot
+\backslash
+bbf_{q}
+\backslash
+left[x
+\backslash
+right]}
+\backslash
+right)^{n};
+ 
+\backslash
+qquad L_1 
+\backslash
+gets 
+\backslash
+left(x^{q}
+\backslash
+mod f
+\backslash
+right)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$i
+\backslash
+in [2,
+\backslash
+ldots,
+ n]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $L_i 
+\backslash
+gets 
+\backslash
+mathcal{A}
+\backslash
+left(f,L_{i-1},q
+\backslash
+right)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+lIf{$L_n 
+\backslash
+ne 
+\backslash
+left(x
+\backslash
+mod f
+\backslash
+right)$}{
+\backslash
+Return $
+\backslash
+false$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$d
+\backslash
+in [1,
+\backslash
+ldots,
+ n-1]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+lIf{$
+\backslash
+mathcal{B}
+\backslash
+left(L_{d} - x,f
+\backslash
+right)
+\backslash
+ne 1$}{
+\backslash
+Return $
+\backslash
+false$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $
+\backslash
+true$
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $f\in\bbf_{q}\left[x\right]$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\deg\left(f\right)=n$
+\end_inset
+
+ אזי (
+\begin_inset Formula $f$
+\end_inset
+
+ ראשוני)
+\begin_inset Formula $\iff$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(
+\begin_inset Formula $\mathrm{PolynomialPrimality}\left(q,n,f\right)=\true$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ סיבוכיות הריצה של 
+\begin_inset Formula $\mathrm{PolynomialPrimality}\left[\mathrm{IteratedSquaring}\left[\mathrm{NaiveMul}\right],\mathrm{EuclidGCD}\right]$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\O\left(\left(n\cdot\log\left(q\right)\right)^{3}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ סיבוכיות הריצה של 
+\begin_inset Formula $\mathrm{PolynomialPrimality}\left[\mathrm{IteratedSquaring}\left[\mathrm{CooleyTukeyMul}\right],\mathrm{FastGCD}\right]$
+\end_inset
+
+ הינה
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\tilde{\O}\left(\left(n\cdot\log\left(q\right)\right)^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ יהי 
+\begin_inset Formula $r\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $g\in\bbf_{p^{r}}\left[x\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(g^{\prime}=0\right)\iff\left(\exists h\in\bbf_{p^{r}}\left[x\right].g=h^{p}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם שורש מעל שדה סופי
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ יהי 
+\begin_inset Formula $r\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $a\in\bbf_{p^{r}}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אלגוריתם חזקה מעל 
+\begin_inset Formula $\bbf_{p^{r}}$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathrm{FiniteFieldRoot}\left[\mathcal{A}\right]\left(p,r,a\right)=\mathcal{A}\left(a,p^{r-1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ יהי 
+\begin_inset Formula $r\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $a\in\bbf_{p^{r}}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathrm{FiniteFieldRoot}\left(p,r,a\right)=\sqrt[p]{a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם שורש לפולינום
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ יהי 
+\begin_inset Formula $r\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $a_{0},\ldots,a_{n}\in\bbf_{p^{r}}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left(\sum_{i=0}^{n}a_{i}x^{i}\right)^{\prime}=0$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אלגוריתם חזקה מעל 
+\begin_inset Formula $\bbf_{p^{r}}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathrm{FiniteFieldPolynomialRoot}\left[\mathcal{A}\right]\left(p,r,a\right)=\sum_{i=0}^{\frac{n}{p}}\mathrm{FiniteFieldRoot}\left[\mathcal{A}\right]\left(a_{pi}\right)x^{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ יהי 
+\begin_inset Formula $r\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $f\in\bbf_{p^{r}}\left[x\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathrm{FiniteFieldPolynomialRoot}\left(p,r,f\right)=\sqrt[p]{f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה ויהי 
+\begin_inset Formula $f\in\bbf_{q}\left[x\right]$
+\end_inset
+
+ אזי (
+\begin_inset Formula $\gcd\left(f,f^{\prime}\right)=1$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $f$
+\end_inset
+
+ חסר ריבועים).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם פירוק פולינום לפולינומים חסרי ריבועים
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ יהי 
+\begin_inset Formula $r\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $f\in\bbf_{p^{r}}\left[x\right]$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אלגוריתם 
+\begin_inset Formula $\gcd$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbf_{p^{r}}\left[x\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ אלגוריתם חזקה מעל 
+\begin_inset Formula $\bbf_{p^{r}}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{PolyFactorNoSquare[$
+\backslash
+mathcal{A},
+ 
+\backslash
+mathcal{B}$]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{Algorithm}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$p,
+ r,
+ f$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $G 
+\backslash
+gets 
+\backslash
+mathcal{A}
+\backslash
+left(f,f^{
+\backslash
+prime}
+\backslash
+right)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+lIf{$G=1$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+Return $
+\backslash
+{
+\backslash
+left(f,
+ 1
+\backslash
+right)
+\backslash
+}$
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+If{$f^
+\backslash
+prime 
+\backslash
+ne 0$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $A 
+\backslash
+gets$ 
+\backslash
+name{$p,
+ r,
+ G$}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $B 
+\backslash
+gets$ 
+\backslash
+name{$p,
+ r,
+ 
+\backslash
+frac{f}{G}$}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+Return $A+B$
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $g 
+\backslash
+gets 
+\backslash
+mathrm{FiniteFieldPolynomialRoot}
+\backslash
+left[
+\backslash
+mathcal{B}
+\backslash
+right]
+\backslash
+left(p,r,f
+\backslash
+right)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $S 
+\backslash
+gets$ 
+\backslash
+name{$p,
+ r,
+ g$}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $
+\backslash
+{
+\backslash
+left(q,
+ n+p
+\backslash
+right)
+\backslash
+mid 
+\backslash
+left(q,
+ n
+\backslash
+right)
+\backslash
+in S
+\backslash
+}$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ יהי 
+\begin_inset Formula $r\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $f\in\bbf_{p^{r}}\left[x\right]$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\prod\mathrm{PolyFactorNoSquare}\left(p,r,f\right)=f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $q\in\mathrm{PolyFactorNoSquare}\left(p,r,f\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $q$
+\end_inset
+
+ חסר ריבועים.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם פירוק פולינום חסר ריבועים לפולינומים בעלי פירוק לראשוניים בעלי אותה דרגה
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ יהי 
+\begin_inset Formula $r\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $f\in\bbf_{p^{r}}\left[x\right]$
+\end_inset
+
+ חסר ריבועים יהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אלגוריתם 
+\begin_inset Formula $\gcd$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbf_{p^{r}}\left[x\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ אלגוריתם חזקה מעל 
+\begin_inset Formula $\bbf_{p^{r}}\left[x\right]$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{PolyFactorSameDeg[$
+\backslash
+mathcal{A},
+ 
+\backslash
+mathcal{B}$]}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{Algorithm}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$p,
+ r,
+ f$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $S
+\backslash
+gets 
+\backslash
+emptyset$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$d
+\backslash
+in[1,
+ 
+\backslash
+ldots,
+ 
+\backslash
+deg
+\backslash
+left(f
+\backslash
+right)]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $f_{d} 
+\backslash
+gets 
+\backslash
+mathcal{A}
+\backslash
+left(
+\backslash
+mathcal{B}
+\backslash
+left(x,
+ q^d
+\backslash
+right) - x,
+ f
+\backslash
+right)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+lIf{$f_{d} 
+\backslash
+ne 1$}{$S 
+\backslash
+gets S
+\backslash
+cup
+\backslash
+{f_d
+\backslash
+}$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $S$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\power}{\mathrm{power}}
+{\text{power}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית חזקה
+\series default
+:
+ נגדיר 
+\begin_inset Formula $\power:R\times\bbn\to R$
+\end_inset
+
+ כך 
+\begin_inset Formula $\power\left(r,n\right)=r^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ יהי 
+\begin_inset Formula $r\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $f\in\bbf_{p^{r}}\left[x\right]$
+\end_inset
+
+ חסר ריבועים אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\prod\power\left(\mathrm{PolyFactorSameDeg}\left(p,r,f\right)\right)\right)|f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+לכל 
+\begin_inset Formula $\left(f_{d},n\right)\in\mathrm{PolyFactorSameDeg}\left(p,r,f\right)$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $Q\in\bbf_{p^{r}}\left[x\right]$
+\end_inset
+
+ ראשוני המקיים 
+\begin_inset Formula $Q|f_{d}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\deg\left(Q\right)=d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $d\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbf_{q^{d}}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $2\nmid q$
+\end_inset
+
+ אז 
+\begin_inset Formula $x^{q^{d}}-x=\left(\left(x+a\right)^{\frac{q^{d}-1}{2}}-1\right)\left(\left(x+a\right)^{\frac{q^{d}-1}{2}}+1\right)\left(x+a\right)$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbf_{q}\left[x\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $2|q$
+\end_inset
+
+ אז 
+\begin_inset Formula $x^{q^{d}}-x=\left(\sum_{i=1}^{d\cdot\log_{2}\left(q\right)}\left(x+a\right)^{\frac{q^{d}}{2^{i}}}\right)\left(\left(\sum_{i=1}^{d\cdot\log_{2}\left(q\right)}\left(x+a\right)^{\frac{q^{d}}{2^{i}}}\right)+1\right)$
+\end_inset
+
+ מעל 
+\begin_inset Formula $\bbf_{q}\left[x\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $d\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $a\in\bbf_{q^{d}}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $f\left(a\right)=0$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula $P\in\bbf_{q^{d}}\left[x\right]$
+\end_inset
+
+ כך 
+\begin_inset Formula $P=\prod_{i=1}^{d}\left(x-a^{q^{i}}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $P\in\bbf_{q}\left[x\right]$
+\end_inset
+
+ וכן 
+\begin_inset Formula $P$
+\end_inset
+
+ ראשוני מעל 
+\begin_inset Formula $\bbf_{q}\left[x\right]$
+\end_inset
+
+ וכן 
+\begin_inset Formula $P|f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם פירוק פולינום חסר ריבועים בעל פירוק לראשוניים בעלי אותה דרגה
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $r,d\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $f\in\bbf_{p^{r}}\left[x\right]$
+\end_inset
+
+ חסר ריבועים עבורו לכל 
+\begin_inset Formula $Q\in\bbf_{p^{r}}\left[x\right]$
+\end_inset
+
+ ראשוני המקיים 
+\begin_inset Formula $Q|f$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\deg\left(Q\right)=d$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbf_{\left(p^{r}\right)^{d}}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+...
 \end_layout
 
 \end_body
