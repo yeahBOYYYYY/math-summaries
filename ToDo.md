@@ -6,7 +6,7 @@ Courses I still need to do.
 
 | Name               | Notes | Last lec updated | Lec | Rec | HW |
 |--------------------|-------|------------------|-----|-----|----|
-| galois, fields     |       | 07/05/25         | 12  | 10  | 9  |
+| galois, fields     |       |                  |     | 10  | 9  |
 | auto, logic, games |       | 29/03/25         | 2   | -   | 0  |
 | computation by lin |       | 16/03/25         | 0   | 0   | 0  |
 | complex analysis 2 |       | 29/03/25         | 4   | -   | 0  |
