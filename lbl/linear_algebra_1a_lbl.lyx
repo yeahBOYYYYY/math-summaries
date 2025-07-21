@@ -75,6 +75,10 @@
 \usepackage{color}
 \setlength{\columnseprule}{1pt}
 \def\columnseprulecolor{\color{black}}
+
+
+% reversed nicefrac for coset
+\newcommand{\tmprevnicefrac}[2]{\left.\raisebox{-0.15em}{$\scriptstyle #1$} \middle\backslash \raisebox{0.15em}{$\scriptstyle #2$}\right.}
 \end_preamble
 \options no-math
 \use_default_options true
@@ -194,6 +198,15 @@ LatexCommand include
 filename "E:/University/!Summaries/macros.lyx"
 literal "true"
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\rnicefrac}[2]{\tmprevnicefrac{#1}{#2}}
+{#1\backslash#2}
 \end_inset
 
 
@@ -1089,7 +1102,7 @@ status collapsed
 
 \series bold
 \color blue
-חוג עם יחידה אבלי
+חוג אבלי עם יחידה
 \series default
 \color inherit
 :
@@ -1107,20 +1120,106 @@ status collapsed
 \begin_layout Standard
 
 \series bold
-\color blue
-חוג הפולינומים
+פולינום
 \series default
-\color inherit
 :
  יהי 
-\begin_inset Formula $\left<R,+,\cdot\right>$
+\begin_inset Formula $R$
 \end_inset
 
- חוג אבלי אזי 
-\begin_inset Formula $\left<R\left[x\right],+,\cdot\right>$
+ חוג יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\zeta_{1}\ldots\zeta_{n+1}\in R$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f:R\to R$
+\end_inset
+
+ המוגדרת 
+\begin_inset Formula $f\left(x\right)=\sum_{i=0}^{n}\zeta_{i+1}x^{i}$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ חוג אזי 
+\begin_inset Formula $R\left[x\right]=\left\{ f:R\to R\mid\text{ פולינום}f\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ חוג אזי נגדיר 
+\begin_inset Formula $+:R\left[x\right]\times R\left[x\right]\to R\left[x\right]$
+\end_inset
+
+ כך 
+\begin_inset Formula $f+g=\lambda x\in R.\left(f\left(x\right)+g\left(x\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ חוג אזי נגדיר 
+\begin_inset Formula $\cdot:R\left[x\right]\times R\left[x\right]\to R\left[x\right]$
+\end_inset
+
+ כך 
+\begin_inset Formula $f\cdot g=\lambda x\in R.\left(f\left(x\right)+g\left(x\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה חוג הפולינומים
+\series default
+:
+ יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ חוג אזי 
+\begin_inset Formula $R\left[x\right]$
+\end_inset
+
+ חוג.
 \end_layout
 
 \begin_layout Standard
@@ -1132,18 +1231,24 @@ status collapsed
 \color inherit
 :
  יהי 
-\begin_inset Formula $\left<R\left[x\right],+,\cdot\right>$
+\begin_inset Formula $R$
 \end_inset
 
- חוג פולינומים אזי לכל 
+ חוג אבלי ויהיו 
 \begin_inset Formula $p,q\in R\left[x\right]$
 \end_inset
 
- מתקיים 
-\begin_inset Formula $\deg\left(p+q\right)\le\max\left(\deg\left(p\right),\deg\left(q\right)\right)$
+ אזי
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\deg\left(p+q\right)\le\max\left\{ \deg\left(p\right),\deg\left(q\right)\right\} $
 \end_inset
 
- וכן 
+.
+\end_layout
+
+\begin_layout Itemize
 \begin_inset Formula $\deg\left(p\cdot q\right)\le\deg\left(p\right)+\deg\left(q\right)$
 \end_inset
 
@@ -1216,12 +1321,12 @@ status collapsed
 \begin_inset Formula $G$
 \end_inset
 
- חבורה סופית אזי 
-\begin_inset Formula $\left|\left<g\right>\right|=\ord\left(g\right)$
+ חבורה סופי ויהי 
+\begin_inset Formula $g\in G$
 \end_inset
 
- לכל 
-\begin_inset Formula $g\in G$
+ אזי 
+\begin_inset Formula $\left|\left<g\right>\right|=\ord\left(g\right)$
 \end_inset
 
 .
@@ -1239,16 +1344,16 @@ status collapsed
 \begin_inset Formula $G$
 \end_inset
 
- חבורה ויהיו 
+ חבורה תהא 
 \begin_inset Formula $H\le G$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $g_{1},g_{2}\in G$
 \end_inset
 
  אזי 
 \begin_inset Formula $\left(g_{1}\sim_{H}g_{2}\right)\iff\left(g_{1}*g_{2}^{-1}\in H\right)$
-\end_inset
-
- לכל 
-\begin_inset Formula $g_{1},g_{2}\in G$
 \end_inset
 
 .
@@ -1421,6 +1526,13 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color blue
@@ -1574,26 +1686,6 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-לתקן מכאן!
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 \color red
@@ -1605,8 +1697,16 @@ status open
 \begin_inset Formula $\bbf$
 \end_inset
 
- שדה אזי 
-\begin_inset Formula $\forall a,b\in\bbf.\left(a+b\right)^{n}=\sum_{k=0}^{n}{n \choose k}a^{k}b^{n-k}$
+ שדה יהי 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $a,b\in\bbf$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(a+b\right)^{n}=\sum_{k=0}^{n}{n \choose k}a^{k}b^{n-k}$
 \end_inset
 
 .
@@ -1621,15 +1721,56 @@ status open
 \color inherit
 :
  יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ יהי 
 \begin_inset Formula $\bbf$
 \end_inset
 
- שדה עבורו 
-\begin_inset Formula $\char\left(\bbf\right)=p\ne0$
+ שדה באשר 
+\begin_inset Formula $\char\left(\bbf\right)=p$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $a,b\in\bbf$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $k\in\left[p-1\right]$
 \end_inset
 
  אזי 
-\begin_inset Formula $\forall a,b\in\bbf.\forall k\notin\left\{ 0,p\right\} .\left(\binom{p}{k}\cdot a=0\right)\land\left(\left(a+b\right)^{p}=a^{p}+b^{p}\right)$
+\begin_inset Formula $\binom{p}{k}\cdot a=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה באשר 
+\begin_inset Formula $\char\left(\bbf\right)=p$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $a,b\in\bbf$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(a+b\right)^{p}=a^{p}+b^{p}$
 \end_inset
 
 .
@@ -1643,8 +1784,16 @@ status open
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\forall p\in\bbp.\forall a\in\bbz_{p}.a^{p}\equiv a\mod p$
+ יהי 
+\begin_inset Formula $p\in\bbp$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $a\in\bbz_{p}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $a^{p}\equiv a\mod p$
 \end_inset
 
 .
@@ -1658,11 +1807,15 @@ status open
 \series default
 \color inherit
 :
- יהיו 
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה תהא 
 \begin_inset Formula $H\le G$
 \end_inset
 
- חבורות ויהי 
+ ויהי 
 \begin_inset Formula $g\in G$
 \end_inset
 
@@ -1681,11 +1834,15 @@ status open
 \series default
 \color inherit
 :
- יהיו 
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה תהא 
 \begin_inset Formula $H\le G$
 \end_inset
 
- חבורות ויהי 
+ ויהי 
 \begin_inset Formula $g\in G$
 \end_inset
 
@@ -1704,13 +1861,20 @@ status open
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $G/H=\left\{ g*H\mid g\in G\right\} $
+ תהא 
+\begin_inset Formula $G$
 \end_inset
 
-,
- 
-\begin_inset Formula $H\backslash G=\left\{ H*g\mid g\in G\right\} $
+ חבורה ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nicefrac{G}{H}=\left\{ g*H\mid g\in G\right\} $
+\end_inset
+
+ וכן 
+\begin_inset Formula $\rnicefrac HG=\left\{ H*g\mid g\in G\right\} $
 \end_inset
 
 .
@@ -1724,11 +1888,19 @@ status open
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\left(G/H\right)\land\left(H\backslash G\right)$
+ תהא 
+\begin_inset Formula $G$
 \end_inset
 
- חלוקות של 
+ חבורה ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\nicefrac{G}{H}$
+\end_inset
+
+ חלוקה של 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1743,8 +1915,43 @@ status open
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\left|G/H\right|=\left|H\backslash G\right|$
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\rnicefrac HG$
+\end_inset
+
+ חלוקה של 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|\nicefrac{G}{H}\right|=\left|\rnicefrac HG\right|$
 \end_inset
 
 .
@@ -1758,12 +1965,16 @@ status open
 \series default
 \color inherit
 :
- יהיו 
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
 \begin_inset Formula $H\le G$
 \end_inset
 
- חבורות אזי 
-\begin_inset Formula $\left[G:H\right]=\left|G/H\right|$
+ אזי 
+\begin_inset Formula $\left[G:H\right]=\left|\nicefrac{G}{H}\right|$
 \end_inset
 
 .
@@ -1777,12 +1988,20 @@ status open
 \series default
 \color inherit
 :
- יהיו 
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה סופית ותהא 
 \begin_inset Formula $H\le G$
 \end_inset
 
- חבורות סופיות אזי 
-\begin_inset Formula $\left(\left|H\right||\left|G\right|\right)\land\left(\left[G:H\right]=\frac{\left|G\right|}{\left|H\right|}\right)$
+ אזי 
+\begin_inset Formula $\left|H\right||\left|G\right|$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left[G:H\right]=\frac{\left|G\right|}{\left|H\right|}$
 \end_inset
 
 .
@@ -1823,7 +2042,7 @@ status open
 \begin_inset Formula $G$
 \end_inset
 
- חבורה וכן 
+ חבורה ותהא 
 \begin_inset Formula $N\le G$
 \end_inset
 
@@ -1842,12 +2061,16 @@ status open
 \series default
 \color inherit
 :
- תהיינה 
-\begin_inset Formula $B,A\le G$
+ תהא 
+\begin_inset Formula $G$
 \end_inset
 
- חבורות אזי 
-\begin_inset Formula $A*B=\left\{ a*b\mid a\in A\land b\in B\right\} $
+ חבורה ותהיינה 
+\begin_inset Formula $A,B\le G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A*B=\left\{ a*b\mid\left(a\in A\right)\land\left(b\in B\right)\right\} $
 \end_inset
 
 .
@@ -1861,7 +2084,15 @@ status open
 \series default
 \color inherit
 :
- יהיו 
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה תהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ ויהיו 
 \begin_inset Formula $g_{1},g_{2}\in G$
 \end_inset
 
@@ -1884,11 +2115,19 @@ status open
 \series default
 \color inherit
 :
- (
-\begin_inset Formula $G/H$
+ תהא 
+\begin_inset Formula $G$
 \end_inset
 
- חבורה עם כפל קבוצות)
+ חבורה ותהא 
+\begin_inset Formula $H\le G$
+\end_inset
+
+ אזי (
+\begin_inset Formula $\nicefrac{G}{H}$
+\end_inset
+
+ חבורה)
 \begin_inset Formula $\iff$
 \end_inset
 
@@ -1900,6 +2139,13 @@ status open
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color red
@@ -1907,15 +2153,15 @@ status open
 \series default
 \color inherit
 :
- יהיו 
-\begin_inset Formula $f,g$
+ תהיינה 
+\begin_inset Formula $X,Y$
 \end_inset
 
- פונקציות עבורן 
-\begin_inset Formula $\text{dom}\left(g\right)=\text{dom}\left(f\right)$
+ קבוצות ותהיינה 
+\begin_inset Formula $f,g:X\to Y$
 \end_inset
 
- אזי הטענה 
+ אזי 
 \begin_inset Formula $f\left(x\right)=g\left(x\right)$
 \end_inset
 
@@ -1923,6 +2169,10 @@ status open
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 
 \series bold
 \color red
@@ -1949,6 +2199,11 @@ status open
  משתנים.
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 
 \series bold
@@ -1957,8 +2212,12 @@ status open
 \series default
 \color inherit
 :
- תהא 
-\begin_inset Formula $f\in X^{B}$
+ תהיינה 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ קבוצות תהיינה 
+\begin_inset Formula $f,g:X\to Y$
 \end_inset
 
  ותהא 
@@ -1966,7 +2225,36 @@ status open
 \end_inset
 
  אזי 
-\begin_inset Formula $\text{sols}_{A}\left(f\right)=\left\{ a\in A\mid f\left(a\right)=0\right\} $
+\begin_inset Formula $\sols_{A}\left(f=g\right)=\left\{ a\in A\mid f\left(a\right)=g\left(a\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $R$
+\end_inset
+
+ חוג תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה תהא 
+\begin_inset Formula $f:X\to R$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sols_{A}\left(f\right)=\sols_{A}\left(f=0\right)$
 \end_inset
 
 .
@@ -1980,39 +2268,20 @@ status open
 \series default
 \color inherit
 :
- יהיו 
-\begin_inset Formula $n$
+ תהיינה 
+\begin_inset Formula $X,Y$
 \end_inset
 
- משוואות 
-\begin_inset Formula $f_{i}\left(x\right)=g_{i}\left(x\right)$
+ קבוצות יהי 
+\begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
- אזי 
-\begin_inset Formula $E=\left<f_{1}\left(x\right)=g_{1}\left(x\right),\ldots,f_{n}\left(x\right)=g_{n}\left(x\right)\right>$
+ ויהיו 
+\begin_inset Formula $E_{1}\ldots E_{n}$
 \end_inset
 
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-סימון
-\series default
-\color inherit
-:
- תהא מערכת משוואות 
-\begin_inset Formula $E$
-\end_inset
-
- אזי 
-\begin_inset Formula $E_{i}$
-\end_inset
-
- תהיה משוואה מספר 
-\begin_inset Formula $i$
+ משוואות אזי 
+\begin_inset Formula $\left<E_{1}\ldots E_{n}\right>$
 \end_inset
 
 .
@@ -2026,11 +2295,40 @@ status open
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $\text{sols}_{A}\left(E\right)=\bigcap_{i=1}^{n}\text{sols}_{A}\left(E_{i}\right)$
+ תהיינה 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ קבוצות יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $E$
+\end_inset
+
+ מערכת משוואות ותהא 
+\begin_inset Formula $A\subseteq X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sols_{A}\left(E\right)=\bigcap_{i=1}^{n}\sols_{A}\left(E_{i}\right)$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+לתקן מכאן!
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2041,12 +2339,16 @@ status open
 \series default
 \color inherit
 :
- 
-\begin_inset Formula $E,E'$
+ תהיינה 
+\begin_inset Formula $X,Y$
 \end_inset
 
- מערכות/משוואות עבורן 
-\begin_inset Formula $\text{sols}_{A}\left(E\right)=\text{sols}_{A}\left(E'\right)$
+ קבוצות אזי מערכות משוואות 
+\begin_inset Formula $E,E^{\prime}$
+\end_inset
+
+ המקיימות 
+\begin_inset Formula $\sols_{A}\left(E\right)=\sols_{A}\left(E^{\prime}\right)$
 \end_inset
 
 .
@@ -2070,37 +2372,6 @@ status open
 
 ע אזי 
 \begin_inset Formula $\sols\left(\left(h\circ f\right)\left(x\right)=\left(h\circ g\right)\left(x\right)\right)=\sols\left(f\left(x\right)=g\left(x\right)\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-קבוצה אלגברית
-\series default
-\color inherit
-:
- 
-\begin_inset Formula $A\subseteq\bbr^{n}$
-\end_inset
-
- עבורה קיימת מערכת משוואות 
-\begin_inset Formula $E$
-\end_inset
-
- מעל 
-\begin_inset Formula $\bbr$
-\end_inset
-
- עם 
-\begin_inset Formula $n$
-\end_inset
-
- משתנים המקיימת 
-\begin_inset Formula $\text{sols}\left(E\right)=A$
 \end_inset
 
 .
@@ -2237,13 +2508,6 @@ a_{m,1}x_{1}+\ldots+a_{m,n}x_{n} & =b_{m}
 \end_inset
 
 ).
-\end_layout
-
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
