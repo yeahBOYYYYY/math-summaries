@@ -5436,10 +5436,6 @@ d|n
 \begin_inset Formula $k\in\bbn_{\ge2}$
 \end_inset
 
- ויהי 
-\begin_inset Formula $a\in\bbz_{\text{odd}}$
-\end_inset
-
  אזי 
 \begin_inset Formula $\left(\nicefrac{\bbz}{2^{k}\bbz}\right)^{\times}\simeq C_{2}\times C_{2^{k-2}}$
 \end_inset
@@ -5468,7 +5464,7 @@ d|n
 \end_inset
 
  ויהיו 
-\begin_inset Formula $p_{1}\ldots p_{m}\in\bbp$
+\begin_inset Formula $p_{1}\ldots p_{m}\in\bbp_{>2}$
 \end_inset
 
  שונים באשר 
@@ -10317,7 +10313,7 @@ end{algorithm}
 \begin_inset Formula $\left\{ \left(x,y\right)\in\bbr^{2}\bmid y^{2}=f\left(x\right)\right\} $
 \end_inset
 
- אינה יריעה חד־מימדית גזירה.
+ אינה יריעה גזירה חד־מימדית.
 \end_layout
 
 \begin_layout Standard
@@ -10406,7 +10402,7 @@ end{algorithm}
 \begin_inset Formula $E\backslash\left\{ \infty\right\} $
 \end_inset
 
- יריעה חד־מימדית חלקה.
+ יריעה חלקה חד־מימדית.
 \end_layout
 
 \begin_layout Standard
@@ -11549,7 +11545,7 @@ end{algorithm}
 \begin_inset Formula $f:\bbn_{+}\to\bbp$
 \end_inset
 
- הפיכה ושומרת סדר אזי קיים 
+ הפיכה שומרת סדר אזי קיים 
 \begin_inset Formula $\a\in\left(0,1\right]$
 \end_inset
 
@@ -12045,7 +12041,7 @@ status open
 \end_inset
 
  כך 
-\begin_inset Formula $\li\left(x\right)=\intop_{2}^{x}\frac{1}{\log\left(t\right)}\text{d}t$
+\begin_inset Formula $\li\left(x\right)=\intop_{2}^{x}\frac{1}{\log\left(t\right)}\mathrm{d}t$
 \end_inset
 
 .
@@ -13315,6 +13311,15 @@ x+\sqrt{d}y=v
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\coeff}{\mathrm{coeff}}
+{\text{coeff}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color orange
@@ -13331,11 +13336,11 @@ x+\sqrt{d}y=v
 \end_inset
 
  אזי נגדיר 
-\begin_inset Formula $\varphi:\bbz\left[\sqrt{d}\right]\to\bbz^{2}$
+\begin_inset Formula $\coeff:\bbz\left[\sqrt{d}\right]\to\bbz^{2}$
 \end_inset
 
  כך 
-\begin_inset Formula $\varphi\left(\a+\b\sqrt{d}\right)=\left(\a,\b\right)$
+\begin_inset Formula $\coeff\left(\a+\b\sqrt{d}\right)=\left(\a,\b\right)$
 \end_inset
 
 .
@@ -13357,12 +13362,8 @@ x+\sqrt{d}y=v
 \begin_inset Formula $d\ne\square$
 \end_inset
 
- ותהא 
-\begin_inset Formula $\varphi$
-\end_inset
-
- העתקת המקדמים אזי 
-\begin_inset Formula $\varphi$
+ אזי 
+\begin_inset Formula $\coeff$
 \end_inset
 
  חח
@@ -13743,11 +13744,15 @@ x+\sqrt{d}y=v
 \begin_inset Formula $d\ne\square$
 \end_inset
 
- ןיהיו 
+ ויהיו 
 \begin_inset Formula $\left(\a,\b\right),\left(\g,\d\right)\in\sols_{\bbz}\left(x^{2}-dy^{2}=1\right)$
 \end_inset
 
- אזי 
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $\sg\left(\left(\a,\b\right),\left(\g,\d\right)\right)=\left(\a+\b\sqrt{d}\right)\left(\g+\d\sqrt{d}\right)$
 \end_inset
 
@@ -13794,7 +13799,7 @@ x+\sqrt{d}y=v
 \end_inset
 
  אזי 
-\begin_inset Formula $\bbz\left[\sqrt{d}\right]_{1}^{\times}=\left\{ \a\in\bbz\left[\sqrt{d}\right]\mid N\left(\a\right)=1\right\} $
+\begin_inset Formula $\bbz\left[\sqrt{d}\right]_{1}^{\times}=\left\{ \a\in\bbz\left[\sqrt{d}\right]\bmid N\left(\a\right)=1\right\} $
 \end_inset
 
 .
@@ -13840,7 +13845,7 @@ x+\sqrt{d}y=v
 \end_inset
 
  אזי 
-\begin_inset Formula $\bbz\left[\sqrt{d}\right]_{1+}^{\times}=\left\{ \a\in\bbz\left[\sqrt{d}\right]_{1}^{\times}\mid\a>0\right\} $
+\begin_inset Formula $\bbz\left[\sqrt{d}\right]_{1+}^{\times}=\left\{ \a\in\bbz\left[\sqrt{d}\right]_{1}^{\times}\bmid\a>0\right\} $
 \end_inset
 
 .
@@ -15160,11 +15165,11 @@ q_{k}
 \end_inset
 
  אזי נגדיר 
-\begin_inset Formula $\varphi:\bbq\left(\sqrt{d}\right)\to\bbq^{2}$
+\begin_inset Formula $\coeff:\bbq\left(\sqrt{d}\right)\to\bbq^{2}$
 \end_inset
 
  כך 
-\begin_inset Formula $\varphi\left(\a+\b\sqrt{d}\right)=\left(\a,\b\right)$
+\begin_inset Formula $\coeff\left(\a+\b\sqrt{d}\right)=\left(\a,\b\right)$
 \end_inset
 
 .
@@ -15186,12 +15191,8 @@ q_{k}
 \begin_inset Formula $\sqrt{d}\notin\bbq$
 \end_inset
 
- ותהא 
-\begin_inset Formula $\varphi$
-\end_inset
-
- העתקת המקדמים אזי 
-\begin_inset Formula $\varphi$
+ אזי 
+\begin_inset Formula $\coeff$
 \end_inset
 
  חח
