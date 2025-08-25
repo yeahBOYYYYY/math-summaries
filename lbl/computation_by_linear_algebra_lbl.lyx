@@ -6762,8 +6762,8 @@ m\text{ מדרגה }B
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\lll}{\mathrm{LLL}}
-{\text{LLL}}
+\newcommand{\vallat}{\mathrm{Val\textrm{-}lattice}}
+{\text{Val-lattice}}
 \end_inset
 
 
@@ -6802,7 +6802,57 @@ m\text{ מדרגה }B
 \end_inset
 
 
-\begin_inset Formula $\val\left(\left(M,t,\bbf,\mathcal{F}\right)\right)=\min_{x\in\mathcal{F}^{n}}\norm{Mx-t}$
+\begin_inset Formula $\vallat\left(M,t,\bbf,\mathcal{F}\right)=\min_{x\in\mathcal{F}^{n}}\norm{Mx-t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\cvpls}{\mathrm{CVP\textrm{-}lattice\textrm{-}search}}
+{\text{CVP-lattice-search}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית חיפוש הוקטור הקרוב ביותר בסריג
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $\mathcal{F}\subseteq\bbf$
+\end_inset
+
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $M\in\bbf^{n\times n}$
+\end_inset
+
+ הפיכה יהי 
+\begin_inset Formula $t\in\bbf^{n}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\cvpls\left(\left(M,t,\bbf,\mathcal{F}\right),\e\right)=v$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\norm{Mv-t}\le\e$
 \end_inset
 
 .
@@ -6826,7 +6876,7 @@ m\text{ מדרגה }B
 \color inherit
 :
  
-\begin_inset Formula $\cvpl=\left\{ \left<\left(M,t,\bbf,\mathcal{F}\right),\e\right>\mid\val\left(\left(M,t,\bbf,\mathcal{F}\right)\right)\le\e\right\} $
+\begin_inset Formula $\cvpl=\left\{ \left<M,t,\bbf,\mathcal{F},\e\right>\mid\vallat\left(M,t,\bbf,\mathcal{F}\right)\le\e\right\} $
 \end_inset
 
 .
@@ -6834,26 +6884,11 @@ m\text{ מדרגה }B
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\svpl}{\mathrm{SVP\textrm{-}lattice}}
-{\text{SVP-lattice}}
+\newcommand{\lll}{\mathrm{LLL}}
+{\text{LLL}}
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color teal
-בעיית הוקטור הקצר ביותר בסריג
-\series default
-\color inherit
-:
- 
-\begin_inset Formula $\svpl=\left\{ \left<\left(M,0,\bbf,\mathcal{F}\right),\e\right>\mid\exists v\ne0.\norm{Mv}\le\e\right\} $
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -7306,7 +7341,7 @@ status open
 \end_inset
 
 ־קירוב של 
-\begin_inset Formula $\cvpl$
+\begin_inset Formula $\cvpls$
 \end_inset
 
 .
@@ -7317,6 +7352,91 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\cvp}{\mathrm{CVP}}
+{\text{CVP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית המרווח לוקטור הקרוב ביותר בסריג
+\series default
+:
+ תהיינה 
+\begin_inset Formula $T,S:\bbn\to\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gap_{\left[T,S\right]}\cvp=\gap_{\left[T,S\right]}\vallat$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\gapcvp}{\gap\textrm{-}\cvp}
+{\gap\textrm{-}\cvp}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהא 
+\begin_inset Formula $T:\bbn\to\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $r\in\bbr_{>0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gapcvp_{T}=\gap_{\left[r,r\cdot T\right]}\cvp$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $\mathcal{F}\subseteq\bbf$
+\end_inset
+
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $M\in\bbf^{n\times n}$
+\end_inset
+
+ הפיכה אזי 
+\begin_inset Formula $\vallat_{0}\left(M,\bbf,\mathcal{F}\right)=\min_{x\in\mathcal{F}^{n}\backslash\left\{ 0\right\} }\norm{Mx}$
+\end_inset
+
+.
 \end_layout
 
 \end_body
