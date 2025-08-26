@@ -2131,7 +2131,7 @@ A
 \end_inset
 
  אזי 
-\begin_inset Formula $\Rm_{q}\left[m,r\right]=\left\{ \left(f\left(\a\right)\right)_{\a\in\bbf_{q}^{m}}\mid f\in\left(\bbf_{q}\right)_{\le r}\left[x_{1},\ldots,x_{m}\right]\right\} $
+\begin_inset Formula $\Rm_{q}\left[m,r\right]=\left\{ \left(f\left(\a\right)\right)_{\a\in\bbf_{q}^{m}}\bmid f\in\left(\bbf_{q}\right)_{\le r}\left[x_{1},\ldots,x_{m}\right]\right\} $
 \end_inset
 
 .
@@ -2185,7 +2185,7 @@ A
 \end_inset
 
  אזי קיימים 
-\begin_inset Formula $r,d\in\bbn_{+}$
+\begin_inset Formula $k,d\in\bbn_{+}$
 \end_inset
 
  עבורם 
@@ -2193,7 +2193,7 @@ A
 \end_inset
 
  הינו קוד לינארי 
-\begin_inset Formula $\left[q^{m},r,d,q\right]$
+\begin_inset Formula $\left[q^{m},k,d,q\right]$
 \end_inset
 
  לתיקון שגיאות.
@@ -7355,6 +7355,40 @@ status open
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ 
+\begin_inset Formula $\cvpl$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־קשה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $C\subseteq\P\left(\left\{ 0,1\right\} ^{*}\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $C=\promise C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\cvp}{\mathrm{CVP}}
 {\text{CVP}}
@@ -7382,7 +7416,7 @@ status open
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\gapcvp}{\gap\textrm{-}\cvp}
+\newcommand{\gc}{\gap\textrm{-}\cvp}
 {\gap\textrm{-}\cvp}
 \end_inset
 
@@ -7404,7 +7438,20 @@ status open
 \end_inset
 
  אזי 
-\begin_inset Formula $\gapcvp_{T}=\gap_{\left[r,r\cdot T\right]}\cvp$
+\begin_inset Formula $\gc_{T}=\gap_{\left[r,r\cdot T\right]}\cvp$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ 
+\begin_inset Formula $\gc_{2^{\frac{n}{2}}}\in\P$
 \end_inset
 
 .
@@ -7437,6 +7484,285 @@ status open
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\svp}{\mathrm{SVP}}
+{\text{SVP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית המרווח לוקטור הקצר ביותר בסריג
+\series default
+:
+ תהיינה 
+\begin_inset Formula $T,S:\bbn\to\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gap_{\left[T,S\right]}\svp=\gap_{\left[T,S\right]}\vallat_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\gs}{\gap\textrm{-}\svp}
+{\gap\textrm{-}\svp}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ תהא 
+\begin_inset Formula $T:\bbn\to\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $r\in\bbr_{>0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gs_{T}=\gap_{\left[r,r\cdot T\right]}\svp$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\g\in\bbr_{\ge1}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gc_{\g}$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־קשה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $\g\in\bbr_{\ge1}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gs_{\g}$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־קשה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\gs_{n}\in\co\np$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ קיים 
+\begin_inset Formula $c\in\bbr_{>0}$
+\end_inset
+
+ עבורו 
+\begin_inset Formula $\gc_{\exp\left(c\cdot\frac{\log\left(n\right)}{\log\log\left(n\right)}\right)}$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־קשה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $\g:\bbn\to\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\g=2^{\O\left(n\cdot\frac{\log\log\left(n\right)}{\log\left(n\right)}\right)}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gc_{\g}\in\P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ 
+\begin_inset Formula $\gc_{\sqrt{n}},\gs_{\sqrt{n}}\in\np\cap\co\np$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\sivp}{\mathrm{SIVP}}
+{\text{SIVP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית הוקטורים הבלתי תלויים הקצרים ביותר
+\series default
+:
+ תהא 
+\begin_inset Formula $T:\bbn\to\bbn$
+\end_inset
+
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $M\in\bbr^{n\times n}$
+\end_inset
+
+ הפיכה אזי 
+\begin_inset Formula $\sivp_{T}\left(M\right)=\left(v_{1}\ldots v_{n}\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $v_{1}\ldots v_{n}$
+\end_inset
+
+ בת
+\begin_inset Quotes erd
+\end_inset
+
+ל וכן 
+\begin_inset Formula $\norm{v_{i}}\le T\left(n\right)\cdot\lambda_{n}\left[\l\left[M\right]\right]$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\g\in\bbr_{\ge1}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sivp_{\g\cdot\sqrt{n}}\le_{p}\gs_{\g}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\g\in\bbr_{\ge1}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sivp_{\g}\le_{p}\gc_{\g}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $\g,c\in\bbr_{\ge1}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $c$
+\end_inset
+
+־קירוב של 
+\begin_inset Formula $\sivp_{\g}$
+\end_inset
+
+ הינו 
+\begin_inset Formula $\np$
+\end_inset
+
+־קשה.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body
