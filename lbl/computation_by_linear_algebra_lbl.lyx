@@ -1026,6 +1026,37 @@ I_{m}
 \begin_layout Standard
 
 \series bold
+\color green
+הגדרה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה ויהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $\mathds{1}_{n}\in\bbf^{n}$
+\end_inset
+
+ כך 
+\begin_inset Formula $\left(\mathds{1}_{n}\right)_{i}=1$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 \color blue
 מסקנה
 \series default
@@ -1037,9 +1068,7 @@ I_{m}
 
  אזי 
 \begin_inset Formula $M_{\mathcal{C}_{\parity}}=\left(\begin{smallmatrix}I_{m}\\
-\vec{1}^{T}
-\end{smallmatrix}\right)=\left(\begin{smallmatrix}I_{m}\\
-\left(\vec{1}\right)^{T}
+\mathds{1}_{n}^{T}
 \end{smallmatrix}\right)$
 \end_inset
 
@@ -2942,28 +2971,16 @@ A
 
 \series bold
 \color green
-הגדרה
+בעיית החתך המקסימלי
 \series default
 \color inherit
 :
  יהי 
-\begin_inset Formula $\bbf$
+\begin_inset Formula $G$
 \end_inset
 
- שדה ויהי 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- אזי נגדיר 
-\begin_inset Formula $\vec{1}\in\bbf^{n}$
-\end_inset
-
- כך 
-\begin_inset Formula $\left(\vec{1}\right)_{i}=1$
-\end_inset
-
- לכל 
-\begin_inset Formula $i\in\left[n\right]$
+ גרף סופי אזי 
+\begin_inset Formula $\maxcut\left(G\right)=\max\left\{ \left|E\left(S,S^{\mathcal{C}}\right)\right|\bmid S\subseteq V\left(G\right)\right\} $
 \end_inset
 
 .
@@ -2972,13 +2989,44 @@ A
 \begin_layout Standard
 
 \series bold
-\color green
-בעיית החתך המקסימלי
+מטריצת החתכים
 \series default
-\color inherit
 :
- 
-\begin_inset Formula $\maxcut=\left\{ \left<\left(M,\vec{1},\bbf_{2}\right),\e\right>\mid\left(\forall i\left(w\left(R_{i}\left(M\right)\right)=2\right)\right)\land\left(\val\left(\left(M,\vec{1},\bbf\right)\right)\le\e\right)\right\} $
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף סופי אזי נגדיר 
+\begin_inset Formula $M\left(G\right)\in\bbf_{2}^{\left|E\left(G\right)\right|\times\left|V\left(G\right)\right|}$
+\end_inset
+
+ כך 
+\begin_inset Formula $\left(M\left(G\right)\right)_{e,v}=\mathds{1}\left[v\in e\right]$
+\end_inset
+
+ לכל 
+\begin_inset Formula $e\in E\left(G\right)$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $v\in V\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף סופי אזי 
+\begin_inset Formula $\val\left(\left(M\left(G\right),\mathds{1}_{\left|V\left(G\right)\right|},\bbf_{2}\right)\right)=\maxcut\left(G\right)$
 \end_inset
 
 .
@@ -2997,7 +3045,7 @@ A
 \end_inset
 
  עבורו 
-\begin_inset Formula $\gap_{\left[\e,1-\e\right]}\maxcut$
+\begin_inset Formula $\gap_{\left[1-\e,1-\e\right]}\maxcut$
 \end_inset
 
  הינה 
@@ -3182,7 +3230,7 @@ A
 \end_inset
 
  וכן 
-\begin_inset Formula $R_{i}\left(M\right)\cdot\vec{1}=0$
+\begin_inset Formula $R_{i}\left(M\right)\cdot\mathds{1}_{m}=0$
 \end_inset
 
 .
@@ -3482,6 +3530,599 @@ status open
 
  קשה לקירוב!
  ...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\maxcutip}{\maxcut\mathrm{\textrm{-}IP}}
+{\maxcut\text{-IP}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\st}{\mathrm{s.t.}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית החתך המקסימלי כתכנות שלם
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף סופי אזי נגדיר 
+\begin_inset Formula $\maxcutip\left(G\right)$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{flalign*}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+max
+\backslash
+quad & 
+\backslash
+sum_{(u,v)
+\backslash
+in E}
+\backslash
+frac{1 - x_{u}x_{v}}{2} &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+st
+\backslash
+quad &  x_v
+\backslash
+in 
+\backslash
+{-1,
+ 1
+\backslash
+} 
+\backslash
+qquad,
+\backslash
+forall v
+\backslash
+in V &
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{flalign*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ip}{\mathrm{IP}}
+{\text{IP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\maxcutip$
+\end_inset
+
+ הינה בעיית 
+\begin_inset Formula $\ip$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף סופי ויהי 
+\begin_inset Formula $x\in\bbf_{2}^{\left|V\left(G\right)\right|}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\maxcutip\left(G\right)=x$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ v\in V\left(G\right)\bmid x_{v}=1\right\} $
+\end_inset
+
+ חתך מקסימלי של 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\maxcutlp}{\maxcut\textrm{-}\mathrm{LP}}
+{\maxcut\text{-LP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית החתך המקסימלי כתכנות לינארי
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף סופי אזי נגדיר 
+\begin_inset Formula $\maxcutlp\left(G\right)$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{flalign*}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+max
+\backslash
+quad & 
+\backslash
+sum_{(u,v)
+\backslash
+in E}
+\backslash
+frac{1 - x_{u}x_{v}}{2} &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+st
+\backslash
+quad &  x_v
+\backslash
+in 
+\backslash
+left[-1,
+ 1
+\backslash
+right] 
+\backslash
+qquad,
+\backslash
+forall v
+\backslash
+in V &
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{flalign*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מטריצה מוגדרת חיובית
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\in\bbr^{n\times n}$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $x^{T}Ax\ge0$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\bbr^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $A\in\bbr^{n\times n}$
+\end_inset
+
+ מוגדרת חיובית אזי 
+\begin_inset Formula $A\ge0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תוכנה לינארית
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,m,k,\ell\in\bbn$
+\end_inset
+
+ תהא 
+\begin_inset Formula $C\in\bbr^{n\times n}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $P\in\left(\bbr^{n\times n}\right)^{m}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $p\in\bbr^{m}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $Q\in\left(\bbr^{n\times n}\right)^{k}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $q\in\bbr^{k}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $R\in\left(\bbr^{n\times n}\right)^{\ell}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $r\in\bbr^{\ell}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(C,P,p,Q,q,R,r\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית תכנות לינארי (
+\begin_inset Formula $\sdp$
+\end_inset
+
+)
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(C,P,p,Q,q,R,r\right)$
+\end_inset
+
+ תוכנה לינארית אזי מציאת נקודת קיצון של 
+\begin_inset Formula $c^{T}x$
+\end_inset
+
+ תחת ההנחות
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left\{ Px\le p,Qx=q,Rx\ge r\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית תכנות לינארי מקסימלית
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(c,P,p,Q,q,R,r\right)$
+\end_inset
+
+ תוכנה לינארית אזי מציאת נקודת מקסימום של 
+\begin_inset Formula $c^{T}x$
+\end_inset
+
+ תחת ההנחות 
+\begin_inset Formula $\left\{ Px\le p,Qx=q,Rx\ge r\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית תכנות לינארי מינימלית
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(c,P,p,Q,q,R,r\right)$
+\end_inset
+
+ תוכנה לינארית אזי מציאת נקודת מינימום של 
+\begin_inset Formula $c^{T}x$
+\end_inset
+
+ תחת ההנחות 
+\begin_inset Formula $\left\{ Px\le p,Qx=q,Rx\ge r\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ מכאן והלאה נשתמש במונח תוכנה לינארית גם עבור בעיית תכנות לינארי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(c,P,p,Q,q,R,r\right)$
+\end_inset
+
+ בעיית תכנות לינארית מקסימלית אזי
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+abovedisplayskip{1pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{flalign*}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+max
+\backslash
+quad & c^Tx &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+text{s.t.}
+\backslash
+quad &  Px
+\backslash
+le p &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& Qx=q &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& Rx
+\backslash
+ge r
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{flalign*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(c,P,p,Q,q,R,r\right)$
+\end_inset
+
+ בעיית תכנות לינארית מינימלית אזי
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+abovedisplayskip{1pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{flalign*}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+min
+\backslash
+quad & c^Tx &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+text{s.t.}
+\backslash
+quad &  Px
+\backslash
+le p &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& Qx=q &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& Rx
+\backslash
+ge r
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{flalign*}
 \end_layout
 
 \end_inset
@@ -7759,10 +8400,6 @@ status open
 \end_inset
 
 ־קשה.
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \end_body

@@ -75,6 +75,8 @@
 \usepackage{color}
 \setlength{\columnseprule}{1pt}
 \def\columnseprulecolor{\color{black}}
+
+\DontPrintSemicolon
 \end_preamble
 \options no-math
 \use_default_options true
@@ -257,11 +259,56 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\bfs}{\mathrm{BFS}}
+{\text{BFS}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\colorT}{\mathrm{color}}
+{\text{color}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\null}{\mathrm{Null}}
+{\text{Null}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\black}{\mathrm{Black}}
+{\text{Black}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\white}{\mathrm{White}}
+{\text{White}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\grey}{\mathrm{Grey}}
+{\text{Grey}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\queue}{\mathrm{Queue}}
+{\text{Queue}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color black
 אלגוריתם 
-\begin_inset Formula $\text{BFS}$
+\begin_inset Formula $\bfs$
 \end_inset
 
 
@@ -280,6 +327,12 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
+
+\lang english
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 
 \lang english
 \begin_inset ERT
@@ -610,6 +663,440 @@ end{algorithm}
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{BFS}{BFS}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+BFS{$G,
+ s$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $d
+\backslash
+in V
+\backslash
+left(G
+\backslash
+right)
+\backslash
+to
+\backslash
+hat{
+\backslash
+bbn};
+\backslash
+quad 
+\backslash
+pi
+\backslash
+in V
+\backslash
+left(G
+\backslash
+right)
+\backslash
+to V
+\backslash
+left(G
+\backslash
+right)
+\backslash
+cup
+\backslash
+{
+\backslash
+null
+\backslash
+};
+\backslash
+quad 
+\backslash
+colorT
+\backslash
+in V
+\backslash
+left(G
+\backslash
+right)
+\backslash
+to
+\backslash
+{
+\backslash
+black,
+\backslash
+white,
+\backslash
+grey
+\backslash
+}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$u
+\backslash
+in V 
+\backslash
+left( G
+\backslash
+right)
+\backslash
+backslash 
+\backslash
+{s
+\backslash
+}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+		$
+\backslash
+left(d,
+ 
+\backslash
+pi,
+ 
+\backslash
+colorT
+\backslash
+right)
+\backslash
+left[u
+\backslash
+right] 
+\backslash
+gets 
+\backslash
+left(
+\backslash
+infty,
+ 
+\backslash
+null,
+ 
+\backslash
+white
+\backslash
+right)$
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+	$
+\backslash
+left(d,
+ 
+\backslash
+pi,
+ 
+\backslash
+colorT
+\backslash
+right)
+\backslash
+left[s
+\backslash
+right] 
+\backslash
+gets 
+\backslash
+left(0,
+ 
+\backslash
+null,
+ 
+\backslash
+grey
+\backslash
+right)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $Q
+\backslash
+in
+\backslash
+queue
+\backslash
+left(V
+\backslash
+left(G
+\backslash
+right)
+\backslash
+right)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+While{$
+\backslash
+neg 
+\backslash
+left(Q.
+\backslash
+mathrm{IsEmpty}
+\backslash
+right)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $u 
+\backslash
+gets Q.
+\backslash
+mathrm{Head}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+For{$v
+\backslash
+in N(u)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+uIf{$
+\backslash
+colorT
+\backslash
+left[v
+\backslash
+right] = 
+\backslash
+white$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+                $
+\backslash
+colorT
+\backslash
+left[v
+\backslash
+right]
+\backslash
+gets 
+\backslash
+grey$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                $d
+\backslash
+left[v
+\backslash
+right]
+\backslash
+gets d
+\backslash
+left[u
+\backslash
+right]+1$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                $
+\backslash
+pi
+\backslash
+left[v
+\backslash
+right]
+\backslash
+gets u$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                $Q.
+\backslash
+mathrm{Enqueue}
+\backslash
+left(v
+\backslash
+right)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+		$Q.
+\backslash
+mathrm{Dequeue}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
+\backslash
+colorT
+\backslash
+left[u
+\backslash
+right] 
+\backslash
+gets 
+\backslash
+black$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $
+\backslash
+left(d,
+ 
+\backslash
+pi,
+ 
+\backslash
+colorT
+\backslash
+right)$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 
 \series bold
@@ -627,7 +1114,7 @@ end{algorithm}
 \end_inset
 
  אזי סיבוכיות זמן הריצה של 
-\begin_inset Formula $\text{BFS}\left(G,s\right)$
+\begin_inset Formula $\bfs\left(G,s\right)$
 \end_inset
 
  הינה 
@@ -654,10 +1141,19 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\left\{ v\in V\mid\text{BFS}\left(G,s\right).\text{color}\left[v\right]=\text{Black}\right\} =\left[s\right]_{\to}$
+\begin_inset Formula $\left\{ v\in V\mid\bfs\left(G,s\right).\colorT\left[v\right]=\black\right\} =\left[s\right]_{\to}$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\len}{\mathrm{len}}
+{\text{len}}
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -677,7 +1173,7 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\d\left(v,u\right)=\min\left(\left\{ \text{len}\left(\sigma\right)\mid v,u\text{ טיול בין }\sigma\right\} \right)$
+\begin_inset Formula $\d\left(v,u\right)=\min\left(\left\{ \len\left(\sigma\right)\mid v,u\text{ טיול בין }\sigma\right\} \right)$
 \end_inset
 
 .
@@ -727,7 +1223,7 @@ end{algorithm}
 \end_inset
 
  אזי בכל שלב בהרצת 
-\begin_inset Formula $\text{BFS}\left(G,s\right)$
+\begin_inset Formula $\bfs\left(G,s\right)$
 \end_inset
 
  מתקיים 
@@ -750,7 +1246,7 @@ end{algorithm}
 \end_inset
 
  גרף יהי שלב בהרצת 
-\begin_inset Formula $\text{BFS}\left(G,s\right)$
+\begin_inset Formula $\bfs\left(G,s\right)$
 \end_inset
 
  בו 
@@ -785,7 +1281,7 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\text{BFS}\left(G,s\right).d\left[v\right]=\d\left(v,s\right)$
+\begin_inset Formula $\bfs\left(G,s\right).d\left[v\right]=\d\left(v,s\right)$
 \end_inset
 
 .
@@ -796,7 +1292,7 @@ end{algorithm}
 \series bold
 \color black
 עץ 
-\begin_inset Formula $\text{BFS}$
+\begin_inset Formula $\bfs$
 \end_inset
 
 
@@ -812,7 +1308,7 @@ end{algorithm}
 \end_inset
 
  נגדיר 
-\begin_inset Formula $V_{\pi}=\left\{ v\in V\mid\text{BFS}\left(G,s\right).\pi\left[v\right]\ne\text{Null}\right\} \cup\left\{ s\right\} $
+\begin_inset Formula $V_{\pi}=\left\{ v\in V\mid\bfs\left(G,s\right).\pi\left[v\right]\ne\null\right\} \cup\left\{ s\right\} $
 \end_inset
 
  וכן 
@@ -967,10 +1463,19 @@ end{algorithm}
 \end_inset
 
  מתקיים 
-\begin_inset Formula $\deg\left(v\right)\in\bbn_{\text{even}}$
+\begin_inset Formula $\deg\left(v\right)\in\bbn_{\mathrm{even}}$
 \end_inset
 
 ).
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\listT}{\mathrm{List}}
+{\text{List}}
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -990,13 +1495,26 @@ end{algorithm}
 \end_inset
 
  מתקיים 
-\begin_inset Formula $\deg\left(u\right)\in\bbn_{\text{even}}$
+\begin_inset Formula $\deg\left(u\right)\in\bbn_{\mathrm{even}}$
 \end_inset
 
  אזי
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 
 \lang english
 \begin_inset ERT
@@ -1234,8 +1752,279 @@ end{algorithm}
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-\begin_inset Newpage newpage
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{EulerCircle}{EulerCircle}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+EulerCircle{$G,
+ v$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+sigma 
+\backslash
+in 
+\backslash
+listT
+\backslash
+left(E
+\backslash
+left(G
+\backslash
+right)
+\backslash
+right)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $u 
+\backslash
+gets N(v)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+While{$u
+\backslash
+ne v$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
+\backslash
+sigma .
+\backslash
+mathrm{Append}(
+\backslash
+{v,
+ u
+\backslash
+})$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $G 
+\backslash
+gets G
+\backslash
+backslash 
+\backslash
+{
+\backslash
+{v,
+ u
+\backslash
+}
+\backslash
+}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $u 
+\backslash
+gets N(u)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+lIf{$
+\backslash
+len
+\backslash
+left(
+\backslash
+sigma
+\backslash
+right) = 
+\backslash
+left|E
+\backslash
+left(G
+\backslash
+right)
+\backslash
+right|$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+Return $
+\backslash
+sigma$
+\end_layout
+
+\begin_layout Plain Layout
+
+    } 
+\backslash
+uElse{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $w 
+\backslash
+gets 
+\backslash
+{x
+\backslash
+in V(G)
+\backslash
+mid (
+\backslash
+exists y
+\backslash
+in V(G).
+ (x,
+ y)
+\backslash
+in
+\backslash
+sigma)
+\backslash
+land(
+\backslash
+deg(x)>0)
+\backslash
+}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        $
+\backslash
+sigma
+\backslash
+left[w
+\backslash
+right] = 
+\backslash
+EulerCircle{$G,
+ w$}$
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $
+\backslash
+sigma$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\eulercircle}{\mathrm{EulerCircle}}
+{\text{EulerCircle}}
 \end_inset
 
 
@@ -1258,7 +2047,7 @@ end{algorithm}
 \end_inset
 
  מתקיים 
-\begin_inset Formula $\deg\left(u\right)\in\bbn_{\text{even}}$
+\begin_inset Formula $\deg\left(u\right)\in\bbn_{\mathrm{even}}$
 \end_inset
 
  ויהי 
@@ -1266,7 +2055,7 @@ end{algorithm}
 \end_inset
 
  אזי סיבוכיות זמן הריצה של 
-\begin_inset Formula $\text{EulerCircle}\left(G,v\right)$
+\begin_inset Formula $\eulercircle\left(G,v\right)$
 \end_inset
 
  הינה 
@@ -1285,7 +2074,7 @@ end{algorithm}
 \color inherit
 :
  באלגוריתם 
-\begin_inset Formula $\text{EulerCircle}$
+\begin_inset Formula $\eulercircle$
 \end_inset
 
  כל עוד לולאת ה־
@@ -1383,7 +2172,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1577,7 +2366,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1834,10 +2623,17 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1990,13 +2786,6 @@ prime)$
 end{algorithm}
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
 \end_inset
 
 
@@ -2168,7 +2957,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -2898,7 +3687,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -3857,7 +4646,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -4231,7 +5020,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -4441,10 +5230,17 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -4594,13 +5390,6 @@ Return $(V^* ,
 end{algorithm}
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
 \end_inset
 
 
@@ -4820,7 +5609,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -5321,10 +6110,17 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -5696,13 +6492,6 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 \color purple
@@ -5888,7 +6677,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -6264,10 +7053,17 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -6459,13 +7255,6 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \series bold
 \color brown
@@ -6612,7 +7401,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -7095,10 +7884,17 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -7294,12 +8090,6 @@ end{algorithm}
 \end_inset
 
 
-\lang hebrew
-
-\begin_inset Newpage newpage
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -7434,7 +8224,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -8095,10 +8885,17 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -9001,7 +9798,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -9399,7 +10196,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -9694,10 +10491,17 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -10029,12 +10833,6 @@ right)$
 end{algorithm}
 \end_layout
 
-\end_inset
-
-
-\lang hebrew
-
-\begin_inset Newpage newpage
 \end_inset
 
 
@@ -10451,10 +11249,17 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -10678,10 +11483,6 @@ end{algorithm}
 \end_inset
 
 
-\begin_inset Newpage newpage
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -10770,7 +11571,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -11525,7 +12326,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -11826,7 +12627,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -12084,7 +12885,10 @@ end{algorithm}
 \end_inset
 
 
-\begin_inset Newpage newpage
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -12531,7 +13335,7 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\len}{\text{len}}
+\renewcommand{\len}{\text{len}}
 {\text{len}}
 \end_inset
 
@@ -12922,10 +13726,17 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -13146,15 +13957,6 @@ end{algorithm}
 
 \begin_layout Standard
 
-\lang english
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
 \series bold
 \color green
 מסקנה
@@ -13298,7 +14100,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -13702,9 +14504,10 @@ end{algorithm}
 \end_inset
 
  אזי
-\lang english
+\end_layout
 
-\begin_inset Newpage newpage
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -13714,7 +14517,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -14893,7 +15696,7 @@ f\left(e\right) &  & \text{else}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -15581,7 +16384,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -15857,7 +16660,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -16399,10 +17202,17 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -16561,15 +17371,6 @@ Return True
 end{algorithm}
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\lang english
-\begin_inset Newpage newpage
 \end_inset
 
 
@@ -16844,7 +17645,7 @@ f\left(e^{-1}\right) &  & e\in E^{-1}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -17214,7 +18015,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -17768,7 +18569,7 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -18506,10 +19307,23 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\lp}{\mathrm{LP}}
+{\text{LP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color teal
-בעיית תכנות לינארי
+בעיית תכנות לינארי (
+\begin_inset Formula $\lp$
+\end_inset
+
+)
 \series default
 \color inherit
 :
@@ -18800,15 +19614,6 @@ end{flalign*}
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\lp}{\text{LP}}
-{\text{LP}}
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
