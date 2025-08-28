@@ -77,6 +77,7 @@
 \def\columnseprulecolor{\color{black}}
 
 \DontPrintSemicolon
+\usepackage{float}
 \end_preamble
 \options no-math
 \use_default_options true
@@ -188,7 +189,7 @@ PackageOptions algorithm2e vlined
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "../../macros.lyx"
+filename "E:/University/!Summaries/macros.lyx"
 literal "true"
 
 \end_inset
@@ -678,7 +679,7 @@ status collapsed
 
 
 \backslash
-begin{algorithm}
+begin{algorithm}[H]
 \end_layout
 
 \begin_layout Plain Layout
@@ -1149,7 +1150,7 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\len}{\mathrm{len}}
+\renewcommand{\len}{\mathrm{len}}
 {\text{len}}
 \end_inset
 
@@ -1222,12 +1223,16 @@ end{algorithm}
 \begin_inset Formula $s,v\in V$
 \end_inset
 
- אזי בכל שלב בהרצת 
+ אזי בכל מצב 
+\begin_inset Formula $S$
+\end_inset
+
+ בהרצת 
 \begin_inset Formula $\bfs\left(G,s\right)$
 \end_inset
 
  מתקיים 
-\begin_inset Formula $d\left[v\right]\ge\d\left(v\right)$
+\begin_inset Formula $S.d\left[v\right]\ge\d\left(v\right)$
 \end_inset
 
 .
@@ -1245,20 +1250,32 @@ end{algorithm}
 \begin_inset Formula $G$
 \end_inset
 
- גרף יהי שלב בהרצת 
+ גרף יהיו 
+\begin_inset Formula $s,v_{1}\ldots v_{n}\in V$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $S$
+\end_inset
+
+ מצב בהרצת 
 \begin_inset Formula $\bfs\left(G,s\right)$
 \end_inset
 
- בו 
-\begin_inset Formula $Q=\left(v_{1}\ldots v_{n}\right)$
+ באשר 
+\begin_inset Formula $S.Q=\left(v_{1}\ldots v_{n}\right)$
 \end_inset
 
  אזי מתקיים 
-\begin_inset Formula $d\left[v_{i}\right]\le d\left[v_{i+1}\right]$
+\begin_inset Formula $S.d\left[v_{i}\right]\le S.d\left[v_{i+1}\right]$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n-1\right]$
 \end_inset
 
  וכן 
-\begin_inset Formula $d\left[v_{i}\right]\le d\left[v_{1}\right]+1$
+\begin_inset Formula $S.d\left[v_{n}\right]\le S.d\left[v_{1}\right]+1$
 \end_inset
 
 .
@@ -1502,17 +1519,10 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \lang english
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1761,13 +1771,13 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-begin{algorithm}
+begin{algorithm}[H]
 \end_layout
 
 \begin_layout Plain Layout
@@ -1870,9 +1880,7 @@ mathrm{Append}(
 
         $G 
 \backslash
-gets G
-\backslash
-backslash 
+gets G - 
 \backslash
 {
 \backslash
@@ -1984,7 +1992,9 @@ sigma
 \backslash
 left[w
 \backslash
-right] = 
+right] 
+\backslash
+gets 
 \backslash
 EulerCircle{$G,
  w$}$
@@ -2073,16 +2083,32 @@ end{algorithm}
 \series default
 \color inherit
 :
- באלגוריתם 
-\begin_inset Formula $\eulercircle$
+ יהי 
+\begin_inset Formula $G$
 \end_inset
 
- כל עוד לולאת ה־
-\begin_inset Formula $\text{while}$
+ גרף קשיר ולא מכוון עבורו לכל 
+\begin_inset Formula $u\in V$
 \end_inset
 
- פעילה מתקיים 
-\begin_inset Formula $\left|\text{Neighbor}\left(u\right)\right|\ne\emptyset$
+ מתקיים 
+\begin_inset Formula $\deg\left(u\right)\in\bbn_{\mathrm{even}}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $S$
+\end_inset
+
+ מצב בהרצת 
+\begin_inset Formula $\eulercircle\left(G,v\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $S.u\ne v$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left|N\left(S.u\right)\right|\ne\emptyset$
 \end_inset
 
 .
@@ -2105,11 +2131,11 @@ end{algorithm}
 \end_inset
 
  מתקיים 
-\begin_inset Formula $\deg\left(v\right)\in\bbn_{\text{even}}$
+\begin_inset Formula $\deg\left(v\right)\in\bbn_{\mathrm{even}}$
 \end_inset
 
  אזי 
-\begin_inset Formula $\text{EulerCircle}\left(G\right)$
+\begin_inset Formula $\eulercircle\left(G\right)$
 \end_inset
 
  הינו מעגל אוילר.
@@ -2143,7 +2169,7 @@ end{algorithm}
 \end_inset
 
 (
-\begin_inset Formula $\left|\left\{ v\in V\left(G\right)\mid\deg\left(v\right)\in\bbn_{\text{odd}}\right\} \right|=2$
+\begin_inset Formula $\left|\left\{ v\in V\left(G\right)\mid\deg\left(v\right)\in\bbn_{\mathrm{odd}}\right\} \right|=2$
 \end_inset
 
 ).
@@ -2161,8 +2187,8 @@ end{algorithm}
 \begin_inset Formula $G$
 \end_inset
 
- גרף קשיר ולא מכוון עבורו 
-\begin_inset Formula $\left|\left\{ v\in V\left(G\right)\mid\deg\left(v\right)\in\bbn_{\text{odd}}\right\} \right|=2$
+ גרף קשיר ולא מכוון באשר 
+\begin_inset Formula $\left|\left\{ v\in V\left(G\right)\mid\deg\left(v\right)\in\bbn_{\mathrm{odd}}\right\} \right|=2$
 \end_inset
 
  אזי
@@ -2172,13 +2198,13 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-begin{algorithm}
+begin{algorithm}[H]
 \end_layout
 
 \begin_layout Plain Layout
@@ -2217,14 +2243,11 @@ EulerPath{$G$}}{
 
 \begin_layout Plain Layout
 
-    $(v,
- u)
+    $v
 \backslash
 gets
 \backslash
-left
-\backslash
-{ v
+{ t
 \backslash
 in V
 \backslash
@@ -2236,7 +2259,7 @@ mid
 \backslash
 deg
 \backslash
-left(v
+left(t
 \backslash
 right)
 \backslash
@@ -2246,7 +2269,40 @@ mathbb{N}_{
 \backslash
 text{odd}}
 \backslash
-right
+};
+ 
+\backslash
+qquad u
+\backslash
+gets
+\backslash
+{ t
+\backslash
+in V
+\backslash
+left(G
+\backslash
+right)
+\backslash
+mid
+\backslash
+deg
+\backslash
+left(t
+\backslash
+right)
+\backslash
+in
+\backslash
+mathbb{N}_{
+\backslash
+text{odd}}
+\backslash
+}
+\backslash
+backslash
+\backslash
+{v
 \backslash
 }$
 \backslash
@@ -2257,7 +2313,9 @@ right
 
 \begin_layout Plain Layout
 
-    $G = G + 
+    $G 
+\backslash
+gets G + 
 \backslash
 {
 \backslash
@@ -2277,10 +2335,12 @@ right
 
     $
 \backslash
-sigma = 
+sigma 
 \backslash
-text{EulerCircle}{(G,
- v)}$
+gets 
+\backslash
+mathrm{EulerCircle}(G,
+ v)$
 \backslash
 
 \backslash
@@ -2366,13 +2426,13 @@ end{algorithm}
 
 \lang english
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-begin{algorithm}
+begin{algorithm}[H]
 \end_layout
 
 \begin_layout Plain Layout
@@ -2426,11 +2486,17 @@ left(d,
 pi,
  
 \backslash
-text{color}
+colorT
 \backslash
 right)
 \backslash
-gets$ BFS($G$)
+gets 
+\backslash
+mathrm{BFS}
+\backslash
+left(G
+\backslash
+right)$
 \backslash
 
 \backslash
@@ -2447,7 +2513,11 @@ left(v,u
 \backslash
 right)
 \backslash
-in V$}{
+in V
+\backslash
+left(G
+\backslash
+right)$}{
 \end_layout
 
 \begin_layout Plain Layout
@@ -2469,7 +2539,9 @@ right)$}{
 
             
 \backslash
-Return False
+Return $
+\backslash
+false$
 \end_layout
 
 \begin_layout Plain Layout
@@ -2486,7 +2558,9 @@ Return False
 
     
 \backslash
-Return True
+Return $
+\backslash
+true$
 \end_layout
 
 \begin_layout Plain Layout
@@ -2501,6 +2575,15 @@ Return True
 end{algorithm}
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\isbipartite}{\mathrm{IsBipartite}}
+{\text{IsBipartite}}
 \end_inset
 
 
@@ -2527,7 +2610,7 @@ end{algorithm}
 \end_inset
 
 (
-\begin_inset Formula $\text{IsBipartite}\left(G\right)=\text{True}$
+\begin_inset Formula $\isbipartite\left(G\right)=\true$
 \end_inset
 
 ).
@@ -2623,23 +2706,16 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \lang english
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-begin{algorithm}
+begin{algorithm}[H]
 \end_layout
 
 \begin_layout Plain Layout
@@ -2687,22 +2763,33 @@ left(d,
 pi,
  
 \backslash
-text{color}
+colorT
 \backslash
 right)
 \backslash
 gets
 \backslash
-text{BFS}(G)$
+mathrm{BFS}(G);
+ 
 \backslash
-
+qquad G_
 \backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-    $E^
+pi 
+\backslash
+gets 
+\backslash
+mathrm{BFS}
+\backslash
+textrm{-}
+\backslash
+mathrm{Forest}
+\backslash
+left(G
+\backslash
+right);
+ 
+\backslash
+qquad E^
 \backslash
 prime 
 \backslash
@@ -2731,23 +2818,31 @@ in E(G)$}{
 \backslash
 uIf{$|
 \backslash
-text{height}_{G_
+mathrm{height}_{G_
 \backslash
 pi}(u) - 
 \backslash
-text{height}_{G_
+mathrm{height}_{G_
 \backslash
-pi(v)}| = 1$}{
+pi}(v)| = 1$}{
 \end_layout
 
 \begin_layout Plain Layout
 
             $E^
 \backslash
-prime .
+prime 
 \backslash
-text{append} ((u,
- v))$
+gets E^
+\backslash
+prime 
+\backslash
+cup 
+\backslash
+{(u,
+ v)
+\backslash
+}$
 \backslash
 
 \backslash
@@ -2808,7 +2903,7 @@ end{algorithm}
 \end_inset
 
  מחברת בין רמות עוקבות ביער 
-\begin_inset Formula $\text{BFS}$
+\begin_inset Formula $\bfs$
 \end_inset
 
  
@@ -2847,7 +2942,7 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\text{ShortestPathGraph}\left(G,s\right)$
+\begin_inset Formula $\mathrm{ShortestPathGraph}\left(G,s\right)$
 \end_inset
 
  הינו גרף מק
@@ -2963,7 +3058,7 @@ status open
 
 
 \backslash
-begin{algorithm}
+begin{algorithm}[H]
 \end_layout
 
 \begin_layout Plain Layout
