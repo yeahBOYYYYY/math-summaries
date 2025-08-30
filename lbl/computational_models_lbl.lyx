@@ -4630,11 +4630,20 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ram}{\mathrm{RAM}}
+{\text{RAM}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color magenta
 מודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\ram$
 \end_inset
 
 
@@ -4661,7 +4670,7 @@ literal "true"
 \series bold
 \color magenta
 מספר הרגיסטרים במודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\ram$
 \end_inset
 
 
@@ -4673,7 +4682,7 @@ literal "true"
 \end_inset
 
  מודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\ram$
 \end_inset
 
  אזי 
@@ -4688,7 +4697,7 @@ literal "true"
 \series bold
 \color magenta
 פקודות במודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\ram$
 \end_inset
 
 
@@ -4700,7 +4709,7 @@ literal "true"
 \end_inset
 
  מודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\ram$
 \end_inset
 
  אזי 
@@ -4715,7 +4724,7 @@ literal "true"
 \series bold
 \color magenta
 קונפיגורציה במודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\ram$
 \end_inset
 
 
@@ -4727,7 +4736,7 @@ literal "true"
 \end_inset
 
  מודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\ram$
 \end_inset
 
  יהיו 
@@ -4758,7 +4767,7 @@ literal "true"
 \end_inset
 
  מודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\ram$
 \end_inset
 
  ותהא 
@@ -4785,7 +4794,7 @@ literal "true"
 \end_inset
 
  מודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\ram$
 \end_inset
 
  ותהא 
@@ -4812,7 +4821,7 @@ literal "true"
 \end_inset
 
  מודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\ram$
 \end_inset
 
  ותהא 
@@ -4831,7 +4840,7 @@ literal "true"
 \series bold
 \color magenta
 קונפיגורציה עוברת במודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\mathrm{\ram}$
 \end_inset
 
 
@@ -4843,7 +4852,7 @@ literal "true"
 \end_inset
 
  מודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\ram$
 \end_inset
 
  ותהא 
@@ -4858,7 +4867,7 @@ literal "true"
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\mathrm{PC}^{\prime}=\text{PC}+1$
+\begin_inset Formula $\mathrm{PC}^{\prime}=\mathrm{PC}+1$
 \end_inset
 
 .
@@ -4917,7 +4926,7 @@ literal "true"
 \series bold
 \color magenta
 אלגוריתם במודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\mathrm{\ram}$
 \end_inset
 
 
@@ -4929,7 +4938,7 @@ literal "true"
 \end_inset
 
  מודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\ram$
 \end_inset
 
  אזי פונקציה 
@@ -4964,7 +4973,7 @@ literal "true"
 \end_inset
 
  מודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\ram$
 \end_inset
 
  ויהי 
@@ -5001,7 +5010,7 @@ literal "true"
 \end_inset
 
  מודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\ram$
 \end_inset
 
  יהי 
@@ -5012,8 +5021,12 @@ literal "true"
 \begin_inset Formula $x\in\bbn$
 \end_inset
 
- אזי 
-\begin_inset Formula $A_{\mathrm{stop}}=\min\left\{ n\in\bbn\mid A^{\left(n+1\right)}\left(\mathrm{Start}_{x}\right)=A^{\left(n\right)}\left(\mathrm{Start}_{x}\right)\right\} $
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $A_{\mathrm{stop}}=\min\left\{ n\in\bbn\mid\forall i\in\bbn_{\ge n}:A^{\left(i\right)}\left(\mathrm{Start}_{x}\right)=A^{\left(n\right)}\left(\mathrm{Start}_{x}\right)\right\} $
 \end_inset
 
 .
@@ -5024,7 +5037,7 @@ literal "true"
 \series bold
 \color magenta
 ריצה של מודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\mathrm{\ram}$
 \end_inset
 
 
@@ -5036,7 +5049,7 @@ literal "true"
 \end_inset
 
  מודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\mathrm{\ram}$
 \end_inset
 
  יהי 
@@ -5048,7 +5061,7 @@ literal "true"
 \end_inset
 
  אזי 
-\begin_inset Formula $A^{\left(A_{\mathrm{stop}}\right)}\left(\mathrm{Start}_{x}\right)$
+\begin_inset Formula $\left(A^{\left(i\right)}\left(\mathrm{Start}_{x}\right)\right)_{i=1}^{A_{\mathrm{stop}}}$
 \end_inset
 
 .
@@ -5063,7 +5076,7 @@ literal "true"
 \color inherit
 :
  ריצת מודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\mathrm{\ram}$
 \end_inset
 
  זהה לריצת מעבד 
@@ -5082,7 +5095,7 @@ literal "true"
 \color inherit
 :
  מכונת טיורינג ומודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\mathrm{\ram}$
 \end_inset
 
  הם מודלים שקולים.
@@ -7374,7 +7387,7 @@ literal "true"
 \end_inset
 
  מודל 
-\begin_inset Formula $\mathrm{RAM}$
+\begin_inset Formula $\mathrm{\ram}$
 \end_inset
 
  שרצה בזמן 

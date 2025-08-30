@@ -2980,7 +2980,7 @@ A
 \end_inset
 
  גרף סופי אזי 
-\begin_inset Formula $\maxcut\left(G\right)=\max\left\{ \left|E\left(S,S^{\mathcal{C}}\right)\right|\bmid S\subseteq V\left(G\right)\right\} $
+\begin_inset Formula $\maxcut\left(G\right)=\max\left\{ \left|E\left(S,\overline{S}\right)\right|\bmid S\subseteq V\left(G\right)\right\} $
 \end_inset
 
 .
@@ -3447,7 +3447,7 @@ status collapsed
 
 \series bold
 \color green
-משפט חות־מינזר־ספרא
+משפט חות'־מינזר־ספרא
 \series default
 \color inherit
 :
@@ -3567,7 +3567,7 @@ status open
 \begin_inset Formula $G$
 \end_inset
 
- גרף סופי אזי נגדיר 
+ גרף אזי נגדיר 
 \begin_inset Formula $\maxcutip\left(G\right)$
 \end_inset
 
@@ -3690,7 +3690,7 @@ end{flalign*}
 \begin_inset Formula $G$
 \end_inset
 
- גרף סופי אזי נגדיר 
+ גרף אזי נגדיר 
 \begin_inset Formula $\maxcutlp\left(G\right)$
 \end_inset
 
@@ -3762,6 +3762,104 @@ end{flalign*}
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\maxcutvp}{\maxcut\textrm{-}\mathrm{VP}}
+{\maxcut\text{-VP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+בעיית החתך המקסימלי כתכנות וקטורי
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי נגדיר 
+\begin_inset Formula $\maxcutvp\left(G\right)$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{flalign*}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+max
+\backslash
+quad & 
+\backslash
+sum_{(u,v)
+\backslash
+in E}
+\backslash
+frac{1 - 
+\backslash
+langle X_{u},
+ X_{v} 
+\backslash
+rangle}{2} &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+st
+\backslash
+quad &  X_v
+\backslash
+in 
+\backslash
+bbs^{
+\backslash
+left|V(G)
+\backslash
+right| - 1} 
+\backslash
+qquad,
+\backslash
+forall v
+\backslash
+in V &
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{flalign*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
@@ -3784,7 +3882,7 @@ end{flalign*}
 \begin_inset Formula $A\in\bbr^{n\times n}$
 \end_inset
 
- המקיימת 
+ סימטרית המקיימת 
 \begin_inset Formula $x^{T}Ax\ge0$
 \end_inset
 
@@ -3940,10 +4038,11 @@ end{flalign*}
 \series default
 \color inherit
 :
- מכאן והלאה נשתמש במונח תוכנה לינארית גם עבור בעיית תכנות לינארי.
-\end_layout
+ כל ההגדרות של תכנות לינארי מורחבות בצורה טבעית לתכנות חצי מוגדר.
+\begin_inset Note Note
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \series bold
 \color magenta
@@ -3958,7 +4057,7 @@ end{flalign*}
  בעיית תכנות לינארית מקסימלית אזי נסמן את בעיית התכנות החצי מוגדר כך
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset ERT
 status collapsed
 
@@ -4116,7 +4215,7 @@ end{flalign*}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \series bold
 \color magenta
@@ -4131,7 +4230,7 @@ end{flalign*}
  בעיית תכנות לינארית מינימלית אזי נסמן את בעיית התכנות החצי מוגדר כך
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset ERT
 status collapsed
 
@@ -4289,6 +4388,44 @@ end{flalign*}
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $\sdp$
+\end_inset
+
+ בעיית תכנות חצי מוגדר ויהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ אזי קיים אלגוריתם פולינומי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ הינו 
+\begin_inset Formula $\e$
+\end_inset
+
+־קירוב של 
+\begin_inset Formula $\sdp$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\maxcutsdp}{\maxcut\textrm{-}\sdp}
@@ -4310,7 +4447,7 @@ end{flalign*}
 \begin_inset Formula $G$
 \end_inset
 
- גרף סופי אזי נגדיר 
+ גרף אזי נגדיר 
 \begin_inset Formula $\maxcutsdp\left(G\right)$
 \end_inset
 
@@ -4401,6 +4538,39 @@ end{flalign*}
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף באשר 
+\begin_inset Formula $\left|V\left(G\right)\right|=n$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $X\in\bbr^{n\times n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $X=\arg\maxcutvp\left(G\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $X^{T}X=\arg\maxcutsdp\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\chol}{\mathrm{Chol}}
 {\text{Chol}}
@@ -4425,7 +4595,7 @@ end{flalign*}
 \begin_inset Formula $A\in\bbr^{n\times n}$
 \end_inset
 
- סימטרית מוגדרת חיובית אזי 
+ מוגדרת חיובית אזי 
 \begin_inset Formula $\chol\left(A\right)=L$
 \end_inset
 
@@ -4452,7 +4622,7 @@ end{flalign*}
 \begin_inset Formula $A\in\bbr^{n\times n}$
 \end_inset
 
- סימטרית מוגדרת חיובית אזי
+ מוגדרת חיובית אזי
 \end_layout
 
 \begin_layout Standard
@@ -4762,8 +4932,607 @@ end{algorithm}
 \begin_inset Formula $A\in\bbr^{n\times n}$
 \end_inset
 
- סימטרית מוגדרת חיובית אזי 
+ מוגדרת חיובית אזי 
 \begin_inset Formula $\mathrm{CholeskyAlgorithm}\left(A\right)=\chol\left(L\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף באשר 
+\begin_inset Formula $\left|V\left(G\right)\right|=n$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $A\in\bbr^{n\times n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $A=\arg\maxcutsdp\left(G\right)$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\chol\left(A\right)^{T}=\arg\maxcutvp\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $\nu:\bbr^{n}\times\bbr^{n}\to\left\{ \pm1\right\} $
+\end_inset
+
+ כך 
+\begin_inset Formula $\nu_{p}\left(\xi\right)=\left\{ \begin{smallmatrix}1 & \left<\xi,p\right>\ge0\\
+-1 & \mathrm{else}
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף באשר 
+\begin_inset Formula $\left|V\left(G\right)\right|=n$
+\end_inset
+
+ תהא 
+\begin_inset Formula $X\in\bbr^{n\times n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $X=\arg\maxcutvp\left(G\right)$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $u,v\in V\left(G\right)$
+\end_inset
+
+ שונים אזי 
+\begin_inset Formula $\bbp_{p\in\bbs^{n-1}}\left(\nu_{p}\left(C_{u}\left(X\right)\right)\ne\nu_{p}\left(C_{v}\left(X\right)\right)\right)=\frac{\arccos\left(\left<C_{u}\left(X\right),C_{v}\left(X\right)\right>\right)}{\pi}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף באשר 
+\begin_inset Formula $\left|V\left(G\right)\right|=n$
+\end_inset
+
+ תהא 
+\begin_inset Formula $X\in\bbr^{n\times n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $X=\arg\maxcutvp\left(G\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p\in\bbr^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $S_{p}\left(X\right)=\left\{ v\in V\left(G\right)\bmid\nu_{p}\left(C_{u}\left(X\right)\right)=1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף באשר 
+\begin_inset Formula $\left|V\left(G\right)\right|=n$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $X\in\bbr^{n\times n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $X=\arg\maxcutvp\left(G\right)$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bbe_{p\in\bbs^{n-1}}\left[\left|E\left(S_{p}\left(X\right),\overline{S_{p}\left(X\right)}\right)\right|\right]=\frac{1}{\pi}\sum_{\left\{ u,v\right\} \in E\left(G\right)}\arccos\left(\left<C_{u}\left(X\right),C_{v}\left(X\right)\right>\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף באשר 
+\begin_inset Formula $\left|V\left(G\right)\right|=n$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $X\in\bbr^{n\times n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $X=\arg\maxcutvp\left(G\right)$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bbe_{p\in\bbs^{n-1}}\left[\left|E\left(S_{p}\left(X\right),\overline{S_{p}\left(X\right)}\right)\right|\right]\ge0.878567\cdot\maxcut\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף באשר 
+\begin_inset Formula $\left|V\left(G\right)\right|=n$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\maxcut\left(G\right)=\left(1-\e\right)\left|E\left(G\right)\right|$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $X\in\bbr^{n\times n}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $X=\arg\maxcutvp\left(G\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbe_{p\in\bbs^{n-1}}\left[\left|E\left(S_{p}\left(X\right),\overline{S_{p}\left(X\right)}\right)\right|\right]\ge\left(1-\frac{2}{\pi}\sqrt{\varepsilon}-\O\left(\e^{1.5}\right)\right)\left|E\left(G\right)\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט חות'־קינדלר־או'דונל־מוסל
+\series default
+:
+ יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\rho\in\left(0,1\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gap_{\left[\rho,1-\arccos\left(\rho\right)+\e\right]}\maxcut\le_{p}\ug\left(\e\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\spec}{\mathrm{spec}}
+{\text{spec}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\maxeva}{\mathrm{MinMaxEigenvalue}}
+{\text{MinMaxEigenvalue}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית מינימליות הערך העצמי המקסימלי לפונקציה אפינית
+\series default
+:
+ יהיו 
+\begin_inset Formula $n,k\in\bbn_{+}$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $A_{0}\ldots A_{k}\in\bbr^{n\times n}$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\maxeva\left(A_{0}\ldots A_{k}\right)=\min\left\{ \max\left(\spec\left(A_{0}+\sum_{i=1}^{k}A_{i}x_{i}\right)\right)\bmid x\in\bbr^{k}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ אזי קיים אלגוריתם פולינומי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ הינו 
+\begin_inset Formula $\e$
+\end_inset
+
+־קירוב של 
+\begin_inset Formula $\maxeva$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+יציבות פנימית של גרף
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי 
+\begin_inset Formula $\a\left(G\right)=\max\left\{ \left|I\right|\bmid\left(I\subseteq V\left(G\right)\right)\land\left(\text{ בלתי תלויה}I\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מכפלה חזקה של גרפים
+\series default
+:
+ יהיו 
+\begin_inset Formula $G,H$
+\end_inset
+
+ גרפים מכוונים אזי נגדיר גרף מכוון 
+\begin_inset Formula $G\boxtimes H$
+\end_inset
+
+ כך 
+\begin_inset Formula $V\left(G\boxtimes H\right)=V\left(G\right)\times V\left(H\right)$
+\end_inset
+
+ וכן
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $E\left(G\boxtimes H\right)=\left\{ \left(\left(u,u^{\prime}\right),\left(v,v^{\prime}\right)\right)\in V\left(G\boxtimes H\right)^{2}\bmid\left(u\in N^{-}\left(v\right)\cup\left\{ v\right\} \right)\land\left(u^{\prime}\in N^{-}\left(v^{\prime}\right)\cup\left\{ v^{\prime}\right\} \right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אזי 
+\begin_inset Formula $G^{\boxtimes1}=G$
+\end_inset
+
+ וכן 
+\begin_inset Formula $G^{\boxtimes n}=G^{\boxtimes\left(n-1\right)}\boxtimes G$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn_{\ge2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קיבולת שאנון של גרף
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אזי 
+\begin_inset Formula $\Theta\left(G\right)=\lim_{k\to\infty}\sqrt[k]{\a\left(G^{\boxtimes k}\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אזי 
+\begin_inset Formula $\Theta\left(G\right)=\sup_{k\in\bbn_{+}}\sqrt[k]{\a\left(G^{\boxtimes k}\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אזי 
+\begin_inset Formula $\Theta\left(G\right)\ge\a\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ מכוון אזי נגדיר גרף לא מכוון 
+\begin_inset Formula $G_{\mathrm{dc}}$
+\end_inset
+
+ כך 
+\begin_inset Formula $V\left(G_{\mathrm{dc}}\right)=V\left(G\right)$
+\end_inset
+
+ וכן
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $E\left(G_{\mathrm{dc}}\right)=\left\{ e\in\P_{2}\left(V\left(G\right)\right)\bmid\left(\left(e_{1},e_{2}\right)\in E\left(G\right)\right)\lor\left(\left(e_{2},e_{1}\right)\in E\left(G\right)\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+ייצוג אורתונורמלי של גרף
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף ויהי 
+\begin_inset Formula $d\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $R:V\left(G\right)\to\bbr^{d}$
+\end_inset
+
+ באשר לכל 
+\begin_inset Formula $u,v\in V\left(G\right)$
+\end_inset
+
+ המקיימים 
+\begin_inset Formula $\left\{ u,v\right\} \notin E\left(G_{\mathrm{dc}}\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $R_{u}\perp R_{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מספר לובאס של גרף
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי 
+\begin_inset Formula $\vartheta\left(G\right)=\min\left\{ \min\left\{ \max\left\{ \frac{1}{\left<R_{u},c\right>^{2}}\bmid u\in V\left(G\right)\right\} \bmid\begin{smallmatrix}c\in\bbr^{d}\\
+\norm c=1
+\end{smallmatrix}\right\} \bmid\begin{smallmatrix}d\in\bbn_{+}\\
+G\text{ מימדי של }d\text{ ייצוג אורתונורמלי }R
+\end{smallmatrix}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף נגדיר 
+\begin_inset Formula $B_{\emptyset}\in\bbr^{V\left(G\right)\times V\left(G\right)}$
+\end_inset
+
+ כך 
+\begin_inset Formula $\left(B_{\emptyset}\right)_{u,v}=\left\{ \begin{smallmatrix}1 &  & u=v\\
+1 &  & \left\{ u,v\right\} \notin E\left(G_{\mathrm{dc}}\right)\\
+0 &  & \mathrm{else}
+\end{smallmatrix}\right.$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula $B:E\left(G_{\mathrm{dc}}\right)\to\bbr^{V\left(G\right)\times V\left(G\right)}$
+\end_inset
+
+ כך 
+\begin_inset Formula $\left(B_{\left\{ u,v\right\} }\right)_{t,s}=\left\{ \begin{smallmatrix}1 &  & \left\{ t,s\right\} =\left\{ u,v\right\} \\
+0 &  & \mathrm{else}
+\end{smallmatrix}\right.$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\maxeva\left(B_{\emptyset},\left(B_{e}\right)_{e\in E\left(G_{\mathrm{dc}}\right)}\right)=\vartheta\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף מכוון אזי 
+\begin_inset Formula $\vartheta\left(G\right)\ge\Theta\left(G\right)$
 \end_inset
 
 .

@@ -5997,12 +5997,20 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\pram}{\text{PRAM}}
+\newcommand{\pram}{\mathrm{PRAM}}
+{\text{PRAM}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\ram}{\text{RAM}}
+\newcommand{\ram}{\mathrm{RAM}}
+{\text{RAM}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\pc}{\mathrm{PC}}
+{\text{PC}}
 \end_inset
 
 
@@ -6017,13 +6025,9 @@ status collapsed
 \end_inset
 
  מקבילי (
-\lang english
-
-\begin_inset Formula $\text{Parallel RAM}$
+\begin_inset Formula $\mathrm{Parallel\,RAM}$
 \end_inset
 
-
-\lang hebrew
 /
 \begin_inset Formula $\pram$
 \end_inset
@@ -6099,7 +6103,7 @@ status collapsed
 \end_inset
 
  ותהא 
-\begin_inset Formula $\left(T,R,\text{PC}\right)$
+\begin_inset Formula $\left(T,R,\pc\right)$
 \end_inset
 
  קונפיגורציה של מודל ה־
@@ -6111,18 +6115,10 @@ status collapsed
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(T,R,\text{PC}\right)$
+\begin_inset Formula $\left(T,R,\pc\right)$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\pc}{\text{PC}}
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -6146,11 +6142,11 @@ status collapsed
 \end_inset
 
  ותהא 
-\begin_inset Formula $\left(T,R,\text{PC}\right)$
+\begin_inset Formula $\left(T,R,\pc\right)$
 \end_inset
 
  קונפיגורציה אזי קונפיגורציה 
-\begin_inset Formula $\left(T^{\prime},R^{\prime},\text{PC}^{\prime}\right)$
+\begin_inset Formula $\left(T^{\prime},R^{\prime},\pc^{\prime}\right)$
 \end_inset
 
  באשר
@@ -6259,6 +6255,15 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\start}{\mathrm{Start}}
+{\text{Start}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color purple
@@ -6289,7 +6294,7 @@ status collapsed
 \end_inset
 
  אזי 
-\begin_inset Formula $\text{Start}_{x}=\left(T,\left\{ 0\right\} ,0\right)$
+\begin_inset Formula $\start_{x}=\left(T,\left\{ 0\right\} ,0\right)$
 \end_inset
 
 .
@@ -6319,8 +6324,12 @@ status collapsed
 \begin_inset Formula $x\in\bbn$
 \end_inset
 
- אזי 
-\begin_inset Formula $A_{\text{stop}}=\min\left\{ n\in\bbn\mid A^{\left(n+1\right)}\left(\text{Start}_{x}\right)=A^{\left(n\right)}\left(\text{Start}_{x}\right)\right\} $
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $A_{\mathrm{stop}}=\min\left\{ n\in\bbn\mid\forall i\in\bbn_{\ge n}:A^{\left(i\right)}\left(\start_{x}\right)=A^{\left(n\right)}\left(\start_{x}\right)\right\} $
 \end_inset
 
 .
@@ -6355,10 +6364,19 @@ status collapsed
 \end_inset
 
  אזי 
-\begin_inset Formula $\left(A^{\left(i\right)}\left(\text{Start}_{x}\right)\right)_{i=1}^{A_{\text{stop}}}$
+\begin_inset Formula $\left(A^{\left(i\right)}\left(\start_{x}\right)\right)_{i=1}^{A_{\mathrm{stop}}}$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\time}{\mathrm{Time}}
+{\text{Time}}
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6390,7 +6408,7 @@ status collapsed
 \end_inset
 
  אזי 
-\begin_inset Formula $\text{Time}\left(A,x\right)=\left(A^{\left(A_{\text{stop}}\right)}\left(\text{Start}_{x}\right)\right)_{3}$
+\begin_inset Formula $\time\left(A,x\right)=\left(A^{\left(A_{\mathrm{stop}}\right)}\left(\start_{x}\right)\right)_{3}$
 \end_inset
 
 .
@@ -6425,7 +6443,7 @@ status collapsed
 \end_inset
 
  אזי 
-\begin_inset Formula $\text{Work}\left(A,x\right)=p\cdot\text{Time}\left(A,x\right)$
+\begin_inset Formula $\mathrm{Work}\left(A,x\right)=p\cdot\time\left(A,x\right)$
 \end_inset
 
 .
@@ -6452,7 +6470,7 @@ status collapsed
 \end_inset
 
  ניתנת לחישוב במודל 
-\begin_inset Formula $\text{PRAM}$
+\begin_inset Formula $\pram$
 \end_inset
 
  בעל 
@@ -6483,7 +6501,7 @@ status collapsed
 \end_inset
 
  ניתנת לחישוב במודל 
-\begin_inset Formula $\text{PRAM}$
+\begin_inset Formula $\pram$
 \end_inset
 
  בעל 
@@ -8283,7 +8301,7 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\time}{\text{Time}}
+\renewcommand{\time}{\text{Time}}
 \end_inset
 
 
