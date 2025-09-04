@@ -2127,7 +2127,289 @@ A
 \series default
 \color inherit
 :
- ...
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $m\in\left[q\right]$
+\end_inset
+
+ יהי 
+\begin_inset Formula $r\in\left[m\right]$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $\a_{1}\ldots\a_{m}\in\bbf_{q}$
+\end_inset
+
+ שונים תהא 
+\begin_inset Formula $w\in\rs_{q}\left[m,r\right]$
+\end_inset
+
+ יהי 
+\begin_inset Formula $e\in\bbf_{q}^{m}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\Delta\left(e,0\right)\le\frac{m-r}{2}$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula $y=w+e$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}[H]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{BerlekampWelch}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{Algorithm}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$q,
+ m,
+ r,
+ 
+\backslash
+a,
+ y$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $g 
+\backslash
+in 
+\backslash
+left(
+\backslash
+mathbb{F}_{q}
+\backslash
+right)[x];
+ 
+\backslash
+qquad 
+\backslash
+deg
+\backslash
+left(g
+\backslash
+right) = r + 
+\backslash
+ceil{
+\backslash
+frac{m - r}{2}} - 1$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $h 
+\backslash
+in 
+\backslash
+left(
+\backslash
+mathbb{F}_{q}
+\backslash
+right)[x];
+ 
+\backslash
+qquad 
+\backslash
+deg
+\backslash
+left(h
+\backslash
+right) = 
+\backslash
+floor{
+\backslash
+frac{m - r}{2}}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $
+\backslash
+left(g,
+ h
+\backslash
+right) 
+\backslash
+gets 
+\backslash
+mathrm{LinearEqSolver}
+\backslash
+left(
+\backslash
+left( g
+\backslash
+left(
+\backslash
+a_i
+\backslash
+right) = h
+\backslash
+left(
+\backslash
+a_i
+\backslash
+right) 
+\backslash
+cdot y_i 
+\backslash
+right)_{i=1}^{m}
+\backslash
+right)$ 
+\backslash
+tcp{We do not accept $g = h = 0$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $
+\backslash
+mathrm{PolynomialDivision}
+\backslash
+left(g,
+ h
+\backslash
+right)$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $m\in\left[q\right]$
+\end_inset
+
+ יהי 
+\begin_inset Formula $r\in\left[m\right]$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $\a_{1}\ldots\a_{m}\in\bbf_{q}$
+\end_inset
+
+ שונים תהא 
+\begin_inset Formula $w\in\rs_{q}\left[m,r\right]$
+\end_inset
+
+ יהי 
+\begin_inset Formula $e\in\bbf_{q}^{m}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\Delta\left(e,0\right)\le\frac{m-r}{2}$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula $y=w+e$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathrm{BerlekampWelch}\left(q,m,r,\a,y\right)=P$
+\end_inset
+
+ באשר 
+\begin_inset Formula $P\in\left(\bbf_{q}\right)_{\le r-1}\left[x\right]$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\Delta\left(P,y\right)\le\frac{m-r}{2}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2875,6 +3157,61 @@ A
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+בעיית אי־סיפוק
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה אזי 
+\begin_inset Formula $\mathrm{NoSatEq}_{\bbf}=\left\{ \left<M,t\right>\bmid\left(M\in\bbr^{n\times n}\right)\land\left(t\in\bbr^{n}\right)\land\left(\exists x\in\bbr^{n}:\forall i\in\left[n\right]:\left(Mx\right)_{i}\ne t_{i}\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\mathrm{NoSatEq}_{\bbf_{2}}\in\P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה סופי באשר 
+\begin_inset Formula $\left|\bbf\right|\ge3$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathrm{NoSatEq}_{\bbf}$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\np$
+\end_inset
+
+־קשה.
+\end_layout
+
+\begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\cvpcs}{\mathrm{CVP\textrm{-}code\textrm{-}search}}
 {\text{CVP-code-search}}
@@ -3520,28 +3857,6 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-החלק של 
-\begin_inset Formula $\mathrm{SDP}$
-\end_inset
-
- ושל 
-\begin_inset Formula $\maxcut$
-\end_inset
-
- קשה לקירוב!
- ...
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\maxcutip}{\maxcut\mathrm{\textrm{-}IP}}
 {\maxcut\text{-IP}}
@@ -4034,30 +4349,18 @@ end{flalign*}
 
 \series bold
 \color magenta
-הערה
-\series default
-\color inherit
-:
- כל ההגדרות של תכנות לינארי מורחבות בצורה טבעית לתכנות חצי מוגדר.
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\series bold
-\color magenta
 סימון
 \series default
 \color inherit
 :
  תהא 
-\begin_inset Formula $\left(c,P,p,Q,q,R,r\right)$
+\begin_inset Formula $\left(C,P,p,Q,q,R,r\right)$
 \end_inset
 
- בעיית תכנות לינארית מקסימלית אזי נסמן את בעיית התכנות החצי מוגדר כך
+ בעיית תכנות חצי מוגדר מקסימלית אזי נסמן את בעיית התכנות החצי מוגדר כך
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset ERT
 status collapsed
 
@@ -4215,7 +4518,7 @@ end{flalign*}
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 \color magenta
@@ -4224,13 +4527,13 @@ end{flalign*}
 \color inherit
 :
  תהא 
-\begin_inset Formula $\left(c,P,p,Q,q,R,r\right)$
+\begin_inset Formula $\left(C,P,p,Q,q,R,r\right)$
 \end_inset
 
- בעיית תכנות לינארית מינימלית אזי נסמן את בעיית התכנות החצי מוגדר כך
+ בעיית תכנות חצי מוגדר מינימלית אזי נסמן את בעיית התכנות החצי מוגדר כך
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset ERT
 status collapsed
 
@@ -4388,16 +4691,24 @@ end{flalign*}
 
 \end_layout
 
-\end_inset
+\begin_layout Standard
 
-
+\series bold
+\color magenta
+הערה
+\series default
+\color inherit
+:
+ כל ההגדרות של תכנות לינארי מורחבות בצורה טבעית לתכנות חצי מוגדר.
 \end_layout
 
 \begin_layout Standard
 
 \series bold
+\color magenta
 משפט
 \series default
+\color inherit
 :
  תהא 
 \begin_inset Formula $\sdp$
@@ -4540,8 +4851,10 @@ end{flalign*}
 \begin_layout Standard
 
 \series bold
+\color magenta
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -4942,8 +5255,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color magenta
 מסקנה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -4979,8 +5294,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color magenta
 הגדרה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -5002,8 +5319,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color magenta
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -5039,8 +5358,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color magenta
 הגדרה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -5076,8 +5397,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color magenta
 מסקנה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -5113,8 +5436,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color magenta
 מסקנה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -5150,8 +5475,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color magenta
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\e>0$
@@ -5191,8 +5518,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color magenta
 משפט חות'־קינדלר־או'דונל־מוסל
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\e>0$
@@ -5207,6 +5536,13 @@ end{algorithm}
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5227,8 +5563,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color purple
 בעיית מינימליות הערך העצמי המקסימלי לפונקציה אפינית
 \series default
+\color inherit
 :
  יהיו 
 \begin_inset Formula $n,k\in\bbn_{+}$
@@ -5252,8 +5590,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color purple
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $\e>0$
@@ -5281,8 +5621,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color purple
 יציבות פנימית של גרף
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -5298,8 +5640,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color purple
 מכפלה חזקה של גרפים
 \series default
+\color inherit
 :
  יהיו 
 \begin_inset Formula $G,H$
@@ -5327,8 +5671,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color purple
 סימון
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -5352,8 +5698,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color purple
 קיבולת שאנון של גרף
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -5369,8 +5717,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color purple
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -5386,8 +5736,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color purple
 טענה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -5403,8 +5755,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color purple
 הגדרה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -5432,8 +5786,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color purple
 ייצוג אורתונורמלי של גרף
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -5465,8 +5821,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color purple
 מספר לובאס של גרף
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -5486,8 +5844,10 @@ G\text{ מימדי של }d\text{ ייצוג אורתונורמלי }R
 \begin_layout Standard
 
 \series bold
+\color purple
 משפט
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -5524,8 +5884,10 @@ G\text{ מימדי של }d\text{ ייצוג אורתונורמלי }R
 \begin_layout Standard
 
 \series bold
+\color purple
 משפט
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $G$
@@ -5557,7 +5919,7 @@ G\text{ מימדי של }d\text{ ייצוג אורתונורמלי }R
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 בעיית כפל מטריצות
 \series default
 \color inherit
@@ -5597,7 +5959,7 @@ G\text{ מימדי של }d\text{ ייצוג אורתונורמלי }R
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 אלגוריתם כפל מטריצות נאיבי
 \series default
 \color inherit
@@ -5624,7 +5986,7 @@ G\text{ מימדי של }d\text{ ייצוג אורתונורמלי }R
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 טענה
 \series default
 \color inherit
@@ -5659,7 +6021,7 @@ G\text{ מימדי של }d\text{ ייצוג אורתונורמלי }R
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 אלגוריתם קרטסובה
 \series default
 \color inherit
@@ -5886,7 +6248,7 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 טענה
 \series default
 \color inherit
@@ -5905,7 +6267,7 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 טענה
 \series default
 \color inherit
@@ -5933,7 +6295,7 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 אלגוריתם סטרסן
 \series default
 \color inherit
@@ -5956,7 +6318,7 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 טענה
 \series default
 \color inherit
@@ -5983,7 +6345,7 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 טענה
 \series default
 \color inherit
@@ -6025,7 +6387,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 בעיית היפוך מטריצה
 \series default
 \color inherit
@@ -6052,7 +6414,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 משפט
 \series default
 \color inherit
@@ -6096,7 +6458,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 בעיית הדטרמיננטה
 \series default
 \color inherit
@@ -6123,7 +6485,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 משפט
 \series default
 \color inherit
@@ -6167,7 +6529,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 בעיית פירוק 
 \begin_inset Formula $\mathrm{LU}$
 \end_inset
@@ -6182,7 +6544,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 משפט
 \series default
 \color inherit
@@ -6226,7 +6588,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 בעיית פתרון מערכת משוואות לינארית
 \series default
 \color inherit
@@ -6237,7 +6599,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color purple
+\color brown
 משפט
 \series default
 \color inherit
@@ -6279,7 +6641,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 סריג
 \series default
 \color inherit
@@ -6310,7 +6672,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 מימד של סריג
 \series default
 \color inherit
@@ -6354,7 +6716,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 בסיס של סריג
 \series default
 \color inherit
@@ -6389,7 +6751,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 סריג ממשי
 \series default
 \color inherit
@@ -6416,7 +6778,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 סריג אבסטרקטי
 \series default
 \color inherit
@@ -6470,7 +6832,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 מימד של סריג אבסטרקטי
 \series default
 \color inherit
@@ -6497,7 +6859,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 הערה
 \series default
 \color inherit
@@ -6516,7 +6878,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 למה
 \series default
 \color inherit
@@ -6543,7 +6905,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 משפט
 \series default
 \color inherit
@@ -6597,7 +6959,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 טענה
 \series default
 \color inherit
@@ -6620,7 +6982,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 חיבור עמודות
 \series default
 \color inherit
@@ -6655,7 +7017,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 החלפת עמודות
 \series default
 \color inherit
@@ -6686,7 +7048,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 שלילת עמודה
 \series default
 \color inherit
@@ -6713,7 +7075,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 טרנספורמציות אלמנטריות
 \series default
 \color inherit
@@ -6736,7 +7098,7 @@ i\ne j
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 טענה
 \series default
 \color inherit
@@ -6763,7 +7125,7 @@ i\ne j
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 משפט
 \series default
 \color inherit
@@ -6802,7 +7164,7 @@ i\ne j
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 סריג דואלי
 \series default
 \color inherit
@@ -6821,7 +7183,7 @@ i\ne j
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 טענה
 \series default
 \color inherit
@@ -6840,7 +7202,7 @@ i\ne j
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 טענה
 \series default
 \color inherit
@@ -6859,7 +7221,7 @@ i\ne j
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 מטריצה דואלית
 \series default
 \color inherit
@@ -6882,7 +7244,7 @@ i\ne j
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 טענה
 \series default
 \color inherit
@@ -6905,7 +7267,7 @@ i\ne j
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 טענה
 \series default
 \color inherit
@@ -6928,7 +7290,7 @@ i\ne j
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 מתיחת סריג
 \series default
 \color inherit
@@ -6951,7 +7313,7 @@ i\ne j
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 טענה
 \series default
 \color inherit
@@ -6978,7 +7340,7 @@ i\ne j
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 טענה
 \series default
 \color inherit
@@ -7010,7 +7372,7 @@ i\ne j
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 בעיית מלאות דרגת מטריצה
 \series default
 \color inherit
@@ -7034,7 +7396,7 @@ i\ne j
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 בעיית שייכות לסריג בהינתן בסיס
 \series default
 \color inherit
@@ -7058,7 +7420,7 @@ i\ne j
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 בעיית ההכלה של סריג
 \series default
 \color inherit
@@ -7086,7 +7448,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 בעיית בסיס לחיתוך סריגים
 \series default
 \color inherit
@@ -7125,7 +7487,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color brown
+\color orange
 משפט
 \series default
 \color inherit
@@ -7147,7 +7509,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 המקבילון היסודי
 \series default
 \color inherit
@@ -7170,7 +7532,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 עיגול לפי המקבילון היסודי
 \series default
 \color inherit
@@ -7201,7 +7563,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 טענה
 \series default
 \color inherit
@@ -7232,7 +7594,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 מודולו המקבילון היסודי
 \series default
 \color inherit
@@ -7263,7 +7625,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 טענה
 \series default
 \color inherit
@@ -7294,7 +7656,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 למה
 \series default
 \color inherit
@@ -7321,7 +7683,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 טענה
 \series default
 \color inherit
@@ -7344,7 +7706,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 מסקנה
 \series default
 \color inherit
@@ -7371,7 +7733,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 דטרמיננטה של סריג
 \series default
 \color inherit
@@ -7403,7 +7765,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 בעיית הדטרמיננטה של סריג
 \series default
 \color inherit
@@ -7426,7 +7788,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 מסקנה
 \series default
 \color inherit
@@ -7441,7 +7803,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 טענה
 \series default
 \color inherit
@@ -7460,7 +7822,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 טענה
 \series default
 \color inherit
@@ -7479,7 +7841,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 העוקבים המינימליים
 \series default
 \color inherit
@@ -7510,7 +7872,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 אורתונורמליזציה
 \series default
 \color inherit
@@ -7556,7 +7918,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 טענה
 \series default
 \color inherit
@@ -7583,7 +7945,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 מטריצת האורתונורמליזציה
 \series default
 \color inherit
@@ -7614,7 +7976,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 משפט
 \series default
 \color inherit
@@ -7637,7 +7999,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 סריג מדרגה מלאה
 \series default
 \color inherit
@@ -7660,7 +8022,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 טענה
 \series default
 \color inherit
@@ -7699,7 +8061,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 מסקנה
 \series default
 \color inherit
@@ -7746,7 +8108,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 סריג סטנדרטי
 \series default
 \color inherit
@@ -7785,7 +8147,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 טענה
 \series default
 \color inherit
@@ -7812,7 +8174,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 טענה
 \series default
 \color inherit
@@ -7839,7 +8201,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 משפט ההעברה של בנשצ'יק
 \series default
 \color inherit
@@ -7866,7 +8228,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 משפט בליכפלדט
 \series default
 \color inherit
@@ -7905,7 +8267,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 גוף קמור סימטרי ביחס לראשית
 \series default
 \color inherit
@@ -7928,7 +8290,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 משפט הגוף הקמור של מינקובסקי
 \series default
 \color inherit
@@ -7963,7 +8325,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 אליפסואיד של סריג
 \series default
 \color inherit
@@ -8002,7 +8364,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 למה
 \series default
 \color inherit
@@ -8041,7 +8403,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 משפט מינקובסקי השני
 \series default
 \color inherit
@@ -8068,7 +8430,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color orange
+\color teal
 מסקנה משפט מינקובסקי הראשון
 \series default
 \color inherit
@@ -8102,7 +8464,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 טרנספורמציית פוריה
 \series default
 \color inherit
@@ -8129,7 +8491,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 טענה
 \series default
 \color inherit
@@ -8152,7 +8514,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 טענה
 \series default
 \color inherit
@@ -8179,7 +8541,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 טענה
 \series default
 \color inherit
@@ -8218,7 +8580,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 טענה
 \series default
 \color inherit
@@ -8257,7 +8619,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 טענה
 \series default
 \color inherit
@@ -8292,7 +8654,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 גאוסיאן
 \series default
 \color inherit
@@ -8319,7 +8681,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 טענה
 \series default
 \color inherit
@@ -8342,7 +8704,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 הגדרה
 \series default
 \color inherit
@@ -8369,7 +8731,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 מרחב שוורץ
 \series default
 \color inherit
@@ -8392,7 +8754,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 טענה נוסחאת הסכימה של פואסון
 \series default
 \color inherit
@@ -8427,7 +8789,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 משפט
 \series default
 \color inherit
@@ -8466,7 +8828,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 הטלה של וקטור על וקטור
 \series default
 \color inherit
@@ -8501,7 +8863,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 הטלה של סריג על וקטור
 \series default
 \color inherit
@@ -8524,7 +8886,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 טענה
 \series default
 \color inherit
@@ -8568,7 +8930,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 בסיס קורקין־זולוטרב (
 \begin_inset Formula $\kz$
 \end_inset
@@ -8636,7 +8998,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 משפט
 \series default
 \color inherit
@@ -8659,7 +9021,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 טענה
 \series default
 \color inherit
@@ -8730,7 +9092,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color teal
+\color black
 טענה
 \series default
 \color inherit
@@ -8821,7 +9183,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color black
+\color blue
 ערך של סריג
 \series default
 \color inherit
@@ -8869,7 +9231,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color black
+\color blue
 בעיית חיפוש הוקטור הקרוב ביותר בסריג
 \series default
 \color inherit
@@ -8921,7 +9283,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color black
+\color blue
 בעיית הוקטור הקרוב ביותר בסריג
 \series default
 \color inherit
@@ -8945,7 +9307,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color black
+\color blue
 מטריצה מצומצמת לנסטרה־לנסטרה־לובאס (
 \begin_inset Formula $\lll$
 \end_inset
@@ -9002,7 +9364,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color black
+\color blue
 טענה
 \series default
 \color inherit
@@ -9041,7 +9403,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color black
+\color blue
 טענה
 \series default
 \color inherit
@@ -9072,7 +9434,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color black
+\color blue
 אלגוריתם 
 \begin_inset Formula $\lll$
 \end_inset
@@ -9099,7 +9461,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color black
+\color blue
 הגדרה
 \series default
 \color inherit
@@ -9122,7 +9484,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color black
+\color blue
 טענה
 \series default
 \color inherit
@@ -9154,7 +9516,7 @@ m\text{ מדרגה }B
 \begin_layout Standard
 
 \series bold
-\color black
+\color blue
 טענה
 \series default
 \color inherit
@@ -9180,7 +9542,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color black
+\color blue
 רדיוס כיסוי
 \series default
 \color inherit
@@ -9207,7 +9569,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color black
+\color blue
 טענה
 \series default
 \color inherit
@@ -9243,7 +9605,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color black
+\color blue
 אלגוריתם באבאי
 \series default
 \color inherit
@@ -9274,7 +9636,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color black
+\color blue
 טענה
 \series default
 \color inherit
@@ -9297,7 +9659,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color black
+\color blue
 מסקנה
 \series default
 \color inherit
@@ -9320,7 +9682,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color black
+\color blue
 מסקנה
 \series default
 \color inherit
@@ -9347,7 +9709,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color black
+\color blue
 טענה
 \series default
 \color inherit
@@ -9378,7 +9740,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color black
+\color blue
 מסקנה
 \series default
 \color inherit
@@ -9408,7 +9770,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 משפט
 \series default
 \color inherit
@@ -9427,7 +9789,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 סימון
 \series default
 \color inherit
@@ -9455,7 +9817,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 בעיית המרווח לוקטור הקרוב ביותר בסריג
 \series default
 \color inherit
@@ -9483,7 +9845,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 הגדרה
 \series default
 \color inherit
@@ -9506,7 +9868,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 מסקנה
 \series default
 \color inherit
@@ -9521,7 +9883,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 הגדרה
 \series default
 \color inherit
@@ -9561,7 +9923,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 בעיית המרווח לוקטור הקצר ביותר בסריג
 \series default
 \color inherit
@@ -9589,7 +9951,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 הגדרה
 \series default
 \color inherit
@@ -9612,7 +9974,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 טענה
 \series default
 \color inherit
@@ -9635,7 +9997,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 מסקנה
 \series default
 \color inherit
@@ -9658,7 +10020,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 טענה
 \series default
 \color inherit
@@ -9673,7 +10035,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 משפט
 \series default
 \color inherit
@@ -9696,7 +10058,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 משפט
 \series default
 \color inherit
@@ -9719,7 +10081,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 משפט
 \series default
 \color inherit
@@ -9743,7 +10105,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 בעיית הוקטורים הבלתי תלויים הקצרים ביותר
 \series default
 \color inherit
@@ -9786,7 +10148,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 טענה
 \series default
 \color inherit
@@ -9805,7 +10167,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 טענה
 \series default
 \color inherit
@@ -9824,7 +10186,7 @@ status open
 \begin_layout Standard
 
 \series bold
-\color blue
+\color red
 טענה
 \series default
 \color inherit
