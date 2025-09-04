@@ -2425,6 +2425,462 @@ end{algorithm}
 
 \series bold
 \color red
+כדור
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה יהי 
+\begin_inset Formula $r\in\bbr_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ אזי 
+\begin_inset Formula $B_{r}\left(x\right)=\left\{ y\in X\bmid\Delta\left(x,y\right)\le r\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+קוד לתיקון שגיאות רשימתי
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $r,\ell\in\bbn_{+}$
+\end_inset
+
+ אזי קוד 
+\begin_inset Formula $\left[m,k,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $w\in\left[q\right]^{m}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\left|B_{r}\left(w\right)\cap\mathcal{C}\right|\le\ell$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+סימון
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $r,\ell\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד 
+\begin_inset Formula $\left[m,k,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות רשימתי 
+\begin_inset Formula $\left(r,\ell\right)$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ הינו קוד 
+\begin_inset Formula $\left(m,k,r,\ell,q\right)$
+\end_inset
+
+ לתיקון שגיאות רשימתי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ קוד 
+\begin_inset Formula $\left[m,k,d,q\right]$
+\end_inset
+
+ לתיקון שגיאות אזי 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ הינו קוד 
+\begin_inset Formula $\left(m,k,\frac{d}{2},1,q\right)$
+\end_inset
+
+ לתיקון שגיאות רשימתי.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+אלגוריתם סודן
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $m\in\left[q\right]$
+\end_inset
+
+ יהי 
+\begin_inset Formula $r\in\left[m\right]$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $\a_{1}\ldots\a_{m}\in\bbf_{q}$
+\end_inset
+
+ שונים תהא 
+\begin_inset Formula $w\in\rs_{q}\left[m,r\right]$
+\end_inset
+
+ יהי 
+\begin_inset Formula $e\in\bbf_{q}^{m}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\Delta\left(e,0\right)\le m-2\sqrt{mr}$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula $y=w+e$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}[H]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{Sudan}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{Algorithm}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$q,
+ m,
+ r,
+ 
+\backslash
+a,
+ y$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $Q 
+\backslash
+in 
+\backslash
+left(
+\backslash
+mathbb{F}_{q}
+\backslash
+right)[x,
+ y];
+ 
+\backslash
+qquad 
+\backslash
+deg_x
+\backslash
+left(Q
+\backslash
+right) = 
+\backslash
+sqrt{mr};
+ 
+\backslash
+qquad 
+\backslash
+deg_y
+\backslash
+left(Q
+\backslash
+right) = 
+\backslash
+sqrt{
+\backslash
+frac{m}{r}}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $Q 
+\backslash
+gets 
+\backslash
+mathrm{LinearEqSolver}
+\backslash
+left(
+\backslash
+left( Q
+\backslash
+left(y_i,
+ 
+\backslash
+a_i
+\backslash
+right) = 0 
+\backslash
+right)_{i=1}^{m}
+\backslash
+right)$ 
+\backslash
+tcp{We do not accept $Q = 0$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    $S
+\backslash
+in 
+\backslash
+mathrm{List}
+\backslash
+left( 
+\backslash
+mathbb{F}_q[x] 
+\backslash
+right);
+ 
+\backslash
+qquad S 
+\backslash
+gets 
+\backslash
+mathrm{PolymonialSolutions}
+\backslash
+left(Q
+\backslash
+right)$ 
+\backslash
+tcp{We view $Q$ as a polynomial in $
+\backslash
+left(
+\backslash
+mathbb{F}_q[x]
+\backslash
+right)[y]$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $
+\backslash
+left[h 
+\backslash
+quad 
+\backslash
+textbf{for}
+\backslash
+quad  h 
+\backslash
+in S 
+\backslash
+quad 
+\backslash
+textbf{if}
+\backslash
+quad 
+\backslash
+Delta
+\backslash
+left(
+\backslash
+left(h
+\backslash
+left(
+\backslash
+a_i
+\backslash
+right)
+\backslash
+right)_{i = 1}^{m},
+ y
+\backslash
+right) < m-2
+\backslash
+sqrt{mr}
+\backslash
+right]$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $m\in\left[q\right]$
+\end_inset
+
+ יהי 
+\begin_inset Formula $r\in\left[m\right]$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $\a_{1}\ldots\a_{m}\in\bbf_{q}$
+\end_inset
+
+ שונים תהא 
+\begin_inset Formula $w\in\rs_{q}\left[m,r\right]$
+\end_inset
+
+ יהי 
+\begin_inset Formula $e\in\bbf_{q}^{m}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\Delta\left(e,0\right)\le m-2\sqrt{mr}$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula $y=w+e$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathrm{Sudan}\left(q,m,r,\a,y\right)=L$
+\end_inset
+
+ באשר
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left\{ \left(h\left(\a_{i}\right)\right)_{i=1}^{m}\bmid h\in L\right\} =\left\{ w^{\prime}\in\rs_{q}\left[m,r\right]\bmid\exists\e\in\bbf_{q}^{m}:\left(y=w^{\prime}+\e\right)\land\left(\Delta\left(\e,0\right)\le m-2\sqrt{mr}\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
 קוד ריד־מיולר
 \series default
 \color inherit
@@ -2659,6 +3115,291 @@ end{algorithm}
 
  אזי 
 \begin_inset Formula $\Rm_{2}\left[m,r\right]=\left\{ \left(u,u+v\right)\mid\left(u\in\Rm_{2}\left[m-1,r\right]\right)\land\left(v\in\Rm_{2}\left[m-1,r-1\right]\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם תיקון שגיאות מקומי בקוד ריד־מיולר
+\series default
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $m\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\a,\e\in\left(0,1\right)$
+\end_inset
+
+ יהי 
+\begin_inset Formula $z\in\bbf_{q}^{m}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $w\in\bbf_{q}^{q^{m}}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $d\left(\Rm_{q}\left[m,\a q\right],w\right)\le q^{m}\cdot\frac{1-\a}{6}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}[H]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{LocalRM}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{Algorithm}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$
+\backslash
+varepsilon,
+ q,
+ m,
+ 
+\backslash
+a,
+ z,
+ w;
+ R$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $t 
+\backslash
+gets 
+\backslash
+ceil{- 18 
+\backslash
+cdot 
+\backslash
+log
+\backslash
+left(
+\backslash
+varepsilon
+\backslash
+right)}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    $a_1 
+\backslash
+ldots a_t 
+\backslash
+in 
+\backslash
+mathbb{F}_q$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$i 
+\backslash
+in [1,
+ 
+\backslash
+ldots,
+ t]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $a_i 
+\backslash
+gets 
+\backslash
+left(
+\backslash
+mathrm{BerlekampWelch}
+\backslash
+left(q,
+ q,
+ 
+\backslash
+a q + 1,
+ x,
+ w_{z + 
+\backslash
+mathbb{F}_q 
+\backslash
+cdot R
+\backslash
+left(v
+\backslash
+right)} 
+\backslash
+right)
+\backslash
+right)
+\backslash
+left(0
+\backslash
+right)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $
+\backslash
+mathrm{Majority}
+\backslash
+left(a_1,
+\backslash
+ldots,a_t
+\backslash
+right)$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $q\in\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $m\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\a,\e\in\left(0,1\right)$
+\end_inset
+
+ יהי 
+\begin_inset Formula $z\in\bbf_{q}^{m}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $w\in\bbf_{q}^{q^{m}}$
+\end_inset
+
+ באשר
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $d\left(\Rm_{q}\left[m,\a q\right],w\right)\le q^{m}\cdot\frac{1-\a}{6}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f\in\left(\bbf_{q}\right)_{\le\a q}\left[x_{1},\ldots,x_{m}\right]$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left(f\left(\a\right)\right)_{\a\in\bbf_{q}^{m}}=\arg\left(d\left(\Rm_{q}\left[m,\a q\right],w\right)\right)$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bbp_{R\gets\left(\bbn\to\bbf_{q}^{m}\backslash\left\{ 0\right\} \right)}\left(\mathrm{LocalRM}\left(\e,q,m,\a,z,w;R\right)=f\left(z\right)\right)\ge1-\e$
 \end_inset
 
 .
@@ -2957,137 +3698,6 @@ end{algorithm}
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-כדור
-\series default
-\color inherit
-:
- תהא 
-\begin_inset Formula $X$
-\end_inset
-
- קבוצה יהי 
-\begin_inset Formula $r\in\bbr_{+}$
-\end_inset
-
- ויהי 
-\begin_inset Formula $x\in X$
-\end_inset
-
- אזי 
-\begin_inset Formula $B_{r}\left(x\right)=\left\{ y\in X\bmid\Delta\left(x,y\right)\le r\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-קוד לתיקון שגיאות רשימתי
-\series default
-\color inherit
-:
- יהיו 
-\begin_inset Formula $r,\ell\in\bbn_{+}$
-\end_inset
-
- אזי קוד 
-\begin_inset Formula $\left[m,k,d,q\right]$
-\end_inset
-
- לתיקון שגיאות 
-\begin_inset Formula $\mathcal{C}$
-\end_inset
-
- עבורו לכל 
-\begin_inset Formula $w\in\left[q\right]^{m}$
-\end_inset
-
- מתקיים 
-\begin_inset Formula $\left|B_{r}\left(w\right)\cap\mathcal{C}\right|\le\ell$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-סימון
-\series default
-\color inherit
-:
- יהיו 
-\begin_inset Formula $r,\ell\in\bbn_{+}$
-\end_inset
-
- ויהי 
-\begin_inset Formula $\mathcal{C}$
-\end_inset
-
- קוד 
-\begin_inset Formula $\left[m,k,d,q\right]$
-\end_inset
-
- לתיקון שגיאות רשימתי 
-\begin_inset Formula $\left(r,\ell\right)$
-\end_inset
-
- אזי 
-\begin_inset Formula $\mathcal{C}$
-\end_inset
-
- הינו קוד 
-\begin_inset Formula $\left(m,k,r,\ell,q\right)$
-\end_inset
-
- לתיקון שגיאות רשימתי.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-טענה
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $\mathcal{C}$
-\end_inset
-
- קוד 
-\begin_inset Formula $\left[m,k,d,q\right]$
-\end_inset
-
- לתיקון שגיאות אזי 
-\begin_inset Formula $\mathcal{C}$
-\end_inset
-
- הינו קוד 
-\begin_inset Formula $\left(m,k,\frac{d}{2},1,q\right)$
-\end_inset
-
- לתיקון שגיאות רשימתי.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-אלגוריתם סודן
-\series default
-\color inherit
-:
- ...
 \end_layout
 
 \begin_layout Standard
@@ -3891,7 +4501,7 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -3938,7 +4548,11 @@ qquad,
 \backslash
 forall v
 \backslash
-in V &
+in V
+\backslash
+left(G
+\backslash
+right) &
 \end_layout
 
 \begin_layout Plain Layout
@@ -4014,7 +4628,7 @@ end{flalign*}
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -4061,7 +4675,11 @@ qquad,
 \backslash
 forall v
 \backslash
-in V &
+in V
+\backslash
+left(G
+\backslash
+right) &
 \end_layout
 
 \begin_layout Plain Layout
@@ -4106,7 +4724,7 @@ end{flalign*}
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -4159,7 +4777,11 @@ qquad,
 \backslash
 forall v
 \backslash
-in V &
+in V
+\backslash
+left(G
+\backslash
+right) &
 \end_layout
 
 \begin_layout Plain Layout
@@ -4363,15 +4985,6 @@ end{flalign*}
 \begin_layout Standard
 \begin_inset ERT
 status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-setlength
-\backslash
-abovedisplayskip{1pt}
-\end_layout
 
 \begin_layout Plain Layout
 
@@ -4738,6 +5351,84 @@ end{flalign*}
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+בעיית חיפוש פתרון פיזבילי של תוכנה חצי מוגדרת
+\series default
+:
+ תהא 
+\begin_inset Formula $\left(C,P,p,Q,q,R,r\right)$
+\end_inset
+
+ תוכנה חצי מוגדרת אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathrm{Feasibility\textrm{-}Search}\left(C,P,p,Q,q,R,r\right)=X$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left<P_{i},X\right>\le p_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[\len\left(p\right)\right]$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left<Q_{i},X\right>\ge q_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[\len\left(q\right)\right]$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left<R_{i},X\right>=r_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[\len\left(r\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט
+\series default
+:
+ תהא 
+\begin_inset Formula $P$
+\end_inset
+
+ תוכנה חצי מוגדרת ויהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ אזי קיים אלגוריתם פולינומי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ הינו 
+\begin_inset Formula $\e$
+\end_inset
+
+־קירוב של 
+\begin_inset Formula $\mathrm{Feasibility\textrm{-}Search}\left(P\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\maxcutsdp}{\maxcut\textrm{-}\sdp}
 {\maxcut\text{-}\sdp}
@@ -4876,7 +5567,11 @@ end{flalign*}
 \begin_inset Formula $X=\arg\maxcutvp\left(G\right)$
 \end_inset
 
- אזי 
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Formula $X^{T}X=\arg\maxcutsdp\left(G\right)$
 \end_inset
 
@@ -5542,6 +6237,356 @@ end{algorithm}
 \begin_inset Separator plain
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית 
+\begin_inset Formula $3$
+\end_inset
+
+־צביעה כתכנות וקטורי
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי נגדיר 
+\begin_inset Formula $\mathrm{3Colorable\textrm{-}VP}\left(G\right)$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{flalign*}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+max
+\backslash
+quad & 1 &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+st
+\backslash
+quad &  X_v
+\backslash
+in 
+\backslash
+bbs^{
+\backslash
+left|V(G)
+\backslash
+right| - 1} 
+\backslash
+qquad,
+\backslash
+forall v
+\backslash
+in V
+\backslash
+left(G
+\backslash
+right) &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+			&  
+\backslash
+langle X_v,
+ X_v 
+\backslash
+rangle = 1 
+\backslash
+qquad,
+\backslash
+forall v
+\backslash
+in V
+\backslash
+left(G
+\backslash
+right) &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+			&  
+\backslash
+langle X_v,
+ X_u 
+\backslash
+rangle = -
+\backslash
+frac{1}{2} 
+\backslash
+qquad,
+\backslash
+forall 
+\backslash
+{u,
+ v
+\backslash
+}
+\backslash
+in E
+\backslash
+left(G
+\backslash
+right) &
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{flalign*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף 
+\begin_inset Formula $3$
+\end_inset
+
+־צביע אזי 
+\begin_inset Formula $\mathrm{3Colorable\textrm{-}VP}\left(G\right)$
+\end_inset
+
+ פיזבילית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית 
+\begin_inset Formula $3$
+\end_inset
+
+־צביעה כתכנות חצי מוגדר
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף אזי נגדיר 
+\begin_inset Formula $\mathrm{3Colorable\textrm{-}SDP}\left(G\right)$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{flalign*}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+max
+\backslash
+quad & 1 &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+st
+\backslash
+quad & A 
+\backslash
+ge 0 &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& A_{v,
+ v} = 1 
+\backslash
+qquad,
+ 
+\backslash
+forall v
+\backslash
+in V
+\backslash
+left(G
+\backslash
+right) &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& A_{v,
+ u} = -
+\backslash
+frac{1}{2} 
+\backslash
+qquad,
+ 
+\backslash
+forall 
+\backslash
+{v,
+ u
+\backslash
+}
+\backslash
+in E
+\backslash
+left(G
+\backslash
+right) &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{flalign*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף באשר 
+\begin_inset Formula $\left|V\left(G\right)\right|=n$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $X\in\bbr^{n\times n}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $X$
+\end_inset
+
+ פתרון פיזבילי של 
+\begin_inset Formula $\mathrm{3Colorable\textrm{-}VP}\left(G\right)$
+\end_inset
+
+ אז 
+\begin_inset Formula $X^{T}X$
+\end_inset
+
+ פתרון פיזבילי של 
+\begin_inset Formula $\mathrm{3Colorable\textrm{-}SDP}\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+אם 
+\begin_inset Formula $X$
+\end_inset
+
+ פתרון פיזבילי של 
+\begin_inset Formula $\mathrm{3Colorable\textrm{-}SDP}\left(G\right)$
+\end_inset
+
+ אז 
+\begin_inset Formula $\chol\left(X\right)^{T}$
+\end_inset
+
+ פתרון פיזבילי של 
+\begin_inset Formula $\mathrm{3Colorable\textrm{-}VP}\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 
