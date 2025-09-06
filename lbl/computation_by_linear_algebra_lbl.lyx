@@ -4501,7 +4501,29 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+abovedisplayskip}{0pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+belowdisplayskip}{5pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \begin_layout Plain Layout
 
@@ -4628,7 +4650,7 @@ end{flalign*}
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -4724,7 +4746,7 @@ end{flalign*}
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -4968,6 +4990,10 @@ end{flalign*}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 
 \series bold
 \color magenta
@@ -4982,7 +5008,7 @@ end{flalign*}
  בעיית תכנות חצי מוגדר מקסימלית אזי נסמן את בעיית התכנות החצי מוגדר כך
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset ERT
 status collapsed
 
@@ -5131,7 +5157,7 @@ end{flalign*}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \series bold
 \color magenta
@@ -5146,7 +5172,7 @@ end{flalign*}
  בעיית תכנות חצי מוגדר מינימלית אזי נסמן את בעיית התכנות החצי מוגדר כך
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset ERT
 status collapsed
 
@@ -5297,6 +5323,11 @@ right]
 
 \backslash
 end{flalign*}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -5664,7 +5695,7 @@ DontPrintSemicolon
 
 
 \backslash
-SetKwFunction{name}{CholeskyAlgorithm}
+SetKwFunction{name}{Cholesky}
 \end_layout
 
 \begin_layout Plain Layout
@@ -5941,7 +5972,7 @@ end{algorithm}
 \end_inset
 
  מוגדרת חיובית אזי 
-\begin_inset Formula $\mathrm{CholeskyAlgorithm}\left(A\right)=\chol\left(L\right)$
+\begin_inset Formula $\mathrm{Cholesky}\left(A\right)=\chol\left(L\right)$
 \end_inset
 
 .
@@ -6263,7 +6294,7 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -6423,7 +6454,7 @@ end{flalign*}
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -6588,6 +6619,522 @@ end{flalign*}
 
 \begin_layout Standard
 
+\series bold
+אלגוריתם צביעה וקטורית של גרף 
+\begin_inset Formula $3$
+\end_inset
+
+־צביע
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף 
+\begin_inset Formula $3$
+\end_inset
+
+־צביע יהי 
+\begin_inset Formula $\varepsilon\in\bbr_{\ge1}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $R:\bbn_{+}\to\bbs^{\left|V\left(G\right)\right|-1}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}[H]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{3Colorable-VecCol}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{Algorithm}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$G,
+ 
+\backslash
+varepsilon;R$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $t 
+\backslash
+gets 1 + 
+\backslash
+ceil{
+\backslash
+log_3
+\backslash
+left(
+\backslash
+Delta
+\backslash
+left(G
+\backslash
+right)
+\backslash
+right)}$ 
+\backslash
+tcp{$
+\backslash
+Delta
+\backslash
+left(G
+\backslash
+right)$ is the max degree of $G$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    $X 
+\backslash
+in 
+\backslash
+mathrm{Approx
+\backslash
+textrm{-}Feasibility
+\backslash
+textrm{-}Search}
+\backslash
+left(
+\backslash
+varepsilon,
+ 
+\backslash
+mathrm{3Colorable
+\backslash
+textrm{-}VP}
+\backslash
+left(G
+\backslash
+right)
+\backslash
+right)$ 
+\backslash
+tcp{poly time $
+\backslash
+varepsilon$-approx for the feasibility problem}
+\end_layout
+
+\begin_layout Plain Layout
+
+    $c 
+\backslash
+in V
+\backslash
+left(G
+\backslash
+right) 
+\backslash
+to 
+\backslash
+{
+\backslash
+pm 1
+\backslash
+}^{*}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$v 
+\backslash
+in V
+\backslash
+left(G
+\backslash
+right)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $c
+\backslash
+left(v
+\backslash
+right) 
+\backslash
+gets 
+\backslash
+left(
+\backslash
+nu_{R
+\backslash
+left(i
+\backslash
+right)}
+\backslash
+left(X_v
+\backslash
+right)
+\backslash
+right)_{i = 1}^{t}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $S 
+\backslash
+in 
+\backslash
+P
+\backslash
+left(V
+\backslash
+left(G
+\backslash
+right)
+\backslash
+right);
+ 
+\backslash
+qquad S 
+\backslash
+gets 
+\backslash
+emptyset$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$v 
+\backslash
+in V
+\backslash
+left(G
+\backslash
+right)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+For{$u 
+\backslash
+in N
+\backslash
+left(v
+\backslash
+right) 
+\backslash
+backslash S$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+lIf{$c
+\backslash
+left(v
+\backslash
+right) = c
+\backslash
+left(u
+\backslash
+right)$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+                $S 
+\backslash
+gets S 
+\backslash
+cup 
+\backslash
+{v
+\backslash
+}$
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    $c_{
+\backslash
+upharpoonright_{V
+\backslash
+left(G
+\backslash
+left[S
+\backslash
+right]
+\backslash
+right)}} 
+\backslash
+gets 
+\backslash
+name{$G
+\backslash
+left[S
+\backslash
+right],
+ 
+\backslash
+varepsilon;
+ R_{
+\backslash
+upharpoonright_{
+\backslash
+bbn_{>t}}}$}$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $c$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף 
+\begin_inset Formula $3$
+\end_inset
+
+־צביע יהי 
+\begin_inset Formula $\varepsilon\in\bbr_{\ge1}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $R:\bbn_{+}\to\bbs^{\left|V\left(G\right)\right|-1}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathrm{3Colorable\textrm{-}VecCol}\left(G,\e;R\right)$
+\end_inset
+
+ צביעה חוקית של 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף 
+\begin_inset Formula $3$
+\end_inset
+
+־צביע יהי 
+\begin_inset Formula $X$
+\end_inset
+
+ פתרון פיזבילי של 
+\begin_inset Formula $\mathrm{3Colorable\textrm{-}VP}\left(G\right)$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\left\{ u,v\right\} \in E\left(G\right)$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bbp_{p\gets\bbs^{\left|V\left(G\right)\right|-1}}\left(\nu_{p}\left(X_{u}\right)=\nu_{p}\left(X_{v}\right)\right)=\frac{1}{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף 
+\begin_inset Formula $3$
+\end_inset
+
+־צביע ויהי 
+\begin_inset Formula $\varepsilon\in\bbr_{\ge1}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbe_{R\gets\left(\bbn_{+}\to\bbs^{\left|V\left(G\right)\right|-1}\right)}\left[\mathrm{Time}\left(\mathrm{3Colorable\textrm{-}VecCol}\left(G,\e;R\right)\right)\right]\in\poly\left(\left|V\left(G\right)\right|\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף 
+\begin_inset Formula $3$
+\end_inset
+
+־צביע אזי קיים 
+\begin_inset Formula $\varepsilon\in\bbr_{\ge1}$
+\end_inset
+
+ המקיים
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bbe_{R\gets\left(\bbn_{+}\to\bbs^{\left|V\left(G\right)\right|-1}\right)}\left[\left|\im\left(\mathrm{3Colorable\textrm{-}VecCol}\left(G,\e;R\right)\right)\right|\right]=\O\left(\left|V\left(G\right)\right|^{\log_{3}\left(2\right)}\cdot\log\left(\left|V\left(G\right)\right|\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם ויגרדזון לצביעת גרף 
+\begin_inset Formula $3$
+\end_inset
+
+־צביע
+\series default
+:
+ יהי 
+\begin_inset Formula $G$
+\end_inset
+
+ גרף 
+\begin_inset Formula $3$
+\end_inset
+
+־צביע אזי
 \end_layout
 
 \begin_layout Standard
