@@ -3911,7 +3911,7 @@ end{algorithm}
 \color inherit
 :
  
-\begin_inset Formula $\svpc=\left\{ \left<\left(M,0,\bbf\right),\e\right>\mid\exists v\ne0.\norm{Mv}_{0}\le\e\right\} $
+\begin_inset Formula $\svpc=\left\{ \left<M,\bbf,\e\right>\mid\exists v\ne0.\norm{Mv}_{0}\le\e\right\} $
 \end_inset
 
 .
@@ -4286,7 +4286,11 @@ end{algorithm}
 
 \series bold
 \color magenta
-השערת המשחקים היחודיים
+השערת המשחקים היחודיים [חות' 
+\lang english
+2002
+\lang hebrew
+]
 \series default
 \color inherit
 :
@@ -4406,7 +4410,11 @@ status collapsed
 
 \series bold
 \color magenta
-משפט חות'־מינזר־ספרא
+משפט [חות'־מינזר־ספרא 
+\lang english
+2018
+\lang hebrew
+]
 \series default
 \color inherit
 :
@@ -10060,6 +10068,91 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+חבורה טופולוגית
+\series default
+:
+ תהא 
+\begin_inset Formula $G$
+\end_inset
+
+ חבורה ותהא 
+\begin_inset Formula $\mathcal{T}$
+\end_inset
+
+ טופולוגיה על 
+\begin_inset Formula $G$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(G,\mathcal{T}\right)$
+\end_inset
+
+ באשר
+\end_layout
+
+\begin_layout Itemize
+רציפות כפל:
+ 
+\begin_inset Formula $\left(a,b\right)\mapsto ab$
+\end_inset
+
+ הינה רציפה מעל 
+\begin_inset Formula $\left(G^{2},\mathcal{T}_{\mathrm{prod}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+רציפות הופכי:
+ 
+\begin_inset Formula $a\mapsto a^{-1}$
+\end_inset
+
+ הינה רציפה מעל 
+\begin_inset Formula $\left(G,\mathcal{T}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חבורה דיסקרטית
+\series default
+:
+ חבורה טופולוגית 
+\begin_inset Formula $\left(G,\mathcal{T}\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $G$
+\end_inset
+
+ חסרת נקודות הצטברות.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חוג דיסקרטי
+\series default
+:
+ חוג 
+\begin_inset Formula $\left(R,+,*\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\left(R,+\right)$
+\end_inset
+
+ הינה חבורה דיסקרטית.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 \color teal
 מימד של סריג
 \series default
@@ -10073,7 +10166,7 @@ end{algorithm}
 \begin_inset Formula $\mathcal{F}\subseteq\bbf$
 \end_inset
 
- חוג יהיו 
+ חוג דיסקרטי יהיו 
 \begin_inset Formula $n,k\in\bbn_{+}$
 \end_inset
 
@@ -10117,7 +10210,7 @@ end{algorithm}
 \begin_inset Formula $\mathcal{F}\subseteq\bbf$
 \end_inset
 
- חוג יהיו 
+ חוג דיסקטי יהיו 
 \begin_inset Formula $n,k\in\bbn_{+}$
 \end_inset
 
@@ -10323,6 +10416,47 @@ end{algorithm}
 \end_inset
 
  עבורה 
+\begin_inset Formula $\mathcal{L}=\mathcal{L}\left[M\right]$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $L\subseteq\bbr^{n}$
+\end_inset
+
+ אזי (
+\begin_inset Formula $L$
+\end_inset
+
+ חבורה דיסקרטית בעלת 
+\begin_inset Formula $n$
+\end_inset
+
+ וקטורים בת
+\begin_inset Quotes erd
+\end_inset
+
+ל)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיימת 
+\begin_inset Formula $M\in\bbr^{n\times n}$
+\end_inset
+
+ הפיכה עבורה 
 \begin_inset Formula $\mathcal{L}=\mathcal{L}\left[M\right]$
 \end_inset
 
@@ -12706,11 +12840,15 @@ end{algorithm}
 
 \series bold
 \color blue
-בסיס קורקין־זולוטרב (
+בסיס 
 \begin_inset Formula $\kz$
 \end_inset
 
-)
+ [קורקין־זולוטרב 
+\lang english
+1877
+\lang hebrew
+]
 \series default
 \color inherit
 :
@@ -12948,130 +13086,6 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\vallat}{\mathrm{Val\textrm{-}lattice}}
-{\text{Val-lattice}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-ערך של סריג
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $\bbf$
-\end_inset
-
- שדה יהי 
-\begin_inset Formula $\mathcal{F}\subseteq\bbf$
-\end_inset
-
- יהי 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- תהא 
-\begin_inset Formula $M\in\bbf^{n\times n}$
-\end_inset
-
- הפיכה ויהי 
-\begin_inset Formula $t\in\bbf^{n}$
-\end_inset
-
- אזי
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Formula $\vallat\left(M,t,\bbf,\mathcal{F}\right)=\min_{x\in\mathcal{F}^{n}}\norm{Mx-t}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\cvpls}{\mathrm{CVP\textrm{-}lattice\textrm{-}search}}
-{\text{CVP-lattice-search}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-בעיית חיפוש הוקטור הקרוב ביותר בסריג
-\series default
-\color inherit
-:
- יהי 
-\begin_inset Formula $\bbf$
-\end_inset
-
- שדה יהי 
-\begin_inset Formula $\mathcal{F}\subseteq\bbf$
-\end_inset
-
- יהי 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- תהא 
-\begin_inset Formula $M\in\bbf^{n\times n}$
-\end_inset
-
- הפיכה יהי 
-\begin_inset Formula $t\in\bbf^{n}$
-\end_inset
-
- ויהי 
-\begin_inset Formula $\e>0$
-\end_inset
-
- אזי 
-\begin_inset Formula $\cvpls\left(\left(M,t,\bbf,\mathcal{F}\right),\e\right)=v$
-\end_inset
-
- באשר 
-\begin_inset Formula $\norm{Mv-t}\le\e$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\newcommand{\cvpl}{\mathrm{CVP\textrm{-}lattice}}
-{\text{CVP-lattice}}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color red
-בעיית הוקטור הקרוב ביותר בסריג
-\series default
-\color inherit
-:
- 
-\begin_inset Formula $\cvpl=\left\{ \left<M,t,\bbf,\mathcal{F},\e\right>\mid\vallat\left(M,t,\bbf,\mathcal{F}\right)\le\e\right\} $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
 \newcommand{\lll}{\mathrm{LLL}}
 {\text{LLL}}
 \end_inset
@@ -13083,11 +13097,15 @@ end{algorithm}
 
 \series bold
 \color red
-מטריצה מצומצמת לנסטרה־לנסטרה־לובאס (
+מטריצה מצומצמת 
 \begin_inset Formula $\lll$
 \end_inset
 
-)
+ [לנסטרה־לנסטרה־לובאס 
+\lang english
+1982
+\lang hebrew
+]
 \series default
 \color inherit
 :
@@ -13787,7 +13805,15 @@ end{algorithm}
 
 \series bold
 \color red
-אלגוריתם באבאי
+אלגוריתם 
+\begin_inset Formula $\babai$
+\end_inset
+
+ [באבאי 
+\lang english
+1986
+\lang hebrew
+]
 \series default
 \color inherit
 :
@@ -14123,6 +14149,134 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vallat}{\mathrm{Val\textrm{-}lattice}}
+{\text{Val-lattice}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+ערך של סריג
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $\mathcal{F}\subseteq\bbf$
+\end_inset
+
+ חוג דיסקרטי יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $M\in\bbf^{n\times n}$
+\end_inset
+
+ הפיכה ויהי 
+\begin_inset Formula $t\in\bbf^{n}$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\vallat\left(M,t,\bbf,\mathcal{F}\right)=\min_{x\in\mathcal{F}^{n}}\norm{Mx-t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\cvpls}{\mathrm{CVP\textrm{-}lattice\textrm{-}search}}
+{\text{CVP-lattice-search}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+בעיית חיפוש הוקטור הקרוב ביותר בסריג
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $\mathcal{F}\subseteq\bbf$
+\end_inset
+
+ חוג דיסקרטי יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $M\in\bbf^{n\times n}$
+\end_inset
+
+ הפיכה יהי 
+\begin_inset Formula $t\in\bbf^{n}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\cvpls\left(\left(M,t,\bbf,\mathcal{F}\right),\e\right)=v$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\norm{Mv-t}\le\e$
+\end_inset
+
+ וכן 
+\begin_inset Formula $v\in\mathcal{F}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\cvpl}{\mathrm{CVP\textrm{-}lattice}}
+{\text{CVP-lattice}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+בעיית הוקטור הקרוב ביותר בסריג
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\cvpl=\left\{ \left<M,t,\bbf,\mathcal{F},\e\right>\mid\vallat\left(M,t,\bbf,\mathcal{F}\right)\le\e\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color red
@@ -14169,6 +14323,97 @@ end{algorithm}
 \end_inset
 
 ־קשה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\svpls}{\mathrm{SVP\textrm{-}lattice\textrm{-}search}}
+{\text{SVP-lattice-search}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+בעיית חיפוש הוקטור הקצר ביותר בסריג
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $\mathcal{F}\subseteq\bbf$
+\end_inset
+
+ חוג דיסקרטי יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $M\in\bbf^{n\times n}$
+\end_inset
+
+ הפיכה ויהי 
+\begin_inset Formula $\e>0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\svpls\left(\left(M,\bbf,\mathcal{F}\right),\e\right)=v$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\norm{Mv}\le\e$
+\end_inset
+
+ וכן 
+\begin_inset Formula $v\in\mathcal{F}^{n}\backslash\left\{ 0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\svpl}{\mathrm{SVP\textrm{-}lattice}}
+{\text{SVP-lattice}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+בעיית הוקטור הקצר ביותר בסריג
+\series default
+\color inherit
+:
+ 
+\begin_inset Formula $\svpl=\left\{ \left<M,\bbf,\mathcal{F},\e\right>\mid\exists v\in\mathcal{F}^{n}\backslash\left\{ 0\right\} .\norm{Mv}\le\e\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אלגוריתם חיפוש הקצר ביותר בהינתן הקרוב ביותר [גולדרייך־מיצ'אנצ'ו־ספרא־זייפט 
+\numeric on
+\lang english
+1999
+\numeric off
+\lang hebrew
+]
+\series default
+:
+ ...
 \end_layout
 
 \begin_layout Standard
@@ -14512,7 +14757,7 @@ end{algorithm}
 \end_inset
 
  באשר 
-\begin_inset Formula $v_{1}\ldots v_{n}$
+\begin_inset Formula $v_{1}\ldots v_{n}\in\bbr^{n}$
 \end_inset
 
  בת
@@ -14593,65 +14838,6 @@ end{algorithm}
 \end_inset
 
 ־קשה.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-—
- חבורה דיסקרטית —
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\nospellcheck off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\nospellcheck default
-\bar default
-\strikeout default
-\xout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-\lang english
-discreate group
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\nospellcheck off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-\lang hebrew
- ...
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_body
