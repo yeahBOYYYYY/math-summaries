@@ -249,6 +249,29 @@ literal "true"
 
 \series bold
 \color black
+מרחק האמינג יחסי
+\series default
+\color inherit
+:
+ תהא 
+\begin_inset Formula $X$
+\end_inset
+
+ קבוצה אזי נגדיר 
+\begin_inset Formula $\Delta:X^{n}\times X^{n}\to\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $\Delta_{r}\left(x,y\right)=\frac{1}{n}\left|\left\{ i\in\left[m\right]\mid x_{i}\ne y_{i}\right\} \right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
 טענה
 \series default
 \color inherit
@@ -3766,7 +3789,7 @@ end{algorithm}
 \end_inset
 
  מערכת משוואות לינאריות אזי 
-\begin_inset Formula $\val\left(\left(M,t,\bbf\right)\right)=\min_{x\in\bbf^{n}}\left(\frac{1}{m}\cdot\Delta\left(Mx,t\right)\right)$
+\begin_inset Formula $\val\left(\left(M,t,\bbf\right)\right)=\min_{x\in\bbf^{n}}\left(\Delta_{r}\left(Mx,t\right)\right)$
 \end_inset
 
 .
@@ -3863,7 +3886,7 @@ end{algorithm}
 \end_inset
 
  באשר 
-\begin_inset Formula $\norm{Mv-t}_{0}\le\e$
+\begin_inset Formula $\Delta_{r}\left(Mv,t\right)\le\e$
 \end_inset
 
 .
@@ -3911,7 +3934,7 @@ end{algorithm}
 \color inherit
 :
  
-\begin_inset Formula $\svpc=\left\{ \left<M,\bbf,\e\right>\mid\exists v\ne0.\norm{Mv}_{0}\le\e\right\} $
+\begin_inset Formula $\svpc=\left\{ \left<M,\bbf,\e\right>\mid\exists v\ne0.\Delta_{r}\left(Mv,0\right)\le\e\right\} $
 \end_inset
 
 .
@@ -6277,15 +6300,35 @@ end{algorithm}
 \begin_inset Formula $\e>0$
 \end_inset
 
- ויהי 
+ יהי 
 \begin_inset Formula $\rho\in\left(0,1\right)$
 \end_inset
 
- אזי 
-\begin_inset Formula $\gap_{\left[\rho,1-\arccos\left(\rho\right)+\e\right]}\maxcut\le_{p}\ug\left(\e\right)$
+ ותהא 
+\begin_inset Formula $T:\bbn\to\bbn$
 \end_inset
 
-.
+ אזי (
+\begin_inset Formula $\ug\left(\e\right)$
+\end_inset
+
+ חשיבה בזמן 
+\begin_inset Formula $T$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $\gap_{\left[\rho,1-\arccos\left(\rho\right)+\e\right]}\maxcut$
+\end_inset
+
+ חשיבה בזמן 
+\begin_inset Formula $T$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -10068,8 +10111,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color teal
 חבורה טופולוגית
 \series default
+\color inherit
 :
  תהא 
 \begin_inset Formula $G$
@@ -10119,8 +10164,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color teal
 חבורה דיסקרטית
 \series default
+\color inherit
 :
  חבורה טופולוגית 
 \begin_inset Formula $\left(G,\mathcal{T}\right)$
@@ -10136,8 +10183,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color teal
 חוג דיסקרטי
 \series default
+\color inherit
 :
  חוג 
 \begin_inset Formula $\left(R,+,*\right)$
@@ -10425,8 +10474,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color teal
 מסקנה
 \series default
+\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn_{+}$
@@ -13724,8 +13775,10 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color red
 מסקנה
 \series default
+\color inherit
 :
  סיבוכיות הריצה של 
 \begin_inset Formula $\llla$
@@ -14190,7 +14243,7 @@ end{algorithm}
 \end_inset
 
 
-\begin_inset Formula $\vallat\left(M,t,\bbf,\mathcal{F}\right)=\min_{x\in\mathcal{F}^{n}}\norm{Mx-t}$
+\begin_inset Formula $\vallat\left(M,t,\bbf,\mathcal{F}\right)=\min_{x\in\mathcal{F}^{n}}\left(\frac{1}{n}\norm{Mx-t}\right)$
 \end_inset
 
 .
@@ -14242,7 +14295,7 @@ end{algorithm}
 \end_inset
 
  באשר 
-\begin_inset Formula $\norm{Mv-t}\le\e$
+\begin_inset Formula $\frac{1}{n}\norm{Mv-t}\le\e$
 \end_inset
 
  וכן 
@@ -14337,7 +14390,7 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
-\color red
+\color green
 בעיית חיפוש הוקטור הקצר ביותר בסריג
 \series default
 \color inherit
@@ -14367,7 +14420,7 @@ end{algorithm}
 \end_inset
 
  באשר 
-\begin_inset Formula $\norm{Mv}\le\e$
+\begin_inset Formula $\frac{1}{n}\norm{Mv}\le\e$
 \end_inset
 
  וכן 
@@ -14389,13 +14442,13 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
-\color red
+\color green
 בעיית הוקטור הקצר ביותר בסריג
 \series default
 \color inherit
 :
  
-\begin_inset Formula $\svpl=\left\{ \left<M,\bbf,\mathcal{F},\e\right>\mid\exists v\in\mathcal{F}^{n}\backslash\left\{ 0\right\} .\norm{Mv}\le\e\right\} $
+\begin_inset Formula $\svpl=\left\{ \left<M,\bbf,\mathcal{F},\e\right>\mid\exists v\in\mathcal{F}^{n}\backslash\left\{ 0\right\} .\frac{1}{n}\norm{Mv}\le\e\right\} $
 \end_inset
 
 .
@@ -14404,16 +14457,225 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
+\color green
 אלגוריתם חיפוש הקצר ביותר בהינתן הקרוב ביותר [גולדרייך־מיצ'אנצ'ו־ספרא־זייפט 
-\numeric on
 \lang english
 1999
-\numeric off
 \lang hebrew
 ]
 \series default
+\color inherit
 :
- ...
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $M\in\bbr^{n\times n}$
+\end_inset
+
+ הפיכה ויהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אלגוריתם 
+\begin_inset Formula $\cvpls_{\bbr|\bbz}$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}[H]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{name}{SVP-via-CVP$[
+\backslash
+mathcal{A}]$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{Algorithm}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+name{$M,
+ 
+\backslash
+e$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    $v 
+\backslash
+gets C_1(M)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$i 
+\backslash
+in [1,
+ 
+\backslash
+ldots,
+ n]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        $u 
+\backslash
+gets 
+\backslash
+mathcal{A}
+\backslash
+left(M + C_i(M)
+\backslash
+cdot e_i^T,
+ C_i(M),
+ 
+\backslash
+e 
+\backslash
+right) - C_i(M)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+lIf{$
+\backslash
+norm{u} < 
+\backslash
+norm{v}$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+            $v 
+\backslash
+gets u$
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return $v$
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+טענה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ אלגוריתם 
+\begin_inset Formula $\cvpls_{\bbr|\bbz}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathrm{SVP\textrm{-}via\textrm{-}CVP}\left[\mathcal{A}\right]$
+\end_inset
+
+ הינו אלגוריתם 
+\begin_inset Formula $\svpls_{\bbr|\bbz}$
+\end_inset
+
+ וכן סיבוכיות הריצה של 
+\begin_inset Formula $\mathrm{SVP\textrm{-}via\textrm{-}CVP}\left[\mathcal{A}\right]$
+\end_inset
+
+ הינה 
+\begin_inset Formula $\O\left(\mathrm{Time}\left(\mathcal{A}\right)\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -14480,6 +14742,26 @@ end{algorithm}
 \series default
 \color inherit
 :
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $\mathcal{F}\subseteq\bbf$
+\end_inset
+
+ חוג דיסקרטי יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $M\in\bbf^{n\times n}$
+\end_inset
+
+ הפיכה יהי 
+\begin_inset Formula $t\in\bbf^{n}$
+\end_inset
+
  תהא 
 \begin_inset Formula $T:\bbn\to\bbn$
 \end_inset
@@ -14489,7 +14771,7 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\gc_{T}=\gap_{\left[r,r\cdot T\right]}\cvp$
+\begin_inset Formula $\gc_{T}\left(M,t,\bbf,\mathcal{F},r\right)=\gap_{\left[r,r\cdot T\right]}\cvp\left(M,t,\bbf,\mathcal{F}\right)$
 \end_inset
 
 .
@@ -14526,7 +14808,7 @@ end{algorithm}
 \begin_inset Formula $\mathcal{F}\subseteq\bbf$
 \end_inset
 
- יהי 
+ חוג דיסקרטי יהי 
 \begin_inset Formula $n\in\bbn_{+}$
 \end_inset
 
@@ -14535,7 +14817,7 @@ end{algorithm}
 \end_inset
 
  הפיכה אזי 
-\begin_inset Formula $\vallat_{0}\left(M,\bbf,\mathcal{F}\right)=\min_{x\in\mathcal{F}^{n}\backslash\left\{ 0\right\} }\norm{Mx}$
+\begin_inset Formula $\vallat_{0}\left(M,\bbf,\mathcal{F}\right)=\min_{x\in\mathcal{F}^{n}\backslash\left\{ 0\right\} }\left(\frac{1}{n}\norm{Mx}\right)$
 \end_inset
 
 .
@@ -14586,7 +14868,23 @@ end{algorithm}
 \series default
 \color inherit
 :
+ יהי 
+\begin_inset Formula $\bbf$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $\mathcal{F}\subseteq\bbf$
+\end_inset
+
+ חוג דיסקרטי יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
  תהא 
+\begin_inset Formula $M\in\bbf^{n\times n}$
+\end_inset
+
+ הפיכה תהא 
 \begin_inset Formula $T:\bbn\to\bbn$
 \end_inset
 
@@ -14595,7 +14893,7 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\gs_{T}=\gap_{\left[r,r\cdot T\right]}\svp$
+\begin_inset Formula $\gs_{T}\left(M,\bbf,\mathcal{F},r\right)=\gap_{\left[r,r\cdot T\right]}\svp\left(M,\bbf,\mathcal{F}\right)$
 \end_inset
 
 .
@@ -14718,6 +15016,106 @@ end{algorithm}
 :
  
 \begin_inset Formula $\gc_{\sqrt{n}},\gs_{\sqrt{n}}\in\np\cap\co\np$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רדוקציית טיורינג
+\series default
+:
+ תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ שפות אזי מ
+\begin_inset Quotes erd
+\end_inset
+
+ט 
+\begin_inset Formula $\mathcal{A}^{B}$
+\end_inset
+
+ המכריע את 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ שפות באשר קיימת רדוקציית טיורינג מ־
+\begin_inset Formula $A$
+\end_inset
+
+ ל־
+\begin_inset Formula $B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\le B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רדוקציית קוק
+\series default
+:
+ תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ שפות אזי מ
+\begin_inset Quotes erd
+\end_inset
+
+ט פולינומית 
+\begin_inset Formula $\mathcal{A}^{B}$
+\end_inset
+
+ המכריע את 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ שפות באשר קיימת רדוקציית קוק מ־
+\begin_inset Formula $A$
+\end_inset
+
+ ל־
+\begin_inset Formula $B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\le B$
 \end_inset
 
 .

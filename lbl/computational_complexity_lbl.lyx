@@ -523,13 +523,9 @@ literal "true"
 \end_inset
 
  אזי 
-\size small
-
-\begin_inset Formula $\size\left(f\right)=\min\left\{ \size\left(C\right)\mid\left(\text{ מעגל}C\right)\land\left(f\text{ מחשבת את }C\right)\right\} $
+\begin_inset Formula $\size\left(f\right)=\min\left\{ \size\left(C\right)\mid f\text{ מעגל המחשב את }C\right\} $
 \end_inset
 
-
-\size default
 .
 \end_layout
 
@@ -4214,7 +4210,7 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\Log}{\text{Log}}
+\newcommand{\Log}{\mathrm{Log}}
 {\text{Log}}
 \end_inset
 
@@ -4241,16 +4237,20 @@ status collapsed
 \begin_inset Formula $A\subseteq\Sigma^{*}$
 \end_inset
 
- שפה תהא 
+ שפה ותהא 
 \begin_inset Formula $B\subseteq\Delta^{*}$
 \end_inset
 
- שפה ותהא 
-\begin_inset Formula $f:\Sigma^{*}\to\Delta^{*}$
+ שפה באשר קיימת רדוקציית מיפוי במקום לוגריתמי מ־
+\begin_inset Formula $A$
 \end_inset
 
- רדוקציית מיפוי במקום לוגריתמי אזי 
-\begin_inset Formula $A\le_{\Log}B$
+ ל־
+\begin_inset Formula $B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\le_{m}^{\Log}B$
 \end_inset
 
 .
@@ -4269,11 +4269,11 @@ status collapsed
 \end_inset
 
  שפות עבורן 
-\begin_inset Formula $A\le_{\Log}B$
+\begin_inset Formula $A\le_{m}^{\Log}B$
 \end_inset
 
  אזי 
-\begin_inset Formula $A\le_{p}B$
+\begin_inset Formula $A\le_{m}^{p}B$
 \end_inset
 
 .
@@ -4402,7 +4402,7 @@ status collapsed
 \end_inset
 
  וכן 
-\begin_inset Formula $A\le_{\Log}B$
+\begin_inset Formula $A\le_{m}^{\Log}B$
 \end_inset
 
  אזי 
@@ -4425,46 +4425,15 @@ status collapsed
 \end_inset
 
  שפות באשר 
-\begin_inset Formula $A\le_{\Log}B$
+\begin_inset Formula $A\le_{m}^{\Log}B$
 \end_inset
 
  וכן 
-\begin_inset Formula $B\le_{\Log}C$
+\begin_inset Formula $B\le_{m}^{\Log}C$
 \end_inset
 
  אזי 
-\begin_inset Formula $A\le_{\Log}C$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color green
-סימון
-\series default
-\color inherit
-:
- תהיינה 
-\begin_inset Formula $A,B$
-\end_inset
-
- שפות ותהא 
-\begin_inset Formula $\varphi$
-\end_inset
-
- רדוקציית מיפוי מ־
-\begin_inset Formula $A$
-\end_inset
-
- ל־
-\begin_inset Formula $B$
-\end_inset
-
- אזי 
-\begin_inset Formula $A\le_{\varphi}B$
+\begin_inset Formula $A\le_{m}^{\Log}C$
 \end_inset
 
 .
@@ -4493,45 +4462,6 @@ status collapsed
 
 \series bold
 \color green
-סימון
-\series default
-\color inherit
-:
- תהיינה 
-\begin_inset Formula $A,B$
-\end_inset
-
- שפות תהא 
-\begin_inset Formula $\mathcal{C}$
-\end_inset
-
- מחלקה ותהא 
-\begin_inset Formula $\varphi$
-\end_inset
-
- רדוקציית מיפוי מ־
-\begin_inset Formula $A$
-\end_inset
-
- ל־
-\begin_inset Formula $B$
-\end_inset
-
- באשר 
-\begin_inset Formula $\varphi\in\mathcal{C}$
-\end_inset
-
- אזי 
-\begin_inset Formula $A\le_{\mathcal{C}}B$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color green
 שפה קשה למחלקה
 \series default
 \color inherit
@@ -4549,7 +4479,7 @@ status collapsed
 \end_inset
 
  מתקיים 
-\begin_inset Formula $L\le_{\Log}\l$
+\begin_inset Formula $L\le_{m}^{\Log}\l$
 \end_inset
 
 .
@@ -14723,7 +14653,7 @@ end{algorithm}
 
 \series bold
 \color magenta
-רדוקציה פולינומית משמרת מרווח בין בעיות הבטחה
+רדוקציית מיפוי פולינומית משמרת מרווח בין בעיות הבטחה
 \series default
 \color inherit
 :
@@ -14776,7 +14706,7 @@ end{algorithm}
 
 \begin_layout Standard
 אזי 
-\begin_inset Formula $\left(Y,N\right)\le_{p}\left(Y^{\prime},N^{\prime}\right)$
+\begin_inset Formula $\left(Y,N\right)\le_{m}^{p}\left(Y^{\prime},N^{\prime}\right)$
 \end_inset
 
 .
@@ -14803,7 +14733,7 @@ end{algorithm}
 \end_inset
 
  מתקיים 
-\begin_inset Formula $L\le_{p}\Pi$
+\begin_inset Formula $L\le_{m}^{p}\Pi$
 \end_inset
 
 .
@@ -14834,7 +14764,7 @@ end{algorithm}
 \end_inset
 
 (
-\begin_inset Formula $3\sat\le_{\LOG}\Pi$
+\begin_inset Formula $3\sat\le_{m}^{\Log}\Pi$
 \end_inset
 
 ).
@@ -15034,7 +14964,7 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\gap_{\left[a,b\right]}\maxclique\le_{p}\gap_{\left[a,b\right]}\maxis$
+\begin_inset Formula $\gap_{\left[a,b\right]}\maxclique\le_{m}^{p}\gap_{\left[a,b\right]}\maxis$
 \end_inset
 
 .
@@ -15057,7 +14987,7 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\gap_{\left[a,b\right]}\maxis\le_{p}\gap_{\left[1-b,1-a\right]}\minvc$
+\begin_inset Formula $\gap_{\left[a,b\right]}\maxis\le_{m}^{p}\gap_{\left[1-b,1-a\right]}\minvc$
 \end_inset
 
 .
@@ -15080,7 +15010,7 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\gap_{\left[a,b\right]}\max3\sat\le_{p}\gap_{\left[\frac{a}{3},\frac{b}{3}\right]}\maxclique$
+\begin_inset Formula $\gap_{\left[a,b\right]}\max3\sat\le_{m}^{p}\gap_{\left[\frac{a}{3},\frac{b}{3}\right]}\maxclique$
 \end_inset
 
 .
@@ -15356,7 +15286,7 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\gap_{\left[a,b\right]}\max3\sat\le_{\LOG}\gap_{\left[\frac{4}{7}a,\frac{4}{7}b\right]}\max3\lin$
+\begin_inset Formula $\gap_{\left[a,b\right]}\max3\sat\le_{m}^{\Log}\gap_{\left[\frac{4}{7}a,\frac{4}{7}b\right]}\max3\lin$
 \end_inset
 
 .
@@ -15375,7 +15305,7 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\gap_{\left[a,b\right]}\max3\sat\le_{\LOG}\gap_{\left[\frac{6+a}{10},\frac{6+b}{10}\right]}\max2\sat$
+\begin_inset Formula $\gap_{\left[a,b\right]}\max3\sat\le_{m}^{\Log}\gap_{\left[\frac{6+a}{10},\frac{6+b}{10}\right]}\max2\sat$
 \end_inset
 
 .
@@ -15394,7 +15324,7 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\gap_{\left[a,b\right]}\max3\lin\le_{\LOG}\gap_{\left[\frac{a}{4},\frac{b}{4}\right]}\maxis$
+\begin_inset Formula $\gap_{\left[a,b\right]}\max3\lin\le_{m}^{\Log}\gap_{\left[\frac{a}{4},\frac{b}{4}\right]}\maxis$
 \end_inset
 
 .
@@ -15988,7 +15918,7 @@ end{algorithm}
 \end_inset
 
  אזי 
-\begin_inset Formula $\Sigma_{k}=\left\{ L\mid L\le_{\LOG}\tqbf_{k}^{\exists}\right\} $
+\begin_inset Formula $\Sigma_{k}=\left\{ L\mid L\le_{m}^{\Log}\tqbf_{k}^{\exists}\right\} $
 \end_inset
 
 .
@@ -24242,7 +24172,7 @@ status collapsed
 \end_inset
 
 
-\begin_inset Formula $L\le_{p}q\csp_{\left[s,c\right],\Sigma}$
+\begin_inset Formula $L\le_{m}^{p}q\csp_{\left[s,c\right],\Sigma}$
 \end_inset
 
 .
@@ -24459,7 +24389,7 @@ status collapsed
 \color inherit
 :
  
-\begin_inset Formula $\pcp_{\left[\frac{1}{n},1\right]}\left(\O\left(\log\left(n\right)\right),\O\left(\log\left(n\right)\right)\right)\le_{p}\gap_{\left[\frac{1}{n},1\right]}\maxclique$
+\begin_inset Formula $\pcp_{\left[\frac{1}{n},1\right]}\left(\O\left(\log\left(n\right)\right),\O\left(\log\left(n\right)\right)\right)\le_{m}^{p}\gap_{\left[\frac{1}{n},1\right]}\maxclique$
 \end_inset
 
 .
