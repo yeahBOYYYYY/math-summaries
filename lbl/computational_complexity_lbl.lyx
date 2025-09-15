@@ -238,7 +238,8 @@ literal "true"
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\size}{\text{Size}}
+\newcommand{\size}{\mathrm{Size}}
+{\text{Size}}
 \end_inset
 
 
@@ -277,7 +278,8 @@ literal "true"
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\depth}{\text{depth}}
+\newcommand{\depth}{\mathrm{depth}}
+{\text{depth}}
 \end_inset
 
 
@@ -349,11 +351,20 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\fanin}{\mathrm{fan\textrm{-}in}}
+{\text{fan-in}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \color black
 מעגל בוליאני בעל 
-\begin_inset Formula $\text{fan-in}$
+\begin_inset Formula $\fanin$
 \end_inset
 
  לא מוגבל
@@ -376,7 +387,7 @@ literal "true"
 \color inherit
 :
  אלא אם נאמר אחרת מעגל בוליאני הוא בעל 
-\begin_inset Formula $\text{fan-in}$
+\begin_inset Formula $\fanin$
 \end_inset
 
  מוגבל.
@@ -399,7 +410,7 @@ literal "true"
 \end_inset
 
  בעל 
-\begin_inset Formula $\text{fan-in}$
+\begin_inset Formula $\fanin$
 \end_inset
 
  לא מוגבל המחשב את 
@@ -719,7 +730,8 @@ literal "true"
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\poly}{\text{poly}}
+\renewcommand{\poly}{\mathrm{poly}}
+{\text{poly}}
 \end_inset
 
 
@@ -748,8 +760,29 @@ literal "true"
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+\color black
+הגדרה 
+\color inherit
+
+\begin_inset Formula $\mathrm{Polynomial\,Size\,Circuits}$
+\end_inset
+
+
+\series default
+:
+ 
+\begin_inset Formula $\size\left(\poly\right)=\bigcup_{c\in\bbn}\size\left(n^{c}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\nsize}{\text{NSize}}
+\newcommand{\nsize}{\mathrm{NSize}}
+{\text{NSize}}
 \end_inset
 
 
@@ -861,13 +894,13 @@ literal "true"
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\nuac}{\text{nu-}\mathsf{AC}}
+\newcommand{\nuac}{\mathrm{nu\textrm{-}}\mathsf{AC}}
 {\text{nu-AC}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\nunc}{\text{nu-}\mathsf{NC}}
+\newcommand{\nunc}{\mathrm{nu\textrm{-}}\mathsf{NC}}
 {\text{nu-NC}}
 \end_inset
 
@@ -898,10 +931,9 @@ literal "true"
 \end_inset
 
 
-\begin_inset Formula $\nuac\left(s,d\right)=\left\{ L\subseteq\left\{ 0,1\right\} ^{*}\bmid\begin{smallmatrix}L\left(C\right)=L\\
-\size\left(C_{n}\right)\le s\left(n\right)\\
+\begin_inset Formula $\nuac\left(s,d\right)=\left\{ L\left(C\right)\bmid\begin{smallmatrix}\size\left(C_{n}\right)\le s\left(n\right)\\
 \depth\left(C_{n}\right)\le d\left(n\right)
-\end{smallmatrix}\text{ בעלת fan-in לא מוגבל עבורה }C\text{קיימת משפחת מעגלים }\right\} $
+\end{smallmatrix}\text{ לא מוגבל המקיימת }\mathrm{fan\textrm{-}in}\text{ משפחת מעגלים בעלת }C\right\} $
 \end_inset
 
 .
@@ -960,10 +992,9 @@ status collapsed
 \end_inset
 
 
-\begin_inset Formula $\nunc\left(s,d\right)=\left\{ L\subseteq\left\{ 0,1\right\} ^{*}\bmid\begin{smallmatrix}L\left(C\right)=L\\
-\size\left(C_{n}\right)\le s\left(n\right)\\
+\begin_inset Formula $\nunc\left(s,d\right)=\left\{ L\left(C\right)\bmid\begin{smallmatrix}\size\left(C_{n}\right)\le s\left(n\right)\\
 \depth\left(C_{n}\right)\le d\left(n\right)
-\end{smallmatrix}\text{ עבורה }C\text{קיימת משפחת מעגלים }\right\} $
+\end{smallmatrix}\text{ משפחת מעגלים המקיימת }C\right\} $
 \end_inset
 
 .
@@ -1053,7 +1084,7 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\parity}{\text{parity}}
+\newcommand{\parity}{\mathrm{parity}}
 {\text{parity}}
 \end_inset
 
@@ -1866,7 +1897,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\add}{\text{BinAdd}}
+\newcommand{\add}{\mathrm{BinAdd}}
+{\text{BinAdd}}
 \end_inset
 
 
@@ -1935,7 +1967,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\iteradd}{\text{IteratedBinAdd}}
+\newcommand{\iteradd}{\mathrm{IteratedBinAdd}}
+{\text{IteratedBinAdd}}
 \end_inset
 
 
@@ -2000,7 +2033,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\mult}{\text{BinMult}}
+\newcommand{\mult}{\mathrm{BinMult}}
+{\text{BinMult}}
 \end_inset
 
 
@@ -2080,7 +2114,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\maxcut}{\text{maxCut}}
+\newcommand{\maxcut}{\mathrm{maxCut}}
+{\text{maxCut}}
 \end_inset
 
 
@@ -2462,7 +2497,8 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\uni}{\text{Uni}}
+\newcommand{\uni}{\mathrm{Uni}}
+{\text{Uni}}
 \end_inset
 
 
@@ -3145,17 +3181,17 @@ end{algorithm}
 \end_inset
 
  מתקיים
-\begin_inset Newline newline
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{E}_{r\gets\left\{ 0,1\right\} ^{n}}\left[\left|E\left(S_{r},\overline{S_{r}}\right)\right|\bmid\begin{smallmatrix}r_{1}=a_{1}\\
+\vdots\\
+r_{i-1}=a_{i-1}
+\end{smallmatrix}\right]=\left|\left\{ \left(v_{i},v_{j}\right)\in E\bmid\begin{smallmatrix}i,j\le k\\
+a_{i}\ne a_{j}
+\end{smallmatrix}\right\} \right|+\frac{1}{2}\left|\left\{ \left(v_{i},v_{j}\right)\in E\mid\left(i>k\right)\lor\left(j>k\right)\right\} \right|$
 \end_inset
 
-
-\size footnotesize
-
-\begin_inset Formula $\mathbb{E}_{r\gets\left\{ 0,1\right\} ^{n}}\left[\left|E\left(S_{r},\overline{S_{r}}\right)\right|\mid\left(r_{1}=a_{1}\right),\ldots,\left(r_{i-1}=a_{i-1}\right)\right]=\left|\left\{ \left(v_{i},v_{j}\right)\in E\mid\left(i,j\le k\right)\land\left(a_{i}\ne a_{j}\right)\right\} \right|+\frac{1}{2}\left|\left\{ \left(v_{i},v_{j}\right)\in E\mid\left(i>k\right)\lor\left(j>k\right)\right\} \right|$
-\end_inset
-
-
-\size default
 .
 \end_layout
 
@@ -3293,12 +3329,14 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\sat}{\text{SAT}}
+\renewcommand{\sat}{\mathrm{SAT}}
+{\text{SAT}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\cl}{\text{CL}}
+\newcommand{\cl}{\mathrm{CL}}
+{\text{CL}}
 \end_inset
 
 
@@ -3341,7 +3379,8 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\rcl}{\text{RCL}}
+\newcommand{\rcl}{\mathrm{RCL}}
+{\text{RCL}}
 \end_inset
 
 
@@ -3372,7 +3411,7 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\fv}{\text{FV}}
+\newcommand{\fv}{\mathrm{FV}}
 {\text{FV}}
 \end_inset
 
@@ -3483,7 +3522,7 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\dtime}{\text{DTime}}
+\newcommand{\dtime}{\mathrm{DTime}}
 {\text{DTime}}
 \end_inset
 
@@ -3682,7 +3721,7 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\dspace}{\text{DSpace}}
+\newcommand{\dspace}{\mathrm{DSpace}}
 {\text{DSpace}}
 \end_inset
 
@@ -3727,7 +3766,7 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\pspace}{\text{PSPACE}}
+\newcommand{\pspace}{\mathrm{PSPACE}}
 {\text{PSPACE}}
 \end_inset
 
@@ -3768,19 +3807,19 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\logspace}{\text{LOGSPACE}}
+\newcommand{\logspace}{\mathrm{LOGSPACE}}
 {\text{LOGSPACE}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\lspace}{\text{LSPACE}}
+\newcommand{\lspace}{\mathrm{LSPACE}}
 {\text{LSPACE}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\LOG}{\text{LOG}}
+\newcommand{\LOG}{\mathrm{LOG}}
 {\text{LOG}}
 \end_inset
 
@@ -3941,7 +3980,7 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\ex}{\text{EXP}}
+\newcommand{\ex}{\mathrm{EXP}}
 {\text{EXP}}
 \end_inset
 
@@ -4541,7 +4580,7 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\cval}{\text{CVAL}}
+\newcommand{\cval}{\mathrm{CVAL}}
 {\text{CVAL}}
 \end_inset
 
@@ -4648,7 +4687,7 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\tqbf}{\text{TQBF}}
+\newcommand{\tqbf}{\mathrm{TQBF}}
 {\text{TQBF}}
 \end_inset
 
@@ -4862,7 +4901,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\scval}{\text{Succ-CVAL}}
+\newcommand{\scval}{\mathrm{Succ-CVAL}}
+{\text{Succ-CVAL}}
 \end_inset
 
 
@@ -4992,7 +5032,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\sbmp}{\text{Succ-BoolMatPower}}
+\newcommand{\sbmp}{\mathrm{Succ-BoolMatPower}}
+{\text{Succ-BoolMatPower}}
 \end_inset
 
 
@@ -5034,7 +5075,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\csat}{\text{CSAT}}
+\newcommand{\csat}{\mathrm{CSAT}}
+{\text{CSAT}}
 \end_inset
 
 
@@ -5083,7 +5125,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\scsat}{\text{Succ-CSAT}}
+\newcommand{\scsat}{\mathrm{Succ-CSAT}}
+{\text{Succ-CSAT}}
 \end_inset
 
 
@@ -5177,13 +5220,13 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\uac}{\text{u-}\mathsf{AC}}
+\newcommand{\uac}{\mathrm{u\textrm{-}}\mathsf{AC}}
 {\text{u-AC}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\unc}{\text{u-}\mathsf{NC}}
+\newcommand{\unc}{\mathrm{u\textrm{-}}\mathsf{NC}}
 {\text{u-NC}}
 \end_inset
 
@@ -5214,10 +5257,9 @@ status collapsed
 \end_inset
 
 
-\begin_inset Formula $\uac\left(s,d\right)={\scriptsize \left\{ L\subseteq\left\{ 0,1\right\} ^{*}\bmid\begin{smallmatrix}L\left(C\right)=L\\
-\size\left(C_{n}\right)\le s\left(n\right)\\
+\begin_inset Formula $\uac\left(s,d\right)=\left\{ L\left(C\right)\bmid\begin{smallmatrix}\size\left(C_{n}\right)\le s\left(n\right)\\
 \depth\left(C_{n}\right)\le d\left(n\right)
-\end{smallmatrix}\text{ בעלת fan-in לא מוגבל עבורה }C\text{קיימת משפחת מעגלים יוניפורמית }\right\} }$
+\end{smallmatrix}\text{ לא מוגבל המקיימת }\mathrm{fan\textrm{-}in}\text{ משפחת מעגלים יוניפורמית בעלת }C\right\} $
 \end_inset
 
 .
@@ -5276,10 +5318,9 @@ status collapsed
 \end_inset
 
 
-\begin_inset Formula $\unc\left(s,d\right)=\left\{ L\subseteq\left\{ 0,1\right\} ^{*}\bmid\begin{smallmatrix}L\left(C\right)=L\\
-\size\left(C_{n}\right)\le s\left(n\right)\\
+\begin_inset Formula $\unc\left(s,d\right)=\left\{ L\left(C\right)\bmid\begin{smallmatrix}\size\left(C_{n}\right)\le s\left(n\right)\\
 \depth\left(C_{n}\right)\le d\left(n\right)
-\end{smallmatrix}\text{ עבורה }C\text{קיימת משפחת מעגלים יוניפורמית }\right\} $
+\end{smallmatrix}\text{ משפחת מעגלים יוניפורמית המקיימת }C\right\} $
 \end_inset
 
 .
@@ -5732,7 +5773,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\ntime}{\text{NTime}}
+\newcommand{\ntime}{\mathrm{NTime}}
+{\text{NTime}}
 \end_inset
 
 
@@ -5878,7 +5920,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\lpr}{\text{LIN-PROG}}
+\newcommand{\lpr}{\mathrm{LIN-PROG}}
+{\text{LIN-PROG}}
 \end_inset
 
 
@@ -7056,7 +7099,7 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\nex}{\text{NEXP}}
+\renewcommand{\nex}{\mathrm{NEXP}}
 {\mathcal{NEXP}}
 \end_inset
 
@@ -7201,7 +7244,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\halt}{\text{HALT}}
+\newcommand{\halt}{\mathrm{HALT}}
+{\text{HALT}}
 \end_inset
 
 
@@ -7362,7 +7406,7 @@ status collapsed
 
 
 \begin_inset FormulaMacro
-\newcommand{\bpt}{\mathcal{BP}\text{-Time}}
+\newcommand{\bpt}{\mathcal{BP}\mathrm{\textrm{-}Time}}
 {\mathcal{BP}\text{-Time}}
 \end_inset
 
@@ -7577,7 +7621,7 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\corp}{\text{co}\mathcal{RP}}
+\newcommand{\corp}{\mathrm{co}\mathcal{RP}}
 {\text{co}\mathcal{RP}}
 \end_inset
 
@@ -7643,7 +7687,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\pm}{\text{PM}}
+\newcommand{\pm}{\mathrm{PM}}
+{\text{PM}}
 \end_inset
 
 
@@ -7681,7 +7726,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\perm}{\text{perm}}
+\newcommand{\perm}{\mathrm{perm}}
+{\text{perm}}
 \end_inset
 
 
@@ -7746,14 +7792,6 @@ status collapsed
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset FormulaMacro
-\renewcommand{\uni}{\text{Uni}}
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -7963,7 +8001,8 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\ppram}{\text{PPRAM}}
+\newcommand{\ppram}{\mathrm{PPRAM}}
+{\text{PPRAM}}
 \end_inset
 
 
@@ -8141,7 +8180,8 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\pit}{\text{PIT}}
+\newcommand{\pit}{\mathrm{PIT}}
+{\text{PIT}}
 \end_inset
 
 
@@ -8231,7 +8271,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\time}{\text{Time}}
+\renewcommand{\time}{\mathrm{Time}}
+{\text{Time}}
 \end_inset
 
 
@@ -8648,12 +8689,14 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\tis}{\text{Tree-ISO}}
+\newcommand{\tis}{\mathrm{Tree-ISO}}
+{\text{Tree-ISO}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\rtis}{\text{RTree-ISO}}
+\newcommand{\rtis}{\mathrm{RTree-ISO}}
+{\text{RTree-ISO}}
 \end_inset
 
 
@@ -9744,7 +9787,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\ans}{\text{ANS}}
+\newcommand{\ans}{\mathrm{ANS}}
+{\text{ANS}}
 \end_inset
 
 
@@ -9923,7 +9967,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\eq}{\text{EQ}}
+\newcommand{\eq}{\mathrm{EQ}}
+{\text{EQ}}
 \end_inset
 
 
@@ -10349,7 +10394,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\ret}{\text{Ret}}
+\newcommand{\ret}{\mathrm{Ret}}
+{\text{Ret}}
 \end_inset
 
 
@@ -10403,7 +10449,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\ans}{\text{ANS}}
+\newcommand{\ans}{\mathrm{ANS}}
+{\text{ANS}}
 \end_inset
 
 
@@ -10644,7 +10691,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\eq}{\text{EQ}}
+\newcommand{\eq}{\mathrm{EQ}}
+{\text{EQ}}
 \end_inset
 
 
@@ -11127,7 +11175,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\ret}{\text{Ret}}
+\newcommand{\ret}{\mathrm{Ret}}
+{\text{Ret}}
 \end_inset
 
 
@@ -11181,7 +11230,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\ans}{\text{ANS}}
+\newcommand{\ans}{\mathrm{ANS}}
+{\text{ANS}}
 \end_inset
 
 
@@ -11421,7 +11471,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\eq}{\text{EQ}}
+\newcommand{\eq}{\mathrm{EQ}}
+{\text{EQ}}
 \end_inset
 
 
@@ -12974,7 +13025,8 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\promise}{\text{Promise-}}
+\renewcommand{\promise}{\mathrm{Promise\textrm{-}}}
+{\text{Promise-}}
 \end_inset
 
 
@@ -13079,17 +13131,20 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\gap}{\text{GAP}}
+\renewcommand{\gap}{\mathrm{GAP}}
+{\text{GAP}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\yes}{\text{Yes}}
+\newcommand{\yes}{\mathrm{Yes}}
+{\text{Yes}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\no}{\text{No}}
+\newcommand{\no}{\mathrm{No}}
+{\text{No}}
 \end_inset
 
 
@@ -13216,7 +13271,8 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\minvc}{\text{minVC}}
+\newcommand{\minvc}{\mathrm{minVC}}
+{\text{minVC}}
 \end_inset
 
 
@@ -13309,7 +13365,8 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\ilpr}{\text{INT-LIN-PROG}}
+\newcommand{\ilpr}{\mathrm{INT\textrm{-}LIN\textrm{-}PROG}}
+{\text{INT-LIN-PROG}}
 \end_inset
 
 
@@ -13814,7 +13871,8 @@ end{flalign*}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\maxcute}{\maxcut\text{Ext}}
+\newcommand{\maxcute}{\maxcut\mathrm{Ext}}
+{\maxcut\text{Ext}}
 \end_inset
 
 
@@ -14158,7 +14216,8 @@ end{flalign*}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\mincirc}{\text{MinCircuit}}
+\newcommand{\mincirc}{\mathrm{MinCircuit}}
+{\text{MinCircuit}}
 \end_inset
 
 
@@ -14282,7 +14341,8 @@ end{flalign*}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\mincenter}{\text{minCenter}}
+\newcommand{\mincenter}{\mathrm{minCenter}}
+{\text{minCenter}}
 \end_inset
 
 
@@ -14564,7 +14624,8 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\ds}{\text{DS}}
+\newcommand{\ds}{\mathrm{DS}}
+{\text{DS}}
 \end_inset
 
 
@@ -14881,7 +14942,8 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\maxclique}{\text{maxClique}}
+\newcommand{\maxclique}{\mathrm{maxClique}}
+{\text{maxClique}}
 \end_inset
 
 
@@ -14907,7 +14969,9 @@ end{algorithm}
 \end_inset
 
  כך 
-\begin_inset Formula $\maxclique\left(G\right)=\max\left\{ \frac{\left|K\right|}{\left|V\right|}\mid\left(G\text{ תת־גרף של }K\right)\land\left(\text{ קליקה}K\right)\right\} $
+\begin_inset Formula $\maxclique\left(G\right)=\max\left\{ \frac{\left|K\right|}{\left|V\right|}\bmid\begin{smallmatrix}G\text{ תת־גרף של }K\\
+\text{ קליקה}K
+\end{smallmatrix}\right\} $
 \end_inset
 
 .
@@ -14915,7 +14979,8 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\maxis}{\text{maxIS}}
+\newcommand{\maxis}{\mathrm{maxIS}}
+{\text{maxIS}}
 \end_inset
 
 
@@ -15195,7 +15260,8 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\lin}{\text{LIN}}
+\newcommand{\lin}{\mathrm{LIN}}
+{\text{LIN}}
 \end_inset
 
 
@@ -16024,7 +16090,8 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\giso}{\text{GISO}}
+\newcommand{\giso}{\mathrm{GISO}}
+{\text{GISO}}
 \end_inset
 
 
@@ -16051,7 +16118,8 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\gniso}{\text{GNISO}}
+\newcommand{\gniso}{\mathrm{GNISO}}
+{\text{GNISO}}
 \end_inset
 
 
@@ -16306,7 +16374,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\dip}{\text{dIP}}
+\newcommand{\dip}{\mathrm{dIP}}
+{\text{dIP}}
 \end_inset
 
 
@@ -16426,7 +16495,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\ip}{\text{IP}}
+\newcommand{\ip}{\mathrm{IP}}
+{\text{IP}}
 \end_inset
 
 
@@ -16522,7 +16592,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\val}{\text{Val}}
+\newcommand{\val}{\mathrm{Val}}
+{\text{Val}}
 \end_inset
 
 
@@ -17200,7 +17271,8 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\am}{\text{AM}}
+\newcommand{\am}{\mathrm{AM}}
+{\text{AM}}
 \end_inset
 
 
@@ -17286,7 +17358,8 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\ma}{\text{MA}}
+\newcommand{\ma}{\mathrm{MA}}
+{\text{MA}}
 \end_inset
 
 
@@ -18570,7 +18643,8 @@ end{algorithm}
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\mip}{\text{MIP}}
+\newcommand{\mip}{\mathrm{MIP}}
+{\text{MIP}}
 \end_inset
 
 
@@ -19401,7 +19475,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\csats}{\text{CorrectSATSolver}}
+\newcommand{\csats}{\mathrm{CorrectSATSolver}}
+{\text{CorrectSATSolver}}
 \end_inset
 
 
@@ -19424,7 +19499,9 @@ status collapsed
 \end_inset
 
  אזי 
-\begin_inset Formula $\csats=\left\{ \left<C\right>\mid{\small \left(\text{ קלטים}m\text{ על }n\text{ מעגל בגודל }C\right)\land\left(3\sat\text{ מכריע את }C\right)}\right\} $
+\begin_inset Formula $\csats=\left\{ \left<C\right>\bmid{\small \begin{smallmatrix}\text{ קלטים}m\text{ על }n\text{ מעגל בגודל }C\\
+3\sat\text{ מכריע את }C
+\end{smallmatrix}}\right\} $
 \end_inset
 
 .
@@ -20411,7 +20488,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\val}{\text{Val}}
+\renewcommand{\val}{\mathrm{Val}}
+{\text{Val}}
 \end_inset
 
 
@@ -20461,7 +20539,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\am}{\text{AM}}
+\renewcommand{\am}{\mathrm{AM}}
+{\text{AM}}
 \end_inset
 
 
@@ -21007,7 +21086,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\val}{\text{Val}}
+\renewcommand{\val}{\mathrm{Val}}
+{\text{Val}}
 \end_inset
 
 
@@ -21242,7 +21322,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\am}{\text{AM}}
+\renewcommand{\am}{\mathrm{AM}}
+{\text{AM}}
 \end_inset
 
 
@@ -21340,7 +21421,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\ma}{\text{MA}}
+\renewcommand{\ma}{\mathrm{MA}}
+{\text{MA}}
 \end_inset
 
 
@@ -21590,7 +21672,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\ip}{\text{IP}}
+\renewcommand{\ip}{\mathrm{IP}}
+{\text{IP}}
 \end_inset
 
 
@@ -22465,7 +22548,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\renewcommand{\csats}{\text{CorrectSATSolver}}
+\renewcommand{\csats}{\mathrm{CorrectSATSolver}}
+{\text{CorrectSATSolver}}
 \end_inset
 
 
@@ -23206,7 +23290,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\pcp}{\text{PCP}}
+\newcommand{\pcp}{\mathrm{PCP}}
+{\text{PCP}}
 \end_inset
 
 
@@ -23429,7 +23514,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\equad}{\text{Quad}}
+\newcommand{\equad}{\mathrm{Quad}}
+{\text{Quad}}
 \end_inset
 
 
@@ -23495,7 +23581,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\quadeq}{\text{QuadEQ}}
+\newcommand{\quadeq}{\mathrm{QuadEQ}}
+{\text{QuadEQ}}
 \end_inset
 
 
@@ -23510,7 +23597,9 @@ status collapsed
 \color inherit
 :
  
-\begin_inset Formula $\quadeq=\left\{ \left<A,b\right>\mid\left(A\in M_{m\times n\times n}\left(\bbz_{2}\right)\right)\land\left(b\in\bbz_{2}^{m}\right)\land\left(\exists x\in\bbz_{2}^{n}.\forall k\in\left[m\right].\equad_{A_{k}}\left(x\right)=b_{k}\right)\right\} $
+\begin_inset Formula $\quadeq=\left\{ \left<A,b\right>\bmid\left(\begin{smallmatrix}A\in M_{m\times n\times n}\left(\bbz_{2}\right)\\
+b\in\bbz_{2}^{m}
+\end{smallmatrix}\right)\land\left(\exists x\in\bbz_{2}^{n}.\forall k\in\left[m\right].\equad_{A_{k}}\left(x\right)=b_{k}\right)\right\} $
 \end_inset
 
 .
@@ -23552,7 +23641,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\had}{\text{HAD}}
+\newcommand{\had}{\mathrm{HAD}}
+{\text{HAD}}
 \end_inset
 
 
@@ -23602,7 +23692,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\aggre}{\text{Ag}}
+\newcommand{\aggre}{\mathrm{Ag}}
+{\text{Ag}}
 \end_inset
 
 
@@ -24045,7 +24136,8 @@ status collapsed
 
 \begin_layout Standard
 \begin_inset FormulaMacro
-\newcommand{\csp}{\text{-CSP}}
+\newcommand{\csp}{\mathrm{\textrm{-}CSP}}
+{\text{-CSP}}
 \end_inset
 
 
