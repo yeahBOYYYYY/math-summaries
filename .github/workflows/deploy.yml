@@ -4,7 +4,7 @@ on:
     branches: [ main ]
 
 permissions:
-  contents: write
+  contents: write   # allow pushing to gh-pages
 
 jobs:
   build:
@@ -20,8 +20,17 @@ jobs:
 
       - run: npm install jsdom
 
+      # Run your builder
       - run: node website/builder.js
 
+      # Copy static assets into the output folder
+      - name: Copy static files
+        run: |
+          mkdir -p out
+          cp website/main.css out/
+          cp website/main.js out/
+
+      # Deploy to gh-pages
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
