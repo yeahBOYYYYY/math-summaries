@@ -16,19 +16,6 @@ const POPUP_PREFIX = "popup";
 const PDF_DATA_PATH = "./website/pdf_data.json";
 const GENERIC_BUTTON_PREFIX = "generic/";
 
-
-async function parseJson(json_path) {
-    try {
-        const response = await fetch(json_path);
-        if (!response.ok) throw new Error(`Failed to load ${json_path} JSON: ${response.statusText}`);
-        const pdfData = await response.json();
-        return pdfData;
-    } catch (error) {
-        console.error('Error fetching or processing JSON:', error);
-        return null;
-    }
-}
-
 // ======================== Commit Fetcher ========================
 
 async function lastCommitFetch(doc) {
@@ -95,7 +82,7 @@ function createPopups(doc, popupData) {
 }
 
 async function mainPopups(doc, popupData) {
-    const popupsTmp = doc.getElementById(`[id="popups_tmp"]`);
+    const popupsTmp = doc.getElementById("popups_tmp");
     let popups_code = createPopups(doc, popupData);
     const frag = JSDOM.fragment(popups_code);
     popupsTmp.replaceWith(frag);
@@ -127,10 +114,10 @@ function getButtonCode(dict) {
         </div>
     `
 
-    let additinal = "";
+    let additional = "";
     for (let att in dict.pdf_info) {
         let res = parseAttribute(dict.pdf_info[att]);
-        additinal += `
+        additional += `
         <div class="tooltip">
             <img src="${res[0]}">
             <span class="tooltiptext">${res[1]}</span>
@@ -138,11 +125,11 @@ function getButtonCode(dict) {
         `;
     }
 
-    return prefix + additinal + postfix;
+    return prefix + additional + postfix;
 }
 
 function createButtons(doc, pdfData) {
-    for (let pdf_name in jsonRes) {
+    for (let pdf_name in pdfData) {
         const elem = doc.querySelector(`[title="${pdf_name}"]`);
         if (elem) {
             const frag = JSDOM.fragment(getButtonCode(pdfData[pdf_name]));
@@ -165,7 +152,7 @@ function createGenericButton(buttonText) {
 }
 
 function createGenericButtons(doc) {
-    let generic_buttons = doc.querySelectorAll(`[title^=generic\]`);
+    let generic_buttons = doc.querySelectorAll(`[title^="generic/"]`);
     generic_buttons.forEach((button) => {
         let button_name = button.getAttribute("title").replace(GENERIC_BUTTON_PREFIX, "");
         const frag = JSDOM.fragment(createGenericButton(button_name));
