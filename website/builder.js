@@ -2,9 +2,9 @@
 // Run with: node builder.js
 // Requires: npm install jsdom node-fetch
 
-import fs from "fs";
-import path from "path";
-import { JSDOM } from "jsdom";
+const fs = require('fs');
+const path = require('path');
+const { JSDOM } = require('jsdom');
 
 
 // ======================== Constants ========================
