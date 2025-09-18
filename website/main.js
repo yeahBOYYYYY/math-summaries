@@ -1,16 +1,14 @@
 let whitemode, mdRenderedAlready;
 
-const GENERIC_BUTTON_PREFIX = "generic/";
-
 
 document.addEventListener('DOMContentLoaded', initialize);
 
 async function initialize(){
     whiteMode();
     initMD();
-    lastCommitFetch();
-    createGenericButtons();
 }
+
+// ======================== MARKDOWN RENDERER ========================
 
 function reloadMD(){
     const mdRender = document.getElementById('md-render');
@@ -28,6 +26,8 @@ function initMD(){
         sessionStorage.setItem('renderedMD', true);
     });
 }
+
+// ======================== White Mode ========================
 
 function whiteModeToggle(){
     whitemode = JSON.parse(localStorage.getItem('whitemode'));
@@ -50,46 +50,14 @@ function whiteMode(){
     });
 }
 
-function lastCommitFetch(){
-    try {
-        fetch('https://api.github.com/repos/yeahBOYYYYY/math-summaries/commits?per_page=1')
-        .then(res => res.json())
-        .then(res => {
-            document.getElementById('lastCommitName').innerHTML = res[0].commit.message;
-        })
-    } catch (error) {
-        console.warn('Not found the last commit.');
-        document.getElementById('lastCommitName').innerHTML = "didn't found the last commit";
-    }
+// ======================== Popups buttons ========================
+
+function openPopup(popupId) {
+    document.getElementById(popupId).style.display = "flex";
 }
 
-
-function createGenericButton(buttonText) {
-    return `
-        <div class="pdf-button-container gradient-generic">
-            <a class="pdf-button" target="_blank">${buttonText}</a>
-        </div>
-    `;
-}
-
-function createGenericButtons(){
-    let generic_buttons = document.querySelectorAll(`[title^=generic\]`);
-    generic_buttons.forEach((button) => {
-        let button_name = button.title.replace(GENERIC_BUTTON_PREFIX, "");
-        const newElement = document.createElement('div');
-        newElement.innerHTML = createGenericButton(button_name);
-        button.replaceWith(newElement.firstElementChild);
-    });
-}
-
-async function parseJson(json_path) {
-    try {
-        const response = await fetch(json_path);
-        if (!response.ok) throw new Error(`Failed to load ${json_path} JSON: ${response.statusText}`);
-        const pdfData = await response.json();
-        return pdfData;
-    } catch (error) {
-        console.error('Error fetching or processing JSON:', error);
-        return null;
+function closePopup(event, popupId) {
+    if (!event || event.target === document.getElementById(popupId)) {
+        document.getElementById(popupId).style.display = "none";
     }
 }
