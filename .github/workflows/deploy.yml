@@ -36,11 +36,10 @@ jobs:
       - name: Copy PDFs from main branch
         run: |
           git fetch origin main
-          mkdir -p out/pdf
           # List all PDFs in the main branch and copy them
           git ls-tree -r origin/main --name-only | grep '\.pdf$' | while read file; do
-            mkdir -p "out/pdf/$(dirname "$file")"
-            git show origin/main:"$file" > "out/pdf/$file"
+            mkdir -p "out/$(dirname "$file")"
+            git show origin/main:"$file" > "out/$file"
           done
 
       # Deploy to gh-pages

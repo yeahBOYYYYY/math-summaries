@@ -15,7 +15,6 @@ const POPUP_DATA_PATH = "./website/popup_data.json";
 const POPUP_PREFIX = "popup";
 const PDF_DATA_PATH = "./website/pdf_data.json";
 const GENERIC_BUTTON_PREFIX = "generic/";
-const PDF_OUTPUT_DIR = "pdf/";
 
 // ======================== Commit Fetcher ========================
 
@@ -110,7 +109,7 @@ function parseAttribute(dict) {
 function getButtonCode(dict) {
     let prefix = `
         <div class="pdf-button-container ${dict.button_color}">
-            <a class="pdf-button" href="${PDF_OUTPUT_DIR + dict.URL}" target="_blank">${dict.display_name}</a>`;
+            <a class="pdf-button" href="${dict.URL}" target="_blank">${dict.display_name}</a>`;
     let postfix = `
         </div>
     `
