@@ -1,24 +1,27 @@
-name: Build and Deploy Site
+name: Build and deploy precompiled site to gh-pages
 on:
   push:
     branches: [ main ]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '20'
 
-      - name: Install dependencies
-        run: npm install jsdom node-fetch
+      - name: Install jsdom
+        run: npm install jsdom
 
-      - name: Run builder.js
-        run: node builder.js
+      - name: Run builder (builds out/)
+        run: node website/builder.js
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
