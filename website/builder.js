@@ -106,10 +106,10 @@ function parseAttribute(dict) {
     return [image, text];
 }
 
-function getButtonCode(dict) {
+function getButtonCode(name, dict) {
     let prefix = `
         <div class="pdf-button-container ${dict.button_color}">
-            <a class="pdf-button" href="${dict.URL}" target="_blank">${dict.display_name}</a>`;
+            <a class="pdf-button" href="${name}" target="_blank">${dict.display_name}</a>`;
     let postfix = `
         </div>
     `
@@ -132,7 +132,7 @@ function createButtons(doc, pdfData) {
     for (let pdf_name in pdfData) {
         const elem = doc.querySelector(`[title="${pdf_name}"]`);
         if (elem) {
-            const frag = JSDOM.fragment(getButtonCode(pdfData[pdf_name]));
+            const frag = JSDOM.fragment(getButtonCode(pdf_name, pdfData[pdf_name]));
             elem.replaceWith(frag);
         }
         else {
