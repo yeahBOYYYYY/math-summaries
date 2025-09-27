@@ -14562,6 +14562,114 @@ end{algorithm}
 
 \series bold
 \color green
+רדוקציית טיורינג
+\series default
+\color inherit
+:
+ תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ שפות אזי מ
+\begin_inset Quotes erd
+\end_inset
+
+ט דטרמיניסטית 
+\begin_inset Formula $\mathcal{A}^{B}$
+\end_inset
+
+ המכריע את 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+סימון
+\series default
+\color inherit
+:
+ תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ שפות באשר קיימת רדוקציית טיורינג מ־
+\begin_inset Formula $A$
+\end_inset
+
+ ל־
+\begin_inset Formula $B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\le B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+רדוקציית קוק
+\series default
+\color inherit
+:
+ תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ שפות אזי מ
+\begin_inset Quotes erd
+\end_inset
+
+ט פולינומית דטרמיניסטית 
+\begin_inset Formula $\mathcal{A}^{B}$
+\end_inset
+
+ המכריע את 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
+סימון
+\series default
+\color inherit
+:
+ תהיינה 
+\begin_inset Formula $A,B$
+\end_inset
+
+ שפות באשר קיימת רדוקציית קוק מ־
+\begin_inset Formula $A$
+\end_inset
+
+ ל־
+\begin_inset Formula $B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\le_{p}B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color green
 אלגוריתם חיפוש הקצר ביותר בהינתן הקרוב ביותר [גולדרייך־מיצ'אנצ'ו־ספרא־זייפט 
 \lang english
 1999
@@ -14777,7 +14885,7 @@ end{algorithm}
 \color inherit
 :
  
-\begin_inset Formula $\svplse^{\cvplse}\in\P$
+\begin_inset Formula $\svplse\le_{p}\cvplse$
 \end_inset
 
 .
@@ -15125,114 +15233,6 @@ end{algorithm}
 :
  
 \begin_inset Formula $\gc_{\sqrt{n}},\gs_{\sqrt{n}}\in\np\cap\co\np$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color green
-רדוקציית טיורינג
-\series default
-\color inherit
-:
- תהיינה 
-\begin_inset Formula $A,B$
-\end_inset
-
- שפות אזי מ
-\begin_inset Quotes erd
-\end_inset
-
-ט 
-\begin_inset Formula $\mathcal{A}^{B}$
-\end_inset
-
- המכריע את 
-\begin_inset Formula $A$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color green
-סימון
-\series default
-\color inherit
-:
- תהיינה 
-\begin_inset Formula $A,B$
-\end_inset
-
- שפות באשר קיימת רדוקציית טיורינג מ־
-\begin_inset Formula $A$
-\end_inset
-
- ל־
-\begin_inset Formula $B$
-\end_inset
-
- אזי 
-\begin_inset Formula $A\le B$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color green
-רדוקציית קוק
-\series default
-\color inherit
-:
- תהיינה 
-\begin_inset Formula $A,B$
-\end_inset
-
- שפות אזי מ
-\begin_inset Quotes erd
-\end_inset
-
-ט פולינומית 
-\begin_inset Formula $\mathcal{A}^{B}$
-\end_inset
-
- המכריע את 
-\begin_inset Formula $A$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color green
-סימון
-\series default
-\color inherit
-:
- תהיינה 
-\begin_inset Formula $A,B$
-\end_inset
-
- שפות באשר קיימת רדוקציית קוק מ־
-\begin_inset Formula $A$
-\end_inset
-
- ל־
-\begin_inset Formula $B$
-\end_inset
-
- אזי 
-\begin_inset Formula $A\le_{p}B$
 \end_inset
 
 .
@@ -15939,7 +15939,7 @@ end{algorithm}
 \color inherit
 :
  
-\begin_inset Formula $\cvplse^{\gc_{1}}\in\P$
+\begin_inset Formula $\cvplse\le_{p}\gc_{1}$
 \end_inset
 
 .
@@ -16058,11 +16058,49 @@ end{algorithm}
 \begin_inset Formula $\a\in\bbr_{>0}$
 \end_inset
 
- ויהיו 
-\begin_inset Formula $k,\ell\in\bbn_{+}$
+ יהיו 
+\begin_inset Formula $\ell,k\in\bbn_{+}$
 \end_inset
 
- ...
+ תהא 
+\begin_inset Formula $A\in\bbz^{n\times k}$
+\end_inset
+
+ מדרגה 
+\begin_inset Formula $k$
+\end_inset
+
+ יהי 
+\begin_inset Formula $r\in\sqrt{\bbn_{+}}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $x\in\bbz^{n}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $T\in\bbz^{\ell\times n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(A,r,x,T\right)$
+\end_inset
+
+ באשר
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda_{1}\left(\l\left[A\right]\right)\ge r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\{ 0,1\right\} ^{\ell}\subseteq T\left(\left(x+\l\left[A\right]\right)\cap B_{\a r}\left(0\right)\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -16071,7 +16109,209 @@ end{algorithm}
 משפט
 \series default
 :
- ...
+ יהיו 
+\begin_inset Formula $k,n\in\bbn_{+}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $\a,\g,\g^{\prime}\in\bbr_{>0}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\frac{1}{\a}>\g^{\prime}\ge1$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\g\ge\g^{\prime}\cdot\frac{1}{\sqrt{1-\left(\a\g^{\prime}\right)^{2}}}$
+\end_inset
+
+ אזי קיים אלגוריתם פולינומי דטרמיניסטי 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ עבורו לכל 
+\begin_inset Formula $M\in\bbr^{n\times n}$
+\end_inset
+
+ מדרגה 
+\begin_inset Formula $k$
+\end_inset
+
+ לכל 
+\begin_inset Formula $t\in\bbr^{n}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $d\in\bbr_{>0}$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\left(A,r,x,T\right)$
+\end_inset
+
+ סריג 
+\begin_inset Formula $\left(\a,\ell,k\right)$
+\end_inset
+
+־צפוף מקומית מתקיים
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{A}\left(\left(M,t,d\right),\left(A,r,x,T\right)\right)=\left(M^{\prime},d^{\prime}\right)$
+\end_inset
+
+ באשר 
+\begin_inset Formula $M^{\prime}\in\bbr^{n\times n}$
+\end_inset
+
+ מדרגה 
+\begin_inset Formula $k$
+\end_inset
+
+ וכן 
+\begin_inset Formula $d^{\prime}\in\bbr_{>0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\gs_{\g^{\prime}}\left(\mathcal{A}\left(\left(M,t,d\right),\left(A,r,x,T\right)\right)\right)\in\yes\right)\iff\left(\gapbincvp_{\g}\left(\left(M,t,d\right)\right)\in\yes\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רדוקציית קארפ אקראית
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ותהיינה 
+\begin_inset Formula $A,B\subseteq\Sigma^{*}$
+\end_inset
+
+ אזי מ
+\begin_inset Quotes erd
+\end_inset
+
+ט פולינומית אקראית 
+\begin_inset Formula $M$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $x\in\Sigma^{*}$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\bbp_{r}\left(A\left(x\right)=B\left(M\left(x;r\right)\right)\right)\ge\frac{2}{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\bpp}{\mathcal{BPP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ותהיינה 
+\begin_inset Formula $A,B\subseteq\Sigma^{*}$
+\end_inset
+
+ באשר קיימת רדוקציית קארפ אקראית מ־
+\begin_inset Formula $A$
+\end_inset
+
+ ל־
+\begin_inset Formula $B$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A\le_{m}^{\bpp}B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+משפט [מיצ'אנצ'ו 
+\numeric on
+\lang english
+2001
+\numeric off
+\lang hebrew
+,
+ מיצ'אנצ'ו־גולדווסר 
+\numeric on
+\lang english
+2002
+\numeric off
+\lang hebrew
+]
+\series default
+:
+ יהי 
+\begin_inset Formula $\e\in\bbr_{>0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\gapbincvp_{\frac{\sqrt{2}}{\e}}\le_{m}^{\bpp}\gs_{\frac{\sqrt{2}}{1+2\e}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סריג שור־אדמלן למספרים ראשוניים
+\series default
+:
+ יהי 
+\begin_inset Formula $m\in\bbn_{+}$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{m}\in\bbn_{\mathrm{odd}}$
+\end_inset
+
+ זרים ויהי 
+\begin_inset Formula $\a\in\bbr_{>0}$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $M_{\left\{ a_{1}\ldots a_{m}\right\} }\in\bbr^{\left(m+1\right)\times m}$
+\end_inset
+
+ כך 
+\begin_inset Formula $\left(M_{\left\{ a_{1}\ldots a_{m}\right\} }\right)_{i,j}=\left\{ \begin{smallmatrix}\sqrt{\ln\left(a_{i}\right)} &  & i=j\\
+\a\ln\left(a_{j}\right) &  & i=m+1\\
+0 &  & \mathrm{else}
+\end{smallmatrix}\right.$
+\end_inset
+
+.
 \end_layout
 
 \end_body
