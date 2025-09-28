@@ -7209,7 +7209,7 @@ end{algorithm}
 
 \series bold
 \color brown
-אלגוריתם ויגרדזון לצביעת גרף 
+אלגוריתם ויגדרזון לצביעת גרף 
 \begin_inset Formula $3$
 \end_inset
 
@@ -7589,7 +7589,7 @@ end{algorithm}
 
 \series bold
 \color brown
-אלגוריתם ויגרדזון וקטורי היברידי לצביעת גרף 
+אלגוריתם ויגדרזון וקטורי היברידי לצביעת גרף 
 \begin_inset Formula $3$
 \end_inset
 
@@ -8016,6 +8016,13 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\spec}{\mathrm{spec}}
 {\text{spec}}
@@ -8368,6 +8375,347 @@ G\text{ מימדי של }d\text{ ייצוג אורתונורמלי }R
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p\in\bbr\left[x\right]$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\deg\left(p\right)=d$
+\end_inset
+
+ אזי קיימת בעיית תכנות חצי מוגדר 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ המקיימת (
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ בעלת פתרון פיזבילי)
+\begin_inset Formula $\iff$
+\end_inset
+
+(קיימים 
+\begin_inset Formula $q_{1}\ldots q_{m}\in\bbr\left[x\right]$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $p=\sum_{i=1}^{m}q_{i}^{2}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $d\in\bbn$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $p\in\bbr\left[x\right]$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\deg\left(p\right)=d$
+\end_inset
+
+ אזי (קיימים 
+\begin_inset Formula $q_{1}\ldots q_{m}\in\bbr\left[x\right]$
+\end_inset
+
+ עבורם 
+\begin_inset Formula $p=\sum_{i=1}^{m}q_{i}^{2}$
+\end_inset
+
+)
+\begin_inset Formula $\iff$
+\end_inset
+
+(
+\begin_inset Formula $p\ge0$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ קיימת בעיית תכנות חצי מוגדר 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ עבורה לכל 
+\begin_inset Formula $p\in\bbr\left[x\right]$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\mathcal{A}\left(p\right)=\min\left(\im\left(p\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\lin}{\mathrm{Lin}}
+{\text{Lin}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+הגדרה 
+\color inherit
+משוואה לינארית בעלת שני משתנים
+\series default
+:
+ 
+\begin_inset Formula $2\lin_{\bbf_{2}}=\left\{ \left(A,v\right)\in M_{m\times n}\left(\bbf_{2}\right)\times\bbf_{2}^{m}\bmid\bbf_{2}\text{ מטריצת משחק מעל }A\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color magenta
+יחס המשוואת המסופקות
+\series default
+\color inherit
+:
+ יהיו 
+\begin_inset Formula $m,n\in\bbn$
+\end_inset
+
+ תהא 
+\begin_inset Formula $A\in M_{m\times n}\left(\bbf_{2}\right)$
+\end_inset
+
+ תהא 
+\begin_inset Formula $v\in\bbf_{2}^{m}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $x\in\bbf_{2}^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathrm{RTE}\left(A,v,x\right)=1-\Delta_{r}\left(Ax,v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהיו 
+\begin_inset Formula $m,n\in\bbn$
+\end_inset
+
+ תהא 
+\begin_inset Formula $A\in M_{m\times n}\left(\bbf_{2}\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $v\in\bbf_{2}^{m}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbe_{x\gets\bbf_{2}^{n}}\left[\mathrm{RTE}\left(A,v,x\right)\right]=\frac{1}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+בעיית המשוואות הלינאריות בעלות שני משתנים כתכנות שלם
+\series default
+:
+ יהיו 
+\begin_inset Formula $m,n\in\bbn$
+\end_inset
+
+ תהא 
+\begin_inset Formula $A\in M_{m\times n}\left(\bbf_{2}\right)$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $v\in\bbf_{2}^{m}$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $2\lin_{\bbf_{2}}\textrm{-}\mathrm{IP}\left(A,v\right)$
+\end_inset
+
+ כך
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{flalign*}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+max
+\backslash
+quad & 
+\backslash
+sum_{
+\backslash
+substack{
+\backslash
+ell
+\backslash
+in
+\backslash
+left[m
+\backslash
+right]
+\backslash
+
+\backslash
+
+i,j
+\backslash
+in
+\backslash
+left[n
+\backslash
+right]
+}
+}
+\backslash
+mathds{1}
+\backslash
+left[i<j
+\backslash
+right]
+\backslash
+cdot
+\backslash
+mathds{1}
+\backslash
+left[
+\backslash
+left(A
+\backslash
+right)_{
+\backslash
+ell,i}=1
+\backslash
+right]
+\backslash
+cdot
+\backslash
+mathds{1}
+\backslash
+left[
+\backslash
+left(A
+\backslash
+right)_{
+\backslash
+ell,j}=1
+\backslash
+right]
+\backslash
+cdot
+\backslash
+left(1-x_{i}+x_{j}+v_{
+\backslash
+ell}
+\backslash
+right) &
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+st
+\backslash
+quad & x_i 
+\backslash
+in 
+\backslash
+{-1,
+ 1
+\backslash
+} 
+\backslash
+qquad,
+\backslash
+forall i
+\backslash
+in [n]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{flalign*}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...
 \end_layout
 
 \begin_layout Standard
@@ -16090,7 +16438,7 @@ end{algorithm}
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\lambda_{1}\left(\l\left[A\right]\right)\ge r$
+\begin_inset Formula $\lambda_{1}\left[\l\left[A\right]\right]\ge r$
 \end_inset
 
 .
@@ -16309,6 +16657,60 @@ end{algorithm}
 \a\ln\left(a_{j}\right) &  & i=m+1\\
 0 &  & \mathrm{else}
 \end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ תהא 
+\begin_inset Formula $\mathcal{S}\subseteq\bbn_{\mathrm{odd}}$
+\end_inset
+
+ קבוצה סופית של מספרים זרים ויהי 
+\begin_inset Formula $\a\in\bbr_{>0}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\lambda_{1}\left[\l\left[M_{\mathcal{S}}\right]\right]>\sqrt{2\ln\left(\a\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהי 
+\begin_inset Formula $m\in\bbn_{+}$
+\end_inset
+
+ יהיו 
+\begin_inset Formula $a_{1}\ldots a_{m}\in\bbn_{\mathrm{odd}}$
+\end_inset
+
+ זרים יהיו 
+\begin_inset Formula $\a,\b\in\bbr_{>0}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $z\in\left\{ 0,1\right\} ^{m}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\prod_{i=1}^{m}a_{i}^{z_{i}}\in\left[\b,\b+\frac{\b}{\a}\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\norm{M_{\left\{ a_{1}\ldots a_{m}\right\} }\cdot z-e_{m+1}\cdot\a\ln\left(\b\right)}\le\sqrt{\ln\left(\b\right)+2}$
 \end_inset
 
 .
