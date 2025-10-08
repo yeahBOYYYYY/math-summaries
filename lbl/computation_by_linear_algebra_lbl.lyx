@@ -18576,7 +18576,7 @@ end{algorithm}
 \end_inset
 
  ותהא 
-\begin_inset Formula $M\in\bbf^{m\times n}$
+\begin_inset Formula $M\in\bbf^{n\times m}$
 \end_inset
 
  אזי 
@@ -18624,6 +18624,43 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $q\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\kappa\in\bbr_{>0}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $M\in\bbr^{n\times n}$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\sis\left[n,n,q,\kappa\right]\left(M\right)=\svpls\left(\left(\basis\left(L_{q}^{\perp}\left(M\right)\right),\bbr,\bbz\right),\kappa\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\uni}{\mathrm{Uni}}
 {\text{Uni}}
@@ -18633,6 +18670,146 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהי 
+\begin_inset Formula $q\in\bbn_{+}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbf_{q}$
+\end_inset
+
+ שדה יהיו 
+\begin_inset Formula $n,m\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\kappa\in\bbr_{>0}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\kappa\ge\sqrt{m}\cdot q^{\frac{n}{m}}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $A\in\bbf_{q}^{n\times m}$
+\end_inset
+
+ אזי קיים 
+\begin_inset Formula $z\in\ker\left(A\right)\backslash\left\{ 0\right\} $
+\end_inset
+
+ המקיים 
+\begin_inset Formula $\norm z\le\kappa$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אנסמבל התפלגות
+\series default
+:
+ תהא 
+\begin_inset Formula $I$
+\end_inset
+
+ קבוצה באשר 
+\begin_inset Formula $\left|I\right|<\aleph_{0}$
+\end_inset
+
+ותהיינה 
+\begin_inset Formula $\left\{ A_{i}\right\} _{i\in I}$
+\end_inset
+
+ קבוצות אזי 
+\begin_inset Formula $\left\{ \mu_{i}\right\} _{i\in I}$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\mu_{i}$
+\end_inset
+
+ התפלגות מעל 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אנסמבל התפלגות לבעיית הפתרון השלם הקטן ביותר
+\series default
+:
+ תהיינה 
+\begin_inset Formula $q,m,\kappa:\bbn\to\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $m=n^{\O\left(1\right)}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\bbf_{q\left(n\right)}$
+\end_inset
+
+ שדה לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\sis_{q,m,\kappa}=\left\{ \left(n,m\left(n\right),q\left(n\right),\kappa\left(n\right),\uni\left(\bbf_{q\left(n\right)}^{n\times m\left(n\right)}\right)\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ תהיינה 
+\begin_inset Formula $q,m:\bbn\to\bbn$
+\end_inset
+
+ באשר 
+\begin_inset Formula $m=n^{\O\left(1\right)}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\bbf_{q\left(n\right)}$
+\end_inset
+
+ שדה לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\sis_{q,m}=\sis_{q,m,\sqrt{m\left(n\right)}\cdot q^{\frac{n}{m\left(n\right)}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 
 \series bold
 טענה
@@ -18673,7 +18850,7 @@ end{algorithm}
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \series bold
 פונקציה זניחה
@@ -18702,7 +18879,7 @@ end{algorithm}
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset FormulaMacro
 \newcommand{\negl}{\mathrm{negl}}
 {\text{negl}}
@@ -18711,7 +18888,7 @@ end{algorithm}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \series bold
 סימון
@@ -18724,7 +18901,7 @@ end{algorithm}
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \series bold
 סימון
@@ -18745,7 +18922,7 @@ end{algorithm}
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \series bold
 טענה
@@ -18778,41 +18955,9 @@ end{algorithm}
 .
 \end_layout
 
-\begin_layout Standard
-
-\series bold
-טענה
-\series default
-:
- יהי 
-\begin_inset Formula $q\in\bbn_{+}$
-\end_inset
-
- באשר 
-\begin_inset Formula $\bbf_{q}$
-\end_inset
-
- שדה יהי 
-\begin_inset Formula $n\in\bbn_{+}$
-\end_inset
-
- יהי 
-\begin_inset Formula $\kappa\in\bbr_{>0}$
-\end_inset
-
- ותהא 
-\begin_inset Formula $M\in\bbr^{n\times n}$
-\end_inset
-
- אזי
-\begin_inset Newline newline
 \end_inset
 
 
-\begin_inset Formula $\sis\left[n,n,q,\kappa\right]\left(M\right)=\svpls\left(\left(\basis\left(L_{q}^{\perp}\left(M\right)\right),\bbr,\bbz\right),\kappa\right)$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -18859,10 +19004,6 @@ end{algorithm}
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \end_body
