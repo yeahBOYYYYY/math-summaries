@@ -3585,10 +3585,8 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
-\color green
-הגדרה
+קרקטר
 \series default
-\color inherit
 :
  יהי 
 \begin_inset Formula $n\in\bbn$
@@ -13538,7 +13536,7 @@ end{algorithm}
 
 \series bold
 \color red
-טרנספורמציית פוריה
+טרנספורמציית פורייה
 \series default
 \color inherit
 :
@@ -18558,6 +18556,20 @@ end{algorithm}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+להשלים סיבוכיות במקרה ממוצע.
+ ...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 בעיית פתרון השלם הקטן ביותר
@@ -19004,6 +19016,583 @@ status collapsed
 \end_inset
 
 .
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ממוצע ...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+להשלים 
+\begin_inset Formula $\mathrm{LWE}$
+\end_inset
+
+.
+ ...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+להשלים נושא של קריפטוגרפיה.
+ ...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציה בוליאנית
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f:\left\{ \pm1\right\} ^{n}\to\left\{ \pm1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<\left\{ 0,1\right\} ^{n},+\right>\simeq\left<\left\{ \pm1\right\} ^{n},+\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $2^{n}\simeq\left<\left\{ 0,1\right\} ^{n},+\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי נשכן 
+\begin_inset Formula $\left\{ \pm1\right\} ^{n}\hookrightarrow\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\left\{ 0,1\right\} ^{n}\hookrightarrow\left\{ \pm1\right\} ^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כלל הצבעה דיקטטורי
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $\mathrm{\dic}_{i}:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ כך 
+\begin_inset Formula $\dic_{i}\left(x\right)=x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כלל הצבעה לפי רוב
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $\mathrm{Maj}_{i}:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ כך 
+\begin_inset Formula $\mathrm{Maj}\left(x\right)=\mathds{1}\left[\sum_{i=1}^{n}x_{i}>\frac{n}{2}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+כלל הצבעה לפי חונטה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $J\subseteq\left[n\right]$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $g:\left\{ 0,1\right\} ^{J}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $\mathrm{Jun}_{J,g}:\left\{ 0,1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ כך 
+\begin_inset Formula $\mathrm{Jun}_{J,g}\left(x\right)=g\left(x_{J}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in\left\{ \pm1\right\} ^{n}$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $x^{\oplus i}\in\left\{ \pm1\right\} ^{n}$
+\end_inset
+
+ כך 
+\begin_inset Formula $\left(x^{\oplus i}\right)_{j}=\left\{ \begin{smallmatrix}-x_{i} &  & i=j\\
+x_{j} &  & \mathrm{else}
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+השפעה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:\left\{ \pm1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ ויהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $I_{i}\left[f\right]=\bbp_{x\gets\left\{ \pm1\right\} ^{n}}\left(f\left(x\right)\ne f\left(x^{\oplus i}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהיו 
+\begin_inset Formula $i,j\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $I_{j}\left[\dic_{i}\right]=\mathds{1}\left[i=j\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $I_{i}\left[\mathrm{Maj}\right]={n-1 \choose \floor{\frac{n}{2}}}\cdot2^{1-n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $I_{i}\left[\mathrm{Maj}\right]=\O\left(\frac{1}{\sqrt{n}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $J\subseteq\left[n\right]$
+\end_inset
+
+ תהא 
+\begin_inset Formula $g:\left\{ 0,1\right\} ^{J}\to\left\{ 0,1\right\} $
+\end_inset
+
+ ויהי 
+\begin_inset Formula $i\in\left[n\right]\backslash J$
+\end_inset
+
+ אזי 
+\begin_inset Formula $I_{i}\left[\mathrm{Jun}_{J,g}\right]=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+השפעה טוטאלית
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\left\{ \pm1\right\} ^{n}\to\left\{ 0,1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $I\left[f\right]=\sum_{i=1}^{n}I_{i}\left[f\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מכפלה פנימית של פונקציות בוליאניות
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $\left<\cdot,\cdot\right>:\left(2^{n}\to\bbr\right)^{2}\to\bbr$
+\end_inset
+
+ כך 
+\begin_inset Formula $\left<f,g\right>=\frac{1}{2^{n}}\sum_{x\in2^{n}}f\left(x\right)g\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<\cdot,\cdot\right>$
+\end_inset
+
+ מכפלה פנימית מעל 
+\begin_inset Formula $2^{n}\to\bbr$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $S,T\subseteq\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\chi_{S}\cdot\chi_{T}=\chi_{S\triangle T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+למה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $S\in\P\left(\left[n\right]\right)\backslash\left\{ \emptyset\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\bbe_{x\gets2^{n}}\left[\chi_{S}\left(x\right)\right]=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ \chi_{S}\bmid S\subseteq\left[n\right]\right\} $
+\end_inset
+
+ בסיס אורתונורמלי של 
+\begin_inset Formula $2^{n}\to\bbr$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left\{ \chi_{S}\bmid S\subseteq\left[n\right]\right\} =\left\{ f:2^{n}\to\bbr\bmid\text{ הומומורפיזם}f\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+טרנספורמציית פורייה
+\series default
+\color inherit
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:2^{n}\to\bbr$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $\hat{f}:\P\left(\left[n\right]\right)\to\bbr$
+\end_inset
+
+ כך 
+\begin_inset Formula $\hat{f}\left(S\right)=\left<f,\chi_{S}\right>$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:2^{n}\to\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in2^{n}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $f\left(x\right)=\sum_{S\subseteq\left[n\right]}\hat{f}\left(S\right)\chi_{S}\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $f,g:2^{n}\to\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left<f,g\right>=\sum_{S\subseteq\left[n\right]}\hat{f}\left(S\right)\cdot\hat{g}\left(S\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ ...
 \end_layout
 
 \end_body
