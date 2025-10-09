@@ -3585,7 +3585,7 @@ end{algorithm}
 \begin_layout Standard
 
 \series bold
-קרקטר
+הגדרה
 \series default
 :
  יהי 
@@ -19394,7 +19394,7 @@ x_{j} &  & \mathrm{else}
 \begin_layout Standard
 
 \series bold
-מכפלה פנימית של פונקציות בוליאניות
+הגדרה
 \series default
 :
  יהי 
@@ -19428,6 +19428,56 @@ x_{j} &  & \mathrm{else}
 
  מכפלה פנימית מעל 
 \begin_inset Formula $2^{n}\to\bbr$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נורמת 
+\begin_inset Formula $L^{2}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $\norm{\cdot}_{2}:\left(2^{n}\to\bbr\right)\to\bbr$
+\end_inset
+
+ כך 
+\begin_inset Formula $\norm f_{2}=\sqrt{\left<f,f\right>}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קרקטר
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $S\subseteq\left[n\right]$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $\chi_{S}:\left\{ \pm1\right\} ^{n}\to\left\{ \pm1\right\} $
+\end_inset
+
+ כך 
+\begin_inset Formula $\chi_{S}\left(x\right)=\prod_{i\in S}x_{i}$
 \end_inset
 
 .
@@ -19592,7 +19642,304 @@ x_{j} &  & \mathrm{else}
 מסקנה
 \series default
 :
- ...
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:2^{n}\to\left\{ \pm1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $\norm f_{2}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:2^{n}\to\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\left(S\right)^{2}$
+\end_inset
+
+
+\begin_inset Formula $\var\left(f\right)=\sum_{S\in\P\left(\left[n\right]\right)\backslash\left\{ \emptyset\right\} }\hat{f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $\d\in\left[0,1\right]$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:2^{n}\to\left\{ \pm1\right\} $
+\end_inset
+
+ באשר 
+\begin_inset Formula $\bbp_{x,y\gets2^{n}}\left(f\left(x\right)f\left(y\right)=f\left(xy\right)\right)>\frac{1}{2}+\frac{\d}{2}$
+\end_inset
+
+ אזי קיימת 
+\begin_inset Formula $S\subseteq\left[n\right]$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\hat{f}\left(S\right)>\d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ יהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ יהי 
+\begin_inset Formula $b\in\left\{ \pm1\right\} $
+\end_inset
+
+ ויהי 
+\begin_inset Formula $x\in\left\{ \pm1\right\} ^{n}$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $x^{\left(i\mapsto b\right)}\in\left\{ \pm1\right\} ^{n}$
+\end_inset
+
+ כך 
+\begin_inset Formula $\left(x^{\left(i\mapsto b\right)}\right)_{j}=\left\{ \begin{smallmatrix}b &  & i=j\\
+x_{j} &  & \mathrm{else}
+\end{smallmatrix}\right.$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+נגזרת דיסקרטית
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:\left\{ \pm1\right\} ^{n}\to\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $\partial_{i}f:\left\{ \pm1\right\} ^{n-1}\to\bbr$
+\end_inset
+
+ כך
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\partial_{i}f\left(x\right)=\frac{1}{2}\left(f\left(x^{\left(i\mapsto1\right)}\right)-f\left(x^{\left(i\mapsto-1\right)}\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+השפעה 
+\begin_inset Formula $L^{2}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ תהא 
+\begin_inset Formula $f:\left\{ \pm1\right\} ^{n}\to\bbr$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $I_{i}\left[f\right]=\norm{\partial_{i}f}_{2}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+השפעה טוטאלית 
+\begin_inset Formula $L^{2}$
+\end_inset
+
+
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\left\{ \pm1\right\} ^{n}\to\bbr$
+\end_inset
+
+ אזי 
+\begin_inset Formula $I\left[f\right]=\sum_{i=1}^{n}I_{i}\left[f\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+גרף קוביית יחידה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\mathcal{H}=\left(\left\{ \pm1\right\} ^{n},\left\{ \left(x,y\right)\bmid\Delta\left(x,y\right)=1\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רגישות של פונקציה בוליאנית
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\left\{ \pm1\right\} ^{n}\to\left\{ \pm1\right\} $
+\end_inset
+
+ אזי נגדיר 
+\begin_inset Formula $s_{f}:\left\{ \pm1\right\} ^{n}\to\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $s_{f}\left(x\right)=\left|\left\{ y\in N_{\mathcal{H}}\left(x\right)\bmid f\left(x\right)\ne f\left(y\right)\right\} \right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $n\in\bbn_{+}$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $f:\left\{ \pm1\right\} ^{n}\to\left\{ \pm1\right\} $
+\end_inset
+
+ אזי 
+\begin_inset Formula $I\left[\right]$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+I_{i}\left[f\right] & =\norm{\partial_{i}f}_{2}=\sqrt{\left<\frac{1}{2}\left(f\left(x^{\left(i\mapsto1\right)}\right)-f\left(x^{\left(i\mapsto-1\right)}\right)\right),\frac{1}{2}\left(f\left(x^{\left(i\mapsto1\right)}\right)-f\left(x^{\left(i\mapsto-1\right)}\right)\right)\right>}\\
+ & =\frac{1}{2}\left(\sqrt{\left<f\left(x^{\left(i\mapsto1\right)}\right),f\left(x^{\left(i\mapsto1\right)}\right)\right>-\left<f\left(x^{\left(i\mapsto-1\right)}\right),f\left(x^{\left(i\mapsto1\right)}\right)\right>-\left<f\left(x^{\left(i\mapsto-1\right)}\right),f\left(x^{\left(i\mapsto1\right)}\right)\right>+\left<f\left(x^{\left(i\mapsto-1\right)}\right),f\left(x^{\left(i\mapsto-1\right)}\right)\right>}\right)\\
+ & =\frac{1}{2}\left(\sqrt{\left|\left\{ x\in2^{n}\bmid f\left(x^{\left(x\mapsto1\right)}\right)=1\right\} \right|+\left|\left\{ x\in2^{n}\bmid f\left(x^{\left(x\mapsto-1\right)}\right)=1\right\} \right|-2\left|\left\{ x\in2^{n}\bmid f\left(x^{\left(x\mapsto-1\right)}\right)=1\right\} \cap\left\{ x\in2^{n}\bmid f\left(x^{\left(x\mapsto1\right)}\right)=1\right\} \right|}\right)\\
+ & =\frac{1}{2}\left(\sqrt{2\left|\left\{ x\in2^{n}\bmid f\left(x^{\left(x\mapsto-1\right)}\right)=1\right\} \cup\left\{ x\in2^{n}\bmid f\left(x^{\left(x\mapsto1\right)}\right)=1\right\} \right|-\left|\left\{ x\in2^{n}\bmid f\left(x^{\left(x\mapsto1\right)}\right)=1\right\} \right|-\left|\left\{ x\in2^{n}\bmid f\left(x^{\left(x\mapsto-1\right)}\right)=1\right\} \right|}\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+-2\left|\left\{ x\in2^{n}\bmid f\left(x^{\left(x\mapsto-1\right)}\right)=1\right\} \cap\left\{ x\in2^{n}\bmid f\left(x^{\left(x\mapsto1\right)}\right)=1\right\} \right|=-2\left|\left\{ x\in2^{n}\bmid f\left(x^{\left(x\mapsto-1\right)}\right)=1\right\} \right|-2\left|\left\{ x\in2^{n}\bmid f\left(x^{\left(x\mapsto1\right)}\right)=1\right\} \right|+2\left|\left\{ x\in2^{n}\bmid f\left(x^{\left(x\mapsto-1\right)}\right)=1\right\} \cup\left\{ x\in2^{n}\bmid f\left(x^{\left(x\mapsto1\right)}\right)=1\right\} \right|
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\left<f\circ x^{\left(i\mapsto b\right)},f\circ x^{\left(i\mapsto b^{\prime}\right)}\right> & =\frac{1}{2^{n}}\sum_{x\in2^{n}}f\left(x^{\left(i\mapsto b\right)}\right)f\left(x^{\left(i\mapsto b^{\prime}\right)}\right)=\begin{cases}
+\frac{1}{2^{n}}\sum_{x\in2^{n}}\left(f\left(x^{\left(i\mapsto b\right)}\right)\right)^{2} & b=b^{\prime}\\
+\frac{1}{2^{n}}\sum_{x\in2^{n}}f\left(x^{\left(i\mapsto b\right)}\right)f\left(x^{\left(i\mapsto b^{\prime}\right)}\right) & b\ne b^{\prime}
+\end{cases}\\
+ & =\begin{cases}
+\left|\left\{ x\in2^{n}\bmid f\left(x^{\left(x\mapsto b\right)}\right)=1\right\} \right| & b=b^{\prime}\\
+\left|\left\{ x\in2^{n}\bmid f\left(x^{\left(x\mapsto b\right)}\right)=1\right\} \cap\left\{ x\in2^{n}\bmid f\left(x^{\left(x\mapsto-b\right)}\right)=1\right\} \right| & b\ne b^{\prime}
+\end{cases}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+I_{i}\left[f\right]=\bbp_{x\gets\left\{ \pm1\right\} ^{n}}\left(f\left(x\right)\ne f\left(x^{\oplus i}\right)\right)=\frac{1}{2^{n}}\cdot\left|\left\{ x\in2^{n}\bmid f\left(x\right)\ne f\left(x^{\oplus i}\right)\right\} \right|=\frac{1}{2^{n}}\cdot\left|\left\{ x\in2^{n}\bmid f\left(x^{\left(x\mapsto b\right)}\right)\ne f\left(x^{\left(x\mapsto b^{\prime}\right)}\right)\right\} \right|
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
