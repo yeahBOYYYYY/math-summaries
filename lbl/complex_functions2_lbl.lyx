@@ -483,7 +483,7 @@ literal "true"
 \begin_inset Formula $P\in\bbc\backslash\left\{ 0\right\} $
 \end_inset
 
- התב
+ אזי התב
 \begin_inset Quotes erd
 \end_inset
 
@@ -723,6 +723,31 @@ literal "true"
 \begin_layout Standard
 
 \series bold
+מסקנה
+\series default
+:
+ תהא 
+\begin_inset Formula $G\subseteq\bbc$
+\end_inset
+
+ פתוחה ותהיינה 
+\begin_inset Formula $\left<p_{n}\in\hol\left(G\right)\mid n\in\bbn\right>$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\prod_{i=0}^{\infty}p_{i}$
+\end_inset
+
+ מתכנסת באופן נורמלי אזי 
+\begin_inset Formula $\sum_{i=0}^{\infty}\frac{p_{i}^{\prime}}{p_{i}}=\frac{\left(\prod_{i=0}^{\infty}p_{i}\right)^{\prime}}{\prod_{i=0}^{\infty}p_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
 \color black
 למה
 \series default
@@ -816,11 +841,11 @@ literal "true"
 \color inherit
 :
  נגדיר 
-\begin_inset Formula $\Gamma:\left\{ \re\left(z\right)>0\right\} \to\bbc$
+\begin_inset Formula $\Gamma:\left\{ \re>0\right\} \to\bbc$
 \end_inset
 
  כך 
-\begin_inset Formula $\Gamma\left(s\right)=\int_{0}^{\infty}t^{s-1}e^{-t}\text{d}t$
+\begin_inset Formula $\Gamma\left(s\right)=\int_{0}^{\infty}t^{s-1}e^{-t}\mathrm{d}t$
 \end_inset
 
 .
@@ -851,7 +876,7 @@ literal "true"
 \end_inset
 
  אזי 
-\begin_inset Formula $\int_{0}^{1}F\left(z,s\right)\text{d}s\in\hol\left(G\right)$
+\begin_inset Formula $\int_{0}^{1}F\left(z,s\right)\mathrm{d}s\in\hol\left(G\right)$
 \end_inset
 
 .
@@ -866,7 +891,7 @@ literal "true"
 \color inherit
 :
  
-\begin_inset Formula $\Gamma\in\hol\left(\left\{ \re\left(z\right)>0\right\} \right)$
+\begin_inset Formula $\Gamma\in\hol\left(\left\{ \re>0\right\} \right)$
 \end_inset
 
 .
@@ -927,7 +952,7 @@ literal "true"
 \end_inset
 
  אזי 
-\begin_inset Formula $\int_{0}^{1}t^{s-1}e^{-t}\text{d}t=\sum_{j=0}^{\infty}\frac{\left(-1\right)^{j}}{j!}\cdot\frac{1}{s+j}$
+\begin_inset Formula $\int_{0}^{1}t^{s-1}e^{-t}\mathrm{d}t=\sum_{j=0}^{\infty}\frac{\left(-1\right)^{j}}{j!}\cdot\frac{1}{s+j}$
 \end_inset
 
 .
@@ -949,7 +974,7 @@ literal "true"
 \begin_inset Formula $z\in\bbc$
 \end_inset
 
- באשר 
+ המקיימת 
 \begin_inset Formula $\re\left(z\right)>0$
 \end_inset
 
@@ -1335,16 +1360,12 @@ end{minipage}
 
 \series bold
 \color blue
-משפט 
-\begin_inset Formula $\text{\textbf{\textsf{Wielandt}}}$
-\end_inset
-
-
+משפט ווילנדט
 \series default
 \color inherit
 :
  תהא 
-\begin_inset Formula $F\in\hol\left(\left\{ \re\left(z\right)>0\right\} \right)$
+\begin_inset Formula $F\in\hol\left(\left\{ \re>0\right\} \right)$
 \end_inset
 
  באשר 
@@ -1356,7 +1377,7 @@ end{minipage}
 \end_inset
 
  חסומה ב־
-\begin_inset Formula $\left\{ 1\le\re\left(z\right)\le2\right\} $
+\begin_inset Formula $\left\{ 1\le\re\le2\right\} $
 \end_inset
 
  אזי 
@@ -1437,7 +1458,7 @@ end{minipage}
 \end_inset
 
  כך 
-\begin_inset Formula $\mu\left(z\right)=-\intop_{0}^{\infty}\frac{\psi\left(t\right)}{t+z}\text{d}t$
+\begin_inset Formula $\mu\left(z\right)=-\intop_{0}^{\infty}\frac{\psi\left(t\right)}{t+z}\mathrm{d}t$
 \end_inset
 
  אזי
@@ -1494,7 +1515,7 @@ end{minipage}
 \color inherit
 :
  נגדיר 
-\begin_inset Formula $\zeta:\left\{ \re\left(z\right)>1\right\} \to\bbc$
+\begin_inset Formula $\zeta:\left\{ \re>1\right\} \to\bbc$
 \end_inset
 
  כך 
@@ -1513,7 +1534,7 @@ end{minipage}
 \color inherit
 :
  
-\begin_inset Formula $\zeta\in\hol\left(\left\{ \re\left(z\right)>1\right\} \right)$
+\begin_inset Formula $\zeta\in\hol\left(\left\{ \re>1\right\} \right)$
 \end_inset
 
 .
@@ -1662,12 +1683,9 @@ end{minipage}
 \series bold
 \color red
 פונקציית 
-\begin_inset Formula $\text{\textbf{\textsf{Mangoldt}}}$
-\end_inset
-
-
-\series default
 \color inherit
+וון מנגולדט
+\series default
 :
  נגדיר 
 \begin_inset Formula $\Lambda:\bbn\to\bbr$
@@ -1722,7 +1740,7 @@ end{minipage}
 \end_inset
 
  אזי 
-\begin_inset Formula $\zeta\left(s\right)=-s\intop_{1}^{\infty}\frac{\psi\left(x\right)}{x^{s+1}}\text{d}x+\frac{1}{s-1}+\frac{1}{2}$
+\begin_inset Formula $\zeta\left(s\right)=-s\intop_{1}^{\infty}\frac{\psi\left(x\right)}{x^{s+1}}\mathrm{d}x+\frac{1}{s-1}+\frac{1}{2}$
 \end_inset
 
 .
@@ -1749,7 +1767,7 @@ end{minipage}
 \end_inset
 
  אזי 
-\begin_inset Formula $\intop_{1}^{\infty}\frac{\psi\left(x\right)}{x^{s+1}}\text{d}x$
+\begin_inset Formula $\intop_{1}^{\infty}\frac{\psi\left(x\right)}{x^{s+1}}\mathrm{d}x$
 \end_inset
 
  מתכנס.
@@ -1758,20 +1776,18 @@ end{minipage}
 \begin_layout Standard
 
 \series bold
-\color red
-טענה
+מסקנה
 \series default
-\color inherit
 :
  קיימת 
-\begin_inset Formula $f:\left\{ \re\left(s\right)>-1\right\} \to\bbc$
+\begin_inset Formula $f:\left\{ \re>-1\right\} \backslash\left\{ 1\right\} \to\bbc$
 \end_inset
 
  מרומורפית עבורה לכל 
 \begin_inset Formula $z\in\bbc$
 \end_inset
 
- באשר 
+ המקיימת 
 \begin_inset Formula $\re\left(z\right)>1$
 \end_inset
 
@@ -1795,11 +1811,32 @@ end{minipage}
 \end_inset
 
  ל־
-\begin_inset Formula $\left\{ \re\left(s\right)>-1\right\} $
+\begin_inset Formula $\left\{ \re>-1\right\} \backslash\left\{ 1\right\} $
 \end_inset
 
  גם כ־
 \begin_inset Formula $\zeta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $s\in\bbc$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\re\left(s\right)>-1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\zeta\left(s\right)=-s\intop_{1}^{\infty}\frac{\psi\left(x\right)}{x^{s+1}}\mathrm{d}x+\frac{1}{s-1}+\frac{1}{2}$
 \end_inset
 
 .
@@ -1871,7 +1908,7 @@ end{minipage}
 \end_inset
 
  אזי 
-\begin_inset Formula $\intop_{0}^{1}\frac{\psi\left(x\right)}{x^{s+1}}\text{d}x=\frac{1}{s-1}+\frac{1}{2}$
+\begin_inset Formula $\intop_{0}^{1}\frac{\psi\left(x\right)}{x^{s+1}}\mathrm{d}x=\frac{1}{s-1}+\frac{1}{2}$
 \end_inset
 
 .
@@ -1894,7 +1931,173 @@ end{minipage}
 \end_inset
 
  אזי 
-\begin_inset Formula $\zeta\left(s\right)=-s\intop_{0}^{\infty}\frac{\psi\left(x\right)}{x^{s+1}}\text{d}x$
+\begin_inset Formula $\zeta\left(s\right)=-s\intop_{0}^{\infty}\frac{\psi\left(x\right)}{x^{s+1}}\mathrm{d}x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $s\in\bbc$
+\end_inset
+
+ באשר 
+\begin_inset Formula $-1<\re\left(s\right)<0$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\zeta\left(s\right)=2^{s}\pi^{s-1}\Gamma\left(1-s\right)\sin\left(\frac{\pi s}{2}\right)\zeta\left(1-s\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ קיימת 
+\begin_inset Formula $f:\bbc\backslash\left\{ 1\right\} \to\bbc$
+\end_inset
+
+ מרומורפית עבורה לכל 
+\begin_inset Formula $z\in\bbc$
+\end_inset
+
+ המקיימת 
+\begin_inset Formula $\re\left(z\right)>-1$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $f\left(z\right)=\zeta\left(z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color red
+הערה
+\series default
+\color inherit
+:
+ נסמן את ההמשכה של 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ ל־
+\begin_inset Formula $\bbc\backslash\left\{ 1\right\} $
+\end_inset
+
+ גם כ־
+\begin_inset Formula $\zeta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $s\in\bbc$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\re\left(s\right)<1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\zeta\left(s\right)=2^{s}\pi^{s-1}\Gamma\left(1-s\right)\sin\left(\frac{\pi s}{2}\right)\zeta\left(1-s\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה אפסים טריוואליים
+\series default
+:
+ 
+\begin_inset Formula $\sols\left(\zeta\right)\cap\left\{ \re<0\right\} =-2\bbn_{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $s\in\bbc$
+\end_inset
+
+ באשר 
+\begin_inset Formula $\re\left(s\right)<1$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\pi^{-\frac{s}{2}}\Gamma\left(\frac{s}{2}\right)\zeta\left(s\right)=\pi^{-\frac{1-s}{2}}\Gamma\left(\frac{1-s}{2}\right)\zeta\left(1-s\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ נגדיר 
+\begin_inset Formula $\xi:\bbc\to\bbc$
+\end_inset
+
+ כך 
+\begin_inset Formula $\xi\left(s\right)=s\left(1-s\right)\pi^{-\frac{s}{2}}\Gamma\left(\frac{s}{2}\right)\zeta\left(s\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ 
+\begin_inset Formula $\xi$
+\end_inset
+
+ שלמה וכן לכל 
+\begin_inset Formula $s\in\bbc$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\xi\left(1-s\right)=\xi\left(s\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\xi\left(\overline{s}\right)=\overline{\xi\left(s\right)}$
 \end_inset
 
 .
@@ -1904,6 +2107,27 @@ end{minipage}
 \begin_inset Separator plain
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציית ספירת הראשוניים
+\series default
+:
+ נגדיר 
+\begin_inset Formula $\pi:\bbr_{+}\to\bbn$
+\end_inset
+
+ כך 
+\begin_inset Formula $\pi\left(x\right)=\left|\bbp_{\le x}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 
 \end_layout
 

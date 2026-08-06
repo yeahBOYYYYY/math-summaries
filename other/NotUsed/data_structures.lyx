@@ -1,0 +1,1506 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{centernot}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usepackage{wrapfig}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usepackage{xcolor}
+% \usepackage[cm]{fullpage}
+\usepackage{polynom}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+
+
+% it's here?
+\setlength{\tabcolsep}{1pt}
+\renewcommand{\arraystretch}{1.25} % Default value: 1
+
+% tikz
+\usetikzlibrary{math}
+\usetikzlibrary{shadows,trees}
+\tikzset{edge from parent fork down, level distance=2cm, every node/.style= {rectangle,rounded corners, minimum height=8mm, very thick, align=center}}
+
+% enumarte
+\counterwithin*{section}{part}
+\setlist{nosep, noitemsep}
+\setlist[enumerate,1]{label = \arabic*., ref = \arabic*}
+\setlist[enumerate,2]{label = \alph*), ref = \theenumi.\emph{\alph*}}
+\setlist[enumerate,3]{label = .\roman*, ref = \theenumii.\roman*}
+\setlist[itemize,1]{label={\fontfamily{david}\fontencoding{T1}\selectfont\textbullet}}
+
+% colors
+\definecolor{blue}{RGB}{14,107,217}
+\definecolor{green}{RGB}{0,158,40}
+\definecolor{red}{RGB}{235,16,16}
+\definecolor{brown}{RGB}{164,66,0}
+\definecolor{orange}{RGB}{231,135,26}
+\definecolor{purple}{RGB}{94,53,177}
+\definecolor{keywordcolor}{RGB}{255,117,0}
+\definecolor{commentcolor}{RGB}{128,128,128}
+\definecolor{stringcolor}{RGB}{0,168,0}
+\definecolor{remarkcolor}{RGB}{150,145,91} % 255,225,88
+
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{gray}{#1}}
+\SetCommentSty{mycommfont}
+
+% hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+}
+\newcommand\colorAutoref[1]{{\hypersetup{linkcolor=blue}\autoref{#1}}}  %% allows for calls to \autoref{} that have a different color from other links.
+
+% math font and implies arrow
+% \setmathfont{NewCMMath-Regular.otf}
+\let\RonMikhelmanLol\implies
+\renewcommand{\implies}{\negthickspace\RonMikhelmanLol\negthickspace}
+\let\RonMikhelmanLoll\iff
+\renewcommand{\iff}{\negthickspace\RonMikhelmanLoll\negthickspace}
+\let\RonMikhelmanLolll\impliedby
+\renewcommand{\impliedby}{\negthickspace\RonMikhelmanLolll\negthickspace}
+
+%for defnos
+\usepackage{multicol}
+\usepackage{color}
+\setlength{\columnseprule}{1pt}
+\def\columnseprulecolor{\color{black}}
+\end_preamble
+\options no-math
+\use_default_options true
+\begin_modules
+algorithm2e
+\end_modules
+\maintain_unincluded_children no
+\begin_local_layout
+Format 66
+PackageOptions algorithm2e vlined
+\end_local_layout
+\language hebrew
+\language_package default
+\inputencoding auto-legacy
+\fontencoding auto
+\font_roman "default" "David CLM"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\float_alignment class
+\paperfontsize default
+\spacing onehalf
+\use_hyperref true
+\pdf_title "Data Structures lbl"
+\pdf_author "Ron Mikhelman"
+\pdf_subject "Math Summeries"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letter
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 2
+\use_package esint 2
+\use_package mathdots 2
+\use_package mathtools 2
+\use_package mhchem 2
+\use_package stackrel 2
+\use_package stmaryrd 2
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification false
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "E:/University/!Summaries/macros.lyx"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית ויהיו 
+\begin_inset Formula $\psi_{1}\ldots\psi_{n}$
+\end_inset
+
+ פרידיקטים על 
+\begin_inset Formula $\Sigma^{*}$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\Sigma_{\psi_{1}\ldots\psi_{n}}^{*}=\left\{ w\in\Sigma^{*}\mid\psi_{1}\left(w\right)\land\ldots\land\psi_{n}\left(w\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טיפוס נתונים מופשט (
+\lang english
+ADT
+\lang hebrew
+)
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית יהיו 
+\begin_inset Formula $\psi_{1}\ldots\psi_{n}$
+\end_inset
+
+ פרידיקטים על 
+\begin_inset Formula $\Sigma^{*}$
+\end_inset
+
+ ותהיינה 
+\begin_inset Formula $f_{1}\ldots f_{m}$
+\end_inset
+
+ פונקציות אזי
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left(\Sigma,\Sigma_{\psi_{1}\ldots\psi_{n}}^{*},f_{1},\ldots,f_{m}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+תחום של טיפוס נתונים מופשט
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\Sigma_{\psi_{1}\ldots\psi_{n}}^{*},f_{1}\ldots f_{m}\right)$
+\end_inset
+
+ טיפוס נתונים מופשט אזי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אקסיומות של טיפוס נתונים מופשט
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\Sigma_{\psi_{1}\ldots\psi_{n}}^{*},f_{1}\ldots f_{m}\right)$
+\end_inset
+
+ טיפוס נתונים מופשט אזי 
+\begin_inset Formula $\psi_{1}\ldots\psi_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+אובייקטים של טיפוס נתונים מופשט
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\Sigma_{\psi_{1}\ldots\psi_{n}}^{*},f_{1}\ldots f_{m}\right)$
+\end_inset
+
+ טיפוס נתונים מופשט אזי 
+\begin_inset Formula $\Sigma_{\psi_{1}\ldots\psi_{n}}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ טיפוס נתונים מופשט אזי נסמן 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ עבור 
+\begin_inset Formula $a$
+\end_inset
+
+ ששייך לקבוצת האובייקטים של 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+פונקציות של טיפוס נתונים מופשט
+\series default
+:
+ יהי 
+\begin_inset Formula $\left(\Sigma_{\psi_{1}\ldots\psi_{n}}^{*},f_{1}\ldots f_{m}\right)$
+\end_inset
+
+ טיפוס נתונים מופשט אזי 
+\begin_inset Formula $\left\{ f_{1}\ldots f_{m}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+סימון
+\series default
+:
+ יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ טיפוס נתונים מופשט ותהא 
+\begin_inset Formula $f$
+\end_inset
+
+ פונקציה של 
+\begin_inset Formula $A$
+\end_inset
+
+ אזי 
+\begin_inset Formula $A.f=f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הערה
+\series default
+:
+ יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ טיפוס נתונים מופשט עבורו 
+\begin_inset Formula $\e$
+\end_inset
+
+ אובייקט של 
+\begin_inset Formula $A$
+\end_inset
+
+ אזי נאמר כי 
+\begin_inset Formula $A$
+\end_inset
+
+ הינה פונקציה באשר 
+\begin_inset Formula $A\left(\right)=\e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\lst}{\text{List}}
+{\text{List}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\len}{\text{Length}}
+{\text{Length}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ret}{\text{Retrieve}}
+{\text{Retrieve}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ins}{\text{Insert}}
+{\text{Insert}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\del}{\text{Delete}}
+{\text{Delete}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+רשימה
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית אזי 
+\begin_inset Formula $\lst=\left(\Sigma^{*},\len,\ret,\ins,\del\right)$
+\end_inset
+
+ באשר
+\end_layout
+
+\begin_layout Itemize
+אורך:
+ 
+\begin_inset Formula $\len:\Sigma^{*}\to\bbn$
+\end_inset
+
+ מוגדרת כך 
+\begin_inset Formula $\len\left(x\right)=n$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קבלת איבר:
+ 
+\begin_inset Formula $\ret:\bigcup_{n=0}^{\infty}\left(\Sigma^{n}\times\left[n\right]\right)\to\Sigma$
+\end_inset
+
+ מוגדרת כך 
+\begin_inset Formula $\ret\left(x,i\right)=x_{i}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+הוספת איבר:
+ 
+\begin_inset Formula $\ins:\bigcup_{n=0}^{\infty}\left(\Sigma^{n}\times\left[n+1\right]\times\Sigma\right)\to\Sigma^{*}$
+\end_inset
+
+ מוגדרת כך 
+\begin_inset Formula $\ins\left(x,i,\sigma\right)=\left<x_{1}\ldots x_{i-1},\sigma,x_{i}\ldots x_{n}\right>$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n+1\right]$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\sigma\in\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+מחיקת איבר:
+ 
+\begin_inset Formula $\del:\bigcup_{n=0}^{\infty}\left(\Sigma^{n}\times\left[n\right]\right)\to\left(\Sigma^{*}\times\Sigma\right)$
+\end_inset
+
+ מוגדרת כך 
+\begin_inset Formula $\del\left(x,i\right)=\left(\left<x_{1}\ldots x_{i-1},x_{i+1}\ldots x_{n}\right>,x_{i}\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית אזי 
+\begin_inset Formula $\text{List}$
+\end_inset
+
+ הינו טיפוס נתונים מופשט.
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\retf}{\text{RetrieveFirst}}
+{\text{RetrieveFirst}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\insf}{\text{InsertFirst}}
+{\text{InsertFirst}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\delf}{\text{DeleteFirst}}
+{\text{DeleteFirst}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\retl}{\text{RetrieveLast}}
+{\text{RetrieveLast}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\insl}{\text{InsertLast}}
+{\text{InsertLast}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\dell}{\text{DeleteLast}}
+{\text{DeleteLast}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ser}{\text{Search}}
+{\text{Search}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\con}{\text{Concat}}
+{\text{Concat}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\pla}{\text{Plant}}
+{\text{Plant}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\spl}{\text{Split}}
+{\text{Split}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה
+\series default
+:
+ יהי 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ אלפבית אזי
+\end_layout
+
+\begin_layout Itemize
+קבלת איבר ראשון:
+ 
+\begin_inset Formula $\retf:\lst\to\Sigma$
+\end_inset
+
+ מוגדרת כך 
+\begin_inset Formula $\retf\left(x\right)=\ret\left(x,1\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\lst$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+הוספת איבר ראשון:
+ 
+\begin_inset Formula $\insf:\left(\lst\times\Sigma\right)\to\lst$
+\end_inset
+
+ מוגדרת כך 
+\begin_inset Formula $\retf\left(x,\sigma\right)=\lst.\ins\left(x,1,\sigma\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\lst$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\sigma\in\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+מחיקת איבר ראשון:
+ 
+\begin_inset Formula $\delf:\lst\to\left(\lst\times\Sigma\right)$
+\end_inset
+
+ מוגדרת כך 
+\begin_inset Formula $\delf\left(x\right)=\lst.\del\left(x,1\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\lst$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\sigma\in\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+קבלת איבר אחרון:
+ 
+\begin_inset Formula $\retl:\lst\to\Sigma$
+\end_inset
+
+ מוגדרת כך 
+\begin_inset Formula $\retl\left(x\right)=\lst.\ret\left(x,\lst.\len\left(x\right)\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\lst$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+הוספת איבר אחרון:
+ 
+\begin_inset Formula $\insl:\left(\lst\times\Sigma\right)\to\lst$
+\end_inset
+
+ מוגדרת כך 
+\begin_inset Formula $\insl\left(x,\sigma\right)=\lst.\ins\left(x,\lst.\len\left(x\right)+1,\sigma\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\lst$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\sigma\in\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+מחיקת איבר אחרון:
+ 
+\begin_inset Formula $\dell:\lst\to\left(\lst\times\Sigma\right)$
+\end_inset
+
+ מוגדרת כך 
+\begin_inset Formula $\dell\left(x\right)=\lst.\del\left(x,\lst.\len\left(x\right)\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\lst$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\sigma\in\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+חיפוש איבר:
+ 
+\begin_inset Formula $\ser:\left(\lst\times\Sigma\right)\to\bbn\cup\left\{ -1\right\} $
+\end_inset
+
+ מוגדרת כך 
+\begin_inset Formula $\ser\left(x,\sigma\right)=\left\{ \begin{smallmatrix}\min\left\{ i\in\left[n\right]\mid x_{i}=\sigma\right\}  &  & \exists i\in\left[n\right].x_{i}=\sigma\\
+-1 &  & \text{else}
+\end{smallmatrix}\right.$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $\sigma\in\Sigma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+הוספת רשימה ברשימה:
+ 
+\begin_inset Formula $\pla:\bigcup_{n=0}^{\infty}\left(\Sigma^{n}\times\left[n+1\right]\times\lst\right)\to\lst$
+\end_inset
+
+ מוגדרת כך 
+\begin_inset Formula $\pla\left(x,i,y\right)=\left<x_{1}\ldots x_{i-1},y,x_{i}\ldots x_{n}\right>$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ לכל 
+\begin_inset Formula $i\in\left[n+1\right]$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $y\in\lst$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+פיצול רשימה:
+ 
+\begin_inset Formula $\spl:\bigcup_{n=0}^{\infty}\left(\Sigma^{n}\times\left[n+1\right]\right)\to\left(\lst\times\lst\right)$
+\end_inset
+
+ מוגדרת כך 
+\begin_inset Formula $\pla\left(x,i\right)=\left(\left<x_{1}\ldots x_{i-1}\right>,\left<x_{i}\ldots x_{n}\right>\right)$
+\end_inset
+
+ לכל 
+\begin_inset Formula $n\in\bbn$
+\end_inset
+
+ לכל 
+\begin_inset Formula $x\in\Sigma^{n}$
+\end_inset
+
+ ולכל 
+\begin_inset Formula $i\in\left[n+1\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מימוש של טיפוס נתונים מופשט
+\series default
+:
+ יהי 
+\begin_inset Formula $A$
+\end_inset
+
+ טיפוס נתונים מופשט אזי פסאודו־קוד הממש את 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+הגדרה מימוש רשימה בעזרת מערך
+\series default
+:
+ יהי 
+\begin_inset Formula $M\in\bbn$
+\end_inset
+
+ אזי
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKw{Error}{Error}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{Name}{List}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Cl}{class}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Cl{
+\backslash
+Name{$M,
+ a_1,
+\backslash
+ldots ,a_n$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+lIf{$M 
+\backslash
+ge n$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+Error
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    self.Array $
+\backslash
+gets$ [$a_1,
+\backslash
+ldots ,a_n,
+ -,
+ 
+\backslash
+ldots ,-$] 
+\backslash
+tcp{The array is of fixed size $M$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    self.MaxLen $
+\backslash
+gets$ $M$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    self.Length $
+\backslash
+gets$ $n$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{Name}{Retrieve}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+Name{$L,
+ i$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+Return L.Array[i - 1]
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKw{Error}{Error}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{Name}{Insert}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+Name{$L,
+ i,
+ 
+\backslash
+sigma$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+lIf{L.Length = L.MaxLen}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+Error
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$j
+\backslash
+gets [ L.Length - 1,
+ 
+\backslash
+ldots ,i - 1]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        L.Array[$j + 1$] $
+\backslash
+gets$ L.Array[$j$]
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    L.Array[$i - 1$] $
+\backslash
+gets 
+\backslash
+sigma$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    L.Length $
+\backslash
+gets$ L.Length $+ 1$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetAlgoLined
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+DontPrintSemicolon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKw{Error}{Error}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwFunction{Name}{Delete}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+SetKwProg{Fn}{function}{:}{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+Fn{
+\backslash
+Name{$L,
+ i$}}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+For{$j
+\backslash
+gets [ L.Length - 1,
+ 
+\backslash
+ldots ,i]$}{
+\end_layout
+
+\begin_layout Plain Layout
+
+        L.Array[$j - 1$] $
+\backslash
+gets$ L.Array[$j$]
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    L.Length $
+\backslash
+gets$ L.Length $- 1$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $M\in\bbn$
+\end_inset
+
+ אזי מימוש רשימה בעזרת מערך הינו מימוש של רשימה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+טענה
+\series default
+:
+ יהי 
+\begin_inset Formula $M\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $L$
+\end_inset
+
+ רשימה הממומשת בעזרת מערך אזי
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $i\in\left[\text{List.Length}\left(L\right)\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ret\left(L,i\right)$
+\end_inset
+
+ בעל סיבוכיות זמן ריצה 
+\begin_inset Formula $\O\left(1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $i\in\left[\text{List.Length}\left(L\right)+1\right]$
+\end_inset
+
+ ויהי 
+\begin_inset Formula $\sigma\in\Sigma$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\ins\left(L,i,\sigma\right)$
+\end_inset
+
+ בעל סיבוכיות זמן ריצה 
+\begin_inset Formula $\O\left(n-i+1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $i\in\left[\text{List.Length}\left(L\right)\right]$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\del\left(L,i\right)$
+\end_inset
+
+ בעל סיבוכיות זמן ריצה 
+\begin_inset Formula $\O\left(n-i+1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+מסקנה
+\series default
+:
+ יהי 
+\begin_inset Formula $M\in\bbn$
+\end_inset
+
+ ותהא 
+\begin_inset Formula $L$
+\end_inset
+
+ רשימה הממומשת בעזרת מערך אזי
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $\sigma\in\Sigma$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\insf\left(L,\sigma\right)$
+\end_inset
+
+ בעל סיבוכיות זמן ריצה 
+\begin_inset Formula $\O\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\delf\left(L\right)$
+\end_inset
+
+ בעל סיבוכיות זמן ריצה 
+\begin_inset Formula $\O\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+יהי 
+\begin_inset Formula $\sigma\in\Sigma$
+\end_inset
+
+ אזי 
+\begin_inset Formula $\insl\left(L,\sigma\right)$
+\end_inset
+
+ בעל סיבוכיות זמן ריצה 
+\begin_inset Formula $\O\left(1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\dell\left(L\right)$
+\end_inset
+
+ בעל סיבוכיות זמן ריצה 
+\begin_inset Formula $\O\left(1\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
